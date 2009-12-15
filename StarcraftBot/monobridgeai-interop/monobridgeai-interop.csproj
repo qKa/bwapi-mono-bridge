@@ -1,0 +1,454 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5CCAD223-24DC-475F-AD0F-8822D13C42FA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>monobridgeai_interop</RootNamespace>
+    <AssemblyName>monobridgeai-interop</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\David\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Include\SwigOutput\AIModule.cs">
+      <Link>AIModule.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\AttackType.cs">
+      <Link>AttackType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\BaseLocation.cs">
+      <Link>BaseLocation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\BaseLocationSet.cs">
+      <Link>BaseLocationSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\BaseLocationSetIterator.cs">
+      <Link>BaseLocationSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\BaseLocationSpacelessSet.cs">
+      <Link>BaseLocationSpacelessSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\BaseLocationSpacelessSetIterator.cs">
+      <Link>BaseLocationSpacelessSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\bridge.cs">
+      <Link>bridge.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\bridgePINVOKE.cs">
+      <Link>bridgePINVOKE.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Chokepoint.cs">
+      <Link>Chokepoint.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ChokepointGetRegionsPair.cs">
+      <Link>ChokepointGetRegionsPair.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ChokepointGetSidesPair.cs">
+      <Link>ChokepointGetSidesPair.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ChokepointSet.cs">
+      <Link>ChokepointSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ChokepointSetIterator.cs">
+      <Link>ChokepointSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ChokepointSpacelessSet.cs">
+      <Link>ChokepointSpacelessSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ChokepointSpacelessSetIterator.cs">
+      <Link>ChokepointSpacelessSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Color.cs">
+      <Link>Color.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\CoordinateType.cs">
+      <Link>CoordinateType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\DamageType.cs">
+      <Link>DamageType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\DamageTypeSet.cs">
+      <Link>DamageTypeSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\DamageTypeSetIterator.cs">
+      <Link>DamageTypeSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Error.cs">
+      <Link>Error.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ErrorSet.cs">
+      <Link>ErrorSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ErrorSetIterator.cs">
+      <Link>ErrorSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ExplosionType.cs">
+      <Link>ExplosionType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ExplosionTypeSet.cs">
+      <Link>ExplosionTypeSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ExplosionTypeSetIterator.cs">
+      <Link>ExplosionTypeSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Flag.cs">
+      <Link>Flag.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Force.cs">
+      <Link>Force.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ForceSet.cs">
+      <Link>ForceSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\ForceSetIterator.cs">
+      <Link>ForceSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Game.cs">
+      <Link>Game.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Latency.cs">
+      <Link>Latency.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\monobridgeutil.cs">
+      <Link>monobridgeutil.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Order.cs">
+      <Link>Order.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\OrderSet.cs">
+      <Link>OrderSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\OrderSetIterator.cs">
+      <Link>OrderSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Player.cs">
+      <Link>Player.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PlayerSet.cs">
+      <Link>PlayerSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PlayerSetIterator.cs">
+      <Link>PlayerSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PlayerType.cs">
+      <Link>PlayerType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PlayerTypeSet.cs">
+      <Link>PlayerTypeSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PlayerTypeSetIterator.cs">
+      <Link>PlayerTypeSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Polygon.cs">
+      <Link>Polygon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PolygonSet.cs">
+      <Link>PolygonSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PolygonSetIterator.cs">
+      <Link>PolygonSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PolygonSpacelessSet.cs">
+      <Link>PolygonSpacelessSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PolygonSpacelessSetIterator.cs">
+      <Link>PolygonSpacelessSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Position.cs">
+      <Link>Position.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PositionVector.cs">
+      <Link>PositionVector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Race.cs">
+      <Link>Race.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\RaceSet.cs">
+      <Link>RaceSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\RaceSetIterator.cs">
+      <Link>RaceSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Region.cs">
+      <Link>Region.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\RegionSet.cs">
+      <Link>RegionSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\RegionSetIterator.cs">
+      <Link>RegionSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\RegionSpacelessSet.cs">
+      <Link>RegionSpacelessSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\RegionSpacelessSetIterator.cs">
+      <Link>RegionSpacelessSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_BaseLocation.cs">
+      <Link>SWIGTYPE_p_BaseLocation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_int.cs">
+      <Link>SWIGTYPE_p_int.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_PlayerType.cs">
+      <Link>SWIGTYPE_p_PlayerType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_Position.cs">
+      <Link>SWIGTYPE_p_Position.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_Race.cs">
+      <Link>SWIGTYPE_p_Race.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__listT_BWAPI__UnitType_t.cs">
+      <Link>SWIGTYPE_p_std__listT_BWAPI__UnitType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__listT_BWAPI__Unit_p_t.cs">
+      <Link>SWIGTYPE_p_std__listT_BWAPI__Unit_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t.cs">
+      <Link>SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__mapT_UnitType_const_p_int_t.cs">
+      <Link>SWIGTYPE_p_std__mapT_UnitType_const_p_int_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BaseLocation_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BaseLocation_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__AttackType_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__AttackType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__DamageType_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__DamageType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__Error_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__Error_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__Force_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__Force_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__Order_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__Order_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__PlayerType_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__PlayerType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__Player_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__Player_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__Race_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__Race_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__TechType_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__TechType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__TilePosition_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__TilePosition_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__UnitType_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__UnitType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__Unit_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__Unit_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWAPI__WeaponType_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWAPI__WeaponType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWTA__Polygon_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWTA__Polygon_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_BWTA__Region_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_BWTA__Region_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_Chokepoint_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_Chokepoint_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_Polygon_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_Polygon_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_Region_p_t.cs">
+      <Link>SWIGTYPE_p_std__setT_Region_p_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__setT_TilePosition_t.cs">
+      <Link>SWIGTYPE_p_std__setT_TilePosition_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__string.cs">
+      <Link>SWIGTYPE_p_std__string.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_std__vectorT_BWAPI__Position_t.cs">
+      <Link>SWIGTYPE_p_std__vectorT_BWAPI__Position_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_TechType.cs">
+      <Link>SWIGTYPE_p_TechType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_TilePosition.cs">
+      <Link>SWIGTYPE_p_TilePosition.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_UnitType.cs">
+      <Link>SWIGTYPE_p_UnitType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_UpgradeType.cs">
+      <Link>SWIGTYPE_p_UpgradeType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\TechType.cs">
+      <Link>TechType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\TechTypeConstantSet.cs">
+      <Link>TechTypeConstantSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\TechTypeConstantSetIterator.cs">
+      <Link>TechTypeConstantSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\TechTypeSet.cs">
+      <Link>TechTypeSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\TechTypeSetIterator.cs">
+      <Link>TechTypeSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\TilePosition.cs">
+      <Link>TilePosition.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\TilePositionSet.cs">
+      <Link>TilePositionSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\TilePositionSetIterator.cs">
+      <Link>TilePositionSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\Unit.cs">
+      <Link>Unit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitList.cs">
+      <Link>UnitList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitListIterator.cs">
+      <Link>UnitListIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitSet.cs">
+      <Link>UnitSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitSetIterator.cs">
+      <Link>UnitSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitSizeType.cs">
+      <Link>UnitSizeType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitSizeTypeSet.cs">
+      <Link>UnitSizeTypeSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitSizeTypeSetIterator.cs">
+      <Link>UnitSizeTypeSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitType.cs">
+      <Link>UnitType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitTypeConstantSet.cs">
+      <Link>UnitTypeConstantSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitTypeConstantSetIterator.cs">
+      <Link>UnitTypeConstantSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitTypeList.cs">
+      <Link>UnitTypeList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitTypeListIterator.cs">
+      <Link>UnitTypeListIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitTypeMap.cs">
+      <Link>UnitTypeMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitTypeMapIterator.cs">
+      <Link>UnitTypeMapIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitTypeSet.cs">
+      <Link>UnitTypeSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitTypeSetIterator.cs">
+      <Link>UnitTypeSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UnitTypeWhatBuildsPair.cs">
+      <Link>UnitTypeWhatBuildsPair.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UpgradeType.cs">
+      <Link>UpgradeType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UpgradeTypeConstantSet.cs">
+      <Link>UpgradeTypeConstantSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UpgradeTypeConstantSetIterator.cs">
+      <Link>UpgradeTypeConstantSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UpgradeTypeSet.cs">
+      <Link>UpgradeTypeSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\UpgradeTypeSetIterator.cs">
+      <Link>UpgradeTypeSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\WeaponType.cs">
+      <Link>WeaponType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\WeaponTypeSet.cs">
+      <Link>WeaponTypeSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Include\SwigOutput\WeaponTypeSetIterator.cs">
+      <Link>WeaponTypeSetIterator.cs</Link>
+    </Compile>
+    <Compile Include="MonoStarcraftBotBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>
