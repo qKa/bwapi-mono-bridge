@@ -1,4 +1,3 @@
-#Modifiy the Hello World Bot
 
 = Introduction =
 
