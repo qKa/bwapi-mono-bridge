@@ -1,0 +1,24 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+This is a walkthrough on how to modify the hello world bot included in the download. Some steps are required as this bot should not need any .NET or Mono installed on the machine it will run on. (Tested on a vanilla xp sp3)
+
+
+= Details =
+
+ # Follow the instructions from InstallingTheBot to get the hello bot up and running
+ # Make sure you have Mono installed www.mono-project.com/download
+ # Download and extract the zip file from the downloads tab
+ # Open up the starcraftbot.sln file in the starcraftbot directory (i use sharpdevelop but it should work fine in visualstudio, just ensure you are targeting the .net 2.0 runtime)
+ # Make changes to the project and compile as you would normally. (make sure the namespace, class name, and assembly name don't change as they are referenced by the bot loader directly)
+
+
+You should now have your assemblies that make up your bot. What we need to do now is to copy them and their required mono runtime classes to the bot folder. To do this easily we can take the following steps:
+
+ # make sure your required assemblies are in the StarcraftBot\bin\Debug folder. (or edit the batch file linkbot.bat in the linker folder with the location of your dlls)
+ # Launch a mono command prompt
+ # from the command prompt navigate to the linker folder and run linkbot.bat this will find all assemblies needed by StarcraftBot.dll and copy them into the linker\output folder.
+
+To Deploy
+ # Follow the directions in InstallingTheBot to deploy.
