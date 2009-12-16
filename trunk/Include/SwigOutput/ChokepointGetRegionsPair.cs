@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -71,5 +72,7 @@ public class ChokepointGetRegionsPair : IDisposable {
       return ret;
     } 
   }
+
+}
 
 }

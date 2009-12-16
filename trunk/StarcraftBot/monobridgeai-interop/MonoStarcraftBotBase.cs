@@ -33,20 +33,20 @@ using System;
 			return true;
 		}
 		
-		public virtual void onUnitCreate(Unit unit) {
+		public virtual void onUnitCreate(BWAPI.Unit unit) {
 			
 		}
 		
-		public virtual void onUnitDestroy(Unit unit) {
+		public virtual void onUnitDestroy(BWAPI.Unit unit) {
 			
 		}
-		public virtual void onUnitMorph(Unit unit) {
+		public virtual void onUnitMorph(BWAPI.Unit unit) {
 			
 		}
-		public virtual void onUnitShow(Unit unit) {
+		public virtual void onUnitShow(BWAPI.Unit unit) {
 			
 		}
-		public virtual void onUnitHide(Unit unit) {
+		public virtual void onUnitHide(BWAPI.Unit unit) {
 			
 		}
 		

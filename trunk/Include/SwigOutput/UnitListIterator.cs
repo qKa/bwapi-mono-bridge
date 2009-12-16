@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -53,5 +54,7 @@ public class UnitListIterator : IDisposable {
     Unit ret = (cPtr == IntPtr.Zero) ? null : new Unit(cPtr, false);
     return ret;
   }
+
+}
 
 }

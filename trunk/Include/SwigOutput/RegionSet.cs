@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -66,5 +67,7 @@ public class RegionSet : IDisposable {
     bool ret = bridgePINVOKE.RegionSet_remove(swigCPtr, Region.getCPtr(item));
     return ret;
   }
+
+}
 
 }

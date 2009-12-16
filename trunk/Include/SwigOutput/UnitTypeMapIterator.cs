@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -62,5 +63,7 @@ public class UnitTypeMapIterator : IDisposable {
     int ret = bridgePINVOKE.UnitTypeMapIterator_getValue(swigCPtr);
     return ret;
   }
+
+}
 
 }

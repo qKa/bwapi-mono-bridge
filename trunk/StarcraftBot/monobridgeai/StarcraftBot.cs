@@ -1,4 +1,5 @@
 using System;
+using BWAPI;
 
 namespace MonoBridgeAI {
 	class StarcraftBotProxy {
@@ -10,21 +11,9 @@ namespace MonoBridgeAI {
 		public void onStart() {
 			realbot.onStart();
 		}
-	/*
-	 * BridgeAIModule::initMethod = MethodFromKlass(":Init()",klass);
-	BridgeAIModule::startMethod = MethodFromKlass(":onStart()",klass);
-	BridgeAIModule::endMethod = MethodFromKlass(":onEnd()",klass);
-	BridgeAIModule::frameMethod = MethodFromKlass(":onFrame()",klass);
-	BridgeAIModule::sendTextMethod = MethodFromKlass(":onSendText(string)",klass);
-	BridgeAIModule::unitCreateMethod = MethodFromKlass(":onUnitCreate()",klass);
-	BridgeAIModule::unitDestroyMethod = MethodFromKlass(":onUnitDestroy()",klass);
-	BridgeAIModule::unitMorphMethod = MethodFromKlass(":onUnitMorph()",klass);
-	BridgeAIModule::unitShowMethod = MethodFromKlass(":onUnitShow()",klass);
-	BridgeAIModule::unitHideMethod = MethodFromKlass(":onUnitHide()",klass);
-	*/
+
 		public void onInit() {
 			bridge.Broodwar.printf("MonoBridgeAI Proxy Class Initialised");
-			//load our ai class from a dll but until then
 		}
 		
 		public void onEnd() {

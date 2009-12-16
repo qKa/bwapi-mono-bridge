@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -402,5 +403,7 @@ public class UnitType : IDisposable {
     bool ret = bridgePINVOKE.UnitType_isNeutral(swigCPtr);
     return ret;
   }
+
+}
 
 }

@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -59,5 +60,7 @@ public class Chokepoint : IDisposable {
     double ret = bridgePINVOKE.Chokepoint_getWidth(swigCPtr);
     return ret;
   }
+
+}
 
 }

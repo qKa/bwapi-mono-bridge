@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -49,5 +50,7 @@ public class Force : IDisposable {
     SWIGTYPE_p_std__setT_BWAPI__Player_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Player_p_t(bridgePINVOKE.Force_getPlayers(swigCPtr), true);
     return ret;
   }
+
+}
 
 }

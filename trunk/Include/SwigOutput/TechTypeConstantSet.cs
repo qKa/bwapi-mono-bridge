@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -66,5 +67,7 @@ public class TechTypeConstantSet : IDisposable {
     bool ret = bridgePINVOKE.TechTypeConstantSet_remove(swigCPtr, TechType.getCPtr(item));
     return ret;
   }
+
+}
 
 }

@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -53,5 +54,7 @@ public class TechTypeConstantSetIterator : IDisposable {
     TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
     return ret;
   }
+
+}
 
 }

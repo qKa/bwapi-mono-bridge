@@ -6,8 +6,11 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 public enum Flag {
   CompleteMapInformation = 0,
   UserInput = 1
+}
+
 }

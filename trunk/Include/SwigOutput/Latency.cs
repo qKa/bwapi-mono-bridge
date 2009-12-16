@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 public enum Latency {
   SinglePlayer = 2,
@@ -15,4 +16,6 @@ public enum Latency {
   BattlenetLow = 14,
   BattlenetMedium = 19,
   BattlenetHigh = 24
+}
+
 }

@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -83,5 +84,7 @@ public class UnitSizeType : IDisposable {
     string ret = bridgePINVOKE.UnitSizeType_getName(swigCPtr);
     return ret;
   }
+
+}
 
 }

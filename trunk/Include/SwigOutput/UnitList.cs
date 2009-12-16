@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -77,5 +78,7 @@ public class UnitList : IDisposable {
     bool ret = bridgePINVOKE.UnitList_remove(swigCPtr, Unit.getCPtr(item));
     return ret;
   }
+
+}
 
 }

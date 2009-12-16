@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -53,5 +54,7 @@ public class RegionSpacelessSetIterator : IDisposable {
     Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
     return ret;
   }
+
+}
 
 }

@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -93,5 +94,7 @@ public class AIModule : IDisposable {
   public virtual void onUnitRenegade(Unit unit) {
     bridgePINVOKE.AIModule_onUnitRenegade(swigCPtr, Unit.getCPtr(unit));
   }
+
+}
 
 }

@@ -6,9 +6,12 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 public enum CoordinateType {
   Screen = 1,
   Map = 2,
   Mouse = 3
+}
+
 }
