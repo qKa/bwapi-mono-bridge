@@ -1,4 +1,3 @@
-
 = Introduction =
 
 This is a walkthrough on how to modify the hello world bot included in the download. Some steps are required as this bot should not need any .NET or Mono installed on the machine it will run on. (Tested on a vanilla xp sp3)
@@ -10,7 +9,7 @@ This is a walkthrough on how to modify the hello world bot included in the downl
  # Make sure you have Mono installed www.mono-project.com/download
  # Download and extract the zip file from the downloads tab
  # Open up the starcraftbot.sln file in the starcraftbot directory (i use sharpdevelop but it should work fine in visualstudio, just ensure you are targeting the .net 2.0 runtime)
- # Make changes to the project and compile as you would normally. (make sure the namespace, class name, and assembly name don't change as they are referenced by the bot loader directly)
+ # Make changes to the project and compile as you would normally. (make sure the namespace, class name, and assembly name don't change as they are referenced by the bot loader directly) NB all BWAPI stuff is located in the BWAPI namespace. and BWAPI.bridge.Broodwar is the reference to the main Game object.
 
 
 You should now have your assemblies that make up your bot. What we need to do now is to copy them and their required mono runtime classes to the bot folder. To do this easily we can take the following steps:
