@@ -3,8 +3,6 @@
  * User: David
  * Date: 14/12/2009
  * Time: 6:30 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
 using System.Collections.Generic;
@@ -13,7 +11,7 @@ using BWAPI;
 namespace StarcraftBot
 {
 	/// <summary>
-	/// Description of MyClass.
+	/// Bot AI Class. Override the methods from MonoStarcraftBotBase as needed.
 	/// </summary>
 	public class MonoStarcraftBot: MonoStarcraftBotBase
 	{
