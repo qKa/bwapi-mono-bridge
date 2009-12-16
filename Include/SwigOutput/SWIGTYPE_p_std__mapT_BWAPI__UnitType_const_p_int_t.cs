@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -24,4 +25,6 @@ public class SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t {
   internal static HandleRef getCPtr(SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t obj) {
     return (obj == null) ? new HandleRef(null, IntPtr.Zero) : obj.swigCPtr;
   }
+}
+
 }

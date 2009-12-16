@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -66,5 +67,7 @@ public class ChokepointSpacelessSet : IDisposable {
     bool ret = bridgePINVOKE.ChokepointSpacelessSet_remove(swigCPtr, Chokepoint.getCPtr(item));
     return ret;
   }
+
+}
 
 }

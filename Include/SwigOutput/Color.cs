@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -96,5 +97,7 @@ public class Color : IDisposable {
     int ret = bridgePINVOKE.Color_blue(swigCPtr);
     return ret;
   }
+
+}
 
 }

@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -52,5 +53,7 @@ public class UnitTypeSetIterator : IDisposable {
     UnitType ret = new UnitType(bridgePINVOKE.UnitTypeSetIterator_next(swigCPtr), true);
     return ret;
   }
+
+}
 
 }

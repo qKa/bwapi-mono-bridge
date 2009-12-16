@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -203,5 +204,7 @@ public class WeaponType : IDisposable {
     bool ret = bridgePINVOKE.WeaponType_targetsOwn(swigCPtr);
     return ret;
   }
+
+}
 
 }

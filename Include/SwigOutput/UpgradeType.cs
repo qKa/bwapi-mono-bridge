@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -134,5 +135,7 @@ public class UpgradeType : IDisposable {
     SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t(bridgePINVOKE.UpgradeType_whatUses(swigCPtr), false);
     return ret;
   }
+
+}
 
 }

@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -70,5 +71,7 @@ public class UnitTypeWhatBuildsPair : IDisposable {
       return ret;
     } 
   }
+
+}
 
 }

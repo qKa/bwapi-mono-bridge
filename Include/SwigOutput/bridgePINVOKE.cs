@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -4998,4 +4999,6 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_PositionVector_get")]
   public static extern IntPtr PositionVector_get(HandleRef jarg1, int jarg2);
+}
+
 }

@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -115,5 +116,7 @@ public class TechType : IDisposable {
     SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t(bridgePINVOKE.TechType_whatUses(swigCPtr), false);
     return ret;
   }
+
+}
 
 }

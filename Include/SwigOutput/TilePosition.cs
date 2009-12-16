@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -115,5 +116,7 @@ public class TilePosition : IDisposable {
     int ret = bridgePINVOKE.TilePosition_yConst(swigCPtr);
     return ret;
   }
+
+}
 
 }

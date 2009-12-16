@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -541,5 +542,7 @@ public class Game : IDisposable {
     bridgePINVOKE.Game_drawLineScreen(swigCPtr, x1, y1, x2, y2, Color.getCPtr(color));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

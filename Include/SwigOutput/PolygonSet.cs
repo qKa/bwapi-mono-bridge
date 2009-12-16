@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -66,5 +67,7 @@ public class PolygonSet : IDisposable {
     bool ret = bridgePINVOKE.PolygonSet_remove(swigCPtr, Polygon.getCPtr(item));
     return ret;
   }
+
+}
 
 }

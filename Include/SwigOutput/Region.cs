@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -59,5 +60,7 @@ public class Region : IDisposable {
     SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t ret = new SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t(bridgePINVOKE.Region_getBaseLocations(swigCPtr), false);
     return ret;
   }
+
+}
 
 }

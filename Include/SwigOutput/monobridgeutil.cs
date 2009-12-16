@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -48,5 +49,7 @@ public class monobridgeutil : IDisposable {
 
   public monobridgeutil() : this(bridgePINVOKE.new_monobridgeutil(), true) {
   }
+
+}
 
 }

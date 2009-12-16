@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -113,5 +114,7 @@ public class Race : IDisposable {
     UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
     return ret;
   }
+
+}
 
 }

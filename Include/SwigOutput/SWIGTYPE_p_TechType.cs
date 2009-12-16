@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
@@ -24,4 +25,6 @@ public class SWIGTYPE_p_TechType {
   internal static HandleRef getCPtr(SWIGTYPE_p_TechType obj) {
     return (obj == null) ? new HandleRef(null, IntPtr.Zero) : obj.swigCPtr;
   }
+}
+
 }
