@@ -148,9 +148,7 @@ void BridgeAIModule::init(std::wstring dllDirectory)
 
 void BridgeAIModule::destroy()
 {
-	if (BridgeAIModule::domain != NULL) {
-		mono_jit_cleanup(BridgeAIModule::domain);
-	}
+
 }
 
 BridgeAIModule::BridgeAIModule()
@@ -160,6 +158,10 @@ BridgeAIModule::BridgeAIModule()
 
 BridgeAIModule::~BridgeAIModule()
 {
+	//cleanup
+	if (BridgeAIModule::domain != NULL) {
+		mono_jit_cleanup(BridgeAIModule::domain);
+	}
 	delete fl;
 }
 
