@@ -59,10 +59,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="Lib\BWAPI.lib Lib\BWTA.lib Lib\Util.lib"
+				AdditionalDependencies="Lib\BWAPI.lib Lib\BWTA.lib Lib\Util.lib Lib\mono.lib"
 				OutputFile="MonoBridge.dll"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories=""
+				AdditionalLibraryDirectories=".\LIB"
 				IgnoreAllDefaultLibraries="false"
 				DelayLoadDLLs="mono.dll"
 				GenerateDebugInformation="true"
@@ -139,7 +139,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="Lib\BWAPI.lib Lib\BWTA.lib Lib\Util.lib Lib\mono.lib"
 				OutputFile="MonoBridge.dll"
-				AdditionalLibraryDirectories="LIB"
+				AdditionalLibraryDirectories=".\LIB"
 				IgnoreDefaultLibraryNames=""
 				DelayLoadDLLs="mono.dll"
 				GenerateDebugInformation="true"
