@@ -257,8 +257,8 @@ public class Unit : IDisposable {
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__listT_BWAPI__UnitType_t getTrainingQueue() {
-    SWIGTYPE_p_std__listT_BWAPI__UnitType_t ret = new SWIGTYPE_p_std__listT_BWAPI__UnitType_t(bridgePINVOKE.Unit_getTrainingQueue(swigCPtr), true);
+  public virtual UnitTypeList getTrainingQueue() {
+    UnitTypeList ret = new UnitTypeList(bridgePINVOKE.Unit_getTrainingQueue(swigCPtr), true);
     return ret;
   }
 
@@ -268,8 +268,8 @@ public class Unit : IDisposable {
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__listT_BWAPI__Unit_p_t getLoadedUnits() {
-    SWIGTYPE_p_std__listT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__listT_BWAPI__Unit_p_t(bridgePINVOKE.Unit_getLoadedUnits(swigCPtr), true);
+  public virtual UnitPtrList getLoadedUnits() {
+    UnitPtrList ret = new UnitPtrList(bridgePINVOKE.Unit_getLoadedUnits(swigCPtr), true);
     return ret;
   }
 
@@ -293,8 +293,8 @@ public class Unit : IDisposable {
     return ret;
   }
 
-  public virtual SWIGTYPE_p_UpgradeType getUpgrade() {
-    SWIGTYPE_p_UpgradeType ret = new SWIGTYPE_p_UpgradeType(bridgePINVOKE.Unit_getUpgrade(swigCPtr), true);
+  public virtual UpgradeType getUpgrade() {
+    UpgradeType ret = new UpgradeType(bridgePINVOKE.Unit_getUpgrade(swigCPtr), true);
     return ret;
   }
 
@@ -325,8 +325,8 @@ public class Unit : IDisposable {
     return ret;
   }
 
-  public virtual int getUpgradeLevel(SWIGTYPE_p_UpgradeType upgrade) {
-    int ret = bridgePINVOKE.Unit_getUpgradeLevel(swigCPtr, SWIGTYPE_p_UpgradeType.getCPtr(upgrade));
+  public virtual int getUpgradeLevel(UpgradeType upgrade) {
+    int ret = bridgePINVOKE.Unit_getUpgradeLevel(swigCPtr, UpgradeType.getCPtr(upgrade));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -587,8 +587,8 @@ public class Unit : IDisposable {
     return ret;
   }
 
-  public virtual bool upgrade(SWIGTYPE_p_UpgradeType upgrade) {
-    bool ret = bridgePINVOKE.Unit_upgrade(swigCPtr, SWIGTYPE_p_UpgradeType.getCPtr(upgrade));
+  public virtual bool upgrade(UpgradeType upgrade) {
+    bool ret = bridgePINVOKE.Unit_upgrade(swigCPtr, UpgradeType.getCPtr(upgrade));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

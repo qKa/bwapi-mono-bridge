@@ -11,24 +11,24 @@ namespace BWAPI {
 using System;
 using System.Runtime.InteropServices;
 
-public class UnitTypeList : IDisposable, System.Collections.IEnumerable
+public class ForcePtrSet : IDisposable 
 #if !SWIG_DOTNET_1
-    , System.Collections.Generic.IEnumerable<UnitType>
+    , System.Collections.Generic.ICollection<Force>
 #endif
  {
   private HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal UnitTypeList(IntPtr cPtr, bool cMemoryOwn) {
+  internal ForcePtrSet(IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new HandleRef(this, cPtr);
   }
 
-  internal static HandleRef getCPtr(UnitTypeList obj) {
+  internal static HandleRef getCPtr(ForcePtrSet obj) {
     return (obj == null) ? new HandleRef(null, IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~UnitTypeList() {
+  ~ForcePtrSet() {
     Dispose();
   }
 
@@ -37,7 +37,7 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKE.delete_UnitTypeList(swigCPtr);
+          bridgePINVOKE.delete_ForcePtrSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -45,41 +45,24 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
     }
   }
 
-  public UnitTypeList(System.Collections.ICollection c) : this() {
-    if (c == null)
-      throw new ArgumentNullException("c");
-    foreach (UnitType element in c) {
-      this.Add(element);
-    }
-  }
 
-  public bool IsFixedSize {
-    get {
-      return false;
-    }
-  }
-
-  public bool IsReadOnly {
-    get {
-      return false;
-    }
-  }
-
+  
   public int Count {
     get {
       return (int)size();
     }
   }
 
-  public bool IsSynchronized {
-    get {
-      return false;
+  public bool IsReadOnly {
+    get { 
+      return false; 
     }
   }
-   
-  public System.Collections.Generic.ICollection<UnitType> Values {
+
+#if !SWIG_DOTNET_1
+ public System.Collections.Generic.ICollection<Force> Values {
     get {
-      System.Collections.Generic.ICollection<UnitType> values = new System.Collections.Generic.List<UnitType>();
+      System.Collections.Generic.ICollection<Force> values = new System.Collections.Generic.List<Force>();
       IntPtr iter = create_iterator_begin();
       try {
         while (true) {
@@ -90,63 +73,46 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
       return values;
     }
   }
-
-#if SWIG_DOTNET_1
-  public void CopyTo(System.Array array)
-#else
-  public void CopyTo(UnitType[] array)
-#endif
-  {
-    CopyTo(0, array, 0, this.Count);
+ 
+  public bool Contains(Force item) {
+    if ( ContainsKey(item)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
-#if SWIG_DOTNET_1
-  public void CopyTo(System.Array array, int arrayIndex)
-#else
-  public void CopyTo(UnitType[] array, int arrayIndex)
-#endif
-  {
-    CopyTo(0, array, arrayIndex, this.Count);
+  public void CopyTo(Force[] array) {
+    CopyTo(array, 0);
   }
 
-#if SWIG_DOTNET_1
-  public void CopyTo(int index, System.Array array, int arrayIndex, int count)
-#else
-  public void CopyTo(int index, UnitType[] array, int arrayIndex, int count)
-#endif
-  {
+  public void CopyTo( Force[] array, int arrayIndex) {
     if (array == null)
       throw new ArgumentNullException("array");
-    if (index < 0)
-      throw new ArgumentOutOfRangeException("index", "Value is less than zero");
     if (arrayIndex < 0)
       throw new ArgumentOutOfRangeException("arrayIndex", "Value is less than zero");
-    if (count < 0)
-      throw new ArgumentOutOfRangeException("count", "Value is less than zero");
     if (array.Rank > 1)
       throw new ArgumentException("Multi dimensional array.", "array");
-    if (index+count > this.Count || arrayIndex+count > array.Length)
+    if (arrayIndex+this.Count > array.Length)
       throw new ArgumentException("Number of elements to copy is too large.");
-  
-  System.Collections.Generic.IList<UnitType> keyList = new System.Collections.Generic.List<UnitType>(this.Values);
+
+   System.Collections.Generic.IList<Force> keyList = new System.Collections.Generic.List<Force>(this.Values);
     for (int i = 0; i < this.Count; i++) {
-      UnitType currentKey = keyList[i];
+      Force currentKey = keyList[i];
       array.SetValue( currentKey, arrayIndex+i);
     }
   }
 
-#if !SWIG_DOTNET_1
-  System.Collections.Generic.IEnumerator<UnitType> System.Collections.Generic.IEnumerable<UnitType>.GetEnumerator() {
-    return new UnitTypeListEnumerator(this);
+  System.Collections.Generic.IEnumerator< Force> System.Collections.Generic.IEnumerable<Force>.GetEnumerator() {
+    return new ForcePtrSetEnumerator(this);
   }
-#endif
 
   System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
-    return new UnitTypeListEnumerator(this);
+    return new ForcePtrSetEnumerator(this);
   }
 
-  public UnitTypeListEnumerator GetEnumerator() {
-    return new UnitTypeListEnumerator(this);
+  public ForcePtrSetEnumerator GetEnumerator() {
+    return new ForcePtrSetEnumerator(this);
   }
 
   // Type-safe enumerator
@@ -154,27 +120,25 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
   /// whenever the collection is modified. This has been done for changes in the size of the
   /// collection but not when one of the elements of the collection is modified as it is a bit
   /// tricky to detect unmanaged code that modifies the collection under our feet.
-  public sealed class UnitTypeListEnumerator : System.Collections.IEnumerator
-#if !SWIG_DOTNET_1
-    , System.Collections.Generic.IEnumerator<UnitType>
-#endif
+  public sealed class ForcePtrSetEnumerator : System.Collections.IEnumerator, 
+      System.Collections.Generic.IEnumerator< Force>
   {
-    private UnitTypeList collectionRef;
+    private ForcePtrSet collectionRef;
+    private System.Collections.Generic.IList<Force> keyCollection;
     private int currentIndex;
     private object currentObject;
-    private System.Collections.Generic.IList<UnitType> keyCollection;
     private int currentSize;
 
-    public UnitTypeListEnumerator(UnitTypeList collection) {
+    public ForcePtrSetEnumerator(ForcePtrSet collection) {
       collectionRef = collection;
-      keyCollection = new System.Collections.Generic.List<UnitType>(collection.Values);
+      keyCollection = new System.Collections.Generic.List<Force>(collection.Values);
       currentIndex = -1;
       currentObject = null;
       currentSize = collectionRef.Count;
     }
 
     // Type-safe iterator Current
-    public UnitType Current {
+    public  Force Current {
       get {
         if (currentIndex == -1)
           throw new InvalidOperationException("Enumeration not started.");
@@ -182,7 +146,7 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
           throw new InvalidOperationException("Enumeration finished.");
         if (currentObject == null)
           throw new InvalidOperationException("Collection modified.");
-        return (UnitType)currentObject;
+        return ( Force)currentObject;
       }
     }
 
@@ -198,7 +162,7 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
       bool moveOkay = (currentIndex+1 < size) && (size == currentSize);
       if (moveOkay) {
         currentIndex++;
-        UnitType currentKey = keyCollection[currentIndex];
+        Force currentKey = keyCollection[currentIndex];
         currentObject = currentKey;
       } else {
         currentObject = null;
@@ -214,42 +178,65 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
       }
     }
 
-#if !SWIG_DOTNET_1
     public void Dispose() {
-        currentIndex = -1;
-        currentObject = null;
+      currentIndex = -1;
+      currentObject = null;
     }
+  }
 #endif
+  
+
+  public ForcePtrSet() : this(bridgePINVOKE.new_ForcePtrSet__SWIG_0(), true) {
   }
 
-  public void Clear() {
-    bridgePINVOKE.UnitTypeList_Clear(swigCPtr);
-  }
-
-  public void Add(UnitType x) {
-    bridgePINVOKE.UnitTypeList_Add(swigCPtr, UnitType.getCPtr(x));
+  public ForcePtrSet(ForcePtrSet other) : this(bridgePINVOKE.new_ForcePtrSet__SWIG_1(ForcePtrSet.getCPtr(other)), true) {
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKE.UnitTypeList_size(swigCPtr);
+    uint ret = bridgePINVOKE.ForcePtrSet_size(swigCPtr);
     return ret;
   }
 
-  public UnitTypeList() : this(bridgePINVOKE.new_UnitTypeList__SWIG_0(), true) {
+  public bool empty() {
+    bool ret = bridgePINVOKE.ForcePtrSet_empty(swigCPtr);
+    return ret;
   }
 
-  public UnitTypeList(UnitTypeList other) : this(bridgePINVOKE.new_UnitTypeList__SWIG_1(UnitTypeList.getCPtr(other)), true) {
+  public void Clear() {
+    bridgePINVOKE.ForcePtrSet_Clear(swigCPtr);
+  }
+
+  public Force getitem(Force key) {
+    IntPtr cPtr = bridgePINVOKE.ForcePtrSet_getitem(swigCPtr, Force.getCPtr(key));
+    Force ret = (cPtr == IntPtr.Zero) ? null : new Force(cPtr, false);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public bool ContainsKey(Force key) {
+    bool ret = bridgePINVOKE.ForcePtrSet_ContainsKey(swigCPtr, Force.getCPtr(key));
+    return ret;
+  }
+
+  public void Add(Force key) {
+    bridgePINVOKE.ForcePtrSet_Add(swigCPtr, Force.getCPtr(key));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKE.UnitTypeList_create_iterator_begin(swigCPtr);
+  public bool Remove(Force key) {
+    bool ret = bridgePINVOKE.ForcePtrSet_Remove(swigCPtr, Force.getCPtr(key));
     return ret;
   }
 
-  public UnitType get_next_key(IntPtr swigiterator) {
-    UnitType ret = new UnitType(bridgePINVOKE.UnitTypeList_get_next_key(swigCPtr, swigiterator), false);
+  public IntPtr create_iterator_begin() {
+    IntPtr ret = bridgePINVOKE.ForcePtrSet_create_iterator_begin(swigCPtr);
+    return ret;
+  }
+
+  public Force get_next_key(IntPtr swigiterator) {
+    IntPtr cPtr = bridgePINVOKE.ForcePtrSet_get_next_key(swigCPtr, swigiterator);
+    Force ret = (cPtr == IntPtr.Zero) ? null : new Force(cPtr, false);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

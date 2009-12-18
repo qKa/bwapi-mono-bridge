@@ -67,18 +67,18 @@ public class BaseLocation : IDisposable {
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getMinerals() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.BaseLocation_getMinerals(swigCPtr), false);
+  public virtual UnitSet getMinerals() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.BaseLocation_getMinerals(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getStaticMinerals() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.BaseLocation_getStaticMinerals(swigCPtr), false);
+  public virtual UnitSet getStaticMinerals() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.BaseLocation_getStaticMinerals(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getGeysers() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.BaseLocation_getGeysers(swigCPtr), false);
+  public virtual UnitSet getGeysers() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.BaseLocation_getGeysers(swigCPtr), false);
     return ret;
   }
 

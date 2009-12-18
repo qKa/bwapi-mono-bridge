@@ -8,12 +8,12 @@ namespace BWTA
 {
   void readMap();
   void analyze();
-  const std::set<Region*>& getRegions();
-  const std::set<Chokepoint*>& getChokepoints();
-  const std::set<BaseLocation*>& getBaseLocations();
-  const std::set<BaseLocation*>& getStartLocations();
-  const std::set<Polygon*>& getUnwalkablePolygons();
+  const std::set<BWTA::Region*>& getRegions();
+  const std::set<BWTA::Chokepoint*>& getChokepoints();
+  const std::set<BWTA::BaseLocation*>& getBaseLocations();
+  const std::set<BWTA::BaseLocation*>& getStartLocations();
+  const std::set<BWTA::Polygon*>& getUnwalkablePolygons();
   BWAPI::Position getNearestUnwalkablePosition(BWAPI::Position position);
-  BaseLocation* getStartLocation(BWAPI::Player* player);
-  BaseLocation* getNearestBaseLocation(BWAPI::TilePosition position);
+  BWTA::BaseLocation* getStartLocation(BWAPI::Player* player);
+  BWTA::BaseLocation* getNearestBaseLocation(BWAPI::TilePosition position);
 }

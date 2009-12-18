@@ -95,13 +95,13 @@ public class UnitType : IDisposable {
     return ret;
   }
 
-  public UnitTypeWhatBuildsPair whatBuilds() {
-    UnitTypeWhatBuildsPair ret = new UnitTypeWhatBuildsPair(bridgePINVOKE.UnitType_whatBuilds(swigCPtr), true);
+  public UnitTypePtrIntPair whatBuilds() {
+    UnitTypePtrIntPair ret = new UnitTypePtrIntPair(bridgePINVOKE.UnitType_whatBuilds(swigCPtr), true);
     return ret;
   }
 
-  public SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t requiredUnits() {
-    SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t ret = new SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t(bridgePINVOKE.UnitType_requiredUnits(swigCPtr), false);
+  public UnitTypePtrIntMap requiredUnits() {
+    UnitTypePtrIntMap ret = new UnitTypePtrIntMap(bridgePINVOKE.UnitType_requiredUnits(swigCPtr), false);
     return ret;
   }
 
@@ -111,13 +111,13 @@ public class UnitType : IDisposable {
     return ret;
   }
 
-  public SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t abilities() {
-    SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t(bridgePINVOKE.UnitType_abilities(swigCPtr), false);
+  public TechTypePtrSet abilities() {
+    TechTypePtrSet ret = new TechTypePtrSet(bridgePINVOKE.UnitType_abilities(swigCPtr), false);
     return ret;
   }
 
-  public SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t upgrades() {
-    SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t(bridgePINVOKE.UnitType_upgrades(swigCPtr), false);
+  public UpgradeTypePtrSet upgrades() {
+    UpgradeTypePtrSet ret = new UpgradeTypePtrSet(bridgePINVOKE.UnitType_upgrades(swigCPtr), false);
     return ret;
   }
 

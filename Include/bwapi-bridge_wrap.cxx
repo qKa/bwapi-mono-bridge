@@ -355,18 +355,950 @@ SWIGINTERN void SWIG_CSharpException(int code, const char *msg) {
 #include <utility>
 
 
-#include "ListWrapper.h"
-#include "MapWrapper.h"
-#include "SetWrapper.h"
-#include "VectorWrapper.h"
+#include <set>
+#include <algorithm>
+#include <stdexcept>
+
+
+#include <list>
+#include <algorithm>
+#include <stdexcept>
+
+
 #include "BWAPI.h"
 #include "BWTA.h"
 #include "monobridge.h"
 using namespace BWAPI;
 
 
-  using namespace BWTA;
+using namespace BWAPI;
 
+SWIGINTERN std::set< BWAPI::Unit * >::key_type const &std_set_Sl_BWAPI_Unit_Sm__Sg__getitem(std::set< BWAPI::Unit * > *self,std::set< BWAPI::Unit * >::key_type const &key){
+        std::set< BWAPI::Unit * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Unit_Sm__Sg__ContainsKey(std::set< BWAPI::Unit * > *self,std::set< BWAPI::Unit * >::key_type const &key){
+        std::set< BWAPI::Unit * >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_Unit_Sm__Sg__Add(std::set< BWAPI::Unit * > *self,std::set< BWAPI::Unit * >::key_type const &key){
+        std::set< BWAPI::Unit * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Unit_Sm__Sg__Remove(std::set< BWAPI::Unit * > *self,std::set< BWAPI::Unit * >::key_type const &key){
+        std::set< BWAPI::Unit * >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::Unit * >::iterator *std_set_Sl_BWAPI_Unit_Sm__Sg__create_iterator_begin(std::set< BWAPI::Unit * > *self){
+        return new std::set< BWAPI::Unit * >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::Unit * >::key_type const &std_set_Sl_BWAPI_Unit_Sm__Sg__get_next_key(std::set< BWAPI::Unit * > *self,std::set< BWAPI::Unit * >::iterator *swigiterator){
+        std::set< BWAPI::Unit * >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::AttackType >::key_type const &std_set_Sl_BWAPI_AttackType_Sg__getitem(std::set< BWAPI::AttackType > *self,std::set< BWAPI::AttackType >::key_type const &key){
+        std::set< BWAPI::AttackType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_AttackType_Sg__ContainsKey(std::set< BWAPI::AttackType > *self,std::set< BWAPI::AttackType >::key_type const &key){
+        std::set< BWAPI::AttackType >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_AttackType_Sg__Add(std::set< BWAPI::AttackType > *self,std::set< BWAPI::AttackType >::key_type const &key){
+        std::set< BWAPI::AttackType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_AttackType_Sg__Remove(std::set< BWAPI::AttackType > *self,std::set< BWAPI::AttackType >::key_type const &key){
+        std::set< BWAPI::AttackType >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::AttackType >::iterator *std_set_Sl_BWAPI_AttackType_Sg__create_iterator_begin(std::set< BWAPI::AttackType > *self){
+        return new std::set< BWAPI::AttackType >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::AttackType >::key_type const &std_set_Sl_BWAPI_AttackType_Sg__get_next_key(std::set< BWAPI::AttackType > *self,std::set< BWAPI::AttackType >::iterator *swigiterator){
+        std::set< BWAPI::AttackType >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::DamageType >::key_type const &std_set_Sl_BWAPI_DamageType_Sg__getitem(std::set< BWAPI::DamageType > *self,std::set< BWAPI::DamageType >::key_type const &key){
+        std::set< BWAPI::DamageType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_DamageType_Sg__ContainsKey(std::set< BWAPI::DamageType > *self,std::set< BWAPI::DamageType >::key_type const &key){
+        std::set< BWAPI::DamageType >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_DamageType_Sg__Add(std::set< BWAPI::DamageType > *self,std::set< BWAPI::DamageType >::key_type const &key){
+        std::set< BWAPI::DamageType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_DamageType_Sg__Remove(std::set< BWAPI::DamageType > *self,std::set< BWAPI::DamageType >::key_type const &key){
+        std::set< BWAPI::DamageType >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::DamageType >::iterator *std_set_Sl_BWAPI_DamageType_Sg__create_iterator_begin(std::set< BWAPI::DamageType > *self){
+        return new std::set< BWAPI::DamageType >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::DamageType >::key_type const &std_set_Sl_BWAPI_DamageType_Sg__get_next_key(std::set< BWAPI::DamageType > *self,std::set< BWAPI::DamageType >::iterator *swigiterator){
+        std::set< BWAPI::DamageType >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::Error >::key_type const &std_set_Sl_BWAPI_Error_Sg__getitem(std::set< BWAPI::Error > *self,std::set< BWAPI::Error >::key_type const &key){
+        std::set< BWAPI::Error >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Error_Sg__ContainsKey(std::set< BWAPI::Error > *self,std::set< BWAPI::Error >::key_type const &key){
+        std::set< BWAPI::Error >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_Error_Sg__Add(std::set< BWAPI::Error > *self,std::set< BWAPI::Error >::key_type const &key){
+        std::set< BWAPI::Error >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Error_Sg__Remove(std::set< BWAPI::Error > *self,std::set< BWAPI::Error >::key_type const &key){
+        std::set< BWAPI::Error >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::Error >::iterator *std_set_Sl_BWAPI_Error_Sg__create_iterator_begin(std::set< BWAPI::Error > *self){
+        return new std::set< BWAPI::Error >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::Error >::key_type const &std_set_Sl_BWAPI_Error_Sg__get_next_key(std::set< BWAPI::Error > *self,std::set< BWAPI::Error >::iterator *swigiterator){
+        std::set< BWAPI::Error >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::ExplosionType >::key_type const &std_set_Sl_BWAPI_ExplosionType_Sg__getitem(std::set< BWAPI::ExplosionType > *self,std::set< BWAPI::ExplosionType >::key_type const &key){
+        std::set< BWAPI::ExplosionType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_ExplosionType_Sg__ContainsKey(std::set< BWAPI::ExplosionType > *self,std::set< BWAPI::ExplosionType >::key_type const &key){
+        std::set< BWAPI::ExplosionType >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_ExplosionType_Sg__Add(std::set< BWAPI::ExplosionType > *self,std::set< BWAPI::ExplosionType >::key_type const &key){
+        std::set< BWAPI::ExplosionType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_ExplosionType_Sg__Remove(std::set< BWAPI::ExplosionType > *self,std::set< BWAPI::ExplosionType >::key_type const &key){
+        std::set< BWAPI::ExplosionType >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::ExplosionType >::iterator *std_set_Sl_BWAPI_ExplosionType_Sg__create_iterator_begin(std::set< BWAPI::ExplosionType > *self){
+        return new std::set< BWAPI::ExplosionType >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::ExplosionType >::key_type const &std_set_Sl_BWAPI_ExplosionType_Sg__get_next_key(std::set< BWAPI::ExplosionType > *self,std::set< BWAPI::ExplosionType >::iterator *swigiterator){
+        std::set< BWAPI::ExplosionType >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::Force * >::key_type const &std_set_Sl_BWAPI_Force_Sm__Sg__getitem(std::set< BWAPI::Force * > *self,std::set< BWAPI::Force * >::key_type const &key){
+        std::set< BWAPI::Force * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Force_Sm__Sg__ContainsKey(std::set< BWAPI::Force * > *self,std::set< BWAPI::Force * >::key_type const &key){
+        std::set< BWAPI::Force * >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_Force_Sm__Sg__Add(std::set< BWAPI::Force * > *self,std::set< BWAPI::Force * >::key_type const &key){
+        std::set< BWAPI::Force * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Force_Sm__Sg__Remove(std::set< BWAPI::Force * > *self,std::set< BWAPI::Force * >::key_type const &key){
+        std::set< BWAPI::Force * >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::Force * >::iterator *std_set_Sl_BWAPI_Force_Sm__Sg__create_iterator_begin(std::set< BWAPI::Force * > *self){
+        return new std::set< BWAPI::Force * >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::Force * >::key_type const &std_set_Sl_BWAPI_Force_Sm__Sg__get_next_key(std::set< BWAPI::Force * > *self,std::set< BWAPI::Force * >::iterator *swigiterator){
+        std::set< BWAPI::Force * >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::Order >::key_type const &std_set_Sl_BWAPI_Order_Sg__getitem(std::set< BWAPI::Order > *self,std::set< BWAPI::Order >::key_type const &key){
+        std::set< BWAPI::Order >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Order_Sg__ContainsKey(std::set< BWAPI::Order > *self,std::set< BWAPI::Order >::key_type const &key){
+        std::set< BWAPI::Order >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_Order_Sg__Add(std::set< BWAPI::Order > *self,std::set< BWAPI::Order >::key_type const &key){
+        std::set< BWAPI::Order >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Order_Sg__Remove(std::set< BWAPI::Order > *self,std::set< BWAPI::Order >::key_type const &key){
+        std::set< BWAPI::Order >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::Order >::iterator *std_set_Sl_BWAPI_Order_Sg__create_iterator_begin(std::set< BWAPI::Order > *self){
+        return new std::set< BWAPI::Order >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::Order >::key_type const &std_set_Sl_BWAPI_Order_Sg__get_next_key(std::set< BWAPI::Order > *self,std::set< BWAPI::Order >::iterator *swigiterator){
+        std::set< BWAPI::Order >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::Player * >::key_type const &std_set_Sl_BWAPI_Player_Sm__Sg__getitem(std::set< BWAPI::Player * > *self,std::set< BWAPI::Player * >::key_type const &key){
+        std::set< BWAPI::Player * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Player_Sm__Sg__ContainsKey(std::set< BWAPI::Player * > *self,std::set< BWAPI::Player * >::key_type const &key){
+        std::set< BWAPI::Player * >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_Player_Sm__Sg__Add(std::set< BWAPI::Player * > *self,std::set< BWAPI::Player * >::key_type const &key){
+        std::set< BWAPI::Player * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Player_Sm__Sg__Remove(std::set< BWAPI::Player * > *self,std::set< BWAPI::Player * >::key_type const &key){
+        std::set< BWAPI::Player * >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::Player * >::iterator *std_set_Sl_BWAPI_Player_Sm__Sg__create_iterator_begin(std::set< BWAPI::Player * > *self){
+        return new std::set< BWAPI::Player * >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::Player * >::key_type const &std_set_Sl_BWAPI_Player_Sm__Sg__get_next_key(std::set< BWAPI::Player * > *self,std::set< BWAPI::Player * >::iterator *swigiterator){
+        std::set< BWAPI::Player * >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::PlayerType >::key_type const &std_set_Sl_BWAPI_PlayerType_Sg__getitem(std::set< BWAPI::PlayerType > *self,std::set< BWAPI::PlayerType >::key_type const &key){
+        std::set< BWAPI::PlayerType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_PlayerType_Sg__ContainsKey(std::set< BWAPI::PlayerType > *self,std::set< BWAPI::PlayerType >::key_type const &key){
+        std::set< BWAPI::PlayerType >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_PlayerType_Sg__Add(std::set< BWAPI::PlayerType > *self,std::set< BWAPI::PlayerType >::key_type const &key){
+        std::set< BWAPI::PlayerType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_PlayerType_Sg__Remove(std::set< BWAPI::PlayerType > *self,std::set< BWAPI::PlayerType >::key_type const &key){
+        std::set< BWAPI::PlayerType >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::PlayerType >::iterator *std_set_Sl_BWAPI_PlayerType_Sg__create_iterator_begin(std::set< BWAPI::PlayerType > *self){
+        return new std::set< BWAPI::PlayerType >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::PlayerType >::key_type const &std_set_Sl_BWAPI_PlayerType_Sg__get_next_key(std::set< BWAPI::PlayerType > *self,std::set< BWAPI::PlayerType >::iterator *swigiterator){
+        std::set< BWAPI::PlayerType >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::Race >::key_type const &std_set_Sl_BWAPI_Race_Sg__getitem(std::set< BWAPI::Race > *self,std::set< BWAPI::Race >::key_type const &key){
+        std::set< BWAPI::Race >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Race_Sg__ContainsKey(std::set< BWAPI::Race > *self,std::set< BWAPI::Race >::key_type const &key){
+        std::set< BWAPI::Race >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_Race_Sg__Add(std::set< BWAPI::Race > *self,std::set< BWAPI::Race >::key_type const &key){
+        std::set< BWAPI::Race >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_Race_Sg__Remove(std::set< BWAPI::Race > *self,std::set< BWAPI::Race >::key_type const &key){
+        std::set< BWAPI::Race >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::Race >::iterator *std_set_Sl_BWAPI_Race_Sg__create_iterator_begin(std::set< BWAPI::Race > *self){
+        return new std::set< BWAPI::Race >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::Race >::key_type const &std_set_Sl_BWAPI_Race_Sg__get_next_key(std::set< BWAPI::Race > *self,std::set< BWAPI::Race >::iterator *swigiterator){
+        std::set< BWAPI::Race >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::TechType const * >::key_type const &std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__getitem(std::set< BWAPI::TechType const * > *self,std::set< BWAPI::TechType const * >::key_type const &key){
+        std::set< BWAPI::TechType const * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__ContainsKey(std::set< BWAPI::TechType const * > *self,std::set< BWAPI::TechType const * >::key_type const &key){
+        std::set< BWAPI::TechType const * >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__Add(std::set< BWAPI::TechType const * > *self,std::set< BWAPI::TechType const * >::key_type const &key){
+        std::set< BWAPI::TechType const * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__Remove(std::set< BWAPI::TechType const * > *self,std::set< BWAPI::TechType const * >::key_type const &key){
+        std::set< BWAPI::TechType const * >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::TechType const * >::iterator *std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__create_iterator_begin(std::set< BWAPI::TechType const * > *self){
+        return new std::set< BWAPI::TechType const * >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::TechType const * >::key_type const &std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__get_next_key(std::set< BWAPI::TechType const * > *self,std::set< BWAPI::TechType const * >::iterator *swigiterator){
+        std::set< BWAPI::TechType const * >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::TechType >::key_type const &std_set_Sl_BWAPI_TechType_Sg__getitem(std::set< BWAPI::TechType > *self,std::set< BWAPI::TechType >::key_type const &key){
+        std::set< BWAPI::TechType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_TechType_Sg__ContainsKey(std::set< BWAPI::TechType > *self,std::set< BWAPI::TechType >::key_type const &key){
+        std::set< BWAPI::TechType >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_TechType_Sg__Add(std::set< BWAPI::TechType > *self,std::set< BWAPI::TechType >::key_type const &key){
+        std::set< BWAPI::TechType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_TechType_Sg__Remove(std::set< BWAPI::TechType > *self,std::set< BWAPI::TechType >::key_type const &key){
+        std::set< BWAPI::TechType >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::TechType >::iterator *std_set_Sl_BWAPI_TechType_Sg__create_iterator_begin(std::set< BWAPI::TechType > *self){
+        return new std::set< BWAPI::TechType >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::TechType >::key_type const &std_set_Sl_BWAPI_TechType_Sg__get_next_key(std::set< BWAPI::TechType > *self,std::set< BWAPI::TechType >::iterator *swigiterator){
+        std::set< BWAPI::TechType >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::UnitSizeType >::key_type const &std_set_Sl_BWAPI_UnitSizeType_Sg__getitem(std::set< BWAPI::UnitSizeType > *self,std::set< BWAPI::UnitSizeType >::key_type const &key){
+        std::set< BWAPI::UnitSizeType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_UnitSizeType_Sg__ContainsKey(std::set< BWAPI::UnitSizeType > *self,std::set< BWAPI::UnitSizeType >::key_type const &key){
+        std::set< BWAPI::UnitSizeType >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_UnitSizeType_Sg__Add(std::set< BWAPI::UnitSizeType > *self,std::set< BWAPI::UnitSizeType >::key_type const &key){
+        std::set< BWAPI::UnitSizeType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_UnitSizeType_Sg__Remove(std::set< BWAPI::UnitSizeType > *self,std::set< BWAPI::UnitSizeType >::key_type const &key){
+        std::set< BWAPI::UnitSizeType >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::UnitSizeType >::iterator *std_set_Sl_BWAPI_UnitSizeType_Sg__create_iterator_begin(std::set< BWAPI::UnitSizeType > *self){
+        return new std::set< BWAPI::UnitSizeType >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::UnitSizeType >::key_type const &std_set_Sl_BWAPI_UnitSizeType_Sg__get_next_key(std::set< BWAPI::UnitSizeType > *self,std::set< BWAPI::UnitSizeType >::iterator *swigiterator){
+        std::set< BWAPI::UnitSizeType >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::UnitType const * >::key_type const &std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__getitem(std::set< BWAPI::UnitType const * > *self,std::set< BWAPI::UnitType const * >::key_type const &key){
+        std::set< BWAPI::UnitType const * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__ContainsKey(std::set< BWAPI::UnitType const * > *self,std::set< BWAPI::UnitType const * >::key_type const &key){
+        std::set< BWAPI::UnitType const * >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__Add(std::set< BWAPI::UnitType const * > *self,std::set< BWAPI::UnitType const * >::key_type const &key){
+        std::set< BWAPI::UnitType const * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__Remove(std::set< BWAPI::UnitType const * > *self,std::set< BWAPI::UnitType const * >::key_type const &key){
+        std::set< BWAPI::UnitType const * >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::UnitType const * >::iterator *std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__create_iterator_begin(std::set< BWAPI::UnitType const * > *self){
+        return new std::set< BWAPI::UnitType const * >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::UnitType const * >::key_type const &std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__get_next_key(std::set< BWAPI::UnitType const * > *self,std::set< BWAPI::UnitType const * >::iterator *swigiterator){
+        std::set< BWAPI::UnitType const * >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::UnitType >::key_type const &std_set_Sl_BWAPI_UnitType_Sg__getitem(std::set< BWAPI::UnitType > *self,std::set< BWAPI::UnitType >::key_type const &key){
+        std::set< BWAPI::UnitType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_UnitType_Sg__ContainsKey(std::set< BWAPI::UnitType > *self,std::set< BWAPI::UnitType >::key_type const &key){
+        std::set< BWAPI::UnitType >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_UnitType_Sg__Add(std::set< BWAPI::UnitType > *self,std::set< BWAPI::UnitType >::key_type const &key){
+        std::set< BWAPI::UnitType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_UnitType_Sg__Remove(std::set< BWAPI::UnitType > *self,std::set< BWAPI::UnitType >::key_type const &key){
+        std::set< BWAPI::UnitType >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::UnitType >::iterator *std_set_Sl_BWAPI_UnitType_Sg__create_iterator_begin(std::set< BWAPI::UnitType > *self){
+        return new std::set< BWAPI::UnitType >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::UnitType >::key_type const &std_set_Sl_BWAPI_UnitType_Sg__get_next_key(std::set< BWAPI::UnitType > *self,std::set< BWAPI::UnitType >::iterator *swigiterator){
+        std::set< BWAPI::UnitType >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::UpgradeType const * >::key_type const &std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__getitem(std::set< BWAPI::UpgradeType const * > *self,std::set< BWAPI::UpgradeType const * >::key_type const &key){
+        std::set< BWAPI::UpgradeType const * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__ContainsKey(std::set< BWAPI::UpgradeType const * > *self,std::set< BWAPI::UpgradeType const * >::key_type const &key){
+        std::set< BWAPI::UpgradeType const * >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__Add(std::set< BWAPI::UpgradeType const * > *self,std::set< BWAPI::UpgradeType const * >::key_type const &key){
+        std::set< BWAPI::UpgradeType const * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__Remove(std::set< BWAPI::UpgradeType const * > *self,std::set< BWAPI::UpgradeType const * >::key_type const &key){
+        std::set< BWAPI::UpgradeType const * >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::UpgradeType const * >::iterator *std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__create_iterator_begin(std::set< BWAPI::UpgradeType const * > *self){
+        return new std::set< BWAPI::UpgradeType const * >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::UpgradeType const * >::key_type const &std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__get_next_key(std::set< BWAPI::UpgradeType const * > *self,std::set< BWAPI::UpgradeType const * >::iterator *swigiterator){
+        std::set< BWAPI::UpgradeType const * >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::UpgradeType >::key_type const &std_set_Sl_BWAPI_UpgradeType_Sg__getitem(std::set< BWAPI::UpgradeType > *self,std::set< BWAPI::UpgradeType >::key_type const &key){
+        std::set< BWAPI::UpgradeType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_UpgradeType_Sg__ContainsKey(std::set< BWAPI::UpgradeType > *self,std::set< BWAPI::UpgradeType >::key_type const &key){
+        std::set< BWAPI::UpgradeType >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_UpgradeType_Sg__Add(std::set< BWAPI::UpgradeType > *self,std::set< BWAPI::UpgradeType >::key_type const &key){
+        std::set< BWAPI::UpgradeType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_UpgradeType_Sg__Remove(std::set< BWAPI::UpgradeType > *self,std::set< BWAPI::UpgradeType >::key_type const &key){
+        std::set< BWAPI::UpgradeType >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::UpgradeType >::iterator *std_set_Sl_BWAPI_UpgradeType_Sg__create_iterator_begin(std::set< BWAPI::UpgradeType > *self){
+        return new std::set< BWAPI::UpgradeType >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::UpgradeType >::key_type const &std_set_Sl_BWAPI_UpgradeType_Sg__get_next_key(std::set< BWAPI::UpgradeType > *self,std::set< BWAPI::UpgradeType >::iterator *swigiterator){
+        std::set< BWAPI::UpgradeType >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::WeaponType >::key_type const &std_set_Sl_BWAPI_WeaponType_Sg__getitem(std::set< BWAPI::WeaponType > *self,std::set< BWAPI::WeaponType >::key_type const &key){
+        std::set< BWAPI::WeaponType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_WeaponType_Sg__ContainsKey(std::set< BWAPI::WeaponType > *self,std::set< BWAPI::WeaponType >::key_type const &key){
+        std::set< BWAPI::WeaponType >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_WeaponType_Sg__Add(std::set< BWAPI::WeaponType > *self,std::set< BWAPI::WeaponType >::key_type const &key){
+        std::set< BWAPI::WeaponType >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_WeaponType_Sg__Remove(std::set< BWAPI::WeaponType > *self,std::set< BWAPI::WeaponType >::key_type const &key){
+        std::set< BWAPI::WeaponType >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::WeaponType >::iterator *std_set_Sl_BWAPI_WeaponType_Sg__create_iterator_begin(std::set< BWAPI::WeaponType > *self){
+        return new std::set< BWAPI::WeaponType >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::WeaponType >::key_type const &std_set_Sl_BWAPI_WeaponType_Sg__get_next_key(std::set< BWAPI::WeaponType > *self,std::set< BWAPI::WeaponType >::iterator *swigiterator){
+        std::set< BWAPI::WeaponType >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWAPI::TilePosition >::key_type const &std_set_Sl_BWAPI_TilePosition_Sg__getitem(std::set< BWAPI::TilePosition > *self,std::set< BWAPI::TilePosition >::key_type const &key){
+        std::set< BWAPI::TilePosition >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_TilePosition_Sg__ContainsKey(std::set< BWAPI::TilePosition > *self,std::set< BWAPI::TilePosition >::key_type const &key){
+        std::set< BWAPI::TilePosition >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWAPI_TilePosition_Sg__Add(std::set< BWAPI::TilePosition > *self,std::set< BWAPI::TilePosition >::key_type const &key){
+        std::set< BWAPI::TilePosition >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWAPI_TilePosition_Sg__Remove(std::set< BWAPI::TilePosition > *self,std::set< BWAPI::TilePosition >::key_type const &key){
+        std::set< BWAPI::TilePosition >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWAPI::TilePosition >::iterator *std_set_Sl_BWAPI_TilePosition_Sg__create_iterator_begin(std::set< BWAPI::TilePosition > *self){
+        return new std::set< BWAPI::TilePosition >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWAPI::TilePosition >::key_type const &std_set_Sl_BWAPI_TilePosition_Sg__get_next_key(std::set< BWAPI::TilePosition > *self,std::set< BWAPI::TilePosition >::iterator *swigiterator){
+        std::set< BWAPI::TilePosition >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::map< BWAPI::UnitType const *,int >::mapped_type const &std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__getitem(std::map< BWAPI::UnitType const *,int > *self,std::map< BWAPI::UnitType const *,int >::key_type const &key){
+        std::map< BWAPI::UnitType const *,int >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return iter->second;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN void std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__setitem(std::map< BWAPI::UnitType const *,int > *self,std::map< BWAPI::UnitType const *,int >::key_type const &key,std::map< BWAPI::UnitType const *,int >::mapped_type const &x){
+        (*self)[key] = x;
+      }
+SWIGINTERN bool std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__ContainsKey(std::map< BWAPI::UnitType const *,int > *self,std::map< BWAPI::UnitType const *,int >::key_type const &key){
+        std::map< BWAPI::UnitType const *, int >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__Add(std::map< BWAPI::UnitType const *,int > *self,std::map< BWAPI::UnitType const *,int >::key_type const &key,std::map< BWAPI::UnitType const *,int >::mapped_type const &val){
+        std::map< BWAPI::UnitType const *, int >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(std::pair< BWAPI::UnitType const *, int >(key, val));
+      }
+SWIGINTERN bool std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__Remove(std::map< BWAPI::UnitType const *,int > *self,std::map< BWAPI::UnitType const *,int >::key_type const &key){
+        std::map< BWAPI::UnitType const *, int >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::map< BWAPI::UnitType const *,int >::iterator *std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__create_iterator_begin(std::map< BWAPI::UnitType const *,int > *self){
+        return new std::map< BWAPI::UnitType const *, int >::iterator(self->begin());
+      }
+SWIGINTERN std::map< BWAPI::UnitType const *,int >::key_type const &std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__get_next_key(std::map< BWAPI::UnitType const *,int > *self,std::map< BWAPI::UnitType const *,int >::iterator *swigiterator){
+        std::map< BWAPI::UnitType const *, int >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more map elements");
+        }
+        (*swigiterator)++;
+        return (*iter).first;
+      }
+SWIGINTERN std::list< BWAPI::Unit * >::iterator *std_list_Sl_BWAPI_Unit_Sm__Sg__create_iterator_begin(std::list< BWAPI::Unit * > *self){
+        return new std::list< BWAPI::Unit* >::iterator(self->begin());
+      }
+SWIGINTERN std::list< BWAPI::Unit * >::value_type const &std_list_Sl_BWAPI_Unit_Sm__Sg__get_next_key(std::list< BWAPI::Unit * > *self,std::list< BWAPI::Unit * >::iterator *swigiterator){
+        std::list< BWAPI::Unit* >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN bool std_list_Sl_BWAPI_Unit_Sm__Sg__Contains(std::list< BWAPI::Unit * > *self,std::list< BWAPI::Unit * >::value_type const &value){
+        return std::find(self->begin(), self->end(), value) != self->end();
+      }
+SWIGINTERN bool std_list_Sl_BWAPI_Unit_Sm__Sg__Remove(std::list< BWAPI::Unit * > *self,std::list< BWAPI::Unit * >::value_type const &value){
+        std::list<BWAPI::Unit* >::iterator it = std::find(self->begin(), self->end(), value);
+        if (it != self->end()) {
+          self->erase(it);
+	  return true;
+        }
+        return false;
+      }
+SWIGINTERN std::list< BWAPI::UnitType >::iterator *std_list_Sl_BWAPI_UnitType_Sg__create_iterator_begin(std::list< BWAPI::UnitType > *self){
+        return new std::list< BWAPI::UnitType >::iterator(self->begin());
+      }
+SWIGINTERN std::list< BWAPI::UnitType >::value_type const &std_list_Sl_BWAPI_UnitType_Sg__get_next_key(std::list< BWAPI::UnitType > *self,std::list< BWAPI::UnitType >::iterator *swigiterator){
+        std::list< BWAPI::UnitType >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWTA::BaseLocation * >::key_type const &std_set_Sl_BWTA_BaseLocation_Sm__Sg__getitem(std::set< BWTA::BaseLocation * > *self,std::set< BWTA::BaseLocation * >::key_type const &key){
+        std::set< BWTA::BaseLocation * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWTA_BaseLocation_Sm__Sg__ContainsKey(std::set< BWTA::BaseLocation * > *self,std::set< BWTA::BaseLocation * >::key_type const &key){
+        std::set< BWTA::BaseLocation * >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWTA_BaseLocation_Sm__Sg__Add(std::set< BWTA::BaseLocation * > *self,std::set< BWTA::BaseLocation * >::key_type const &key){
+        std::set< BWTA::BaseLocation * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWTA_BaseLocation_Sm__Sg__Remove(std::set< BWTA::BaseLocation * > *self,std::set< BWTA::BaseLocation * >::key_type const &key){
+        std::set< BWTA::BaseLocation * >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWTA::BaseLocation * >::iterator *std_set_Sl_BWTA_BaseLocation_Sm__Sg__create_iterator_begin(std::set< BWTA::BaseLocation * > *self){
+        return new std::set< BWTA::BaseLocation * >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWTA::BaseLocation * >::key_type const &std_set_Sl_BWTA_BaseLocation_Sm__Sg__get_next_key(std::set< BWTA::BaseLocation * > *self,std::set< BWTA::BaseLocation * >::iterator *swigiterator){
+        std::set< BWTA::BaseLocation * >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWTA::Chokepoint * >::key_type const &std_set_Sl_BWTA_Chokepoint_Sm__Sg__getitem(std::set< BWTA::Chokepoint * > *self,std::set< BWTA::Chokepoint * >::key_type const &key){
+        std::set< BWTA::Chokepoint * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWTA_Chokepoint_Sm__Sg__ContainsKey(std::set< BWTA::Chokepoint * > *self,std::set< BWTA::Chokepoint * >::key_type const &key){
+        std::set< BWTA::Chokepoint * >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWTA_Chokepoint_Sm__Sg__Add(std::set< BWTA::Chokepoint * > *self,std::set< BWTA::Chokepoint * >::key_type const &key){
+        std::set< BWTA::Chokepoint * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWTA_Chokepoint_Sm__Sg__Remove(std::set< BWTA::Chokepoint * > *self,std::set< BWTA::Chokepoint * >::key_type const &key){
+        std::set< BWTA::Chokepoint * >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWTA::Chokepoint * >::iterator *std_set_Sl_BWTA_Chokepoint_Sm__Sg__create_iterator_begin(std::set< BWTA::Chokepoint * > *self){
+        return new std::set< BWTA::Chokepoint * >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWTA::Chokepoint * >::key_type const &std_set_Sl_BWTA_Chokepoint_Sm__Sg__get_next_key(std::set< BWTA::Chokepoint * > *self,std::set< BWTA::Chokepoint * >::iterator *swigiterator){
+        std::set< BWTA::Chokepoint * >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWTA::Polygon * >::key_type const &std_set_Sl_BWTA_Polygon_Sm__Sg__getitem(std::set< BWTA::Polygon * > *self,std::set< BWTA::Polygon * >::key_type const &key){
+        std::set< BWTA::Polygon * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWTA_Polygon_Sm__Sg__ContainsKey(std::set< BWTA::Polygon * > *self,std::set< BWTA::Polygon * >::key_type const &key){
+        std::set< BWTA::Polygon * >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWTA_Polygon_Sm__Sg__Add(std::set< BWTA::Polygon * > *self,std::set< BWTA::Polygon * >::key_type const &key){
+        std::set< BWTA::Polygon * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWTA_Polygon_Sm__Sg__Remove(std::set< BWTA::Polygon * > *self,std::set< BWTA::Polygon * >::key_type const &key){
+        std::set< BWTA::Polygon * >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWTA::Polygon * >::iterator *std_set_Sl_BWTA_Polygon_Sm__Sg__create_iterator_begin(std::set< BWTA::Polygon * > *self){
+        return new std::set< BWTA::Polygon * >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWTA::Polygon * >::key_type const &std_set_Sl_BWTA_Polygon_Sm__Sg__get_next_key(std::set< BWTA::Polygon * > *self,std::set< BWTA::Polygon * >::iterator *swigiterator){
+        std::set< BWTA::Polygon * >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
+SWIGINTERN std::set< BWTA::Region * >::key_type const &std_set_Sl_BWTA_Region_Sm__Sg__getitem(std::set< BWTA::Region * > *self,std::set< BWTA::Region * >::key_type const &key){
+        std::set< BWTA::Region * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return *iter;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN bool std_set_Sl_BWTA_Region_Sm__Sg__ContainsKey(std::set< BWTA::Region * > *self,std::set< BWTA::Region * >::key_type const &key){
+        std::set< BWTA::Region * >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_set_Sl_BWTA_Region_Sm__Sg__Add(std::set< BWTA::Region * > *self,std::set< BWTA::Region * >::key_type const &key){
+        std::set< BWTA::Region * >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(key);
+      }
+SWIGINTERN bool std_set_Sl_BWTA_Region_Sm__Sg__Remove(std::set< BWTA::Region * > *self,std::set< BWTA::Region * >::key_type const &key){
+        std::set< BWTA::Region * >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::set< BWTA::Region * >::iterator *std_set_Sl_BWTA_Region_Sm__Sg__create_iterator_begin(std::set< BWTA::Region * > *self){
+        return new std::set< BWTA::Region * >::iterator(self->begin());
+      }
+SWIGINTERN std::set< BWTA::Region * >::key_type const &std_set_Sl_BWTA_Region_Sm__Sg__get_next_key(std::set< BWTA::Region * > *self,std::set< BWTA::Region * >::iterator *swigiterator){
+        std::set< BWTA::Region * >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more set elements");
+        }
+        (*swigiterator)++;
+        return (*iter);
+      }
 
 #ifdef __cplusplus
 extern "C" {
@@ -374,6 +1306,1976 @@ extern "C" {
 
 SWIGEXPORT void SWIGSTDCALL CSharp_BWAPI_init() {
   BWAPI::BWAPI_init();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Race__SWIG_0() {
+  void * jresult ;
+  BWAPI::Race *result = 0 ;
+  
+  result = (BWAPI::Race *)new BWAPI::Race();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Race__SWIG_1(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  BWAPI::Race *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  result = (BWAPI::Race *)new BWAPI::Race(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Race__SWIG_2(void * jarg1) {
+  void * jresult ;
+  BWAPI::Race *arg1 = 0 ;
+  BWAPI::Race *result = 0 ;
+  
+  arg1 = (BWAPI::Race *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Race const & type is null", 0);
+    return 0;
+  } 
+  result = (BWAPI::Race *)new BWAPI::Race((BWAPI::Race const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Race_opAssign(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  BWAPI::Race *arg2 = 0 ;
+  BWAPI::Race *result = 0 ;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  arg2 = (BWAPI::Race *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Race const & type is null", 0);
+    return 0;
+  } 
+  result = (BWAPI::Race *) &(arg1)->operator =((BWAPI::Race const &)*arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Race_opEquals(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  BWAPI::Race *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  arg2 = (BWAPI::Race *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Race const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::Race const *)arg1)->operator ==((BWAPI::Race const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Race_opNotEquals(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  BWAPI::Race *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  arg2 = (BWAPI::Race *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Race const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::Race const *)arg1)->operator !=((BWAPI::Race const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Race_opLessThan(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  BWAPI::Race *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  arg2 = (BWAPI::Race *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Race const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::Race const *)arg1)->operator <((BWAPI::Race const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Race_getID(void * jarg1) {
+  int jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  result = (int)((BWAPI::Race const *)arg1)->getID();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_Race_getName(void * jarg1) {
+  char * jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  std::string result;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  result = ((BWAPI::Race const *)arg1)->getName();
+  jresult = SWIG_csharp_string_callback((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Race_getWorker(void * jarg1) {
+  void * jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  result = (BWAPI::UnitType *)((BWAPI::Race const *)arg1)->getWorker();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Race_getCenter(void * jarg1) {
+  void * jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  result = (BWAPI::UnitType *)((BWAPI::Race const *)arg1)->getCenter();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Race_getRefinery(void * jarg1) {
+  void * jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  result = (BWAPI::UnitType *)((BWAPI::Race const *)arg1)->getRefinery();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Race_getTransport(void * jarg1) {
+  void * jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  result = (BWAPI::UnitType *)((BWAPI::Race const *)arg1)->getTransport();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Race_getSupplyProvider(void * jarg1) {
+  void * jresult ;
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  result = (BWAPI::UnitType *)((BWAPI::Race const *)arg1)->getSupplyProvider();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Race(void * jarg1) {
+  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  
+  arg1 = (BWAPI::Race *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getRace(char * jarg1) {
+  void * jresult ;
+  std::string *arg1 = 0 ;
+  BWAPI::Race result;
+  
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
+    return 0;
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
+  result = BWAPI::Races::getRace(*arg1);
+  jresult = new BWAPI::Race((const BWAPI::Race &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_allRaces() {
+  void * jresult ;
+  std::set< BWAPI::Race > *result = 0 ;
+  
+  result = (std::set< BWAPI::Race > *) &BWAPI::Races::allRaces();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_initRaces() {
+  BWAPI::Races::init();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_get() {
+  void * jresult ;
+  BWAPI::Race *result = 0 ;
+  
+  result = (BWAPI::Race *)&BWAPI::Races::Zerg;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_get() {
+  void * jresult ;
+  BWAPI::Race *result = 0 ;
+  
+  result = (BWAPI::Race *)&BWAPI::Races::Terran;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_get() {
+  void * jresult ;
+  BWAPI::Race *result = 0 ;
+  
+  result = (BWAPI::Race *)&BWAPI::Races::Protoss;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Random_get() {
+  void * jresult ;
+  BWAPI::Race *result = 0 ;
+  
+  result = (BWAPI::Race *)&BWAPI::Races::Random;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Other_get() {
+  void * jresult ;
+  BWAPI::Race *result = 0 ;
+  
+  result = (BWAPI::Race *)&BWAPI::Races::Other;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RaceNone_get() {
+  void * jresult ;
+  BWAPI::Race *result = 0 ;
+  
+  result = (BWAPI::Race *)&BWAPI::Races::None;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RaceUnknown_get() {
+  void * jresult ;
+  BWAPI::Race *result = 0 ;
+  
+  result = (BWAPI::Race *)&BWAPI::Races::Unknown;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechType__SWIG_0() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)new BWAPI::TechType();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechType__SWIG_1(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  BWAPI::TechType *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  result = (BWAPI::TechType *)new BWAPI::TechType(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechType__SWIG_2(void * jarg1) {
+  void * jresult ;
+  BWAPI::TechType *arg1 = 0 ;
+  BWAPI::TechType *result = 0 ;
+  
+  arg1 = (BWAPI::TechType *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TechType const & type is null", 0);
+    return 0;
+  } 
+  result = (BWAPI::TechType *)new BWAPI::TechType((BWAPI::TechType const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechType_opAssign(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  BWAPI::TechType *arg2 = 0 ;
+  BWAPI::TechType *result = 0 ;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  arg2 = (BWAPI::TechType *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TechType const & type is null", 0);
+    return 0;
+  } 
+  result = (BWAPI::TechType *) &(arg1)->operator =((BWAPI::TechType const &)*arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechType_opEquals(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  BWAPI::TechType *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  arg2 = (BWAPI::TechType *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TechType const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::TechType const *)arg1)->operator ==((BWAPI::TechType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechType_opNotEquals(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  BWAPI::TechType *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  arg2 = (BWAPI::TechType *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TechType const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::TechType const *)arg1)->operator !=((BWAPI::TechType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechType_opLessThan(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  BWAPI::TechType *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  arg2 = (BWAPI::TechType *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TechType const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::TechType const *)arg1)->operator <((BWAPI::TechType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_TechType_getID(void * jarg1) {
+  int jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  result = (int)((BWAPI::TechType const *)arg1)->getID();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_TechType_getName(void * jarg1) {
+  char * jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  std::string result;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  result = ((BWAPI::TechType const *)arg1)->getName();
+  jresult = SWIG_csharp_string_callback((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_TechType_mineralPrice(void * jarg1) {
+  int jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  result = (int)((BWAPI::TechType const *)arg1)->mineralPrice();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_TechType_gasPrice(void * jarg1) {
+  int jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  result = (int)((BWAPI::TechType const *)arg1)->gasPrice();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_TechType_energyUsed(void * jarg1) {
+  int jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  result = (int)((BWAPI::TechType const *)arg1)->energyUsed();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechType_whatResearches(void * jarg1) {
+  void * jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  result = (BWAPI::UnitType *)((BWAPI::TechType const *)arg1)->whatResearches();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechType_getWeapon(void * jarg1) {
+  void * jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  BWAPI::WeaponType *result = 0 ;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  result = (BWAPI::WeaponType *)((BWAPI::TechType const *)arg1)->getWeapon();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechType_whatUses(void * jarg1) {
+  void * jresult ;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  std::set< BWAPI::UnitType const * > *result = 0 ;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  result = (std::set< BWAPI::UnitType const * > *) &((BWAPI::TechType const *)arg1)->whatUses();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_TechType(void * jarg1) {
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  
+  arg1 = (BWAPI::TechType *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getTechType(char * jarg1) {
+  void * jresult ;
+  std::string *arg1 = 0 ;
+  BWAPI::TechType result;
+  
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
+    return 0;
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
+  result = BWAPI::TechTypes::getTechType(*arg1);
+  jresult = new BWAPI::TechType((const BWAPI::TechType &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_allTechTypes() {
+  void * jresult ;
+  std::set< BWAPI::TechType > *result = 0 ;
+  
+  result = (std::set< BWAPI::TechType > *) &BWAPI::TechTypes::allTechTypes();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_initTechTypes() {
+  BWAPI::TechTypes::init();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Stim_Packs_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Stim_Packs;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeLockdown_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Lockdown;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeEMP_Shockwave_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::EMP_Shockwave;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Spider_Mines_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Spider_Mines;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Scanner_Sweep_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Scanner_Sweep;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Tank_Siege_Mode_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Tank_Siege_Mode;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Defensive_Matrix_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Defensive_Matrix;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeIrradiate_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Irradiate;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeYamato_Gun_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Yamato_Gun;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Cloaking_Field_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Cloaking_Field;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Personnel_Cloaking_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Personnel_Cloaking;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Burrowing_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Burrowing;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Infestation_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Infestation;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeSpawn_Broodlings_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Spawn_Broodlings;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeDark_Swarm_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Dark_Swarm;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypePlague_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Plague;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeConsume_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Consume;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeEnsnare_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Ensnare;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeParasite_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Parasite;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypePsionic_Storm_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Psionic_Storm;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Hallucination_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Hallucination;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Recall_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Recall;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeStasis_Field_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Stasis_Field;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Archon_Warp_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Archon_Warp;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeRestoration_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Restoration;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeDisruption_Web_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Disruption_Web;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeMind_Control_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Mind_Control;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Dark_Archon_Meld_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Dark_Archon_Meld;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeFeedback_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Feedback;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeOptical_Flare_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Optical_Flare;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeMaelstrom_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Maelstrom;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Lurker_Aspect_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Lurker_Aspect;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Healing_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Healing;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeNone_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::None;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeUnknown_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Unknown;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeNuclear_Strike_get() {
+  void * jresult ;
+  BWAPI::TechType *result = 0 ;
+  
+  result = (BWAPI::TechType *)&BWAPI::TechTypes::Nuclear_Strike;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeType__SWIG_0() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)new BWAPI::UpgradeType();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeType__SWIG_1(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  result = (BWAPI::UpgradeType *)new BWAPI::UpgradeType(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeType__SWIG_2(void * jarg1) {
+  void * jresult ;
+  BWAPI::UpgradeType *arg1 = 0 ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UpgradeType const & type is null", 0);
+    return 0;
+  } 
+  result = (BWAPI::UpgradeType *)new BWAPI::UpgradeType((BWAPI::UpgradeType const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeType_opAssign(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  BWAPI::UpgradeType *arg2 = 0 ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  arg2 = (BWAPI::UpgradeType *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UpgradeType const & type is null", 0);
+    return 0;
+  } 
+  result = (BWAPI::UpgradeType *) &(arg1)->operator =((BWAPI::UpgradeType const &)*arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeType_opEquals(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  BWAPI::UpgradeType *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  arg2 = (BWAPI::UpgradeType *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UpgradeType const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::UpgradeType const *)arg1)->operator ==((BWAPI::UpgradeType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeType_opNotEquals(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  BWAPI::UpgradeType *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  arg2 = (BWAPI::UpgradeType *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UpgradeType const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::UpgradeType const *)arg1)->operator !=((BWAPI::UpgradeType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeType_opLessThan(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  BWAPI::UpgradeType *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  arg2 = (BWAPI::UpgradeType *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UpgradeType const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::UpgradeType const *)arg1)->operator <((BWAPI::UpgradeType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_getID(void * jarg1) {
+  int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = (int)((BWAPI::UpgradeType const *)arg1)->getID();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_UpgradeType_getName(void * jarg1) {
+  char * jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  std::string result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = ((BWAPI::UpgradeType const *)arg1)->getName();
+  jresult = SWIG_csharp_string_callback((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeType_getRace(void * jarg1) {
+  void * jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  BWAPI::Race result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = ((BWAPI::UpgradeType const *)arg1)->getRace();
+  jresult = new BWAPI::Race((const BWAPI::Race &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_mineralPriceBase(void * jarg1) {
+  int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = (int)((BWAPI::UpgradeType const *)arg1)->mineralPriceBase();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_mineralPriceFactor(void * jarg1) {
+  int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = (int)((BWAPI::UpgradeType const *)arg1)->mineralPriceFactor();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_gasPriceBase(void * jarg1) {
+  int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = (int)((BWAPI::UpgradeType const *)arg1)->gasPriceBase();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_gasPriceFactor(void * jarg1) {
+  int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = (int)((BWAPI::UpgradeType const *)arg1)->gasPriceFactor();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_upgradeTimeBase(void * jarg1) {
+  int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = (int)((BWAPI::UpgradeType const *)arg1)->upgradeTimeBase();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_upgradeTimeFactor(void * jarg1) {
+  int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = (int)((BWAPI::UpgradeType const *)arg1)->upgradeTimeFactor();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_maxRepeats(void * jarg1) {
+  int jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = (int)((BWAPI::UpgradeType const *)arg1)->maxRepeats();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeType_whatUpgrades(void * jarg1) {
+  void * jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = (BWAPI::UnitType *)((BWAPI::UpgradeType const *)arg1)->whatUpgrades();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeType_whatUses(void * jarg1) {
+  void * jresult ;
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  std::set< BWAPI::UnitType const * > *result = 0 ;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  result = (std::set< BWAPI::UnitType const * > *) &((BWAPI::UpgradeType const *)arg1)->whatUses();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_UpgradeType(void * jarg1) {
+  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
+  
+  arg1 = (BWAPI::UpgradeType *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getUpgradeType(char * jarg1) {
+  void * jresult ;
+  std::string *arg1 = 0 ;
+  BWAPI::UpgradeType result;
+  
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
+    return 0;
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
+  result = BWAPI::UpgradeTypes::getUpgradeType(*arg1);
+  jresult = new BWAPI::UpgradeType((const BWAPI::UpgradeType &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_allUpgradeTypes() {
+  void * jresult ;
+  std::set< BWAPI::UpgradeType > *result = 0 ;
+  
+  result = (std::set< BWAPI::UpgradeType > *) &BWAPI::UpgradeTypes::allUpgradeTypes();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_initUpgradeTypes() {
+  BWAPI::UpgradeTypes::init();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Infantry_Armor_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Infantry_Armor;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Vehicle_Plating_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Vehicle_Plating;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Ship_Plating_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Ship_Plating;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_Carapace_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Zerg_Carapace;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_Flyer_Carapace_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Zerg_Flyer_Carapace;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_Armor_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Protoss_Armor;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_Plating_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Protoss_Plating;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Infantry_Weapons_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Infantry_Weapons;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Vehicle_Weapons_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Vehicle_Weapons;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Ship_Weapons_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Ship_Weapons;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_Melee_Attacks_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Zerg_Melee_Attacks;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_Missile_Attacks_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Zerg_Missile_Attacks;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_Flyer_Attacks_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Zerg_Flyer_Attacks;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_Ground_Weapons_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Protoss_Ground_Weapons;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_Air_Weapons_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Protoss_Air_Weapons;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_Plasma_Shields_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Protoss_Plasma_Shields;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_U_238_Shells_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::U_238_Shells;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Ion_Thrusters_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Ion_Thrusters;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Titan_Reactor_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Titan_Reactor;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Ocular_Implants_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Ocular_Implants;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Moebius_Reactor_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Moebius_Reactor;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Apollo_Reactor_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Apollo_Reactor;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Colossus_Reactor_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Colossus_Reactor;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Ventral_Sacs_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Ventral_Sacs;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Antennae_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Antennae;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Pneumatized_Carapace_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Pneumatized_Carapace;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Metabolic_Boost_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Metabolic_Boost;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Adrenal_Glands_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Adrenal_Glands;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Muscular_Augments_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Muscular_Augments;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Grooved_Spines_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Grooved_Spines;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Gamete_Meiosis_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Gamete_Meiosis;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Metasynaptic_Node_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Metasynaptic_Node;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Singularity_Charge_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Singularity_Charge;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Leg_Enhancements_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Leg_Enhancements;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Scarab_Damage_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Scarab_Damage;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Reaver_Capacity_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Reaver_Capacity;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Gravitic_Drive_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Gravitic_Drive;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Sensor_Array_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Sensor_Array;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Gravitic_Boosters_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Gravitic_Boosters;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Khaydarin_Amulet_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Khaydarin_Amulet;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Apial_Sensors_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Apial_Sensors;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Gravitic_Thrusters_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Gravitic_Thrusters;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Carrier_Capacity_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Carrier_Capacity;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Khaydarin_Core_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Khaydarin_Core;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Argus_Jewel_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Argus_Jewel;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Argus_Talisman_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Argus_Talisman;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Caduceus_Reactor_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Caduceus_Reactor;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Chitinous_Plating_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Chitinous_Plating;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Anabolic_Synthesis_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Anabolic_Synthesis;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Charon_Booster_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Charon_Booster;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypeNone_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::None;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypeUnknown_get() {
+  void * jresult ;
+  BWAPI::UpgradeType *result = 0 ;
+  
+  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Unknown;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Position__SWIG_0() {
+  void * jresult ;
+  BWAPI::Position *result = 0 ;
+  
+  result = (BWAPI::Position *)new BWAPI::Position();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Position__SWIG_1(void * jarg1) {
+  void * jresult ;
+  BWAPI::TilePosition *arg1 = 0 ;
+  BWAPI::Position *result = 0 ;
+  
+  arg1 = (BWAPI::TilePosition *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TilePosition const & type is null", 0);
+    return 0;
+  } 
+  result = (BWAPI::Position *)new BWAPI::Position((BWAPI::TilePosition const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Position__SWIG_2(int jarg1, int jarg2) {
+  void * jresult ;
+  int arg1 ;
+  int arg2 ;
+  BWAPI::Position *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  arg2 = (int)jarg2; 
+  result = (BWAPI::Position *)new BWAPI::Position(arg1,arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Position_opEquals(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  BWAPI::Position *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  arg2 = (BWAPI::Position *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::Position const *)arg1)->operator ==((BWAPI::Position const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Position_opNotEquals(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  BWAPI::Position *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  arg2 = (BWAPI::Position *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::Position const *)arg1)->operator !=((BWAPI::Position const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Position_opLessThan(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  BWAPI::Position *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  arg2 = (BWAPI::Position *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::Position const *)arg1)->operator <((BWAPI::Position const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Position_opPlus(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  BWAPI::Position *arg2 = 0 ;
+  BWAPI::Position result;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  arg2 = (BWAPI::Position *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
+    return 0;
+  } 
+  result = ((BWAPI::Position const *)arg1)->operator +((BWAPI::Position const &)*arg2);
+  jresult = new BWAPI::Position((const BWAPI::Position &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Position_opMinus(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  BWAPI::Position *arg2 = 0 ;
+  BWAPI::Position result;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  arg2 = (BWAPI::Position *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
+    return 0;
+  } 
+  result = ((BWAPI::Position const *)arg1)->operator -((BWAPI::Position const &)*arg2);
+  jresult = new BWAPI::Position((const BWAPI::Position &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_Position_getDistance(void * jarg1, void * jarg2) {
+  double jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  BWAPI::Position *arg2 = 0 ;
+  double result;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  arg2 = (BWAPI::Position *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
+    return 0;
+  } 
+  result = (double)((BWAPI::Position const *)arg1)->getDistance((BWAPI::Position const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_Position_getLength(void * jarg1) {
+  double jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  double result;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  result = (double)((BWAPI::Position const *)arg1)->getLength();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Position_x(void * jarg1) {
+  void * jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  int *result = 0 ;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  result = (int *) &(arg1)->x();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Position_y(void * jarg1) {
+  void * jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  int *result = 0 ;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  result = (int *) &(arg1)->y();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Position_xConst(void * jarg1) {
+  int jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  result = (int)((BWAPI::Position const *)arg1)->x();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Position_yConst(void * jarg1) {
+  int jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  result = (int)((BWAPI::Position const *)arg1)->y();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Position(void * jarg1) {
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_PositionInvalid_get() {
+  void * jresult ;
+  BWAPI::Position *result = 0 ;
+  
+  result = (BWAPI::Position *)&BWAPI::Positions::Invalid;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_PositionNone_get() {
+  void * jresult ;
+  BWAPI::Position *result = 0 ;
+  
+  result = (BWAPI::Position *)&BWAPI::Positions::None;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_PositionUnknown_get() {
+  void * jresult ;
+  BWAPI::Position *result = 0 ;
+  
+  result = (BWAPI::Position *)&BWAPI::Positions::Unknown;
+  jresult = (void *)result; 
+  return jresult;
 }
 
 
@@ -451,13 +3353,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_AIModule_onPlayerLeft(void * jarg1, void * ja
 
 SWIGEXPORT void SWIGSTDCALL CSharp_AIModule_onNukeDetect(void * jarg1, void * jarg2) {
   BWAPI::AIModule *arg1 = (BWAPI::AIModule *) 0 ;
-  Position arg2 ;
-  Position *argp2 ;
+  BWAPI::Position arg2 ;
+  BWAPI::Position *argp2 ;
   
   arg1 = (BWAPI::AIModule *)jarg1; 
-  argp2 = (Position *)jarg2; 
+  argp2 = (BWAPI::Position *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Position", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Position", 0);
     return ;
   }
   arg2 = *argp2; 
@@ -667,16 +3569,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_AttackType(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getAttackType(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_getAttackType(char * jarg1) {
   void * jresult ;
   std::string *arg1 = 0 ;
   BWAPI::AttackType result;
   
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
     return 0;
-  } 
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
   result = BWAPI::AttackTypes::getAttackType(*arg1);
   jresult = new BWAPI::AttackType((const BWAPI::AttackType &)result); 
   return jresult;
@@ -1517,16 +4420,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_DamageType(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getDamageType(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_getDamageType(char * jarg1) {
   void * jresult ;
   std::string *arg1 = 0 ;
   BWAPI::DamageType result;
   
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
     return 0;
-  } 
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
   result = BWAPI::DamageTypes::getDamageType(*arg1);
   jresult = new BWAPI::DamageType((const BWAPI::DamageType &)result); 
   return jresult;
@@ -1760,16 +4664,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Error(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getError(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_getError(char * jarg1) {
   void * jresult ;
   std::string *arg1 = 0 ;
   BWAPI::Error result;
   
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
     return 0;
-  } 
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
   result = BWAPI::Errors::getError(*arg1);
   jresult = new BWAPI::Error((const BWAPI::Error &)result); 
   return jresult;
@@ -2143,16 +5048,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_ExplosionType(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getExplosionType(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_getExplosionType(char * jarg1) {
   void * jresult ;
   std::string *arg1 = 0 ;
   BWAPI::ExplosionType result;
   
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
     return 0;
-  } 
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
   result = BWAPI::ExplosionTypes::getExplosionType(*arg1);
   jresult = new BWAPI::ExplosionType((const BWAPI::ExplosionType &)result); 
   return jresult;
@@ -2449,7 +5355,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_Force_getName(void * jarg1) {
 SWIGEXPORT void * SWIGSTDCALL CSharp_Force_getPlayers(void * jarg1) {
   void * jresult ;
   BWAPI::Force *arg1 = (BWAPI::Force *) 0 ;
-  SwigValueWrapper< std::set< BWAPI::Player * > > result;
+  std::set< BWAPI::Player * > result;
   
   arg1 = (BWAPI::Force *)jarg1; 
   result = ((BWAPI::Force const *)arg1)->getPlayers();
@@ -2877,14 +5783,14 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_hasPower__SWIG_0(void * jarg1, i
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_isBuildable__SWIG_1(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  TilePosition arg2 ;
-  TilePosition *argp2 ;
+  BWAPI::TilePosition arg2 ;
+  BWAPI::TilePosition *argp2 ;
   bool result;
   
   arg1 = (BWAPI::Game *)jarg1; 
-  argp2 = (TilePosition *)jarg2; 
+  argp2 = (BWAPI::TilePosition *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null TilePosition", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
     return 0;
   }
   arg2 = *argp2; 
@@ -2897,14 +5803,14 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_isBuildable__SWIG_1(void * jarg1
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_isVisible__SWIG_1(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  TilePosition arg2 ;
-  TilePosition *argp2 ;
+  BWAPI::TilePosition arg2 ;
+  BWAPI::TilePosition *argp2 ;
   bool result;
   
   arg1 = (BWAPI::Game *)jarg1; 
-  argp2 = (TilePosition *)jarg2; 
+  argp2 = (BWAPI::TilePosition *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null TilePosition", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
     return 0;
   }
   arg2 = *argp2; 
@@ -2917,14 +5823,14 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_isVisible__SWIG_1(void * jarg1, 
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_isExplored__SWIG_1(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  TilePosition arg2 ;
-  TilePosition *argp2 ;
+  BWAPI::TilePosition arg2 ;
+  BWAPI::TilePosition *argp2 ;
   bool result;
   
   arg1 = (BWAPI::Game *)jarg1; 
-  argp2 = (TilePosition *)jarg2; 
+  argp2 = (BWAPI::TilePosition *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null TilePosition", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
     return 0;
   }
   arg2 = *argp2; 
@@ -2937,14 +5843,14 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_isExplored__SWIG_1(void * jarg1,
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_hasCreep__SWIG_1(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  TilePosition arg2 ;
-  TilePosition *argp2 ;
+  BWAPI::TilePosition arg2 ;
+  BWAPI::TilePosition *argp2 ;
   bool result;
   
   arg1 = (BWAPI::Game *)jarg1; 
-  argp2 = (TilePosition *)jarg2; 
+  argp2 = (BWAPI::TilePosition *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null TilePosition", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
     return 0;
   }
   arg2 = *argp2; 
@@ -2957,16 +5863,16 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_hasCreep__SWIG_1(void * jarg1, v
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_hasPower__SWIG_1(void * jarg1, void * jarg2, int jarg3, int jarg4) {
   unsigned int jresult ;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  TilePosition arg2 ;
+  BWAPI::TilePosition arg2 ;
   int arg3 ;
   int arg4 ;
-  TilePosition *argp2 ;
+  BWAPI::TilePosition *argp2 ;
   bool result;
   
   arg1 = (BWAPI::Game *)jarg1; 
-  argp2 = (TilePosition *)jarg2; 
+  argp2 = (BWAPI::TilePosition *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null TilePosition", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
     return 0;
   }
   arg2 = *argp2; 
@@ -2982,17 +5888,17 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_canBuildHere(void * jarg1, void 
   unsigned int jresult ;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
   BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  TilePosition arg3 ;
+  BWAPI::TilePosition arg3 ;
   BWAPI::UnitType arg4 ;
-  TilePosition *argp3 ;
+  BWAPI::TilePosition *argp3 ;
   BWAPI::UnitType *argp4 ;
   bool result;
   
   arg1 = (BWAPI::Game *)jarg1; 
   arg2 = (BWAPI::Unit *)jarg2; 
-  argp3 = (TilePosition *)jarg3; 
+  argp3 = (BWAPI::TilePosition *)jarg3; 
   if (!argp3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null TilePosition", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
     return 0;
   }
   arg3 = *argp3; 
@@ -3034,15 +5940,15 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_canResearch(void * jarg1, void *
   unsigned int jresult ;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
   BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  TechType arg3 ;
-  TechType *argp3 ;
+  BWAPI::TechType arg3 ;
+  BWAPI::TechType *argp3 ;
   bool result;
   
   arg1 = (BWAPI::Game *)jarg1; 
   arg2 = (BWAPI::Unit *)jarg2; 
-  argp3 = (TechType *)jarg3; 
+  argp3 = (BWAPI::TechType *)jarg3; 
   if (!argp3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null TechType", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TechType", 0);
     return 0;
   }
   arg3 = *argp3; 
@@ -3056,15 +5962,15 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_canUpgrade(void * jarg1, void * 
   unsigned int jresult ;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
   BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  UpgradeType arg3 ;
-  UpgradeType *argp3 ;
+  BWAPI::UpgradeType arg3 ;
+  BWAPI::UpgradeType *argp3 ;
   bool result;
   
   arg1 = (BWAPI::Game *)jarg1; 
   arg2 = (BWAPI::Unit *)jarg2; 
-  argp3 = (UpgradeType *)jarg3; 
+  argp3 = (BWAPI::UpgradeType *)jarg3; 
   if (!argp3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null UpgradeType", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UpgradeType", 0);
     return 0;
   }
   arg3 = *argp3; 
@@ -3077,10 +5983,10 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_canUpgrade(void * jarg1, void * 
 SWIGEXPORT void * SWIGSTDCALL CSharp_Game_getStartLocations(void * jarg1) {
   void * jresult ;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  std::set< TilePosition > *result = 0 ;
+  std::set< BWAPI::TilePosition > *result = 0 ;
   
   arg1 = (BWAPI::Game *)jarg1; 
-  result = (std::set< TilePosition > *) &(arg1)->getStartLocations();
+  result = (std::set< BWAPI::TilePosition > *) &(arg1)->getStartLocations();
   jresult = (void *)result; 
   return jresult;
 }
@@ -3110,13 +6016,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Game_sendText(void * jarg1, char * jarg2) {
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Game_changeRace(void * jarg1, void * jarg2) {
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  Race arg2 ;
-  Race *argp2 ;
+  BWAPI::Race arg2 ;
+  BWAPI::Race *argp2 ;
   
   arg1 = (BWAPI::Game *)jarg1; 
-  argp2 = (Race *)jarg2; 
+  argp2 = (BWAPI::Race *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Race", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Race", 0);
     return ;
   }
   arg2 = *argp2; 
@@ -4496,16 +7402,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Order(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getOrder(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_getOrder(char * jarg1) {
   void * jresult ;
   std::string *arg1 = 0 ;
   BWAPI::Order result;
   
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
     return 0;
-  } 
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
   result = BWAPI::Orders::getOrder(*arg1);
   jresult = new BWAPI::Order((const BWAPI::Order &)result); 
   return jresult;
@@ -6437,442 +9344,6 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OrderUnknown_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_getID(void * jarg1) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (int)((BWAPI::Player const *)arg1)->getID();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_Player_getName(void * jarg1) {
-  char * jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  std::string result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = ((BWAPI::Player const *)arg1)->getName();
-  jresult = SWIG_csharp_string_callback((&result)->c_str()); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Player_getUnits(void * jarg1) {
-  void * jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  std::set< BWAPI::Unit * > *result = 0 ;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (std::set< BWAPI::Unit * > *) &((BWAPI::Player const *)arg1)->getUnits();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Player_getRace(void * jarg1) {
-  void * jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  Race result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = ((BWAPI::Player const *)arg1)->getRace();
-  jresult = new Race((const Race &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Player_playerType(void * jarg1) {
-  void * jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  PlayerType result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = ((BWAPI::Player const *)arg1)->playerType();
-  jresult = new PlayerType((const PlayerType &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Player_getForce(void * jarg1) {
-  void * jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  BWAPI::Force *result = 0 ;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (BWAPI::Force *)((BWAPI::Player const *)arg1)->getForce();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isAlly(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  BWAPI::Player *arg2 = (BWAPI::Player *) 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  arg2 = (BWAPI::Player *)jarg2; 
-  result = (bool)((BWAPI::Player const *)arg1)->isAlly(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isEnemy(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  BWAPI::Player *arg2 = (BWAPI::Player *) 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  arg2 = (BWAPI::Player *)jarg2; 
-  result = (bool)((BWAPI::Player const *)arg1)->isEnemy(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isNeutral(void * jarg1) {
-  unsigned int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (bool)((BWAPI::Player const *)arg1)->isNeutral();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Player_getStartLocation(void * jarg1) {
-  void * jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  TilePosition result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = ((BWAPI::Player const *)arg1)->getStartLocation();
-  jresult = new TilePosition((const TilePosition &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_leftGame(void * jarg1) {
-  unsigned int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (bool)((BWAPI::Player const *)arg1)->leftGame();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_minerals(void * jarg1) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (int)((BWAPI::Player const *)arg1)->minerals();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_gas(void * jarg1) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (int)((BWAPI::Player const *)arg1)->gas();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_cumulativeMinerals(void * jarg1) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (int)((BWAPI::Player const *)arg1)->cumulativeMinerals();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_cumulativeGas(void * jarg1) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (int)((BWAPI::Player const *)arg1)->cumulativeGas();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_supplyTotal__SWIG_0(void * jarg1) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (int)((BWAPI::Player const *)arg1)->supplyTotal();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_supplyUsed__SWIG_0(void * jarg1) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (int)((BWAPI::Player const *)arg1)->supplyUsed();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_supplyTotal__SWIG_1(void * jarg1, void * jarg2) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  Race arg2 ;
-  Race *argp2 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (Race *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Race", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (int)((BWAPI::Player const *)arg1)->supplyTotal(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_supplyUsed__SWIG_1(void * jarg1, void * jarg2) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  Race arg2 ;
-  Race *argp2 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (Race *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Race", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (int)((BWAPI::Player const *)arg1)->supplyUsed(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_allUnitCount(void * jarg1, void * jarg2) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (int)((BWAPI::Player const *)arg1)->allUnitCount(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_completedUnitCount(void * jarg1, void * jarg2) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (int)((BWAPI::Player const *)arg1)->completedUnitCount(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_incompleteUnitCount(void * jarg1, void * jarg2) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (int)((BWAPI::Player const *)arg1)->incompleteUnitCount(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_deadUnitCount(void * jarg1, void * jarg2) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (int)((BWAPI::Player const *)arg1)->deadUnitCount(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_killedUnitCount(void * jarg1, void * jarg2) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (int)((BWAPI::Player const *)arg1)->killedUnitCount(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Player_getUpgradeLevel(void * jarg1, void * jarg2) {
-  int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  UpgradeType arg2 ;
-  UpgradeType *argp2 ;
-  int result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (UpgradeType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null UpgradeType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (int)((BWAPI::Player const *)arg1)->getUpgradeLevel(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_hasResearched(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  TechType arg2 ;
-  TechType *argp2 ;
-  bool result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (TechType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null TechType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)((BWAPI::Player const *)arg1)->hasResearched(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isResearching(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  TechType arg2 ;
-  TechType *argp2 ;
-  bool result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (TechType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null TechType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)((BWAPI::Player const *)arg1)->isResearching(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isUpgrading(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  UpgradeType arg2 ;
-  UpgradeType *argp2 ;
-  bool result;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  argp2 = (UpgradeType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null UpgradeType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)((BWAPI::Player const *)arg1)->isUpgrading(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Player(void * jarg1) {
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  
-  arg1 = (BWAPI::Player *)jarg1; 
-  delete arg1;
-}
-
-
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_PlayerType__SWIG_0() {
   void * jresult ;
   BWAPI::PlayerType *result = 0 ;
@@ -7015,16 +9486,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_PlayerType(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getPlayerType(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_getPlayerType(char * jarg1) {
   void * jresult ;
   std::string *arg1 = 0 ;
   BWAPI::PlayerType result;
   
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
     return 0;
-  } 
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
   result = BWAPI::PlayerTypes::getPlayerType(*arg1);
   jresult = new BWAPI::PlayerType((const BWAPI::PlayerType &)result); 
   return jresult;
@@ -7166,1157 +9638,439 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerTypeUnknown_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Position__SWIG_0() {
-  void * jresult ;
-  BWAPI::Position *result = 0 ;
-  
-  result = (BWAPI::Position *)new BWAPI::Position();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Position__SWIG_1(void * jarg1) {
-  void * jresult ;
-  BWAPI::TilePosition *arg1 = 0 ;
-  BWAPI::Position *result = 0 ;
-  
-  arg1 = (BWAPI::TilePosition *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TilePosition const & type is null", 0);
-    return 0;
-  } 
-  result = (BWAPI::Position *)new BWAPI::Position((BWAPI::TilePosition const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Position__SWIG_2(int jarg1, int jarg2) {
-  void * jresult ;
-  int arg1 ;
-  int arg2 ;
-  BWAPI::Position *result = 0 ;
-  
-  arg1 = (int)jarg1; 
-  arg2 = (int)jarg2; 
-  result = (BWAPI::Position *)new BWAPI::Position(arg1,arg2);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Position_opEquals(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  BWAPI::Position *arg2 = 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  arg2 = (BWAPI::Position *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::Position const *)arg1)->operator ==((BWAPI::Position const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Position_opNotEquals(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  BWAPI::Position *arg2 = 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  arg2 = (BWAPI::Position *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::Position const *)arg1)->operator !=((BWAPI::Position const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Position_opLessThan(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  BWAPI::Position *arg2 = 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  arg2 = (BWAPI::Position *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::Position const *)arg1)->operator <((BWAPI::Position const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Position_opPlus(void * jarg1, void * jarg2) {
-  void * jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  BWAPI::Position *arg2 = 0 ;
-  BWAPI::Position result;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  arg2 = (BWAPI::Position *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
-    return 0;
-  } 
-  result = ((BWAPI::Position const *)arg1)->operator +((BWAPI::Position const &)*arg2);
-  jresult = new BWAPI::Position((const BWAPI::Position &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Position_opMinus(void * jarg1, void * jarg2) {
-  void * jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  BWAPI::Position *arg2 = 0 ;
-  BWAPI::Position result;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  arg2 = (BWAPI::Position *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
-    return 0;
-  } 
-  result = ((BWAPI::Position const *)arg1)->operator -((BWAPI::Position const &)*arg2);
-  jresult = new BWAPI::Position((const BWAPI::Position &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_Position_getDistance(void * jarg1, void * jarg2) {
-  double jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  BWAPI::Position *arg2 = 0 ;
-  double result;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  arg2 = (BWAPI::Position *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
-    return 0;
-  } 
-  result = (double)((BWAPI::Position const *)arg1)->getDistance((BWAPI::Position const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_Position_getLength(void * jarg1) {
-  double jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  double result;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  result = (double)((BWAPI::Position const *)arg1)->getLength();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Position_x(void * jarg1) {
-  void * jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  int *result = 0 ;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  result = (int *) &(arg1)->x();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Position_y(void * jarg1) {
-  void * jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  int *result = 0 ;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  result = (int *) &(arg1)->y();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Position_xConst(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_getID(void * jarg1) {
   int jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
   int result;
   
-  arg1 = (BWAPI::Position *)jarg1; 
-  result = (int)((BWAPI::Position const *)arg1)->x();
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->getID();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Position_yConst(void * jarg1) {
-  int jresult ;
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  result = (int)((BWAPI::Position const *)arg1)->y();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Position(void * jarg1) {
-  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
-  
-  arg1 = (BWAPI::Position *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PositionInvalid_get() {
-  void * jresult ;
-  BWAPI::Position *result = 0 ;
-  
-  result = (BWAPI::Position *)&BWAPI::Positions::Invalid;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PositionNone_get() {
-  void * jresult ;
-  BWAPI::Position *result = 0 ;
-  
-  result = (BWAPI::Position *)&BWAPI::Positions::None;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PositionUnknown_get() {
-  void * jresult ;
-  BWAPI::Position *result = 0 ;
-  
-  result = (BWAPI::Position *)&BWAPI::Positions::Unknown;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Race__SWIG_0() {
-  void * jresult ;
-  BWAPI::Race *result = 0 ;
-  
-  result = (BWAPI::Race *)new BWAPI::Race();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Race__SWIG_1(int jarg1) {
-  void * jresult ;
-  int arg1 ;
-  BWAPI::Race *result = 0 ;
-  
-  arg1 = (int)jarg1; 
-  result = (BWAPI::Race *)new BWAPI::Race(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Race__SWIG_2(void * jarg1) {
-  void * jresult ;
-  BWAPI::Race *arg1 = 0 ;
-  BWAPI::Race *result = 0 ;
-  
-  arg1 = (BWAPI::Race *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Race const & type is null", 0);
-    return 0;
-  } 
-  result = (BWAPI::Race *)new BWAPI::Race((BWAPI::Race const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Race_opAssign(void * jarg1, void * jarg2) {
-  void * jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  BWAPI::Race *arg2 = 0 ;
-  BWAPI::Race *result = 0 ;
-  
-  arg1 = (BWAPI::Race *)jarg1; 
-  arg2 = (BWAPI::Race *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Race const & type is null", 0);
-    return 0;
-  } 
-  result = (BWAPI::Race *) &(arg1)->operator =((BWAPI::Race const &)*arg2);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Race_opEquals(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  BWAPI::Race *arg2 = 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::Race *)jarg1; 
-  arg2 = (BWAPI::Race *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Race const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::Race const *)arg1)->operator ==((BWAPI::Race const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Race_opNotEquals(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  BWAPI::Race *arg2 = 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::Race *)jarg1; 
-  arg2 = (BWAPI::Race *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Race const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::Race const *)arg1)->operator !=((BWAPI::Race const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Race_opLessThan(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  BWAPI::Race *arg2 = 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::Race *)jarg1; 
-  arg2 = (BWAPI::Race *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Race const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::Race const *)arg1)->operator <((BWAPI::Race const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Race_getID(void * jarg1) {
-  int jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::Race *)jarg1; 
-  result = (int)((BWAPI::Race const *)arg1)->getID();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_Race_getName(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_Player_getName(void * jarg1) {
   char * jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
   std::string result;
   
-  arg1 = (BWAPI::Race *)jarg1; 
-  result = ((BWAPI::Race const *)arg1)->getName();
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = ((BWAPI::Player const *)arg1)->getName();
   jresult = SWIG_csharp_string_callback((&result)->c_str()); 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Race_getWorker(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Player_getUnits(void * jarg1) {
   void * jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  BWAPI::UnitType *result = 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  std::set< BWAPI::Unit * > *result = 0 ;
   
-  arg1 = (BWAPI::Race *)jarg1; 
-  result = (BWAPI::UnitType *)((BWAPI::Race const *)arg1)->getWorker();
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (std::set< BWAPI::Unit * > *) &((BWAPI::Player const *)arg1)->getUnits();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Race_getCenter(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Player_getRace(void * jarg1) {
   void * jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  BWAPI::UnitType *result = 0 ;
-  
-  arg1 = (BWAPI::Race *)jarg1; 
-  result = (BWAPI::UnitType *)((BWAPI::Race const *)arg1)->getCenter();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Race_getRefinery(void * jarg1) {
-  void * jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  BWAPI::UnitType *result = 0 ;
-  
-  arg1 = (BWAPI::Race *)jarg1; 
-  result = (BWAPI::UnitType *)((BWAPI::Race const *)arg1)->getRefinery();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Race_getTransport(void * jarg1) {
-  void * jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  BWAPI::UnitType *result = 0 ;
-  
-  arg1 = (BWAPI::Race *)jarg1; 
-  result = (BWAPI::UnitType *)((BWAPI::Race const *)arg1)->getTransport();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Race_getSupplyProvider(void * jarg1) {
-  void * jresult ;
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  BWAPI::UnitType *result = 0 ;
-  
-  arg1 = (BWAPI::Race *)jarg1; 
-  result = (BWAPI::UnitType *)((BWAPI::Race const *)arg1)->getSupplyProvider();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Race(void * jarg1) {
-  BWAPI::Race *arg1 = (BWAPI::Race *) 0 ;
-  
-  arg1 = (BWAPI::Race *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_getRace(void * jarg1) {
-  void * jresult ;
-  std::string *arg1 = 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
   BWAPI::Race result;
   
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
-    return 0;
-  } 
-  result = BWAPI::Races::getRace(*arg1);
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = ((BWAPI::Player const *)arg1)->getRace();
   jresult = new BWAPI::Race((const BWAPI::Race &)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_allRaces() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Player_playerType(void * jarg1) {
   void * jresult ;
-  std::set< BWAPI::Race > *result = 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::PlayerType result;
   
-  result = (std::set< BWAPI::Race > *) &BWAPI::Races::allRaces();
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = ((BWAPI::Player const *)arg1)->playerType();
+  jresult = new BWAPI::PlayerType((const BWAPI::PlayerType &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Player_getForce(void * jarg1) {
+  void * jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::Force *result = 0 ;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (BWAPI::Force *)((BWAPI::Player const *)arg1)->getForce();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_initRaces() {
-  BWAPI::Races::init();
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_get() {
-  void * jresult ;
-  BWAPI::Race *result = 0 ;
-  
-  result = (BWAPI::Race *)&BWAPI::Races::Zerg;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_get() {
-  void * jresult ;
-  BWAPI::Race *result = 0 ;
-  
-  result = (BWAPI::Race *)&BWAPI::Races::Terran;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_get() {
-  void * jresult ;
-  BWAPI::Race *result = 0 ;
-  
-  result = (BWAPI::Race *)&BWAPI::Races::Protoss;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Random_get() {
-  void * jresult ;
-  BWAPI::Race *result = 0 ;
-  
-  result = (BWAPI::Race *)&BWAPI::Races::Random;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Other_get() {
-  void * jresult ;
-  BWAPI::Race *result = 0 ;
-  
-  result = (BWAPI::Race *)&BWAPI::Races::Other;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_RaceNone_get() {
-  void * jresult ;
-  BWAPI::Race *result = 0 ;
-  
-  result = (BWAPI::Race *)&BWAPI::Races::None;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_RaceUnknown_get() {
-  void * jresult ;
-  BWAPI::Race *result = 0 ;
-  
-  result = (BWAPI::Race *)&BWAPI::Races::Unknown;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechType__SWIG_0() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)new BWAPI::TechType();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechType__SWIG_1(int jarg1) {
-  void * jresult ;
-  int arg1 ;
-  BWAPI::TechType *result = 0 ;
-  
-  arg1 = (int)jarg1; 
-  result = (BWAPI::TechType *)new BWAPI::TechType(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechType__SWIG_2(void * jarg1) {
-  void * jresult ;
-  BWAPI::TechType *arg1 = 0 ;
-  BWAPI::TechType *result = 0 ;
-  
-  arg1 = (BWAPI::TechType *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TechType const & type is null", 0);
-    return 0;
-  } 
-  result = (BWAPI::TechType *)new BWAPI::TechType((BWAPI::TechType const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechType_opAssign(void * jarg1, void * jarg2) {
-  void * jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
-  BWAPI::TechType *arg2 = 0 ;
-  BWAPI::TechType *result = 0 ;
-  
-  arg1 = (BWAPI::TechType *)jarg1; 
-  arg2 = (BWAPI::TechType *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TechType const & type is null", 0);
-    return 0;
-  } 
-  result = (BWAPI::TechType *) &(arg1)->operator =((BWAPI::TechType const &)*arg2);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechType_opEquals(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isAlly(void * jarg1, void * jarg2) {
   unsigned int jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
-  BWAPI::TechType *arg2 = 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::Player *arg2 = (BWAPI::Player *) 0 ;
   bool result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
-  arg2 = (BWAPI::TechType *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TechType const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::TechType const *)arg1)->operator ==((BWAPI::TechType const &)*arg2);
+  arg1 = (BWAPI::Player *)jarg1; 
+  arg2 = (BWAPI::Player *)jarg2; 
+  result = (bool)((BWAPI::Player const *)arg1)->isAlly(arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechType_opNotEquals(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isEnemy(void * jarg1, void * jarg2) {
   unsigned int jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
-  BWAPI::TechType *arg2 = 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::Player *arg2 = (BWAPI::Player *) 0 ;
   bool result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
-  arg2 = (BWAPI::TechType *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TechType const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::TechType const *)arg1)->operator !=((BWAPI::TechType const &)*arg2);
+  arg1 = (BWAPI::Player *)jarg1; 
+  arg2 = (BWAPI::Player *)jarg2; 
+  result = (bool)((BWAPI::Player const *)arg1)->isEnemy(arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechType_opLessThan(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isNeutral(void * jarg1) {
   unsigned int jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
-  BWAPI::TechType *arg2 = 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
   bool result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
-  arg2 = (BWAPI::TechType *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::TechType const & type is null", 0);
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (bool)((BWAPI::Player const *)arg1)->isNeutral();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Player_getStartLocation(void * jarg1) {
+  void * jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::TilePosition result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = ((BWAPI::Player const *)arg1)->getStartLocation();
+  jresult = new BWAPI::TilePosition((const BWAPI::TilePosition &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_leftGame(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (bool)((BWAPI::Player const *)arg1)->leftGame();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_minerals(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->minerals();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_gas(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->gas();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_cumulativeMinerals(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->cumulativeMinerals();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_cumulativeGas(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->cumulativeGas();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_supplyTotal__SWIG_0(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->supplyTotal();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_supplyUsed__SWIG_0(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->supplyUsed();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_supplyTotal__SWIG_1(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::Race arg2 ;
+  BWAPI::Race *argp2 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::Race *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Race", 0);
     return 0;
-  } 
-  result = (bool)((BWAPI::TechType const *)arg1)->operator <((BWAPI::TechType const &)*arg2);
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::Player const *)arg1)->supplyTotal(arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_TechType_getID(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_supplyUsed__SWIG_1(void * jarg1, void * jarg2) {
   int jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::Race arg2 ;
+  BWAPI::Race *argp2 ;
   int result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
-  result = (int)((BWAPI::TechType const *)arg1)->getID();
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::Race *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Race", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::Player const *)arg1)->supplyUsed(arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_TechType_getName(void * jarg1) {
-  char * jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
-  std::string result;
-  
-  arg1 = (BWAPI::TechType *)jarg1; 
-  result = ((BWAPI::TechType const *)arg1)->getName();
-  jresult = SWIG_csharp_string_callback((&result)->c_str()); 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_TechType_mineralPrice(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_allUnitCount(void * jarg1, void * jarg2) {
   int jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
   int result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
-  result = (int)((BWAPI::TechType const *)arg1)->mineralPrice();
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::Player const *)arg1)->allUnitCount(arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_TechType_gasPrice(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_completedUnitCount(void * jarg1, void * jarg2) {
   int jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
   int result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
-  result = (int)((BWAPI::TechType const *)arg1)->gasPrice();
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::Player const *)arg1)->completedUnitCount(arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_TechType_energyUsed(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_incompleteUnitCount(void * jarg1, void * jarg2) {
   int jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
   int result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
-  result = (int)((BWAPI::TechType const *)arg1)->energyUsed();
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::Player const *)arg1)->incompleteUnitCount(arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechType_whatResearches(void * jarg1) {
-  void * jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
-  BWAPI::UnitType *result = 0 ;
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_deadUnitCount(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
+  int result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
-  result = (BWAPI::UnitType *)((BWAPI::TechType const *)arg1)->whatResearches();
-  jresult = (void *)result; 
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::Player const *)arg1)->deadUnitCount(arg2);
+  jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechType_getWeapon(void * jarg1) {
-  void * jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
-  BWAPI::WeaponType *result = 0 ;
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_killedUnitCount(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
+  int result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
-  result = (BWAPI::WeaponType *)((BWAPI::TechType const *)arg1)->getWeapon();
-  jresult = (void *)result; 
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::Player const *)arg1)->killedUnitCount(arg2);
+  jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechType_whatUses(void * jarg1) {
-  void * jresult ;
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
-  std::set< BWAPI::UnitType const * > *result = 0 ;
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_getUpgradeLevel(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UpgradeType arg2 ;
+  BWAPI::UpgradeType *argp2 ;
+  int result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
-  result = (std::set< BWAPI::UnitType const * > *) &((BWAPI::TechType const *)arg1)->whatUses();
-  jresult = (void *)result; 
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::UpgradeType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UpgradeType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::Player const *)arg1)->getUpgradeLevel(arg2);
+  jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TechType(void * jarg1) {
-  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_hasResearched(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::TechType arg2 ;
+  BWAPI::TechType *argp2 ;
+  bool result;
   
-  arg1 = (BWAPI::TechType *)jarg1; 
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::TechType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TechType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (bool)((BWAPI::Player const *)arg1)->hasResearched(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isResearching(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::TechType arg2 ;
+  BWAPI::TechType *argp2 ;
+  bool result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::TechType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TechType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (bool)((BWAPI::Player const *)arg1)->isResearching(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isUpgrading(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UpgradeType arg2 ;
+  BWAPI::UpgradeType *argp2 ;
+  bool result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::UpgradeType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UpgradeType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (bool)((BWAPI::Player const *)arg1)->isUpgrading(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Player(void * jarg1) {
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
   delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_getTechType(void * jarg1) {
-  void * jresult ;
-  std::string *arg1 = 0 ;
-  BWAPI::TechType result;
-  
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
-    return 0;
-  } 
-  result = BWAPI::TechTypes::getTechType(*arg1);
-  jresult = new BWAPI::TechType((const BWAPI::TechType &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_allTechTypes() {
-  void * jresult ;
-  std::set< BWAPI::TechType > *result = 0 ;
-  
-  result = (std::set< BWAPI::TechType > *) &BWAPI::TechTypes::allTechTypes();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_initTechTypes() {
-  BWAPI::TechTypes::init();
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Stim_Packs_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Stim_Packs;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeLockdown_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Lockdown;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeEMP_Shockwave_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::EMP_Shockwave;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Spider_Mines_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Spider_Mines;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Scanner_Sweep_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Scanner_Sweep;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Tank_Siege_Mode_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Tank_Siege_Mode;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Defensive_Matrix_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Defensive_Matrix;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeIrradiate_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Irradiate;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeYamato_Gun_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Yamato_Gun;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Cloaking_Field_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Cloaking_Field;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Personnel_Cloaking_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Personnel_Cloaking;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Burrowing_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Burrowing;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Infestation_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Infestation;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeSpawn_Broodlings_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Spawn_Broodlings;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeDark_Swarm_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Dark_Swarm;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypePlague_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Plague;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeConsume_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Consume;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeEnsnare_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Ensnare;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeParasite_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Parasite;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypePsionic_Storm_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Psionic_Storm;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Hallucination_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Hallucination;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Recall_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Recall;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeStasis_Field_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Stasis_Field;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Archon_Warp_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Archon_Warp;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeRestoration_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Restoration;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeDisruption_Web_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Disruption_Web;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeMind_Control_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Mind_Control;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Dark_Archon_Meld_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Dark_Archon_Meld;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeFeedback_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Feedback;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeOptical_Flare_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Optical_Flare;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeMaelstrom_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Maelstrom;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Lurker_Aspect_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Lurker_Aspect;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Healing_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Healing;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeNone_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::None;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeUnknown_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Unknown;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeNuclear_Strike_get() {
-  void * jresult ;
-  BWAPI::TechType *result = 0 ;
-  
-  result = (BWAPI::TechType *)&BWAPI::TechTypes::Nuclear_Strike;
-  jresult = (void *)result; 
-  return jresult;
 }
 
 
@@ -9095,7 +10849,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getChild(void * jarg1) {
 SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getTrainingQueue(void * jarg1) {
   void * jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  SwigValueWrapper< std::list< BWAPI::UnitType > > result;
+  std::list< BWAPI::UnitType > result;
   
   arg1 = (BWAPI::Unit *)jarg1; 
   result = ((BWAPI::Unit const *)arg1)->getTrainingQueue();
@@ -9119,7 +10873,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getTransport(void * jarg1) {
 SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getLoadedUnits(void * jarg1) {
   void * jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  SwigValueWrapper< std::list< BWAPI::Unit * > > result;
+  std::list< BWAPI::Unit * > result;
   
   arg1 = (BWAPI::Unit *)jarg1; 
   result = ((BWAPI::Unit const *)arg1)->getLoadedUnits();
@@ -9179,11 +10933,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getTech(void * jarg1) {
 SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getUpgrade(void * jarg1) {
   void * jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  UpgradeType result;
+  BWAPI::UpgradeType result;
   
   arg1 = (BWAPI::Unit *)jarg1; 
   result = ((BWAPI::Unit const *)arg1)->getUpgrade();
-  jresult = new UpgradeType((const UpgradeType &)result); 
+  jresult = new BWAPI::UpgradeType((const BWAPI::UpgradeType &)result); 
   return jresult;
 }
 
@@ -9251,14 +11005,14 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getAddon(void * jarg1) {
 SWIGEXPORT int SWIGSTDCALL CSharp_Unit_getUpgradeLevel(void * jarg1, void * jarg2) {
   int jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  UpgradeType arg2 ;
-  UpgradeType *argp2 ;
+  BWAPI::UpgradeType arg2 ;
+  BWAPI::UpgradeType *argp2 ;
   int result;
   
   arg1 = (BWAPI::Unit *)jarg1; 
-  argp2 = (UpgradeType *)jarg2; 
+  argp2 = (BWAPI::UpgradeType *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null UpgradeType", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UpgradeType", 0);
     return 0;
   }
   arg2 = *argp2; 
@@ -9931,14 +11685,14 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_research(void * jarg1, void * ja
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_upgrade(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  UpgradeType arg2 ;
-  UpgradeType *argp2 ;
+  BWAPI::UpgradeType arg2 ;
+  BWAPI::UpgradeType *argp2 ;
   bool result;
   
   arg1 = (BWAPI::Unit *)jarg1; 
-  argp2 = (UpgradeType *)jarg2; 
+  argp2 = (BWAPI::UpgradeType *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null UpgradeType", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UpgradeType", 0);
     return 0;
   }
   arg2 = *argp2; 
@@ -10556,16 +12310,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitSizeType(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getUnitSizeType(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_getUnitSizeType(char * jarg1) {
   void * jresult ;
   std::string *arg1 = 0 ;
   BWAPI::UnitSizeType result;
   
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
     return 0;
-  } 
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
   result = BWAPI::UnitSizeTypes::getUnitSizeType(*arg1);
   jresult = new BWAPI::UnitSizeType((const BWAPI::UnitSizeType &)result); 
   return jresult;
@@ -11545,16 +13300,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitType(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getUnitType(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_getUnitType(char * jarg1) {
   void * jresult ;
   std::string *arg1 = 0 ;
   BWAPI::UnitType result;
   
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
     return 0;
-  } 
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
   result = BWAPI::UnitTypes::getUnitType(*arg1);
   jresult = new BWAPI::UnitType((const BWAPI::UnitType &)result); 
   return jresult;
@@ -12866,819 +14622,6 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeUnknown_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeType__SWIG_0() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)new BWAPI::UpgradeType();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeType__SWIG_1(int jarg1) {
-  void * jresult ;
-  int arg1 ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  arg1 = (int)jarg1; 
-  result = (BWAPI::UpgradeType *)new BWAPI::UpgradeType(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeType__SWIG_2(void * jarg1) {
-  void * jresult ;
-  BWAPI::UpgradeType *arg1 = 0 ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UpgradeType const & type is null", 0);
-    return 0;
-  } 
-  result = (BWAPI::UpgradeType *)new BWAPI::UpgradeType((BWAPI::UpgradeType const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeType_opAssign(void * jarg1, void * jarg2) {
-  void * jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  BWAPI::UpgradeType *arg2 = 0 ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  arg2 = (BWAPI::UpgradeType *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UpgradeType const & type is null", 0);
-    return 0;
-  } 
-  result = (BWAPI::UpgradeType *) &(arg1)->operator =((BWAPI::UpgradeType const &)*arg2);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeType_opEquals(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  BWAPI::UpgradeType *arg2 = 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  arg2 = (BWAPI::UpgradeType *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UpgradeType const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::UpgradeType const *)arg1)->operator ==((BWAPI::UpgradeType const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeType_opNotEquals(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  BWAPI::UpgradeType *arg2 = 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  arg2 = (BWAPI::UpgradeType *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UpgradeType const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::UpgradeType const *)arg1)->operator !=((BWAPI::UpgradeType const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeType_opLessThan(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  BWAPI::UpgradeType *arg2 = 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  arg2 = (BWAPI::UpgradeType *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UpgradeType const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)((BWAPI::UpgradeType const *)arg1)->operator <((BWAPI::UpgradeType const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_getID(void * jarg1) {
-  int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = (int)((BWAPI::UpgradeType const *)arg1)->getID();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_UpgradeType_getName(void * jarg1) {
-  char * jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  std::string result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = ((BWAPI::UpgradeType const *)arg1)->getName();
-  jresult = SWIG_csharp_string_callback((&result)->c_str()); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeType_getRace(void * jarg1) {
-  void * jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  BWAPI::Race result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = ((BWAPI::UpgradeType const *)arg1)->getRace();
-  jresult = new BWAPI::Race((const BWAPI::Race &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_mineralPriceBase(void * jarg1) {
-  int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = (int)((BWAPI::UpgradeType const *)arg1)->mineralPriceBase();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_mineralPriceFactor(void * jarg1) {
-  int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = (int)((BWAPI::UpgradeType const *)arg1)->mineralPriceFactor();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_gasPriceBase(void * jarg1) {
-  int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = (int)((BWAPI::UpgradeType const *)arg1)->gasPriceBase();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_gasPriceFactor(void * jarg1) {
-  int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = (int)((BWAPI::UpgradeType const *)arg1)->gasPriceFactor();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_upgradeTimeBase(void * jarg1) {
-  int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = (int)((BWAPI::UpgradeType const *)arg1)->upgradeTimeBase();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_upgradeTimeFactor(void * jarg1) {
-  int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = (int)((BWAPI::UpgradeType const *)arg1)->upgradeTimeFactor();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeType_maxRepeats(void * jarg1) {
-  int jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = (int)((BWAPI::UpgradeType const *)arg1)->maxRepeats();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeType_whatUpgrades(void * jarg1) {
-  void * jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  BWAPI::UnitType *result = 0 ;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = (BWAPI::UnitType *)((BWAPI::UpgradeType const *)arg1)->whatUpgrades();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeType_whatUses(void * jarg1) {
-  void * jresult ;
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  std::set< BWAPI::UnitType const * > *result = 0 ;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  result = (std::set< BWAPI::UnitType const * > *) &((BWAPI::UpgradeType const *)arg1)->whatUses();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UpgradeType(void * jarg1) {
-  BWAPI::UpgradeType *arg1 = (BWAPI::UpgradeType *) 0 ;
-  
-  arg1 = (BWAPI::UpgradeType *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_getUpgradeType(void * jarg1) {
-  void * jresult ;
-  std::string *arg1 = 0 ;
-  BWAPI::UpgradeType result;
-  
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
-    return 0;
-  } 
-  result = BWAPI::UpgradeTypes::getUpgradeType(*arg1);
-  jresult = new BWAPI::UpgradeType((const BWAPI::UpgradeType &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_allUpgradeTypes() {
-  void * jresult ;
-  std::set< BWAPI::UpgradeType > *result = 0 ;
-  
-  result = (std::set< BWAPI::UpgradeType > *) &BWAPI::UpgradeTypes::allUpgradeTypes();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_initUpgradeTypes() {
-  BWAPI::UpgradeTypes::init();
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Infantry_Armor_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Infantry_Armor;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Vehicle_Plating_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Vehicle_Plating;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Ship_Plating_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Ship_Plating;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_Carapace_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Zerg_Carapace;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_Flyer_Carapace_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Zerg_Flyer_Carapace;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_Armor_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Protoss_Armor;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_Plating_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Protoss_Plating;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Infantry_Weapons_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Infantry_Weapons;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Vehicle_Weapons_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Vehicle_Weapons;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Terran_Ship_Weapons_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Terran_Ship_Weapons;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_Melee_Attacks_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Zerg_Melee_Attacks;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_Missile_Attacks_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Zerg_Missile_Attacks;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Zerg_Flyer_Attacks_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Zerg_Flyer_Attacks;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_Ground_Weapons_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Protoss_Ground_Weapons;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_Air_Weapons_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Protoss_Air_Weapons;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Protoss_Plasma_Shields_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Protoss_Plasma_Shields;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_U_238_Shells_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::U_238_Shells;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Ion_Thrusters_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Ion_Thrusters;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Titan_Reactor_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Titan_Reactor;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Ocular_Implants_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Ocular_Implants;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Moebius_Reactor_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Moebius_Reactor;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Apollo_Reactor_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Apollo_Reactor;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Colossus_Reactor_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Colossus_Reactor;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Ventral_Sacs_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Ventral_Sacs;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Antennae_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Antennae;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Pneumatized_Carapace_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Pneumatized_Carapace;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Metabolic_Boost_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Metabolic_Boost;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Adrenal_Glands_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Adrenal_Glands;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Muscular_Augments_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Muscular_Augments;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Grooved_Spines_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Grooved_Spines;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Gamete_Meiosis_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Gamete_Meiosis;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Metasynaptic_Node_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Metasynaptic_Node;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Singularity_Charge_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Singularity_Charge;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Leg_Enhancements_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Leg_Enhancements;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Scarab_Damage_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Scarab_Damage;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Reaver_Capacity_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Reaver_Capacity;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Gravitic_Drive_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Gravitic_Drive;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Sensor_Array_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Sensor_Array;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Gravitic_Boosters_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Gravitic_Boosters;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Khaydarin_Amulet_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Khaydarin_Amulet;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Apial_Sensors_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Apial_Sensors;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Gravitic_Thrusters_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Gravitic_Thrusters;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Carrier_Capacity_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Carrier_Capacity;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Khaydarin_Core_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Khaydarin_Core;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Argus_Jewel_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Argus_Jewel;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Argus_Talisman_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Argus_Talisman;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Caduceus_Reactor_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Caduceus_Reactor;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Chitinous_Plating_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Chitinous_Plating;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Anabolic_Synthesis_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Anabolic_Synthesis;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Charon_Booster_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Charon_Booster;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypeNone_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::None;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypeUnknown_get() {
-  void * jresult ;
-  BWAPI::UpgradeType *result = 0 ;
-  
-  result = (BWAPI::UpgradeType *)&BWAPI::UpgradeTypes::Unknown;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_WeaponType__SWIG_0() {
   void * jresult ;
   BWAPI::WeaponType *result = 0 ;
@@ -14097,16 +15040,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_WeaponType(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getWeaponType(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_getWeaponType(char * jarg1) {
   void * jresult ;
   std::string *arg1 = 0 ;
   BWAPI::WeaponType result;
   
-  arg1 = (std::string *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
     return 0;
-  } 
+  }
+  std::string arg1_str(jarg1);
+  arg1 = &arg1_str; 
   result = BWAPI::WeaponTypes::getWeaponType(*arg1);
   jresult = new BWAPI::WeaponType((const BWAPI::WeaponType &)result); 
   return jresult;
@@ -14778,6 +15722,34 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_WeaponTypeUnknown_get() {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_monobridgeutil_getLastUnitParam() {
+  void * jresult ;
+  BWAPI::Unit *result = 0 ;
+  
+  result = (BWAPI::Unit *)monobridgeutil::getLastUnitParam();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_monobridgeutil() {
+  void * jresult ;
+  monobridgeutil *result = 0 ;
+  
+  result = (monobridgeutil *)new monobridgeutil();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_monobridgeutil(void * jarg1) {
+  monobridgeutil *arg1 = (monobridgeutil *) 0 ;
+  
+  arg1 = (monobridgeutil *)jarg1; 
+  delete arg1;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_readMap() {
   BWTA::readMap();
 }
@@ -14790,9 +15762,9 @@ SWIGEXPORT void SWIGSTDCALL CSharp_analyze() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_getRegions() {
   void * jresult ;
-  std::set< Region * > *result = 0 ;
+  std::set< BWTA::Region * > *result = 0 ;
   
-  result = (std::set< Region * > *) &BWTA::getRegions();
+  result = (std::set< BWTA::Region * > *) &BWTA::getRegions();
   jresult = (void *)result; 
   return jresult;
 }
@@ -14800,9 +15772,9 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getRegions() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_getChokepoints() {
   void * jresult ;
-  std::set< Chokepoint * > *result = 0 ;
+  std::set< BWTA::Chokepoint * > *result = 0 ;
   
-  result = (std::set< Chokepoint * > *) &BWTA::getChokepoints();
+  result = (std::set< BWTA::Chokepoint * > *) &BWTA::getChokepoints();
   jresult = (void *)result; 
   return jresult;
 }
@@ -14810,9 +15782,9 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getChokepoints() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_getBaseLocations() {
   void * jresult ;
-  std::set< BaseLocation * > *result = 0 ;
+  std::set< BWTA::BaseLocation * > *result = 0 ;
   
-  result = (std::set< BaseLocation * > *) &BWTA::getBaseLocations();
+  result = (std::set< BWTA::BaseLocation * > *) &BWTA::getBaseLocations();
   jresult = (void *)result; 
   return jresult;
 }
@@ -14820,9 +15792,9 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getBaseLocations() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_getStartLocations() {
   void * jresult ;
-  std::set< BaseLocation * > *result = 0 ;
+  std::set< BWTA::BaseLocation * > *result = 0 ;
   
-  result = (std::set< BaseLocation * > *) &BWTA::getStartLocations();
+  result = (std::set< BWTA::BaseLocation * > *) &BWTA::getStartLocations();
   jresult = (void *)result; 
   return jresult;
 }
@@ -14830,9 +15802,9 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getStartLocations() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_getUnwalkablePolygons() {
   void * jresult ;
-  std::set< Polygon * > *result = 0 ;
+  std::set< BWTA::Polygon * > *result = 0 ;
   
-  result = (std::set< Polygon * > *) &BWTA::getUnwalkablePolygons();
+  result = (std::set< BWTA::Polygon * > *) &BWTA::getUnwalkablePolygons();
   jresult = (void *)result; 
   return jresult;
 }
@@ -14859,10 +15831,10 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestUnwalkablePosition(void * jarg1) 
 SWIGEXPORT void * SWIGSTDCALL CSharp_getStartLocation(void * jarg1) {
   void * jresult ;
   BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  BaseLocation *result = 0 ;
+  BWTA::BaseLocation *result = 0 ;
   
   arg1 = (BWAPI::Player *)jarg1; 
-  result = (BaseLocation *)BWTA::getStartLocation(arg1);
+  result = (BWTA::BaseLocation *)BWTA::getStartLocation(arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -14872,7 +15844,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestBaseLocation(void * jarg1) {
   void * jresult ;
   BWAPI::TilePosition arg1 ;
   BWAPI::TilePosition *argp1 ;
-  BaseLocation *result = 0 ;
+  BWTA::BaseLocation *result = 0 ;
   
   argp1 = (BWAPI::TilePosition *)jarg1; 
   if (!argp1) {
@@ -14880,7 +15852,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestBaseLocation(void * jarg1) {
     return 0;
   }
   arg1 = *argp1; 
-  result = (BaseLocation *)BWTA::getNearestBaseLocation(arg1);
+  result = (BWTA::BaseLocation *)BWTA::getNearestBaseLocation(arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -15260,3655 +16232,3217 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Region(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_monobridgeutil_getLastUnitParam() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitSet__SWIG_0() {
   void * jresult ;
-  BWAPI::Unit *result = 0 ;
+  std::set< BWAPI::Unit * > *result = 0 ;
   
-  result = (BWAPI::Unit *)monobridgeutil::getLastUnitParam();
+  result = (std::set< BWAPI::Unit * > *)new std::set< BWAPI::Unit * >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_monobridgeutil() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitSet__SWIG_1(void * jarg1) {
   void * jresult ;
-  monobridgeutil *result = 0 ;
+  std::set< BWAPI::Unit * > *arg1 = 0 ;
+  std::set< BWAPI::Unit * > *result = 0 ;
   
-  result = (monobridgeutil *)new monobridgeutil();
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Unit * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::Unit * > *)new std::set< BWAPI::Unit * >((std::set< BWAPI::Unit * > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_monobridgeutil(void * jarg1) {
-  monobridgeutil *arg1 = (monobridgeutil *) 0 ;
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_UnitSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
+  std::set< BWAPI::Unit * >::size_type result;
   
-  arg1 = (monobridgeutil *)jarg1; 
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
+  result = ((std::set< BWAPI::Unit * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
+  result = (bool)((std::set< BWAPI::Unit * > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitSet_Clear(void * jarg1) {
+  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
+  std::set< BWAPI::Unit * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Unit * >::key_type temp2 = 0 ;
+  std::set< BWAPI::Unit * >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
+  temp2 = (std::set< BWAPI::Unit * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::set< BWAPI::Unit * >::key_type *) &std_set_Sl_BWAPI_Unit_Sm__Sg__getitem(arg1,(BWAPI::Unit *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
+  std::set< BWAPI::Unit * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Unit * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
+  temp2 = (std::set< BWAPI::Unit * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_Unit_Sm__Sg__ContainsKey(arg1,(BWAPI::Unit *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
+  std::set< BWAPI::Unit * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Unit * >::key_type temp2 = 0 ;
+  
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
+  temp2 = (std::set< BWAPI::Unit * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    std_set_Sl_BWAPI_Unit_Sm__Sg__Add(arg1,(BWAPI::Unit *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
+  std::set< BWAPI::Unit * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Unit * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
+  temp2 = (std::set< BWAPI::Unit * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_Unit_Sm__Sg__Remove(arg1,(BWAPI::Unit *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
+  std::set< BWAPI::Unit * >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
+  result = (std::set< BWAPI::Unit * >::iterator *)std_set_Sl_BWAPI_Unit_Sm__Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
+  std::set< BWAPI::Unit * >::iterator *arg2 = (std::set< BWAPI::Unit * >::iterator *) 0 ;
+  std::set< BWAPI::Unit * >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
+  arg2 = (std::set< BWAPI::Unit * >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::Unit * >::key_type *) &std_set_Sl_BWAPI_Unit_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitSet(void * jarg1) {
+  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DamageTypeSet(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_AttackTypeSet__SWIG_0() {
   void * jresult ;
+  std::set< BWAPI::AttackType > *result = 0 ;
+  
+  result = (std::set< BWAPI::AttackType > *)new std::set< BWAPI::AttackType >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_AttackTypeSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::AttackType > *arg1 = 0 ;
+  std::set< BWAPI::AttackType > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::AttackType > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::AttackType > *)new std::set< BWAPI::AttackType >((std::set< BWAPI::AttackType > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_AttackTypeSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWAPI::AttackType > *arg1 = (std::set< BWAPI::AttackType > *) 0 ;
+  std::set< BWAPI::AttackType >::size_type result;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1; 
+  result = ((std::set< BWAPI::AttackType > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_AttackTypeSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWAPI::AttackType > *arg1 = (std::set< BWAPI::AttackType > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1; 
+  result = (bool)((std::set< BWAPI::AttackType > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_AttackTypeSet_Clear(void * jarg1) {
+  std::set< BWAPI::AttackType > *arg1 = (std::set< BWAPI::AttackType > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_AttackTypeSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::AttackType > *arg1 = (std::set< BWAPI::AttackType > *) 0 ;
+  std::set< BWAPI::AttackType >::key_type *arg2 = 0 ;
+  std::set< BWAPI::AttackType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1; 
+  arg2 = (std::set< BWAPI::AttackType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::AttackType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::AttackType >::key_type *) &std_set_Sl_BWAPI_AttackType_Sg__getitem(arg1,(BWAPI::AttackType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_AttackTypeSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::AttackType > *arg1 = (std::set< BWAPI::AttackType > *) 0 ;
+  std::set< BWAPI::AttackType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1; 
+  arg2 = (std::set< BWAPI::AttackType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::AttackType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_AttackType_Sg__ContainsKey(arg1,(BWAPI::AttackType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_AttackTypeSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::AttackType > *arg1 = (std::set< BWAPI::AttackType > *) 0 ;
+  std::set< BWAPI::AttackType >::key_type *arg2 = 0 ;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1; 
+  arg2 = (std::set< BWAPI::AttackType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::AttackType >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_AttackType_Sg__Add(arg1,(BWAPI::AttackType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_AttackTypeSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::AttackType > *arg1 = (std::set< BWAPI::AttackType > *) 0 ;
+  std::set< BWAPI::AttackType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1; 
+  arg2 = (std::set< BWAPI::AttackType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::AttackType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_AttackType_Sg__Remove(arg1,(BWAPI::AttackType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_AttackTypeSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::AttackType > *arg1 = (std::set< BWAPI::AttackType > *) 0 ;
+  std::set< BWAPI::AttackType >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1; 
+  result = (std::set< BWAPI::AttackType >::iterator *)std_set_Sl_BWAPI_AttackType_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_AttackTypeSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::AttackType > *arg1 = (std::set< BWAPI::AttackType > *) 0 ;
+  std::set< BWAPI::AttackType >::iterator *arg2 = (std::set< BWAPI::AttackType >::iterator *) 0 ;
+  std::set< BWAPI::AttackType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1; 
+  arg2 = (std::set< BWAPI::AttackType >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::AttackType >::key_type *) &std_set_Sl_BWAPI_AttackType_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_AttackTypeSet(void * jarg1) {
+  std::set< BWAPI::AttackType > *arg1 = (std::set< BWAPI::AttackType > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::AttackType > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DamageTypeSet__SWIG_0() {
+  void * jresult ;
+  std::set< BWAPI::DamageType > *result = 0 ;
+  
+  result = (std::set< BWAPI::DamageType > *)new std::set< BWAPI::DamageType >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DamageTypeSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::DamageType > *arg1 = 0 ;
+  std::set< BWAPI::DamageType > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::DamageType > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::DamageType > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::DamageType > *)new std::set< BWAPI::DamageType >((std::set< BWAPI::DamageType > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DamageTypeSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
-  SetWrapper< BWAPI::DamageType > *result = 0 ;
+  std::set< BWAPI::DamageType >::size_type result;
   
   arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
-  result = (SetWrapper< BWAPI::DamageType > *)new SetWrapper< BWAPI::DamageType >(arg1);
+  result = ((std::set< BWAPI::DamageType > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DamageTypeSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
+  result = (bool)((std::set< BWAPI::DamageType > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_DamageTypeSet_Clear(void * jarg1) {
+  std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_DamageTypeSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
+  std::set< BWAPI::DamageType >::key_type *arg2 = 0 ;
+  std::set< BWAPI::DamageType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
+  arg2 = (std::set< BWAPI::DamageType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::DamageType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::DamageType >::key_type *) &std_set_Sl_BWAPI_DamageType_Sg__getitem(arg1,(BWAPI::DamageType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DamageTypeSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
+  std::set< BWAPI::DamageType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
+  arg2 = (std::set< BWAPI::DamageType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::DamageType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_DamageType_Sg__ContainsKey(arg1,(BWAPI::DamageType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_DamageTypeSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
+  std::set< BWAPI::DamageType >::key_type *arg2 = 0 ;
+  
+  arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
+  arg2 = (std::set< BWAPI::DamageType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::DamageType >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_DamageType_Sg__Add(arg1,(BWAPI::DamageType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DamageTypeSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
+  std::set< BWAPI::DamageType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
+  arg2 = (std::set< BWAPI::DamageType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::DamageType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_DamageType_Sg__Remove(arg1,(BWAPI::DamageType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_DamageTypeSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
+  std::set< BWAPI::DamageType >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
+  result = (std::set< BWAPI::DamageType >::iterator *)std_set_Sl_BWAPI_DamageType_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_DamageTypeSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
+  std::set< BWAPI::DamageType >::iterator *arg2 = (std::set< BWAPI::DamageType >::iterator *) 0 ;
+  std::set< BWAPI::DamageType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
+  arg2 = (std::set< BWAPI::DamageType >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::DamageType >::key_type *) &std_set_Sl_BWAPI_DamageType_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_DamageTypeSet(void * jarg1) {
-  SetWrapper< BWAPI::DamageType > *arg1 = (SetWrapper< BWAPI::DamageType > *) 0 ;
+  std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
   
-  arg1 = (SetWrapper< BWAPI::DamageType > *)jarg1; 
+  arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_DamageTypeSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::DamageType > *arg1 = (SetWrapper< BWAPI::DamageType > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::DamageType > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DamageTypeSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::DamageType > *arg1 = (SetWrapper< BWAPI::DamageType > *) 0 ;
-  BWAPI::DamageType arg2 ;
-  BWAPI::DamageType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::DamageType > *)jarg1; 
-  argp2 = (BWAPI::DamageType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::DamageType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DamageTypeSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::DamageType > *arg1 = (SetWrapper< BWAPI::DamageType > *) 0 ;
-  BWAPI::DamageType arg2 ;
-  BWAPI::DamageType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::DamageType > *)jarg1; 
-  argp2 = (BWAPI::DamageType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::DamageType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DamageTypeSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::DamageType > *arg1 = (SetWrapper< BWAPI::DamageType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::DamageType > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DamageTypeSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::DamageType > *arg1 = (SetWrapper< BWAPI::DamageType > *) 0 ;
-  BWAPI::DamageType arg2 ;
-  BWAPI::DamageType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::DamageType > *)jarg1; 
-  argp2 = (BWAPI::DamageType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::DamageType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DamageTypeSetIterator(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_ErrorSet__SWIG_0() {
   void * jresult ;
-  std::set< BWAPI::DamageType > *arg1 = (std::set< BWAPI::DamageType > *) 0 ;
-  SetIterator< BWAPI::DamageType > *result = 0 ;
+  std::set< BWAPI::Error > *result = 0 ;
   
-  arg1 = (std::set< BWAPI::DamageType > *)jarg1; 
-  result = (SetIterator< BWAPI::DamageType > *)new SetIterator< BWAPI::DamageType >(arg1);
+  result = (std::set< BWAPI::Error > *)new std::set< BWAPI::Error >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DamageTypeSetIterator_hasNext(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_ErrorSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Error > *arg1 = 0 ;
+  std::set< BWAPI::Error > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Error > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Error > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::Error > *)new std::set< BWAPI::Error >((std::set< BWAPI::Error > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_ErrorSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
+  std::set< BWAPI::Error >::size_type result;
+  
+  arg1 = (std::set< BWAPI::Error > *)jarg1; 
+  result = ((std::set< BWAPI::Error > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ErrorSet_empty(void * jarg1) {
   unsigned int jresult ;
-  SetIterator< BWAPI::DamageType > *arg1 = (SetIterator< BWAPI::DamageType > *) 0 ;
+  std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
   bool result;
   
-  arg1 = (SetIterator< BWAPI::DamageType > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
+  arg1 = (std::set< BWAPI::Error > *)jarg1; 
+  result = (bool)((std::set< BWAPI::Error > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DamageTypeSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::DamageType > *arg1 = (SetIterator< BWAPI::DamageType > *) 0 ;
-  BWAPI::DamageType result;
+SWIGEXPORT void SWIGSTDCALL CSharp_ErrorSet_Clear(void * jarg1) {
+  std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
   
-  arg1 = (SetIterator< BWAPI::DamageType > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::DamageType((const BWAPI::DamageType &)result); 
+  arg1 = (std::set< BWAPI::Error > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ErrorSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
+  std::set< BWAPI::Error >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Error >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Error > *)jarg1; 
+  arg2 = (std::set< BWAPI::Error >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Error >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::Error >::key_type *) &std_set_Sl_BWAPI_Error_Sg__getitem(arg1,(BWAPI::Error const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_DamageTypeSetIterator(void * jarg1) {
-  SetIterator< BWAPI::DamageType > *arg1 = (SetIterator< BWAPI::DamageType > *) 0 ;
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ErrorSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
+  std::set< BWAPI::Error >::key_type *arg2 = 0 ;
+  bool result;
   
-  arg1 = (SetIterator< BWAPI::DamageType > *)jarg1; 
-  delete arg1;
+  arg1 = (std::set< BWAPI::Error > *)jarg1; 
+  arg2 = (std::set< BWAPI::Error >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Error >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_Error_Sg__ContainsKey(arg1,(BWAPI::Error const &)*arg2);
+  jresult = result; 
+  return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ErrorSet(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT void SWIGSTDCALL CSharp_ErrorSet_Add(void * jarg1, void * jarg2) {
   std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
-  SetWrapper< BWAPI::Error > *result = 0 ;
+  std::set< BWAPI::Error >::key_type *arg2 = 0 ;
   
   arg1 = (std::set< BWAPI::Error > *)jarg1; 
-  result = (SetWrapper< BWAPI::Error > *)new SetWrapper< BWAPI::Error >(arg1);
+  arg2 = (std::set< BWAPI::Error >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Error >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_Error_Sg__Add(arg1,(BWAPI::Error const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ErrorSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
+  std::set< BWAPI::Error >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::Error > *)jarg1; 
+  arg2 = (std::set< BWAPI::Error >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Error >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_Error_Sg__Remove(arg1,(BWAPI::Error const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ErrorSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
+  std::set< BWAPI::Error >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Error > *)jarg1; 
+  result = (std::set< BWAPI::Error >::iterator *)std_set_Sl_BWAPI_Error_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ErrorSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
+  std::set< BWAPI::Error >::iterator *arg2 = (std::set< BWAPI::Error >::iterator *) 0 ;
+  std::set< BWAPI::Error >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Error > *)jarg1; 
+  arg2 = (std::set< BWAPI::Error >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::Error >::key_type *) &std_set_Sl_BWAPI_Error_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_ErrorSet(void * jarg1) {
-  SetWrapper< BWAPI::Error > *arg1 = (SetWrapper< BWAPI::Error > *) 0 ;
+  std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
   
-  arg1 = (SetWrapper< BWAPI::Error > *)jarg1; 
+  arg1 = (std::set< BWAPI::Error > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_ErrorSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::Error > *arg1 = (SetWrapper< BWAPI::Error > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::Error > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ErrorSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Error > *arg1 = (SetWrapper< BWAPI::Error > *) 0 ;
-  BWAPI::Error arg2 ;
-  BWAPI::Error *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Error > *)jarg1; 
-  argp2 = (BWAPI::Error *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Error", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ErrorSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Error > *arg1 = (SetWrapper< BWAPI::Error > *) 0 ;
-  BWAPI::Error arg2 ;
-  BWAPI::Error *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Error > *)jarg1; 
-  argp2 = (BWAPI::Error *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Error", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ErrorSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::Error > *arg1 = (SetWrapper< BWAPI::Error > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Error > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ErrorSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Error > *arg1 = (SetWrapper< BWAPI::Error > *) 0 ;
-  BWAPI::Error arg2 ;
-  BWAPI::Error *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Error > *)jarg1; 
-  argp2 = (BWAPI::Error *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Error", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ErrorSetIterator(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_ExplosionTypeSet__SWIG_0() {
   void * jresult ;
-  std::set< BWAPI::Error > *arg1 = (std::set< BWAPI::Error > *) 0 ;
-  SetIterator< BWAPI::Error > *result = 0 ;
+  std::set< BWAPI::ExplosionType > *result = 0 ;
   
-  arg1 = (std::set< BWAPI::Error > *)jarg1; 
-  result = (SetIterator< BWAPI::Error > *)new SetIterator< BWAPI::Error >(arg1);
+  result = (std::set< BWAPI::ExplosionType > *)new std::set< BWAPI::ExplosionType >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ErrorSetIterator_hasNext(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_ExplosionTypeSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::ExplosionType > *arg1 = 0 ;
+  std::set< BWAPI::ExplosionType > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::ExplosionType > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::ExplosionType > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::ExplosionType > *)new std::set< BWAPI::ExplosionType >((std::set< BWAPI::ExplosionType > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_ExplosionTypeSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWAPI::ExplosionType > *arg1 = (std::set< BWAPI::ExplosionType > *) 0 ;
+  std::set< BWAPI::ExplosionType >::size_type result;
+  
+  arg1 = (std::set< BWAPI::ExplosionType > *)jarg1; 
+  result = ((std::set< BWAPI::ExplosionType > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ExplosionTypeSet_empty(void * jarg1) {
   unsigned int jresult ;
-  SetIterator< BWAPI::Error > *arg1 = (SetIterator< BWAPI::Error > *) 0 ;
+  std::set< BWAPI::ExplosionType > *arg1 = (std::set< BWAPI::ExplosionType > *) 0 ;
   bool result;
   
-  arg1 = (SetIterator< BWAPI::Error > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
+  arg1 = (std::set< BWAPI::ExplosionType > *)jarg1; 
+  result = (bool)((std::set< BWAPI::ExplosionType > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_ErrorSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::Error > *arg1 = (SetIterator< BWAPI::Error > *) 0 ;
-  BWAPI::Error result;
+SWIGEXPORT void SWIGSTDCALL CSharp_ExplosionTypeSet_Clear(void * jarg1) {
+  std::set< BWAPI::ExplosionType > *arg1 = (std::set< BWAPI::ExplosionType > *) 0 ;
   
-  arg1 = (SetIterator< BWAPI::Error > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::Error((const BWAPI::Error &)result); 
+  arg1 = (std::set< BWAPI::ExplosionType > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ExplosionTypeSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::ExplosionType > *arg1 = (std::set< BWAPI::ExplosionType > *) 0 ;
+  std::set< BWAPI::ExplosionType >::key_type *arg2 = 0 ;
+  std::set< BWAPI::ExplosionType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::ExplosionType > *)jarg1; 
+  arg2 = (std::set< BWAPI::ExplosionType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::ExplosionType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::ExplosionType >::key_type *) &std_set_Sl_BWAPI_ExplosionType_Sg__getitem(arg1,(BWAPI::ExplosionType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ErrorSetIterator(void * jarg1) {
-  SetIterator< BWAPI::Error > *arg1 = (SetIterator< BWAPI::Error > *) 0 ;
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ExplosionTypeSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::ExplosionType > *arg1 = (std::set< BWAPI::ExplosionType > *) 0 ;
+  std::set< BWAPI::ExplosionType >::key_type *arg2 = 0 ;
+  bool result;
   
-  arg1 = (SetIterator< BWAPI::Error > *)jarg1; 
-  delete arg1;
+  arg1 = (std::set< BWAPI::ExplosionType > *)jarg1; 
+  arg2 = (std::set< BWAPI::ExplosionType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::ExplosionType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_ExplosionType_Sg__ContainsKey(arg1,(BWAPI::ExplosionType const &)*arg2);
+  jresult = result; 
+  return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ExplosionTypeSet(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT void SWIGSTDCALL CSharp_ExplosionTypeSet_Add(void * jarg1, void * jarg2) {
   std::set< BWAPI::ExplosionType > *arg1 = (std::set< BWAPI::ExplosionType > *) 0 ;
-  SetWrapper< BWAPI::ExplosionType > *result = 0 ;
+  std::set< BWAPI::ExplosionType >::key_type *arg2 = 0 ;
   
   arg1 = (std::set< BWAPI::ExplosionType > *)jarg1; 
-  result = (SetWrapper< BWAPI::ExplosionType > *)new SetWrapper< BWAPI::ExplosionType >(arg1);
+  arg2 = (std::set< BWAPI::ExplosionType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::ExplosionType >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_ExplosionType_Sg__Add(arg1,(BWAPI::ExplosionType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ExplosionTypeSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::ExplosionType > *arg1 = (std::set< BWAPI::ExplosionType > *) 0 ;
+  std::set< BWAPI::ExplosionType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::ExplosionType > *)jarg1; 
+  arg2 = (std::set< BWAPI::ExplosionType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::ExplosionType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_ExplosionType_Sg__Remove(arg1,(BWAPI::ExplosionType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ExplosionTypeSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::ExplosionType > *arg1 = (std::set< BWAPI::ExplosionType > *) 0 ;
+  std::set< BWAPI::ExplosionType >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::ExplosionType > *)jarg1; 
+  result = (std::set< BWAPI::ExplosionType >::iterator *)std_set_Sl_BWAPI_ExplosionType_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ExplosionTypeSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::ExplosionType > *arg1 = (std::set< BWAPI::ExplosionType > *) 0 ;
+  std::set< BWAPI::ExplosionType >::iterator *arg2 = (std::set< BWAPI::ExplosionType >::iterator *) 0 ;
+  std::set< BWAPI::ExplosionType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::ExplosionType > *)jarg1; 
+  arg2 = (std::set< BWAPI::ExplosionType >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::ExplosionType >::key_type *) &std_set_Sl_BWAPI_ExplosionType_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_ExplosionTypeSet(void * jarg1) {
-  SetWrapper< BWAPI::ExplosionType > *arg1 = (SetWrapper< BWAPI::ExplosionType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::ExplosionType > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_ExplosionTypeSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::ExplosionType > *arg1 = (SetWrapper< BWAPI::ExplosionType > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::ExplosionType > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ExplosionTypeSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::ExplosionType > *arg1 = (SetWrapper< BWAPI::ExplosionType > *) 0 ;
-  BWAPI::ExplosionType arg2 ;
-  BWAPI::ExplosionType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::ExplosionType > *)jarg1; 
-  argp2 = (BWAPI::ExplosionType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::ExplosionType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ExplosionTypeSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::ExplosionType > *arg1 = (SetWrapper< BWAPI::ExplosionType > *) 0 ;
-  BWAPI::ExplosionType arg2 ;
-  BWAPI::ExplosionType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::ExplosionType > *)jarg1; 
-  argp2 = (BWAPI::ExplosionType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::ExplosionType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ExplosionTypeSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::ExplosionType > *arg1 = (SetWrapper< BWAPI::ExplosionType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::ExplosionType > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ExplosionTypeSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::ExplosionType > *arg1 = (SetWrapper< BWAPI::ExplosionType > *) 0 ;
-  BWAPI::ExplosionType arg2 ;
-  BWAPI::ExplosionType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::ExplosionType > *)jarg1; 
-  argp2 = (BWAPI::ExplosionType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::ExplosionType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ExplosionTypeSetIterator(void * jarg1) {
-  void * jresult ;
   std::set< BWAPI::ExplosionType > *arg1 = (std::set< BWAPI::ExplosionType > *) 0 ;
-  SetIterator< BWAPI::ExplosionType > *result = 0 ;
   
   arg1 = (std::set< BWAPI::ExplosionType > *)jarg1; 
-  result = (SetIterator< BWAPI::ExplosionType > *)new SetIterator< BWAPI::ExplosionType >(arg1);
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_ForcePtrSet__SWIG_0() {
+  void * jresult ;
+  std::set< BWAPI::Force * > *result = 0 ;
+  
+  result = (std::set< BWAPI::Force * > *)new std::set< BWAPI::Force * >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ExplosionTypeSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWAPI::ExplosionType > *arg1 = (SetIterator< BWAPI::ExplosionType > *) 0 ;
-  bool result;
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_ForcePtrSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Force * > *arg1 = 0 ;
+  std::set< BWAPI::Force * > *result = 0 ;
   
-  arg1 = (SetIterator< BWAPI::ExplosionType > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
+  arg1 = (std::set< BWAPI::Force * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Force * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::Force * > *)new std::set< BWAPI::Force * >((std::set< BWAPI::Force * > const &)*arg1);
+  jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_ExplosionTypeSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::ExplosionType > *arg1 = (SetIterator< BWAPI::ExplosionType > *) 0 ;
-  BWAPI::ExplosionType result;
-  
-  arg1 = (SetIterator< BWAPI::ExplosionType > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::ExplosionType((const BWAPI::ExplosionType &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ExplosionTypeSetIterator(void * jarg1) {
-  SetIterator< BWAPI::ExplosionType > *arg1 = (SetIterator< BWAPI::ExplosionType > *) 0 ;
-  
-  arg1 = (SetIterator< BWAPI::ExplosionType > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ForceSet(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_ForcePtrSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::Force * > *arg1 = (std::set< BWAPI::Force * > *) 0 ;
-  SetWrapper< BWAPI::Force * > *result = 0 ;
+  std::set< BWAPI::Force * >::size_type result;
   
   arg1 = (std::set< BWAPI::Force * > *)jarg1; 
-  result = (SetWrapper< BWAPI::Force * > *)new SetWrapper< BWAPI::Force * >(arg1);
-  jresult = (void *)result; 
+  result = ((std::set< BWAPI::Force * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ForceSet(void * jarg1) {
-  SetWrapper< BWAPI::Force * > *arg1 = (SetWrapper< BWAPI::Force * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Force * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_ForceSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::Force * > *arg1 = (SetWrapper< BWAPI::Force * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::Force * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ForceSet_contains(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ForcePtrSet_empty(void * jarg1) {
   unsigned int jresult ;
-  SetWrapper< BWAPI::Force * > *arg1 = (SetWrapper< BWAPI::Force * > *) 0 ;
-  BWAPI::Force *arg2 = (BWAPI::Force *) 0 ;
+  std::set< BWAPI::Force * > *arg1 = (std::set< BWAPI::Force * > *) 0 ;
   bool result;
   
-  arg1 = (SetWrapper< BWAPI::Force * > *)jarg1; 
-  arg2 = (BWAPI::Force *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
+  arg1 = (std::set< BWAPI::Force * > *)jarg1; 
+  result = (bool)((std::set< BWAPI::Force * > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ForceSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Force * > *arg1 = (SetWrapper< BWAPI::Force * > *) 0 ;
-  BWAPI::Force *arg2 = (BWAPI::Force *) 0 ;
-  bool result;
+SWIGEXPORT void SWIGSTDCALL CSharp_ForcePtrSet_Clear(void * jarg1) {
+  std::set< BWAPI::Force * > *arg1 = (std::set< BWAPI::Force * > *) 0 ;
   
-  arg1 = (SetWrapper< BWAPI::Force * > *)jarg1; 
-  arg2 = (BWAPI::Force *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ForceSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::Force * > *arg1 = (SetWrapper< BWAPI::Force * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Force * > *)jarg1; 
+  arg1 = (std::set< BWAPI::Force * > *)jarg1; 
   (arg1)->clear();
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ForceSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Force * > *arg1 = (SetWrapper< BWAPI::Force * > *) 0 ;
-  BWAPI::Force *arg2 = (BWAPI::Force *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Force * > *)jarg1; 
-  arg2 = (BWAPI::Force *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ForceSetIterator(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_ForcePtrSet_getitem(void * jarg1, void * jarg2) {
   void * jresult ;
   std::set< BWAPI::Force * > *arg1 = (std::set< BWAPI::Force * > *) 0 ;
-  SetIterator< BWAPI::Force * > *result = 0 ;
+  std::set< BWAPI::Force * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Force * >::key_type temp2 = 0 ;
+  std::set< BWAPI::Force * >::key_type *result = 0 ;
   
   arg1 = (std::set< BWAPI::Force * > *)jarg1; 
-  result = (SetIterator< BWAPI::Force * > *)new SetIterator< BWAPI::Force * >(arg1);
-  jresult = (void *)result; 
+  temp2 = (std::set< BWAPI::Force * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::set< BWAPI::Force * >::key_type *) &std_set_Sl_BWAPI_Force_Sm__Sg__getitem(arg1,(BWAPI::Force *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ForceSetIterator_hasNext(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ForcePtrSet_ContainsKey(void * jarg1, void * jarg2) {
   unsigned int jresult ;
-  SetIterator< BWAPI::Force * > *arg1 = (SetIterator< BWAPI::Force * > *) 0 ;
+  std::set< BWAPI::Force * > *arg1 = (std::set< BWAPI::Force * > *) 0 ;
+  std::set< BWAPI::Force * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Force * >::key_type temp2 = 0 ;
   bool result;
   
-  arg1 = (SetIterator< BWAPI::Force * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
+  arg1 = (std::set< BWAPI::Force * > *)jarg1; 
+  temp2 = (std::set< BWAPI::Force * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_Force_Sm__Sg__ContainsKey(arg1,(BWAPI::Force *const &)*arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_ForceSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::Force * > *arg1 = (SetIterator< BWAPI::Force * > *) 0 ;
-  BWAPI::Force *result = 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_ForcePtrSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::Force * > *arg1 = (std::set< BWAPI::Force * > *) 0 ;
+  std::set< BWAPI::Force * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Force * >::key_type temp2 = 0 ;
   
-  arg1 = (SetIterator< BWAPI::Force * > *)jarg1; 
-  result = (BWAPI::Force *)(arg1)->next();
+  arg1 = (std::set< BWAPI::Force * > *)jarg1; 
+  temp2 = (std::set< BWAPI::Force * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    std_set_Sl_BWAPI_Force_Sm__Sg__Add(arg1,(BWAPI::Force *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ForcePtrSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::Force * > *arg1 = (std::set< BWAPI::Force * > *) 0 ;
+  std::set< BWAPI::Force * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Force * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::Force * > *)jarg1; 
+  temp2 = (std::set< BWAPI::Force * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_Force_Sm__Sg__Remove(arg1,(BWAPI::Force *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ForcePtrSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Force * > *arg1 = (std::set< BWAPI::Force * > *) 0 ;
+  std::set< BWAPI::Force * >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Force * > *)jarg1; 
+  result = (std::set< BWAPI::Force * >::iterator *)std_set_Sl_BWAPI_Force_Sm__Sg__create_iterator_begin(arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ForceSetIterator(void * jarg1) {
-  SetIterator< BWAPI::Force * > *arg1 = (SetIterator< BWAPI::Force * > *) 0 ;
+SWIGEXPORT void * SWIGSTDCALL CSharp_ForcePtrSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::Force * > *arg1 = (std::set< BWAPI::Force * > *) 0 ;
+  std::set< BWAPI::Force * >::iterator *arg2 = (std::set< BWAPI::Force * >::iterator *) 0 ;
+  std::set< BWAPI::Force * >::key_type *result = 0 ;
   
-  arg1 = (SetIterator< BWAPI::Force * > *)jarg1; 
+  arg1 = (std::set< BWAPI::Force * > *)jarg1; 
+  arg2 = (std::set< BWAPI::Force * >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::Force * >::key_type *) &std_set_Sl_BWAPI_Force_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_ForcePtrSet(void * jarg1) {
+  std::set< BWAPI::Force * > *arg1 = (std::set< BWAPI::Force * > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::Force * > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_OrderSet(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_OrderSet__SWIG_0() {
   void * jresult ;
+  std::set< BWAPI::Order > *result = 0 ;
+  
+  result = (std::set< BWAPI::Order > *)new std::set< BWAPI::Order >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_OrderSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Order > *arg1 = 0 ;
+  std::set< BWAPI::Order > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Order > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Order > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::Order > *)new std::set< BWAPI::Order >((std::set< BWAPI::Order > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_OrderSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::Order > *arg1 = (std::set< BWAPI::Order > *) 0 ;
-  SetWrapper< BWAPI::Order > *result = 0 ;
+  std::set< BWAPI::Order >::size_type result;
   
   arg1 = (std::set< BWAPI::Order > *)jarg1; 
-  result = (SetWrapper< BWAPI::Order > *)new SetWrapper< BWAPI::Order >(arg1);
+  result = ((std::set< BWAPI::Order > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OrderSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWAPI::Order > *arg1 = (std::set< BWAPI::Order > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::Order > *)jarg1; 
+  result = (bool)((std::set< BWAPI::Order > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OrderSet_Clear(void * jarg1) {
+  std::set< BWAPI::Order > *arg1 = (std::set< BWAPI::Order > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::Order > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OrderSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::Order > *arg1 = (std::set< BWAPI::Order > *) 0 ;
+  std::set< BWAPI::Order >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Order >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Order > *)jarg1; 
+  arg2 = (std::set< BWAPI::Order >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Order >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::Order >::key_type *) &std_set_Sl_BWAPI_Order_Sg__getitem(arg1,(BWAPI::Order const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OrderSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::Order > *arg1 = (std::set< BWAPI::Order > *) 0 ;
+  std::set< BWAPI::Order >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::Order > *)jarg1; 
+  arg2 = (std::set< BWAPI::Order >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Order >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_Order_Sg__ContainsKey(arg1,(BWAPI::Order const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OrderSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::Order > *arg1 = (std::set< BWAPI::Order > *) 0 ;
+  std::set< BWAPI::Order >::key_type *arg2 = 0 ;
+  
+  arg1 = (std::set< BWAPI::Order > *)jarg1; 
+  arg2 = (std::set< BWAPI::Order >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Order >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_Order_Sg__Add(arg1,(BWAPI::Order const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OrderSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::Order > *arg1 = (std::set< BWAPI::Order > *) 0 ;
+  std::set< BWAPI::Order >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::Order > *)jarg1; 
+  arg2 = (std::set< BWAPI::Order >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Order >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_Order_Sg__Remove(arg1,(BWAPI::Order const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OrderSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Order > *arg1 = (std::set< BWAPI::Order > *) 0 ;
+  std::set< BWAPI::Order >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Order > *)jarg1; 
+  result = (std::set< BWAPI::Order >::iterator *)std_set_Sl_BWAPI_Order_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OrderSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::Order > *arg1 = (std::set< BWAPI::Order > *) 0 ;
+  std::set< BWAPI::Order >::iterator *arg2 = (std::set< BWAPI::Order >::iterator *) 0 ;
+  std::set< BWAPI::Order >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Order > *)jarg1; 
+  arg2 = (std::set< BWAPI::Order >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::Order >::key_type *) &std_set_Sl_BWAPI_Order_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_OrderSet(void * jarg1) {
-  SetWrapper< BWAPI::Order > *arg1 = (SetWrapper< BWAPI::Order > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Order > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_OrderSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::Order > *arg1 = (SetWrapper< BWAPI::Order > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::Order > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OrderSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Order > *arg1 = (SetWrapper< BWAPI::Order > *) 0 ;
-  BWAPI::Order arg2 ;
-  BWAPI::Order *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Order > *)jarg1; 
-  argp2 = (BWAPI::Order *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Order", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OrderSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Order > *arg1 = (SetWrapper< BWAPI::Order > *) 0 ;
-  BWAPI::Order arg2 ;
-  BWAPI::Order *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Order > *)jarg1; 
-  argp2 = (BWAPI::Order *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Order", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_OrderSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::Order > *arg1 = (SetWrapper< BWAPI::Order > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Order > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OrderSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Order > *arg1 = (SetWrapper< BWAPI::Order > *) 0 ;
-  BWAPI::Order arg2 ;
-  BWAPI::Order *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Order > *)jarg1; 
-  argp2 = (BWAPI::Order *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Order", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_OrderSetIterator(void * jarg1) {
-  void * jresult ;
   std::set< BWAPI::Order > *arg1 = (std::set< BWAPI::Order > *) 0 ;
-  SetIterator< BWAPI::Order > *result = 0 ;
   
   arg1 = (std::set< BWAPI::Order > *)jarg1; 
-  result = (SetIterator< BWAPI::Order > *)new SetIterator< BWAPI::Order >(arg1);
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_PlayerPtrSet__SWIG_0() {
+  void * jresult ;
+  std::set< BWAPI::Player * > *result = 0 ;
+  
+  result = (std::set< BWAPI::Player * > *)new std::set< BWAPI::Player * >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OrderSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWAPI::Order > *arg1 = (SetIterator< BWAPI::Order > *) 0 ;
-  bool result;
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_PlayerPtrSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Player * > *arg1 = 0 ;
+  std::set< BWAPI::Player * > *result = 0 ;
   
-  arg1 = (SetIterator< BWAPI::Order > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
+  arg1 = (std::set< BWAPI::Player * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Player * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::Player * > *)new std::set< BWAPI::Player * >((std::set< BWAPI::Player * > const &)*arg1);
+  jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_OrderSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::Order > *arg1 = (SetIterator< BWAPI::Order > *) 0 ;
-  BWAPI::Order result;
-  
-  arg1 = (SetIterator< BWAPI::Order > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::Order((const BWAPI::Order &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_OrderSetIterator(void * jarg1) {
-  SetIterator< BWAPI::Order > *arg1 = (SetIterator< BWAPI::Order > *) 0 ;
-  
-  arg1 = (SetIterator< BWAPI::Order > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PlayerSet(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_PlayerPtrSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::Player * > *arg1 = (std::set< BWAPI::Player * > *) 0 ;
-  SetWrapper< BWAPI::Player * > *result = 0 ;
+  std::set< BWAPI::Player * >::size_type result;
   
   arg1 = (std::set< BWAPI::Player * > *)jarg1; 
-  result = (SetWrapper< BWAPI::Player * > *)new SetWrapper< BWAPI::Player * >(arg1);
-  jresult = (void *)result; 
+  result = ((std::set< BWAPI::Player * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PlayerSet(void * jarg1) {
-  SetWrapper< BWAPI::Player * > *arg1 = (SetWrapper< BWAPI::Player * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Player * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PlayerSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::Player * > *arg1 = (SetWrapper< BWAPI::Player * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::Player * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerSet_contains(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerPtrSet_empty(void * jarg1) {
   unsigned int jresult ;
-  SetWrapper< BWAPI::Player * > *arg1 = (SetWrapper< BWAPI::Player * > *) 0 ;
-  BWAPI::Player *arg2 = (BWAPI::Player *) 0 ;
+  std::set< BWAPI::Player * > *arg1 = (std::set< BWAPI::Player * > *) 0 ;
   bool result;
   
-  arg1 = (SetWrapper< BWAPI::Player * > *)jarg1; 
-  arg2 = (BWAPI::Player *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
+  arg1 = (std::set< BWAPI::Player * > *)jarg1; 
+  result = (bool)((std::set< BWAPI::Player * > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Player * > *arg1 = (SetWrapper< BWAPI::Player * > *) 0 ;
-  BWAPI::Player *arg2 = (BWAPI::Player *) 0 ;
-  bool result;
+SWIGEXPORT void SWIGSTDCALL CSharp_PlayerPtrSet_Clear(void * jarg1) {
+  std::set< BWAPI::Player * > *arg1 = (std::set< BWAPI::Player * > *) 0 ;
   
-  arg1 = (SetWrapper< BWAPI::Player * > *)jarg1; 
-  arg2 = (BWAPI::Player *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PlayerSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::Player * > *arg1 = (SetWrapper< BWAPI::Player * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Player * > *)jarg1; 
+  arg1 = (std::set< BWAPI::Player * > *)jarg1; 
   (arg1)->clear();
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Player * > *arg1 = (SetWrapper< BWAPI::Player * > *) 0 ;
-  BWAPI::Player *arg2 = (BWAPI::Player *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Player * > *)jarg1; 
-  arg2 = (BWAPI::Player *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PlayerSetIterator(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerPtrSet_getitem(void * jarg1, void * jarg2) {
   void * jresult ;
   std::set< BWAPI::Player * > *arg1 = (std::set< BWAPI::Player * > *) 0 ;
-  SetIterator< BWAPI::Player * > *result = 0 ;
+  std::set< BWAPI::Player * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Player * >::key_type temp2 = 0 ;
+  std::set< BWAPI::Player * >::key_type *result = 0 ;
   
   arg1 = (std::set< BWAPI::Player * > *)jarg1; 
-  result = (SetIterator< BWAPI::Player * > *)new SetIterator< BWAPI::Player * >(arg1);
-  jresult = (void *)result; 
+  temp2 = (std::set< BWAPI::Player * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::set< BWAPI::Player * >::key_type *) &std_set_Sl_BWAPI_Player_Sm__Sg__getitem(arg1,(BWAPI::Player *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerSetIterator_hasNext(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerPtrSet_ContainsKey(void * jarg1, void * jarg2) {
   unsigned int jresult ;
-  SetIterator< BWAPI::Player * > *arg1 = (SetIterator< BWAPI::Player * > *) 0 ;
+  std::set< BWAPI::Player * > *arg1 = (std::set< BWAPI::Player * > *) 0 ;
+  std::set< BWAPI::Player * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Player * >::key_type temp2 = 0 ;
   bool result;
   
-  arg1 = (SetIterator< BWAPI::Player * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
+  arg1 = (std::set< BWAPI::Player * > *)jarg1; 
+  temp2 = (std::set< BWAPI::Player * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_Player_Sm__Sg__ContainsKey(arg1,(BWAPI::Player *const &)*arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::Player * > *arg1 = (SetIterator< BWAPI::Player * > *) 0 ;
-  BWAPI::Player *result = 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_PlayerPtrSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::Player * > *arg1 = (std::set< BWAPI::Player * > *) 0 ;
+  std::set< BWAPI::Player * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Player * >::key_type temp2 = 0 ;
   
-  arg1 = (SetIterator< BWAPI::Player * > *)jarg1; 
-  result = (BWAPI::Player *)(arg1)->next();
+  arg1 = (std::set< BWAPI::Player * > *)jarg1; 
+  temp2 = (std::set< BWAPI::Player * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    std_set_Sl_BWAPI_Player_Sm__Sg__Add(arg1,(BWAPI::Player *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerPtrSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::Player * > *arg1 = (std::set< BWAPI::Player * > *) 0 ;
+  std::set< BWAPI::Player * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Player * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::Player * > *)jarg1; 
+  temp2 = (std::set< BWAPI::Player * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_Player_Sm__Sg__Remove(arg1,(BWAPI::Player *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerPtrSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Player * > *arg1 = (std::set< BWAPI::Player * > *) 0 ;
+  std::set< BWAPI::Player * >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Player * > *)jarg1; 
+  result = (std::set< BWAPI::Player * >::iterator *)std_set_Sl_BWAPI_Player_Sm__Sg__create_iterator_begin(arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PlayerSetIterator(void * jarg1) {
-  SetIterator< BWAPI::Player * > *arg1 = (SetIterator< BWAPI::Player * > *) 0 ;
+SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerPtrSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::Player * > *arg1 = (std::set< BWAPI::Player * > *) 0 ;
+  std::set< BWAPI::Player * >::iterator *arg2 = (std::set< BWAPI::Player * >::iterator *) 0 ;
+  std::set< BWAPI::Player * >::key_type *result = 0 ;
   
-  arg1 = (SetIterator< BWAPI::Player * > *)jarg1; 
+  arg1 = (std::set< BWAPI::Player * > *)jarg1; 
+  arg2 = (std::set< BWAPI::Player * >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::Player * >::key_type *) &std_set_Sl_BWAPI_Player_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_PlayerPtrSet(void * jarg1) {
+  std::set< BWAPI::Player * > *arg1 = (std::set< BWAPI::Player * > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::Player * > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PlayerTypeSet(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_PlayerTypeSet__SWIG_0() {
   void * jresult ;
+  std::set< BWAPI::PlayerType > *result = 0 ;
+  
+  result = (std::set< BWAPI::PlayerType > *)new std::set< BWAPI::PlayerType >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_PlayerTypeSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::PlayerType > *arg1 = 0 ;
+  std::set< BWAPI::PlayerType > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::PlayerType > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::PlayerType > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::PlayerType > *)new std::set< BWAPI::PlayerType >((std::set< BWAPI::PlayerType > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_PlayerTypeSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
-  SetWrapper< BWAPI::PlayerType > *result = 0 ;
+  std::set< BWAPI::PlayerType >::size_type result;
   
   arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
-  result = (SetWrapper< BWAPI::PlayerType > *)new SetWrapper< BWAPI::PlayerType >(arg1);
+  result = ((std::set< BWAPI::PlayerType > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerTypeSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
+  result = (bool)((std::set< BWAPI::PlayerType > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_PlayerTypeSet_Clear(void * jarg1) {
+  std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerTypeSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
+  std::set< BWAPI::PlayerType >::key_type *arg2 = 0 ;
+  std::set< BWAPI::PlayerType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
+  arg2 = (std::set< BWAPI::PlayerType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::PlayerType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::PlayerType >::key_type *) &std_set_Sl_BWAPI_PlayerType_Sg__getitem(arg1,(BWAPI::PlayerType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerTypeSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
+  std::set< BWAPI::PlayerType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
+  arg2 = (std::set< BWAPI::PlayerType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::PlayerType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_PlayerType_Sg__ContainsKey(arg1,(BWAPI::PlayerType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_PlayerTypeSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
+  std::set< BWAPI::PlayerType >::key_type *arg2 = 0 ;
+  
+  arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
+  arg2 = (std::set< BWAPI::PlayerType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::PlayerType >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_PlayerType_Sg__Add(arg1,(BWAPI::PlayerType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerTypeSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
+  std::set< BWAPI::PlayerType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
+  arg2 = (std::set< BWAPI::PlayerType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::PlayerType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_PlayerType_Sg__Remove(arg1,(BWAPI::PlayerType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerTypeSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
+  std::set< BWAPI::PlayerType >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
+  result = (std::set< BWAPI::PlayerType >::iterator *)std_set_Sl_BWAPI_PlayerType_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerTypeSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
+  std::set< BWAPI::PlayerType >::iterator *arg2 = (std::set< BWAPI::PlayerType >::iterator *) 0 ;
+  std::set< BWAPI::PlayerType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
+  arg2 = (std::set< BWAPI::PlayerType >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::PlayerType >::key_type *) &std_set_Sl_BWAPI_PlayerType_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_PlayerTypeSet(void * jarg1) {
-  SetWrapper< BWAPI::PlayerType > *arg1 = (SetWrapper< BWAPI::PlayerType > *) 0 ;
+  std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
   
-  arg1 = (SetWrapper< BWAPI::PlayerType > *)jarg1; 
+  arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PlayerTypeSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::PlayerType > *arg1 = (SetWrapper< BWAPI::PlayerType > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::PlayerType > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerTypeSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::PlayerType > *arg1 = (SetWrapper< BWAPI::PlayerType > *) 0 ;
-  BWAPI::PlayerType arg2 ;
-  BWAPI::PlayerType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::PlayerType > *)jarg1; 
-  argp2 = (BWAPI::PlayerType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::PlayerType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerTypeSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::PlayerType > *arg1 = (SetWrapper< BWAPI::PlayerType > *) 0 ;
-  BWAPI::PlayerType arg2 ;
-  BWAPI::PlayerType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::PlayerType > *)jarg1; 
-  argp2 = (BWAPI::PlayerType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::PlayerType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PlayerTypeSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::PlayerType > *arg1 = (SetWrapper< BWAPI::PlayerType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::PlayerType > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerTypeSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::PlayerType > *arg1 = (SetWrapper< BWAPI::PlayerType > *) 0 ;
-  BWAPI::PlayerType arg2 ;
-  BWAPI::PlayerType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::PlayerType > *)jarg1; 
-  argp2 = (BWAPI::PlayerType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::PlayerType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PlayerTypeSetIterator(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RaceSet__SWIG_0() {
   void * jresult ;
-  std::set< BWAPI::PlayerType > *arg1 = (std::set< BWAPI::PlayerType > *) 0 ;
-  SetIterator< BWAPI::PlayerType > *result = 0 ;
+  std::set< BWAPI::Race > *result = 0 ;
   
-  arg1 = (std::set< BWAPI::PlayerType > *)jarg1; 
-  result = (SetIterator< BWAPI::PlayerType > *)new SetIterator< BWAPI::PlayerType >(arg1);
+  result = (std::set< BWAPI::Race > *)new std::set< BWAPI::Race >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerTypeSetIterator_hasNext(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RaceSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Race > *arg1 = 0 ;
+  std::set< BWAPI::Race > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Race > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Race > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::Race > *)new std::set< BWAPI::Race >((std::set< BWAPI::Race > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RaceSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWAPI::Race > *arg1 = (std::set< BWAPI::Race > *) 0 ;
+  std::set< BWAPI::Race >::size_type result;
+  
+  arg1 = (std::set< BWAPI::Race > *)jarg1; 
+  result = ((std::set< BWAPI::Race > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RaceSet_empty(void * jarg1) {
   unsigned int jresult ;
-  SetIterator< BWAPI::PlayerType > *arg1 = (SetIterator< BWAPI::PlayerType > *) 0 ;
+  std::set< BWAPI::Race > *arg1 = (std::set< BWAPI::Race > *) 0 ;
   bool result;
   
-  arg1 = (SetIterator< BWAPI::PlayerType > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
+  arg1 = (std::set< BWAPI::Race > *)jarg1; 
+  result = (bool)((std::set< BWAPI::Race > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerTypeSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::PlayerType > *arg1 = (SetIterator< BWAPI::PlayerType > *) 0 ;
-  BWAPI::PlayerType result;
+SWIGEXPORT void SWIGSTDCALL CSharp_RaceSet_Clear(void * jarg1) {
+  std::set< BWAPI::Race > *arg1 = (std::set< BWAPI::Race > *) 0 ;
   
-  arg1 = (SetIterator< BWAPI::PlayerType > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::PlayerType((const BWAPI::PlayerType &)result); 
+  arg1 = (std::set< BWAPI::Race > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RaceSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::Race > *arg1 = (std::set< BWAPI::Race > *) 0 ;
+  std::set< BWAPI::Race >::key_type *arg2 = 0 ;
+  std::set< BWAPI::Race >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Race > *)jarg1; 
+  arg2 = (std::set< BWAPI::Race >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Race >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::Race >::key_type *) &std_set_Sl_BWAPI_Race_Sg__getitem(arg1,(BWAPI::Race const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PlayerTypeSetIterator(void * jarg1) {
-  SetIterator< BWAPI::PlayerType > *arg1 = (SetIterator< BWAPI::PlayerType > *) 0 ;
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RaceSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::Race > *arg1 = (std::set< BWAPI::Race > *) 0 ;
+  std::set< BWAPI::Race >::key_type *arg2 = 0 ;
+  bool result;
   
-  arg1 = (SetIterator< BWAPI::PlayerType > *)jarg1; 
-  delete arg1;
+  arg1 = (std::set< BWAPI::Race > *)jarg1; 
+  arg2 = (std::set< BWAPI::Race >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Race >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_Race_Sg__ContainsKey(arg1,(BWAPI::Race const &)*arg2);
+  jresult = result; 
+  return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RaceSet(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT void SWIGSTDCALL CSharp_RaceSet_Add(void * jarg1, void * jarg2) {
   std::set< BWAPI::Race > *arg1 = (std::set< BWAPI::Race > *) 0 ;
-  SetWrapper< BWAPI::Race > *result = 0 ;
+  std::set< BWAPI::Race >::key_type *arg2 = 0 ;
   
   arg1 = (std::set< BWAPI::Race > *)jarg1; 
-  result = (SetWrapper< BWAPI::Race > *)new SetWrapper< BWAPI::Race >(arg1);
+  arg2 = (std::set< BWAPI::Race >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Race >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_Race_Sg__Add(arg1,(BWAPI::Race const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RaceSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::Race > *arg1 = (std::set< BWAPI::Race > *) 0 ;
+  std::set< BWAPI::Race >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::Race > *)jarg1; 
+  arg2 = (std::set< BWAPI::Race >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Race >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_Race_Sg__Remove(arg1,(BWAPI::Race const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RaceSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::Race > *arg1 = (std::set< BWAPI::Race > *) 0 ;
+  std::set< BWAPI::Race >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Race > *)jarg1; 
+  result = (std::set< BWAPI::Race >::iterator *)std_set_Sl_BWAPI_Race_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RaceSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::Race > *arg1 = (std::set< BWAPI::Race > *) 0 ;
+  std::set< BWAPI::Race >::iterator *arg2 = (std::set< BWAPI::Race >::iterator *) 0 ;
+  std::set< BWAPI::Race >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::Race > *)jarg1; 
+  arg2 = (std::set< BWAPI::Race >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::Race >::key_type *) &std_set_Sl_BWAPI_Race_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_RaceSet(void * jarg1) {
-  SetWrapper< BWAPI::Race > *arg1 = (SetWrapper< BWAPI::Race > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Race > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_RaceSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::Race > *arg1 = (SetWrapper< BWAPI::Race > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::Race > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RaceSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Race > *arg1 = (SetWrapper< BWAPI::Race > *) 0 ;
-  BWAPI::Race arg2 ;
-  BWAPI::Race *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Race > *)jarg1; 
-  argp2 = (BWAPI::Race *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Race", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RaceSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Race > *arg1 = (SetWrapper< BWAPI::Race > *) 0 ;
-  BWAPI::Race arg2 ;
-  BWAPI::Race *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Race > *)jarg1; 
-  argp2 = (BWAPI::Race *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Race", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_RaceSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::Race > *arg1 = (SetWrapper< BWAPI::Race > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Race > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RaceSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Race > *arg1 = (SetWrapper< BWAPI::Race > *) 0 ;
-  BWAPI::Race arg2 ;
-  BWAPI::Race *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Race > *)jarg1; 
-  argp2 = (BWAPI::Race *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Race", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RaceSetIterator(void * jarg1) {
-  void * jresult ;
   std::set< BWAPI::Race > *arg1 = (std::set< BWAPI::Race > *) 0 ;
-  SetIterator< BWAPI::Race > *result = 0 ;
   
   arg1 = (std::set< BWAPI::Race > *)jarg1; 
-  result = (SetIterator< BWAPI::Race > *)new SetIterator< BWAPI::Race >(arg1);
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechTypePtrSet__SWIG_0() {
+  void * jresult ;
+  std::set< BWAPI::TechType const * > *result = 0 ;
+  
+  result = (std::set< BWAPI::TechType const * > *)new std::set< BWAPI::TechType const * >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RaceSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWAPI::Race > *arg1 = (SetIterator< BWAPI::Race > *) 0 ;
-  bool result;
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechTypePtrSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::TechType const * > *arg1 = 0 ;
+  std::set< BWAPI::TechType const * > *result = 0 ;
   
-  arg1 = (SetIterator< BWAPI::Race > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
+  arg1 = (std::set< BWAPI::TechType const * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TechType const * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::TechType const * > *)new std::set< BWAPI::TechType const * >((std::set< BWAPI::TechType const * > const &)*arg1);
+  jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RaceSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::Race > *arg1 = (SetIterator< BWAPI::Race > *) 0 ;
-  BWAPI::Race result;
-  
-  arg1 = (SetIterator< BWAPI::Race > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::Race((const BWAPI::Race &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RaceSetIterator(void * jarg1) {
-  SetIterator< BWAPI::Race > *arg1 = (SetIterator< BWAPI::Race > *) 0 ;
-  
-  arg1 = (SetIterator< BWAPI::Race > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechTypeConstantSet(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_TechTypePtrSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::TechType const * > *arg1 = (std::set< BWAPI::TechType const * > *) 0 ;
-  SetWrapper< BWAPI::TechType const * > *result = 0 ;
+  std::set< BWAPI::TechType const * >::size_type result;
   
   arg1 = (std::set< BWAPI::TechType const * > *)jarg1; 
-  result = (SetWrapper< BWAPI::TechType const * > *)new SetWrapper< BWAPI::TechType const * >(arg1);
-  jresult = (void *)result; 
+  result = ((std::set< BWAPI::TechType const * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TechTypeConstantSet(void * jarg1) {
-  SetWrapper< BWAPI::TechType const * > *arg1 = (SetWrapper< BWAPI::TechType const * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::TechType const * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_TechTypeConstantSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::TechType const * > *arg1 = (SetWrapper< BWAPI::TechType const * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::TechType const * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeConstantSet_contains(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypePtrSet_empty(void * jarg1) {
   unsigned int jresult ;
-  SetWrapper< BWAPI::TechType const * > *arg1 = (SetWrapper< BWAPI::TechType const * > *) 0 ;
-  BWAPI::TechType *arg2 = (BWAPI::TechType *) 0 ;
+  std::set< BWAPI::TechType const * > *arg1 = (std::set< BWAPI::TechType const * > *) 0 ;
   bool result;
   
-  arg1 = (SetWrapper< BWAPI::TechType const * > *)jarg1; 
-  arg2 = (BWAPI::TechType *)jarg2; 
-  result = (bool)(arg1)->contains((BWAPI::TechType const *)arg2);
+  arg1 = (std::set< BWAPI::TechType const * > *)jarg1; 
+  result = (bool)((std::set< BWAPI::TechType const * > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeConstantSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::TechType const * > *arg1 = (SetWrapper< BWAPI::TechType const * > *) 0 ;
-  BWAPI::TechType *arg2 = (BWAPI::TechType *) 0 ;
-  bool result;
+SWIGEXPORT void SWIGSTDCALL CSharp_TechTypePtrSet_Clear(void * jarg1) {
+  std::set< BWAPI::TechType const * > *arg1 = (std::set< BWAPI::TechType const * > *) 0 ;
   
-  arg1 = (SetWrapper< BWAPI::TechType const * > *)jarg1; 
-  arg2 = (BWAPI::TechType *)jarg2; 
-  result = (bool)(arg1)->add((BWAPI::TechType const *)arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_TechTypeConstantSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::TechType const * > *arg1 = (SetWrapper< BWAPI::TechType const * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::TechType const * > *)jarg1; 
+  arg1 = (std::set< BWAPI::TechType const * > *)jarg1; 
   (arg1)->clear();
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeConstantSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::TechType const * > *arg1 = (SetWrapper< BWAPI::TechType const * > *) 0 ;
-  BWAPI::TechType *arg2 = (BWAPI::TechType *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::TechType const * > *)jarg1; 
-  arg2 = (BWAPI::TechType *)jarg2; 
-  result = (bool)(arg1)->remove((BWAPI::TechType const *)arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechTypeConstantSetIterator(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypePtrSet_getitem(void * jarg1, void * jarg2) {
   void * jresult ;
   std::set< BWAPI::TechType const * > *arg1 = (std::set< BWAPI::TechType const * > *) 0 ;
-  SetIterator< BWAPI::TechType const * > *result = 0 ;
+  std::set< BWAPI::TechType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::TechType const * >::key_type temp2 = 0 ;
+  std::set< BWAPI::TechType const * >::key_type *result = 0 ;
   
   arg1 = (std::set< BWAPI::TechType const * > *)jarg1; 
-  result = (SetIterator< BWAPI::TechType const * > *)new SetIterator< BWAPI::TechType const * >(arg1);
-  jresult = (void *)result; 
+  temp2 = (std::set< BWAPI::TechType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::set< BWAPI::TechType const * >::key_type *) &std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__getitem(arg1,(BWAPI::TechType const *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeConstantSetIterator_hasNext(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypePtrSet_ContainsKey(void * jarg1, void * jarg2) {
   unsigned int jresult ;
-  SetIterator< BWAPI::TechType const * > *arg1 = (SetIterator< BWAPI::TechType const * > *) 0 ;
+  std::set< BWAPI::TechType const * > *arg1 = (std::set< BWAPI::TechType const * > *) 0 ;
+  std::set< BWAPI::TechType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::TechType const * >::key_type temp2 = 0 ;
   bool result;
   
-  arg1 = (SetIterator< BWAPI::TechType const * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
+  arg1 = (std::set< BWAPI::TechType const * > *)jarg1; 
+  temp2 = (std::set< BWAPI::TechType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__ContainsKey(arg1,(BWAPI::TechType const *const &)*arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeConstantSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::TechType const * > *arg1 = (SetIterator< BWAPI::TechType const * > *) 0 ;
-  BWAPI::TechType *result = 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_TechTypePtrSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::TechType const * > *arg1 = (std::set< BWAPI::TechType const * > *) 0 ;
+  std::set< BWAPI::TechType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::TechType const * >::key_type temp2 = 0 ;
   
-  arg1 = (SetIterator< BWAPI::TechType const * > *)jarg1; 
-  result = (BWAPI::TechType *)(arg1)->next();
+  arg1 = (std::set< BWAPI::TechType const * > *)jarg1; 
+  temp2 = (std::set< BWAPI::TechType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__Add(arg1,(BWAPI::TechType const *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypePtrSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::TechType const * > *arg1 = (std::set< BWAPI::TechType const * > *) 0 ;
+  std::set< BWAPI::TechType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::TechType const * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::TechType const * > *)jarg1; 
+  temp2 = (std::set< BWAPI::TechType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__Remove(arg1,(BWAPI::TechType const *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypePtrSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::TechType const * > *arg1 = (std::set< BWAPI::TechType const * > *) 0 ;
+  std::set< BWAPI::TechType const * >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::TechType const * > *)jarg1; 
+  result = (std::set< BWAPI::TechType const * >::iterator *)std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__create_iterator_begin(arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TechTypeConstantSetIterator(void * jarg1) {
-  SetIterator< BWAPI::TechType const * > *arg1 = (SetIterator< BWAPI::TechType const * > *) 0 ;
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypePtrSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::TechType const * > *arg1 = (std::set< BWAPI::TechType const * > *) 0 ;
+  std::set< BWAPI::TechType const * >::iterator *arg2 = (std::set< BWAPI::TechType const * >::iterator *) 0 ;
+  std::set< BWAPI::TechType const * >::key_type *result = 0 ;
   
-  arg1 = (SetIterator< BWAPI::TechType const * > *)jarg1; 
+  arg1 = (std::set< BWAPI::TechType const * > *)jarg1; 
+  arg2 = (std::set< BWAPI::TechType const * >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::TechType const * >::key_type *) &std_set_Sl_BWAPI_TechType_SS_const_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_TechTypePtrSet(void * jarg1) {
+  std::set< BWAPI::TechType const * > *arg1 = (std::set< BWAPI::TechType const * > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::TechType const * > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechTypeSet(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechTypeSet__SWIG_0() {
   void * jresult ;
+  std::set< BWAPI::TechType > *result = 0 ;
+  
+  result = (std::set< BWAPI::TechType > *)new std::set< BWAPI::TechType >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechTypeSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::TechType > *arg1 = 0 ;
+  std::set< BWAPI::TechType > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::TechType > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TechType > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::TechType > *)new std::set< BWAPI::TechType >((std::set< BWAPI::TechType > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_TechTypeSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::TechType > *arg1 = (std::set< BWAPI::TechType > *) 0 ;
-  SetWrapper< BWAPI::TechType > *result = 0 ;
+  std::set< BWAPI::TechType >::size_type result;
   
   arg1 = (std::set< BWAPI::TechType > *)jarg1; 
-  result = (SetWrapper< BWAPI::TechType > *)new SetWrapper< BWAPI::TechType >(arg1);
+  result = ((std::set< BWAPI::TechType > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWAPI::TechType > *arg1 = (std::set< BWAPI::TechType > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::TechType > *)jarg1; 
+  result = (bool)((std::set< BWAPI::TechType > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TechTypeSet_Clear(void * jarg1) {
+  std::set< BWAPI::TechType > *arg1 = (std::set< BWAPI::TechType > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::TechType > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::TechType > *arg1 = (std::set< BWAPI::TechType > *) 0 ;
+  std::set< BWAPI::TechType >::key_type *arg2 = 0 ;
+  std::set< BWAPI::TechType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::TechType > *)jarg1; 
+  arg2 = (std::set< BWAPI::TechType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TechType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::TechType >::key_type *) &std_set_Sl_BWAPI_TechType_Sg__getitem(arg1,(BWAPI::TechType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::TechType > *arg1 = (std::set< BWAPI::TechType > *) 0 ;
+  std::set< BWAPI::TechType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::TechType > *)jarg1; 
+  arg2 = (std::set< BWAPI::TechType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TechType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_TechType_Sg__ContainsKey(arg1,(BWAPI::TechType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TechTypeSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::TechType > *arg1 = (std::set< BWAPI::TechType > *) 0 ;
+  std::set< BWAPI::TechType >::key_type *arg2 = 0 ;
+  
+  arg1 = (std::set< BWAPI::TechType > *)jarg1; 
+  arg2 = (std::set< BWAPI::TechType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TechType >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_TechType_Sg__Add(arg1,(BWAPI::TechType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::TechType > *arg1 = (std::set< BWAPI::TechType > *) 0 ;
+  std::set< BWAPI::TechType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::TechType > *)jarg1; 
+  arg2 = (std::set< BWAPI::TechType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TechType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_TechType_Sg__Remove(arg1,(BWAPI::TechType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::TechType > *arg1 = (std::set< BWAPI::TechType > *) 0 ;
+  std::set< BWAPI::TechType >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::TechType > *)jarg1; 
+  result = (std::set< BWAPI::TechType >::iterator *)std_set_Sl_BWAPI_TechType_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::TechType > *arg1 = (std::set< BWAPI::TechType > *) 0 ;
+  std::set< BWAPI::TechType >::iterator *arg2 = (std::set< BWAPI::TechType >::iterator *) 0 ;
+  std::set< BWAPI::TechType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::TechType > *)jarg1; 
+  arg2 = (std::set< BWAPI::TechType >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::TechType >::key_type *) &std_set_Sl_BWAPI_TechType_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_TechTypeSet(void * jarg1) {
-  SetWrapper< BWAPI::TechType > *arg1 = (SetWrapper< BWAPI::TechType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::TechType > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_TechTypeSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::TechType > *arg1 = (SetWrapper< BWAPI::TechType > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::TechType > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::TechType > *arg1 = (SetWrapper< BWAPI::TechType > *) 0 ;
-  BWAPI::TechType arg2 ;
-  BWAPI::TechType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::TechType > *)jarg1; 
-  argp2 = (BWAPI::TechType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TechType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::TechType > *arg1 = (SetWrapper< BWAPI::TechType > *) 0 ;
-  BWAPI::TechType arg2 ;
-  BWAPI::TechType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::TechType > *)jarg1; 
-  argp2 = (BWAPI::TechType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TechType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_TechTypeSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::TechType > *arg1 = (SetWrapper< BWAPI::TechType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::TechType > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::TechType > *arg1 = (SetWrapper< BWAPI::TechType > *) 0 ;
-  BWAPI::TechType arg2 ;
-  BWAPI::TechType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::TechType > *)jarg1; 
-  argp2 = (BWAPI::TechType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TechType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TechTypeSetIterator(void * jarg1) {
-  void * jresult ;
   std::set< BWAPI::TechType > *arg1 = (std::set< BWAPI::TechType > *) 0 ;
-  SetIterator< BWAPI::TechType > *result = 0 ;
   
   arg1 = (std::set< BWAPI::TechType > *)jarg1; 
-  result = (SetIterator< BWAPI::TechType > *)new SetIterator< BWAPI::TechType >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TechTypeSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWAPI::TechType > *arg1 = (SetIterator< BWAPI::TechType > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWAPI::TechType > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TechTypeSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::TechType > *arg1 = (SetIterator< BWAPI::TechType > *) 0 ;
-  BWAPI::TechType result;
-  
-  arg1 = (SetIterator< BWAPI::TechType > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::TechType((const BWAPI::TechType &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TechTypeSetIterator(void * jarg1) {
-  SetIterator< BWAPI::TechType > *arg1 = (SetIterator< BWAPI::TechType > *) 0 ;
-  
-  arg1 = (SetIterator< BWAPI::TechType > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitList__list_set(void * jarg1, void * jarg2) {
-  ListWrapper< BWAPI::Unit * > *arg1 = (ListWrapper< BWAPI::Unit * > *) 0 ;
-  std::list< BWAPI::Unit * > *arg2 = (std::list< BWAPI::Unit * > *) 0 ;
-  
-  arg1 = (ListWrapper< BWAPI::Unit * > *)jarg1; 
-  arg2 = (std::list< BWAPI::Unit * > *)jarg2; 
-  if (arg1) (arg1)->_list = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitList__list_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitSizeTypeSet__SWIG_0() {
   void * jresult ;
-  ListWrapper< BWAPI::Unit * > *arg1 = (ListWrapper< BWAPI::Unit * > *) 0 ;
-  std::list< BWAPI::Unit * > *result = 0 ;
+  std::set< BWAPI::UnitSizeType > *result = 0 ;
   
-  arg1 = (ListWrapper< BWAPI::Unit * > *)jarg1; 
-  result = (std::list< BWAPI::Unit * > *) ((arg1)->_list);
+  result = (std::set< BWAPI::UnitSizeType > *)new std::set< BWAPI::UnitSizeType >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitList(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitSizeTypeSet__SWIG_1(void * jarg1) {
   void * jresult ;
-  std::list< BWAPI::Unit * > *arg1 = (std::list< BWAPI::Unit * > *) 0 ;
-  ListWrapper< BWAPI::Unit * > *result = 0 ;
+  std::set< BWAPI::UnitSizeType > *arg1 = 0 ;
+  std::set< BWAPI::UnitSizeType > *result = 0 ;
   
-  arg1 = (std::list< BWAPI::Unit * > *)jarg1; 
-  result = (ListWrapper< BWAPI::Unit * > *)new ListWrapper< BWAPI::Unit * >(arg1);
+  arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitSizeType > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::UnitSizeType > *)new std::set< BWAPI::UnitSizeType >((std::set< BWAPI::UnitSizeType > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitList(void * jarg1) {
-  ListWrapper< BWAPI::Unit * > *arg1 = (ListWrapper< BWAPI::Unit * > *) 0 ;
-  
-  arg1 = (ListWrapper< BWAPI::Unit * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UnitList_size(void * jarg1) {
-  int jresult ;
-  ListWrapper< BWAPI::Unit * > *arg1 = (ListWrapper< BWAPI::Unit * > *) 0 ;
-  int result;
-  
-  arg1 = (ListWrapper< BWAPI::Unit * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitList_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  ListWrapper< BWAPI::Unit * > *arg1 = (ListWrapper< BWAPI::Unit * > *) 0 ;
-  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  bool result;
-  
-  arg1 = (ListWrapper< BWAPI::Unit * > *)jarg1; 
-  arg2 = (BWAPI::Unit *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitList_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  ListWrapper< BWAPI::Unit * > *arg1 = (ListWrapper< BWAPI::Unit * > *) 0 ;
-  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  bool result;
-  
-  arg1 = (ListWrapper< BWAPI::Unit * > *)jarg1; 
-  arg2 = (BWAPI::Unit *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitList_clear(void * jarg1) {
-  ListWrapper< BWAPI::Unit * > *arg1 = (ListWrapper< BWAPI::Unit * > *) 0 ;
-  
-  arg1 = (ListWrapper< BWAPI::Unit * > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitList_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  ListWrapper< BWAPI::Unit * > *arg1 = (ListWrapper< BWAPI::Unit * > *) 0 ;
-  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  bool result;
-  
-  arg1 = (ListWrapper< BWAPI::Unit * > *)jarg1; 
-  arg2 = (BWAPI::Unit *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitListIterator(void * jarg1) {
-  void * jresult ;
-  std::list< BWAPI::Unit * > *arg1 = (std::list< BWAPI::Unit * > *) 0 ;
-  ListIterator< BWAPI::Unit * > *result = 0 ;
-  
-  arg1 = (std::list< BWAPI::Unit * > *)jarg1; 
-  result = (ListIterator< BWAPI::Unit * > *)new ListIterator< BWAPI::Unit * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitListIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  ListIterator< BWAPI::Unit * > *arg1 = (ListIterator< BWAPI::Unit * > *) 0 ;
-  bool result;
-  
-  arg1 = (ListIterator< BWAPI::Unit * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitListIterator_next(void * jarg1) {
-  void * jresult ;
-  ListIterator< BWAPI::Unit * > *arg1 = (ListIterator< BWAPI::Unit * > *) 0 ;
-  BWAPI::Unit *result = 0 ;
-  
-  arg1 = (ListIterator< BWAPI::Unit * > *)jarg1; 
-  result = (BWAPI::Unit *)(arg1)->next();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitListIterator(void * jarg1) {
-  ListIterator< BWAPI::Unit * > *arg1 = (ListIterator< BWAPI::Unit * > *) 0 ;
-  
-  arg1 = (ListIterator< BWAPI::Unit * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitSet(void * jarg1) {
-  void * jresult ;
-  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
-  SetWrapper< BWAPI::Unit * > *result = 0 ;
-  
-  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
-  result = (SetWrapper< BWAPI::Unit * > *)new SetWrapper< BWAPI::Unit * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitSet(void * jarg1) {
-  SetWrapper< BWAPI::Unit * > *arg1 = (SetWrapper< BWAPI::Unit * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Unit * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UnitSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::Unit * > *arg1 = (SetWrapper< BWAPI::Unit * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::Unit * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Unit * > *arg1 = (SetWrapper< BWAPI::Unit * > *) 0 ;
-  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Unit * > *)jarg1; 
-  arg2 = (BWAPI::Unit *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Unit * > *arg1 = (SetWrapper< BWAPI::Unit * > *) 0 ;
-  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Unit * > *)jarg1; 
-  arg2 = (BWAPI::Unit *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::Unit * > *arg1 = (SetWrapper< BWAPI::Unit * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::Unit * > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::Unit * > *arg1 = (SetWrapper< BWAPI::Unit * > *) 0 ;
-  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::Unit * > *)jarg1; 
-  arg2 = (BWAPI::Unit *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitSetIterator(void * jarg1) {
-  void * jresult ;
-  std::set< BWAPI::Unit * > *arg1 = (std::set< BWAPI::Unit * > *) 0 ;
-  SetIterator< BWAPI::Unit * > *result = 0 ;
-  
-  arg1 = (std::set< BWAPI::Unit * > *)jarg1; 
-  result = (SetIterator< BWAPI::Unit * > *)new SetIterator< BWAPI::Unit * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWAPI::Unit * > *arg1 = (SetIterator< BWAPI::Unit * > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWAPI::Unit * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::Unit * > *arg1 = (SetIterator< BWAPI::Unit * > *) 0 ;
-  BWAPI::Unit *result = 0 ;
-  
-  arg1 = (SetIterator< BWAPI::Unit * > *)jarg1; 
-  result = (BWAPI::Unit *)(arg1)->next();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitSetIterator(void * jarg1) {
-  SetIterator< BWAPI::Unit * > *arg1 = (SetIterator< BWAPI::Unit * > *) 0 ;
-  
-  arg1 = (SetIterator< BWAPI::Unit * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitSizeTypeSet(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_UnitSizeTypeSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::UnitSizeType > *arg1 = (std::set< BWAPI::UnitSizeType > *) 0 ;
-  SetWrapper< BWAPI::UnitSizeType > *result = 0 ;
+  std::set< BWAPI::UnitSizeType >::size_type result;
   
   arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1; 
-  result = (SetWrapper< BWAPI::UnitSizeType > *)new SetWrapper< BWAPI::UnitSizeType >(arg1);
+  result = ((std::set< BWAPI::UnitSizeType > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSizeTypeSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWAPI::UnitSizeType > *arg1 = (std::set< BWAPI::UnitSizeType > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1; 
+  result = (bool)((std::set< BWAPI::UnitSizeType > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitSizeTypeSet_Clear(void * jarg1) {
+  std::set< BWAPI::UnitSizeType > *arg1 = (std::set< BWAPI::UnitSizeType > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitSizeTypeSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::UnitSizeType > *arg1 = (std::set< BWAPI::UnitSizeType > *) 0 ;
+  std::set< BWAPI::UnitSizeType >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UnitSizeType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitSizeType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitSizeType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::UnitSizeType >::key_type *) &std_set_Sl_BWAPI_UnitSizeType_Sg__getitem(arg1,(BWAPI::UnitSizeType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSizeTypeSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::UnitSizeType > *arg1 = (std::set< BWAPI::UnitSizeType > *) 0 ;
+  std::set< BWAPI::UnitSizeType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitSizeType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitSizeType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_UnitSizeType_Sg__ContainsKey(arg1,(BWAPI::UnitSizeType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitSizeTypeSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::UnitSizeType > *arg1 = (std::set< BWAPI::UnitSizeType > *) 0 ;
+  std::set< BWAPI::UnitSizeType >::key_type *arg2 = 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitSizeType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitSizeType >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_UnitSizeType_Sg__Add(arg1,(BWAPI::UnitSizeType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSizeTypeSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::UnitSizeType > *arg1 = (std::set< BWAPI::UnitSizeType > *) 0 ;
+  std::set< BWAPI::UnitSizeType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitSizeType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitSizeType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_UnitSizeType_Sg__Remove(arg1,(BWAPI::UnitSizeType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitSizeTypeSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::UnitSizeType > *arg1 = (std::set< BWAPI::UnitSizeType > *) 0 ;
+  std::set< BWAPI::UnitSizeType >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1; 
+  result = (std::set< BWAPI::UnitSizeType >::iterator *)std_set_Sl_BWAPI_UnitSizeType_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitSizeTypeSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::UnitSizeType > *arg1 = (std::set< BWAPI::UnitSizeType > *) 0 ;
+  std::set< BWAPI::UnitSizeType >::iterator *arg2 = (std::set< BWAPI::UnitSizeType >::iterator *) 0 ;
+  std::set< BWAPI::UnitSizeType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitSizeType >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::UnitSizeType >::key_type *) &std_set_Sl_BWAPI_UnitSizeType_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitSizeTypeSet(void * jarg1) {
-  SetWrapper< BWAPI::UnitSizeType > *arg1 = (SetWrapper< BWAPI::UnitSizeType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::UnitSizeType > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UnitSizeTypeSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::UnitSizeType > *arg1 = (SetWrapper< BWAPI::UnitSizeType > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::UnitSizeType > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSizeTypeSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UnitSizeType > *arg1 = (SetWrapper< BWAPI::UnitSizeType > *) 0 ;
-  BWAPI::UnitSizeType arg2 ;
-  BWAPI::UnitSizeType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UnitSizeType > *)jarg1; 
-  argp2 = (BWAPI::UnitSizeType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitSizeType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSizeTypeSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UnitSizeType > *arg1 = (SetWrapper< BWAPI::UnitSizeType > *) 0 ;
-  BWAPI::UnitSizeType arg2 ;
-  BWAPI::UnitSizeType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UnitSizeType > *)jarg1; 
-  argp2 = (BWAPI::UnitSizeType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitSizeType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitSizeTypeSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::UnitSizeType > *arg1 = (SetWrapper< BWAPI::UnitSizeType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::UnitSizeType > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSizeTypeSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UnitSizeType > *arg1 = (SetWrapper< BWAPI::UnitSizeType > *) 0 ;
-  BWAPI::UnitSizeType arg2 ;
-  BWAPI::UnitSizeType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UnitSizeType > *)jarg1; 
-  argp2 = (BWAPI::UnitSizeType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitSizeType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitSizeTypeSetIterator(void * jarg1) {
-  void * jresult ;
   std::set< BWAPI::UnitSizeType > *arg1 = (std::set< BWAPI::UnitSizeType > *) 0 ;
-  SetIterator< BWAPI::UnitSizeType > *result = 0 ;
   
   arg1 = (std::set< BWAPI::UnitSizeType > *)jarg1; 
-  result = (SetIterator< BWAPI::UnitSizeType > *)new SetIterator< BWAPI::UnitSizeType >(arg1);
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypePtrSet__SWIG_0() {
+  void * jresult ;
+  std::set< BWAPI::UnitType const * > *result = 0 ;
+  
+  result = (std::set< BWAPI::UnitType const * > *)new std::set< BWAPI::UnitType const * >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitSizeTypeSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWAPI::UnitSizeType > *arg1 = (SetIterator< BWAPI::UnitSizeType > *) 0 ;
-  bool result;
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypePtrSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::UnitType const * > *arg1 = 0 ;
+  std::set< BWAPI::UnitType const * > *result = 0 ;
   
-  arg1 = (SetIterator< BWAPI::UnitSizeType > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
+  arg1 = (std::set< BWAPI::UnitType const * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitType const * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::UnitType const * > *)new std::set< BWAPI::UnitType const * >((std::set< BWAPI::UnitType const * > const &)*arg1);
+  jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitSizeTypeSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::UnitSizeType > *arg1 = (SetIterator< BWAPI::UnitSizeType > *) 0 ;
-  BWAPI::UnitSizeType result;
-  
-  arg1 = (SetIterator< BWAPI::UnitSizeType > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::UnitSizeType((const BWAPI::UnitSizeType &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitSizeTypeSetIterator(void * jarg1) {
-  SetIterator< BWAPI::UnitSizeType > *arg1 = (SetIterator< BWAPI::UnitSizeType > *) 0 ;
-  
-  arg1 = (SetIterator< BWAPI::UnitSizeType > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeConstantSet(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_UnitTypePtrSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::UnitType const * > *arg1 = (std::set< BWAPI::UnitType const * > *) 0 ;
-  SetWrapper< BWAPI::UnitType const * > *result = 0 ;
+  std::set< BWAPI::UnitType const * >::size_type result;
   
   arg1 = (std::set< BWAPI::UnitType const * > *)jarg1; 
-  result = (SetWrapper< BWAPI::UnitType const * > *)new SetWrapper< BWAPI::UnitType const * >(arg1);
-  jresult = (void *)result; 
+  result = ((std::set< BWAPI::UnitType const * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypeConstantSet(void * jarg1) {
-  SetWrapper< BWAPI::UnitType const * > *arg1 = (SetWrapper< BWAPI::UnitType const * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::UnitType const * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UnitTypeConstantSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::UnitType const * > *arg1 = (SetWrapper< BWAPI::UnitType const * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::UnitType const * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeConstantSet_contains(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypePtrSet_empty(void * jarg1) {
   unsigned int jresult ;
-  SetWrapper< BWAPI::UnitType const * > *arg1 = (SetWrapper< BWAPI::UnitType const * > *) 0 ;
-  BWAPI::UnitType *arg2 = (BWAPI::UnitType *) 0 ;
+  std::set< BWAPI::UnitType const * > *arg1 = (std::set< BWAPI::UnitType const * > *) 0 ;
   bool result;
   
-  arg1 = (SetWrapper< BWAPI::UnitType const * > *)jarg1; 
-  arg2 = (BWAPI::UnitType *)jarg2; 
-  result = (bool)(arg1)->contains((BWAPI::UnitType const *)arg2);
+  arg1 = (std::set< BWAPI::UnitType const * > *)jarg1; 
+  result = (bool)((std::set< BWAPI::UnitType const * > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeConstantSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UnitType const * > *arg1 = (SetWrapper< BWAPI::UnitType const * > *) 0 ;
-  BWAPI::UnitType *arg2 = (BWAPI::UnitType *) 0 ;
-  bool result;
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypePtrSet_Clear(void * jarg1) {
+  std::set< BWAPI::UnitType const * > *arg1 = (std::set< BWAPI::UnitType const * > *) 0 ;
   
-  arg1 = (SetWrapper< BWAPI::UnitType const * > *)jarg1; 
-  arg2 = (BWAPI::UnitType *)jarg2; 
-  result = (bool)(arg1)->add((BWAPI::UnitType const *)arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeConstantSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::UnitType const * > *arg1 = (SetWrapper< BWAPI::UnitType const * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::UnitType const * > *)jarg1; 
+  arg1 = (std::set< BWAPI::UnitType const * > *)jarg1; 
   (arg1)->clear();
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeConstantSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UnitType const * > *arg1 = (SetWrapper< BWAPI::UnitType const * > *) 0 ;
-  BWAPI::UnitType *arg2 = (BWAPI::UnitType *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UnitType const * > *)jarg1; 
-  arg2 = (BWAPI::UnitType *)jarg2; 
-  result = (bool)(arg1)->remove((BWAPI::UnitType const *)arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeConstantSetIterator(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypePtrSet_getitem(void * jarg1, void * jarg2) {
   void * jresult ;
   std::set< BWAPI::UnitType const * > *arg1 = (std::set< BWAPI::UnitType const * > *) 0 ;
-  SetIterator< BWAPI::UnitType const * > *result = 0 ;
+  std::set< BWAPI::UnitType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UnitType const * >::key_type temp2 = 0 ;
+  std::set< BWAPI::UnitType const * >::key_type *result = 0 ;
   
   arg1 = (std::set< BWAPI::UnitType const * > *)jarg1; 
-  result = (SetIterator< BWAPI::UnitType const * > *)new SetIterator< BWAPI::UnitType const * >(arg1);
-  jresult = (void *)result; 
+  temp2 = (std::set< BWAPI::UnitType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::set< BWAPI::UnitType const * >::key_type *) &std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__getitem(arg1,(BWAPI::UnitType const *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeConstantSetIterator_hasNext(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypePtrSet_ContainsKey(void * jarg1, void * jarg2) {
   unsigned int jresult ;
-  SetIterator< BWAPI::UnitType const * > *arg1 = (SetIterator< BWAPI::UnitType const * > *) 0 ;
+  std::set< BWAPI::UnitType const * > *arg1 = (std::set< BWAPI::UnitType const * > *) 0 ;
+  std::set< BWAPI::UnitType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UnitType const * >::key_type temp2 = 0 ;
   bool result;
   
-  arg1 = (SetIterator< BWAPI::UnitType const * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
+  arg1 = (std::set< BWAPI::UnitType const * > *)jarg1; 
+  temp2 = (std::set< BWAPI::UnitType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__ContainsKey(arg1,(BWAPI::UnitType const *const &)*arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeConstantSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::UnitType const * > *arg1 = (SetIterator< BWAPI::UnitType const * > *) 0 ;
-  BWAPI::UnitType *result = 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypePtrSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::UnitType const * > *arg1 = (std::set< BWAPI::UnitType const * > *) 0 ;
+  std::set< BWAPI::UnitType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UnitType const * >::key_type temp2 = 0 ;
   
-  arg1 = (SetIterator< BWAPI::UnitType const * > *)jarg1; 
-  result = (BWAPI::UnitType *)(arg1)->next();
+  arg1 = (std::set< BWAPI::UnitType const * > *)jarg1; 
+  temp2 = (std::set< BWAPI::UnitType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__Add(arg1,(BWAPI::UnitType const *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypePtrSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::UnitType const * > *arg1 = (std::set< BWAPI::UnitType const * > *) 0 ;
+  std::set< BWAPI::UnitType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UnitType const * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UnitType const * > *)jarg1; 
+  temp2 = (std::set< BWAPI::UnitType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__Remove(arg1,(BWAPI::UnitType const *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypePtrSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::UnitType const * > *arg1 = (std::set< BWAPI::UnitType const * > *) 0 ;
+  std::set< BWAPI::UnitType const * >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitType const * > *)jarg1; 
+  result = (std::set< BWAPI::UnitType const * >::iterator *)std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__create_iterator_begin(arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypeConstantSetIterator(void * jarg1) {
-  SetIterator< BWAPI::UnitType const * > *arg1 = (SetIterator< BWAPI::UnitType const * > *) 0 ;
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypePtrSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::UnitType const * > *arg1 = (std::set< BWAPI::UnitType const * > *) 0 ;
+  std::set< BWAPI::UnitType const * >::iterator *arg2 = (std::set< BWAPI::UnitType const * >::iterator *) 0 ;
+  std::set< BWAPI::UnitType const * >::key_type *result = 0 ;
   
-  arg1 = (SetIterator< BWAPI::UnitType const * > *)jarg1; 
+  arg1 = (std::set< BWAPI::UnitType const * > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitType const * >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::UnitType const * >::key_type *) &std_set_Sl_BWAPI_UnitType_SS_const_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypePtrSet(void * jarg1) {
+  std::set< BWAPI::UnitType const * > *arg1 = (std::set< BWAPI::UnitType const * > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitType const * > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeSet(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeSet__SWIG_0() {
   void * jresult ;
+  std::set< BWAPI::UnitType > *result = 0 ;
+  
+  result = (std::set< BWAPI::UnitType > *)new std::set< BWAPI::UnitType >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::UnitType > *arg1 = 0 ;
+  std::set< BWAPI::UnitType > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitType > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitType > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::UnitType > *)new std::set< BWAPI::UnitType >((std::set< BWAPI::UnitType > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_UnitTypeSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::UnitType > *arg1 = (std::set< BWAPI::UnitType > *) 0 ;
-  SetWrapper< BWAPI::UnitType > *result = 0 ;
+  std::set< BWAPI::UnitType >::size_type result;
   
   arg1 = (std::set< BWAPI::UnitType > *)jarg1; 
-  result = (SetWrapper< BWAPI::UnitType > *)new SetWrapper< BWAPI::UnitType >(arg1);
+  result = ((std::set< BWAPI::UnitType > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWAPI::UnitType > *arg1 = (std::set< BWAPI::UnitType > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UnitType > *)jarg1; 
+  result = (bool)((std::set< BWAPI::UnitType > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeSet_Clear(void * jarg1) {
+  std::set< BWAPI::UnitType > *arg1 = (std::set< BWAPI::UnitType > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitType > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::UnitType > *arg1 = (std::set< BWAPI::UnitType > *) 0 ;
+  std::set< BWAPI::UnitType >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UnitType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::UnitType >::key_type *) &std_set_Sl_BWAPI_UnitType_Sg__getitem(arg1,(BWAPI::UnitType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::UnitType > *arg1 = (std::set< BWAPI::UnitType > *) 0 ;
+  std::set< BWAPI::UnitType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UnitType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_UnitType_Sg__ContainsKey(arg1,(BWAPI::UnitType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::UnitType > *arg1 = (std::set< BWAPI::UnitType > *) 0 ;
+  std::set< BWAPI::UnitType >::key_type *arg2 = 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitType >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_UnitType_Sg__Add(arg1,(BWAPI::UnitType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::UnitType > *arg1 = (std::set< BWAPI::UnitType > *) 0 ;
+  std::set< BWAPI::UnitType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UnitType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UnitType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_UnitType_Sg__Remove(arg1,(BWAPI::UnitType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::UnitType > *arg1 = (std::set< BWAPI::UnitType > *) 0 ;
+  std::set< BWAPI::UnitType >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitType > *)jarg1; 
+  result = (std::set< BWAPI::UnitType >::iterator *)std_set_Sl_BWAPI_UnitType_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::UnitType > *arg1 = (std::set< BWAPI::UnitType > *) 0 ;
+  std::set< BWAPI::UnitType >::iterator *arg2 = (std::set< BWAPI::UnitType >::iterator *) 0 ;
+  std::set< BWAPI::UnitType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UnitType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UnitType >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::UnitType >::key_type *) &std_set_Sl_BWAPI_UnitType_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypeSet(void * jarg1) {
-  SetWrapper< BWAPI::UnitType > *arg1 = (SetWrapper< BWAPI::UnitType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::UnitType > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UnitTypeSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::UnitType > *arg1 = (SetWrapper< BWAPI::UnitType > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::UnitType > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UnitType > *arg1 = (SetWrapper< BWAPI::UnitType > *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UnitType > *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UnitType > *arg1 = (SetWrapper< BWAPI::UnitType > *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UnitType > *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::UnitType > *arg1 = (SetWrapper< BWAPI::UnitType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::UnitType > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UnitType > *arg1 = (SetWrapper< BWAPI::UnitType > *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UnitType > *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeSetIterator(void * jarg1) {
-  void * jresult ;
   std::set< BWAPI::UnitType > *arg1 = (std::set< BWAPI::UnitType > *) 0 ;
-  SetIterator< BWAPI::UnitType > *result = 0 ;
   
   arg1 = (std::set< BWAPI::UnitType > *)jarg1; 
-  result = (SetIterator< BWAPI::UnitType > *)new SetIterator< BWAPI::UnitType >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWAPI::UnitType > *arg1 = (SetIterator< BWAPI::UnitType > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWAPI::UnitType > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::UnitType > *arg1 = (SetIterator< BWAPI::UnitType > *) 0 ;
-  BWAPI::UnitType result;
-  
-  arg1 = (SetIterator< BWAPI::UnitType > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::UnitType((const BWAPI::UnitType &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypeSetIterator(void * jarg1) {
-  SetIterator< BWAPI::UnitType > *arg1 = (SetIterator< BWAPI::UnitType > *) 0 ;
-  
-  arg1 = (SetIterator< BWAPI::UnitType > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeWhatBuildsPair__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeTypePtrSet__SWIG_0() {
   void * jresult ;
-  std::pair< BWAPI::UnitType const *,int > *result = 0 ;
+  std::set< BWAPI::UpgradeType const * > *result = 0 ;
   
-  result = (std::pair< BWAPI::UnitType const *,int > *)new std::pair< BWAPI::UnitType const *,int >();
+  result = (std::set< BWAPI::UpgradeType const * > *)new std::set< BWAPI::UpgradeType const * >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeWhatBuildsPair__SWIG_1(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeTypePtrSet__SWIG_1(void * jarg1) {
   void * jresult ;
-  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
-  int arg2 ;
-  std::pair< BWAPI::UnitType const *,int > *result = 0 ;
+  std::set< BWAPI::UpgradeType const * > *arg1 = 0 ;
+  std::set< BWAPI::UpgradeType const * > *result = 0 ;
   
-  arg1 = (BWAPI::UnitType *)jarg1; 
-  arg2 = (int)jarg2; 
-  result = (std::pair< BWAPI::UnitType const *,int > *)new std::pair< BWAPI::UnitType const *,int >((BWAPI::UnitType const *)arg1,arg2);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeWhatBuildsPair__SWIG_2(void * jarg1) {
-  void * jresult ;
-  std::pair< BWAPI::UnitType const *,int > *arg1 = 0 ;
-  std::pair< BWAPI::UnitType const *,int > *result = 0 ;
-  
-  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1;
+  arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::pair< BWAPI::UnitType const *,int > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UpgradeType const * > const & type is null", 0);
     return 0;
   } 
-  result = (std::pair< BWAPI::UnitType const *,int > *)new std::pair< BWAPI::UnitType const *,int >((std::pair< BWAPI::UnitType const *,int > const &)*arg1);
+  result = (std::set< BWAPI::UpgradeType const * > *)new std::set< BWAPI::UpgradeType const * >((std::set< BWAPI::UpgradeType const * > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeWhatBuildsPair_first_set(void * jarg1, void * jarg2) {
-  std::pair< BWAPI::UnitType const *,int > *arg1 = (std::pair< BWAPI::UnitType const *,int > *) 0 ;
-  BWAPI::UnitType *arg2 = (BWAPI::UnitType *) 0 ;
-  
-  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1; 
-  arg2 = (BWAPI::UnitType *)jarg2; 
-  if (arg1) (arg1)->first = (BWAPI::UnitType const *)arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeWhatBuildsPair_first_get(void * jarg1) {
-  void * jresult ;
-  std::pair< BWAPI::UnitType const *,int > *arg1 = (std::pair< BWAPI::UnitType const *,int > *) 0 ;
-  BWAPI::UnitType *result = 0 ;
-  
-  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1; 
-  result = (BWAPI::UnitType *) ((arg1)->first);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeWhatBuildsPair_second_set(void * jarg1, int jarg2) {
-  std::pair< BWAPI::UnitType const *,int > *arg1 = (std::pair< BWAPI::UnitType const *,int > *) 0 ;
-  int arg2 ;
-  
-  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->second = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UnitTypeWhatBuildsPair_second_get(void * jarg1) {
-  int jresult ;
-  std::pair< BWAPI::UnitType const *,int > *arg1 = (std::pair< BWAPI::UnitType const *,int > *) 0 ;
-  int result;
-  
-  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1; 
-  result = (int) ((arg1)->second);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypeWhatBuildsPair(void * jarg1) {
-  std::pair< BWAPI::UnitType const *,int > *arg1 = (std::pair< BWAPI::UnitType const *,int > *) 0 ;
-  
-  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeMap(void * jarg1) {
-  void * jresult ;
-  std::map< UnitType const *,int > *arg1 = (std::map< UnitType const *,int > *) 0 ;
-  MapWrapper< UnitType const *,int > *result = 0 ;
-  
-  arg1 = (std::map< UnitType const *,int > *)jarg1; 
-  result = (MapWrapper< UnitType const *,int > *)new MapWrapper< UnitType const *,int >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypeMap(void * jarg1) {
-  MapWrapper< UnitType const *,int > *arg1 = (MapWrapper< UnitType const *,int > *) 0 ;
-  
-  arg1 = (MapWrapper< UnitType const *,int > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UnitTypeMap_size(void * jarg1) {
-  int jresult ;
-  MapWrapper< UnitType const *,int > *arg1 = (MapWrapper< UnitType const *,int > *) 0 ;
-  int result;
-  
-  arg1 = (MapWrapper< UnitType const *,int > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeMap_add(void * jarg1, void * jarg2, int jarg3) {
-  unsigned int jresult ;
-  MapWrapper< UnitType const *,int > *arg1 = (MapWrapper< UnitType const *,int > *) 0 ;
-  UnitType *arg2 = (UnitType *) 0 ;
-  int arg3 ;
-  bool result;
-  
-  arg1 = (MapWrapper< UnitType const *,int > *)jarg1; 
-  arg2 = (UnitType *)jarg2; 
-  arg3 = (int)jarg3; 
-  result = (bool)(arg1)->add((UnitType const *)arg2,arg3);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeMap_clear(void * jarg1) {
-  MapWrapper< UnitType const *,int > *arg1 = (MapWrapper< UnitType const *,int > *) 0 ;
-  
-  arg1 = (MapWrapper< UnitType const *,int > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeMap_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  MapWrapper< UnitType const *,int > *arg1 = (MapWrapper< UnitType const *,int > *) 0 ;
-  UnitType *arg2 = (UnitType *) 0 ;
-  bool result;
-  
-  arg1 = (MapWrapper< UnitType const *,int > *)jarg1; 
-  arg2 = (UnitType *)jarg2; 
-  result = (bool)(arg1)->remove((UnitType const *)arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeMapIterator(void * jarg1) {
-  void * jresult ;
-  std::map< UnitType const *,int > *arg1 = (std::map< UnitType const *,int > *) 0 ;
-  MapIterator< UnitType const *,int > *result = 0 ;
-  
-  arg1 = (std::map< UnitType const *,int > *)jarg1; 
-  result = (MapIterator< UnitType const *,int > *)new MapIterator< UnitType const *,int >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeMapIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  MapIterator< UnitType const *,int > *arg1 = (MapIterator< UnitType const *,int > *) 0 ;
-  bool result;
-  
-  arg1 = (MapIterator< UnitType const *,int > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeMapIterator_next(void * jarg1) {
-  MapIterator< UnitType const *,int > *arg1 = (MapIterator< UnitType const *,int > *) 0 ;
-  
-  arg1 = (MapIterator< UnitType const *,int > *)jarg1; 
-  (arg1)->next();
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeMapIterator_getKey(void * jarg1) {
-  void * jresult ;
-  MapIterator< UnitType const *,int > *arg1 = (MapIterator< UnitType const *,int > *) 0 ;
-  UnitType *result = 0 ;
-  
-  arg1 = (MapIterator< UnitType const *,int > *)jarg1; 
-  result = (UnitType *)(arg1)->getKey();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UnitTypeMapIterator_getValue(void * jarg1) {
-  int jresult ;
-  MapIterator< UnitType const *,int > *arg1 = (MapIterator< UnitType const *,int > *) 0 ;
-  int result;
-  
-  arg1 = (MapIterator< UnitType const *,int > *)jarg1; 
-  result = (int)(arg1)->getValue();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypeMapIterator(void * jarg1) {
-  MapIterator< UnitType const *,int > *arg1 = (MapIterator< UnitType const *,int > *) 0 ;
-  
-  arg1 = (MapIterator< UnitType const *,int > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeList__list_set(void * jarg1, void * jarg2) {
-  ListWrapper< BWAPI::UnitType > *arg1 = (ListWrapper< BWAPI::UnitType > *) 0 ;
-  std::list< BWAPI::UnitType > *arg2 = (std::list< BWAPI::UnitType > *) 0 ;
-  
-  arg1 = (ListWrapper< BWAPI::UnitType > *)jarg1; 
-  arg2 = (std::list< BWAPI::UnitType > *)jarg2; 
-  if (arg1) (arg1)->_list = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeList__list_get(void * jarg1) {
-  void * jresult ;
-  ListWrapper< BWAPI::UnitType > *arg1 = (ListWrapper< BWAPI::UnitType > *) 0 ;
-  std::list< BWAPI::UnitType > *result = 0 ;
-  
-  arg1 = (ListWrapper< BWAPI::UnitType > *)jarg1; 
-  result = (std::list< BWAPI::UnitType > *) ((arg1)->_list);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeList(void * jarg1) {
-  void * jresult ;
-  std::list< BWAPI::UnitType > *arg1 = (std::list< BWAPI::UnitType > *) 0 ;
-  ListWrapper< BWAPI::UnitType > *result = 0 ;
-  
-  arg1 = (std::list< BWAPI::UnitType > *)jarg1; 
-  result = (ListWrapper< BWAPI::UnitType > *)new ListWrapper< BWAPI::UnitType >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypeList(void * jarg1) {
-  ListWrapper< BWAPI::UnitType > *arg1 = (ListWrapper< BWAPI::UnitType > *) 0 ;
-  
-  arg1 = (ListWrapper< BWAPI::UnitType > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UnitTypeList_size(void * jarg1) {
-  int jresult ;
-  ListWrapper< BWAPI::UnitType > *arg1 = (ListWrapper< BWAPI::UnitType > *) 0 ;
-  int result;
-  
-  arg1 = (ListWrapper< BWAPI::UnitType > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeList_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  ListWrapper< BWAPI::UnitType > *arg1 = (ListWrapper< BWAPI::UnitType > *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  bool result;
-  
-  arg1 = (ListWrapper< BWAPI::UnitType > *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeList_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  ListWrapper< BWAPI::UnitType > *arg1 = (ListWrapper< BWAPI::UnitType > *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  bool result;
-  
-  arg1 = (ListWrapper< BWAPI::UnitType > *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeList_clear(void * jarg1) {
-  ListWrapper< BWAPI::UnitType > *arg1 = (ListWrapper< BWAPI::UnitType > *) 0 ;
-  
-  arg1 = (ListWrapper< BWAPI::UnitType > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeList_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  ListWrapper< BWAPI::UnitType > *arg1 = (ListWrapper< BWAPI::UnitType > *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  bool result;
-  
-  arg1 = (ListWrapper< BWAPI::UnitType > *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeListIterator(void * jarg1) {
-  void * jresult ;
-  std::list< BWAPI::UnitType > *arg1 = (std::list< BWAPI::UnitType > *) 0 ;
-  ListIterator< BWAPI::UnitType > *result = 0 ;
-  
-  arg1 = (std::list< BWAPI::UnitType > *)jarg1; 
-  result = (ListIterator< BWAPI::UnitType > *)new ListIterator< BWAPI::UnitType >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypeListIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  ListIterator< BWAPI::UnitType > *arg1 = (ListIterator< BWAPI::UnitType > *) 0 ;
-  bool result;
-  
-  arg1 = (ListIterator< BWAPI::UnitType > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeListIterator_next(void * jarg1) {
-  void * jresult ;
-  ListIterator< BWAPI::UnitType > *arg1 = (ListIterator< BWAPI::UnitType > *) 0 ;
-  BWAPI::UnitType result;
-  
-  arg1 = (ListIterator< BWAPI::UnitType > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::UnitType((const BWAPI::UnitType &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypeListIterator(void * jarg1) {
-  ListIterator< BWAPI::UnitType > *arg1 = (ListIterator< BWAPI::UnitType > *) 0 ;
-  
-  arg1 = (ListIterator< BWAPI::UnitType > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeTypeConstantSet(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_UpgradeTypePtrSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::UpgradeType const * > *arg1 = (std::set< BWAPI::UpgradeType const * > *) 0 ;
-  SetWrapper< BWAPI::UpgradeType const * > *result = 0 ;
+  std::set< BWAPI::UpgradeType const * >::size_type result;
   
   arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1; 
-  result = (SetWrapper< BWAPI::UpgradeType const * > *)new SetWrapper< BWAPI::UpgradeType const * >(arg1);
-  jresult = (void *)result; 
+  result = ((std::set< BWAPI::UpgradeType const * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UpgradeTypeConstantSet(void * jarg1) {
-  SetWrapper< BWAPI::UpgradeType const * > *arg1 = (SetWrapper< BWAPI::UpgradeType const * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::UpgradeType const * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeTypeConstantSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::UpgradeType const * > *arg1 = (SetWrapper< BWAPI::UpgradeType const * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::UpgradeType const * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeConstantSet_contains(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypePtrSet_empty(void * jarg1) {
   unsigned int jresult ;
-  SetWrapper< BWAPI::UpgradeType const * > *arg1 = (SetWrapper< BWAPI::UpgradeType const * > *) 0 ;
-  BWAPI::UpgradeType *arg2 = (BWAPI::UpgradeType *) 0 ;
+  std::set< BWAPI::UpgradeType const * > *arg1 = (std::set< BWAPI::UpgradeType const * > *) 0 ;
   bool result;
   
-  arg1 = (SetWrapper< BWAPI::UpgradeType const * > *)jarg1; 
-  arg2 = (BWAPI::UpgradeType *)jarg2; 
-  result = (bool)(arg1)->contains((BWAPI::UpgradeType const *)arg2);
+  arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1; 
+  result = (bool)((std::set< BWAPI::UpgradeType const * > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeConstantSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UpgradeType const * > *arg1 = (SetWrapper< BWAPI::UpgradeType const * > *) 0 ;
-  BWAPI::UpgradeType *arg2 = (BWAPI::UpgradeType *) 0 ;
-  bool result;
+SWIGEXPORT void SWIGSTDCALL CSharp_UpgradeTypePtrSet_Clear(void * jarg1) {
+  std::set< BWAPI::UpgradeType const * > *arg1 = (std::set< BWAPI::UpgradeType const * > *) 0 ;
   
-  arg1 = (SetWrapper< BWAPI::UpgradeType const * > *)jarg1; 
-  arg2 = (BWAPI::UpgradeType *)jarg2; 
-  result = (bool)(arg1)->add((BWAPI::UpgradeType const *)arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UpgradeTypeConstantSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::UpgradeType const * > *arg1 = (SetWrapper< BWAPI::UpgradeType const * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::UpgradeType const * > *)jarg1; 
+  arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1; 
   (arg1)->clear();
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeConstantSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UpgradeType const * > *arg1 = (SetWrapper< BWAPI::UpgradeType const * > *) 0 ;
-  BWAPI::UpgradeType *arg2 = (BWAPI::UpgradeType *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UpgradeType const * > *)jarg1; 
-  arg2 = (BWAPI::UpgradeType *)jarg2; 
-  result = (bool)(arg1)->remove((BWAPI::UpgradeType const *)arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeTypeConstantSetIterator(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypePtrSet_getitem(void * jarg1, void * jarg2) {
   void * jresult ;
   std::set< BWAPI::UpgradeType const * > *arg1 = (std::set< BWAPI::UpgradeType const * > *) 0 ;
-  SetIterator< BWAPI::UpgradeType const * > *result = 0 ;
+  std::set< BWAPI::UpgradeType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UpgradeType const * >::key_type temp2 = 0 ;
+  std::set< BWAPI::UpgradeType const * >::key_type *result = 0 ;
   
   arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1; 
-  result = (SetIterator< BWAPI::UpgradeType const * > *)new SetIterator< BWAPI::UpgradeType const * >(arg1);
-  jresult = (void *)result; 
+  temp2 = (std::set< BWAPI::UpgradeType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::set< BWAPI::UpgradeType const * >::key_type *) &std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__getitem(arg1,(BWAPI::UpgradeType const *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeConstantSetIterator_hasNext(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypePtrSet_ContainsKey(void * jarg1, void * jarg2) {
   unsigned int jresult ;
-  SetIterator< BWAPI::UpgradeType const * > *arg1 = (SetIterator< BWAPI::UpgradeType const * > *) 0 ;
+  std::set< BWAPI::UpgradeType const * > *arg1 = (std::set< BWAPI::UpgradeType const * > *) 0 ;
+  std::set< BWAPI::UpgradeType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UpgradeType const * >::key_type temp2 = 0 ;
   bool result;
   
-  arg1 = (SetIterator< BWAPI::UpgradeType const * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
+  arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1; 
+  temp2 = (std::set< BWAPI::UpgradeType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__ContainsKey(arg1,(BWAPI::UpgradeType const *const &)*arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypeConstantSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::UpgradeType const * > *arg1 = (SetIterator< BWAPI::UpgradeType const * > *) 0 ;
-  BWAPI::UpgradeType *result = 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_UpgradeTypePtrSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::UpgradeType const * > *arg1 = (std::set< BWAPI::UpgradeType const * > *) 0 ;
+  std::set< BWAPI::UpgradeType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UpgradeType const * >::key_type temp2 = 0 ;
   
-  arg1 = (SetIterator< BWAPI::UpgradeType const * > *)jarg1; 
-  result = (BWAPI::UpgradeType *)(arg1)->next();
+  arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1; 
+  temp2 = (std::set< BWAPI::UpgradeType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__Add(arg1,(BWAPI::UpgradeType const *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypePtrSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::UpgradeType const * > *arg1 = (std::set< BWAPI::UpgradeType const * > *) 0 ;
+  std::set< BWAPI::UpgradeType const * >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UpgradeType const * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1; 
+  temp2 = (std::set< BWAPI::UpgradeType const * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__Remove(arg1,(BWAPI::UpgradeType const *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypePtrSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::UpgradeType const * > *arg1 = (std::set< BWAPI::UpgradeType const * > *) 0 ;
+  std::set< BWAPI::UpgradeType const * >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1; 
+  result = (std::set< BWAPI::UpgradeType const * >::iterator *)std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__create_iterator_begin(arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UpgradeTypeConstantSetIterator(void * jarg1) {
-  SetIterator< BWAPI::UpgradeType const * > *arg1 = (SetIterator< BWAPI::UpgradeType const * > *) 0 ;
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypePtrSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::UpgradeType const * > *arg1 = (std::set< BWAPI::UpgradeType const * > *) 0 ;
+  std::set< BWAPI::UpgradeType const * >::iterator *arg2 = (std::set< BWAPI::UpgradeType const * >::iterator *) 0 ;
+  std::set< BWAPI::UpgradeType const * >::key_type *result = 0 ;
   
-  arg1 = (SetIterator< BWAPI::UpgradeType const * > *)jarg1; 
+  arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1; 
+  arg2 = (std::set< BWAPI::UpgradeType const * >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::UpgradeType const * >::key_type *) &std_set_Sl_BWAPI_UpgradeType_SS_const_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_UpgradeTypePtrSet(void * jarg1) {
+  std::set< BWAPI::UpgradeType const * > *arg1 = (std::set< BWAPI::UpgradeType const * > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::UpgradeType const * > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeTypeSet(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeTypeSet__SWIG_0() {
   void * jresult ;
+  std::set< BWAPI::UpgradeType > *result = 0 ;
+  
+  result = (std::set< BWAPI::UpgradeType > *)new std::set< BWAPI::UpgradeType >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeTypeSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::UpgradeType > *arg1 = 0 ;
+  std::set< BWAPI::UpgradeType > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UpgradeType > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::UpgradeType > *)new std::set< BWAPI::UpgradeType >((std::set< BWAPI::UpgradeType > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_UpgradeTypeSet_size(void * jarg1) {
+  unsigned long jresult ;
   std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
-  SetWrapper< BWAPI::UpgradeType > *result = 0 ;
+  std::set< BWAPI::UpgradeType >::size_type result;
   
   arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
-  result = (SetWrapper< BWAPI::UpgradeType > *)new SetWrapper< BWAPI::UpgradeType >(arg1);
+  result = ((std::set< BWAPI::UpgradeType > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
+  result = (bool)((std::set< BWAPI::UpgradeType > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UpgradeTypeSet_Clear(void * jarg1) {
+  std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypeSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
+  std::set< BWAPI::UpgradeType >::key_type *arg2 = 0 ;
+  std::set< BWAPI::UpgradeType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UpgradeType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UpgradeType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::UpgradeType >::key_type *) &std_set_Sl_BWAPI_UpgradeType_Sg__getitem(arg1,(BWAPI::UpgradeType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
+  std::set< BWAPI::UpgradeType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UpgradeType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UpgradeType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_UpgradeType_Sg__ContainsKey(arg1,(BWAPI::UpgradeType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UpgradeTypeSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
+  std::set< BWAPI::UpgradeType >::key_type *arg2 = 0 ;
+  
+  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UpgradeType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UpgradeType >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_UpgradeType_Sg__Add(arg1,(BWAPI::UpgradeType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
+  std::set< BWAPI::UpgradeType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UpgradeType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::UpgradeType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_UpgradeType_Sg__Remove(arg1,(BWAPI::UpgradeType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypeSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
+  std::set< BWAPI::UpgradeType >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
+  result = (std::set< BWAPI::UpgradeType >::iterator *)std_set_Sl_BWAPI_UpgradeType_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypeSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
+  std::set< BWAPI::UpgradeType >::iterator *arg2 = (std::set< BWAPI::UpgradeType >::iterator *) 0 ;
+  std::set< BWAPI::UpgradeType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
+  arg2 = (std::set< BWAPI::UpgradeType >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::UpgradeType >::key_type *) &std_set_Sl_BWAPI_UpgradeType_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_UpgradeTypeSet(void * jarg1) {
-  SetWrapper< BWAPI::UpgradeType > *arg1 = (SetWrapper< BWAPI::UpgradeType > *) 0 ;
+  std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
   
-  arg1 = (SetWrapper< BWAPI::UpgradeType > *)jarg1; 
+  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_UpgradeTypeSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::UpgradeType > *arg1 = (SetWrapper< BWAPI::UpgradeType > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::UpgradeType > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UpgradeType > *arg1 = (SetWrapper< BWAPI::UpgradeType > *) 0 ;
-  BWAPI::UpgradeType arg2 ;
-  BWAPI::UpgradeType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UpgradeType > *)jarg1; 
-  argp2 = (BWAPI::UpgradeType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UpgradeType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UpgradeType > *arg1 = (SetWrapper< BWAPI::UpgradeType > *) 0 ;
-  BWAPI::UpgradeType arg2 ;
-  BWAPI::UpgradeType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UpgradeType > *)jarg1; 
-  argp2 = (BWAPI::UpgradeType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UpgradeType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_UpgradeTypeSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::UpgradeType > *arg1 = (SetWrapper< BWAPI::UpgradeType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::UpgradeType > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::UpgradeType > *arg1 = (SetWrapper< BWAPI::UpgradeType > *) 0 ;
-  BWAPI::UpgradeType arg2 ;
-  BWAPI::UpgradeType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::UpgradeType > *)jarg1; 
-  argp2 = (BWAPI::UpgradeType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UpgradeType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UpgradeTypeSetIterator(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_WeaponTypeSet__SWIG_0() {
   void * jresult ;
-  std::set< BWAPI::UpgradeType > *arg1 = (std::set< BWAPI::UpgradeType > *) 0 ;
-  SetIterator< BWAPI::UpgradeType > *result = 0 ;
+  std::set< BWAPI::WeaponType > *result = 0 ;
   
-  arg1 = (std::set< BWAPI::UpgradeType > *)jarg1; 
-  result = (SetIterator< BWAPI::UpgradeType > *)new SetIterator< BWAPI::UpgradeType >(arg1);
+  result = (std::set< BWAPI::WeaponType > *)new std::set< BWAPI::WeaponType >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UpgradeTypeSetIterator_hasNext(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_WeaponTypeSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::WeaponType > *arg1 = 0 ;
+  std::set< BWAPI::WeaponType > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::WeaponType > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::WeaponType > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::WeaponType > *)new std::set< BWAPI::WeaponType >((std::set< BWAPI::WeaponType > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_WeaponTypeSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWAPI::WeaponType > *arg1 = (std::set< BWAPI::WeaponType > *) 0 ;
+  std::set< BWAPI::WeaponType >::size_type result;
+  
+  arg1 = (std::set< BWAPI::WeaponType > *)jarg1; 
+  result = ((std::set< BWAPI::WeaponType > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_WeaponTypeSet_empty(void * jarg1) {
   unsigned int jresult ;
-  SetIterator< BWAPI::UpgradeType > *arg1 = (SetIterator< BWAPI::UpgradeType > *) 0 ;
+  std::set< BWAPI::WeaponType > *arg1 = (std::set< BWAPI::WeaponType > *) 0 ;
   bool result;
   
-  arg1 = (SetIterator< BWAPI::UpgradeType > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
+  arg1 = (std::set< BWAPI::WeaponType > *)jarg1; 
+  result = (bool)((std::set< BWAPI::WeaponType > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UpgradeTypeSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::UpgradeType > *arg1 = (SetIterator< BWAPI::UpgradeType > *) 0 ;
-  BWAPI::UpgradeType result;
+SWIGEXPORT void SWIGSTDCALL CSharp_WeaponTypeSet_Clear(void * jarg1) {
+  std::set< BWAPI::WeaponType > *arg1 = (std::set< BWAPI::WeaponType > *) 0 ;
   
-  arg1 = (SetIterator< BWAPI::UpgradeType > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::UpgradeType((const BWAPI::UpgradeType &)result); 
+  arg1 = (std::set< BWAPI::WeaponType > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_WeaponTypeSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::WeaponType > *arg1 = (std::set< BWAPI::WeaponType > *) 0 ;
+  std::set< BWAPI::WeaponType >::key_type *arg2 = 0 ;
+  std::set< BWAPI::WeaponType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::WeaponType > *)jarg1; 
+  arg2 = (std::set< BWAPI::WeaponType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::WeaponType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::WeaponType >::key_type *) &std_set_Sl_BWAPI_WeaponType_Sg__getitem(arg1,(BWAPI::WeaponType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UpgradeTypeSetIterator(void * jarg1) {
-  SetIterator< BWAPI::UpgradeType > *arg1 = (SetIterator< BWAPI::UpgradeType > *) 0 ;
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_WeaponTypeSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::WeaponType > *arg1 = (std::set< BWAPI::WeaponType > *) 0 ;
+  std::set< BWAPI::WeaponType >::key_type *arg2 = 0 ;
+  bool result;
   
-  arg1 = (SetIterator< BWAPI::UpgradeType > *)jarg1; 
-  delete arg1;
+  arg1 = (std::set< BWAPI::WeaponType > *)jarg1; 
+  arg2 = (std::set< BWAPI::WeaponType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::WeaponType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_WeaponType_Sg__ContainsKey(arg1,(BWAPI::WeaponType const &)*arg2);
+  jresult = result; 
+  return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_WeaponTypeSet(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT void SWIGSTDCALL CSharp_WeaponTypeSet_Add(void * jarg1, void * jarg2) {
   std::set< BWAPI::WeaponType > *arg1 = (std::set< BWAPI::WeaponType > *) 0 ;
-  SetWrapper< BWAPI::WeaponType > *result = 0 ;
+  std::set< BWAPI::WeaponType >::key_type *arg2 = 0 ;
   
   arg1 = (std::set< BWAPI::WeaponType > *)jarg1; 
-  result = (SetWrapper< BWAPI::WeaponType > *)new SetWrapper< BWAPI::WeaponType >(arg1);
+  arg2 = (std::set< BWAPI::WeaponType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::WeaponType >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_WeaponType_Sg__Add(arg1,(BWAPI::WeaponType const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_WeaponTypeSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::WeaponType > *arg1 = (std::set< BWAPI::WeaponType > *) 0 ;
+  std::set< BWAPI::WeaponType >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::WeaponType > *)jarg1; 
+  arg2 = (std::set< BWAPI::WeaponType >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::WeaponType >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_WeaponType_Sg__Remove(arg1,(BWAPI::WeaponType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_WeaponTypeSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::WeaponType > *arg1 = (std::set< BWAPI::WeaponType > *) 0 ;
+  std::set< BWAPI::WeaponType >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::WeaponType > *)jarg1; 
+  result = (std::set< BWAPI::WeaponType >::iterator *)std_set_Sl_BWAPI_WeaponType_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_WeaponTypeSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::WeaponType > *arg1 = (std::set< BWAPI::WeaponType > *) 0 ;
+  std::set< BWAPI::WeaponType >::iterator *arg2 = (std::set< BWAPI::WeaponType >::iterator *) 0 ;
+  std::set< BWAPI::WeaponType >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::WeaponType > *)jarg1; 
+  arg2 = (std::set< BWAPI::WeaponType >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::WeaponType >::key_type *) &std_set_Sl_BWAPI_WeaponType_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_WeaponTypeSet(void * jarg1) {
-  SetWrapper< BWAPI::WeaponType > *arg1 = (SetWrapper< BWAPI::WeaponType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::WeaponType > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_WeaponTypeSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::WeaponType > *arg1 = (SetWrapper< BWAPI::WeaponType > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::WeaponType > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_WeaponTypeSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::WeaponType > *arg1 = (SetWrapper< BWAPI::WeaponType > *) 0 ;
-  BWAPI::WeaponType arg2 ;
-  BWAPI::WeaponType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::WeaponType > *)jarg1; 
-  argp2 = (BWAPI::WeaponType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::WeaponType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_WeaponTypeSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::WeaponType > *arg1 = (SetWrapper< BWAPI::WeaponType > *) 0 ;
-  BWAPI::WeaponType arg2 ;
-  BWAPI::WeaponType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::WeaponType > *)jarg1; 
-  argp2 = (BWAPI::WeaponType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::WeaponType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_WeaponTypeSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::WeaponType > *arg1 = (SetWrapper< BWAPI::WeaponType > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::WeaponType > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_WeaponTypeSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::WeaponType > *arg1 = (SetWrapper< BWAPI::WeaponType > *) 0 ;
-  BWAPI::WeaponType arg2 ;
-  BWAPI::WeaponType *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::WeaponType > *)jarg1; 
-  argp2 = (BWAPI::WeaponType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::WeaponType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_WeaponTypeSetIterator(void * jarg1) {
-  void * jresult ;
   std::set< BWAPI::WeaponType > *arg1 = (std::set< BWAPI::WeaponType > *) 0 ;
-  SetIterator< BWAPI::WeaponType > *result = 0 ;
   
   arg1 = (std::set< BWAPI::WeaponType > *)jarg1; 
-  result = (SetIterator< BWAPI::WeaponType > *)new SetIterator< BWAPI::WeaponType >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_WeaponTypeSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWAPI::WeaponType > *arg1 = (SetIterator< BWAPI::WeaponType > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWAPI::WeaponType > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_WeaponTypeSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::WeaponType > *arg1 = (SetIterator< BWAPI::WeaponType > *) 0 ;
-  BWAPI::WeaponType result;
-  
-  arg1 = (SetIterator< BWAPI::WeaponType > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::WeaponType((const BWAPI::WeaponType &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_WeaponTypeSetIterator(void * jarg1) {
-  SetIterator< BWAPI::WeaponType > *arg1 = (SetIterator< BWAPI::WeaponType > *) 0 ;
-  
-  arg1 = (SetIterator< BWAPI::WeaponType > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionSet(void * jarg1) {
-  void * jresult ;
-  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
-  SetWrapper< BWAPI::TilePosition > *result = 0 ;
-  
-  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
-  result = (SetWrapper< BWAPI::TilePosition > *)new SetWrapper< BWAPI::TilePosition >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TilePositionSet(void * jarg1) {
-  SetWrapper< BWAPI::TilePosition > *arg1 = (SetWrapper< BWAPI::TilePosition > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::TilePosition > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_TilePositionSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWAPI::TilePosition > *arg1 = (SetWrapper< BWAPI::TilePosition > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWAPI::TilePosition > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TilePositionSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::TilePosition > *arg1 = (SetWrapper< BWAPI::TilePosition > *) 0 ;
-  BWAPI::TilePosition arg2 ;
-  BWAPI::TilePosition *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::TilePosition > *)jarg1; 
-  argp2 = (BWAPI::TilePosition *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TilePositionSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::TilePosition > *arg1 = (SetWrapper< BWAPI::TilePosition > *) 0 ;
-  BWAPI::TilePosition arg2 ;
-  BWAPI::TilePosition *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::TilePosition > *)jarg1; 
-  argp2 = (BWAPI::TilePosition *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionSet_clear(void * jarg1) {
-  SetWrapper< BWAPI::TilePosition > *arg1 = (SetWrapper< BWAPI::TilePosition > *) 0 ;
-  
-  arg1 = (SetWrapper< BWAPI::TilePosition > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TilePositionSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWAPI::TilePosition > *arg1 = (SetWrapper< BWAPI::TilePosition > *) 0 ;
-  BWAPI::TilePosition arg2 ;
-  BWAPI::TilePosition *argp2 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWAPI::TilePosition > *)jarg1; 
-  argp2 = (BWAPI::TilePosition *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionSetIterator(void * jarg1) {
-  void * jresult ;
-  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
-  SetIterator< BWAPI::TilePosition > *result = 0 ;
-  
-  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
-  result = (SetIterator< BWAPI::TilePosition > *)new SetIterator< BWAPI::TilePosition >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TilePositionSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWAPI::TilePosition > *arg1 = (SetIterator< BWAPI::TilePosition > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWAPI::TilePosition > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWAPI::TilePosition > *arg1 = (SetIterator< BWAPI::TilePosition > *) 0 ;
-  BWAPI::TilePosition result;
-  
-  arg1 = (SetIterator< BWAPI::TilePosition > *)jarg1; 
-  result = (arg1)->next();
-  jresult = new BWAPI::TilePosition((const BWAPI::TilePosition &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TilePositionSetIterator(void * jarg1) {
-  SetIterator< BWAPI::TilePosition > *arg1 = (SetIterator< BWAPI::TilePosition > *) 0 ;
-  
-  arg1 = (SetIterator< BWAPI::TilePosition > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RegionSet(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
-  SetWrapper< BWTA::Region * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Region * > *)jarg1; 
-  result = (SetWrapper< BWTA::Region * > *)new SetWrapper< BWTA::Region * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RegionSet(void * jarg1) {
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_RegionSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  arg2 = (BWTA::Region *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  arg2 = (BWTA::Region *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_RegionSet_clear(void * jarg1) {
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  arg2 = (BWTA::Region *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RegionSetIterator(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
-  SetIterator< BWTA::Region * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Region * > *)jarg1; 
-  result = (SetIterator< BWTA::Region * > *)new SetIterator< BWTA::Region * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWTA::Region * > *arg1 = (SetIterator< BWTA::Region * > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWTA::Region * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_RegionSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWTA::Region * > *arg1 = (SetIterator< BWTA::Region * > *) 0 ;
-  BWTA::Region *result = 0 ;
-  
-  arg1 = (SetIterator< BWTA::Region * > *)jarg1; 
-  result = (BWTA::Region *)(arg1)->next();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RegionSetIterator(void * jarg1) {
-  SetIterator< BWTA::Region * > *arg1 = (SetIterator< BWTA::Region * > *) 0 ;
-  
-  arg1 = (SetIterator< BWTA::Region * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RegionSpacelessSet(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
-  SetWrapper< BWTA::Region * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Region * > *)jarg1; 
-  result = (SetWrapper< BWTA::Region * > *)new SetWrapper< BWTA::Region * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RegionSpacelessSet(void * jarg1) {
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_RegionSpacelessSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionSpacelessSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  arg2 = (BWTA::Region *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionSpacelessSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  arg2 = (BWTA::Region *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_RegionSpacelessSet_clear(void * jarg1) {
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionSpacelessSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Region * > *arg1 = (SetWrapper< BWTA::Region * > *) 0 ;
-  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Region * > *)jarg1; 
-  arg2 = (BWTA::Region *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RegionSpacelessSetIterator(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
-  SetIterator< BWTA::Region * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Region * > *)jarg1; 
-  result = (SetIterator< BWTA::Region * > *)new SetIterator< BWTA::Region * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionSpacelessSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWTA::Region * > *arg1 = (SetIterator< BWTA::Region * > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWTA::Region * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_RegionSpacelessSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWTA::Region * > *arg1 = (SetIterator< BWTA::Region * > *) 0 ;
-  BWTA::Region *result = 0 ;
-  
-  arg1 = (SetIterator< BWTA::Region * > *)jarg1; 
-  result = (BWTA::Region *)(arg1)->next();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RegionSpacelessSetIterator(void * jarg1) {
-  SetIterator< BWTA::Region * > *arg1 = (SetIterator< BWTA::Region * > *) 0 ;
-  
-  arg1 = (SetIterator< BWTA::Region * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointSet(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
-  SetWrapper< BWTA::Chokepoint * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
-  result = (SetWrapper< BWTA::Chokepoint * > *)new SetWrapper< BWTA::Chokepoint * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ChokepointSet(void * jarg1) {
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_ChokepointSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  BWTA::Chokepoint *arg2 = (BWTA::Chokepoint *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  arg2 = (BWTA::Chokepoint *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  BWTA::Chokepoint *arg2 = (BWTA::Chokepoint *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  arg2 = (BWTA::Chokepoint *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ChokepointSet_clear(void * jarg1) {
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  BWTA::Chokepoint *arg2 = (BWTA::Chokepoint *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  arg2 = (BWTA::Chokepoint *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointSetIterator(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
-  SetIterator< BWTA::Chokepoint * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
-  result = (SetIterator< BWTA::Chokepoint * > *)new SetIterator< BWTA::Chokepoint * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWTA::Chokepoint * > *arg1 = (SetIterator< BWTA::Chokepoint * > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWTA::Chokepoint * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWTA::Chokepoint * > *arg1 = (SetIterator< BWTA::Chokepoint * > *) 0 ;
-  BWTA::Chokepoint *result = 0 ;
-  
-  arg1 = (SetIterator< BWTA::Chokepoint * > *)jarg1; 
-  result = (BWTA::Chokepoint *)(arg1)->next();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ChokepointSetIterator(void * jarg1) {
-  SetIterator< BWTA::Chokepoint * > *arg1 = (SetIterator< BWTA::Chokepoint * > *) 0 ;
-  
-  arg1 = (SetIterator< BWTA::Chokepoint * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointSpacelessSet(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
-  SetWrapper< BWTA::Chokepoint * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
-  result = (SetWrapper< BWTA::Chokepoint * > *)new SetWrapper< BWTA::Chokepoint * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ChokepointSpacelessSet(void * jarg1) {
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_ChokepointSpacelessSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointSpacelessSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  BWTA::Chokepoint *arg2 = (BWTA::Chokepoint *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  arg2 = (BWTA::Chokepoint *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointSpacelessSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  BWTA::Chokepoint *arg2 = (BWTA::Chokepoint *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  arg2 = (BWTA::Chokepoint *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ChokepointSpacelessSet_clear(void * jarg1) {
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointSpacelessSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Chokepoint * > *arg1 = (SetWrapper< BWTA::Chokepoint * > *) 0 ;
-  BWTA::Chokepoint *arg2 = (BWTA::Chokepoint *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Chokepoint * > *)jarg1; 
-  arg2 = (BWTA::Chokepoint *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointSpacelessSetIterator(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
-  SetIterator< BWTA::Chokepoint * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
-  result = (SetIterator< BWTA::Chokepoint * > *)new SetIterator< BWTA::Chokepoint * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointSpacelessSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWTA::Chokepoint * > *arg1 = (SetIterator< BWTA::Chokepoint * > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWTA::Chokepoint * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointSpacelessSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWTA::Chokepoint * > *arg1 = (SetIterator< BWTA::Chokepoint * > *) 0 ;
-  BWTA::Chokepoint *result = 0 ;
-  
-  arg1 = (SetIterator< BWTA::Chokepoint * > *)jarg1; 
-  result = (BWTA::Chokepoint *)(arg1)->next();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ChokepointSpacelessSetIterator(void * jarg1) {
-  SetIterator< BWTA::Chokepoint * > *arg1 = (SetIterator< BWTA::Chokepoint * > *) 0 ;
-  
-  arg1 = (SetIterator< BWTA::Chokepoint * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointGetRegionsPair__SWIG_0() {
-  void * jresult ;
-  std::pair< BWTA::Region *,BWTA::Region * > *result = 0 ;
-  
-  result = (std::pair< BWTA::Region *,BWTA::Region * > *)new std::pair< BWTA::Region *,BWTA::Region * >();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointGetRegionsPair__SWIG_1(void * jarg1, void * jarg2) {
-  void * jresult ;
-  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
-  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
-  std::pair< BWTA::Region *,BWTA::Region * > *result = 0 ;
-  
-  arg1 = (BWTA::Region *)jarg1; 
-  arg2 = (BWTA::Region *)jarg2; 
-  result = (std::pair< BWTA::Region *,BWTA::Region * > *)new std::pair< BWTA::Region *,BWTA::Region * >(arg1,arg2);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointGetRegionsPair__SWIG_2(void * jarg1) {
-  void * jresult ;
-  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = 0 ;
-  std::pair< BWTA::Region *,BWTA::Region * > *result = 0 ;
-  
-  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::pair< BWTA::Region *,BWTA::Region * > const & type is null", 0);
-    return 0;
-  } 
-  result = (std::pair< BWTA::Region *,BWTA::Region * > *)new std::pair< BWTA::Region *,BWTA::Region * >((std::pair< BWTA::Region *,BWTA::Region * > const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ChokepointGetRegionsPair_first_set(void * jarg1, void * jarg2) {
-  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *) 0 ;
-  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
-  
-  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1; 
-  arg2 = (BWTA::Region *)jarg2; 
-  if (arg1) (arg1)->first = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointGetRegionsPair_first_get(void * jarg1) {
-  void * jresult ;
-  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *) 0 ;
-  BWTA::Region *result = 0 ;
-  
-  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1; 
-  result = (BWTA::Region *) ((arg1)->first);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ChokepointGetRegionsPair_second_set(void * jarg1, void * jarg2) {
-  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *) 0 ;
-  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
-  
-  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1; 
-  arg2 = (BWTA::Region *)jarg2; 
-  if (arg1) (arg1)->second = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointGetRegionsPair_second_get(void * jarg1) {
-  void * jresult ;
-  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *) 0 ;
-  BWTA::Region *result = 0 ;
-  
-  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1; 
-  result = (BWTA::Region *) ((arg1)->second);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ChokepointGetRegionsPair(void * jarg1) {
-  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *) 0 ;
-  
-  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointGetSidesPair__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_PositionPair__SWIG_0() {
   void * jresult ;
   std::pair< BWAPI::Position,BWAPI::Position > *result = 0 ;
   
@@ -18918,7 +19452,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointGetSidesPair__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointGetSidesPair__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_PositionPair__SWIG_1(void * jarg1, void * jarg2) {
   void * jresult ;
   BWAPI::Position arg1 ;
   BWAPI::Position arg2 ;
@@ -18944,7 +19478,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointGetSidesPair__SWIG_1(void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointGetSidesPair__SWIG_2(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_PositionPair__SWIG_2(void * jarg1) {
   void * jresult ;
   std::pair< BWAPI::Position,BWAPI::Position > *arg1 = 0 ;
   std::pair< BWAPI::Position,BWAPI::Position > *result = 0 ;
@@ -18960,7 +19494,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointGetSidesPair__SWIG_2(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ChokepointGetSidesPair_first_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_PositionPair_first_set(void * jarg1, void * jarg2) {
   std::pair< BWAPI::Position,BWAPI::Position > *arg1 = (std::pair< BWAPI::Position,BWAPI::Position > *) 0 ;
   BWAPI::Position *arg2 = (BWAPI::Position *) 0 ;
   
@@ -18970,7 +19504,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ChokepointGetSidesPair_first_set(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointGetSidesPair_first_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_PositionPair_first_get(void * jarg1) {
   void * jresult ;
   std::pair< BWAPI::Position,BWAPI::Position > *arg1 = (std::pair< BWAPI::Position,BWAPI::Position > *) 0 ;
   BWAPI::Position *result = 0 ;
@@ -18982,7 +19516,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointGetSidesPair_first_get(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ChokepointGetSidesPair_second_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_PositionPair_second_set(void * jarg1, void * jarg2) {
   std::pair< BWAPI::Position,BWAPI::Position > *arg1 = (std::pair< BWAPI::Position,BWAPI::Position > *) 0 ;
   BWAPI::Position *arg2 = (BWAPI::Position *) 0 ;
   
@@ -18992,7 +19526,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ChokepointGetSidesPair_second_set(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointGetSidesPair_second_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_PositionPair_second_get(void * jarg1) {
   void * jresult ;
   std::pair< BWAPI::Position,BWAPI::Position > *arg1 = (std::pair< BWAPI::Position,BWAPI::Position > *) 0 ;
   BWAPI::Position *result = 0 ;
@@ -19004,7 +19538,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointGetSidesPair_second_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ChokepointGetSidesPair(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_PositionPair(void * jarg1) {
   std::pair< BWAPI::Position,BWAPI::Position > *arg1 = (std::pair< BWAPI::Position,BWAPI::Position > *) 0 ;
   
   arg1 = (std::pair< BWAPI::Position,BWAPI::Position > *)jarg1; 
@@ -19012,615 +19546,1485 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_ChokepointGetSidesPair(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_BaseLocationSet(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypePtrIntPair__SWIG_0() {
   void * jresult ;
-  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
-  SetWrapper< BWTA::BaseLocation * > *result = 0 ;
+  std::pair< BWAPI::UnitType const *,int > *result = 0 ;
   
-  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
-  result = (SetWrapper< BWTA::BaseLocation * > *)new SetWrapper< BWTA::BaseLocation * >(arg1);
+  result = (std::pair< BWAPI::UnitType const *,int > *)new std::pair< BWAPI::UnitType const *,int >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_BaseLocationSet(void * jarg1) {
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_BaseLocationSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  BWTA::BaseLocation *arg2 = (BWTA::BaseLocation *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  arg2 = (BWTA::BaseLocation *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  BWTA::BaseLocation *arg2 = (BWTA::BaseLocation *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  arg2 = (BWTA::BaseLocation *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_BaseLocationSet_clear(void * jarg1) {
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  BWTA::BaseLocation *arg2 = (BWTA::BaseLocation *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  arg2 = (BWTA::BaseLocation *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_BaseLocationSetIterator(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypePtrIntPair__SWIG_1(void * jarg1, int jarg2) {
   void * jresult ;
-  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
-  SetIterator< BWTA::BaseLocation * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
-  result = (SetIterator< BWTA::BaseLocation * > *)new SetIterator< BWTA::BaseLocation * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWTA::BaseLocation * > *arg1 = (SetIterator< BWTA::BaseLocation * > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWTA::BaseLocation * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_BaseLocationSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWTA::BaseLocation * > *arg1 = (SetIterator< BWTA::BaseLocation * > *) 0 ;
-  BWTA::BaseLocation *result = 0 ;
-  
-  arg1 = (SetIterator< BWTA::BaseLocation * > *)jarg1; 
-  result = (BWTA::BaseLocation *)(arg1)->next();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_BaseLocationSetIterator(void * jarg1) {
-  SetIterator< BWTA::BaseLocation * > *arg1 = (SetIterator< BWTA::BaseLocation * > *) 0 ;
-  
-  arg1 = (SetIterator< BWTA::BaseLocation * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_BaseLocationSpacelessSet(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
-  SetWrapper< BWTA::BaseLocation * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
-  result = (SetWrapper< BWTA::BaseLocation * > *)new SetWrapper< BWTA::BaseLocation * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_BaseLocationSpacelessSet(void * jarg1) {
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_BaseLocationSpacelessSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationSpacelessSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  BWTA::BaseLocation *arg2 = (BWTA::BaseLocation *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  arg2 = (BWTA::BaseLocation *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationSpacelessSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  BWTA::BaseLocation *arg2 = (BWTA::BaseLocation *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  arg2 = (BWTA::BaseLocation *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_BaseLocationSpacelessSet_clear(void * jarg1) {
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationSpacelessSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::BaseLocation * > *arg1 = (SetWrapper< BWTA::BaseLocation * > *) 0 ;
-  BWTA::BaseLocation *arg2 = (BWTA::BaseLocation *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::BaseLocation * > *)jarg1; 
-  arg2 = (BWTA::BaseLocation *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_BaseLocationSpacelessSetIterator(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
-  SetIterator< BWTA::BaseLocation * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
-  result = (SetIterator< BWTA::BaseLocation * > *)new SetIterator< BWTA::BaseLocation * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationSpacelessSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWTA::BaseLocation * > *arg1 = (SetIterator< BWTA::BaseLocation * > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWTA::BaseLocation * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_BaseLocationSpacelessSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWTA::BaseLocation * > *arg1 = (SetIterator< BWTA::BaseLocation * > *) 0 ;
-  BWTA::BaseLocation *result = 0 ;
-  
-  arg1 = (SetIterator< BWTA::BaseLocation * > *)jarg1; 
-  result = (BWTA::BaseLocation *)(arg1)->next();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_BaseLocationSpacelessSetIterator(void * jarg1) {
-  SetIterator< BWTA::BaseLocation * > *arg1 = (SetIterator< BWTA::BaseLocation * > *) 0 ;
-  
-  arg1 = (SetIterator< BWTA::BaseLocation * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PolygonSet(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
-  SetWrapper< BWTA::Polygon * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
-  result = (SetWrapper< BWTA::Polygon * > *)new SetWrapper< BWTA::Polygon * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PolygonSet(void * jarg1) {
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PolygonSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  BWTA::Polygon *arg2 = (BWTA::Polygon *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  arg2 = (BWTA::Polygon *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  BWTA::Polygon *arg2 = (BWTA::Polygon *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  arg2 = (BWTA::Polygon *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PolygonSet_clear(void * jarg1) {
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  BWTA::Polygon *arg2 = (BWTA::Polygon *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  arg2 = (BWTA::Polygon *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PolygonSetIterator(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
-  SetIterator< BWTA::Polygon * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
-  result = (SetIterator< BWTA::Polygon * > *)new SetIterator< BWTA::Polygon * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWTA::Polygon * > *arg1 = (SetIterator< BWTA::Polygon * > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWTA::Polygon * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PolygonSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWTA::Polygon * > *arg1 = (SetIterator< BWTA::Polygon * > *) 0 ;
-  BWTA::Polygon *result = 0 ;
-  
-  arg1 = (SetIterator< BWTA::Polygon * > *)jarg1; 
-  result = (BWTA::Polygon *)(arg1)->next();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PolygonSetIterator(void * jarg1) {
-  SetIterator< BWTA::Polygon * > *arg1 = (SetIterator< BWTA::Polygon * > *) 0 ;
-  
-  arg1 = (SetIterator< BWTA::Polygon * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PolygonSpacelessSet(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
-  SetWrapper< BWTA::Polygon * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
-  result = (SetWrapper< BWTA::Polygon * > *)new SetWrapper< BWTA::Polygon * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PolygonSpacelessSet(void * jarg1) {
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PolygonSpacelessSet_size(void * jarg1) {
-  int jresult ;
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  int result;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonSpacelessSet_contains(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  BWTA::Polygon *arg2 = (BWTA::Polygon *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  arg2 = (BWTA::Polygon *)jarg2; 
-  result = (bool)(arg1)->contains(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonSpacelessSet_add(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  BWTA::Polygon *arg2 = (BWTA::Polygon *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  arg2 = (BWTA::Polygon *)jarg2; 
-  result = (bool)(arg1)->add(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PolygonSpacelessSet_clear(void * jarg1) {
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonSpacelessSet_remove(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  SetWrapper< BWTA::Polygon * > *arg1 = (SetWrapper< BWTA::Polygon * > *) 0 ;
-  BWTA::Polygon *arg2 = (BWTA::Polygon *) 0 ;
-  bool result;
-  
-  arg1 = (SetWrapper< BWTA::Polygon * > *)jarg1; 
-  arg2 = (BWTA::Polygon *)jarg2; 
-  result = (bool)(arg1)->remove(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PolygonSpacelessSetIterator(void * jarg1) {
-  void * jresult ;
-  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
-  SetIterator< BWTA::Polygon * > *result = 0 ;
-  
-  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
-  result = (SetIterator< BWTA::Polygon * > *)new SetIterator< BWTA::Polygon * >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonSpacelessSetIterator_hasNext(void * jarg1) {
-  unsigned int jresult ;
-  SetIterator< BWTA::Polygon * > *arg1 = (SetIterator< BWTA::Polygon * > *) 0 ;
-  bool result;
-  
-  arg1 = (SetIterator< BWTA::Polygon * > *)jarg1; 
-  result = (bool)(arg1)->hasNext();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PolygonSpacelessSetIterator_next(void * jarg1) {
-  void * jresult ;
-  SetIterator< BWTA::Polygon * > *arg1 = (SetIterator< BWTA::Polygon * > *) 0 ;
-  BWTA::Polygon *result = 0 ;
-  
-  arg1 = (SetIterator< BWTA::Polygon * > *)jarg1; 
-  result = (BWTA::Polygon *)(arg1)->next();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PolygonSpacelessSetIterator(void * jarg1) {
-  SetIterator< BWTA::Polygon * > *arg1 = (SetIterator< BWTA::Polygon * > *) 0 ;
-  
-  arg1 = (SetIterator< BWTA::Polygon * > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PositionVector(void * jarg1) {
-  void * jresult ;
-  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
-  VectorWrapper< BWAPI::Position > *result = 0 ;
-  
-  arg1 = (std::vector< BWAPI::Position > *)jarg1; 
-  result = (VectorWrapper< BWAPI::Position > *)new VectorWrapper< BWAPI::Position >(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PositionVector(void * jarg1) {
-  VectorWrapper< BWAPI::Position > *arg1 = (VectorWrapper< BWAPI::Position > *) 0 ;
-  
-  arg1 = (VectorWrapper< BWAPI::Position > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PositionVector_size(void * jarg1) {
-  int jresult ;
-  VectorWrapper< BWAPI::Position > *arg1 = (VectorWrapper< BWAPI::Position > *) 0 ;
-  int result;
-  
-  arg1 = (VectorWrapper< BWAPI::Position > *)jarg1; 
-  result = (int)(arg1)->size();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PositionVector_add(void * jarg1, int jarg2, void * jarg3) {
-  VectorWrapper< BWAPI::Position > *arg1 = (VectorWrapper< BWAPI::Position > *) 0 ;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
   int arg2 ;
-  BWAPI::Position arg3 ;
-  BWAPI::Position *argp3 ;
+  std::pair< BWAPI::UnitType const *,int > *result = 0 ;
   
-  arg1 = (VectorWrapper< BWAPI::Position > *)jarg1; 
+  arg1 = (BWAPI::UnitType *)jarg1; 
   arg2 = (int)jarg2; 
-  argp3 = (BWAPI::Position *)jarg3; 
-  if (!argp3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Position", 0);
-    return ;
+  result = (std::pair< BWAPI::UnitType const *,int > *)new std::pair< BWAPI::UnitType const *,int >((BWAPI::UnitType const *)arg1,arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypePtrIntPair__SWIG_2(void * jarg1) {
+  void * jresult ;
+  std::pair< BWAPI::UnitType const *,int > *arg1 = 0 ;
+  std::pair< BWAPI::UnitType const *,int > *result = 0 ;
+  
+  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::pair< BWAPI::UnitType const *,int > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::pair< BWAPI::UnitType const *,int > *)new std::pair< BWAPI::UnitType const *,int >((std::pair< BWAPI::UnitType const *,int > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypePtrIntPair_first_set(void * jarg1, void * jarg2) {
+  std::pair< BWAPI::UnitType const *,int > *arg1 = (std::pair< BWAPI::UnitType const *,int > *) 0 ;
+  BWAPI::UnitType *arg2 = (BWAPI::UnitType *) 0 ;
+  
+  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1; 
+  arg2 = (BWAPI::UnitType *)jarg2; 
+  if (arg1) (arg1)->first = (BWAPI::UnitType const *)arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypePtrIntPair_first_get(void * jarg1) {
+  void * jresult ;
+  std::pair< BWAPI::UnitType const *,int > *arg1 = (std::pair< BWAPI::UnitType const *,int > *) 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1; 
+  result = (BWAPI::UnitType *) ((arg1)->first);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypePtrIntPair_second_set(void * jarg1, int jarg2) {
+  std::pair< BWAPI::UnitType const *,int > *arg1 = (std::pair< BWAPI::UnitType const *,int > *) 0 ;
+  int arg2 ;
+  
+  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->second = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UnitTypePtrIntPair_second_get(void * jarg1) {
+  int jresult ;
+  std::pair< BWAPI::UnitType const *,int > *arg1 = (std::pair< BWAPI::UnitType const *,int > *) 0 ;
+  int result;
+  
+  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1; 
+  result = (int) ((arg1)->second);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypePtrIntPair(void * jarg1) {
+  std::pair< BWAPI::UnitType const *,int > *arg1 = (std::pair< BWAPI::UnitType const *,int > *) 0 ;
+  
+  arg1 = (std::pair< BWAPI::UnitType const *,int > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionSet__SWIG_0() {
+  void * jresult ;
+  std::set< BWAPI::TilePosition > *result = 0 ;
+  
+  result = (std::set< BWAPI::TilePosition > *)new std::set< BWAPI::TilePosition >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::TilePosition > *arg1 = 0 ;
+  std::set< BWAPI::TilePosition > *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWAPI::TilePosition > *)new std::set< BWAPI::TilePosition >((std::set< BWAPI::TilePosition > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_TilePositionSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
+  std::set< BWAPI::TilePosition >::size_type result;
+  
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  result = ((std::set< BWAPI::TilePosition > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TilePositionSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  result = (bool)((std::set< BWAPI::TilePosition > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionSet_Clear(void * jarg1) {
+  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
+  std::set< BWAPI::TilePosition >::key_type *arg2 = 0 ;
+  std::set< BWAPI::TilePosition >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (std::set< BWAPI::TilePosition >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::set< BWAPI::TilePosition >::key_type *) &std_set_Sl_BWAPI_TilePosition_Sg__getitem(arg1,(BWAPI::TilePosition const &)*arg2);
   }
-  arg3 = *argp3; 
-  (arg1)->add(arg2,arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PositionVector_clear(void * jarg1) {
-  VectorWrapper< BWAPI::Position > *arg1 = (VectorWrapper< BWAPI::Position > *) 0 ;
-  
-  arg1 = (VectorWrapper< BWAPI::Position > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PositionVector_set(void * jarg1, int jarg2, void * jarg3) {
-  void * jresult ;
-  VectorWrapper< BWAPI::Position > *arg1 = (VectorWrapper< BWAPI::Position > *) 0 ;
-  int arg2 ;
-  BWAPI::Position arg3 ;
-  BWAPI::Position *argp3 ;
-  BWAPI::Position result;
-  
-  arg1 = (VectorWrapper< BWAPI::Position > *)jarg1; 
-  arg2 = (int)jarg2; 
-  argp3 = (BWAPI::Position *)jarg3; 
-  if (!argp3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Position", 0);
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
     return 0;
   }
-  arg3 = *argp3; 
-  result = (arg1)->set(arg2,arg3);
-  jresult = new BWAPI::Position((const BWAPI::Position &)result); 
+  
+  jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_PositionVector_remove(void * jarg1, int jarg2) {
-  void * jresult ;
-  VectorWrapper< BWAPI::Position > *arg1 = (VectorWrapper< BWAPI::Position > *) 0 ;
-  int arg2 ;
-  BWAPI::Position result;
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TilePositionSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
+  std::set< BWAPI::TilePosition >::key_type *arg2 = 0 ;
+  bool result;
   
-  arg1 = (VectorWrapper< BWAPI::Position > *)jarg1; 
-  arg2 = (int)jarg2; 
-  result = (arg1)->remove(arg2);
-  jresult = new BWAPI::Position((const BWAPI::Position &)result); 
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (std::set< BWAPI::TilePosition >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_TilePosition_Sg__ContainsKey(arg1,(BWAPI::TilePosition const &)*arg2);
+  jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_PositionVector_get(void * jarg1, int jarg2) {
-  void * jresult ;
-  VectorWrapper< BWAPI::Position > *arg1 = (VectorWrapper< BWAPI::Position > *) 0 ;
-  int arg2 ;
-  BWAPI::Position result;
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
+  std::set< BWAPI::TilePosition >::key_type *arg2 = 0 ;
   
-  arg1 = (VectorWrapper< BWAPI::Position > *)jarg1; 
-  arg2 = (int)jarg2; 
-  result = (arg1)->get(arg2);
-  jresult = new BWAPI::Position((const BWAPI::Position &)result); 
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (std::set< BWAPI::TilePosition >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition >::key_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_set_Sl_BWAPI_TilePosition_Sg__Add(arg1,(BWAPI::TilePosition const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TilePositionSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
+  std::set< BWAPI::TilePosition >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (std::set< BWAPI::TilePosition >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_set_Sl_BWAPI_TilePosition_Sg__Remove(arg1,(BWAPI::TilePosition const &)*arg2);
+  jresult = result; 
   return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
+  std::set< BWAPI::TilePosition >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  result = (std::set< BWAPI::TilePosition >::iterator *)std_set_Sl_BWAPI_TilePosition_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
+  std::set< BWAPI::TilePosition >::iterator *arg2 = (std::set< BWAPI::TilePosition >::iterator *) 0 ;
+  std::set< BWAPI::TilePosition >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (std::set< BWAPI::TilePosition >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWAPI::TilePosition >::key_type *) &std_set_Sl_BWAPI_TilePosition_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_TilePositionSet(void * jarg1) {
+  std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
+  
+  arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypePtrIntMap__SWIG_0() {
+  void * jresult ;
+  std::map< BWAPI::UnitType const *,int > *result = 0 ;
+  
+  result = (std::map< BWAPI::UnitType const *,int > *)new std::map< BWAPI::UnitType const *,int >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypePtrIntMap__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::map< BWAPI::UnitType const *,int > *arg1 = 0 ;
+  std::map< BWAPI::UnitType const *,int > *result = 0 ;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< BWAPI::UnitType const *,int > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::map< BWAPI::UnitType const *,int > *)new std::map< BWAPI::UnitType const *,int >((std::map< BWAPI::UnitType const *,int > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_UnitTypePtrIntMap_size(void * jarg1) {
+  unsigned long jresult ;
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  std::map< BWAPI::UnitType const *,int >::size_type result;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  result = ((std::map< BWAPI::UnitType const *,int > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypePtrIntMap_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  bool result;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  result = (bool)((std::map< BWAPI::UnitType const *,int > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypePtrIntMap_Clear(void * jarg1) {
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UnitTypePtrIntMap_getitem(void * jarg1, void * jarg2) {
+  int jresult ;
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type *arg2 = 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type temp2 = 0 ;
+  std::map< BWAPI::UnitType const *,int >::mapped_type *result = 0 ;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  temp2 = (std::map< BWAPI::UnitType const *,int >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::map< BWAPI::UnitType const *,int >::mapped_type *) &std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__getitem(arg1,(BWAPI::UnitType const *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = *result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypePtrIntMap_setitem(void * jarg1, void * jarg2, int jarg3) {
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type *arg2 = 0 ;
+  std::map< BWAPI::UnitType const *,int >::mapped_type *arg3 = 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type temp2 = 0 ;
+  std::map< BWAPI::UnitType const *,int >::mapped_type temp3 ;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  temp2 = (std::map< BWAPI::UnitType const *,int >::key_type)jarg2;
+  arg2 = &temp2; 
+  temp3 = (std::map< BWAPI::UnitType const *,int >::mapped_type)jarg3; 
+  arg3 = &temp3; 
+  std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__setitem(arg1,(BWAPI::UnitType const *const &)*arg2,(int const &)*arg3);
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypePtrIntMap_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type *arg2 = 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  temp2 = (std::map< BWAPI::UnitType const *,int >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__ContainsKey(arg1,(BWAPI::UnitType const *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypePtrIntMap_Add(void * jarg1, void * jarg2, int jarg3) {
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type *arg2 = 0 ;
+  std::map< BWAPI::UnitType const *,int >::mapped_type *arg3 = 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type temp2 = 0 ;
+  std::map< BWAPI::UnitType const *,int >::mapped_type temp3 ;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  temp2 = (std::map< BWAPI::UnitType const *,int >::key_type)jarg2;
+  arg2 = &temp2; 
+  temp3 = (std::map< BWAPI::UnitType const *,int >::mapped_type)jarg3; 
+  arg3 = &temp3; 
+  try {
+    std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__Add(arg1,(BWAPI::UnitType const *const &)*arg2,(int const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitTypePtrIntMap_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type *arg2 = 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  temp2 = (std::map< BWAPI::UnitType const *,int >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__Remove(arg1,(BWAPI::UnitType const *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypePtrIntMap_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  std::map< BWAPI::UnitType const *,int >::iterator *result = 0 ;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  result = (std::map< BWAPI::UnitType const *,int >::iterator *)std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypePtrIntMap_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  std::map< BWAPI::UnitType const *,int >::iterator *arg2 = (std::map< BWAPI::UnitType const *,int >::iterator *) 0 ;
+  std::map< BWAPI::UnitType const *,int >::key_type *result = 0 ;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  arg2 = (std::map< BWAPI::UnitType const *,int >::iterator *)jarg2; 
+  try {
+    result = (std::map< BWAPI::UnitType const *,int >::key_type *) &std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypePtrIntMap(void * jarg1) {
+  std::map< BWAPI::UnitType const *,int > *arg1 = (std::map< BWAPI::UnitType const *,int > *) 0 ;
+  
+  arg1 = (std::map< BWAPI::UnitType const *,int > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitPtrList_Clear(void * jarg1) {
+  std::list< BWAPI::Unit * > *arg1 = (std::list< BWAPI::Unit * > *) 0 ;
+  
+  arg1 = (std::list< BWAPI::Unit * > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitPtrList_Add(void * jarg1, void * jarg2) {
+  std::list< BWAPI::Unit * > *arg1 = (std::list< BWAPI::Unit * > *) 0 ;
+  std::list< BWAPI::Unit * >::value_type *arg2 = 0 ;
+  std::list< BWAPI::Unit * >::value_type temp2 = 0 ;
+  
+  arg1 = (std::list< BWAPI::Unit * > *)jarg1; 
+  temp2 = (std::list< BWAPI::Unit * >::value_type)jarg2;
+  arg2 = &temp2; 
+  (arg1)->push_back((std::list< BWAPI::Unit * >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_UnitPtrList_size(void * jarg1) {
+  unsigned long jresult ;
+  std::list< BWAPI::Unit * > *arg1 = (std::list< BWAPI::Unit * > *) 0 ;
+  std::list< BWAPI::Unit * >::size_type result;
+  
+  arg1 = (std::list< BWAPI::Unit * > *)jarg1; 
+  result = ((std::list< BWAPI::Unit * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitPtrList__SWIG_0() {
+  void * jresult ;
+  std::list< BWAPI::Unit * > *result = 0 ;
+  
+  result = (std::list< BWAPI::Unit * > *)new std::list< BWAPI::Unit * >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitPtrList__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::list< BWAPI::Unit * > *arg1 = 0 ;
+  std::list< BWAPI::Unit * > *result = 0 ;
+  
+  arg1 = (std::list< BWAPI::Unit * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::list< BWAPI::Unit * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::list< BWAPI::Unit * > *)new std::list< BWAPI::Unit * >((std::list< BWAPI::Unit * > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitPtrList_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::list< BWAPI::Unit * > *arg1 = (std::list< BWAPI::Unit * > *) 0 ;
+  std::list< BWAPI::Unit * >::iterator *result = 0 ;
+  
+  arg1 = (std::list< BWAPI::Unit * > *)jarg1; 
+  result = (std::list< BWAPI::Unit * >::iterator *)std_list_Sl_BWAPI_Unit_Sm__Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitPtrList_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::list< BWAPI::Unit * > *arg1 = (std::list< BWAPI::Unit * > *) 0 ;
+  std::list< BWAPI::Unit * >::iterator *arg2 = (std::list< BWAPI::Unit * >::iterator *) 0 ;
+  std::list< BWAPI::Unit * >::value_type *result = 0 ;
+  
+  arg1 = (std::list< BWAPI::Unit * > *)jarg1; 
+  arg2 = (std::list< BWAPI::Unit * >::iterator *)jarg2; 
+  try {
+    result = (std::list< BWAPI::Unit * >::value_type *) &std_list_Sl_BWAPI_Unit_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitPtrList_Contains(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::list< BWAPI::Unit * > *arg1 = (std::list< BWAPI::Unit * > *) 0 ;
+  std::list< BWAPI::Unit * >::value_type *arg2 = 0 ;
+  std::list< BWAPI::Unit * >::value_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::list< BWAPI::Unit * > *)jarg1; 
+  temp2 = (std::list< BWAPI::Unit * >::value_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_list_Sl_BWAPI_Unit_Sm__Sg__Contains(arg1,(BWAPI::Unit *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitPtrList_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::list< BWAPI::Unit * > *arg1 = (std::list< BWAPI::Unit * > *) 0 ;
+  std::list< BWAPI::Unit * >::value_type *arg2 = 0 ;
+  std::list< BWAPI::Unit * >::value_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::list< BWAPI::Unit * > *)jarg1; 
+  temp2 = (std::list< BWAPI::Unit * >::value_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_list_Sl_BWAPI_Unit_Sm__Sg__Remove(arg1,(BWAPI::Unit *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitPtrList(void * jarg1) {
+  std::list< BWAPI::Unit * > *arg1 = (std::list< BWAPI::Unit * > *) 0 ;
+  
+  arg1 = (std::list< BWAPI::Unit * > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeList_Clear(void * jarg1) {
+  std::list< BWAPI::UnitType > *arg1 = (std::list< BWAPI::UnitType > *) 0 ;
+  
+  arg1 = (std::list< BWAPI::UnitType > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitTypeList_Add(void * jarg1, void * jarg2) {
+  std::list< BWAPI::UnitType > *arg1 = (std::list< BWAPI::UnitType > *) 0 ;
+  std::list< BWAPI::UnitType >::value_type *arg2 = 0 ;
+  
+  arg1 = (std::list< BWAPI::UnitType > *)jarg1; 
+  arg2 = (std::list< BWAPI::UnitType >::value_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::list< BWAPI::UnitType >::value_type const & type is null", 0);
+    return ;
+  } 
+  (arg1)->push_back((std::list< BWAPI::UnitType >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_UnitTypeList_size(void * jarg1) {
+  unsigned long jresult ;
+  std::list< BWAPI::UnitType > *arg1 = (std::list< BWAPI::UnitType > *) 0 ;
+  std::list< BWAPI::UnitType >::size_type result;
+  
+  arg1 = (std::list< BWAPI::UnitType > *)jarg1; 
+  result = ((std::list< BWAPI::UnitType > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeList__SWIG_0() {
+  void * jresult ;
+  std::list< BWAPI::UnitType > *result = 0 ;
+  
+  result = (std::list< BWAPI::UnitType > *)new std::list< BWAPI::UnitType >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitTypeList__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::list< BWAPI::UnitType > *arg1 = 0 ;
+  std::list< BWAPI::UnitType > *result = 0 ;
+  
+  arg1 = (std::list< BWAPI::UnitType > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::list< BWAPI::UnitType > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::list< BWAPI::UnitType > *)new std::list< BWAPI::UnitType >((std::list< BWAPI::UnitType > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeList_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::list< BWAPI::UnitType > *arg1 = (std::list< BWAPI::UnitType > *) 0 ;
+  std::list< BWAPI::UnitType >::iterator *result = 0 ;
+  
+  arg1 = (std::list< BWAPI::UnitType > *)jarg1; 
+  result = (std::list< BWAPI::UnitType >::iterator *)std_list_Sl_BWAPI_UnitType_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypeList_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::list< BWAPI::UnitType > *arg1 = (std::list< BWAPI::UnitType > *) 0 ;
+  std::list< BWAPI::UnitType >::iterator *arg2 = (std::list< BWAPI::UnitType >::iterator *) 0 ;
+  std::list< BWAPI::UnitType >::value_type *result = 0 ;
+  
+  arg1 = (std::list< BWAPI::UnitType > *)jarg1; 
+  arg2 = (std::list< BWAPI::UnitType >::iterator *)jarg2; 
+  try {
+    result = (std::list< BWAPI::UnitType >::value_type *) &std_list_Sl_BWAPI_UnitType_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitTypeList(void * jarg1) {
+  std::list< BWAPI::UnitType > *arg1 = (std::list< BWAPI::UnitType > *) 0 ;
+  
+  arg1 = (std::list< BWAPI::UnitType > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RegionPtrRegionPtrPair__SWIG_0() {
+  void * jresult ;
+  std::pair< BWTA::Region *,BWTA::Region * > *result = 0 ;
+  
+  result = (std::pair< BWTA::Region *,BWTA::Region * > *)new std::pair< BWTA::Region *,BWTA::Region * >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RegionPtrRegionPtrPair__SWIG_1(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
+  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
+  std::pair< BWTA::Region *,BWTA::Region * > *result = 0 ;
+  
+  arg1 = (BWTA::Region *)jarg1; 
+  arg2 = (BWTA::Region *)jarg2; 
+  result = (std::pair< BWTA::Region *,BWTA::Region * > *)new std::pair< BWTA::Region *,BWTA::Region * >(arg1,arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RegionPtrRegionPtrPair__SWIG_2(void * jarg1) {
+  void * jresult ;
+  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = 0 ;
+  std::pair< BWTA::Region *,BWTA::Region * > *result = 0 ;
+  
+  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::pair< BWTA::Region *,BWTA::Region * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::pair< BWTA::Region *,BWTA::Region * > *)new std::pair< BWTA::Region *,BWTA::Region * >((std::pair< BWTA::Region *,BWTA::Region * > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_RegionPtrRegionPtrPair_first_set(void * jarg1, void * jarg2) {
+  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *) 0 ;
+  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
+  
+  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1; 
+  arg2 = (BWTA::Region *)jarg2; 
+  if (arg1) (arg1)->first = arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RegionPtrRegionPtrPair_first_get(void * jarg1) {
+  void * jresult ;
+  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *) 0 ;
+  BWTA::Region *result = 0 ;
+  
+  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1; 
+  result = (BWTA::Region *) ((arg1)->first);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_RegionPtrRegionPtrPair_second_set(void * jarg1, void * jarg2) {
+  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *) 0 ;
+  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
+  
+  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1; 
+  arg2 = (BWTA::Region *)jarg2; 
+  if (arg1) (arg1)->second = arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RegionPtrRegionPtrPair_second_get(void * jarg1) {
+  void * jresult ;
+  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *) 0 ;
+  BWTA::Region *result = 0 ;
+  
+  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1; 
+  result = (BWTA::Region *) ((arg1)->second);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_RegionPtrRegionPtrPair(void * jarg1) {
+  std::pair< BWTA::Region *,BWTA::Region * > *arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *) 0 ;
+  
+  arg1 = (std::pair< BWTA::Region *,BWTA::Region * > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_BaseLocationPtrSet__SWIG_0() {
+  void * jresult ;
+  std::set< BWTA::BaseLocation * > *result = 0 ;
+  
+  result = (std::set< BWTA::BaseLocation * > *)new std::set< BWTA::BaseLocation * >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_BaseLocationPtrSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWTA::BaseLocation * > *arg1 = 0 ;
+  std::set< BWTA::BaseLocation * > *result = 0 ;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWTA::BaseLocation * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWTA::BaseLocation * > *)new std::set< BWTA::BaseLocation * >((std::set< BWTA::BaseLocation * > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_BaseLocationPtrSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
+  std::set< BWTA::BaseLocation * >::size_type result;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
+  result = ((std::set< BWTA::BaseLocation * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationPtrSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
+  result = (bool)((std::set< BWTA::BaseLocation * > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BaseLocationPtrSet_Clear(void * jarg1) {
+  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_BaseLocationPtrSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
+  std::set< BWTA::BaseLocation * >::key_type *arg2 = 0 ;
+  std::set< BWTA::BaseLocation * >::key_type temp2 = 0 ;
+  std::set< BWTA::BaseLocation * >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
+  temp2 = (std::set< BWTA::BaseLocation * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::set< BWTA::BaseLocation * >::key_type *) &std_set_Sl_BWTA_BaseLocation_Sm__Sg__getitem(arg1,(BWTA::BaseLocation *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationPtrSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
+  std::set< BWTA::BaseLocation * >::key_type *arg2 = 0 ;
+  std::set< BWTA::BaseLocation * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
+  temp2 = (std::set< BWTA::BaseLocation * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWTA_BaseLocation_Sm__Sg__ContainsKey(arg1,(BWTA::BaseLocation *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BaseLocationPtrSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
+  std::set< BWTA::BaseLocation * >::key_type *arg2 = 0 ;
+  std::set< BWTA::BaseLocation * >::key_type temp2 = 0 ;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
+  temp2 = (std::set< BWTA::BaseLocation * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    std_set_Sl_BWTA_BaseLocation_Sm__Sg__Add(arg1,(BWTA::BaseLocation *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BaseLocationPtrSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
+  std::set< BWTA::BaseLocation * >::key_type *arg2 = 0 ;
+  std::set< BWTA::BaseLocation * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
+  temp2 = (std::set< BWTA::BaseLocation * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWTA_BaseLocation_Sm__Sg__Remove(arg1,(BWTA::BaseLocation *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_BaseLocationPtrSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
+  std::set< BWTA::BaseLocation * >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
+  result = (std::set< BWTA::BaseLocation * >::iterator *)std_set_Sl_BWTA_BaseLocation_Sm__Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_BaseLocationPtrSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
+  std::set< BWTA::BaseLocation * >::iterator *arg2 = (std::set< BWTA::BaseLocation * >::iterator *) 0 ;
+  std::set< BWTA::BaseLocation * >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
+  arg2 = (std::set< BWTA::BaseLocation * >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWTA::BaseLocation * >::key_type *) &std_set_Sl_BWTA_BaseLocation_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_BaseLocationPtrSet(void * jarg1) {
+  std::set< BWTA::BaseLocation * > *arg1 = (std::set< BWTA::BaseLocation * > *) 0 ;
+  
+  arg1 = (std::set< BWTA::BaseLocation * > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointPtrSet__SWIG_0() {
+  void * jresult ;
+  std::set< BWTA::Chokepoint * > *result = 0 ;
+  
+  result = (std::set< BWTA::Chokepoint * > *)new std::set< BWTA::Chokepoint * >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_ChokepointPtrSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWTA::Chokepoint * > *arg1 = 0 ;
+  std::set< BWTA::Chokepoint * > *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWTA::Chokepoint * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWTA::Chokepoint * > *)new std::set< BWTA::Chokepoint * >((std::set< BWTA::Chokepoint * > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_ChokepointPtrSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
+  std::set< BWTA::Chokepoint * >::size_type result;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
+  result = ((std::set< BWTA::Chokepoint * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointPtrSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
+  result = (bool)((std::set< BWTA::Chokepoint * > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ChokepointPtrSet_Clear(void * jarg1) {
+  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointPtrSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
+  std::set< BWTA::Chokepoint * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Chokepoint * >::key_type temp2 = 0 ;
+  std::set< BWTA::Chokepoint * >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
+  temp2 = (std::set< BWTA::Chokepoint * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::set< BWTA::Chokepoint * >::key_type *) &std_set_Sl_BWTA_Chokepoint_Sm__Sg__getitem(arg1,(BWTA::Chokepoint *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointPtrSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
+  std::set< BWTA::Chokepoint * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Chokepoint * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
+  temp2 = (std::set< BWTA::Chokepoint * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWTA_Chokepoint_Sm__Sg__ContainsKey(arg1,(BWTA::Chokepoint *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ChokepointPtrSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
+  std::set< BWTA::Chokepoint * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Chokepoint * >::key_type temp2 = 0 ;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
+  temp2 = (std::set< BWTA::Chokepoint * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    std_set_Sl_BWTA_Chokepoint_Sm__Sg__Add(arg1,(BWTA::Chokepoint *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ChokepointPtrSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
+  std::set< BWTA::Chokepoint * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Chokepoint * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
+  temp2 = (std::set< BWTA::Chokepoint * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWTA_Chokepoint_Sm__Sg__Remove(arg1,(BWTA::Chokepoint *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointPtrSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
+  std::set< BWTA::Chokepoint * >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
+  result = (std::set< BWTA::Chokepoint * >::iterator *)std_set_Sl_BWTA_Chokepoint_Sm__Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ChokepointPtrSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
+  std::set< BWTA::Chokepoint * >::iterator *arg2 = (std::set< BWTA::Chokepoint * >::iterator *) 0 ;
+  std::set< BWTA::Chokepoint * >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
+  arg2 = (std::set< BWTA::Chokepoint * >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWTA::Chokepoint * >::key_type *) &std_set_Sl_BWTA_Chokepoint_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_ChokepointPtrSet(void * jarg1) {
+  std::set< BWTA::Chokepoint * > *arg1 = (std::set< BWTA::Chokepoint * > *) 0 ;
+  
+  arg1 = (std::set< BWTA::Chokepoint * > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_PolygonPtrSet__SWIG_0() {
+  void * jresult ;
+  std::set< BWTA::Polygon * > *result = 0 ;
+  
+  result = (std::set< BWTA::Polygon * > *)new std::set< BWTA::Polygon * >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_PolygonPtrSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWTA::Polygon * > *arg1 = 0 ;
+  std::set< BWTA::Polygon * > *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWTA::Polygon * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWTA::Polygon * > *)new std::set< BWTA::Polygon * >((std::set< BWTA::Polygon * > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_PolygonPtrSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
+  std::set< BWTA::Polygon * >::size_type result;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
+  result = ((std::set< BWTA::Polygon * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonPtrSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
+  result = (bool)((std::set< BWTA::Polygon * > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_PolygonPtrSet_Clear(void * jarg1) {
+  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_PolygonPtrSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
+  std::set< BWTA::Polygon * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Polygon * >::key_type temp2 = 0 ;
+  std::set< BWTA::Polygon * >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
+  temp2 = (std::set< BWTA::Polygon * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::set< BWTA::Polygon * >::key_type *) &std_set_Sl_BWTA_Polygon_Sm__Sg__getitem(arg1,(BWTA::Polygon *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonPtrSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
+  std::set< BWTA::Polygon * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Polygon * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
+  temp2 = (std::set< BWTA::Polygon * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWTA_Polygon_Sm__Sg__ContainsKey(arg1,(BWTA::Polygon *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_PolygonPtrSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
+  std::set< BWTA::Polygon * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Polygon * >::key_type temp2 = 0 ;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
+  temp2 = (std::set< BWTA::Polygon * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    std_set_Sl_BWTA_Polygon_Sm__Sg__Add(arg1,(BWTA::Polygon *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PolygonPtrSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
+  std::set< BWTA::Polygon * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Polygon * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
+  temp2 = (std::set< BWTA::Polygon * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWTA_Polygon_Sm__Sg__Remove(arg1,(BWTA::Polygon *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_PolygonPtrSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
+  std::set< BWTA::Polygon * >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
+  result = (std::set< BWTA::Polygon * >::iterator *)std_set_Sl_BWTA_Polygon_Sm__Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_PolygonPtrSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
+  std::set< BWTA::Polygon * >::iterator *arg2 = (std::set< BWTA::Polygon * >::iterator *) 0 ;
+  std::set< BWTA::Polygon * >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
+  arg2 = (std::set< BWTA::Polygon * >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWTA::Polygon * >::key_type *) &std_set_Sl_BWTA_Polygon_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_PolygonPtrSet(void * jarg1) {
+  std::set< BWTA::Polygon * > *arg1 = (std::set< BWTA::Polygon * > *) 0 ;
+  
+  arg1 = (std::set< BWTA::Polygon * > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RegionPtrSet__SWIG_0() {
+  void * jresult ;
+  std::set< BWTA::Region * > *result = 0 ;
+  
+  result = (std::set< BWTA::Region * > *)new std::set< BWTA::Region * >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RegionPtrSet__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::set< BWTA::Region * > *arg1 = 0 ;
+  std::set< BWTA::Region * > *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWTA::Region * > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::set< BWTA::Region * > *)new std::set< BWTA::Region * >((std::set< BWTA::Region * > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RegionPtrSet_size(void * jarg1) {
+  unsigned long jresult ;
+  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
+  std::set< BWTA::Region * >::size_type result;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1; 
+  result = ((std::set< BWTA::Region * > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionPtrSet_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1; 
+  result = (bool)((std::set< BWTA::Region * > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_RegionPtrSet_Clear(void * jarg1) {
+  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RegionPtrSet_getitem(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
+  std::set< BWTA::Region * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Region * >::key_type temp2 = 0 ;
+  std::set< BWTA::Region * >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1; 
+  temp2 = (std::set< BWTA::Region * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    result = (std::set< BWTA::Region * >::key_type *) &std_set_Sl_BWTA_Region_Sm__Sg__getitem(arg1,(BWTA::Region *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionPtrSet_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
+  std::set< BWTA::Region * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Region * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1; 
+  temp2 = (std::set< BWTA::Region * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWTA_Region_Sm__Sg__ContainsKey(arg1,(BWTA::Region *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_RegionPtrSet_Add(void * jarg1, void * jarg2) {
+  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
+  std::set< BWTA::Region * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Region * >::key_type temp2 = 0 ;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1; 
+  temp2 = (std::set< BWTA::Region * >::key_type)jarg2;
+  arg2 = &temp2; 
+  try {
+    std_set_Sl_BWTA_Region_Sm__Sg__Add(arg1,(BWTA::Region *const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RegionPtrSet_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
+  std::set< BWTA::Region * >::key_type *arg2 = 0 ;
+  std::set< BWTA::Region * >::key_type temp2 = 0 ;
+  bool result;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1; 
+  temp2 = (std::set< BWTA::Region * >::key_type)jarg2;
+  arg2 = &temp2; 
+  result = (bool)std_set_Sl_BWTA_Region_Sm__Sg__Remove(arg1,(BWTA::Region *const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RegionPtrSet_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
+  std::set< BWTA::Region * >::iterator *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1; 
+  result = (std::set< BWTA::Region * >::iterator *)std_set_Sl_BWTA_Region_Sm__Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RegionPtrSet_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
+  std::set< BWTA::Region * >::iterator *arg2 = (std::set< BWTA::Region * >::iterator *) 0 ;
+  std::set< BWTA::Region * >::key_type *result = 0 ;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1; 
+  arg2 = (std::set< BWTA::Region * >::iterator *)jarg2; 
+  try {
+    result = (std::set< BWTA::Region * >::key_type *) &std_set_Sl_BWTA_Region_Sm__Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_RegionPtrSet(void * jarg1) {
+  std::set< BWTA::Region * > *arg1 = (std::set< BWTA::Region * > *) 0 ;
+  
+  arg1 = (std::set< BWTA::Region * > *)jarg1; 
+  delete arg1;
 }
 
 

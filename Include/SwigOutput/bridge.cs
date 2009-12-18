@@ -16,14 +16,843 @@ public class bridge {
     bridgePINVOKE.BWAPI_init();
   }
 
-  public static AttackType getAttackType(SWIGTYPE_p_std__string name) {
-    AttackType ret = new AttackType(bridgePINVOKE.getAttackType(SWIGTYPE_p_std__string.getCPtr(name)), true);
+  public static Race getRace(string name) {
+    Race ret = new Race(bridgePINVOKE.getRace(name), true);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BWAPI__AttackType_t allAttackTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__AttackType_t ret = new SWIGTYPE_p_std__setT_BWAPI__AttackType_t(bridgePINVOKE.allAttackTypes(), false);
+  public static RaceSet allRaces() {
+    RaceSet ret = new RaceSet(bridgePINVOKE.allRaces(), false);
+    return ret;
+  }
+
+  public static void initRaces() {
+    bridgePINVOKE.initRaces();
+  }
+
+  public static Race Zerg {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Zerg_get();
+      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Race Terran {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Terran_get();
+      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Race Protoss {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Protoss_get();
+      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Race Random {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Random_get();
+      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Race Other {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Other_get();
+      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Race RaceNone {
+    get {
+      IntPtr cPtr = bridgePINVOKE.RaceNone_get();
+      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Race RaceUnknown {
+    get {
+      IntPtr cPtr = bridgePINVOKE.RaceUnknown_get();
+      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType getTechType(string name) {
+    TechType ret = new TechType(bridgePINVOKE.getTechType(name), true);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static TechTypeSet allTechTypes() {
+    TechTypeSet ret = new TechTypeSet(bridgePINVOKE.allTechTypes(), false);
+    return ret;
+  }
+
+  public static void initTechTypes() {
+    bridgePINVOKE.initTechTypes();
+  }
+
+  public static TechType Stim_Packs {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Stim_Packs_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeLockdown {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeLockdown_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeEMP_Shockwave {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeEMP_Shockwave_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Spider_Mines {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Spider_Mines_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Scanner_Sweep {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Scanner_Sweep_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Tank_Siege_Mode {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Tank_Siege_Mode_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Defensive_Matrix {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Defensive_Matrix_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeIrradiate {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeIrradiate_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeYamato_Gun {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeYamato_Gun_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Cloaking_Field {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Cloaking_Field_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Personnel_Cloaking {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Personnel_Cloaking_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Burrowing {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Burrowing_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Infestation {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Infestation_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeSpawn_Broodlings {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeSpawn_Broodlings_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeDark_Swarm {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeDark_Swarm_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypePlague {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypePlague_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeConsume {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeConsume_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeEnsnare {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeEnsnare_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeParasite {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeParasite_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypePsionic_Storm {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypePsionic_Storm_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Hallucination {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Hallucination_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Recall {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Recall_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeStasis_Field {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeStasis_Field_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Archon_Warp {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Archon_Warp_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeRestoration {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeRestoration_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeDisruption_Web {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeDisruption_Web_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeMind_Control {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeMind_Control_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Dark_Archon_Meld {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Dark_Archon_Meld_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeFeedback {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeFeedback_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeOptical_Flare {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeOptical_Flare_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeMaelstrom {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeMaelstrom_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Lurker_Aspect {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Lurker_Aspect_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType Healing {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Healing_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeNone {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeNone_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeUnknown {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeUnknown_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static TechType TechTypeNuclear_Strike {
+    get {
+      IntPtr cPtr = bridgePINVOKE.TechTypeNuclear_Strike_get();
+      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType getUpgradeType(string name) {
+    UpgradeType ret = new UpgradeType(bridgePINVOKE.getUpgradeType(name), true);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static UpgradeTypeSet allUpgradeTypes() {
+    UpgradeTypeSet ret = new UpgradeTypeSet(bridgePINVOKE.allUpgradeTypes(), false);
+    return ret;
+  }
+
+  public static void initUpgradeTypes() {
+    bridgePINVOKE.initUpgradeTypes();
+  }
+
+  public static UpgradeType Terran_Infantry_Armor {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Terran_Infantry_Armor_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Terran_Vehicle_Plating {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Terran_Vehicle_Plating_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Terran_Ship_Plating {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Terran_Ship_Plating_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Zerg_Carapace {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Zerg_Carapace_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Zerg_Flyer_Carapace {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Zerg_Flyer_Carapace_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Protoss_Armor {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Protoss_Armor_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Protoss_Plating {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Protoss_Plating_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Terran_Infantry_Weapons {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Terran_Infantry_Weapons_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Terran_Vehicle_Weapons {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Terran_Vehicle_Weapons_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Terran_Ship_Weapons {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Terran_Ship_Weapons_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Zerg_Melee_Attacks {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Zerg_Melee_Attacks_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Zerg_Missile_Attacks {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Zerg_Missile_Attacks_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Zerg_Flyer_Attacks {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Zerg_Flyer_Attacks_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Protoss_Ground_Weapons {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Protoss_Ground_Weapons_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Protoss_Air_Weapons {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Protoss_Air_Weapons_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Protoss_Plasma_Shields {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Protoss_Plasma_Shields_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType U_238_Shells {
+    get {
+      IntPtr cPtr = bridgePINVOKE.U_238_Shells_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Ion_Thrusters {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Ion_Thrusters_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Titan_Reactor {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Titan_Reactor_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Ocular_Implants {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Ocular_Implants_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Moebius_Reactor {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Moebius_Reactor_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Apollo_Reactor {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Apollo_Reactor_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Colossus_Reactor {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Colossus_Reactor_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Ventral_Sacs {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Ventral_Sacs_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Antennae {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Antennae_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Pneumatized_Carapace {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Pneumatized_Carapace_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Metabolic_Boost {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Metabolic_Boost_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Adrenal_Glands {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Adrenal_Glands_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Muscular_Augments {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Muscular_Augments_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Grooved_Spines {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Grooved_Spines_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Gamete_Meiosis {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Gamete_Meiosis_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Metasynaptic_Node {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Metasynaptic_Node_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Singularity_Charge {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Singularity_Charge_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Leg_Enhancements {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Leg_Enhancements_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Scarab_Damage {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Scarab_Damage_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Reaver_Capacity {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Reaver_Capacity_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Gravitic_Drive {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Gravitic_Drive_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Sensor_Array {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Sensor_Array_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Gravitic_Boosters {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Gravitic_Boosters_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Khaydarin_Amulet {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Khaydarin_Amulet_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Apial_Sensors {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Apial_Sensors_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Gravitic_Thrusters {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Gravitic_Thrusters_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Carrier_Capacity {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Carrier_Capacity_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Khaydarin_Core {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Khaydarin_Core_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Argus_Jewel {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Argus_Jewel_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Argus_Talisman {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Argus_Talisman_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Caduceus_Reactor {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Caduceus_Reactor_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Chitinous_Plating {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Chitinous_Plating_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Anabolic_Synthesis {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Anabolic_Synthesis_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType Charon_Booster {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Charon_Booster_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType UpgradeTypeNone {
+    get {
+      IntPtr cPtr = bridgePINVOKE.UpgradeTypeNone_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UpgradeType UpgradeTypeUnknown {
+    get {
+      IntPtr cPtr = bridgePINVOKE.UpgradeTypeUnknown_get();
+      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Position PositionInvalid {
+    get {
+      IntPtr cPtr = bridgePINVOKE.PositionInvalid_get();
+      Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Position PositionNone {
+    get {
+      IntPtr cPtr = bridgePINVOKE.PositionNone_get();
+      Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Position PositionUnknown {
+    get {
+      IntPtr cPtr = bridgePINVOKE.PositionUnknown_get();
+      Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static AttackType getAttackType(string name) {
+    AttackType ret = new AttackType(bridgePINVOKE.getAttackType(name), true);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static AttackTypeSet allAttackTypes() {
+    AttackTypeSet ret = new AttackTypeSet(bridgePINVOKE.allAttackTypes(), false);
     return ret;
   }
 
@@ -424,14 +1253,14 @@ public class bridge {
     } 
   }
 
-  public static DamageType getDamageType(SWIGTYPE_p_std__string name) {
-    DamageType ret = new DamageType(bridgePINVOKE.getDamageType(SWIGTYPE_p_std__string.getCPtr(name)), true);
+  public static DamageType getDamageType(string name) {
+    DamageType ret = new DamageType(bridgePINVOKE.getDamageType(name), true);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BWAPI__DamageType_t allDamageTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__DamageType_t ret = new SWIGTYPE_p_std__setT_BWAPI__DamageType_t(bridgePINVOKE.allDamageTypes(), false);
+  public static DamageTypeSet allDamageTypes() {
+    DamageTypeSet ret = new DamageTypeSet(bridgePINVOKE.allDamageTypes(), false);
     return ret;
   }
 
@@ -495,14 +1324,14 @@ public class bridge {
     } 
   }
 
-  public static Error getError(SWIGTYPE_p_std__string name) {
-    Error ret = new Error(bridgePINVOKE.getError(SWIGTYPE_p_std__string.getCPtr(name)), true);
+  public static Error getError(string name) {
+    Error ret = new Error(bridgePINVOKE.getError(name), true);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BWAPI__Error_t allErrors() {
-    SWIGTYPE_p_std__setT_BWAPI__Error_t ret = new SWIGTYPE_p_std__setT_BWAPI__Error_t(bridgePINVOKE.allErrors(), false);
+  public static ErrorSet allErrors() {
+    ErrorSet ret = new ErrorSet(bridgePINVOKE.allErrors(), false);
     return ret;
   }
 
@@ -678,14 +1507,14 @@ public class bridge {
     } 
   }
 
-  public static ExplosionType getExplosionType(SWIGTYPE_p_std__string name) {
-    ExplosionType ret = new ExplosionType(bridgePINVOKE.getExplosionType(SWIGTYPE_p_std__string.getCPtr(name)), true);
+  public static ExplosionType getExplosionType(string name) {
+    ExplosionType ret = new ExplosionType(bridgePINVOKE.getExplosionType(name), true);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t allExplosionTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t ret = new SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t(bridgePINVOKE.allExplosionTypes(), false);
+  public static ExplosionTypeSet allExplosionTypes() {
+    ExplosionTypeSet ret = new ExplosionTypeSet(bridgePINVOKE.allExplosionTypes(), false);
     return ret;
   }
 
@@ -911,14 +1740,14 @@ public class bridge {
     } 
   }
 
-  public static Order getOrder(SWIGTYPE_p_std__string name) {
-    Order ret = new Order(bridgePINVOKE.getOrder(SWIGTYPE_p_std__string.getCPtr(name)), true);
+  public static Order getOrder(string name) {
+    Order ret = new Order(bridgePINVOKE.getOrder(name), true);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BWAPI__Order_t allOrders() {
-    SWIGTYPE_p_std__setT_BWAPI__Order_t ret = new SWIGTYPE_p_std__setT_BWAPI__Order_t(bridgePINVOKE.allOrders(), false);
+  public static OrderSet allOrders() {
+    OrderSet ret = new OrderSet(bridgePINVOKE.allOrders(), false);
     return ret;
   }
 
@@ -2454,14 +3283,14 @@ public class bridge {
     } 
   }
 
-  public static PlayerType getPlayerType(SWIGTYPE_p_std__string name) {
-    PlayerType ret = new PlayerType(bridgePINVOKE.getPlayerType(SWIGTYPE_p_std__string.getCPtr(name)), true);
+  public static PlayerType getPlayerType(string name) {
+    PlayerType ret = new PlayerType(bridgePINVOKE.getPlayerType(name), true);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BWAPI__PlayerType_t allPlayerTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__PlayerType_t ret = new SWIGTYPE_p_std__setT_BWAPI__PlayerType_t(bridgePINVOKE.allPlayerTypes(), false);
+  public static PlayerTypeSet allPlayerTypes() {
+    PlayerTypeSet ret = new PlayerTypeSet(bridgePINVOKE.allPlayerTypes(), false);
     return ret;
   }
 
@@ -2565,404 +3394,6 @@ public class bridge {
     } 
   }
 
-  public static Position PositionInvalid {
-    get {
-      IntPtr cPtr = bridgePINVOKE.PositionInvalid_get();
-      Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Position PositionNone {
-    get {
-      IntPtr cPtr = bridgePINVOKE.PositionNone_get();
-      Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Position PositionUnknown {
-    get {
-      IntPtr cPtr = bridgePINVOKE.PositionUnknown_get();
-      Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Race getRace(SWIGTYPE_p_std__string name) {
-    Race ret = new Race(bridgePINVOKE.getRace(SWIGTYPE_p_std__string.getCPtr(name)), true);
-    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public static SWIGTYPE_p_std__setT_BWAPI__Race_t allRaces() {
-    SWIGTYPE_p_std__setT_BWAPI__Race_t ret = new SWIGTYPE_p_std__setT_BWAPI__Race_t(bridgePINVOKE.allRaces(), false);
-    return ret;
-  }
-
-  public static void initRaces() {
-    bridgePINVOKE.initRaces();
-  }
-
-  public static Race Zerg {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Zerg_get();
-      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Race Terran {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Terran_get();
-      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Race Protoss {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Protoss_get();
-      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Race Random {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Random_get();
-      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Race Other {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Other_get();
-      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Race RaceNone {
-    get {
-      IntPtr cPtr = bridgePINVOKE.RaceNone_get();
-      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Race RaceUnknown {
-    get {
-      IntPtr cPtr = bridgePINVOKE.RaceUnknown_get();
-      Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType getTechType(SWIGTYPE_p_std__string name) {
-    TechType ret = new TechType(bridgePINVOKE.getTechType(SWIGTYPE_p_std__string.getCPtr(name)), true);
-    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public static SWIGTYPE_p_std__setT_BWAPI__TechType_t allTechTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__TechType_t ret = new SWIGTYPE_p_std__setT_BWAPI__TechType_t(bridgePINVOKE.allTechTypes(), false);
-    return ret;
-  }
-
-  public static void initTechTypes() {
-    bridgePINVOKE.initTechTypes();
-  }
-
-  public static TechType Stim_Packs {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Stim_Packs_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeLockdown {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeLockdown_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeEMP_Shockwave {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeEMP_Shockwave_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Spider_Mines {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Spider_Mines_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Scanner_Sweep {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Scanner_Sweep_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Tank_Siege_Mode {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Tank_Siege_Mode_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Defensive_Matrix {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Defensive_Matrix_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeIrradiate {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeIrradiate_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeYamato_Gun {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeYamato_Gun_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Cloaking_Field {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Cloaking_Field_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Personnel_Cloaking {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Personnel_Cloaking_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Burrowing {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Burrowing_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Infestation {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Infestation_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeSpawn_Broodlings {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeSpawn_Broodlings_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeDark_Swarm {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeDark_Swarm_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypePlague {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypePlague_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeConsume {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeConsume_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeEnsnare {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeEnsnare_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeParasite {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeParasite_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypePsionic_Storm {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypePsionic_Storm_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Hallucination {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Hallucination_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Recall {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Recall_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeStasis_Field {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeStasis_Field_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Archon_Warp {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Archon_Warp_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeRestoration {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeRestoration_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeDisruption_Web {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeDisruption_Web_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeMind_Control {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeMind_Control_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Dark_Archon_Meld {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Dark_Archon_Meld_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeFeedback {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeFeedback_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeOptical_Flare {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeOptical_Flare_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeMaelstrom {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeMaelstrom_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Lurker_Aspect {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Lurker_Aspect_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType Healing {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Healing_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeNone {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeNone_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeUnknown {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeUnknown_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static TechType TechTypeNuclear_Strike {
-    get {
-      IntPtr cPtr = bridgePINVOKE.TechTypeNuclear_Strike_get();
-      TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-      return ret;
-    } 
-  }
-
   public static TilePosition TilePositionInvalid {
     get {
       IntPtr cPtr = bridgePINVOKE.TilePositionInvalid_get();
@@ -2987,14 +3418,14 @@ public class bridge {
     } 
   }
 
-  public static UnitSizeType getUnitSizeType(SWIGTYPE_p_std__string name) {
-    UnitSizeType ret = new UnitSizeType(bridgePINVOKE.getUnitSizeType(SWIGTYPE_p_std__string.getCPtr(name)), true);
+  public static UnitSizeType getUnitSizeType(string name) {
+    UnitSizeType ret = new UnitSizeType(bridgePINVOKE.getUnitSizeType(name), true);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t allUnitSizeTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t ret = new SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t(bridgePINVOKE.allUnitSizeTypes(), false);
+  public static UnitSizeTypeSet allUnitSizeTypes() {
+    UnitSizeTypeSet ret = new UnitSizeTypeSet(bridgePINVOKE.allUnitSizeTypes(), false);
     return ret;
   }
 
@@ -3050,14 +3481,14 @@ public class bridge {
     } 
   }
 
-  public static UnitType getUnitType(SWIGTYPE_p_std__string name) {
-    UnitType ret = new UnitType(bridgePINVOKE.getUnitType(SWIGTYPE_p_std__string.getCPtr(name)), true);
+  public static UnitType getUnitType(string name) {
+    UnitType ret = new UnitType(bridgePINVOKE.getUnitType(name), true);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BWAPI__UnitType_t allUnitTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__UnitType_t ret = new SWIGTYPE_p_std__setT_BWAPI__UnitType_t(bridgePINVOKE.allUnitTypes(), false);
+  public static UnitTypeSet allUnitTypes() {
+    UnitTypeSet ret = new UnitTypeSet(bridgePINVOKE.allUnitTypes(), false);
     return ret;
   }
 
@@ -4097,455 +4528,24 @@ public class bridge {
     } 
   }
 
-  public static UpgradeType getUpgradeType(SWIGTYPE_p_std__string name) {
-    UpgradeType ret = new UpgradeType(bridgePINVOKE.getUpgradeType(SWIGTYPE_p_std__string.getCPtr(name)), true);
+  public static WeaponType getWeaponType(string name) {
+    WeaponType ret = new WeaponType(bridgePINVOKE.getWeaponType(name), true);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t allUpgradeTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t ret = new SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t(bridgePINVOKE.allUpgradeTypes(), false);
+  public static WeaponTypeSet allWeaponTypes() {
+    WeaponTypeSet ret = new WeaponTypeSet(bridgePINVOKE.allWeaponTypes(), false);
     return ret;
   }
 
-  public static void initUpgradeTypes() {
-    bridgePINVOKE.initUpgradeTypes();
-  }
-
-  public static UpgradeType Terran_Infantry_Armor {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Terran_Infantry_Armor_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Terran_Vehicle_Plating {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Terran_Vehicle_Plating_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Terran_Ship_Plating {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Terran_Ship_Plating_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Zerg_Carapace {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Zerg_Carapace_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Zerg_Flyer_Carapace {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Zerg_Flyer_Carapace_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Protoss_Armor {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Protoss_Armor_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Protoss_Plating {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Protoss_Plating_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Terran_Infantry_Weapons {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Terran_Infantry_Weapons_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Terran_Vehicle_Weapons {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Terran_Vehicle_Weapons_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Terran_Ship_Weapons {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Terran_Ship_Weapons_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Zerg_Melee_Attacks {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Zerg_Melee_Attacks_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Zerg_Missile_Attacks {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Zerg_Missile_Attacks_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Zerg_Flyer_Attacks {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Zerg_Flyer_Attacks_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Protoss_Ground_Weapons {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Protoss_Ground_Weapons_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Protoss_Air_Weapons {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Protoss_Air_Weapons_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Protoss_Plasma_Shields {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Protoss_Plasma_Shields_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType U_238_Shells {
-    get {
-      IntPtr cPtr = bridgePINVOKE.U_238_Shells_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Ion_Thrusters {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Ion_Thrusters_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Titan_Reactor {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Titan_Reactor_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Ocular_Implants {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Ocular_Implants_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Moebius_Reactor {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Moebius_Reactor_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Apollo_Reactor {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Apollo_Reactor_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Colossus_Reactor {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Colossus_Reactor_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Ventral_Sacs {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Ventral_Sacs_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Antennae {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Antennae_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Pneumatized_Carapace {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Pneumatized_Carapace_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Metabolic_Boost {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Metabolic_Boost_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Adrenal_Glands {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Adrenal_Glands_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Muscular_Augments {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Muscular_Augments_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Grooved_Spines {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Grooved_Spines_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Gamete_Meiosis {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Gamete_Meiosis_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Metasynaptic_Node {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Metasynaptic_Node_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Singularity_Charge {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Singularity_Charge_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Leg_Enhancements {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Leg_Enhancements_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Scarab_Damage {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Scarab_Damage_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Reaver_Capacity {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Reaver_Capacity_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Gravitic_Drive {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Gravitic_Drive_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Sensor_Array {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Sensor_Array_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Gravitic_Boosters {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Gravitic_Boosters_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Khaydarin_Amulet {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Khaydarin_Amulet_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Apial_Sensors {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Apial_Sensors_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Gravitic_Thrusters {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Gravitic_Thrusters_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Carrier_Capacity {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Carrier_Capacity_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Khaydarin_Core {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Khaydarin_Core_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Argus_Jewel {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Argus_Jewel_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Argus_Talisman {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Argus_Talisman_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Caduceus_Reactor {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Caduceus_Reactor_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Chitinous_Plating {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Chitinous_Plating_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Anabolic_Synthesis {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Anabolic_Synthesis_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType Charon_Booster {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Charon_Booster_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType UpgradeTypeNone {
-    get {
-      IntPtr cPtr = bridgePINVOKE.UpgradeTypeNone_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static UpgradeType UpgradeTypeUnknown {
-    get {
-      IntPtr cPtr = bridgePINVOKE.UpgradeTypeUnknown_get();
-      UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static WeaponType getWeaponType(SWIGTYPE_p_std__string name) {
-    WeaponType ret = new WeaponType(bridgePINVOKE.getWeaponType(SWIGTYPE_p_std__string.getCPtr(name)), true);
-    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+  public static WeaponTypeSet normalWeaponTypes() {
+    WeaponTypeSet ret = new WeaponTypeSet(bridgePINVOKE.normalWeaponTypes(), false);
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BWAPI__WeaponType_t allWeaponTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__WeaponType_t ret = new SWIGTYPE_p_std__setT_BWAPI__WeaponType_t(bridgePINVOKE.allWeaponTypes(), false);
-    return ret;
-  }
-
-  public static SWIGTYPE_p_std__setT_BWAPI__WeaponType_t normalWeaponTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__WeaponType_t ret = new SWIGTYPE_p_std__setT_BWAPI__WeaponType_t(bridgePINVOKE.normalWeaponTypes(), false);
-    return ret;
-  }
-
-  public static SWIGTYPE_p_std__setT_BWAPI__WeaponType_t specialWeaponTypes() {
-    SWIGTYPE_p_std__setT_BWAPI__WeaponType_t ret = new SWIGTYPE_p_std__setT_BWAPI__WeaponType_t(bridgePINVOKE.specialWeaponTypes(), false);
+  public static WeaponTypeSet specialWeaponTypes() {
+    WeaponTypeSet ret = new WeaponTypeSet(bridgePINVOKE.specialWeaponTypes(), false);
     return ret;
   }
 
@@ -5065,28 +5065,28 @@ public class bridge {
     bridgePINVOKE.analyze();
   }
 
-  public static SWIGTYPE_p_std__setT_Region_p_t getRegions() {
-    SWIGTYPE_p_std__setT_Region_p_t ret = new SWIGTYPE_p_std__setT_Region_p_t(bridgePINVOKE.getRegions(), false);
+  public static RegionPtrSet getRegions() {
+    RegionPtrSet ret = new RegionPtrSet(bridgePINVOKE.getRegions(), false);
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_Chokepoint_p_t getChokepoints() {
-    SWIGTYPE_p_std__setT_Chokepoint_p_t ret = new SWIGTYPE_p_std__setT_Chokepoint_p_t(bridgePINVOKE.getChokepoints(), false);
+  public static ChokepointPtrSet getChokepoints() {
+    ChokepointPtrSet ret = new ChokepointPtrSet(bridgePINVOKE.getChokepoints(), false);
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BaseLocation_p_t getBaseLocations() {
-    SWIGTYPE_p_std__setT_BaseLocation_p_t ret = new SWIGTYPE_p_std__setT_BaseLocation_p_t(bridgePINVOKE.getBaseLocations(), false);
+  public static BaseLocationPtrSet getBaseLocations() {
+    BaseLocationPtrSet ret = new BaseLocationPtrSet(bridgePINVOKE.getBaseLocations(), false);
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_BaseLocation_p_t getStartLocations() {
-    SWIGTYPE_p_std__setT_BaseLocation_p_t ret = new SWIGTYPE_p_std__setT_BaseLocation_p_t(bridgePINVOKE.getStartLocations(), false);
+  public static BaseLocationPtrSet getStartLocations() {
+    BaseLocationPtrSet ret = new BaseLocationPtrSet(bridgePINVOKE.getStartLocations(), false);
     return ret;
   }
 
-  public static SWIGTYPE_p_std__setT_Polygon_p_t getUnwalkablePolygons() {
-    SWIGTYPE_p_std__setT_Polygon_p_t ret = new SWIGTYPE_p_std__setT_Polygon_p_t(bridgePINVOKE.getUnwalkablePolygons(), false);
+  public static PolygonPtrSet getUnwalkablePolygons() {
+    PolygonPtrSet ret = new PolygonPtrSet(bridgePINVOKE.getUnwalkablePolygons(), false);
     return ret;
   }
 
@@ -5096,15 +5096,15 @@ public class bridge {
     return ret;
   }
 
-  public static SWIGTYPE_p_BaseLocation getStartLocation(Player player) {
+  public static BaseLocation getStartLocation(Player player) {
     IntPtr cPtr = bridgePINVOKE.getStartLocation(Player.getCPtr(player));
-    SWIGTYPE_p_BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_BaseLocation(cPtr, false);
+    BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
     return ret;
   }
 
-  public static SWIGTYPE_p_BaseLocation getNearestBaseLocation(TilePosition position) {
+  public static BaseLocation getNearestBaseLocation(TilePosition position) {
     IntPtr cPtr = bridgePINVOKE.getNearestBaseLocation(TilePosition.getCPtr(position));
-    SWIGTYPE_p_BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_BaseLocation(cPtr, false);
+    BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -51,18 +51,18 @@ public class Player : IDisposable {
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getUnits() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.Player_getUnits(swigCPtr), false);
+  public virtual UnitSet getUnits() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Player_getUnits(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_Race getRace() {
-    SWIGTYPE_p_Race ret = new SWIGTYPE_p_Race(bridgePINVOKE.Player_getRace(swigCPtr), true);
+  public virtual Race getRace() {
+    Race ret = new Race(bridgePINVOKE.Player_getRace(swigCPtr), true);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_PlayerType playerType() {
-    SWIGTYPE_p_PlayerType ret = new SWIGTYPE_p_PlayerType(bridgePINVOKE.Player_playerType(swigCPtr), true);
+  public virtual PlayerType playerType() {
+    PlayerType ret = new PlayerType(bridgePINVOKE.Player_playerType(swigCPtr), true);
     return ret;
   }
 
@@ -87,8 +87,8 @@ public class Player : IDisposable {
     return ret;
   }
 
-  public virtual SWIGTYPE_p_TilePosition getStartLocation() {
-    SWIGTYPE_p_TilePosition ret = new SWIGTYPE_p_TilePosition(bridgePINVOKE.Player_getStartLocation(swigCPtr), true);
+  public virtual TilePosition getStartLocation() {
+    TilePosition ret = new TilePosition(bridgePINVOKE.Player_getStartLocation(swigCPtr), true);
     return ret;
   }
 
@@ -127,14 +127,14 @@ public class Player : IDisposable {
     return ret;
   }
 
-  public virtual int supplyTotal(SWIGTYPE_p_Race race) {
-    int ret = bridgePINVOKE.Player_supplyTotal__SWIG_1(swigCPtr, SWIGTYPE_p_Race.getCPtr(race));
+  public virtual int supplyTotal(Race race) {
+    int ret = bridgePINVOKE.Player_supplyTotal__SWIG_1(swigCPtr, Race.getCPtr(race));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual int supplyUsed(SWIGTYPE_p_Race race) {
-    int ret = bridgePINVOKE.Player_supplyUsed__SWIG_1(swigCPtr, SWIGTYPE_p_Race.getCPtr(race));
+  public virtual int supplyUsed(Race race) {
+    int ret = bridgePINVOKE.Player_supplyUsed__SWIG_1(swigCPtr, Race.getCPtr(race));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -169,26 +169,26 @@ public class Player : IDisposable {
     return ret;
   }
 
-  public virtual int getUpgradeLevel(SWIGTYPE_p_UpgradeType upgrade) {
-    int ret = bridgePINVOKE.Player_getUpgradeLevel(swigCPtr, SWIGTYPE_p_UpgradeType.getCPtr(upgrade));
+  public virtual int getUpgradeLevel(UpgradeType upgrade) {
+    int ret = bridgePINVOKE.Player_getUpgradeLevel(swigCPtr, UpgradeType.getCPtr(upgrade));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool hasResearched(SWIGTYPE_p_TechType tech) {
-    bool ret = bridgePINVOKE.Player_hasResearched(swigCPtr, SWIGTYPE_p_TechType.getCPtr(tech));
+  public virtual bool hasResearched(TechType tech) {
+    bool ret = bridgePINVOKE.Player_hasResearched(swigCPtr, TechType.getCPtr(tech));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool isResearching(SWIGTYPE_p_TechType tech) {
-    bool ret = bridgePINVOKE.Player_isResearching(swigCPtr, SWIGTYPE_p_TechType.getCPtr(tech));
+  public virtual bool isResearching(TechType tech) {
+    bool ret = bridgePINVOKE.Player_isResearching(swigCPtr, TechType.getCPtr(tech));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool isUpgrading(SWIGTYPE_p_UpgradeType upgrade) {
-    bool ret = bridgePINVOKE.Player_isUpgrading(swigCPtr, SWIGTYPE_p_UpgradeType.getCPtr(upgrade));
+  public virtual bool isUpgrading(UpgradeType upgrade) {
+    bool ret = bridgePINVOKE.Player_isUpgrading(swigCPtr, UpgradeType.getCPtr(upgrade));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

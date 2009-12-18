@@ -112,8 +112,8 @@ public class TechType : IDisposable {
     return ret;
   }
 
-  public SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t whatUses() {
-    SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t(bridgePINVOKE.TechType_whatUses(swigCPtr), false);
+  public UnitTypePtrSet whatUses() {
+    UnitTypePtrSet ret = new UnitTypePtrSet(bridgePINVOKE.TechType_whatUses(swigCPtr), false);
     return ret;
   }
 

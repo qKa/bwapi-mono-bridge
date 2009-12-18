@@ -188,6 +188,525 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_BWAPI_init")]
   public static extern void BWAPI_init();
 
+  [DllImport("__Internal", EntryPoint="CSharp_new_Race__SWIG_0")]
+  public static extern IntPtr new_Race__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_Race__SWIG_1")]
+  public static extern IntPtr new_Race__SWIG_1(int jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_Race__SWIG_2")]
+  public static extern IntPtr new_Race__SWIG_2(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_opAssign")]
+  public static extern IntPtr Race_opAssign(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_opEquals")]
+  public static extern bool Race_opEquals(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_opNotEquals")]
+  public static extern bool Race_opNotEquals(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_opLessThan")]
+  public static extern bool Race_opLessThan(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_getID")]
+  public static extern int Race_getID(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_getName")]
+  public static extern string Race_getName(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_getWorker")]
+  public static extern IntPtr Race_getWorker(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_getCenter")]
+  public static extern IntPtr Race_getCenter(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_getRefinery")]
+  public static extern IntPtr Race_getRefinery(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_getTransport")]
+  public static extern IntPtr Race_getTransport(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Race_getSupplyProvider")]
+  public static extern IntPtr Race_getSupplyProvider(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_Race")]
+  public static extern void delete_Race(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getRace")]
+  public static extern IntPtr getRace(string jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_allRaces")]
+  public static extern IntPtr allRaces();
+
+  [DllImport("__Internal", EntryPoint="CSharp_initRaces")]
+  public static extern void initRaces();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Zerg_get")]
+  public static extern IntPtr Zerg_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Terran_get")]
+  public static extern IntPtr Terran_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Protoss_get")]
+  public static extern IntPtr Protoss_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Random_get")]
+  public static extern IntPtr Random_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Other_get")]
+  public static extern IntPtr Other_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceNone_get")]
+  public static extern IntPtr RaceNone_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceUnknown_get")]
+  public static extern IntPtr RaceUnknown_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TechType__SWIG_0")]
+  public static extern IntPtr new_TechType__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TechType__SWIG_1")]
+  public static extern IntPtr new_TechType__SWIG_1(int jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TechType__SWIG_2")]
+  public static extern IntPtr new_TechType__SWIG_2(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_opAssign")]
+  public static extern IntPtr TechType_opAssign(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_opEquals")]
+  public static extern bool TechType_opEquals(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_opNotEquals")]
+  public static extern bool TechType_opNotEquals(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_opLessThan")]
+  public static extern bool TechType_opLessThan(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_getID")]
+  public static extern int TechType_getID(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_getName")]
+  public static extern string TechType_getName(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_mineralPrice")]
+  public static extern int TechType_mineralPrice(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_gasPrice")]
+  public static extern int TechType_gasPrice(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_energyUsed")]
+  public static extern int TechType_energyUsed(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_whatResearches")]
+  public static extern IntPtr TechType_whatResearches(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_getWeapon")]
+  public static extern IntPtr TechType_getWeapon(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechType_whatUses")]
+  public static extern IntPtr TechType_whatUses(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_TechType")]
+  public static extern void delete_TechType(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getTechType")]
+  public static extern IntPtr getTechType(string jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_allTechTypes")]
+  public static extern IntPtr allTechTypes();
+
+  [DllImport("__Internal", EntryPoint="CSharp_initTechTypes")]
+  public static extern void initTechTypes();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Stim_Packs_get")]
+  public static extern IntPtr Stim_Packs_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeLockdown_get")]
+  public static extern IntPtr TechTypeLockdown_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeEMP_Shockwave_get")]
+  public static extern IntPtr TechTypeEMP_Shockwave_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Spider_Mines_get")]
+  public static extern IntPtr Spider_Mines_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Scanner_Sweep_get")]
+  public static extern IntPtr Scanner_Sweep_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Tank_Siege_Mode_get")]
+  public static extern IntPtr Tank_Siege_Mode_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Defensive_Matrix_get")]
+  public static extern IntPtr Defensive_Matrix_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeIrradiate_get")]
+  public static extern IntPtr TechTypeIrradiate_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeYamato_Gun_get")]
+  public static extern IntPtr TechTypeYamato_Gun_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Cloaking_Field_get")]
+  public static extern IntPtr Cloaking_Field_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Personnel_Cloaking_get")]
+  public static extern IntPtr Personnel_Cloaking_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Burrowing_get")]
+  public static extern IntPtr Burrowing_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Infestation_get")]
+  public static extern IntPtr Infestation_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSpawn_Broodlings_get")]
+  public static extern IntPtr TechTypeSpawn_Broodlings_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeDark_Swarm_get")]
+  public static extern IntPtr TechTypeDark_Swarm_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePlague_get")]
+  public static extern IntPtr TechTypePlague_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeConsume_get")]
+  public static extern IntPtr TechTypeConsume_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeEnsnare_get")]
+  public static extern IntPtr TechTypeEnsnare_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeParasite_get")]
+  public static extern IntPtr TechTypeParasite_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePsionic_Storm_get")]
+  public static extern IntPtr TechTypePsionic_Storm_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Hallucination_get")]
+  public static extern IntPtr Hallucination_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Recall_get")]
+  public static extern IntPtr Recall_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeStasis_Field_get")]
+  public static extern IntPtr TechTypeStasis_Field_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Archon_Warp_get")]
+  public static extern IntPtr Archon_Warp_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeRestoration_get")]
+  public static extern IntPtr TechTypeRestoration_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeDisruption_Web_get")]
+  public static extern IntPtr TechTypeDisruption_Web_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeMind_Control_get")]
+  public static extern IntPtr TechTypeMind_Control_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Dark_Archon_Meld_get")]
+  public static extern IntPtr Dark_Archon_Meld_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeFeedback_get")]
+  public static extern IntPtr TechTypeFeedback_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeOptical_Flare_get")]
+  public static extern IntPtr TechTypeOptical_Flare_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeMaelstrom_get")]
+  public static extern IntPtr TechTypeMaelstrom_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Lurker_Aspect_get")]
+  public static extern IntPtr Lurker_Aspect_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Healing_get")]
+  public static extern IntPtr Healing_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeNone_get")]
+  public static extern IntPtr TechTypeNone_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeUnknown_get")]
+  public static extern IntPtr TechTypeUnknown_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeNuclear_Strike_get")]
+  public static extern IntPtr TechTypeNuclear_Strike_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeType__SWIG_0")]
+  public static extern IntPtr new_UpgradeType__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeType__SWIG_1")]
+  public static extern IntPtr new_UpgradeType__SWIG_1(int jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeType__SWIG_2")]
+  public static extern IntPtr new_UpgradeType__SWIG_2(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_opAssign")]
+  public static extern IntPtr UpgradeType_opAssign(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_opEquals")]
+  public static extern bool UpgradeType_opEquals(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_opNotEquals")]
+  public static extern bool UpgradeType_opNotEquals(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_opLessThan")]
+  public static extern bool UpgradeType_opLessThan(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_getID")]
+  public static extern int UpgradeType_getID(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_getName")]
+  public static extern string UpgradeType_getName(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_getRace")]
+  public static extern IntPtr UpgradeType_getRace(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_mineralPriceBase")]
+  public static extern int UpgradeType_mineralPriceBase(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_mineralPriceFactor")]
+  public static extern int UpgradeType_mineralPriceFactor(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_gasPriceBase")]
+  public static extern int UpgradeType_gasPriceBase(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_gasPriceFactor")]
+  public static extern int UpgradeType_gasPriceFactor(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_upgradeTimeBase")]
+  public static extern int UpgradeType_upgradeTimeBase(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_upgradeTimeFactor")]
+  public static extern int UpgradeType_upgradeTimeFactor(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_maxRepeats")]
+  public static extern int UpgradeType_maxRepeats(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_whatUpgrades")]
+  public static extern IntPtr UpgradeType_whatUpgrades(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_whatUses")]
+  public static extern IntPtr UpgradeType_whatUses(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_UpgradeType")]
+  public static extern void delete_UpgradeType(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getUpgradeType")]
+  public static extern IntPtr getUpgradeType(string jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_allUpgradeTypes")]
+  public static extern IntPtr allUpgradeTypes();
+
+  [DllImport("__Internal", EntryPoint="CSharp_initUpgradeTypes")]
+  public static extern void initUpgradeTypes();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Terran_Infantry_Armor_get")]
+  public static extern IntPtr Terran_Infantry_Armor_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Terran_Vehicle_Plating_get")]
+  public static extern IntPtr Terran_Vehicle_Plating_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Terran_Ship_Plating_get")]
+  public static extern IntPtr Terran_Ship_Plating_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Zerg_Carapace_get")]
+  public static extern IntPtr Zerg_Carapace_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Zerg_Flyer_Carapace_get")]
+  public static extern IntPtr Zerg_Flyer_Carapace_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Protoss_Armor_get")]
+  public static extern IntPtr Protoss_Armor_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Protoss_Plating_get")]
+  public static extern IntPtr Protoss_Plating_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Terran_Infantry_Weapons_get")]
+  public static extern IntPtr Terran_Infantry_Weapons_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Terran_Vehicle_Weapons_get")]
+  public static extern IntPtr Terran_Vehicle_Weapons_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Terran_Ship_Weapons_get")]
+  public static extern IntPtr Terran_Ship_Weapons_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Zerg_Melee_Attacks_get")]
+  public static extern IntPtr Zerg_Melee_Attacks_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Zerg_Missile_Attacks_get")]
+  public static extern IntPtr Zerg_Missile_Attacks_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Zerg_Flyer_Attacks_get")]
+  public static extern IntPtr Zerg_Flyer_Attacks_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Protoss_Ground_Weapons_get")]
+  public static extern IntPtr Protoss_Ground_Weapons_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Protoss_Air_Weapons_get")]
+  public static extern IntPtr Protoss_Air_Weapons_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Protoss_Plasma_Shields_get")]
+  public static extern IntPtr Protoss_Plasma_Shields_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_U_238_Shells_get")]
+  public static extern IntPtr U_238_Shells_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Ion_Thrusters_get")]
+  public static extern IntPtr Ion_Thrusters_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Titan_Reactor_get")]
+  public static extern IntPtr Titan_Reactor_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Ocular_Implants_get")]
+  public static extern IntPtr Ocular_Implants_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Moebius_Reactor_get")]
+  public static extern IntPtr Moebius_Reactor_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Apollo_Reactor_get")]
+  public static extern IntPtr Apollo_Reactor_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Colossus_Reactor_get")]
+  public static extern IntPtr Colossus_Reactor_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Ventral_Sacs_get")]
+  public static extern IntPtr Ventral_Sacs_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Antennae_get")]
+  public static extern IntPtr Antennae_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Pneumatized_Carapace_get")]
+  public static extern IntPtr Pneumatized_Carapace_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Metabolic_Boost_get")]
+  public static extern IntPtr Metabolic_Boost_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Adrenal_Glands_get")]
+  public static extern IntPtr Adrenal_Glands_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Muscular_Augments_get")]
+  public static extern IntPtr Muscular_Augments_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Grooved_Spines_get")]
+  public static extern IntPtr Grooved_Spines_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Gamete_Meiosis_get")]
+  public static extern IntPtr Gamete_Meiosis_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Metasynaptic_Node_get")]
+  public static extern IntPtr Metasynaptic_Node_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Singularity_Charge_get")]
+  public static extern IntPtr Singularity_Charge_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Leg_Enhancements_get")]
+  public static extern IntPtr Leg_Enhancements_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Scarab_Damage_get")]
+  public static extern IntPtr Scarab_Damage_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Reaver_Capacity_get")]
+  public static extern IntPtr Reaver_Capacity_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Gravitic_Drive_get")]
+  public static extern IntPtr Gravitic_Drive_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Sensor_Array_get")]
+  public static extern IntPtr Sensor_Array_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Gravitic_Boosters_get")]
+  public static extern IntPtr Gravitic_Boosters_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Khaydarin_Amulet_get")]
+  public static extern IntPtr Khaydarin_Amulet_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Apial_Sensors_get")]
+  public static extern IntPtr Apial_Sensors_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Gravitic_Thrusters_get")]
+  public static extern IntPtr Gravitic_Thrusters_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Carrier_Capacity_get")]
+  public static extern IntPtr Carrier_Capacity_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Khaydarin_Core_get")]
+  public static extern IntPtr Khaydarin_Core_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Argus_Jewel_get")]
+  public static extern IntPtr Argus_Jewel_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Argus_Talisman_get")]
+  public static extern IntPtr Argus_Talisman_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Caduceus_Reactor_get")]
+  public static extern IntPtr Caduceus_Reactor_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Chitinous_Plating_get")]
+  public static extern IntPtr Chitinous_Plating_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Anabolic_Synthesis_get")]
+  public static extern IntPtr Anabolic_Synthesis_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Charon_Booster_get")]
+  public static extern IntPtr Charon_Booster_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeNone_get")]
+  public static extern IntPtr UpgradeTypeNone_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeUnknown_get")]
+  public static extern IntPtr UpgradeTypeUnknown_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_Position__SWIG_0")]
+  public static extern IntPtr new_Position__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_Position__SWIG_1")]
+  public static extern IntPtr new_Position__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_Position__SWIG_2")]
+  public static extern IntPtr new_Position__SWIG_2(int jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_opEquals")]
+  public static extern bool Position_opEquals(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_opNotEquals")]
+  public static extern bool Position_opNotEquals(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_opLessThan")]
+  public static extern bool Position_opLessThan(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_opPlus")]
+  public static extern IntPtr Position_opPlus(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_opMinus")]
+  public static extern IntPtr Position_opMinus(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_getDistance")]
+  public static extern double Position_getDistance(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_getLength")]
+  public static extern double Position_getLength(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_x")]
+  public static extern IntPtr Position_x(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_y")]
+  public static extern IntPtr Position_y(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_xConst")]
+  public static extern int Position_xConst(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_yConst")]
+  public static extern int Position_yConst(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_Position")]
+  public static extern void delete_Position(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionInvalid_get")]
+  public static extern IntPtr PositionInvalid_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionNone_get")]
+  public static extern IntPtr PositionNone_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionUnknown_get")]
+  public static extern IntPtr PositionUnknown_get();
+
   [DllImport("__Internal", EntryPoint="CSharp_new_AIModule")]
   public static extern IntPtr new_AIModule();
 
@@ -261,7 +780,7 @@ class bridgePINVOKE {
   public static extern void delete_AttackType(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_getAttackType")]
-  public static extern IntPtr getAttackType(HandleRef jarg1);
+  public static extern IntPtr getAttackType(string jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_allAttackTypes")]
   public static extern IntPtr allAttackTypes();
@@ -489,7 +1008,7 @@ class bridgePINVOKE {
   public static extern void delete_DamageType(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_getDamageType")]
-  public static extern IntPtr getDamageType(HandleRef jarg1);
+  public static extern IntPtr getDamageType(string jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_allDamageTypes")]
   public static extern IntPtr allDamageTypes();
@@ -549,7 +1068,7 @@ class bridgePINVOKE {
   public static extern void delete_Error(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_getError")]
-  public static extern IntPtr getError(HandleRef jarg1);
+  public static extern IntPtr getError(string jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_allErrors")]
   public static extern IntPtr allErrors();
@@ -651,7 +1170,7 @@ class bridgePINVOKE {
   public static extern void delete_ExplosionType(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_getExplosionType")]
-  public static extern IntPtr getExplosionType(HandleRef jarg1);
+  public static extern IntPtr getExplosionType(string jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_allExplosionTypes")]
   public static extern IntPtr allExplosionTypes();
@@ -1089,7 +1608,7 @@ class bridgePINVOKE {
   public static extern void delete_Order(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_getOrder")]
-  public static extern IntPtr getOrder(HandleRef jarg1);
+  public static extern IntPtr getOrder(string jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_allOrders")]
   public static extern IntPtr allOrders();
@@ -1670,6 +2189,81 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_OrderUnknown_get")]
   public static extern IntPtr OrderUnknown_get();
 
+  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerType__SWIG_0")]
+  public static extern IntPtr new_PlayerType__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerType__SWIG_1")]
+  public static extern IntPtr new_PlayerType__SWIG_1(int jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerType__SWIG_2")]
+  public static extern IntPtr new_PlayerType__SWIG_2(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_opAssign")]
+  public static extern IntPtr PlayerType_opAssign(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_opEquals")]
+  public static extern bool PlayerType_opEquals(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_opNotEquals")]
+  public static extern bool PlayerType_opNotEquals(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_opLessThan")]
+  public static extern bool PlayerType_opLessThan(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_getID")]
+  public static extern int PlayerType_getID(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_getName")]
+  public static extern string PlayerType_getName(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_PlayerType")]
+  public static extern void delete_PlayerType(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getPlayerType")]
+  public static extern IntPtr getPlayerType(string jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_allPlayerTypes")]
+  public static extern IntPtr allPlayerTypes();
+
+  [DllImport("__Internal", EntryPoint="CSharp_initPlayerTypes")]
+  public static extern void initPlayerTypes();
+
+  [DllImport("__Internal", EntryPoint="CSharp_NotUsed_get")]
+  public static extern IntPtr NotUsed_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Computer_get")]
+  public static extern IntPtr Computer_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Human_get")]
+  public static extern IntPtr Human_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Rescuable_get")]
+  public static extern IntPtr Rescuable_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_ComputerSlot_get")]
+  public static extern IntPtr ComputerSlot_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_OpenSlot_get")]
+  public static extern IntPtr OpenSlot_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeNeutral_get")]
+  public static extern IntPtr PlayerTypeNeutral_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_ClosedSlot_get")]
+  public static extern IntPtr ClosedSlot_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_HumanDefeated_get")]
+  public static extern IntPtr HumanDefeated_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_ComputerDefeated_get")]
+  public static extern IntPtr ComputerDefeated_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeNone_get")]
+  public static extern IntPtr PlayerTypeNone_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeUnknown_get")]
+  public static extern IntPtr PlayerTypeUnknown_get();
+
   [DllImport("__Internal", EntryPoint="CSharp_Player_getID")]
   public static extern int Player_getID(HandleRef jarg1);
 
@@ -1756,375 +2350,6 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_Player")]
   public static extern void delete_Player(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerType__SWIG_0")]
-  public static extern IntPtr new_PlayerType__SWIG_0();
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerType__SWIG_1")]
-  public static extern IntPtr new_PlayerType__SWIG_1(int jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerType__SWIG_2")]
-  public static extern IntPtr new_PlayerType__SWIG_2(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_opAssign")]
-  public static extern IntPtr PlayerType_opAssign(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_opEquals")]
-  public static extern bool PlayerType_opEquals(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_opNotEquals")]
-  public static extern bool PlayerType_opNotEquals(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_opLessThan")]
-  public static extern bool PlayerType_opLessThan(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_getID")]
-  public static extern int PlayerType_getID(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerType_getName")]
-  public static extern string PlayerType_getName(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_PlayerType")]
-  public static extern void delete_PlayerType(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_getPlayerType")]
-  public static extern IntPtr getPlayerType(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_allPlayerTypes")]
-  public static extern IntPtr allPlayerTypes();
-
-  [DllImport("__Internal", EntryPoint="CSharp_initPlayerTypes")]
-  public static extern void initPlayerTypes();
-
-  [DllImport("__Internal", EntryPoint="CSharp_NotUsed_get")]
-  public static extern IntPtr NotUsed_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Computer_get")]
-  public static extern IntPtr Computer_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Human_get")]
-  public static extern IntPtr Human_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Rescuable_get")]
-  public static extern IntPtr Rescuable_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_ComputerSlot_get")]
-  public static extern IntPtr ComputerSlot_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_OpenSlot_get")]
-  public static extern IntPtr OpenSlot_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeNeutral_get")]
-  public static extern IntPtr PlayerTypeNeutral_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_ClosedSlot_get")]
-  public static extern IntPtr ClosedSlot_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_HumanDefeated_get")]
-  public static extern IntPtr HumanDefeated_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_ComputerDefeated_get")]
-  public static extern IntPtr ComputerDefeated_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeNone_get")]
-  public static extern IntPtr PlayerTypeNone_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeUnknown_get")]
-  public static extern IntPtr PlayerTypeUnknown_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_Position__SWIG_0")]
-  public static extern IntPtr new_Position__SWIG_0();
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_Position__SWIG_1")]
-  public static extern IntPtr new_Position__SWIG_1(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_Position__SWIG_2")]
-  public static extern IntPtr new_Position__SWIG_2(int jarg1, int jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_opEquals")]
-  public static extern bool Position_opEquals(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_opNotEquals")]
-  public static extern bool Position_opNotEquals(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_opLessThan")]
-  public static extern bool Position_opLessThan(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_opPlus")]
-  public static extern IntPtr Position_opPlus(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_opMinus")]
-  public static extern IntPtr Position_opMinus(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_getDistance")]
-  public static extern double Position_getDistance(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_getLength")]
-  public static extern double Position_getLength(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_x")]
-  public static extern IntPtr Position_x(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_y")]
-  public static extern IntPtr Position_y(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_xConst")]
-  public static extern int Position_xConst(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Position_yConst")]
-  public static extern int Position_yConst(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_Position")]
-  public static extern void delete_Position(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PositionInvalid_get")]
-  public static extern IntPtr PositionInvalid_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_PositionNone_get")]
-  public static extern IntPtr PositionNone_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_PositionUnknown_get")]
-  public static extern IntPtr PositionUnknown_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_Race__SWIG_0")]
-  public static extern IntPtr new_Race__SWIG_0();
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_Race__SWIG_1")]
-  public static extern IntPtr new_Race__SWIG_1(int jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_Race__SWIG_2")]
-  public static extern IntPtr new_Race__SWIG_2(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_opAssign")]
-  public static extern IntPtr Race_opAssign(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_opEquals")]
-  public static extern bool Race_opEquals(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_opNotEquals")]
-  public static extern bool Race_opNotEquals(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_opLessThan")]
-  public static extern bool Race_opLessThan(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_getID")]
-  public static extern int Race_getID(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_getName")]
-  public static extern string Race_getName(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_getWorker")]
-  public static extern IntPtr Race_getWorker(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_getCenter")]
-  public static extern IntPtr Race_getCenter(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_getRefinery")]
-  public static extern IntPtr Race_getRefinery(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_getTransport")]
-  public static extern IntPtr Race_getTransport(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_Race_getSupplyProvider")]
-  public static extern IntPtr Race_getSupplyProvider(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_Race")]
-  public static extern void delete_Race(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_getRace")]
-  public static extern IntPtr getRace(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_allRaces")]
-  public static extern IntPtr allRaces();
-
-  [DllImport("__Internal", EntryPoint="CSharp_initRaces")]
-  public static extern void initRaces();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Zerg_get")]
-  public static extern IntPtr Zerg_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Terran_get")]
-  public static extern IntPtr Terran_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Protoss_get")]
-  public static extern IntPtr Protoss_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Random_get")]
-  public static extern IntPtr Random_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Other_get")]
-  public static extern IntPtr Other_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_RaceNone_get")]
-  public static extern IntPtr RaceNone_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_RaceUnknown_get")]
-  public static extern IntPtr RaceUnknown_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_TechType__SWIG_0")]
-  public static extern IntPtr new_TechType__SWIG_0();
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_TechType__SWIG_1")]
-  public static extern IntPtr new_TechType__SWIG_1(int jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_TechType__SWIG_2")]
-  public static extern IntPtr new_TechType__SWIG_2(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_opAssign")]
-  public static extern IntPtr TechType_opAssign(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_opEquals")]
-  public static extern bool TechType_opEquals(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_opNotEquals")]
-  public static extern bool TechType_opNotEquals(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_opLessThan")]
-  public static extern bool TechType_opLessThan(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_getID")]
-  public static extern int TechType_getID(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_getName")]
-  public static extern string TechType_getName(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_mineralPrice")]
-  public static extern int TechType_mineralPrice(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_gasPrice")]
-  public static extern int TechType_gasPrice(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_energyUsed")]
-  public static extern int TechType_energyUsed(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_whatResearches")]
-  public static extern IntPtr TechType_whatResearches(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_getWeapon")]
-  public static extern IntPtr TechType_getWeapon(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechType_whatUses")]
-  public static extern IntPtr TechType_whatUses(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_TechType")]
-  public static extern void delete_TechType(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_getTechType")]
-  public static extern IntPtr getTechType(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_allTechTypes")]
-  public static extern IntPtr allTechTypes();
-
-  [DllImport("__Internal", EntryPoint="CSharp_initTechTypes")]
-  public static extern void initTechTypes();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Stim_Packs_get")]
-  public static extern IntPtr Stim_Packs_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeLockdown_get")]
-  public static extern IntPtr TechTypeLockdown_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeEMP_Shockwave_get")]
-  public static extern IntPtr TechTypeEMP_Shockwave_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Spider_Mines_get")]
-  public static extern IntPtr Spider_Mines_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Scanner_Sweep_get")]
-  public static extern IntPtr Scanner_Sweep_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Tank_Siege_Mode_get")]
-  public static extern IntPtr Tank_Siege_Mode_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Defensive_Matrix_get")]
-  public static extern IntPtr Defensive_Matrix_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeIrradiate_get")]
-  public static extern IntPtr TechTypeIrradiate_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeYamato_Gun_get")]
-  public static extern IntPtr TechTypeYamato_Gun_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Cloaking_Field_get")]
-  public static extern IntPtr Cloaking_Field_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Personnel_Cloaking_get")]
-  public static extern IntPtr Personnel_Cloaking_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Burrowing_get")]
-  public static extern IntPtr Burrowing_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Infestation_get")]
-  public static extern IntPtr Infestation_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSpawn_Broodlings_get")]
-  public static extern IntPtr TechTypeSpawn_Broodlings_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeDark_Swarm_get")]
-  public static extern IntPtr TechTypeDark_Swarm_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypePlague_get")]
-  public static extern IntPtr TechTypePlague_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeConsume_get")]
-  public static extern IntPtr TechTypeConsume_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeEnsnare_get")]
-  public static extern IntPtr TechTypeEnsnare_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeParasite_get")]
-  public static extern IntPtr TechTypeParasite_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypePsionic_Storm_get")]
-  public static extern IntPtr TechTypePsionic_Storm_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Hallucination_get")]
-  public static extern IntPtr Hallucination_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Recall_get")]
-  public static extern IntPtr Recall_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeStasis_Field_get")]
-  public static extern IntPtr TechTypeStasis_Field_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Archon_Warp_get")]
-  public static extern IntPtr Archon_Warp_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeRestoration_get")]
-  public static extern IntPtr TechTypeRestoration_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeDisruption_Web_get")]
-  public static extern IntPtr TechTypeDisruption_Web_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeMind_Control_get")]
-  public static extern IntPtr TechTypeMind_Control_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Dark_Archon_Meld_get")]
-  public static extern IntPtr Dark_Archon_Meld_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeFeedback_get")]
-  public static extern IntPtr TechTypeFeedback_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeOptical_Flare_get")]
-  public static extern IntPtr TechTypeOptical_Flare_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeMaelstrom_get")]
-  public static extern IntPtr TechTypeMaelstrom_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Lurker_Aspect_get")]
-  public static extern IntPtr Lurker_Aspect_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Healing_get")]
-  public static extern IntPtr Healing_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeNone_get")]
-  public static extern IntPtr TechTypeNone_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeUnknown_get")]
-  public static extern IntPtr TechTypeUnknown_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeNuclear_Strike_get")]
-  public static extern IntPtr TechTypeNuclear_Strike_get();
 
   [DllImport("__Internal", EntryPoint="CSharp_new_TilePosition__SWIG_0")]
   public static extern IntPtr new_TilePosition__SWIG_0();
@@ -2631,7 +2856,7 @@ class bridgePINVOKE {
   public static extern void delete_UnitSizeType(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_getUnitSizeType")]
-  public static extern IntPtr getUnitSizeType(HandleRef jarg1);
+  public static extern IntPtr getUnitSizeType(string jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_allUnitSizeTypes")]
   public static extern IntPtr allUnitSizeTypes();
@@ -2877,7 +3102,7 @@ class bridgePINVOKE {
   public static extern void delete_UnitType(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_getUnitType")]
-  public static extern IntPtr getUnitType(HandleRef jarg1);
+  public static extern IntPtr getUnitType(string jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_allUnitTypes")]
   public static extern IntPtr allUnitTypes();
@@ -3272,231 +3497,6 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_UnitTypeUnknown_get")]
   public static extern IntPtr UnitTypeUnknown_get();
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeType__SWIG_0")]
-  public static extern IntPtr new_UpgradeType__SWIG_0();
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeType__SWIG_1")]
-  public static extern IntPtr new_UpgradeType__SWIG_1(int jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeType__SWIG_2")]
-  public static extern IntPtr new_UpgradeType__SWIG_2(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_opAssign")]
-  public static extern IntPtr UpgradeType_opAssign(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_opEquals")]
-  public static extern bool UpgradeType_opEquals(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_opNotEquals")]
-  public static extern bool UpgradeType_opNotEquals(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_opLessThan")]
-  public static extern bool UpgradeType_opLessThan(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_getID")]
-  public static extern int UpgradeType_getID(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_getName")]
-  public static extern string UpgradeType_getName(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_getRace")]
-  public static extern IntPtr UpgradeType_getRace(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_mineralPriceBase")]
-  public static extern int UpgradeType_mineralPriceBase(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_mineralPriceFactor")]
-  public static extern int UpgradeType_mineralPriceFactor(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_gasPriceBase")]
-  public static extern int UpgradeType_gasPriceBase(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_gasPriceFactor")]
-  public static extern int UpgradeType_gasPriceFactor(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_upgradeTimeBase")]
-  public static extern int UpgradeType_upgradeTimeBase(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_upgradeTimeFactor")]
-  public static extern int UpgradeType_upgradeTimeFactor(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_maxRepeats")]
-  public static extern int UpgradeType_maxRepeats(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_whatUpgrades")]
-  public static extern IntPtr UpgradeType_whatUpgrades(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeType_whatUses")]
-  public static extern IntPtr UpgradeType_whatUses(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UpgradeType")]
-  public static extern void delete_UpgradeType(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_getUpgradeType")]
-  public static extern IntPtr getUpgradeType(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_allUpgradeTypes")]
-  public static extern IntPtr allUpgradeTypes();
-
-  [DllImport("__Internal", EntryPoint="CSharp_initUpgradeTypes")]
-  public static extern void initUpgradeTypes();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Terran_Infantry_Armor_get")]
-  public static extern IntPtr Terran_Infantry_Armor_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Terran_Vehicle_Plating_get")]
-  public static extern IntPtr Terran_Vehicle_Plating_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Terran_Ship_Plating_get")]
-  public static extern IntPtr Terran_Ship_Plating_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Zerg_Carapace_get")]
-  public static extern IntPtr Zerg_Carapace_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Zerg_Flyer_Carapace_get")]
-  public static extern IntPtr Zerg_Flyer_Carapace_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Protoss_Armor_get")]
-  public static extern IntPtr Protoss_Armor_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Protoss_Plating_get")]
-  public static extern IntPtr Protoss_Plating_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Terran_Infantry_Weapons_get")]
-  public static extern IntPtr Terran_Infantry_Weapons_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Terran_Vehicle_Weapons_get")]
-  public static extern IntPtr Terran_Vehicle_Weapons_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Terran_Ship_Weapons_get")]
-  public static extern IntPtr Terran_Ship_Weapons_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Zerg_Melee_Attacks_get")]
-  public static extern IntPtr Zerg_Melee_Attacks_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Zerg_Missile_Attacks_get")]
-  public static extern IntPtr Zerg_Missile_Attacks_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Zerg_Flyer_Attacks_get")]
-  public static extern IntPtr Zerg_Flyer_Attacks_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Protoss_Ground_Weapons_get")]
-  public static extern IntPtr Protoss_Ground_Weapons_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Protoss_Air_Weapons_get")]
-  public static extern IntPtr Protoss_Air_Weapons_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Protoss_Plasma_Shields_get")]
-  public static extern IntPtr Protoss_Plasma_Shields_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_U_238_Shells_get")]
-  public static extern IntPtr U_238_Shells_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Ion_Thrusters_get")]
-  public static extern IntPtr Ion_Thrusters_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Titan_Reactor_get")]
-  public static extern IntPtr Titan_Reactor_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Ocular_Implants_get")]
-  public static extern IntPtr Ocular_Implants_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Moebius_Reactor_get")]
-  public static extern IntPtr Moebius_Reactor_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Apollo_Reactor_get")]
-  public static extern IntPtr Apollo_Reactor_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Colossus_Reactor_get")]
-  public static extern IntPtr Colossus_Reactor_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Ventral_Sacs_get")]
-  public static extern IntPtr Ventral_Sacs_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Antennae_get")]
-  public static extern IntPtr Antennae_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Pneumatized_Carapace_get")]
-  public static extern IntPtr Pneumatized_Carapace_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Metabolic_Boost_get")]
-  public static extern IntPtr Metabolic_Boost_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Adrenal_Glands_get")]
-  public static extern IntPtr Adrenal_Glands_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Muscular_Augments_get")]
-  public static extern IntPtr Muscular_Augments_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Grooved_Spines_get")]
-  public static extern IntPtr Grooved_Spines_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Gamete_Meiosis_get")]
-  public static extern IntPtr Gamete_Meiosis_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Metasynaptic_Node_get")]
-  public static extern IntPtr Metasynaptic_Node_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Singularity_Charge_get")]
-  public static extern IntPtr Singularity_Charge_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Leg_Enhancements_get")]
-  public static extern IntPtr Leg_Enhancements_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Scarab_Damage_get")]
-  public static extern IntPtr Scarab_Damage_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Reaver_Capacity_get")]
-  public static extern IntPtr Reaver_Capacity_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Gravitic_Drive_get")]
-  public static extern IntPtr Gravitic_Drive_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Sensor_Array_get")]
-  public static extern IntPtr Sensor_Array_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Gravitic_Boosters_get")]
-  public static extern IntPtr Gravitic_Boosters_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Khaydarin_Amulet_get")]
-  public static extern IntPtr Khaydarin_Amulet_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Apial_Sensors_get")]
-  public static extern IntPtr Apial_Sensors_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Gravitic_Thrusters_get")]
-  public static extern IntPtr Gravitic_Thrusters_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Carrier_Capacity_get")]
-  public static extern IntPtr Carrier_Capacity_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Khaydarin_Core_get")]
-  public static extern IntPtr Khaydarin_Core_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Argus_Jewel_get")]
-  public static extern IntPtr Argus_Jewel_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Argus_Talisman_get")]
-  public static extern IntPtr Argus_Talisman_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Caduceus_Reactor_get")]
-  public static extern IntPtr Caduceus_Reactor_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Chitinous_Plating_get")]
-  public static extern IntPtr Chitinous_Plating_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Anabolic_Synthesis_get")]
-  public static extern IntPtr Anabolic_Synthesis_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Charon_Booster_get")]
-  public static extern IntPtr Charon_Booster_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeNone_get")]
-  public static extern IntPtr UpgradeTypeNone_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeUnknown_get")]
-  public static extern IntPtr UpgradeTypeUnknown_get();
-
   [DllImport("__Internal", EntryPoint="CSharp_new_WeaponType__SWIG_0")]
   public static extern IntPtr new_WeaponType__SWIG_0();
 
@@ -3597,7 +3597,7 @@ class bridgePINVOKE {
   public static extern void delete_WeaponType(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_getWeaponType")]
-  public static extern IntPtr getWeaponType(HandleRef jarg1);
+  public static extern IntPtr getWeaponType(string jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_allWeaponTypes")]
   public static extern IntPtr allWeaponTypes();
@@ -3800,6 +3800,15 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeUnknown_get")]
   public static extern IntPtr WeaponTypeUnknown_get();
 
+  [DllImport("__Internal", EntryPoint="CSharp_monobridgeutil_getLastUnitParam")]
+  public static extern IntPtr monobridgeutil_getLastUnitParam();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_monobridgeutil")]
+  public static extern IntPtr new_monobridgeutil();
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_monobridgeutil")]
+  public static extern void delete_monobridgeutil(HandleRef jarg1);
+
   [DllImport("__Internal", EntryPoint="CSharp_readMap")]
   public static extern void readMap();
 
@@ -3923,1082 +3932,998 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_delete_Region")]
   public static extern void delete_Region(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_monobridgeutil_getLastUnitParam")]
-  public static extern IntPtr monobridgeutil_getLastUnitParam();
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitSet__SWIG_0")]
+  public static extern IntPtr new_UnitSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_monobridgeutil")]
-  public static extern IntPtr new_monobridgeutil();
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitSet__SWIG_1")]
+  public static extern IntPtr new_UnitSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_monobridgeutil")]
-  public static extern void delete_monobridgeutil(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_size")]
+  public static extern uint UnitSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_DamageTypeSet")]
-  public static extern IntPtr new_DamageTypeSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_empty")]
+  public static extern bool UnitSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_DamageTypeSet")]
-  public static extern void delete_DamageTypeSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_Clear")]
+  public static extern void UnitSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_size")]
-  public static extern int DamageTypeSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_getitem")]
+  public static extern IntPtr UnitSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_contains")]
-  public static extern bool DamageTypeSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_ContainsKey")]
+  public static extern bool UnitSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_add")]
-  public static extern bool DamageTypeSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_Add")]
+  public static extern void UnitSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_clear")]
-  public static extern void DamageTypeSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_Remove")]
+  public static extern bool UnitSet_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_remove")]
-  public static extern bool DamageTypeSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_create_iterator_begin")]
+  public static extern IntPtr UnitSet_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_DamageTypeSetIterator")]
-  public static extern IntPtr new_DamageTypeSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSetIterator_hasNext")]
-  public static extern bool DamageTypeSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSetIterator_next")]
-  public static extern IntPtr DamageTypeSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_DamageTypeSetIterator")]
-  public static extern void delete_DamageTypeSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_ErrorSet")]
-  public static extern IntPtr new_ErrorSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ErrorSet")]
-  public static extern void delete_ErrorSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_size")]
-  public static extern int ErrorSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_contains")]
-  public static extern bool ErrorSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_add")]
-  public static extern bool ErrorSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_clear")]
-  public static extern void ErrorSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_remove")]
-  public static extern bool ErrorSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_ErrorSetIterator")]
-  public static extern IntPtr new_ErrorSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ErrorSetIterator_hasNext")]
-  public static extern bool ErrorSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ErrorSetIterator_next")]
-  public static extern IntPtr ErrorSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ErrorSetIterator")]
-  public static extern void delete_ErrorSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_ExplosionTypeSet")]
-  public static extern IntPtr new_ExplosionTypeSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ExplosionTypeSet")]
-  public static extern void delete_ExplosionTypeSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_size")]
-  public static extern int ExplosionTypeSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_contains")]
-  public static extern bool ExplosionTypeSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_add")]
-  public static extern bool ExplosionTypeSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_clear")]
-  public static extern void ExplosionTypeSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_remove")]
-  public static extern bool ExplosionTypeSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_ExplosionTypeSetIterator")]
-  public static extern IntPtr new_ExplosionTypeSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSetIterator_hasNext")]
-  public static extern bool ExplosionTypeSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSetIterator_next")]
-  public static extern IntPtr ExplosionTypeSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ExplosionTypeSetIterator")]
-  public static extern void delete_ExplosionTypeSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_ForceSet")]
-  public static extern IntPtr new_ForceSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ForceSet")]
-  public static extern void delete_ForceSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ForceSet_size")]
-  public static extern int ForceSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ForceSet_contains")]
-  public static extern bool ForceSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ForceSet_add")]
-  public static extern bool ForceSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ForceSet_clear")]
-  public static extern void ForceSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ForceSet_remove")]
-  public static extern bool ForceSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_ForceSetIterator")]
-  public static extern IntPtr new_ForceSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ForceSetIterator_hasNext")]
-  public static extern bool ForceSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_ForceSetIterator_next")]
-  public static extern IntPtr ForceSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ForceSetIterator")]
-  public static extern void delete_ForceSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_OrderSet")]
-  public static extern IntPtr new_OrderSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_OrderSet")]
-  public static extern void delete_OrderSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_size")]
-  public static extern int OrderSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_contains")]
-  public static extern bool OrderSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_add")]
-  public static extern bool OrderSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_clear")]
-  public static extern void OrderSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_remove")]
-  public static extern bool OrderSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_OrderSetIterator")]
-  public static extern IntPtr new_OrderSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_OrderSetIterator_hasNext")]
-  public static extern bool OrderSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_OrderSetIterator_next")]
-  public static extern IntPtr OrderSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_OrderSetIterator")]
-  public static extern void delete_OrderSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerSet")]
-  public static extern IntPtr new_PlayerSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_PlayerSet")]
-  public static extern void delete_PlayerSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerSet_size")]
-  public static extern int PlayerSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerSet_contains")]
-  public static extern bool PlayerSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerSet_add")]
-  public static extern bool PlayerSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerSet_clear")]
-  public static extern void PlayerSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerSet_remove")]
-  public static extern bool PlayerSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerSetIterator")]
-  public static extern IntPtr new_PlayerSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerSetIterator_hasNext")]
-  public static extern bool PlayerSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerSetIterator_next")]
-  public static extern IntPtr PlayerSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_PlayerSetIterator")]
-  public static extern void delete_PlayerSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerTypeSet")]
-  public static extern IntPtr new_PlayerTypeSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_PlayerTypeSet")]
-  public static extern void delete_PlayerTypeSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_size")]
-  public static extern int PlayerTypeSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_contains")]
-  public static extern bool PlayerTypeSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_add")]
-  public static extern bool PlayerTypeSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_clear")]
-  public static extern void PlayerTypeSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_remove")]
-  public static extern bool PlayerTypeSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerTypeSetIterator")]
-  public static extern IntPtr new_PlayerTypeSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSetIterator_hasNext")]
-  public static extern bool PlayerTypeSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSetIterator_next")]
-  public static extern IntPtr PlayerTypeSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_PlayerTypeSetIterator")]
-  public static extern void delete_PlayerTypeSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_RaceSet")]
-  public static extern IntPtr new_RaceSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_RaceSet")]
-  public static extern void delete_RaceSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_size")]
-  public static extern int RaceSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_contains")]
-  public static extern bool RaceSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_add")]
-  public static extern bool RaceSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_clear")]
-  public static extern void RaceSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_remove")]
-  public static extern bool RaceSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_RaceSetIterator")]
-  public static extern IntPtr new_RaceSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_RaceSetIterator_hasNext")]
-  public static extern bool RaceSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_RaceSetIterator_next")]
-  public static extern IntPtr RaceSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_RaceSetIterator")]
-  public static extern void delete_RaceSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_TechTypeConstantSet")]
-  public static extern IntPtr new_TechTypeConstantSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_TechTypeConstantSet")]
-  public static extern void delete_TechTypeConstantSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeConstantSet_size")]
-  public static extern int TechTypeConstantSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeConstantSet_contains")]
-  public static extern bool TechTypeConstantSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeConstantSet_add")]
-  public static extern bool TechTypeConstantSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeConstantSet_clear")]
-  public static extern void TechTypeConstantSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeConstantSet_remove")]
-  public static extern bool TechTypeConstantSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_TechTypeConstantSetIterator")]
-  public static extern IntPtr new_TechTypeConstantSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeConstantSetIterator_hasNext")]
-  public static extern bool TechTypeConstantSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeConstantSetIterator_next")]
-  public static extern IntPtr TechTypeConstantSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_TechTypeConstantSetIterator")]
-  public static extern void delete_TechTypeConstantSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_TechTypeSet")]
-  public static extern IntPtr new_TechTypeSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_TechTypeSet")]
-  public static extern void delete_TechTypeSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_size")]
-  public static extern int TechTypeSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_contains")]
-  public static extern bool TechTypeSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_add")]
-  public static extern bool TechTypeSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_clear")]
-  public static extern void TechTypeSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_remove")]
-  public static extern bool TechTypeSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_TechTypeSetIterator")]
-  public static extern IntPtr new_TechTypeSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSetIterator_hasNext")]
-  public static extern bool TechTypeSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSetIterator_next")]
-  public static extern IntPtr TechTypeSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_TechTypeSetIterator")]
-  public static extern void delete_TechTypeSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitList__list_set")]
-  public static extern void UnitList__list_set(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitList__list_get")]
-  public static extern IntPtr UnitList__list_get(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitList")]
-  public static extern IntPtr new_UnitList(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitList")]
-  public static extern void delete_UnitList(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitList_size")]
-  public static extern int UnitList_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitList_contains")]
-  public static extern bool UnitList_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitList_add")]
-  public static extern bool UnitList_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitList_clear")]
-  public static extern void UnitList_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitList_remove")]
-  public static extern bool UnitList_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitListIterator")]
-  public static extern IntPtr new_UnitListIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitListIterator_hasNext")]
-  public static extern bool UnitListIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitListIterator_next")]
-  public static extern IntPtr UnitListIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitListIterator")]
-  public static extern void delete_UnitListIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitSet")]
-  public static extern IntPtr new_UnitSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_get_next_key")]
+  public static extern IntPtr UnitSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_UnitSet")]
   public static extern void delete_UnitSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_size")]
-  public static extern int UnitSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_AttackTypeSet__SWIG_0")]
+  public static extern IntPtr new_AttackTypeSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_contains")]
-  public static extern bool UnitSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_AttackTypeSet__SWIG_1")]
+  public static extern IntPtr new_AttackTypeSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_add")]
-  public static extern bool UnitSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_AttackTypeSet_size")]
+  public static extern uint AttackTypeSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_clear")]
-  public static extern void UnitSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_AttackTypeSet_empty")]
+  public static extern bool AttackTypeSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSet_remove")]
-  public static extern bool UnitSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_AttackTypeSet_Clear")]
+  public static extern void AttackTypeSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitSetIterator")]
-  public static extern IntPtr new_UnitSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_AttackTypeSet_getitem")]
+  public static extern IntPtr AttackTypeSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSetIterator_hasNext")]
-  public static extern bool UnitSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_AttackTypeSet_ContainsKey")]
+  public static extern bool AttackTypeSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSetIterator_next")]
-  public static extern IntPtr UnitSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_AttackTypeSet_Add")]
+  public static extern void AttackTypeSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitSetIterator")]
-  public static extern void delete_UnitSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_AttackTypeSet_Remove")]
+  public static extern bool AttackTypeSet_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitSizeTypeSet")]
-  public static extern IntPtr new_UnitSizeTypeSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_AttackTypeSet_create_iterator_begin")]
+  public static extern IntPtr AttackTypeSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_AttackTypeSet_get_next_key")]
+  public static extern IntPtr AttackTypeSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_AttackTypeSet")]
+  public static extern void delete_AttackTypeSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_DamageTypeSet__SWIG_0")]
+  public static extern IntPtr new_DamageTypeSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_DamageTypeSet__SWIG_1")]
+  public static extern IntPtr new_DamageTypeSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_size")]
+  public static extern uint DamageTypeSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_empty")]
+  public static extern bool DamageTypeSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_Clear")]
+  public static extern void DamageTypeSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_getitem")]
+  public static extern IntPtr DamageTypeSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_ContainsKey")]
+  public static extern bool DamageTypeSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_Add")]
+  public static extern void DamageTypeSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_Remove")]
+  public static extern bool DamageTypeSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_create_iterator_begin")]
+  public static extern IntPtr DamageTypeSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_DamageTypeSet_get_next_key")]
+  public static extern IntPtr DamageTypeSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_DamageTypeSet")]
+  public static extern void delete_DamageTypeSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_ErrorSet__SWIG_0")]
+  public static extern IntPtr new_ErrorSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_ErrorSet__SWIG_1")]
+  public static extern IntPtr new_ErrorSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_size")]
+  public static extern uint ErrorSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_empty")]
+  public static extern bool ErrorSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_Clear")]
+  public static extern void ErrorSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_getitem")]
+  public static extern IntPtr ErrorSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_ContainsKey")]
+  public static extern bool ErrorSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_Add")]
+  public static extern void ErrorSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_Remove")]
+  public static extern bool ErrorSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_create_iterator_begin")]
+  public static extern IntPtr ErrorSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ErrorSet_get_next_key")]
+  public static extern IntPtr ErrorSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_ErrorSet")]
+  public static extern void delete_ErrorSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_ExplosionTypeSet__SWIG_0")]
+  public static extern IntPtr new_ExplosionTypeSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_ExplosionTypeSet__SWIG_1")]
+  public static extern IntPtr new_ExplosionTypeSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_size")]
+  public static extern uint ExplosionTypeSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_empty")]
+  public static extern bool ExplosionTypeSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_Clear")]
+  public static extern void ExplosionTypeSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_getitem")]
+  public static extern IntPtr ExplosionTypeSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_ContainsKey")]
+  public static extern bool ExplosionTypeSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_Add")]
+  public static extern void ExplosionTypeSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_Remove")]
+  public static extern bool ExplosionTypeSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_create_iterator_begin")]
+  public static extern IntPtr ExplosionTypeSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypeSet_get_next_key")]
+  public static extern IntPtr ExplosionTypeSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_ExplosionTypeSet")]
+  public static extern void delete_ExplosionTypeSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_ForcePtrSet__SWIG_0")]
+  public static extern IntPtr new_ForcePtrSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_ForcePtrSet__SWIG_1")]
+  public static extern IntPtr new_ForcePtrSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ForcePtrSet_size")]
+  public static extern uint ForcePtrSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ForcePtrSet_empty")]
+  public static extern bool ForcePtrSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ForcePtrSet_Clear")]
+  public static extern void ForcePtrSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ForcePtrSet_getitem")]
+  public static extern IntPtr ForcePtrSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ForcePtrSet_ContainsKey")]
+  public static extern bool ForcePtrSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ForcePtrSet_Add")]
+  public static extern void ForcePtrSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ForcePtrSet_Remove")]
+  public static extern bool ForcePtrSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ForcePtrSet_create_iterator_begin")]
+  public static extern IntPtr ForcePtrSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_ForcePtrSet_get_next_key")]
+  public static extern IntPtr ForcePtrSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_ForcePtrSet")]
+  public static extern void delete_ForcePtrSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_OrderSet__SWIG_0")]
+  public static extern IntPtr new_OrderSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_OrderSet__SWIG_1")]
+  public static extern IntPtr new_OrderSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_size")]
+  public static extern uint OrderSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_empty")]
+  public static extern bool OrderSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_Clear")]
+  public static extern void OrderSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_getitem")]
+  public static extern IntPtr OrderSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_ContainsKey")]
+  public static extern bool OrderSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_Add")]
+  public static extern void OrderSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_Remove")]
+  public static extern bool OrderSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_create_iterator_begin")]
+  public static extern IntPtr OrderSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_OrderSet_get_next_key")]
+  public static extern IntPtr OrderSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_OrderSet")]
+  public static extern void delete_OrderSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerPtrSet__SWIG_0")]
+  public static extern IntPtr new_PlayerPtrSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerPtrSet__SWIG_1")]
+  public static extern IntPtr new_PlayerPtrSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerPtrSet_size")]
+  public static extern uint PlayerPtrSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerPtrSet_empty")]
+  public static extern bool PlayerPtrSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerPtrSet_Clear")]
+  public static extern void PlayerPtrSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerPtrSet_getitem")]
+  public static extern IntPtr PlayerPtrSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerPtrSet_ContainsKey")]
+  public static extern bool PlayerPtrSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerPtrSet_Add")]
+  public static extern void PlayerPtrSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerPtrSet_Remove")]
+  public static extern bool PlayerPtrSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerPtrSet_create_iterator_begin")]
+  public static extern IntPtr PlayerPtrSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerPtrSet_get_next_key")]
+  public static extern IntPtr PlayerPtrSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_PlayerPtrSet")]
+  public static extern void delete_PlayerPtrSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerTypeSet__SWIG_0")]
+  public static extern IntPtr new_PlayerTypeSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_PlayerTypeSet__SWIG_1")]
+  public static extern IntPtr new_PlayerTypeSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_size")]
+  public static extern uint PlayerTypeSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_empty")]
+  public static extern bool PlayerTypeSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_Clear")]
+  public static extern void PlayerTypeSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_getitem")]
+  public static extern IntPtr PlayerTypeSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_ContainsKey")]
+  public static extern bool PlayerTypeSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_Add")]
+  public static extern void PlayerTypeSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_Remove")]
+  public static extern bool PlayerTypeSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_create_iterator_begin")]
+  public static extern IntPtr PlayerTypeSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PlayerTypeSet_get_next_key")]
+  public static extern IntPtr PlayerTypeSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_PlayerTypeSet")]
+  public static extern void delete_PlayerTypeSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_RaceSet__SWIG_0")]
+  public static extern IntPtr new_RaceSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_RaceSet__SWIG_1")]
+  public static extern IntPtr new_RaceSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_size")]
+  public static extern uint RaceSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_empty")]
+  public static extern bool RaceSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_Clear")]
+  public static extern void RaceSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_getitem")]
+  public static extern IntPtr RaceSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_ContainsKey")]
+  public static extern bool RaceSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_Add")]
+  public static extern void RaceSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_Remove")]
+  public static extern bool RaceSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_create_iterator_begin")]
+  public static extern IntPtr RaceSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RaceSet_get_next_key")]
+  public static extern IntPtr RaceSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_RaceSet")]
+  public static extern void delete_RaceSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TechTypePtrSet__SWIG_0")]
+  public static extern IntPtr new_TechTypePtrSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TechTypePtrSet__SWIG_1")]
+  public static extern IntPtr new_TechTypePtrSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePtrSet_size")]
+  public static extern uint TechTypePtrSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePtrSet_empty")]
+  public static extern bool TechTypePtrSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePtrSet_Clear")]
+  public static extern void TechTypePtrSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePtrSet_getitem")]
+  public static extern IntPtr TechTypePtrSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePtrSet_ContainsKey")]
+  public static extern bool TechTypePtrSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePtrSet_Add")]
+  public static extern void TechTypePtrSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePtrSet_Remove")]
+  public static extern bool TechTypePtrSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePtrSet_create_iterator_begin")]
+  public static extern IntPtr TechTypePtrSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypePtrSet_get_next_key")]
+  public static extern IntPtr TechTypePtrSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_TechTypePtrSet")]
+  public static extern void delete_TechTypePtrSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TechTypeSet__SWIG_0")]
+  public static extern IntPtr new_TechTypeSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TechTypeSet__SWIG_1")]
+  public static extern IntPtr new_TechTypeSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_size")]
+  public static extern uint TechTypeSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_empty")]
+  public static extern bool TechTypeSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_Clear")]
+  public static extern void TechTypeSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_getitem")]
+  public static extern IntPtr TechTypeSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_ContainsKey")]
+  public static extern bool TechTypeSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_Add")]
+  public static extern void TechTypeSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_Remove")]
+  public static extern bool TechTypeSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_create_iterator_begin")]
+  public static extern IntPtr TechTypeSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TechTypeSet_get_next_key")]
+  public static extern IntPtr TechTypeSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_TechTypeSet")]
+  public static extern void delete_TechTypeSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitSizeTypeSet__SWIG_0")]
+  public static extern IntPtr new_UnitSizeTypeSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitSizeTypeSet__SWIG_1")]
+  public static extern IntPtr new_UnitSizeTypeSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_size")]
+  public static extern uint UnitSizeTypeSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_empty")]
+  public static extern bool UnitSizeTypeSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_Clear")]
+  public static extern void UnitSizeTypeSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_getitem")]
+  public static extern IntPtr UnitSizeTypeSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_ContainsKey")]
+  public static extern bool UnitSizeTypeSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_Add")]
+  public static extern void UnitSizeTypeSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_Remove")]
+  public static extern bool UnitSizeTypeSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_create_iterator_begin")]
+  public static extern IntPtr UnitSizeTypeSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_get_next_key")]
+  public static extern IntPtr UnitSizeTypeSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_UnitSizeTypeSet")]
   public static extern void delete_UnitSizeTypeSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_size")]
-  public static extern int UnitSizeTypeSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypePtrSet__SWIG_0")]
+  public static extern IntPtr new_UnitTypePtrSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_contains")]
-  public static extern bool UnitSizeTypeSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypePtrSet__SWIG_1")]
+  public static extern IntPtr new_UnitTypePtrSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_add")]
-  public static extern bool UnitSizeTypeSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrSet_size")]
+  public static extern uint UnitTypePtrSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_clear")]
-  public static extern void UnitSizeTypeSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrSet_empty")]
+  public static extern bool UnitTypePtrSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSet_remove")]
-  public static extern bool UnitSizeTypeSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrSet_Clear")]
+  public static extern void UnitTypePtrSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitSizeTypeSetIterator")]
-  public static extern IntPtr new_UnitSizeTypeSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrSet_getitem")]
+  public static extern IntPtr UnitTypePtrSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSetIterator_hasNext")]
-  public static extern bool UnitSizeTypeSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrSet_ContainsKey")]
+  public static extern bool UnitTypePtrSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitSizeTypeSetIterator_next")]
-  public static extern IntPtr UnitSizeTypeSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrSet_Add")]
+  public static extern void UnitTypePtrSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitSizeTypeSetIterator")]
-  public static extern void delete_UnitSizeTypeSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrSet_Remove")]
+  public static extern bool UnitTypePtrSet_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeConstantSet")]
-  public static extern IntPtr new_UnitTypeConstantSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrSet_create_iterator_begin")]
+  public static extern IntPtr UnitTypePtrSet_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypeConstantSet")]
-  public static extern void delete_UnitTypeConstantSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrSet_get_next_key")]
+  public static extern IntPtr UnitTypePtrSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeConstantSet_size")]
-  public static extern int UnitTypeConstantSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypePtrSet")]
+  public static extern void delete_UnitTypePtrSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeConstantSet_contains")]
-  public static extern bool UnitTypeConstantSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeSet__SWIG_0")]
+  public static extern IntPtr new_UnitTypeSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeConstantSet_add")]
-  public static extern bool UnitTypeConstantSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeSet__SWIG_1")]
+  public static extern IntPtr new_UnitTypeSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeConstantSet_clear")]
-  public static extern void UnitTypeConstantSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_size")]
+  public static extern uint UnitTypeSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeConstantSet_remove")]
-  public static extern bool UnitTypeConstantSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_empty")]
+  public static extern bool UnitTypeSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeConstantSetIterator")]
-  public static extern IntPtr new_UnitTypeConstantSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_Clear")]
+  public static extern void UnitTypeSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeConstantSetIterator_hasNext")]
-  public static extern bool UnitTypeConstantSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_getitem")]
+  public static extern IntPtr UnitTypeSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeConstantSetIterator_next")]
-  public static extern IntPtr UnitTypeConstantSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_ContainsKey")]
+  public static extern bool UnitTypeSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypeConstantSetIterator")]
-  public static extern void delete_UnitTypeConstantSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_Add")]
+  public static extern void UnitTypeSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeSet")]
-  public static extern IntPtr new_UnitTypeSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_Remove")]
+  public static extern bool UnitTypeSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_create_iterator_begin")]
+  public static extern IntPtr UnitTypeSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_get_next_key")]
+  public static extern IntPtr UnitTypeSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypeSet")]
   public static extern void delete_UnitTypeSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_size")]
-  public static extern int UnitTypeSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeTypePtrSet__SWIG_0")]
+  public static extern IntPtr new_UpgradeTypePtrSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_contains")]
-  public static extern bool UnitTypeSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeTypePtrSet__SWIG_1")]
+  public static extern IntPtr new_UpgradeTypePtrSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_add")]
-  public static extern bool UnitTypeSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypePtrSet_size")]
+  public static extern uint UpgradeTypePtrSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_clear")]
-  public static extern void UnitTypeSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypePtrSet_empty")]
+  public static extern bool UpgradeTypePtrSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSet_remove")]
-  public static extern bool UnitTypeSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypePtrSet_Clear")]
+  public static extern void UpgradeTypePtrSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeSetIterator")]
-  public static extern IntPtr new_UnitTypeSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypePtrSet_getitem")]
+  public static extern IntPtr UpgradeTypePtrSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSetIterator_hasNext")]
-  public static extern bool UnitTypeSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypePtrSet_ContainsKey")]
+  public static extern bool UpgradeTypePtrSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeSetIterator_next")]
-  public static extern IntPtr UnitTypeSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypePtrSet_Add")]
+  public static extern void UpgradeTypePtrSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypeSetIterator")]
-  public static extern void delete_UnitTypeSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypePtrSet_Remove")]
+  public static extern bool UpgradeTypePtrSet_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeWhatBuildsPair__SWIG_0")]
-  public static extern IntPtr new_UnitTypeWhatBuildsPair__SWIG_0();
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypePtrSet_create_iterator_begin")]
+  public static extern IntPtr UpgradeTypePtrSet_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeWhatBuildsPair__SWIG_1")]
-  public static extern IntPtr new_UnitTypeWhatBuildsPair__SWIG_1(HandleRef jarg1, int jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypePtrSet_get_next_key")]
+  public static extern IntPtr UpgradeTypePtrSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeWhatBuildsPair__SWIG_2")]
-  public static extern IntPtr new_UnitTypeWhatBuildsPair__SWIG_2(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_UpgradeTypePtrSet")]
+  public static extern void delete_UpgradeTypePtrSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeWhatBuildsPair_first_set")]
-  public static extern void UnitTypeWhatBuildsPair_first_set(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeTypeSet__SWIG_0")]
+  public static extern IntPtr new_UpgradeTypeSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeWhatBuildsPair_first_get")]
-  public static extern IntPtr UnitTypeWhatBuildsPair_first_get(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeTypeSet__SWIG_1")]
+  public static extern IntPtr new_UpgradeTypeSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeWhatBuildsPair_second_set")]
-  public static extern void UnitTypeWhatBuildsPair_second_set(HandleRef jarg1, int jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_size")]
+  public static extern uint UpgradeTypeSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeWhatBuildsPair_second_get")]
-  public static extern int UnitTypeWhatBuildsPair_second_get(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_empty")]
+  public static extern bool UpgradeTypeSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypeWhatBuildsPair")]
-  public static extern void delete_UnitTypeWhatBuildsPair(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_Clear")]
+  public static extern void UpgradeTypeSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeMap")]
-  public static extern IntPtr new_UnitTypeMap(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_getitem")]
+  public static extern IntPtr UpgradeTypeSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypeMap")]
-  public static extern void delete_UnitTypeMap(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_ContainsKey")]
+  public static extern bool UpgradeTypeSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeMap_size")]
-  public static extern int UnitTypeMap_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_Add")]
+  public static extern void UpgradeTypeSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeMap_add")]
-  public static extern bool UnitTypeMap_add(HandleRef jarg1, HandleRef jarg2, int jarg3);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_Remove")]
+  public static extern bool UpgradeTypeSet_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeMap_clear")]
-  public static extern void UnitTypeMap_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_create_iterator_begin")]
+  public static extern IntPtr UpgradeTypeSet_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeMap_remove")]
-  public static extern bool UnitTypeMap_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeMapIterator")]
-  public static extern IntPtr new_UnitTypeMapIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeMapIterator_hasNext")]
-  public static extern bool UnitTypeMapIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeMapIterator_next")]
-  public static extern void UnitTypeMapIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeMapIterator_getKey")]
-  public static extern IntPtr UnitTypeMapIterator_getKey(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeMapIterator_getValue")]
-  public static extern int UnitTypeMapIterator_getValue(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypeMapIterator")]
-  public static extern void delete_UnitTypeMapIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList__list_set")]
-  public static extern void UnitTypeList__list_set(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList__list_get")]
-  public static extern IntPtr UnitTypeList__list_get(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeList")]
-  public static extern IntPtr new_UnitTypeList(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypeList")]
-  public static extern void delete_UnitTypeList(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList_size")]
-  public static extern int UnitTypeList_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList_contains")]
-  public static extern bool UnitTypeList_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList_add")]
-  public static extern bool UnitTypeList_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList_clear")]
-  public static extern void UnitTypeList_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList_remove")]
-  public static extern bool UnitTypeList_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeListIterator")]
-  public static extern IntPtr new_UnitTypeListIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeListIterator_hasNext")]
-  public static extern bool UnitTypeListIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeListIterator_next")]
-  public static extern IntPtr UnitTypeListIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypeListIterator")]
-  public static extern void delete_UnitTypeListIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeTypeConstantSet")]
-  public static extern IntPtr new_UpgradeTypeConstantSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UpgradeTypeConstantSet")]
-  public static extern void delete_UpgradeTypeConstantSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeConstantSet_size")]
-  public static extern int UpgradeTypeConstantSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeConstantSet_contains")]
-  public static extern bool UpgradeTypeConstantSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeConstantSet_add")]
-  public static extern bool UpgradeTypeConstantSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeConstantSet_clear")]
-  public static extern void UpgradeTypeConstantSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeConstantSet_remove")]
-  public static extern bool UpgradeTypeConstantSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeTypeConstantSetIterator")]
-  public static extern IntPtr new_UpgradeTypeConstantSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeConstantSetIterator_hasNext")]
-  public static extern bool UpgradeTypeConstantSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeConstantSetIterator_next")]
-  public static extern IntPtr UpgradeTypeConstantSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UpgradeTypeConstantSetIterator")]
-  public static extern void delete_UpgradeTypeConstantSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeTypeSet")]
-  public static extern IntPtr new_UpgradeTypeSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_get_next_key")]
+  public static extern IntPtr UpgradeTypeSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_UpgradeTypeSet")]
   public static extern void delete_UpgradeTypeSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_size")]
-  public static extern int UpgradeTypeSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_WeaponTypeSet__SWIG_0")]
+  public static extern IntPtr new_WeaponTypeSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_contains")]
-  public static extern bool UpgradeTypeSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_WeaponTypeSet__SWIG_1")]
+  public static extern IntPtr new_WeaponTypeSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_add")]
-  public static extern bool UpgradeTypeSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_size")]
+  public static extern uint WeaponTypeSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_clear")]
-  public static extern void UpgradeTypeSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_empty")]
+  public static extern bool WeaponTypeSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSet_remove")]
-  public static extern bool UpgradeTypeSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_Clear")]
+  public static extern void WeaponTypeSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_UpgradeTypeSetIterator")]
-  public static extern IntPtr new_UpgradeTypeSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_getitem")]
+  public static extern IntPtr WeaponTypeSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSetIterator_hasNext")]
-  public static extern bool UpgradeTypeSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_ContainsKey")]
+  public static extern bool WeaponTypeSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_UpgradeTypeSetIterator_next")]
-  public static extern IntPtr UpgradeTypeSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_Add")]
+  public static extern void WeaponTypeSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_UpgradeTypeSetIterator")]
-  public static extern void delete_UpgradeTypeSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_Remove")]
+  public static extern bool WeaponTypeSet_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_WeaponTypeSet")]
-  public static extern IntPtr new_WeaponTypeSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_create_iterator_begin")]
+  public static extern IntPtr WeaponTypeSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_get_next_key")]
+  public static extern IntPtr WeaponTypeSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_WeaponTypeSet")]
   public static extern void delete_WeaponTypeSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_size")]
-  public static extern int WeaponTypeSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_PositionPair__SWIG_0")]
+  public static extern IntPtr new_PositionPair__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_contains")]
-  public static extern bool WeaponTypeSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_PositionPair__SWIG_1")]
+  public static extern IntPtr new_PositionPair__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_add")]
-  public static extern bool WeaponTypeSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_PositionPair__SWIG_2")]
+  public static extern IntPtr new_PositionPair__SWIG_2(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_clear")]
-  public static extern void WeaponTypeSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_PositionPair_first_set")]
+  public static extern void PositionPair_first_set(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSet_remove")]
-  public static extern bool WeaponTypeSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_PositionPair_first_get")]
+  public static extern IntPtr PositionPair_first_get(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_WeaponTypeSetIterator")]
-  public static extern IntPtr new_WeaponTypeSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_PositionPair_second_set")]
+  public static extern void PositionPair_second_set(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSetIterator_hasNext")]
-  public static extern bool WeaponTypeSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_PositionPair_second_get")]
+  public static extern IntPtr PositionPair_second_get(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_WeaponTypeSetIterator_next")]
-  public static extern IntPtr WeaponTypeSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_PositionPair")]
+  public static extern void delete_PositionPair(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_WeaponTypeSetIterator")]
-  public static extern void delete_WeaponTypeSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypePtrIntPair__SWIG_0")]
+  public static extern IntPtr new_UnitTypePtrIntPair__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionSet")]
-  public static extern IntPtr new_TilePositionSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypePtrIntPair__SWIG_1")]
+  public static extern IntPtr new_UnitTypePtrIntPair__SWIG_1(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypePtrIntPair__SWIG_2")]
+  public static extern IntPtr new_UnitTypePtrIntPair__SWIG_2(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntPair_first_set")]
+  public static extern void UnitTypePtrIntPair_first_set(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntPair_first_get")]
+  public static extern IntPtr UnitTypePtrIntPair_first_get(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntPair_second_set")]
+  public static extern void UnitTypePtrIntPair_second_set(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntPair_second_get")]
+  public static extern int UnitTypePtrIntPair_second_get(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypePtrIntPair")]
+  public static extern void delete_UnitTypePtrIntPair(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionSet__SWIG_0")]
+  public static extern IntPtr new_TilePositionSet__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionSet__SWIG_1")]
+  public static extern IntPtr new_TilePositionSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_size")]
+  public static extern uint TilePositionSet_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_empty")]
+  public static extern bool TilePositionSet_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_Clear")]
+  public static extern void TilePositionSet_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_getitem")]
+  public static extern IntPtr TilePositionSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_ContainsKey")]
+  public static extern bool TilePositionSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_Add")]
+  public static extern void TilePositionSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_Remove")]
+  public static extern bool TilePositionSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_create_iterator_begin")]
+  public static extern IntPtr TilePositionSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_get_next_key")]
+  public static extern IntPtr TilePositionSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_TilePositionSet")]
   public static extern void delete_TilePositionSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_size")]
-  public static extern int TilePositionSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypePtrIntMap__SWIG_0")]
+  public static extern IntPtr new_UnitTypePtrIntMap__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_contains")]
-  public static extern bool TilePositionSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypePtrIntMap__SWIG_1")]
+  public static extern IntPtr new_UnitTypePtrIntMap__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_add")]
-  public static extern bool TilePositionSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntMap_size")]
+  public static extern uint UnitTypePtrIntMap_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_clear")]
-  public static extern void TilePositionSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntMap_empty")]
+  public static extern bool UnitTypePtrIntMap_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSet_remove")]
-  public static extern bool TilePositionSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntMap_Clear")]
+  public static extern void UnitTypePtrIntMap_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionSetIterator")]
-  public static extern IntPtr new_TilePositionSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntMap_getitem")]
+  public static extern int UnitTypePtrIntMap_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSetIterator_hasNext")]
-  public static extern bool TilePositionSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntMap_setitem")]
+  public static extern void UnitTypePtrIntMap_setitem(HandleRef jarg1, HandleRef jarg2, int jarg3);
 
-  [DllImport("__Internal", EntryPoint="CSharp_TilePositionSetIterator_next")]
-  public static extern IntPtr TilePositionSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntMap_ContainsKey")]
+  public static extern bool UnitTypePtrIntMap_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_TilePositionSetIterator")]
-  public static extern void delete_TilePositionSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntMap_Add")]
+  public static extern void UnitTypePtrIntMap_Add(HandleRef jarg1, HandleRef jarg2, int jarg3);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_RegionSet")]
-  public static extern IntPtr new_RegionSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntMap_Remove")]
+  public static extern bool UnitTypePtrIntMap_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_RegionSet")]
-  public static extern void delete_RegionSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntMap_create_iterator_begin")]
+  public static extern IntPtr UnitTypePtrIntMap_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSet_size")]
-  public static extern int RegionSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypePtrIntMap_get_next_key")]
+  public static extern IntPtr UnitTypePtrIntMap_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSet_contains")]
-  public static extern bool RegionSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypePtrIntMap")]
+  public static extern void delete_UnitTypePtrIntMap(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSet_add")]
-  public static extern bool RegionSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitPtrList_Clear")]
+  public static extern void UnitPtrList_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSet_clear")]
-  public static extern void RegionSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitPtrList_Add")]
+  public static extern void UnitPtrList_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSet_remove")]
-  public static extern bool RegionSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitPtrList_size")]
+  public static extern uint UnitPtrList_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_RegionSetIterator")]
-  public static extern IntPtr new_RegionSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitPtrList__SWIG_0")]
+  public static extern IntPtr new_UnitPtrList__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSetIterator_hasNext")]
-  public static extern bool RegionSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitPtrList__SWIG_1")]
+  public static extern IntPtr new_UnitPtrList__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSetIterator_next")]
-  public static extern IntPtr RegionSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitPtrList_create_iterator_begin")]
+  public static extern IntPtr UnitPtrList_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_RegionSetIterator")]
-  public static extern void delete_RegionSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitPtrList_get_next_key")]
+  public static extern IntPtr UnitPtrList_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_RegionSpacelessSet")]
-  public static extern IntPtr new_RegionSpacelessSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitPtrList_Contains")]
+  public static extern bool UnitPtrList_Contains(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_RegionSpacelessSet")]
-  public static extern void delete_RegionSpacelessSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitPtrList_Remove")]
+  public static extern bool UnitPtrList_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSpacelessSet_size")]
-  public static extern int RegionSpacelessSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitPtrList")]
+  public static extern void delete_UnitPtrList(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSpacelessSet_contains")]
-  public static extern bool RegionSpacelessSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList_Clear")]
+  public static extern void UnitTypeList_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSpacelessSet_add")]
-  public static extern bool RegionSpacelessSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList_Add")]
+  public static extern void UnitTypeList_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSpacelessSet_clear")]
-  public static extern void RegionSpacelessSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList_size")]
+  public static extern uint UnitTypeList_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSpacelessSet_remove")]
-  public static extern bool RegionSpacelessSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeList__SWIG_0")]
+  public static extern IntPtr new_UnitTypeList__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_RegionSpacelessSetIterator")]
-  public static extern IntPtr new_RegionSpacelessSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypeList__SWIG_1")]
+  public static extern IntPtr new_UnitTypeList__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSpacelessSetIterator_hasNext")]
-  public static extern bool RegionSpacelessSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList_create_iterator_begin")]
+  public static extern IntPtr UnitTypeList_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_RegionSpacelessSetIterator_next")]
-  public static extern IntPtr RegionSpacelessSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_UnitTypeList_get_next_key")]
+  public static extern IntPtr UnitTypeList_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_RegionSpacelessSetIterator")]
-  public static extern void delete_RegionSpacelessSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_UnitTypeList")]
+  public static extern void delete_UnitTypeList(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointSet")]
-  public static extern IntPtr new_ChokepointSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_RegionPtrRegionPtrPair__SWIG_0")]
+  public static extern IntPtr new_RegionPtrRegionPtrPair__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ChokepointSet")]
-  public static extern void delete_ChokepointSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_RegionPtrRegionPtrPair__SWIG_1")]
+  public static extern IntPtr new_RegionPtrRegionPtrPair__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSet_size")]
-  public static extern int ChokepointSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_RegionPtrRegionPtrPair__SWIG_2")]
+  public static extern IntPtr new_RegionPtrRegionPtrPair__SWIG_2(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSet_contains")]
-  public static extern bool ChokepointSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrRegionPtrPair_first_set")]
+  public static extern void RegionPtrRegionPtrPair_first_set(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSet_add")]
-  public static extern bool ChokepointSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrRegionPtrPair_first_get")]
+  public static extern IntPtr RegionPtrRegionPtrPair_first_get(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSet_clear")]
-  public static extern void ChokepointSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrRegionPtrPair_second_set")]
+  public static extern void RegionPtrRegionPtrPair_second_set(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSet_remove")]
-  public static extern bool ChokepointSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrRegionPtrPair_second_get")]
+  public static extern IntPtr RegionPtrRegionPtrPair_second_get(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointSetIterator")]
-  public static extern IntPtr new_ChokepointSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_RegionPtrRegionPtrPair")]
+  public static extern void delete_RegionPtrRegionPtrPair(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSetIterator_hasNext")]
-  public static extern bool ChokepointSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_BaseLocationPtrSet__SWIG_0")]
+  public static extern IntPtr new_BaseLocationPtrSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSetIterator_next")]
-  public static extern IntPtr ChokepointSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_BaseLocationPtrSet__SWIG_1")]
+  public static extern IntPtr new_BaseLocationPtrSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ChokepointSetIterator")]
-  public static extern void delete_ChokepointSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationPtrSet_size")]
+  public static extern uint BaseLocationPtrSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointSpacelessSet")]
-  public static extern IntPtr new_ChokepointSpacelessSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationPtrSet_empty")]
+  public static extern bool BaseLocationPtrSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ChokepointSpacelessSet")]
-  public static extern void delete_ChokepointSpacelessSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationPtrSet_Clear")]
+  public static extern void BaseLocationPtrSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSpacelessSet_size")]
-  public static extern int ChokepointSpacelessSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationPtrSet_getitem")]
+  public static extern IntPtr BaseLocationPtrSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSpacelessSet_contains")]
-  public static extern bool ChokepointSpacelessSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationPtrSet_ContainsKey")]
+  public static extern bool BaseLocationPtrSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSpacelessSet_add")]
-  public static extern bool ChokepointSpacelessSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationPtrSet_Add")]
+  public static extern void BaseLocationPtrSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSpacelessSet_clear")]
-  public static extern void ChokepointSpacelessSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationPtrSet_Remove")]
+  public static extern bool BaseLocationPtrSet_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSpacelessSet_remove")]
-  public static extern bool ChokepointSpacelessSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationPtrSet_create_iterator_begin")]
+  public static extern IntPtr BaseLocationPtrSet_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointSpacelessSetIterator")]
-  public static extern IntPtr new_ChokepointSpacelessSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationPtrSet_get_next_key")]
+  public static extern IntPtr BaseLocationPtrSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSpacelessSetIterator_hasNext")]
-  public static extern bool ChokepointSpacelessSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_BaseLocationPtrSet")]
+  public static extern void delete_BaseLocationPtrSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointSpacelessSetIterator_next")]
-  public static extern IntPtr ChokepointSpacelessSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointPtrSet__SWIG_0")]
+  public static extern IntPtr new_ChokepointPtrSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ChokepointSpacelessSetIterator")]
-  public static extern void delete_ChokepointSpacelessSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointPtrSet__SWIG_1")]
+  public static extern IntPtr new_ChokepointPtrSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointGetRegionsPair__SWIG_0")]
-  public static extern IntPtr new_ChokepointGetRegionsPair__SWIG_0();
+  [DllImport("__Internal", EntryPoint="CSharp_ChokepointPtrSet_size")]
+  public static extern uint ChokepointPtrSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointGetRegionsPair__SWIG_1")]
-  public static extern IntPtr new_ChokepointGetRegionsPair__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_ChokepointPtrSet_empty")]
+  public static extern bool ChokepointPtrSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointGetRegionsPair__SWIG_2")]
-  public static extern IntPtr new_ChokepointGetRegionsPair__SWIG_2(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_ChokepointPtrSet_Clear")]
+  public static extern void ChokepointPtrSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointGetRegionsPair_first_set")]
-  public static extern void ChokepointGetRegionsPair_first_set(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_ChokepointPtrSet_getitem")]
+  public static extern IntPtr ChokepointPtrSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointGetRegionsPair_first_get")]
-  public static extern IntPtr ChokepointGetRegionsPair_first_get(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_ChokepointPtrSet_ContainsKey")]
+  public static extern bool ChokepointPtrSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointGetRegionsPair_second_set")]
-  public static extern void ChokepointGetRegionsPair_second_set(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_ChokepointPtrSet_Add")]
+  public static extern void ChokepointPtrSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointGetRegionsPair_second_get")]
-  public static extern IntPtr ChokepointGetRegionsPair_second_get(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_ChokepointPtrSet_Remove")]
+  public static extern bool ChokepointPtrSet_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ChokepointGetRegionsPair")]
-  public static extern void delete_ChokepointGetRegionsPair(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_ChokepointPtrSet_create_iterator_begin")]
+  public static extern IntPtr ChokepointPtrSet_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointGetSidesPair__SWIG_0")]
-  public static extern IntPtr new_ChokepointGetSidesPair__SWIG_0();
+  [DllImport("__Internal", EntryPoint="CSharp_ChokepointPtrSet_get_next_key")]
+  public static extern IntPtr ChokepointPtrSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointGetSidesPair__SWIG_1")]
-  public static extern IntPtr new_ChokepointGetSidesPair__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_ChokepointPtrSet")]
+  public static extern void delete_ChokepointPtrSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_ChokepointGetSidesPair__SWIG_2")]
-  public static extern IntPtr new_ChokepointGetSidesPair__SWIG_2(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_PolygonPtrSet__SWIG_0")]
+  public static extern IntPtr new_PolygonPtrSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointGetSidesPair_first_set")]
-  public static extern void ChokepointGetSidesPair_first_set(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_PolygonPtrSet__SWIG_1")]
+  public static extern IntPtr new_PolygonPtrSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointGetSidesPair_first_get")]
-  public static extern IntPtr ChokepointGetSidesPair_first_get(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_PolygonPtrSet_size")]
+  public static extern uint PolygonPtrSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointGetSidesPair_second_set")]
-  public static extern void ChokepointGetSidesPair_second_set(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_PolygonPtrSet_empty")]
+  public static extern bool PolygonPtrSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_ChokepointGetSidesPair_second_get")]
-  public static extern IntPtr ChokepointGetSidesPair_second_get(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_PolygonPtrSet_Clear")]
+  public static extern void PolygonPtrSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_ChokepointGetSidesPair")]
-  public static extern void delete_ChokepointGetSidesPair(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_PolygonPtrSet_getitem")]
+  public static extern IntPtr PolygonPtrSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_BaseLocationSet")]
-  public static extern IntPtr new_BaseLocationSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_PolygonPtrSet_ContainsKey")]
+  public static extern bool PolygonPtrSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_BaseLocationSet")]
-  public static extern void delete_BaseLocationSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_PolygonPtrSet_Add")]
+  public static extern void PolygonPtrSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSet_size")]
-  public static extern int BaseLocationSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_PolygonPtrSet_Remove")]
+  public static extern bool PolygonPtrSet_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSet_contains")]
-  public static extern bool BaseLocationSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_PolygonPtrSet_create_iterator_begin")]
+  public static extern IntPtr PolygonPtrSet_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSet_add")]
-  public static extern bool BaseLocationSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_PolygonPtrSet_get_next_key")]
+  public static extern IntPtr PolygonPtrSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSet_clear")]
-  public static extern void BaseLocationSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_PolygonPtrSet")]
+  public static extern void delete_PolygonPtrSet(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSet_remove")]
-  public static extern bool BaseLocationSet_remove(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_new_RegionPtrSet__SWIG_0")]
+  public static extern IntPtr new_RegionPtrSet__SWIG_0();
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_BaseLocationSetIterator")]
-  public static extern IntPtr new_BaseLocationSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_new_RegionPtrSet__SWIG_1")]
+  public static extern IntPtr new_RegionPtrSet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSetIterator_hasNext")]
-  public static extern bool BaseLocationSetIterator_hasNext(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrSet_size")]
+  public static extern uint RegionPtrSet_size(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSetIterator_next")]
-  public static extern IntPtr BaseLocationSetIterator_next(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrSet_empty")]
+  public static extern bool RegionPtrSet_empty(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_BaseLocationSetIterator")]
-  public static extern void delete_BaseLocationSetIterator(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrSet_Clear")]
+  public static extern void RegionPtrSet_Clear(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_new_BaseLocationSpacelessSet")]
-  public static extern IntPtr new_BaseLocationSpacelessSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrSet_getitem")]
+  public static extern IntPtr RegionPtrSet_getitem(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_delete_BaseLocationSpacelessSet")]
-  public static extern void delete_BaseLocationSpacelessSet(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrSet_ContainsKey")]
+  public static extern bool RegionPtrSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSpacelessSet_size")]
-  public static extern int BaseLocationSpacelessSet_size(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrSet_Add")]
+  public static extern void RegionPtrSet_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSpacelessSet_contains")]
-  public static extern bool BaseLocationSpacelessSet_contains(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrSet_Remove")]
+  public static extern bool RegionPtrSet_Remove(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSpacelessSet_add")]
-  public static extern bool BaseLocationSpacelessSet_add(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrSet_create_iterator_begin")]
+  public static extern IntPtr RegionPtrSet_create_iterator_begin(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSpacelessSet_clear")]
-  public static extern void BaseLocationSpacelessSet_clear(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_RegionPtrSet_get_next_key")]
+  public static extern IntPtr RegionPtrSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
 
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSpacelessSet_remove")]
-  public static extern bool BaseLocationSpacelessSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_BaseLocationSpacelessSetIterator")]
-  public static extern IntPtr new_BaseLocationSpacelessSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSpacelessSetIterator_hasNext")]
-  public static extern bool BaseLocationSpacelessSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_BaseLocationSpacelessSetIterator_next")]
-  public static extern IntPtr BaseLocationSpacelessSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_BaseLocationSpacelessSetIterator")]
-  public static extern void delete_BaseLocationSpacelessSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PolygonSet")]
-  public static extern IntPtr new_PolygonSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_PolygonSet")]
-  public static extern void delete_PolygonSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSet_size")]
-  public static extern int PolygonSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSet_contains")]
-  public static extern bool PolygonSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSet_add")]
-  public static extern bool PolygonSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSet_clear")]
-  public static extern void PolygonSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSet_remove")]
-  public static extern bool PolygonSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PolygonSetIterator")]
-  public static extern IntPtr new_PolygonSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSetIterator_hasNext")]
-  public static extern bool PolygonSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSetIterator_next")]
-  public static extern IntPtr PolygonSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_PolygonSetIterator")]
-  public static extern void delete_PolygonSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PolygonSpacelessSet")]
-  public static extern IntPtr new_PolygonSpacelessSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_PolygonSpacelessSet")]
-  public static extern void delete_PolygonSpacelessSet(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSpacelessSet_size")]
-  public static extern int PolygonSpacelessSet_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSpacelessSet_contains")]
-  public static extern bool PolygonSpacelessSet_contains(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSpacelessSet_add")]
-  public static extern bool PolygonSpacelessSet_add(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSpacelessSet_clear")]
-  public static extern void PolygonSpacelessSet_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSpacelessSet_remove")]
-  public static extern bool PolygonSpacelessSet_remove(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PolygonSpacelessSetIterator")]
-  public static extern IntPtr new_PolygonSpacelessSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSpacelessSetIterator_hasNext")]
-  public static extern bool PolygonSpacelessSetIterator_hasNext(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PolygonSpacelessSetIterator_next")]
-  public static extern IntPtr PolygonSpacelessSetIterator_next(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_PolygonSpacelessSetIterator")]
-  public static extern void delete_PolygonSpacelessSetIterator(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_new_PositionVector")]
-  public static extern IntPtr new_PositionVector(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_delete_PositionVector")]
-  public static extern void delete_PositionVector(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_size")]
-  public static extern int PositionVector_size(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_add")]
-  public static extern void PositionVector_add(HandleRef jarg1, int jarg2, HandleRef jarg3);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_clear")]
-  public static extern void PositionVector_clear(HandleRef jarg1);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_set")]
-  public static extern IntPtr PositionVector_set(HandleRef jarg1, int jarg2, HandleRef jarg3);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_remove")]
-  public static extern IntPtr PositionVector_remove(HandleRef jarg1, int jarg2);
-
-  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_get")]
-  public static extern IntPtr PositionVector_get(HandleRef jarg1, int jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_delete_RegionPtrSet")]
+  public static extern void delete_RegionPtrSet(HandleRef jarg1);
 }
 
 }

@@ -41,48 +41,48 @@ public class Game : IDisposable {
     }
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Force_p_t getForces() {
-    SWIGTYPE_p_std__setT_BWAPI__Force_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Force_p_t(bridgePINVOKE.Game_getForces(swigCPtr), false);
+  public virtual ForcePtrSet getForces() {
+    ForcePtrSet ret = new ForcePtrSet(bridgePINVOKE.Game_getForces(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Player_p_t getPlayers() {
-    SWIGTYPE_p_std__setT_BWAPI__Player_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Player_p_t(bridgePINVOKE.Game_getPlayers(swigCPtr), false);
+  public virtual PlayerPtrSet getPlayers() {
+    PlayerPtrSet ret = new PlayerPtrSet(bridgePINVOKE.Game_getPlayers(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getAllUnits() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.Game_getAllUnits(swigCPtr), false);
+  public virtual UnitSet getAllUnits() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Game_getAllUnits(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getMinerals() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.Game_getMinerals(swigCPtr), false);
+  public virtual UnitSet getMinerals() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Game_getMinerals(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getGeysers() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.Game_getGeysers(swigCPtr), false);
+  public virtual UnitSet getGeysers() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Game_getGeysers(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getNeutralUnits() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.Game_getNeutralUnits(swigCPtr), false);
+  public virtual UnitSet getNeutralUnits() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Game_getNeutralUnits(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getStaticMinerals() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.Game_getStaticMinerals(swigCPtr), false);
+  public virtual UnitSet getStaticMinerals() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Game_getStaticMinerals(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getStaticGeysers() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.Game_getStaticGeysers(swigCPtr), false);
+  public virtual UnitSet getStaticGeysers() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Game_getStaticGeysers(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getStaticNeutralUnits() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.Game_getStaticNeutralUnits(swigCPtr), false);
+  public virtual UnitSet getStaticNeutralUnits() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Game_getStaticNeutralUnits(swigCPtr), false);
     return ret;
   }
 
@@ -125,8 +125,8 @@ public class Game : IDisposable {
     bridgePINVOKE.Game_enableFlag(swigCPtr, flag);
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t unitsOnTile(int x, int y) {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.Game_unitsOnTile(swigCPtr, x, y), false);
+  public virtual UnitSet unitsOnTile(int x, int y) {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Game_unitsOnTile(swigCPtr, x, y), false);
     return ret;
   }
 
@@ -195,38 +195,38 @@ public class Game : IDisposable {
     return ret;
   }
 
-  public virtual bool isBuildable(SWIGTYPE_p_TilePosition position) {
-    bool ret = bridgePINVOKE.Game_isBuildable__SWIG_1(swigCPtr, SWIGTYPE_p_TilePosition.getCPtr(position));
+  public virtual bool isBuildable(TilePosition position) {
+    bool ret = bridgePINVOKE.Game_isBuildable__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool isVisible(SWIGTYPE_p_TilePosition position) {
-    bool ret = bridgePINVOKE.Game_isVisible__SWIG_1(swigCPtr, SWIGTYPE_p_TilePosition.getCPtr(position));
+  public virtual bool isVisible(TilePosition position) {
+    bool ret = bridgePINVOKE.Game_isVisible__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool isExplored(SWIGTYPE_p_TilePosition position) {
-    bool ret = bridgePINVOKE.Game_isExplored__SWIG_1(swigCPtr, SWIGTYPE_p_TilePosition.getCPtr(position));
+  public virtual bool isExplored(TilePosition position) {
+    bool ret = bridgePINVOKE.Game_isExplored__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool hasCreep(SWIGTYPE_p_TilePosition position) {
-    bool ret = bridgePINVOKE.Game_hasCreep__SWIG_1(swigCPtr, SWIGTYPE_p_TilePosition.getCPtr(position));
+  public virtual bool hasCreep(TilePosition position) {
+    bool ret = bridgePINVOKE.Game_hasCreep__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool hasPower(SWIGTYPE_p_TilePosition position, int tileWidth, int tileHeight) {
-    bool ret = bridgePINVOKE.Game_hasPower__SWIG_1(swigCPtr, SWIGTYPE_p_TilePosition.getCPtr(position), tileWidth, tileHeight);
+  public virtual bool hasPower(TilePosition position, int tileWidth, int tileHeight) {
+    bool ret = bridgePINVOKE.Game_hasPower__SWIG_1(swigCPtr, TilePosition.getCPtr(position), tileWidth, tileHeight);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool canBuildHere(Unit builder, SWIGTYPE_p_TilePosition position, UnitType type) {
-    bool ret = bridgePINVOKE.Game_canBuildHere(swigCPtr, Unit.getCPtr(builder), SWIGTYPE_p_TilePosition.getCPtr(position), UnitType.getCPtr(type));
+  public virtual bool canBuildHere(Unit builder, TilePosition position, UnitType type) {
+    bool ret = bridgePINVOKE.Game_canBuildHere(swigCPtr, Unit.getCPtr(builder), TilePosition.getCPtr(position), UnitType.getCPtr(type));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -237,20 +237,20 @@ public class Game : IDisposable {
     return ret;
   }
 
-  public virtual bool canResearch(Unit unit, SWIGTYPE_p_TechType type) {
-    bool ret = bridgePINVOKE.Game_canResearch(swigCPtr, Unit.getCPtr(unit), SWIGTYPE_p_TechType.getCPtr(type));
+  public virtual bool canResearch(Unit unit, TechType type) {
+    bool ret = bridgePINVOKE.Game_canResearch(swigCPtr, Unit.getCPtr(unit), TechType.getCPtr(type));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool canUpgrade(Unit unit, SWIGTYPE_p_UpgradeType type) {
-    bool ret = bridgePINVOKE.Game_canUpgrade(swigCPtr, Unit.getCPtr(unit), SWIGTYPE_p_UpgradeType.getCPtr(type));
+  public virtual bool canUpgrade(Unit unit, UpgradeType type) {
+    bool ret = bridgePINVOKE.Game_canUpgrade(swigCPtr, Unit.getCPtr(unit), UpgradeType.getCPtr(type));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_TilePosition_t getStartLocations() {
-    SWIGTYPE_p_std__setT_TilePosition_t ret = new SWIGTYPE_p_std__setT_TilePosition_t(bridgePINVOKE.Game_getStartLocations(swigCPtr), false);
+  public virtual TilePositionSet getStartLocations() {
+    TilePositionSet ret = new TilePositionSet(bridgePINVOKE.Game_getStartLocations(swigCPtr), false);
     return ret;
   }
 
@@ -262,8 +262,8 @@ public class Game : IDisposable {
     bridgePINVOKE.Game_sendText(swigCPtr, text);
   }
 
-  public virtual void changeRace(SWIGTYPE_p_Race race) {
-    bridgePINVOKE.Game_changeRace(swigCPtr, SWIGTYPE_p_Race.getCPtr(race));
+  public virtual void changeRace(Race race) {
+    bridgePINVOKE.Game_changeRace(swigCPtr, Race.getCPtr(race));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -310,8 +310,8 @@ public class Game : IDisposable {
     bridgePINVOKE.Game_setLocalSpeed__SWIG_1(swigCPtr);
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Unit_p_t getSelectedUnits() {
-    SWIGTYPE_p_std__setT_BWAPI__Unit_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Unit_p_t(bridgePINVOKE.Game_getSelectedUnits(swigCPtr), false);
+  public virtual UnitSet getSelectedUnits() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Game_getSelectedUnits(swigCPtr), false);
     return ret;
   }
 
