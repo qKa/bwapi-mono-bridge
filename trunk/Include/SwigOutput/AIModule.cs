@@ -66,8 +66,8 @@ public class AIModule : IDisposable {
     bridgePINVOKE.AIModule_onPlayerLeft(swigCPtr, Player.getCPtr(player));
   }
 
-  public virtual void onNukeDetect(SWIGTYPE_p_Position target) {
-    bridgePINVOKE.AIModule_onNukeDetect(swigCPtr, SWIGTYPE_p_Position.getCPtr(target));
+  public virtual void onNukeDetect(Position target) {
+    bridgePINVOKE.AIModule_onNukeDetect(swigCPtr, Position.getCPtr(target));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 

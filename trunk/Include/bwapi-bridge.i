@@ -1,11 +1,9 @@
 %include <stl.i>
+%include "std_set.i"
+%include "std_list.i"
 
 %module bridge
 %{
-#include "ListWrapper.h"
-#include "MapWrapper.h"
-#include "SetWrapper.h"
-#include "VectorWrapper.h"
 #include "BWAPI.h"
 #include "BWTA.h"
 #include "monobridge.h"
@@ -167,17 +165,23 @@ using namespace BWAPI;
 %rename (WeaponTypeUnknown) BWAPI::WeaponTypes::Unknown;
 %rename (WeaponTypeYamato_Gun) BWAPI::WeaponTypes::Yamato_Gun;
 
+
 %rename (opAssign) *::operator =;
 %rename (opEquals) *::operator ==;
 %rename (opLessThan) *::operator <;
 %rename (opMinus) *::operator -;
-%rename (opNotEquals) *::operator !=;
+%rename (opNotEquals) *::operator !=;                         
 %rename (opPlus) *::operator +;
-%include "ListWrapper.h"
-%include "MapWrapper.h"
-%include "SetWrapper.h"
-%include "VectorWrapper.h"
+
+//fix up const strings.
+%apply const std::string & {std::string &};
+
+
 %include "BWAPI.h"
+%include "BWAPI/Race.h"
+%include "BWAPI/TechType.h"
+%include "BWAPI/UpgradeType.h"
+%include "BWAPI/Position.h"
 %include "BWAPI/AIModule.h"
 %include "BWAPI/AttackType.h"
 %include "BWAPI/Color.h"
@@ -191,19 +195,23 @@ using namespace BWAPI;
 %include "BWAPI/Game.h"
 %include "BWAPI/Latency.h"
 %include "BWAPI/Order.h"
-%include "BWAPI/Player.h"
 %include "BWAPI/PlayerType.h"
-%include "BWAPI/Position.h"
-%include "BWAPI/Race.h"
-%include "BWAPI/TechType.h"
+%include "BWAPI/Player.h"
+
+
+
+
 %include "BWAPI/TilePosition.h"
 %include "BWAPI/Unit.h"
 %include "BWAPI/UnitSizeType.h"
 %include "BWAPI/UnitType.h"
-%include "BWAPI/UpgradeType.h"
+
 %include "BWAPI/WeaponType.h"
+%{
+using namespace BWAPI;
+%}
 
-
+%include "monobridge.h"
 
 %include "BWTA.h"
 %include "BWTA/BaseLocation.h"
@@ -211,79 +219,48 @@ using namespace BWAPI;
 %include "BWTA/Polygon.h"
 %include "BWTA/Region.h"
 
-%include "monobridge.h"
-
 
 //%rename (operator +=) *::opAdd;
 //%rename (operator -=) *::opSubtract;
 
+%template (UnitSet) std::set<BWAPI::Unit*>;
+%template (AttackTypeSet) std::set<BWAPI::AttackType>;
 
-%template (DamageTypeSet) SetWrapper<BWAPI::DamageType>;
-%template (DamageTypeSetIterator) SetIterator<BWAPI::DamageType>;
-%template (ErrorSet) SetWrapper<BWAPI::Error>;
-%template (ErrorSetIterator) SetIterator<BWAPI::Error>;
-%template (ExplosionTypeSet) SetWrapper<BWAPI::ExplosionType>;
-%template (ExplosionTypeSetIterator) SetIterator<BWAPI::ExplosionType>;
-%template (ForceSet) SetWrapper<BWAPI::Force*>;
-%template (ForceSetIterator) SetIterator<BWAPI::Force*>;
-%template (OrderSet) SetWrapper<BWAPI::Order>;
-%template (OrderSetIterator) SetIterator<BWAPI::Order>;
-%template (PlayerSet) SetWrapper<BWAPI::Player*>;
-%template (PlayerSetIterator) SetIterator<BWAPI::Player*>;
-%template (PlayerTypeSet) SetWrapper<BWAPI::PlayerType>;
-%template (PlayerTypeSetIterator) SetIterator<BWAPI::PlayerType>;
-%template (RaceSet) SetWrapper<BWAPI::Race>;
-%template (RaceSetIterator) SetIterator<BWAPI::Race>;
-%template (TechTypeConstantSet) SetWrapper<const BWAPI::TechType*>;
-%template (TechTypeConstantSetIterator) SetIterator<const BWAPI::TechType*>;
-%template (TechTypeSet) SetWrapper<BWAPI::TechType>;
-%template (TechTypeSetIterator) SetIterator<BWAPI::TechType>;
-%template (UnitList) ListWrapper<BWAPI::Unit*>;
-%template (UnitListIterator) ListIterator<BWAPI::Unit*>;
-%template (UnitSet) SetWrapper<BWAPI::Unit*>;
-%template (UnitSetIterator) SetIterator<BWAPI::Unit*>;
-%template (UnitSizeTypeSet) SetWrapper<BWAPI::UnitSizeType>;
-%template (UnitSizeTypeSetIterator) SetIterator<BWAPI::UnitSizeType>;
-%template (UnitTypeConstantSet) SetWrapper<const BWAPI::UnitType*>;
-%template (UnitTypeConstantSetIterator) SetIterator<const BWAPI::UnitType*>;
-%template (UnitTypeSet) SetWrapper<BWAPI::UnitType>;
-%template (UnitTypeSetIterator) SetIterator<BWAPI::UnitType>;
-%template (UnitTypeWhatBuildsPair) std::pair<const BWAPI::UnitType*,int>;
-%template (UnitTypeMap) MapWrapper<const UnitType*, int>;
-%template (UnitTypeMapIterator) MapIterator<const UnitType*, int>;
-%template (UnitTypeList) ListWrapper<BWAPI::UnitType>;
-%template (UnitTypeListIterator) ListIterator<BWAPI::UnitType>;
-%template (UpgradeTypeConstantSet) SetWrapper<const BWAPI::UpgradeType*>;
-%template (UpgradeTypeConstantSetIterator) SetIterator<const BWAPI::UpgradeType*>;
-%template (UpgradeTypeSet) SetWrapper<BWAPI::UpgradeType>;
-%template (UpgradeTypeSetIterator) SetIterator<BWAPI::UpgradeType>;
-%template (WeaponTypeSet) SetWrapper<BWAPI::WeaponType>;
-%template (WeaponTypeSetIterator) SetIterator<BWAPI::WeaponType>;
-%template (TilePositionSet) SetWrapper<BWAPI::TilePosition>;
-%template (TilePositionSetIterator) SetIterator<BWAPI::TilePosition>;
+%template (DamageTypeSet) std::set<BWAPI::DamageType>;
 
+%template (ErrorSet) std::set<BWAPI::Error>;
 
+%template (ExplosionTypeSet) std::set<BWAPI::ExplosionType>;
 
-%{
-  using namespace BWTA;
-%}
-%template (RegionSet) SetWrapper<BWTA::Region*>;
-%template (RegionSetIterator) SetIterator<BWTA::Region*>;
-%template (RegionSpacelessSet) SetWrapper<BWTA::Region*>;
-%template (RegionSpacelessSetIterator) SetIterator<BWTA::Region*>;
-%template (ChokepointSet) SetWrapper<BWTA::Chokepoint*>;
-%template (ChokepointSetIterator) SetIterator<BWTA::Chokepoint*>;
-%template (ChokepointSpacelessSet) SetWrapper<BWTA::Chokepoint*>;
-%template (ChokepointSpacelessSetIterator) SetIterator<BWTA::Chokepoint*>;
-%template (ChokepointGetRegionsPair) std::pair<BWTA::Region*, BWTA::Region*>;
-%template (ChokepointGetSidesPair) std::pair<BWAPI::Position, BWAPI::Position>;
-%template (BaseLocationSet) SetWrapper<BWTA::BaseLocation*>;
-%template (BaseLocationSetIterator) SetIterator<BWTA::BaseLocation*>;
-%template (BaseLocationSpacelessSet) SetWrapper<BWTA::BaseLocation*>;
-%template (BaseLocationSpacelessSetIterator) SetIterator<BWTA::BaseLocation*>;
-%template (PolygonSet) SetWrapper<BWTA::Polygon*>;
-%template (PolygonSetIterator) SetIterator<BWTA::Polygon*>;
-%template (PolygonSpacelessSet) SetWrapper<BWTA::Polygon*>;
-%template (PolygonSpacelessSetIterator) SetIterator<BWTA::Polygon*>;
-%template (PositionVector) VectorWrapper<BWAPI::Position>;
+%template (ForcePtrSet) std::set<BWAPI::Force *>;
+%template (OrderSet) std::set<BWAPI::Order>;
+%template (PlayerPtrSet) std::set<BWAPI::Player *>;
+%template (PlayerTypeSet) std::set<BWAPI::PlayerType>;
+%template (RaceSet) std::set<BWAPI::Race>;
+
+%template (TechTypePtrSet) std::set<const BWAPI::TechType *>;
+%template (TechTypeSet) std::set<BWAPI::TechType>;
+%template (UnitSizeTypeSet) std::set<BWAPI::UnitSizeType>;
+%template (UnitTypePtrSet) std::set<const BWAPI::UnitType *>;
+%template (UnitTypeSet) std::set<BWAPI::UnitType>;
+%template (UpgradeTypePtrSet) std::set<const BWAPI::UpgradeType *>;
+%template (UpgradeTypeSet) std::set<BWAPI::UpgradeType>;
+%template (WeaponTypeSet) std::set<BWAPI::WeaponType>;
+
+%template (PositionPair) std::pair<BWAPI::Position,BWAPI::Position>;
+%template (UnitTypePtrIntPair) std::pair<const BWAPI::UnitType *,int>;
+%template (TilePositionSet) std::set<BWAPI::TilePosition>;
+
+%template (UnitTypePtrIntMap) std::map<const BWAPI::UnitType *, int>;
+
+%template (UnitPtrList) std::list<BWAPI::Unit *>;
+%template (UnitTypeList) std::list<BWAPI::UnitType>;
+
+/* BWTA */
+
+%template (RegionPtrRegionPtrPair) std::pair<BWTA::Region *, BWTA::Region *>;
+%template (BaseLocationPtrSet) std::set<BWTA::BaseLocation *>;
+%template (ChokepointPtrSet) std::set<BWTA::Chokepoint *>;
+%template (PolygonPtrSet) std::set<BWTA::Polygon *>;
+%template (RegionPtrSet) std::set<BWTA::Region *>;
 

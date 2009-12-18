@@ -11,7 +11,11 @@ namespace BWAPI {
 using System;
 using System.Runtime.InteropServices;
 
-public class RaceSet : IDisposable {
+public class RaceSet : IDisposable 
+#if !SWIG_DOTNET_1
+    , System.Collections.Generic.ICollection<Race>
+#endif
+ {
   private HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
@@ -41,32 +45,198 @@ public class RaceSet : IDisposable {
     }
   }
 
-  public RaceSet(SWIGTYPE_p_std__setT_BWAPI__Race_t original) : this(bridgePINVOKE.new_RaceSet(SWIGTYPE_p_std__setT_BWAPI__Race_t.getCPtr(original)), true) {
+
+  
+  public int Count {
+    get {
+      return (int)size();
+    }
   }
 
-  public int size() {
-    int ret = bridgePINVOKE.RaceSet_size(swigCPtr);
+  public bool IsReadOnly {
+    get { 
+      return false; 
+    }
+  }
+
+#if !SWIG_DOTNET_1
+ public System.Collections.Generic.ICollection<Race> Values {
+    get {
+      System.Collections.Generic.ICollection<Race> values = new System.Collections.Generic.List<Race>();
+      IntPtr iter = create_iterator_begin();
+      try {
+        while (true) {
+          values.Add(get_next_key(iter));
+        }
+      } catch (ArgumentOutOfRangeException) {
+      }
+      return values;
+    }
+  }
+ 
+  public bool Contains(Race item) {
+    if ( ContainsKey(item)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public void CopyTo(Race[] array) {
+    CopyTo(array, 0);
+  }
+
+  public void CopyTo( Race[] array, int arrayIndex) {
+    if (array == null)
+      throw new ArgumentNullException("array");
+    if (arrayIndex < 0)
+      throw new ArgumentOutOfRangeException("arrayIndex", "Value is less than zero");
+    if (array.Rank > 1)
+      throw new ArgumentException("Multi dimensional array.", "array");
+    if (arrayIndex+this.Count > array.Length)
+      throw new ArgumentException("Number of elements to copy is too large.");
+
+   System.Collections.Generic.IList<Race> keyList = new System.Collections.Generic.List<Race>(this.Values);
+    for (int i = 0; i < this.Count; i++) {
+      Race currentKey = keyList[i];
+      array.SetValue( currentKey, arrayIndex+i);
+    }
+  }
+
+  System.Collections.Generic.IEnumerator< Race> System.Collections.Generic.IEnumerable<Race>.GetEnumerator() {
+    return new RaceSetEnumerator(this);
+  }
+
+  System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
+    return new RaceSetEnumerator(this);
+  }
+
+  public RaceSetEnumerator GetEnumerator() {
+    return new RaceSetEnumerator(this);
+  }
+
+  // Type-safe enumerator
+  /// Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
+  /// whenever the collection is modified. This has been done for changes in the size of the
+  /// collection but not when one of the elements of the collection is modified as it is a bit
+  /// tricky to detect unmanaged code that modifies the collection under our feet.
+  public sealed class RaceSetEnumerator : System.Collections.IEnumerator, 
+      System.Collections.Generic.IEnumerator< Race>
+  {
+    private RaceSet collectionRef;
+    private System.Collections.Generic.IList<Race> keyCollection;
+    private int currentIndex;
+    private object currentObject;
+    private int currentSize;
+
+    public RaceSetEnumerator(RaceSet collection) {
+      collectionRef = collection;
+      keyCollection = new System.Collections.Generic.List<Race>(collection.Values);
+      currentIndex = -1;
+      currentObject = null;
+      currentSize = collectionRef.Count;
+    }
+
+    // Type-safe iterator Current
+    public  Race Current {
+      get {
+        if (currentIndex == -1)
+          throw new InvalidOperationException("Enumeration not started.");
+        if (currentIndex > currentSize - 1)
+          throw new InvalidOperationException("Enumeration finished.");
+        if (currentObject == null)
+          throw new InvalidOperationException("Collection modified.");
+        return ( Race)currentObject;
+      }
+    }
+
+    // Type-unsafe IEnumerator.Current
+    object System.Collections.IEnumerator.Current {
+      get {
+        return Current;
+      }
+    }
+
+    public bool MoveNext() {
+      int size = collectionRef.Count;
+      bool moveOkay = (currentIndex+1 < size) && (size == currentSize);
+      if (moveOkay) {
+        currentIndex++;
+        Race currentKey = keyCollection[currentIndex];
+        currentObject = currentKey;
+      } else {
+        currentObject = null;
+      }
+      return moveOkay;
+    }
+
+    public void Reset() {
+      currentIndex = -1;
+      currentObject = null;
+      if (collectionRef.Count != currentSize) {
+        throw new InvalidOperationException("Collection modified.");
+      }
+    }
+
+    public void Dispose() {
+      currentIndex = -1;
+      currentObject = null;
+    }
+  }
+#endif
+  
+
+  public RaceSet() : this(bridgePINVOKE.new_RaceSet__SWIG_0(), true) {
+  }
+
+  public RaceSet(RaceSet other) : this(bridgePINVOKE.new_RaceSet__SWIG_1(RaceSet.getCPtr(other)), true) {
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  private uint size() {
+    uint ret = bridgePINVOKE.RaceSet_size(swigCPtr);
     return ret;
   }
 
-  public bool contains(Race item) {
-    bool ret = bridgePINVOKE.RaceSet_contains(swigCPtr, Race.getCPtr(item));
+  public bool empty() {
+    bool ret = bridgePINVOKE.RaceSet_empty(swigCPtr);
+    return ret;
+  }
+
+  public void Clear() {
+    bridgePINVOKE.RaceSet_Clear(swigCPtr);
+  }
+
+  public Race getitem(Race key) {
+    Race ret = new Race(bridgePINVOKE.RaceSet_getitem(swigCPtr, Race.getCPtr(key)), false);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool add(Race item) {
-    bool ret = bridgePINVOKE.RaceSet_add(swigCPtr, Race.getCPtr(item));
+  public bool ContainsKey(Race key) {
+    bool ret = bridgePINVOKE.RaceSet_ContainsKey(swigCPtr, Race.getCPtr(key));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void clear() {
-    bridgePINVOKE.RaceSet_clear(swigCPtr);
+  public void Add(Race key) {
+    bridgePINVOKE.RaceSet_Add(swigCPtr, Race.getCPtr(key));
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public bool remove(Race item) {
-    bool ret = bridgePINVOKE.RaceSet_remove(swigCPtr, Race.getCPtr(item));
+  public bool Remove(Race key) {
+    bool ret = bridgePINVOKE.RaceSet_Remove(swigCPtr, Race.getCPtr(key));
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public IntPtr create_iterator_begin() {
+    IntPtr ret = bridgePINVOKE.RaceSet_create_iterator_begin(swigCPtr);
+    return ret;
+  }
+
+  public Race get_next_key(IntPtr swigiterator) {
+    Race ret = new Race(bridgePINVOKE.RaceSet_get_next_key(swigCPtr, swigiterator), false);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

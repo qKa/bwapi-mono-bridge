@@ -11,24 +11,24 @@ namespace BWAPI {
 using System;
 using System.Runtime.InteropServices;
 
-public class UnitTypeSet : IDisposable 
+public class UnitTypePtrIntMap : IDisposable 
 #if !SWIG_DOTNET_1
-    , System.Collections.Generic.ICollection<UnitType>
+    , System.Collections.Generic.IDictionary<UnitType, int>
 #endif
  {
   private HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal UnitTypeSet(IntPtr cPtr, bool cMemoryOwn) {
+  internal UnitTypePtrIntMap(IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new HandleRef(this, cPtr);
   }
 
-  internal static HandleRef getCPtr(UnitTypeSet obj) {
+  internal static HandleRef getCPtr(UnitTypePtrIntMap obj) {
     return (obj == null) ? new HandleRef(null, IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~UnitTypeSet() {
+  ~UnitTypePtrIntMap() {
     Dispose();
   }
 
@@ -37,7 +37,7 @@ public class UnitTypeSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKE.delete_UnitTypeSet(swigCPtr);
+          bridgePINVOKE.delete_UnitTypePtrIntMap(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -46,7 +46,25 @@ public class UnitTypeSet : IDisposable
   }
 
 
-  
+  public int this[UnitType key] {
+    get {
+      return getitem(key);
+    }
+
+    set {
+      setitem(key, value);
+    }
+  }
+
+  public bool TryGetValue(UnitType key, out int value) {
+    if (this.ContainsKey(key)) {
+      value = this[key];
+      return true;
+    }
+    value = default(int);
+    return false;
+  }
+
   public int Count {
     get {
       return (int)size();
@@ -60,33 +78,56 @@ public class UnitTypeSet : IDisposable
   }
 
 #if !SWIG_DOTNET_1
- public System.Collections.Generic.ICollection<UnitType> Values {
+
+  public System.Collections.Generic.ICollection<UnitType> Keys {
     get {
-      System.Collections.Generic.ICollection<UnitType> values = new System.Collections.Generic.List<UnitType>();
+      System.Collections.Generic.ICollection<UnitType> keys = new System.Collections.Generic.List<UnitType>();
       IntPtr iter = create_iterator_begin();
       try {
         while (true) {
-          values.Add(get_next_key(iter));
+          keys.Add(get_next_key(iter));
         }
       } catch (ArgumentOutOfRangeException) {
       }
-      return values;
+      return keys;
     }
   }
- 
-  public bool Contains(UnitType item) {
-    if ( ContainsKey(item)) {
+
+  public System.Collections.Generic.ICollection<int> Values {
+    get {
+      System.Collections.Generic.ICollection<int> vals = new System.Collections.Generic.List<int>();
+      foreach (System.Collections.Generic.KeyValuePair<UnitType, int> pair in this) {
+        vals.Add(pair.Value);
+      }
+      return vals;
+    }
+  }
+  
+  public void Add(System.Collections.Generic.KeyValuePair<UnitType, int> item) {
+    Add(item.Key, item.Value);
+  }
+
+  public bool Remove(System.Collections.Generic.KeyValuePair<UnitType, int> item) {
+    if (Contains(item)) {
+      return Remove(item.Key);
+    } else {
+      return false;
+    }
+  }
+
+  public bool Contains(System.Collections.Generic.KeyValuePair<UnitType, int> item) {
+    if (this[item.Key] == item.Value) {
       return true;
     } else {
       return false;
     }
   }
 
-  public void CopyTo(UnitType[] array) {
+  public void CopyTo(System.Collections.Generic.KeyValuePair<UnitType, int>[] array) {
     CopyTo(array, 0);
   }
 
-  public void CopyTo( UnitType[] array, int arrayIndex) {
+  public void CopyTo(System.Collections.Generic.KeyValuePair<UnitType, int>[] array, int arrayIndex) {
     if (array == null)
       throw new ArgumentNullException("array");
     if (arrayIndex < 0)
@@ -96,23 +137,23 @@ public class UnitTypeSet : IDisposable
     if (arrayIndex+this.Count > array.Length)
       throw new ArgumentException("Number of elements to copy is too large.");
 
-   System.Collections.Generic.IList<UnitType> keyList = new System.Collections.Generic.List<UnitType>(this.Values);
-    for (int i = 0; i < this.Count; i++) {
+    System.Collections.Generic.IList<UnitType> keyList = new System.Collections.Generic.List<UnitType>(this.Keys);
+    for (int i = 0; i < keyList.Count; i++) {
       UnitType currentKey = keyList[i];
-      array.SetValue( currentKey, arrayIndex+i);
+      array.SetValue(new System.Collections.Generic.KeyValuePair<UnitType, int>(currentKey, this[currentKey]), arrayIndex+i);
     }
   }
 
-  System.Collections.Generic.IEnumerator< UnitType> System.Collections.Generic.IEnumerable<UnitType>.GetEnumerator() {
-    return new UnitTypeSetEnumerator(this);
+  System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<UnitType, int>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<UnitType, int>>.GetEnumerator() {
+    return new UnitTypePtrIntMapEnumerator(this);
   }
 
   System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
-    return new UnitTypeSetEnumerator(this);
+    return new UnitTypePtrIntMapEnumerator(this);
   }
 
-  public UnitTypeSetEnumerator GetEnumerator() {
-    return new UnitTypeSetEnumerator(this);
+  public UnitTypePtrIntMapEnumerator GetEnumerator() {
+    return new UnitTypePtrIntMapEnumerator(this);
   }
 
   // Type-safe enumerator
@@ -120,25 +161,25 @@ public class UnitTypeSet : IDisposable
   /// whenever the collection is modified. This has been done for changes in the size of the
   /// collection but not when one of the elements of the collection is modified as it is a bit
   /// tricky to detect unmanaged code that modifies the collection under our feet.
-  public sealed class UnitTypeSetEnumerator : System.Collections.IEnumerator, 
-      System.Collections.Generic.IEnumerator< UnitType>
+  public sealed class UnitTypePtrIntMapEnumerator : System.Collections.IEnumerator, 
+      System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<UnitType, int>>
   {
-    private UnitTypeSet collectionRef;
+    private UnitTypePtrIntMap collectionRef;
     private System.Collections.Generic.IList<UnitType> keyCollection;
     private int currentIndex;
     private object currentObject;
     private int currentSize;
 
-    public UnitTypeSetEnumerator(UnitTypeSet collection) {
+    public UnitTypePtrIntMapEnumerator(UnitTypePtrIntMap collection) {
       collectionRef = collection;
-      keyCollection = new System.Collections.Generic.List<UnitType>(collection.Values);
+      keyCollection = new System.Collections.Generic.List<UnitType>(collection.Keys);
       currentIndex = -1;
       currentObject = null;
       currentSize = collectionRef.Count;
     }
 
     // Type-safe iterator Current
-    public  UnitType Current {
+    public System.Collections.Generic.KeyValuePair<UnitType, int> Current {
       get {
         if (currentIndex == -1)
           throw new InvalidOperationException("Enumeration not started.");
@@ -146,7 +187,7 @@ public class UnitTypeSet : IDisposable
           throw new InvalidOperationException("Enumeration finished.");
         if (currentObject == null)
           throw new InvalidOperationException("Collection modified.");
-        return ( UnitType)currentObject;
+        return (System.Collections.Generic.KeyValuePair<UnitType, int>)currentObject;
       }
     }
 
@@ -163,7 +204,7 @@ public class UnitTypeSet : IDisposable
       if (moveOkay) {
         currentIndex++;
         UnitType currentKey = keyCollection[currentIndex];
-        currentObject = currentKey;
+        currentObject = new System.Collections.Generic.KeyValuePair<UnitType, int>(currentKey, collectionRef[currentKey]);
       } else {
         currentObject = null;
       }
@@ -186,57 +227,60 @@ public class UnitTypeSet : IDisposable
 #endif
   
 
-  public UnitTypeSet() : this(bridgePINVOKE.new_UnitTypeSet__SWIG_0(), true) {
+  public UnitTypePtrIntMap() : this(bridgePINVOKE.new_UnitTypePtrIntMap__SWIG_0(), true) {
   }
 
-  public UnitTypeSet(UnitTypeSet other) : this(bridgePINVOKE.new_UnitTypeSet__SWIG_1(UnitTypeSet.getCPtr(other)), true) {
+  public UnitTypePtrIntMap(UnitTypePtrIntMap other) : this(bridgePINVOKE.new_UnitTypePtrIntMap__SWIG_1(UnitTypePtrIntMap.getCPtr(other)), true) {
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKE.UnitTypeSet_size(swigCPtr);
+    uint ret = bridgePINVOKE.UnitTypePtrIntMap_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKE.UnitTypeSet_empty(swigCPtr);
+    bool ret = bridgePINVOKE.UnitTypePtrIntMap_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKE.UnitTypeSet_Clear(swigCPtr);
+    bridgePINVOKE.UnitTypePtrIntMap_Clear(swigCPtr);
   }
 
-  public UnitType getitem(UnitType key) {
-    UnitType ret = new UnitType(bridgePINVOKE.UnitTypeSet_getitem(swigCPtr, UnitType.getCPtr(key)), false);
+  private int getitem(UnitType key) {
+    int ret = bridgePINVOKE.UnitTypePtrIntMap_getitem(swigCPtr, UnitType.getCPtr(key));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
+  }
+
+  private void setitem(UnitType key, int x) {
+    bridgePINVOKE.UnitTypePtrIntMap_setitem(swigCPtr, UnitType.getCPtr(key), x);
   }
 
   public bool ContainsKey(UnitType key) {
-    bool ret = bridgePINVOKE.UnitTypeSet_ContainsKey(swigCPtr, UnitType.getCPtr(key));
-    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKE.UnitTypePtrIntMap_ContainsKey(swigCPtr, UnitType.getCPtr(key));
     return ret;
   }
 
-  public void Add(UnitType key) {
-    bridgePINVOKE.UnitTypeSet_Add(swigCPtr, UnitType.getCPtr(key));
+  public void Add(UnitType key, int val) {
+    bridgePINVOKE.UnitTypePtrIntMap_Add(swigCPtr, UnitType.getCPtr(key), val);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(UnitType key) {
-    bool ret = bridgePINVOKE.UnitTypeSet_Remove(swigCPtr, UnitType.getCPtr(key));
-    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKE.UnitTypePtrIntMap_Remove(swigCPtr, UnitType.getCPtr(key));
     return ret;
   }
 
-  public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKE.UnitTypeSet_create_iterator_begin(swigCPtr);
+  private IntPtr create_iterator_begin() {
+    IntPtr ret = bridgePINVOKE.UnitTypePtrIntMap_create_iterator_begin(swigCPtr);
     return ret;
   }
 
-  public UnitType get_next_key(IntPtr swigiterator) {
-    UnitType ret = new UnitType(bridgePINVOKE.UnitTypeSet_get_next_key(swigCPtr, swigiterator), false);
+  private UnitType get_next_key(IntPtr swigiterator) {
+    IntPtr cPtr = bridgePINVOKE.UnitTypePtrIntMap_get_next_key(swigCPtr, swigiterator);
+    UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

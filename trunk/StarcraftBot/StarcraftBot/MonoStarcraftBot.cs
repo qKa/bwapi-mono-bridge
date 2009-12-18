@@ -18,6 +18,12 @@ namespace StarcraftBot
 		public override void onStart() {
 			bridge.Broodwar.printf("Hello from actual bot implementation");
 			bridge.Broodwar.enableFlag(1);
+			
+			//list units.
+			UnitSet us = bridge.Broodwar.getAllUnits();
+			foreach (Unit u in us)  {
+				bridge.Broodwar.printf(u.getType().getName());
+			}
 		}
 		
 		public override Boolean onSendText(string text)

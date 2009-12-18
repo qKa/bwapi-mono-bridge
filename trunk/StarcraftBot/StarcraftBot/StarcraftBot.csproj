@@ -39,14 +39,17 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <ItemGroup>
-    <Reference Include="monobridgeai-interop">
-      <HintPath>libs\monobridgeai-interop.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MonoStarcraftBot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\monobridgeai-interop\monobridgeai-interop.csproj">
+      <Project>{5CCAD223-24DC-475F-AD0F-8822D13C42FA}</Project>
+      <Name>monobridgeai-interop</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

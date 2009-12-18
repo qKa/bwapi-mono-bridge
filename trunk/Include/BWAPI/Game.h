@@ -70,7 +70,7 @@ namespace BWAPI
       virtual bool canMake(Unit* builder, UnitType type) = 0;
       virtual bool canResearch(Unit* unit, TechType type) = 0;
       virtual bool canUpgrade(Unit* unit, UpgradeType type) = 0;
-      virtual std::set< TilePosition >& getStartLocations() = 0;
+	  virtual std::set< BWAPI::TilePosition >& getStartLocations() = 0;
 
       virtual void printf(const char* text, ...) = 0;
       virtual void sendText(const char* text, ...) = 0;
@@ -84,7 +84,7 @@ namespace BWAPI
       virtual void leaveGame() = 0;
       virtual void restartGame() = 0;
       virtual void setLocalSpeed(int speed = -1) = 0;
-      virtual std::set<Unit*>& getSelectedUnits() = 0;
+	  virtual std::set<Unit*>& getSelectedUnits() = 0;
       virtual Player* self() = 0;
       virtual Player* enemy() = 0;
 

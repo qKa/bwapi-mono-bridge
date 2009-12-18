@@ -41,13 +41,13 @@ public class Chokepoint : IDisposable {
     }
   }
 
-  public virtual ChokepointGetRegionsPair getRegions() {
-    ChokepointGetRegionsPair ret = new ChokepointGetRegionsPair(bridgePINVOKE.Chokepoint_getRegions(swigCPtr), false);
+  public virtual RegionPtrRegionPtrPair getRegions() {
+    RegionPtrRegionPtrPair ret = new RegionPtrRegionPtrPair(bridgePINVOKE.Chokepoint_getRegions(swigCPtr), false);
     return ret;
   }
 
-  public virtual ChokepointGetSidesPair getSides() {
-    ChokepointGetSidesPair ret = new ChokepointGetSidesPair(bridgePINVOKE.Chokepoint_getSides(swigCPtr), false);
+  public virtual PositionPair getSides() {
+    PositionPair ret = new PositionPair(bridgePINVOKE.Chokepoint_getSides(swigCPtr), false);
     return ret;
   }
 

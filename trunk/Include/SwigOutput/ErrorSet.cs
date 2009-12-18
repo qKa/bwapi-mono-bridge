@@ -11,7 +11,11 @@ namespace BWAPI {
 using System;
 using System.Runtime.InteropServices;
 
-public class ErrorSet : IDisposable {
+public class ErrorSet : IDisposable 
+#if !SWIG_DOTNET_1
+    , System.Collections.Generic.ICollection<Error>
+#endif
+ {
   private HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
@@ -41,32 +45,198 @@ public class ErrorSet : IDisposable {
     }
   }
 
-  public ErrorSet(SWIGTYPE_p_std__setT_BWAPI__Error_t original) : this(bridgePINVOKE.new_ErrorSet(SWIGTYPE_p_std__setT_BWAPI__Error_t.getCPtr(original)), true) {
+
+  
+  public int Count {
+    get {
+      return (int)size();
+    }
   }
 
-  public int size() {
-    int ret = bridgePINVOKE.ErrorSet_size(swigCPtr);
+  public bool IsReadOnly {
+    get { 
+      return false; 
+    }
+  }
+
+#if !SWIG_DOTNET_1
+ public System.Collections.Generic.ICollection<Error> Values {
+    get {
+      System.Collections.Generic.ICollection<Error> values = new System.Collections.Generic.List<Error>();
+      IntPtr iter = create_iterator_begin();
+      try {
+        while (true) {
+          values.Add(get_next_key(iter));
+        }
+      } catch (ArgumentOutOfRangeException) {
+      }
+      return values;
+    }
+  }
+ 
+  public bool Contains(Error item) {
+    if ( ContainsKey(item)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public void CopyTo(Error[] array) {
+    CopyTo(array, 0);
+  }
+
+  public void CopyTo( Error[] array, int arrayIndex) {
+    if (array == null)
+      throw new ArgumentNullException("array");
+    if (arrayIndex < 0)
+      throw new ArgumentOutOfRangeException("arrayIndex", "Value is less than zero");
+    if (array.Rank > 1)
+      throw new ArgumentException("Multi dimensional array.", "array");
+    if (arrayIndex+this.Count > array.Length)
+      throw new ArgumentException("Number of elements to copy is too large.");
+
+   System.Collections.Generic.IList<Error> keyList = new System.Collections.Generic.List<Error>(this.Values);
+    for (int i = 0; i < this.Count; i++) {
+      Error currentKey = keyList[i];
+      array.SetValue( currentKey, arrayIndex+i);
+    }
+  }
+
+  System.Collections.Generic.IEnumerator< Error> System.Collections.Generic.IEnumerable<Error>.GetEnumerator() {
+    return new ErrorSetEnumerator(this);
+  }
+
+  System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
+    return new ErrorSetEnumerator(this);
+  }
+
+  public ErrorSetEnumerator GetEnumerator() {
+    return new ErrorSetEnumerator(this);
+  }
+
+  // Type-safe enumerator
+  /// Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
+  /// whenever the collection is modified. This has been done for changes in the size of the
+  /// collection but not when one of the elements of the collection is modified as it is a bit
+  /// tricky to detect unmanaged code that modifies the collection under our feet.
+  public sealed class ErrorSetEnumerator : System.Collections.IEnumerator, 
+      System.Collections.Generic.IEnumerator< Error>
+  {
+    private ErrorSet collectionRef;
+    private System.Collections.Generic.IList<Error> keyCollection;
+    private int currentIndex;
+    private object currentObject;
+    private int currentSize;
+
+    public ErrorSetEnumerator(ErrorSet collection) {
+      collectionRef = collection;
+      keyCollection = new System.Collections.Generic.List<Error>(collection.Values);
+      currentIndex = -1;
+      currentObject = null;
+      currentSize = collectionRef.Count;
+    }
+
+    // Type-safe iterator Current
+    public  Error Current {
+      get {
+        if (currentIndex == -1)
+          throw new InvalidOperationException("Enumeration not started.");
+        if (currentIndex > currentSize - 1)
+          throw new InvalidOperationException("Enumeration finished.");
+        if (currentObject == null)
+          throw new InvalidOperationException("Collection modified.");
+        return ( Error)currentObject;
+      }
+    }
+
+    // Type-unsafe IEnumerator.Current
+    object System.Collections.IEnumerator.Current {
+      get {
+        return Current;
+      }
+    }
+
+    public bool MoveNext() {
+      int size = collectionRef.Count;
+      bool moveOkay = (currentIndex+1 < size) && (size == currentSize);
+      if (moveOkay) {
+        currentIndex++;
+        Error currentKey = keyCollection[currentIndex];
+        currentObject = currentKey;
+      } else {
+        currentObject = null;
+      }
+      return moveOkay;
+    }
+
+    public void Reset() {
+      currentIndex = -1;
+      currentObject = null;
+      if (collectionRef.Count != currentSize) {
+        throw new InvalidOperationException("Collection modified.");
+      }
+    }
+
+    public void Dispose() {
+      currentIndex = -1;
+      currentObject = null;
+    }
+  }
+#endif
+  
+
+  public ErrorSet() : this(bridgePINVOKE.new_ErrorSet__SWIG_0(), true) {
+  }
+
+  public ErrorSet(ErrorSet other) : this(bridgePINVOKE.new_ErrorSet__SWIG_1(ErrorSet.getCPtr(other)), true) {
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  private uint size() {
+    uint ret = bridgePINVOKE.ErrorSet_size(swigCPtr);
     return ret;
   }
 
-  public bool contains(Error item) {
-    bool ret = bridgePINVOKE.ErrorSet_contains(swigCPtr, Error.getCPtr(item));
+  public bool empty() {
+    bool ret = bridgePINVOKE.ErrorSet_empty(swigCPtr);
+    return ret;
+  }
+
+  public void Clear() {
+    bridgePINVOKE.ErrorSet_Clear(swigCPtr);
+  }
+
+  public Error getitem(Error key) {
+    Error ret = new Error(bridgePINVOKE.ErrorSet_getitem(swigCPtr, Error.getCPtr(key)), false);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool add(Error item) {
-    bool ret = bridgePINVOKE.ErrorSet_add(swigCPtr, Error.getCPtr(item));
+  public bool ContainsKey(Error key) {
+    bool ret = bridgePINVOKE.ErrorSet_ContainsKey(swigCPtr, Error.getCPtr(key));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void clear() {
-    bridgePINVOKE.ErrorSet_clear(swigCPtr);
+  public void Add(Error key) {
+    bridgePINVOKE.ErrorSet_Add(swigCPtr, Error.getCPtr(key));
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public bool remove(Error item) {
-    bool ret = bridgePINVOKE.ErrorSet_remove(swigCPtr, Error.getCPtr(item));
+  public bool Remove(Error key) {
+    bool ret = bridgePINVOKE.ErrorSet_Remove(swigCPtr, Error.getCPtr(key));
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public IntPtr create_iterator_begin() {
+    IntPtr ret = bridgePINVOKE.ErrorSet_create_iterator_begin(swigCPtr);
+    return ret;
+  }
+
+  public Error get_next_key(IntPtr swigiterator) {
+    Error ret = new Error(bridgePINVOKE.ErrorSet_get_next_key(swigCPtr, swigiterator), false);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

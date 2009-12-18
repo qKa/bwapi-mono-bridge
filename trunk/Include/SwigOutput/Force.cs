@@ -46,8 +46,8 @@ public class Force : IDisposable {
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWAPI__Player_p_t getPlayers() {
-    SWIGTYPE_p_std__setT_BWAPI__Player_p_t ret = new SWIGTYPE_p_std__setT_BWAPI__Player_p_t(bridgePINVOKE.Force_getPlayers(swigCPtr), true);
+  public virtual PlayerPtrSet getPlayers() {
+    PlayerPtrSet ret = new PlayerPtrSet(bridgePINVOKE.Force_getPlayers(swigCPtr), true);
     return ret;
   }
 

@@ -11,24 +11,24 @@ namespace BWAPI {
 using System;
 using System.Runtime.InteropServices;
 
-public class UnitTypeList : IDisposable, System.Collections.IEnumerable
+public class RegionPtrSet : IDisposable 
 #if !SWIG_DOTNET_1
-    , System.Collections.Generic.IEnumerable<UnitType>
+    , System.Collections.Generic.ICollection<Region>
 #endif
  {
   private HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal UnitTypeList(IntPtr cPtr, bool cMemoryOwn) {
+  internal RegionPtrSet(IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new HandleRef(this, cPtr);
   }
 
-  internal static HandleRef getCPtr(UnitTypeList obj) {
+  internal static HandleRef getCPtr(RegionPtrSet obj) {
     return (obj == null) ? new HandleRef(null, IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~UnitTypeList() {
+  ~RegionPtrSet() {
     Dispose();
   }
 
@@ -37,7 +37,7 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKE.delete_UnitTypeList(swigCPtr);
+          bridgePINVOKE.delete_RegionPtrSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -45,41 +45,24 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
     }
   }
 
-  public UnitTypeList(System.Collections.ICollection c) : this() {
-    if (c == null)
-      throw new ArgumentNullException("c");
-    foreach (UnitType element in c) {
-      this.Add(element);
-    }
-  }
 
-  public bool IsFixedSize {
-    get {
-      return false;
-    }
-  }
-
-  public bool IsReadOnly {
-    get {
-      return false;
-    }
-  }
-
+  
   public int Count {
     get {
       return (int)size();
     }
   }
 
-  public bool IsSynchronized {
-    get {
-      return false;
+  public bool IsReadOnly {
+    get { 
+      return false; 
     }
   }
-   
-  public System.Collections.Generic.ICollection<UnitType> Values {
+
+#if !SWIG_DOTNET_1
+ public System.Collections.Generic.ICollection<Region> Values {
     get {
-      System.Collections.Generic.ICollection<UnitType> values = new System.Collections.Generic.List<UnitType>();
+      System.Collections.Generic.ICollection<Region> values = new System.Collections.Generic.List<Region>();
       IntPtr iter = create_iterator_begin();
       try {
         while (true) {
@@ -90,63 +73,46 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
       return values;
     }
   }
-
-#if SWIG_DOTNET_1
-  public void CopyTo(System.Array array)
-#else
-  public void CopyTo(UnitType[] array)
-#endif
-  {
-    CopyTo(0, array, 0, this.Count);
+ 
+  public bool Contains(Region item) {
+    if ( ContainsKey(item)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
-#if SWIG_DOTNET_1
-  public void CopyTo(System.Array array, int arrayIndex)
-#else
-  public void CopyTo(UnitType[] array, int arrayIndex)
-#endif
-  {
-    CopyTo(0, array, arrayIndex, this.Count);
+  public void CopyTo(Region[] array) {
+    CopyTo(array, 0);
   }
 
-#if SWIG_DOTNET_1
-  public void CopyTo(int index, System.Array array, int arrayIndex, int count)
-#else
-  public void CopyTo(int index, UnitType[] array, int arrayIndex, int count)
-#endif
-  {
+  public void CopyTo( Region[] array, int arrayIndex) {
     if (array == null)
       throw new ArgumentNullException("array");
-    if (index < 0)
-      throw new ArgumentOutOfRangeException("index", "Value is less than zero");
     if (arrayIndex < 0)
       throw new ArgumentOutOfRangeException("arrayIndex", "Value is less than zero");
-    if (count < 0)
-      throw new ArgumentOutOfRangeException("count", "Value is less than zero");
     if (array.Rank > 1)
       throw new ArgumentException("Multi dimensional array.", "array");
-    if (index+count > this.Count || arrayIndex+count > array.Length)
+    if (arrayIndex+this.Count > array.Length)
       throw new ArgumentException("Number of elements to copy is too large.");
-  
-  System.Collections.Generic.IList<UnitType> keyList = new System.Collections.Generic.List<UnitType>(this.Values);
+
+   System.Collections.Generic.IList<Region> keyList = new System.Collections.Generic.List<Region>(this.Values);
     for (int i = 0; i < this.Count; i++) {
-      UnitType currentKey = keyList[i];
+      Region currentKey = keyList[i];
       array.SetValue( currentKey, arrayIndex+i);
     }
   }
 
-#if !SWIG_DOTNET_1
-  System.Collections.Generic.IEnumerator<UnitType> System.Collections.Generic.IEnumerable<UnitType>.GetEnumerator() {
-    return new UnitTypeListEnumerator(this);
+  System.Collections.Generic.IEnumerator< Region> System.Collections.Generic.IEnumerable<Region>.GetEnumerator() {
+    return new RegionPtrSetEnumerator(this);
   }
-#endif
 
   System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
-    return new UnitTypeListEnumerator(this);
+    return new RegionPtrSetEnumerator(this);
   }
 
-  public UnitTypeListEnumerator GetEnumerator() {
-    return new UnitTypeListEnumerator(this);
+  public RegionPtrSetEnumerator GetEnumerator() {
+    return new RegionPtrSetEnumerator(this);
   }
 
   // Type-safe enumerator
@@ -154,27 +120,25 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
   /// whenever the collection is modified. This has been done for changes in the size of the
   /// collection but not when one of the elements of the collection is modified as it is a bit
   /// tricky to detect unmanaged code that modifies the collection under our feet.
-  public sealed class UnitTypeListEnumerator : System.Collections.IEnumerator
-#if !SWIG_DOTNET_1
-    , System.Collections.Generic.IEnumerator<UnitType>
-#endif
+  public sealed class RegionPtrSetEnumerator : System.Collections.IEnumerator, 
+      System.Collections.Generic.IEnumerator< Region>
   {
-    private UnitTypeList collectionRef;
+    private RegionPtrSet collectionRef;
+    private System.Collections.Generic.IList<Region> keyCollection;
     private int currentIndex;
     private object currentObject;
-    private System.Collections.Generic.IList<UnitType> keyCollection;
     private int currentSize;
 
-    public UnitTypeListEnumerator(UnitTypeList collection) {
+    public RegionPtrSetEnumerator(RegionPtrSet collection) {
       collectionRef = collection;
-      keyCollection = new System.Collections.Generic.List<UnitType>(collection.Values);
+      keyCollection = new System.Collections.Generic.List<Region>(collection.Values);
       currentIndex = -1;
       currentObject = null;
       currentSize = collectionRef.Count;
     }
 
     // Type-safe iterator Current
-    public UnitType Current {
+    public  Region Current {
       get {
         if (currentIndex == -1)
           throw new InvalidOperationException("Enumeration not started.");
@@ -182,7 +146,7 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
           throw new InvalidOperationException("Enumeration finished.");
         if (currentObject == null)
           throw new InvalidOperationException("Collection modified.");
-        return (UnitType)currentObject;
+        return ( Region)currentObject;
       }
     }
 
@@ -198,7 +162,7 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
       bool moveOkay = (currentIndex+1 < size) && (size == currentSize);
       if (moveOkay) {
         currentIndex++;
-        UnitType currentKey = keyCollection[currentIndex];
+        Region currentKey = keyCollection[currentIndex];
         currentObject = currentKey;
       } else {
         currentObject = null;
@@ -214,42 +178,65 @@ public class UnitTypeList : IDisposable, System.Collections.IEnumerable
       }
     }
 
-#if !SWIG_DOTNET_1
     public void Dispose() {
-        currentIndex = -1;
-        currentObject = null;
+      currentIndex = -1;
+      currentObject = null;
     }
+  }
 #endif
+  
+
+  public RegionPtrSet() : this(bridgePINVOKE.new_RegionPtrSet__SWIG_0(), true) {
   }
 
-  public void Clear() {
-    bridgePINVOKE.UnitTypeList_Clear(swigCPtr);
-  }
-
-  public void Add(UnitType x) {
-    bridgePINVOKE.UnitTypeList_Add(swigCPtr, UnitType.getCPtr(x));
+  public RegionPtrSet(RegionPtrSet other) : this(bridgePINVOKE.new_RegionPtrSet__SWIG_1(RegionPtrSet.getCPtr(other)), true) {
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKE.UnitTypeList_size(swigCPtr);
+    uint ret = bridgePINVOKE.RegionPtrSet_size(swigCPtr);
     return ret;
   }
 
-  public UnitTypeList() : this(bridgePINVOKE.new_UnitTypeList__SWIG_0(), true) {
+  public bool empty() {
+    bool ret = bridgePINVOKE.RegionPtrSet_empty(swigCPtr);
+    return ret;
   }
 
-  public UnitTypeList(UnitTypeList other) : this(bridgePINVOKE.new_UnitTypeList__SWIG_1(UnitTypeList.getCPtr(other)), true) {
+  public void Clear() {
+    bridgePINVOKE.RegionPtrSet_Clear(swigCPtr);
+  }
+
+  public Region getitem(Region key) {
+    IntPtr cPtr = bridgePINVOKE.RegionPtrSet_getitem(swigCPtr, Region.getCPtr(key));
+    Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public bool ContainsKey(Region key) {
+    bool ret = bridgePINVOKE.RegionPtrSet_ContainsKey(swigCPtr, Region.getCPtr(key));
+    return ret;
+  }
+
+  public void Add(Region key) {
+    bridgePINVOKE.RegionPtrSet_Add(swigCPtr, Region.getCPtr(key));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKE.UnitTypeList_create_iterator_begin(swigCPtr);
+  public bool Remove(Region key) {
+    bool ret = bridgePINVOKE.RegionPtrSet_Remove(swigCPtr, Region.getCPtr(key));
     return ret;
   }
 
-  public UnitType get_next_key(IntPtr swigiterator) {
-    UnitType ret = new UnitType(bridgePINVOKE.UnitTypeList_get_next_key(swigCPtr, swigiterator), false);
+  public IntPtr create_iterator_begin() {
+    IntPtr ret = bridgePINVOKE.RegionPtrSet_create_iterator_begin(swigCPtr);
+    return ret;
+  }
+
+  public Region get_next_key(IntPtr swigiterator) {
+    IntPtr cPtr = bridgePINVOKE.RegionPtrSet_get_next_key(swigCPtr, swigiterator);
+    Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

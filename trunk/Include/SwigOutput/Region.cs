@@ -51,13 +51,13 @@ public class Region : IDisposable {
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t getChokepoints() {
-    SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t ret = new SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t(bridgePINVOKE.Region_getChokepoints(swigCPtr), false);
+  public virtual ChokepointPtrSet getChokepoints() {
+    ChokepointPtrSet ret = new ChokepointPtrSet(bridgePINVOKE.Region_getChokepoints(swigCPtr), false);
     return ret;
   }
 
-  public virtual SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t getBaseLocations() {
-    SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t ret = new SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t(bridgePINVOKE.Region_getBaseLocations(swigCPtr), false);
+  public virtual BaseLocationPtrSet getBaseLocations() {
+    BaseLocationPtrSet ret = new BaseLocationPtrSet(bridgePINVOKE.Region_getBaseLocations(swigCPtr), false);
     return ret;
   }
 
