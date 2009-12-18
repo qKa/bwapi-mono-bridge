@@ -1,5 +1,5 @@
 #include "BridgeAIModule.h"
-
+Util::FileLogger *fl; //our logfile
 //It is easier for mono to get the parameter from us then for us to give it to mono, so we store it here.
 BWAPI::Unit *BridgeAIModule::lastunitparam;
 
@@ -9,6 +9,42 @@ BWAPI::Unit * monobridgeutil::getLastUnitParam()
 	//return last unit parameter to an AI function
 	return BridgeAIModule::lastunitparam;
 }
+
+BridgeAIModule::Callback BridgeAIModule::onStartCallback;
+BridgeAIModule::Callback BridgeAIModule::onEndCallback;
+BridgeAIModule::Callback BridgeAIModule::onFrameCallback;
+BridgeAIModule::Callback BridgeAIModule::onInitCallback;
+BridgeAIModule::Callback BridgeAIModule::onUnitCreateCallback;
+BridgeAIModule::Callback BridgeAIModule::onUnitDestroyCallback;
+BridgeAIModule::Callback BridgeAIModule::onUnitMorphCallback;
+BridgeAIModule::Callback BridgeAIModule::onUnitShowCallback;
+BridgeAIModule::Callback BridgeAIModule::onUnitHideCallback;
+
+//called from our proxybot's constructor to setup callbacks. (faster than dynamic lookups)
+EXTERN_C {
+	__declspec(dllexport) void __stdcall RegisterCallbacks(
+			BridgeAIModule::Callback cbonStart,
+			BridgeAIModule::Callback cbonEnd,
+			BridgeAIModule::Callback cbonFrame,
+			BridgeAIModule::Callback cbonInit,
+			BridgeAIModule::Callback cbonUnitCreate,
+			BridgeAIModule::Callback cbonUnitDestroy,
+			BridgeAIModule::Callback cbonUnitMorph,
+			BridgeAIModule::Callback cbonUnitShow,
+			BridgeAIModule::Callback cbonUnitHide)
+{
+	fl->logDetailed("Registered callbacks via pinvoke");
+	BridgeAIModule::onStartCallback = cbonStart;
+	BridgeAIModule::onEndCallback = cbonEnd;
+	BridgeAIModule::onFrameCallback = cbonFrame;
+	BridgeAIModule::onInitCallback = cbonInit;
+	BridgeAIModule::onUnitCreateCallback = cbonUnitCreate;
+	BridgeAIModule::onUnitDestroyCallback = cbonUnitDestroy;
+	BridgeAIModule::onUnitMorphCallback = cbonUnitMorph;
+	BridgeAIModule::onUnitShowCallback = cbonUnitShow;
+	BridgeAIModule::onUnitHideCallback = cbonUnitHide;
+}
+} //extern
 
 //borrowed :) from JNI Java proxy bot (thanks cretz)
 std::string wstr_to_str(std::wstring str)
@@ -27,7 +63,7 @@ std::wstring str_to_wstr(std::string str)
 	return ret;
 }
 
-Util::FileLogger *fl; //our logfile
+
 
 //Runs a method with no parameters on an object
 void runmethod_noparams(MonoMethod *method,MonoObject *obj) {
@@ -56,7 +92,7 @@ MonoMethod *MethodFromKlass(const char *Signature,MonoClass *klass)
 //Setup Calls into the Runtime
 void BridgeAIModule::setfunctionhooks() 
 {
-	fl->logDetailed("hooking BotBase functions");
+    fl->logDetailed("hooking BotBase functions");
 	
 	MonoClass *klass;
 	MonoDomain *domain;
@@ -65,15 +101,16 @@ void BridgeAIModule::setfunctionhooks()
 	klass = mono_object_get_class (BridgeAIModule::botobject);
 	domain = mono_object_get_domain (BridgeAIModule::botobject);
 	
-	BridgeAIModule::startMethod = MethodFromKlass(":onStart()",klass);
-	BridgeAIModule::endMethod = MethodFromKlass(":onEnd()",klass);
-	BridgeAIModule::frameMethod = MethodFromKlass(":onFrame()",klass);
+//	BridgeAIModule::startMethod = MethodFromKlass(":onStart()",klass);
+	//BridgeAIModule::endMethod = MethodFromKlass(":onEnd()",klass);
+	//BridgeAIModule::frameMethod = MethodFromKlass(":onFrame()",klass);
 	BridgeAIModule::sendTextMethod = MethodFromKlass(":onSendText(string)",klass);
-	BridgeAIModule::unitCreateMethod = MethodFromKlass(":onUnitCreate()",klass);
-	BridgeAIModule::unitDestroyMethod = MethodFromKlass(":onUnitDestroy()",klass);
-	BridgeAIModule::unitMorphMethod = MethodFromKlass(":onUnitMorph()",klass);
-	BridgeAIModule::unitShowMethod = MethodFromKlass(":onUnitShow()",klass);
-	BridgeAIModule::unitHideMethod = MethodFromKlass(":onUnitHide()",klass);
+	//BridgeAIModule::unitCreateMethod = MethodFromKlass(":onUnitCreate()",klass);
+	//BridgeAIModule::unitDestroyMethod = MethodFromKlass(":onUnitDestroy()",klass);
+	//BridgeAIModule::unitMorphMethod = MethodFromKlass(":onUnitMorph()",klass);
+	//BridgeAIModule::unitShowMethod = MethodFromKlass(":onUnitShow()",klass);
+	//BridgeAIModule::unitHideMethod = MethodFromKlass(":onUnitHide()",klass);
+
 }
 
 
@@ -167,18 +204,22 @@ BridgeAIModule::~BridgeAIModule()
 
 void BridgeAIModule::onStart() 
 {
-	fl->logDetailed("Game started: ");
-	runmethod_noparams(BridgeAIModule::startMethod,BridgeAIModule::botobject);
+	fl->logDetailed("Game started ");
+	//runmethod_noparams(BridgeAIModule::startMethod,BridgeAIModule::botobject);
+	//fl->logDetailed("calling onstart via delegate instead of dynamic invoke");
+	(* onStartCallback)();
 }
 
 void BridgeAIModule::onEnd()
 {
-	runmethod_noparams(BridgeAIModule::endMethod,BridgeAIModule::botobject);	
+//	runmethod_noparams(BridgeAIModule::endMethod,BridgeAIModule::botobject);	
+	(* onEndCallback)();
 }
 
 void BridgeAIModule::onFrame()
 {
-	runmethod_noparams(BridgeAIModule::frameMethod,BridgeAIModule::botobject);
+	//runmethod_noparams(BridgeAIModule::frameMethod,BridgeAIModule::botobject);
+	(* onFrameCallback)();
 }
 
 bool BridgeAIModule::onSendText(std::string text)
@@ -199,29 +240,34 @@ bool BridgeAIModule::onSendText(std::string text)
 void BridgeAIModule::onUnitCreate(BWAPI::Unit *unit)
 { 
 	BridgeAIModule::lastunitparam = unit;
-	runmethod_noparams(BridgeAIModule::unitCreateMethod,BridgeAIModule::botobject);
+//	runmethod_noparams(BridgeAIModule::unitCreateMethod,BridgeAIModule::botobject);
+	(* onUnitCreateCallback) ();
 }
 
 void BridgeAIModule::onUnitDestroy(BWAPI::Unit *unit)
 {
 	BridgeAIModule::lastunitparam = unit;
-	runmethod_noparams(BridgeAIModule::unitDestroyMethod,BridgeAIModule::botobject);
+	//runmethod_noparams(BridgeAIModule::unitDestroyMethod,BridgeAIModule::botobject);
+	(* onUnitDestroyCallback) ();
 }
 
 void BridgeAIModule::onUnitMorph(BWAPI::Unit *unit)
 {
 	BridgeAIModule::lastunitparam = unit;
-	runmethod_noparams(BridgeAIModule::unitMorphMethod,BridgeAIModule::botobject);
+	//runmethod_noparams(BridgeAIModule::unitMorphMethod,BridgeAIModule::botobject);
+	(* onUnitMorphCallback) ();
 }
 
 void BridgeAIModule::onUnitShow(BWAPI::Unit *unit)
 {
 	BridgeAIModule::lastunitparam = unit;
-	runmethod_noparams(BridgeAIModule::unitShowMethod,BridgeAIModule::botobject);
+	//runmethod_noparams(BridgeAIModule::unitShowMethod,BridgeAIModule::botobject);
+	(* onUnitShowCallback) ();
 }
 
 void BridgeAIModule::onUnitHide(BWAPI::Unit *unit)
 {
 	BridgeAIModule::lastunitparam = unit;
-	runmethod_noparams(BridgeAIModule::unitHideMethod,BridgeAIModule::botobject);
+	//runmethod_noparams(BridgeAIModule::unitHideMethod,BridgeAIModule::botobject);
+	(* onUnitHideCallback) ();
 }
