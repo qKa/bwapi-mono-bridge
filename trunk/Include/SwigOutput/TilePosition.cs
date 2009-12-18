@@ -81,6 +81,18 @@ public class TilePosition : IDisposable {
     return ret;
   }
 
+  public TilePosition opAdd(TilePosition position) {
+    TilePosition ret = new TilePosition(bridgePINVOKE.TilePosition_opAdd(swigCPtr, TilePosition.getCPtr(position)), false);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public TilePosition opSubtract(TilePosition position) {
+    TilePosition ret = new TilePosition(bridgePINVOKE.TilePosition_opSubtract(swigCPtr, TilePosition.getCPtr(position)), false);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public double getDistance(TilePosition position) {
     double ret = bridgePINVOKE.TilePosition_getDistance(swigCPtr, TilePosition.getCPtr(position));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();

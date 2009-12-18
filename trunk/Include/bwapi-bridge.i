@@ -173,6 +173,9 @@ using namespace BWAPI;
 %rename (opNotEquals) *::operator !=;                         
 %rename (opPlus) *::operator +;
 
+%rename (opAdd) *::operator +=;
+%rename (opSubtract) *::operator -=;
+
 //fix up const strings.
 %apply const std::string & {std::string &};
 
@@ -216,12 +219,15 @@ using namespace BWAPI;
 %include "BWTA.h"
 %include "BWTA/BaseLocation.h"
 %include "BWTA/Chokepoint.h"
+
+%template (PositionVector) std::vector<BWAPI::Position>;
+
+
+
 %include "BWTA/Polygon.h"
 %include "BWTA/Region.h"
 
 
-//%rename (operator +=) *::opAdd;
-//%rename (operator -=) *::opSubtract;
 
 %template (UnitSet) std::set<BWAPI::Unit*>;
 %template (AttackTypeSet) std::set<BWAPI::AttackType>;

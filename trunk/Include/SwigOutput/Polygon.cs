@@ -11,12 +11,10 @@ namespace BWAPI {
 using System;
 using System.Runtime.InteropServices;
 
-public class Polygon : IDisposable {
+public class Polygon : PositionVector {
   private HandleRef swigCPtr;
-  protected bool swigCMemOwn;
 
-  internal Polygon(IntPtr cPtr, bool cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
+  internal Polygon(IntPtr cPtr, bool cMemoryOwn) : base(bridgePINVOKE.PolygonUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -28,7 +26,7 @@ public class Polygon : IDisposable {
     Dispose();
   }
 
-  public virtual void Dispose() {
+  public override void Dispose() {
     lock(this) {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
@@ -38,6 +36,7 @@ public class Polygon : IDisposable {
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
       GC.SuppressFinalize(this);
+      base.Dispose();
     }
   }
 
