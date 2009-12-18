@@ -142,6 +142,9 @@
     <Compile Include="..\..\Include\SwigOutput\PositionPair.cs">
       <Link>PositionPair.cs</Link>
     </Compile>
+    <Compile Include="..\..\Include\SwigOutput\PositionVector.cs">
+      <Link>PositionVector.cs</Link>
+    </Compile>
     <Compile Include="..\..\Include\SwigOutput\Race.cs">
       <Link>Race.cs</Link>
     </Compile>

@@ -677,6 +677,12 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_Position_opMinus")]
   public static extern IntPtr Position_opMinus(HandleRef jarg1, HandleRef jarg2);
 
+  [DllImport("__Internal", EntryPoint="CSharp_Position_opAdd")]
+  public static extern IntPtr Position_opAdd(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Position_opSubtract")]
+  public static extern IntPtr Position_opSubtract(HandleRef jarg1, HandleRef jarg2);
+
   [DllImport("__Internal", EntryPoint="CSharp_Position_getDistance")]
   public static extern double Position_getDistance(HandleRef jarg1, HandleRef jarg2);
 
@@ -2375,6 +2381,12 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_TilePosition_opMinus")]
   public static extern IntPtr TilePosition_opMinus(HandleRef jarg1, HandleRef jarg2);
 
+  [DllImport("__Internal", EntryPoint="CSharp_TilePosition_opAdd")]
+  public static extern IntPtr TilePosition_opAdd(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePosition_opSubtract")]
+  public static extern IntPtr TilePosition_opSubtract(HandleRef jarg1, HandleRef jarg2);
+
   [DllImport("__Internal", EntryPoint="CSharp_TilePosition_getDistance")]
   public static extern double TilePosition_getDistance(HandleRef jarg1, HandleRef jarg2);
 
@@ -3896,6 +3908,72 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_delete_Chokepoint")]
   public static extern void delete_Chokepoint(HandleRef jarg1);
 
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_Clear")]
+  public static extern void PositionVector_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_Add")]
+  public static extern void PositionVector_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_size")]
+  public static extern uint PositionVector_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_capacity")]
+  public static extern uint PositionVector_capacity(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_reserve")]
+  public static extern void PositionVector_reserve(HandleRef jarg1, uint jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_PositionVector__SWIG_0")]
+  public static extern IntPtr new_PositionVector__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_PositionVector__SWIG_1")]
+  public static extern IntPtr new_PositionVector__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_PositionVector__SWIG_2")]
+  public static extern IntPtr new_PositionVector__SWIG_2(int jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_getitemcopy")]
+  public static extern IntPtr PositionVector_getitemcopy(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_getitem")]
+  public static extern IntPtr PositionVector_getitem(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_setitem")]
+  public static extern void PositionVector_setitem(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_AddRange")]
+  public static extern void PositionVector_AddRange(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_GetRange")]
+  public static extern IntPtr PositionVector_GetRange(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_Insert")]
+  public static extern void PositionVector_Insert(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_InsertRange")]
+  public static extern void PositionVector_InsertRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_RemoveAt")]
+  public static extern void PositionVector_RemoveAt(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_RemoveRange")]
+  public static extern void PositionVector_RemoveRange(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_Repeat")]
+  public static extern IntPtr PositionVector_Repeat(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_Reverse__SWIG_0")]
+  public static extern void PositionVector_Reverse__SWIG_0(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_Reverse__SWIG_1")]
+  public static extern void PositionVector_Reverse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PositionVector_SetRange")]
+  public static extern void PositionVector_SetRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_PositionVector")]
+  public static extern void delete_PositionVector(HandleRef jarg1);
+
   [DllImport("__Internal", EntryPoint="CSharp_new_Polygon")]
   public static extern IntPtr new_Polygon();
 
@@ -4924,6 +5002,9 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_RegionPtrSet")]
   public static extern void delete_RegionPtrSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_PolygonUpcast")]
+  public static extern IntPtr PolygonUpcast(IntPtr objectRef);
 }
 
 }

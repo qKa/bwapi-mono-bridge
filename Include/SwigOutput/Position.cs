@@ -81,6 +81,18 @@ public class Position : IDisposable {
     return ret;
   }
 
+  public Position opAdd(Position position) {
+    Position ret = new Position(bridgePINVOKE.Position_opAdd(swigCPtr, Position.getCPtr(position)), false);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public Position opSubtract(Position position) {
+    Position ret = new Position(bridgePINVOKE.Position_opSubtract(swigCPtr, Position.getCPtr(position)), false);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public double getDistance(Position position) {
     double ret = bridgePINVOKE.Position_getDistance(swigCPtr, Position.getCPtr(position));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
