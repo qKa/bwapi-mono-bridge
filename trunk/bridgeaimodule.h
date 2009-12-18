@@ -29,11 +29,23 @@ class BridgeAIModule : public BWAPI::AIModule
     static MonoMethod *unitMorphMethod;
 	static MonoMethod *unitShowMethod;
 	static MonoMethod *unitHideMethod;
-
 private:
 	static void initmono(std::wstring dlldir);
 	static void setfunctionhooks();
 public:
+	typedef void (*Callback)(void);
+	static Callback onStartCallback;
+	static Callback onEndCallback;
+	static Callback onFrameCallback;
+	static Callback onInitCallback;
+	static Callback onUnitCreateCallback;
+	static Callback onUnitDestroyCallback;
+	static Callback onUnitMorphCallback;
+	static Callback onUnitShowCallback;
+	static Callback onUnitHideCallback;
+
+
+
 	static BWAPI::Unit *lastunitparam;
 	static void init(std::wstring dllDirectory);
 	static void destroy();
