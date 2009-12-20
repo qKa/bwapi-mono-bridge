@@ -46,7 +46,7 @@
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				DebugInformationFormat="4"
+				DebugInformationFormat="3"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -61,12 +61,14 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="Lib\BWAPI.lib Lib\BWTA.lib Lib\Util.lib Lib\mono.lib"
 				OutputFile="MonoBridge.dll"
-				LinkIncremental="1"
+				LinkIncremental="0"
 				AdditionalLibraryDirectories=".\LIB"
 				IgnoreAllDefaultLibraries="false"
 				DelayLoadDLLs="mono.dll"
 				GenerateDebugInformation="true"
 				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -116,13 +118,14 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="2"
+				Optimization="0"
 				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="&quot;K:\Program Files\Mono-2.4.2.2\include\mono-1.0&quot;;.\Include;.\Include\Util\Source\Util;&quot;K:\Program Files\Mono-2.4.2.2\include\glib-2.0&quot;;&quot;K:\Program Files\Mono-2.4.2.2\lib\glib-2.0\include&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;MONOBRIDGE_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
+				BrowseInformation="0"
 				WarningLevel="3"
 				DebugInformationFormat="3"
 			/>
