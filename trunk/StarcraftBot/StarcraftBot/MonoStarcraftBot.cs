@@ -21,9 +21,19 @@ namespace StarcraftBot
 			
 			//list units.
 			UnitSet us = bridge.Broodwar.getAllUnits();
+			int count =0;	
+			int eqcount =0;
 			foreach (Unit u in us)  {
-				bridge.Broodwar.printf(u.getType().getName());
+				if (u.getPlayer() == bridge.Broodwar.self()) {
+					count++;	
+				}
+				if (u.getPlayer().Equals(bridge.Broodwar.self())) {
+					eqcount++;	
+				}
+				
+				
 			}
+			bridge.Broodwar.printf("Player unit count =  "+ count.ToString()+" equals() count = "+eqcount.ToString());
 		}
 		
 		public override Boolean onSendText(string text)
