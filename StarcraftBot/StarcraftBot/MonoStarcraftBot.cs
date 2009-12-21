@@ -3,6 +3,10 @@
  * User: David
  * Date: 14/12/2009
  * Time: 6:30 PM
+ * 
+ * This is where you code your bot!
+ * 
+ * 
  */
 using System;
 using System.Collections.Generic;
@@ -16,29 +20,29 @@ namespace StarcraftBot
 	public class MonoStarcraftBot: MonoStarcraftBotBase
 	{
 		public override void onStart() {
-			bridge.Broodwar.printf("Hello from actual bot implementation");
+			bridge.Broodwar.printf("Hello from a bot implemented in c#");
 			bridge.Broodwar.enableFlag(1);
 			
-			//list units.
+			//count units
 			UnitSet us = bridge.Broodwar.getAllUnits();
-			int count =0;	
-			int eqcount =0;
+			int count = 0;	
+			int immobilised = 0;
 			foreach (Unit u in us)  {
 				if (u.getPlayer() == bridge.Broodwar.self()) {
 					count++;	
 				}
-				if (u.getPlayer().Equals(bridge.Broodwar.self())) {
-					eqcount++;	
+				//call our example extension to the unit class. see monobridgeai-interop user-classes\unit-extended.cs 
+				if (u.isImmobilised()) {
+					immobilised++;  
 				}
-				
-				
 			}
-			bridge.Broodwar.printf("Player unit count =  "+ count.ToString()+" equals() count = "+eqcount.ToString());
+			bridge.Broodwar.printf("Player unit count =  "+ count.ToString()+". "+immobilised.ToString() +" are immobilised");
 		}
 		
 		public override Boolean onSendText(string text)
 		{
-			if (text == "drawbox") {
+			//flash a circle on the screen for one frame
+			if (text == "drawcircle") {
 				bridge.Broodwar.drawCircle((int) CoordinateType.Screen,100,100,100,bridge.Blue,true);
 			}
 			return true;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectGuid>{5CCAD223-24DC-475F-AD0F-8822D13C42FA}</ProjectGuid>
@@ -57,190 +57,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Include\SwigOutput\AIModule.cs">
-      <Link>AIModule.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\AttackType.cs">
-      <Link>AttackType.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\AttackTypeSet.cs">
-      <Link>AttackTypeSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\BaseLocation.cs">
-      <Link>BaseLocation.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\BaseLocationPtrSet.cs">
-      <Link>BaseLocationPtrSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\bridge.cs">
-      <Link>bridge.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\bridgePINVOKE.cs">
-      <Link>bridgePINVOKE.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Chokepoint.cs">
-      <Link>Chokepoint.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\ChokepointPtrSet.cs">
-      <Link>ChokepointPtrSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Color.cs">
-      <Link>Color.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\CoordinateType.cs">
-      <Link>CoordinateType.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\DamageType.cs">
-      <Link>DamageType.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\DamageTypeSet.cs">
-      <Link>DamageTypeSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Error.cs">
-      <Link>Error.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\ErrorSet.cs">
-      <Link>ErrorSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\ExplosionType.cs">
-      <Link>ExplosionType.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\ExplosionTypeSet.cs">
-      <Link>ExplosionTypeSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Flag.cs">
-      <Link>Flag.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Force.cs">
-      <Link>Force.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\ForcePtrSet.cs">
-      <Link>ForcePtrSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Game.cs">
-      <Link>Game.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Latency.cs">
-      <Link>Latency.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\monobridgeutil.cs">
-      <Link>monobridgeutil.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Order.cs">
-      <Link>Order.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\OrderSet.cs">
-      <Link>OrderSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Player.cs">
-      <Link>Player.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\PlayerPtrSet.cs">
-      <Link>PlayerPtrSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\PlayerType.cs">
-      <Link>PlayerType.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\PlayerTypeSet.cs">
-      <Link>PlayerTypeSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Polygon.cs">
-      <Link>Polygon.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\PolygonPtrSet.cs">
-      <Link>PolygonPtrSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Position.cs">
-      <Link>Position.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\PositionPair.cs">
-      <Link>PositionPair.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\PositionVector.cs">
-      <Link>PositionVector.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Race.cs">
-      <Link>Race.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\RaceSet.cs">
-      <Link>RaceSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Region.cs">
-      <Link>Region.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\RegionPtrRegionPtrPair.cs">
-      <Link>RegionPtrRegionPtrPair.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\RegionPtrSet.cs">
-      <Link>RegionPtrSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\SWIGTYPE_p_int.cs">
-      <Link>SWIGTYPE_p_int.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\TechType.cs">
-      <Link>TechType.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\TechTypePtrSet.cs">
-      <Link>TechTypePtrSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\TechTypeSet.cs">
-      <Link>TechTypeSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\TilePosition.cs">
-      <Link>TilePosition.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\TilePositionSet.cs">
-      <Link>TilePositionSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\Unit.cs">
-      <Link>Unit.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UnitPtrList.cs">
-      <Link>UnitPtrList.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UnitSet.cs">
-      <Link>UnitSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UnitSizeType.cs">
-      <Link>UnitSizeType.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UnitSizeTypeSet.cs">
-      <Link>UnitSizeTypeSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UnitType.cs">
-      <Link>UnitType.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UnitTypeList.cs">
-      <Link>UnitTypeList.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UnitTypePtrIntMap.cs">
-      <Link>UnitTypePtrIntMap.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UnitTypePtrIntPair.cs">
-      <Link>UnitTypePtrIntPair.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UnitTypePtrSet.cs">
-      <Link>UnitTypePtrSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UnitTypeSet.cs">
-      <Link>UnitTypeSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UpgradeType.cs">
-      <Link>UpgradeType.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UpgradeTypePtrSet.cs">
-      <Link>UpgradeTypePtrSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\UpgradeTypeSet.cs">
-      <Link>UpgradeTypeSet.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\WeaponType.cs">
-      <Link>WeaponType.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Include\SwigOutput\WeaponTypeSet.cs">
-      <Link>WeaponTypeSet.cs</Link>
-    </Compile>
     <Compile Include="MonoStarcraftBotBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="swig-classes\AIModule.cs" />
+    <Compile Include="swig-classes\AttackType.cs" />
+    <Compile Include="swig-classes\AttackTypeSet.cs" />
+    <Compile Include="swig-classes\BaseLocation.cs" />
+    <Compile Include="swig-classes\BaseLocationPtrSet.cs" />
+    <Compile Include="swig-classes\bridge.cs" />
+    <Compile Include="swig-classes\bridgePINVOKE.cs" />
+    <Compile Include="swig-classes\Chokepoint.cs" />
+    <Compile Include="swig-classes\ChokepointPtrSet.cs" />
+    <Compile Include="swig-classes\Color.cs" />
+    <Compile Include="swig-classes\CoordinateType.cs" />
+    <Compile Include="swig-classes\DamageType.cs" />
+    <Compile Include="swig-classes\DamageTypeSet.cs" />
+    <Compile Include="swig-classes\Error.cs" />
+    <Compile Include="swig-classes\ErrorSet.cs" />
+    <Compile Include="swig-classes\ExplosionType.cs" />
+    <Compile Include="swig-classes\ExplosionTypeSet.cs" />
+    <Compile Include="swig-classes\Flag.cs" />
+    <Compile Include="swig-classes\Force.cs" />
+    <Compile Include="swig-classes\ForcePtrSet.cs" />
+    <Compile Include="swig-classes\Game.cs" />
+    <Compile Include="swig-classes\Latency.cs" />
+    <Compile Include="swig-classes\monobridgeutil.cs" />
+    <Compile Include="swig-classes\Order.cs" />
+    <Compile Include="swig-classes\OrderSet.cs" />
+    <Compile Include="swig-classes\Player.cs" />
+    <Compile Include="swig-classes\PlayerPtrSet.cs" />
+    <Compile Include="swig-classes\PlayerType.cs" />
+    <Compile Include="swig-classes\PlayerTypeSet.cs" />
+    <Compile Include="swig-classes\Polygon.cs" />
+    <Compile Include="swig-classes\PolygonPtrSet.cs" />
+    <Compile Include="swig-classes\Position.cs" />
+    <Compile Include="swig-classes\PositionPair.cs" />
+    <Compile Include="swig-classes\PositionVector.cs" />
+    <Compile Include="swig-classes\Race.cs" />
+    <Compile Include="swig-classes\RaceSet.cs" />
+    <Compile Include="swig-classes\Region.cs" />
+    <Compile Include="swig-classes\RegionPtrRegionPtrPair.cs" />
+    <Compile Include="swig-classes\RegionPtrSet.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_int.cs" />
+    <Compile Include="swig-classes\TechType.cs" />
+    <Compile Include="swig-classes\TechTypePtrSet.cs" />
+    <Compile Include="swig-classes\TechTypeSet.cs" />
+    <Compile Include="swig-classes\TilePosition.cs" />
+    <Compile Include="swig-classes\TilePositionSet.cs" />
+    <Compile Include="swig-classes\Unit.cs" />
+    <Compile Include="swig-classes\UnitPtrList.cs" />
+    <Compile Include="swig-classes\UnitSet.cs" />
+    <Compile Include="swig-classes\UnitSizeType.cs" />
+    <Compile Include="swig-classes\UnitSizeTypeSet.cs" />
+    <Compile Include="swig-classes\UnitType.cs" />
+    <Compile Include="swig-classes\UnitTypeList.cs" />
+    <Compile Include="swig-classes\UnitTypePtrIntMap.cs" />
+    <Compile Include="swig-classes\UnitTypePtrIntPair.cs" />
+    <Compile Include="swig-classes\UnitTypePtrSet.cs" />
+    <Compile Include="swig-classes\UnitTypeSet.cs" />
+    <Compile Include="swig-classes\UpgradeType.cs" />
+    <Compile Include="swig-classes\UpgradeTypePtrSet.cs" />
+    <Compile Include="swig-classes\UpgradeTypeSet.cs" />
+    <Compile Include="swig-classes\WeaponType.cs" />
+    <Compile Include="swig-classes\WeaponTypeSet.cs" />
+    <Compile Include="user-classes\unit-extended.cs" />
+    <None Include="user-classes\Extend the swig classes in this folder.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="swig-classes" />
+    <Folder Include="user-classes" />
   </ItemGroup>
 </Project>
