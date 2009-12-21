@@ -8,7 +8,11 @@
 #include "BWTA.h"
 #include "monobridge.h"
 using namespace BWAPI;
-%}
+%}                    
+
+//partial classes to allow users to add methods to the generated classes.
+%typemap(csclassmodifiers) SWIGTYPE "public partial class"
+
 
 
 //lets add some functionality to our types
