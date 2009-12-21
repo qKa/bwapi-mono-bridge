@@ -1,5 +1,4 @@
 
-
 = Introduction =
 
 This is a quick walkthrough of installing the bwapi-mono-bridge skeleton AI. 
@@ -10,12 +9,11 @@ This is a quick walkthrough of installing the bwapi-mono-bridge skeleton AI.
   # Follow all directions for obtaining and setting up the BWAPI 2.4 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
   # Download the zip file from the downloads tab
   # Extract the zip to a new folder
-  # copy the contents of the Deploy\AI folder into the bwapi-data\AI folder in your starcraft directory (created during BWAPI setup)
-  # copy the contents of the linker\output folder into the bwapi-data\AI\bot folder (overwrite any files of the same name)
+  # copy the contents of the StarcraftBot\bwapi-data\AI folder into the bwapi-data\AI folder in your starcraft directory (created during BWAPI setup)
   # Edit the bwapi.ini file and change the ai_dll line to read:
 {{{
 [ai]
-ai_dll = bwapi-data\AI\ExampleAIModule.dll
+ai_dll = bwapi-data\AI\MonoBridge.dll
 }}}
-  # You are ready to run the bot. It should say hello from mono/clr when it starts up.
+  # You are ready to run the bot. Just run chaoslauncher as per usual and the .net bot should say hello from mono/CLR when it starts up.
  
