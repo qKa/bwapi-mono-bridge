@@ -1,3 +1,9 @@
+/*
+ * This is the .net class that is called from the C++ code. It will load your bot file from the
+ * StarcraftBot project (see monostarcraftbot.cs). Do not modify this unless you really need to as
+ * the C++ code depends on the namespace, classname and some method names in this assembly.
+ */
+
 using System;
 using BWAPI;
 using System.Runtime.InteropServices;
