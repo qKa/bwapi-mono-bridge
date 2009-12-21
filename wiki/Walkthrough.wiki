@@ -1,22 +1,28 @@
 = Introduction =
 
-This is a walkthrough on how to modify the hello world bot included in the download. Some steps are required as this bot should not need any .NET or Mono installed on the machine it will run on. (Tested on a vanilla xp sp3)
+This is a walkthrough on how to modify the hello world bot included in the download. Some extra steps are required so that this bot will not need .NET or Mono installed on the machine on which it will run. (Tested on a vanilla xp sp3)
 
 
 = Details =
-
  # Follow the instructions from InstallingTheBot to get the hello bot up and running
- # Make sure you have Mono installed www.mono-project.com/download
+
+ # Make sure you have Mono installed www.mono-project.com/download (You can still use .net to compile your bot, mono is used in the linking phase)
+
  # Download and extract the zip file from the downloads tab
- # Open up the starcraftbot.sln file in the starcraftbot directory (i use sharpdevelop but it should work fine in visualstudio, just ensure you are targeting the .net 2.0 runtime)
- # Make changes to the project and compile as you would normally. (make sure the namespace, class name, and assembly name don't change as they are referenced by the bot loader directly) NB all BWAPI stuff is located in the BWAPI namespace. and BWAPI.bridge.Broodwar is the reference to the main Game object.
+ # In the StarcraftBot\Source directory there is a solution called monobridgeai.sln. This solution contains all 3 subprojects needed to run the bot.
+   * MonoBridgeAI - Called from C++ to load and run the bot. 
+   * MonoBridgeAI-Interop - Contains the automatic and user generated class files for talking to BWAPI.dll. 
+   * StarcraftBot - This is where the magic happens. Extend this to code your bot.
+ # Open the solution file (I have tested Sharpdevelop 3+, Visual Studio 2008, Monodevelop 2.2)
+ # Make your changes. (You will mainly be editing the StarcraftBot project within the solution. You can also extend any of the BWAPI generated classes in the monobridgeai-interop project by adding a partial class to the user-classes folder (see the example in the project)
+ # To build the bot just build the solution.
 
+You should now have your assemblies that make up your bot. What we need to do now is to copy them and their required .NET runtime classes to the bot folder. To do this easily we can take the following steps:
 
-You should now have your assemblies that make up your bot. What we need to do now is to copy them and their required mono runtime classes to the bot folder. To do this easily we can take the following steps:
-
- # make sure your required assemblies are in the StarcraftBot\bin\Debug folder. (or edit the batch file linkbot.bat in the linker folder with the location of your dlls)
- # Launch a mono command prompt
- # from the command prompt navigate to the linker folder and run linkbot.bat this will find all assemblies needed by StarcraftBot.dll and copy them into the linker\output folder.
+ # make sure your compiled assemblies are in the monobridgeai\bin\Debug folder. (or edit the batch file linkbot.bat in the linker folder with the location of your compiled dlls)
+ # Edit linkbot.bat in the source\linker folder and set the mono bin path correctly
+ # run linkbot.bat this will find all assemblies used by your bot (including those from the mono runtime) and copy them into the linker\output folder. It will also strip out the unused methods to reduce the size of your bot. (if we were to deploy mono as part of our bot, it would be over 170mb (or 70mb zipped))
 
 To Deploy
- # Follow the directions in InstallingTheBot to deploy.
+ # Replace the files in your starcraft\bwapi\ai\bot folder with those from the linker\output folder.
+ # you can now run your bot the usual way from chaoslauncher. People running your bot will not need the .net or mono runtimes installed as they are embedded as part of your bot(helping meet the requirements of the Starcraft AI Competition)
