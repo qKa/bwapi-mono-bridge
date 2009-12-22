@@ -6,7 +6,7 @@ This is a walkthrough on how to modify the hello world bot included in the downl
 = Details =
  # Follow the instructions from InstallingTheBot to get the hello bot up and running
 
- # Make sure you have Mono installed www.mono-project.com/download (You can still use .net to compile your bot, mono is used in the linking phase)
+ # Make sure you have Mono installed www.mono-project.com/download (You can still use .net to compile your bot, mono is used for its libraries in the deployment phase)
 
  # Download and extract the zip file from the downloads tab
  # In the StarcraftBot\Source directory there is a solution called monobridgeai.sln. This solution contains all 3 subprojects needed to run the bot.
@@ -18,11 +18,9 @@ This is a walkthrough on how to modify the hello world bot included in the downl
  # To build the bot just build the solution.
 
 You should now have your assemblies that make up your bot. What we need to do now is to copy them and their required .NET runtime classes to the bot folder. To do this easily we can take the following steps:
-
- # make sure your compiled assemblies are in the monobridgeai\bin\Debug folder. (or edit the batch file linkbot.bat in the linker folder with the location of your compiled dlls)
- # Edit linkbot.bat in the source\linker folder and set the mono bin path correctly
- # run linkbot.bat this will find all assemblies used by your bot (including those from the mono runtime) and copy them into the linker\output folder. It will also strip out the unused methods to reduce the size of your bot. (if we were to deploy mono as part of our bot, it would be over 170mb (or 70mb zipped))
-
-To Deploy
- # Replace the files in your starcraft\bwapi\ai\bot folder with those from the linker\output folder.
- # you can now run your bot the usual way from chaoslauncher. People running your bot will not need the .net or mono runtimes installed as they are embedded as part of your bot(helping meet the requirements of the Starcraft AI Competition)
+  # First setup access to the mono runtime (only needs to be done once)
+    # If you havent already, ensure you have downloaded and installed mono-2.6.1 from [url]www.go-mono.com[/url]
+    # Copy the lib and etc folders from your mono install and paste them into the bwapi-data\ai\mono folder 
+  # Replace the files in your starcraft\bwapi\ai\bot folder with those from your project output (bin\debug) folder. Make sure that monobridgeai.dll is included.
+  # you can now run your bot the usual way from chaoslauncher. 
+  # To give your bot to someone else, just zip up the bwapi-data folder (warning: this can get very big) People running your bot will not need the .net or mono runtimes installed as they are embedded as part of your bot(helping meet the requirements of the Starcraft AI Competition)
