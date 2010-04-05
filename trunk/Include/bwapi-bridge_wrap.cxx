@@ -371,7 +371,8 @@ SWIGINTERN void SWIG_CSharpException(int code, const char *msg) {
 using namespace BWAPI;
 
 
-using namespace BWAPI;
+using namespace BWTA;
+
 
 SWIGINTERN std::vector< BWAPI::Position > *new_std_vector_Sl_BWAPI_Position_Sg___SWIG_2(int capacity){
         std::vector<BWAPI::Position >* pv = 0;
@@ -1166,6 +1167,137 @@ SWIGINTERN std::set< BWAPI::TilePosition >::key_type const &std_set_Sl_BWAPI_Til
         }
         (*swigiterator)++;
         return (*iter);
+      }
+SWIGINTERN std::map< BWAPI::TilePosition,double >::mapped_type const &std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__getitem(std::map< BWAPI::TilePosition,double > *self,std::map< BWAPI::TilePosition,double >::key_type const &key){
+        std::map< BWAPI::TilePosition,double >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return iter->second;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN void std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__setitem(std::map< BWAPI::TilePosition,double > *self,std::map< BWAPI::TilePosition,double >::key_type const &key,std::map< BWAPI::TilePosition,double >::mapped_type const &x){
+        (*self)[key] = x;
+      }
+SWIGINTERN bool std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__ContainsKey(std::map< BWAPI::TilePosition,double > *self,std::map< BWAPI::TilePosition,double >::key_type const &key){
+        std::map< BWAPI::TilePosition, double >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__Add(std::map< BWAPI::TilePosition,double > *self,std::map< BWAPI::TilePosition,double >::key_type const &key,std::map< BWAPI::TilePosition,double >::mapped_type const &val){
+        std::map< BWAPI::TilePosition, double >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(std::pair< BWAPI::TilePosition, double >(key, val));
+      }
+SWIGINTERN bool std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__Remove(std::map< BWAPI::TilePosition,double > *self,std::map< BWAPI::TilePosition,double >::key_type const &key){
+        std::map< BWAPI::TilePosition, double >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::map< BWAPI::TilePosition,double >::iterator *std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__create_iterator_begin(std::map< BWAPI::TilePosition,double > *self){
+        return new std::map< BWAPI::TilePosition, double >::iterator(self->begin());
+      }
+SWIGINTERN std::map< BWAPI::TilePosition,double >::key_type const &std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__get_next_key(std::map< BWAPI::TilePosition,double > *self,std::map< BWAPI::TilePosition,double >::iterator *swigiterator){
+        std::map< BWAPI::TilePosition, double >::iterator iter = *swigiterator;
+        if (iter == self->end()) {
+          delete swigiterator;
+          throw std::out_of_range("no more map elements");
+        }
+        (*swigiterator)++;
+        return (*iter).first;
+      }
+SWIGINTERN std::vector< BWAPI::TilePosition > *new_std_vector_Sl_BWAPI_TilePosition_Sg___SWIG_2(int capacity){
+        std::vector<BWAPI::TilePosition >* pv = 0;
+        if (capacity >= 0) {
+          pv = new std::vector<BWAPI::TilePosition >();
+          pv->reserve(capacity);
+       } else {
+          throw std::out_of_range("capacity");
+       }
+       return pv;
+      }
+SWIGINTERN BWAPI::TilePosition std_vector_Sl_BWAPI_TilePosition_Sg__getitemcopy(std::vector< BWAPI::TilePosition > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN std::vector< BWAPI::TilePosition >::const_reference std_vector_Sl_BWAPI_TilePosition_Sg__getitem(std::vector< BWAPI::TilePosition > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_BWAPI_TilePosition_Sg__setitem(std::vector< BWAPI::TilePosition > *self,int index,std::vector< BWAPI::TilePosition >::value_type const &val){
+        if (index>=0 && index<(int)self->size())
+          (*self)[index] = val;
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_BWAPI_TilePosition_Sg__AddRange(std::vector< BWAPI::TilePosition > *self,std::vector< BWAPI::TilePosition > const &values){
+        self->insert(self->end(), values.begin(), values.end());
+      }
+SWIGINTERN std::vector< BWAPI::TilePosition > *std_vector_Sl_BWAPI_TilePosition_Sg__GetRange(std::vector< BWAPI::TilePosition > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        return new std::vector<BWAPI::TilePosition >(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_BWAPI_TilePosition_Sg__Insert(std::vector< BWAPI::TilePosition > *self,int index,std::vector< BWAPI::TilePosition >::value_type const &x){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, x);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_BWAPI_TilePosition_Sg__InsertRange(std::vector< BWAPI::TilePosition > *self,int index,std::vector< BWAPI::TilePosition > const &values){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, values.begin(), values.end());
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_BWAPI_TilePosition_Sg__RemoveAt(std::vector< BWAPI::TilePosition > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          self->erase(self->begin() + index);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_BWAPI_TilePosition_Sg__RemoveRange(std::vector< BWAPI::TilePosition > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        self->erase(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN std::vector< BWAPI::TilePosition > *std_vector_Sl_BWAPI_TilePosition_Sg__Repeat(std::vector< BWAPI::TilePosition >::value_type const &value,int count){
+        if (count < 0)
+          throw std::out_of_range("count");
+        return new std::vector<BWAPI::TilePosition >(count, value);
+      }
+SWIGINTERN void std_vector_Sl_BWAPI_TilePosition_Sg__Reverse__SWIG_0(std::vector< BWAPI::TilePosition > *self){
+        std::reverse(self->begin(), self->end());
+      }
+SWIGINTERN void std_vector_Sl_BWAPI_TilePosition_Sg__Reverse__SWIG_1(std::vector< BWAPI::TilePosition > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        std::reverse(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_BWAPI_TilePosition_Sg__SetRange(std::vector< BWAPI::TilePosition > *self,int index,std::vector< BWAPI::TilePosition > const &values){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (index+values.size() > self->size())
+          throw std::out_of_range("index");
+        std::copy(values.begin(), values.end(), self->begin()+index);
       }
 SWIGINTERN std::map< BWAPI::UnitType const *,int >::mapped_type const &std_map_Sl_BWAPI_UnitType_SS_const_Sm__Sc_int_Sg__getitem(std::map< BWAPI::UnitType const *,int > *self,std::map< BWAPI::UnitType const *,int >::key_type const &key){
         std::map< BWAPI::UnitType const *,int >::iterator iter = self->find(key);
@@ -3303,6 +3435,24 @@ SWIGEXPORT double SWIGSTDCALL CSharp_Position_getDistance(void * jarg1, void * j
     return 0;
   } 
   result = (double)((BWAPI::Position const *)arg1)->getDistance((BWAPI::Position const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_Position_getApproxDistance(void * jarg1, void * jarg2) {
+  double jresult ;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  BWAPI::Position *arg2 = 0 ;
+  double result;
+  
+  arg1 = (BWAPI::Position *)jarg1; 
+  arg2 = (BWAPI::Position *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
+    return 0;
+  } 
+  result = (double)((BWAPI::Position const *)arg1)->getApproxDistance((BWAPI::Position const &)*arg2);
   jresult = result; 
   return jresult;
 }
@@ -5655,6 +5805,74 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Game_getMouseY(void * jarg1) {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_Game_getMousePosition(void * jarg1) {
+  void * jresult ;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  BWAPI::Position result;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  result = (arg1)->getMousePosition();
+  jresult = new BWAPI::Position((const BWAPI::Position &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_getMouseState__SWIG_0(void * jarg1, int jarg2) {
+  unsigned int jresult ;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  BWAPI::MouseButton arg2 ;
+  bool result;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  arg2 = (BWAPI::MouseButton)jarg2; 
+  result = (bool)(arg1)->getMouseState(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_getMouseState__SWIG_1(void * jarg1, int jarg2) {
+  unsigned int jresult ;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  int arg2 ;
+  bool result;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  arg2 = (int)jarg2; 
+  result = (bool)(arg1)->getMouseState(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_getKeyState__SWIG_0(void * jarg1, int jarg2) {
+  unsigned int jresult ;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  BWAPI::Key arg2 ;
+  bool result;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  arg2 = (BWAPI::Key)jarg2; 
+  result = (bool)(arg1)->getKeyState(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Game_getKeyState__SWIG_1(void * jarg1, int jarg2) {
+  unsigned int jresult ;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  int arg2 ;
+  bool result;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  arg2 = (int)jarg2; 
+  result = (bool)(arg1)->getKeyState(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT int SWIGSTDCALL CSharp_Game_getScreenX(void * jarg1) {
   int jresult ;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
@@ -5676,6 +5894,74 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Game_getScreenY(void * jarg1) {
   result = (int)(arg1)->getScreenY();
   jresult = result; 
   return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Game_getScreenPosition(void * jarg1) {
+  void * jresult ;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  BWAPI::Position result;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  result = (arg1)->getScreenPosition();
+  jresult = new BWAPI::Position((const BWAPI::Position &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Game_setScreenPosition__SWIG_0(void * jarg1, int jarg2, int jarg3) {
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  (arg1)->setScreenPosition(arg2,arg3);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Game_setScreenPosition__SWIG_1(void * jarg1, void * jarg2) {
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  BWAPI::Position arg2 ;
+  BWAPI::Position *argp2 ;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  argp2 = (BWAPI::Position *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Position", 0);
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setScreenPosition(arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Game_pingMinimap__SWIG_0(void * jarg1, int jarg2, int jarg3) {
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  (arg1)->pingMinimap(arg2,arg3);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Game_pingMinimap__SWIG_1(void * jarg1, void * jarg2) {
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  BWAPI::Position arg2 ;
+  BWAPI::Position *argp2 ;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  argp2 = (BWAPI::Position *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Position", 0);
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->pingMinimap(arg2);
 }
 
 
@@ -9889,6 +10175,30 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Player_getStartLocation(void * jarg1) {
 }
 
 
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isVictorious(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (bool)((BWAPI::Player const *)arg1)->isVictorious();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_isDefeated(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (bool)((BWAPI::Player const *)arg1)->isDefeated();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Player_leftGame(void * jarg1) {
   unsigned int jresult ;
   BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
@@ -10495,6 +10805,18 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionUnknown_get() {
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_Unit_getID(void * jarg1) {
+  int jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  result = (int)((BWAPI::Unit const *)arg1)->getID();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getPlayer(void * jarg1) {
   void * jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -10973,6 +11295,18 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getBuildUnit(void * jarg1) {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getBuildType(void * jarg1) {
+  void * jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::UnitType result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  result = ((BWAPI::Unit const *)arg1)->getBuildType();
+  jresult = new BWAPI::UnitType((const BWAPI::UnitType &)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT int SWIGSTDCALL CSharp_Unit_getRemainingBuildTime(void * jarg1) {
   int jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -11161,6 +11495,30 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getAddon(void * jarg1) {
   arg1 = (BWAPI::Unit *)jarg1; 
   result = (BWAPI::Unit *)((BWAPI::Unit const *)arg1)->getAddon();
   jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getHatchery(void * jarg1) {
+  void * jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::Unit *result = 0 ;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  result = (BWAPI::Unit *)((BWAPI::Unit const *)arg1)->getHatchery();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getLarva(void * jarg1) {
+  void * jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  std::set< BWAPI::Unit * > result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  result = ((BWAPI::Unit const *)arg1)->getLarva();
+  jresult = new std::set< BWAPI::Unit * >((const std::set< BWAPI::Unit * > &)result); 
   return jresult;
 }
 
@@ -11966,6 +12324,18 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_repair(void * jarg1, void * jarg
   arg1 = (BWAPI::Unit *)jarg1; 
   arg2 = (BWAPI::Unit *)jarg2; 
   result = (bool)(arg1)->repair(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_returnCargo(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  result = (bool)(arg1)->returnCargo();
   jresult = result; 
   return jresult;
 }
@@ -15913,6 +16283,197 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_monobridgeutil(void * jarg1) {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RectangleArrayDouble__SWIG_0(unsigned int jarg1, unsigned int jarg2, void * jarg3) {
+  void * jresult ;
+  unsigned int arg1 ;
+  unsigned int arg2 ;
+  double *arg3 = (double *) 0 ;
+  BWTA::RectangleArray< double > *result = 0 ;
+  
+  arg1 = (unsigned int)jarg1; 
+  arg2 = (unsigned int)jarg2; 
+  arg3 = (double *)jarg3; 
+  result = (BWTA::RectangleArray< double > *)new BWTA::RectangleArray< double >(arg1,arg2,arg3);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RectangleArrayDouble__SWIG_1(unsigned int jarg1, unsigned int jarg2) {
+  void * jresult ;
+  unsigned int arg1 ;
+  unsigned int arg2 ;
+  BWTA::RectangleArray< double > *result = 0 ;
+  
+  arg1 = (unsigned int)jarg1; 
+  arg2 = (unsigned int)jarg2; 
+  result = (BWTA::RectangleArray< double > *)new BWTA::RectangleArray< double >(arg1,arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RectangleArrayDouble__SWIG_2(unsigned int jarg1) {
+  void * jresult ;
+  unsigned int arg1 ;
+  BWTA::RectangleArray< double > *result = 0 ;
+  
+  arg1 = (unsigned int)jarg1; 
+  result = (BWTA::RectangleArray< double > *)new BWTA::RectangleArray< double >(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RectangleArrayDouble__SWIG_3() {
+  void * jresult ;
+  BWTA::RectangleArray< double > *result = 0 ;
+  
+  result = (BWTA::RectangleArray< double > *)new BWTA::RectangleArray< double >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_RectangleArrayDouble__SWIG_4(void * jarg1) {
+  void * jresult ;
+  BWTA::RectangleArray< double > *arg1 = 0 ;
+  BWTA::RectangleArray< double > *result = 0 ;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWTA::RectangleArray< double > const & type is null", 0);
+    return 0;
+  } 
+  result = (BWTA::RectangleArray< double > *)new BWTA::RectangleArray< double >((BWTA::RectangleArray< double > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_RectangleArrayDouble(void * jarg1) {
+  BWTA::RectangleArray< double > *arg1 = (BWTA::RectangleArray< double > *) 0 ;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RectangleArrayDouble_getWidth(void * jarg1) {
+  unsigned int jresult ;
+  BWTA::RectangleArray< double > *arg1 = (BWTA::RectangleArray< double > *) 0 ;
+  unsigned int result;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1; 
+  result = (unsigned int)((BWTA::RectangleArray< double > const *)arg1)->getWidth();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RectangleArrayDouble_getHeight(void * jarg1) {
+  unsigned int jresult ;
+  BWTA::RectangleArray< double > *arg1 = (BWTA::RectangleArray< double > *) 0 ;
+  unsigned int result;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1; 
+  result = (unsigned int)((BWTA::RectangleArray< double > const *)arg1)->getHeight();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_RectangleArrayDouble_getItem(void * jarg1, unsigned int jarg2, unsigned int jarg3) {
+  void * jresult ;
+  BWTA::RectangleArray< double > *arg1 = (BWTA::RectangleArray< double > *) 0 ;
+  unsigned int arg2 ;
+  unsigned int arg3 ;
+  double *result = 0 ;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1; 
+  arg2 = (unsigned int)jarg2; 
+  arg3 = (unsigned int)jarg3; 
+  result = (double *)(arg1)->getItem(arg2,arg3);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_RectangleArrayDouble_setItem(void * jarg1, unsigned int jarg2, unsigned int jarg3, void * jarg4) {
+  BWTA::RectangleArray< double > *arg1 = (BWTA::RectangleArray< double > *) 0 ;
+  unsigned int arg2 ;
+  unsigned int arg3 ;
+  double *arg4 = (double *) 0 ;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1; 
+  arg2 = (unsigned int)jarg2; 
+  arg3 = (unsigned int)jarg3; 
+  arg4 = (double *)jarg4; 
+  (arg1)->setItem(arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_RectangleArrayDouble_resize(void * jarg1, unsigned int jarg2, unsigned int jarg3) {
+  BWTA::RectangleArray< double > *arg1 = (BWTA::RectangleArray< double > *) 0 ;
+  unsigned int arg2 ;
+  unsigned int arg3 ;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1; 
+  arg2 = (unsigned int)jarg2; 
+  arg3 = (unsigned int)jarg3; 
+  (arg1)->resize(arg2,arg3);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_RectangleArrayDouble_printToFile(void * jarg1, void * jarg2) {
+  BWTA::RectangleArray< double > *arg1 = (BWTA::RectangleArray< double > *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1; 
+  arg2 = (FILE *)jarg2; 
+  (arg1)->printToFile(arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_RectangleArrayDouble_saveToFile(void * jarg1, char * jarg2) {
+  BWTA::RectangleArray< double > *arg1 = (BWTA::RectangleArray< double > *) 0 ;
+  std::string *arg2 = 0 ;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1; 
+  if (!jarg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
+    return ;
+  }
+  std::string arg2_str(jarg2);
+  arg2 = &arg2_str; 
+  (arg1)->saveToFile((std::string const &)*arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_RectangleArrayDouble_setTo(void * jarg1, double jarg2) {
+  BWTA::RectangleArray< double > *arg1 = (BWTA::RectangleArray< double > *) 0 ;
+  double *arg2 = 0 ;
+  double temp2 ;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1; 
+  temp2 = (double)jarg2; 
+  arg2 = &temp2; 
+  (arg1)->setTo((double const &)*arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_RectangleArrayDouble_setBorderTo(void * jarg1, double jarg2) {
+  BWTA::RectangleArray< double > *arg1 = (BWTA::RectangleArray< double > *) 0 ;
+  double *arg2 = 0 ;
+  double temp2 ;
+  
+  arg1 = (BWTA::RectangleArray< double > *)jarg1; 
+  temp2 = (double)jarg2; 
+  arg2 = &temp2; 
+  (arg1)->setBorderTo((double const &)*arg2);
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_readMap() {
   BWTA::readMap();
 }
@@ -15973,6 +16534,146 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getUnwalkablePolygons() {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_getStartLocation(void * jarg1) {
+  void * jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWTA::BaseLocation *result = 0 ;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (BWTA::BaseLocation *)BWTA::getStartLocation(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getRegion__SWIG_0(int jarg1, int jarg2) {
+  void * jresult ;
+  int arg1 ;
+  int arg2 ;
+  BWTA::Region *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  arg2 = (int)jarg2; 
+  result = (BWTA::Region *)BWTA::getRegion(arg1,arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getRegion__SWIG_1(void * jarg1) {
+  void * jresult ;
+  BWAPI::TilePosition arg1 ;
+  BWAPI::TilePosition *argp1 ;
+  BWTA::Region *result = 0 ;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = (BWTA::Region *)BWTA::getRegion(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestChokepoint__SWIG_0(int jarg1, int jarg2) {
+  void * jresult ;
+  int arg1 ;
+  int arg2 ;
+  BWTA::Chokepoint *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  arg2 = (int)jarg2; 
+  result = (BWTA::Chokepoint *)BWTA::getNearestChokepoint(arg1,arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestChokepoint__SWIG_1(void * jarg1) {
+  void * jresult ;
+  BWAPI::TilePosition arg1 ;
+  BWAPI::TilePosition *argp1 ;
+  BWTA::Chokepoint *result = 0 ;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = (BWTA::Chokepoint *)BWTA::getNearestChokepoint(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestBaseLocation__SWIG_0(int jarg1, int jarg2) {
+  void * jresult ;
+  int arg1 ;
+  int arg2 ;
+  BWTA::BaseLocation *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  arg2 = (int)jarg2; 
+  result = (BWTA::BaseLocation *)BWTA::getNearestBaseLocation(arg1,arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestBaseLocation__SWIG_1(void * jarg1) {
+  void * jresult ;
+  BWAPI::TilePosition arg1 ;
+  BWAPI::TilePosition *argp1 ;
+  BWTA::BaseLocation *result = 0 ;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = (BWTA::BaseLocation *)BWTA::getNearestBaseLocation(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestUnwalkablePolygon__SWIG_0(int jarg1, int jarg2) {
+  void * jresult ;
+  int arg1 ;
+  int arg2 ;
+  BWTA::Polygon *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  arg2 = (int)jarg2; 
+  result = (BWTA::Polygon *)BWTA::getNearestUnwalkablePolygon(arg1,arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestUnwalkablePolygon__SWIG_1(void * jarg1) {
+  void * jresult ;
+  BWAPI::TilePosition arg1 ;
+  BWAPI::TilePosition *argp1 ;
+  BWTA::Polygon *result = 0 ;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = (BWTA::Polygon *)BWTA::getNearestUnwalkablePolygon(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestUnwalkablePosition(void * jarg1) {
   void * jresult ;
   BWAPI::Position arg1 ;
@@ -15991,23 +16692,31 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestUnwalkablePosition(void * jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getStartLocation(void * jarg1) {
-  void * jresult ;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  BWTA::BaseLocation *result = 0 ;
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_isConnected__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4) {
+  unsigned int jresult ;
+  int arg1 ;
+  int arg2 ;
+  int arg3 ;
+  int arg4 ;
+  bool result;
   
-  arg1 = (BWAPI::Player *)jarg1; 
-  result = (BWTA::BaseLocation *)BWTA::getStartLocation(arg1);
-  jresult = (void *)result; 
+  arg1 = (int)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  arg4 = (int)jarg4; 
+  result = (bool)BWTA::isConnected(arg1,arg2,arg3,arg4);
+  jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestBaseLocation(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_isConnected__SWIG_1(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
   BWAPI::TilePosition arg1 ;
+  BWAPI::TilePosition arg2 ;
   BWAPI::TilePosition *argp1 ;
-  BWTA::BaseLocation *result = 0 ;
+  BWAPI::TilePosition *argp2 ;
+  bool result;
   
   argp1 = (BWAPI::TilePosition *)jarg1; 
   if (!argp1) {
@@ -16015,8 +16724,158 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestBaseLocation(void * jarg1) {
     return 0;
   }
   arg1 = *argp1; 
-  result = (BWTA::BaseLocation *)BWTA::getNearestBaseLocation(arg1);
-  jresult = (void *)result; 
+  argp2 = (BWAPI::TilePosition *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (bool)BWTA::isConnected(arg1,arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_getGroundDistance(void * jarg1, void * jarg2) {
+  double jresult ;
+  BWAPI::TilePosition arg1 ;
+  BWAPI::TilePosition arg2 ;
+  BWAPI::TilePosition *argp1 ;
+  BWAPI::TilePosition *argp2 ;
+  double result;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  argp2 = (BWAPI::TilePosition *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (double)BWTA::getGroundDistance(arg1,arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestTilePosition(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWAPI::TilePosition arg1 ;
+  std::set< BWAPI::TilePosition > *arg2 = 0 ;
+  BWAPI::TilePosition *argp1 ;
+  std::pair< BWAPI::TilePosition,double > result;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  arg2 = (std::set< BWAPI::TilePosition > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition > & type is null", 0);
+    return 0;
+  } 
+  result = BWTA::getNearestTilePosition(arg1,*arg2);
+  jresult = new std::pair< BWAPI::TilePosition,double >((const std::pair< BWAPI::TilePosition,double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getGroundDistances(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWAPI::TilePosition arg1 ;
+  std::set< BWAPI::TilePosition > *arg2 = 0 ;
+  BWAPI::TilePosition *argp1 ;
+  std::map< BWAPI::TilePosition,double > result;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  arg2 = (std::set< BWAPI::TilePosition > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition > & type is null", 0);
+    return 0;
+  } 
+  result = BWTA::getGroundDistances(arg1,*arg2);
+  jresult = new std::map< BWAPI::TilePosition,double >((const std::map< BWAPI::TilePosition,double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_getGroundDistanceMap(void * jarg1, void * jarg2) {
+  BWAPI::TilePosition arg1 ;
+  BWTA::RectangleArray< double > *arg2 = 0 ;
+  BWAPI::TilePosition *argp1 ;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return ;
+  }
+  arg1 = *argp1; 
+  arg2 = (BWTA::RectangleArray< double > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWTA::RectangleArray< double > & type is null", 0);
+    return ;
+  } 
+  BWTA::getGroundDistanceMap(arg1,*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getShortestPath__SWIG_0(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWAPI::TilePosition arg1 ;
+  BWAPI::TilePosition arg2 ;
+  BWAPI::TilePosition *argp1 ;
+  BWAPI::TilePosition *argp2 ;
+  std::vector< BWAPI::TilePosition > result;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  argp2 = (BWAPI::TilePosition *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = BWTA::getShortestPath(arg1,arg2);
+  jresult = new std::vector< BWAPI::TilePosition >((const std::vector< BWAPI::TilePosition > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getShortestPath__SWIG_1(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWAPI::TilePosition arg1 ;
+  std::set< BWAPI::TilePosition > *arg2 = 0 ;
+  BWAPI::TilePosition *argp1 ;
+  std::vector< BWAPI::TilePosition > result;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  arg2 = (std::set< BWAPI::TilePosition > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition > & type is null", 0);
+    return 0;
+  } 
+  result = BWTA::getShortestPath(arg1,*arg2);
+  jresult = new std::vector< BWAPI::TilePosition >((const std::vector< BWAPI::TilePosition > &)result); 
   return jresult;
 }
 
@@ -16762,6 +17621,32 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Region_getBaseLocations(void * jarg1) {
   
   arg1 = (BWTA::Region *)jarg1; 
   result = (std::set< BWTA::BaseLocation * > *) &((BWTA::Region const *)arg1)->getBaseLocations();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Region_isReachable(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
+  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
+  bool result;
+  
+  arg1 = (BWTA::Region *)jarg1; 
+  arg2 = (BWTA::Region *)jarg2; 
+  result = (bool)((BWTA::Region const *)arg1)->isReachable(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Region_getReachableRegions(void * jarg1) {
+  void * jresult ;
+  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
+  std::set< BWTA::Region * > *result = 0 ;
+  
+  arg1 = (BWTA::Region *)jarg1; 
+  result = (std::set< BWTA::Region * > *) &((BWTA::Region const *)arg1)->getReachableRegions();
   jresult = (void *)result; 
   return jresult;
 }
@@ -20358,6 +21243,687 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_TilePositionSet(void * jarg1) {
   std::set< BWAPI::TilePosition > *arg1 = (std::set< BWAPI::TilePosition > *) 0 ;
   
   arg1 = (std::set< BWAPI::TilePosition > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionDoubleMap__SWIG_0() {
+  void * jresult ;
+  std::map< BWAPI::TilePosition,double > *result = 0 ;
+  
+  result = (std::map< BWAPI::TilePosition,double > *)new std::map< BWAPI::TilePosition,double >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionDoubleMap__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::map< BWAPI::TilePosition,double > *arg1 = 0 ;
+  std::map< BWAPI::TilePosition,double > *result = 0 ;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< BWAPI::TilePosition,double > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::map< BWAPI::TilePosition,double > *)new std::map< BWAPI::TilePosition,double >((std::map< BWAPI::TilePosition,double > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_TilePositionDoubleMap_size(void * jarg1) {
+  unsigned long jresult ;
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  std::map< BWAPI::TilePosition,double >::size_type result;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  result = ((std::map< BWAPI::TilePosition,double > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TilePositionDoubleMap_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  bool result;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  result = (bool)((std::map< BWAPI::TilePosition,double > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionDoubleMap_Clear(void * jarg1) {
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_TilePositionDoubleMap_getitem(void * jarg1, void * jarg2) {
+  double jresult ;
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  std::map< BWAPI::TilePosition,double >::key_type *arg2 = 0 ;
+  std::map< BWAPI::TilePosition,double >::mapped_type *result = 0 ;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  arg2 = (std::map< BWAPI::TilePosition,double >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< BWAPI::TilePosition,double >::key_type const & type is null", 0);
+    return 0;
+  } 
+  try {
+    result = (std::map< BWAPI::TilePosition,double >::mapped_type *) &std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__getitem(arg1,(BWAPI::TilePosition const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = *result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionDoubleMap_setitem(void * jarg1, void * jarg2, double jarg3) {
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  std::map< BWAPI::TilePosition,double >::key_type *arg2 = 0 ;
+  std::map< BWAPI::TilePosition,double >::mapped_type *arg3 = 0 ;
+  std::map< BWAPI::TilePosition,double >::mapped_type temp3 ;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  arg2 = (std::map< BWAPI::TilePosition,double >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< BWAPI::TilePosition,double >::key_type const & type is null", 0);
+    return ;
+  } 
+  temp3 = (std::map< BWAPI::TilePosition,double >::mapped_type)jarg3; 
+  arg3 = &temp3; 
+  std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__setitem(arg1,(BWAPI::TilePosition const &)*arg2,(double const &)*arg3);
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TilePositionDoubleMap_ContainsKey(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  std::map< BWAPI::TilePosition,double >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  arg2 = (std::map< BWAPI::TilePosition,double >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< BWAPI::TilePosition,double >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__ContainsKey(arg1,(BWAPI::TilePosition const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionDoubleMap_Add(void * jarg1, void * jarg2, double jarg3) {
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  std::map< BWAPI::TilePosition,double >::key_type *arg2 = 0 ;
+  std::map< BWAPI::TilePosition,double >::mapped_type *arg3 = 0 ;
+  std::map< BWAPI::TilePosition,double >::mapped_type temp3 ;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  arg2 = (std::map< BWAPI::TilePosition,double >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< BWAPI::TilePosition,double >::key_type const & type is null", 0);
+    return ;
+  } 
+  temp3 = (std::map< BWAPI::TilePosition,double >::mapped_type)jarg3; 
+  arg3 = &temp3; 
+  try {
+    std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__Add(arg1,(BWAPI::TilePosition const &)*arg2,(double const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TilePositionDoubleMap_Remove(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  std::map< BWAPI::TilePosition,double >::key_type *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  arg2 = (std::map< BWAPI::TilePosition,double >::key_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< BWAPI::TilePosition,double >::key_type const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__Remove(arg1,(BWAPI::TilePosition const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionDoubleMap_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  std::map< BWAPI::TilePosition,double >::iterator *result = 0 ;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  result = (std::map< BWAPI::TilePosition,double >::iterator *)std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionDoubleMap_get_next_key(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  std::map< BWAPI::TilePosition,double >::iterator *arg2 = (std::map< BWAPI::TilePosition,double >::iterator *) 0 ;
+  std::map< BWAPI::TilePosition,double >::key_type *result = 0 ;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  arg2 = (std::map< BWAPI::TilePosition,double >::iterator *)jarg2; 
+  try {
+    result = (std::map< BWAPI::TilePosition,double >::key_type *) &std_map_Sl_BWAPI_TilePosition_Sc_double_Sg__get_next_key(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_TilePositionDoubleMap(void * jarg1) {
+  std::map< BWAPI::TilePosition,double > *arg1 = (std::map< BWAPI::TilePosition,double > *) 0 ;
+  
+  arg1 = (std::map< BWAPI::TilePosition,double > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionDoublePair__SWIG_0() {
+  void * jresult ;
+  std::pair< BWAPI::TilePosition,double > *result = 0 ;
+  
+  result = (std::pair< BWAPI::TilePosition,double > *)new std::pair< BWAPI::TilePosition,double >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionDoublePair__SWIG_1(void * jarg1, double jarg2) {
+  void * jresult ;
+  BWAPI::TilePosition arg1 ;
+  double arg2 ;
+  BWAPI::TilePosition *argp1 ;
+  std::pair< BWAPI::TilePosition,double > *result = 0 ;
+  
+  argp1 = (BWAPI::TilePosition *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  arg2 = (double)jarg2; 
+  result = (std::pair< BWAPI::TilePosition,double > *)new std::pair< BWAPI::TilePosition,double >(arg1,arg2);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionDoublePair__SWIG_2(void * jarg1) {
+  void * jresult ;
+  std::pair< BWAPI::TilePosition,double > *arg1 = 0 ;
+  std::pair< BWAPI::TilePosition,double > *result = 0 ;
+  
+  arg1 = (std::pair< BWAPI::TilePosition,double > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::pair< BWAPI::TilePosition,double > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::pair< BWAPI::TilePosition,double > *)new std::pair< BWAPI::TilePosition,double >((std::pair< BWAPI::TilePosition,double > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionDoublePair_first_set(void * jarg1, void * jarg2) {
+  std::pair< BWAPI::TilePosition,double > *arg1 = (std::pair< BWAPI::TilePosition,double > *) 0 ;
+  BWAPI::TilePosition *arg2 = (BWAPI::TilePosition *) 0 ;
+  
+  arg1 = (std::pair< BWAPI::TilePosition,double > *)jarg1; 
+  arg2 = (BWAPI::TilePosition *)jarg2; 
+  if (arg1) (arg1)->first = *arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionDoublePair_first_get(void * jarg1) {
+  void * jresult ;
+  std::pair< BWAPI::TilePosition,double > *arg1 = (std::pair< BWAPI::TilePosition,double > *) 0 ;
+  BWAPI::TilePosition *result = 0 ;
+  
+  arg1 = (std::pair< BWAPI::TilePosition,double > *)jarg1; 
+  result = (BWAPI::TilePosition *)& ((arg1)->first);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionDoublePair_second_set(void * jarg1, double jarg2) {
+  std::pair< BWAPI::TilePosition,double > *arg1 = (std::pair< BWAPI::TilePosition,double > *) 0 ;
+  double arg2 ;
+  
+  arg1 = (std::pair< BWAPI::TilePosition,double > *)jarg1; 
+  arg2 = (double)jarg2; 
+  if (arg1) (arg1)->second = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_TilePositionDoublePair_second_get(void * jarg1) {
+  double jresult ;
+  std::pair< BWAPI::TilePosition,double > *arg1 = (std::pair< BWAPI::TilePosition,double > *) 0 ;
+  double result;
+  
+  arg1 = (std::pair< BWAPI::TilePosition,double > *)jarg1; 
+  result = (double) ((arg1)->second);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_TilePositionDoublePair(void * jarg1) {
+  std::pair< BWAPI::TilePosition,double > *arg1 = (std::pair< BWAPI::TilePosition,double > *) 0 ;
+  
+  arg1 = (std::pair< BWAPI::TilePosition,double > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_Clear(void * jarg1) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_Add(void * jarg1, void * jarg2) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  std::vector< BWAPI::TilePosition >::value_type *arg2 = 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (std::vector< BWAPI::TilePosition >::value_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< BWAPI::TilePosition >::value_type const & type is null", 0);
+    return ;
+  } 
+  (arg1)->push_back((std::vector< BWAPI::TilePosition >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_TilePositionVector_size(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  std::vector< BWAPI::TilePosition >::size_type result;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  result = ((std::vector< BWAPI::TilePosition > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_TilePositionVector_capacity(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  std::vector< BWAPI::TilePosition >::size_type result;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  result = ((std::vector< BWAPI::TilePosition > const *)arg1)->capacity();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_reserve(void * jarg1, unsigned long jarg2) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  std::vector< BWAPI::TilePosition >::size_type arg2 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (std::vector< BWAPI::TilePosition >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionVector__SWIG_0() {
+  void * jresult ;
+  std::vector< BWAPI::TilePosition > *result = 0 ;
+  
+  result = (std::vector< BWAPI::TilePosition > *)new std::vector< BWAPI::TilePosition >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionVector__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::vector< BWAPI::TilePosition > *arg1 = 0 ;
+  std::vector< BWAPI::TilePosition > *result = 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< BWAPI::TilePosition > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::vector< BWAPI::TilePosition > *)new std::vector< BWAPI::TilePosition >((std::vector< BWAPI::TilePosition > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_TilePositionVector__SWIG_2(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  std::vector< BWAPI::TilePosition > *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  try {
+    result = (std::vector< BWAPI::TilePosition > *)new_std_vector_Sl_BWAPI_TilePosition_Sg___SWIG_2(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionVector_getitemcopy(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  int arg2 ;
+  BWAPI::TilePosition result;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = std_vector_Sl_BWAPI_TilePosition_Sg__getitemcopy(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = new BWAPI::TilePosition((const BWAPI::TilePosition &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionVector_getitem(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  int arg2 ;
+  std::vector< BWAPI::TilePosition >::value_type *result = 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< BWAPI::TilePosition >::value_type *) &std_vector_Sl_BWAPI_TilePosition_Sg__getitem(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_setitem(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  int arg2 ;
+  std::vector< BWAPI::TilePosition >::value_type *arg3 = 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< BWAPI::TilePosition >::value_type *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< BWAPI::TilePosition >::value_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_BWAPI_TilePosition_Sg__setitem(arg1,arg2,(BWAPI::TilePosition const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_AddRange(void * jarg1, void * jarg2) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  std::vector< BWAPI::TilePosition > *arg2 = 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (std::vector< BWAPI::TilePosition > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< BWAPI::TilePosition > const & type is null", 0);
+    return ;
+  } 
+  std_vector_Sl_BWAPI_TilePosition_Sg__AddRange(arg1,(std::vector< BWAPI::TilePosition > const &)*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionVector_GetRange(void * jarg1, int jarg2, int jarg3) {
+  void * jresult ;
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  std::vector< BWAPI::TilePosition > *result = 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    result = (std::vector< BWAPI::TilePosition > *)std_vector_Sl_BWAPI_TilePosition_Sg__GetRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_Insert(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  int arg2 ;
+  std::vector< BWAPI::TilePosition >::value_type *arg3 = 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< BWAPI::TilePosition >::value_type *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< BWAPI::TilePosition >::value_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_BWAPI_TilePosition_Sg__Insert(arg1,arg2,(BWAPI::TilePosition const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  int arg2 ;
+  std::vector< BWAPI::TilePosition > *arg3 = 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< BWAPI::TilePosition > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< BWAPI::TilePosition > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_BWAPI_TilePosition_Sg__InsertRange(arg1,arg2,(std::vector< BWAPI::TilePosition > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_RemoveAt(void * jarg1, int jarg2) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  int arg2 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    std_vector_Sl_BWAPI_TilePosition_Sg__RemoveAt(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_BWAPI_TilePosition_Sg__RemoveRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositionVector_Repeat(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< BWAPI::TilePosition >::value_type *arg1 = 0 ;
+  int arg2 ;
+  std::vector< BWAPI::TilePosition > *result = 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition >::value_type *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< BWAPI::TilePosition >::value_type const & type is null", 0);
+    return 0;
+  } 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< BWAPI::TilePosition > *)std_vector_Sl_BWAPI_TilePosition_Sg__Repeat((BWAPI::TilePosition const &)*arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_Reverse__SWIG_0(void * jarg1) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  std_vector_Sl_BWAPI_TilePosition_Sg__Reverse__SWIG_0(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_BWAPI_TilePosition_Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_TilePositionVector_SetRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  int arg2 ;
+  std::vector< BWAPI::TilePosition > *arg3 = 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< BWAPI::TilePosition > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< BWAPI::TilePosition > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_BWAPI_TilePosition_Sg__SetRange(arg1,arg2,(std::vector< BWAPI::TilePosition > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_TilePositionVector(void * jarg1) {
+  std::vector< BWAPI::TilePosition > *arg1 = (std::vector< BWAPI::TilePosition > *) 0 ;
+  
+  arg1 = (std::vector< BWAPI::TilePosition > *)jarg1; 
   delete arg1;
 }
 

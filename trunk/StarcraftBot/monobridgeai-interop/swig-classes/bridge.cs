@@ -5090,21 +5090,112 @@ public class bridge {
     return ret;
   }
 
-  public static Position getNearestUnwalkablePosition(Position position) {
-    Position ret = new Position(bridgePINVOKE.getNearestUnwalkablePosition(Position.getCPtr(position)), true);
-    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public static BaseLocation getStartLocation(Player player) {
     IntPtr cPtr = bridgePINVOKE.getStartLocation(Player.getCPtr(player));
     BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
     return ret;
   }
 
-  public static BaseLocation getNearestBaseLocation(TilePosition position) {
-    IntPtr cPtr = bridgePINVOKE.getNearestBaseLocation(TilePosition.getCPtr(position));
+  public static Region getRegion(int x, int y) {
+    IntPtr cPtr = bridgePINVOKE.getRegion__SWIG_0(x, y);
+    Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
+    return ret;
+  }
+
+  public static Region getRegion(TilePosition tileposition) {
+    IntPtr cPtr = bridgePINVOKE.getRegion__SWIG_1(TilePosition.getCPtr(tileposition));
+    Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static Chokepoint getNearestChokepoint(int x, int y) {
+    IntPtr cPtr = bridgePINVOKE.getNearestChokepoint__SWIG_0(x, y);
+    Chokepoint ret = (cPtr == IntPtr.Zero) ? null : new Chokepoint(cPtr, false);
+    return ret;
+  }
+
+  public static Chokepoint getNearestChokepoint(TilePosition tileposition) {
+    IntPtr cPtr = bridgePINVOKE.getNearestChokepoint__SWIG_1(TilePosition.getCPtr(tileposition));
+    Chokepoint ret = (cPtr == IntPtr.Zero) ? null : new Chokepoint(cPtr, false);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static BaseLocation getNearestBaseLocation(int x, int y) {
+    IntPtr cPtr = bridgePINVOKE.getNearestBaseLocation__SWIG_0(x, y);
     BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
+    return ret;
+  }
+
+  public static BaseLocation getNearestBaseLocation(TilePosition tileposition) {
+    IntPtr cPtr = bridgePINVOKE.getNearestBaseLocation__SWIG_1(TilePosition.getCPtr(tileposition));
+    BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static Polygon getNearestUnwalkablePolygon(int x, int y) {
+    IntPtr cPtr = bridgePINVOKE.getNearestUnwalkablePolygon__SWIG_0(x, y);
+    Polygon ret = (cPtr == IntPtr.Zero) ? null : new Polygon(cPtr, false);
+    return ret;
+  }
+
+  public static Polygon getNearestUnwalkablePolygon(TilePosition tileposition) {
+    IntPtr cPtr = bridgePINVOKE.getNearestUnwalkablePolygon__SWIG_1(TilePosition.getCPtr(tileposition));
+    Polygon ret = (cPtr == IntPtr.Zero) ? null : new Polygon(cPtr, false);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static Position getNearestUnwalkablePosition(Position position) {
+    Position ret = new Position(bridgePINVOKE.getNearestUnwalkablePosition(Position.getCPtr(position)), true);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool isConnected(int x1, int y1, int x2, int y2) {
+    bool ret = bridgePINVOKE.isConnected__SWIG_0(x1, y1, x2, y2);
+    return ret;
+  }
+
+  public static bool isConnected(TilePosition a, TilePosition b) {
+    bool ret = bridgePINVOKE.isConnected__SWIG_1(TilePosition.getCPtr(a), TilePosition.getCPtr(b));
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static double getGroundDistance(TilePosition start, TilePosition end) {
+    double ret = bridgePINVOKE.getGroundDistance(TilePosition.getCPtr(start), TilePosition.getCPtr(end));
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static TilePositionDoublePair getNearestTilePosition(TilePosition start, TilePositionSet targets) {
+    TilePositionDoublePair ret = new TilePositionDoublePair(bridgePINVOKE.getNearestTilePosition(TilePosition.getCPtr(start), TilePositionSet.getCPtr(targets)), true);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static TilePositionDoubleMap getGroundDistances(TilePosition start, TilePositionSet targets) {
+    TilePositionDoubleMap ret = new TilePositionDoubleMap(bridgePINVOKE.getGroundDistances(TilePosition.getCPtr(start), TilePositionSet.getCPtr(targets)), true);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static void getGroundDistanceMap(TilePosition start, RectangleArrayDouble distanceMap) {
+    bridgePINVOKE.getGroundDistanceMap(TilePosition.getCPtr(start), RectangleArrayDouble.getCPtr(distanceMap));
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static TilePositionVector getShortestPath(TilePosition start, TilePosition end) {
+    TilePositionVector ret = new TilePositionVector(bridgePINVOKE.getShortestPath__SWIG_0(TilePosition.getCPtr(start), TilePosition.getCPtr(end)), true);
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static TilePositionVector getShortestPath(TilePosition start, TilePositionSet targets) {
+    TilePositionVector ret = new TilePositionVector(bridgePINVOKE.getShortestPath__SWIG_1(TilePosition.getCPtr(start), TilePositionSet.getCPtr(targets)), true);
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

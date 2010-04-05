@@ -147,6 +147,31 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
+  public virtual Position getMousePosition() {
+    Position ret = new Position(bridgePINVOKE.Game_getMousePosition(swigCPtr), true);
+    return ret;
+  }
+
+  public virtual bool getMouseState(MouseButton button) {
+    bool ret = bridgePINVOKE.Game_getMouseState__SWIG_0(swigCPtr, (int)button);
+    return ret;
+  }
+
+  public virtual bool getMouseState(int button) {
+    bool ret = bridgePINVOKE.Game_getMouseState__SWIG_1(swigCPtr, button);
+    return ret;
+  }
+
+  public virtual bool getKeyState(Key key) {
+    bool ret = bridgePINVOKE.Game_getKeyState__SWIG_0(swigCPtr, (int)key);
+    return ret;
+  }
+
+  public virtual bool getKeyState(int key) {
+    bool ret = bridgePINVOKE.Game_getKeyState__SWIG_1(swigCPtr, key);
+    return ret;
+  }
+
   public virtual int getScreenX() {
     int ret = bridgePINVOKE.Game_getScreenX(swigCPtr);
     return ret;
@@ -155,6 +180,29 @@ public static bool operator !=(Game obj1, Game obj2)
   public virtual int getScreenY() {
     int ret = bridgePINVOKE.Game_getScreenY(swigCPtr);
     return ret;
+  }
+
+  public virtual Position getScreenPosition() {
+    Position ret = new Position(bridgePINVOKE.Game_getScreenPosition(swigCPtr), true);
+    return ret;
+  }
+
+  public virtual void setScreenPosition(int x, int y) {
+    bridgePINVOKE.Game_setScreenPosition__SWIG_0(swigCPtr, x, y);
+  }
+
+  public virtual void setScreenPosition(Position p) {
+    bridgePINVOKE.Game_setScreenPosition__SWIG_1(swigCPtr, Position.getCPtr(p));
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual void pingMinimap(int x, int y) {
+    bridgePINVOKE.Game_pingMinimap__SWIG_0(swigCPtr, x, y);
+  }
+
+  public virtual void pingMinimap(Position p) {
+    bridgePINVOKE.Game_pingMinimap__SWIG_1(swigCPtr, Position.getCPtr(p));
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual bool isFlagEnabled(int flag) {

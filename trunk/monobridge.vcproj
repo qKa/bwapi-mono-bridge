@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;K:\Program Files\Mono-2.4.2.2\include\mono-1.0&quot;;.\Include;.\Include\Util\Source\Util;&quot;K:\Program Files\Mono-2.4.2.2\include\glib-2.0&quot;;&quot;K:\Program Files\Mono-2.4.2.2\lib\glib-2.0\include&quot;"
+				AdditionalIncludeDirectories=".\Include;.\Include\Util\Source\Util;&quot;C:\Program Files (x86)\Mono-2.6.3\include\glib-2.0&quot;;&quot;C:\Program Files (x86)\Mono-2.6.3\lib\glib-2.0\include&quot;;&quot;C:\Program Files (x86)\Mono-2.6.3\include\mono-1.0&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;MONOBRIDGE_EXPORTS"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
@@ -120,7 +120,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="&quot;K:\Program Files\Mono-2.4.2.2\include\mono-1.0&quot;;.\Include;.\Include\Util\Source\Util;&quot;K:\Program Files\Mono-2.4.2.2\include\glib-2.0&quot;;&quot;K:\Program Files\Mono-2.4.2.2\lib\glib-2.0\include&quot;"
+				AdditionalIncludeDirectories=".\Include;.\Include\Util\Source\Util;&quot;C:\Program Files (x86)\Mono-2.6.3\lib\glib-2.0\include&quot;;&quot;C:\Program Files (x86)\Mono-2.6.3\include\glib-2.0&quot;;&quot;C:\Program Files (x86)\Mono-2.6.3\include\mono-1.0&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;MONOBRIDGE_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"

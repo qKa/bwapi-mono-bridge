@@ -102,6 +102,16 @@ public static bool operator !=(Region obj1, Region obj2)
     return ret;
   }
 
+  public virtual bool isReachable(Region region) {
+    bool ret = bridgePINVOKE.Region_isReachable(swigCPtr, Region.getCPtr(region));
+    return ret;
+  }
+
+  public virtual RegionPtrSet getReachableRegions() {
+    RegionPtrSet ret = new RegionPtrSet(bridgePINVOKE.Region_getReachableRegions(swigCPtr), false);
+    return ret;
+  }
+
 }
 
 }

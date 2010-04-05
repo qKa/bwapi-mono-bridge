@@ -133,6 +133,16 @@ public static bool operator !=(Player obj1, Player obj2)
     return ret;
   }
 
+  public virtual bool isVictorious() {
+    bool ret = bridgePINVOKE.Player_isVictorious(swigCPtr);
+    return ret;
+  }
+
+  public virtual bool isDefeated() {
+    bool ret = bridgePINVOKE.Player_isDefeated(swigCPtr);
+    return ret;
+  }
+
   public virtual bool leftGame() {
     bool ret = bridgePINVOKE.Player_leftGame(swigCPtr);
     return ret;
