@@ -1,4 +1,3 @@
-
 = Introduction =
 
 This is a quick walkthrough of installing the bwapi-mono-bridge skeleton AI. 
@@ -6,7 +5,7 @@ This is a quick walkthrough of installing the bwapi-mono-bridge skeleton AI.
 
 = Details =
 
-  # Follow all directions for obtaining and setting up the BWAPI 2.4 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
+  # Follow all directions for obtaining and setting up the BWAPI 2.6.1 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
   # Download the zip file from the downloads tab
   # Extract the zip to a new folder
   # copy the contents of the StarcraftBot\bwapi-data\AI folder into the bwapi-data\AI folder in your starcraft directory (created during BWAPI setup)
