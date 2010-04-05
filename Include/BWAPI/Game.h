@@ -15,6 +15,7 @@
 #include <BWAPI/UnitType.h>
 #include <BWAPI/TechType.h>
 #include <BWAPI/UpgradeType.h>
+#include <BWAPI/Input.h>
 namespace BWAPI
 {
   class Force;
@@ -38,8 +39,18 @@ namespace BWAPI
       virtual int getFrameCount() = 0;
       virtual int getMouseX() = 0;
       virtual int getMouseY() = 0;
+      virtual BWAPI::Position getMousePosition() = 0;
+      virtual bool getMouseState(MouseButton button) = 0;
+      virtual bool getMouseState(int button) = 0;
+      virtual bool getKeyState(Key key) = 0;
+      virtual bool getKeyState(int key) = 0;
       virtual int getScreenX() = 0;
       virtual int getScreenY() = 0;
+      virtual BWAPI::Position getScreenPosition() = 0;
+      virtual void setScreenPosition(int x, int y) = 0;
+      virtual void setScreenPosition(BWAPI::Position p) = 0;
+      virtual void pingMinimap(int x, int y) = 0;
+      virtual void pingMinimap(BWAPI::Position p) = 0;
 
       virtual bool isFlagEnabled(int flag) = 0;
       virtual void enableFlag(int flag) = 0;
@@ -70,7 +81,7 @@ namespace BWAPI
       virtual bool canMake(Unit* builder, UnitType type) = 0;
       virtual bool canResearch(Unit* unit, TechType type) = 0;
       virtual bool canUpgrade(Unit* unit, UpgradeType type) = 0;
-	  virtual std::set< BWAPI::TilePosition >& getStartLocations() = 0;
+      virtual std::set< TilePosition >& getStartLocations() = 0;
 
       virtual void printf(const char* text, ...) = 0;
       virtual void sendText(const char* text, ...) = 0;
@@ -84,7 +95,7 @@ namespace BWAPI
       virtual void leaveGame() = 0;
       virtual void restartGame() = 0;
       virtual void setLocalSpeed(int speed = -1) = 0;
-	  virtual std::set<Unit*>& getSelectedUnits() = 0;
+      virtual std::set<Unit*>& getSelectedUnits() = 0;
       virtual Player* self() = 0;
       virtual Player* enemy() = 0;
 

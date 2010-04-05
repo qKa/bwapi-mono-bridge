@@ -1,6 +1,9 @@
 %include <stl.i>
 %include "std_set.i"
 %include "std_list.i"
+%include "typemaps.i"
+%include "cpointer.i"
+
 
 %module bridge
 %{
@@ -247,6 +250,7 @@ public static bool operator !=($csclassname obj1, $csclassname obj2)
 %include "BWAPI/ExplosionType.h"
 %include "BWAPI/Flag.h"
 %include "BWAPI/Force.h"
+%include "BWAPI/Input.h"
 %include "BWAPI/Game.h"
 %include "BWAPI/Latency.h"
 %include "BWAPI/Order.h"
@@ -263,10 +267,19 @@ public static bool operator !=($csclassname obj1, $csclassname obj2)
 
 %include "BWAPI/WeaponType.h"
 %{
-using namespace BWAPI;
+using namespace BWTA;
+
 %}
 
 %include "monobridge.h"
+
+
+
+%include "BWTA/RectangleArray.h"
+
+
+
+%template (RectangleArrayDouble) BWTA::RectangleArray<double>;
 
 %include "BWTA.h"
 %include "BWTA/BaseLocation.h"
@@ -274,10 +287,14 @@ using namespace BWAPI;
 
 %template (PositionVector) std::vector<BWAPI::Position>;
 
-
-
 %include "BWTA/Polygon.h"
 %include "BWTA/Region.h"
+
+
+
+
+
+
 
 
 
@@ -307,12 +324,17 @@ using namespace BWAPI;
 
 %template (PositionPair) std::pair<BWAPI::Position,BWAPI::Position>;
 %template (UnitTypePtrIntPair) std::pair<const BWAPI::UnitType *,int>;
+
 %template (TilePositionSet) std::set<BWAPI::TilePosition>;
+%template (TilePositionDoubleMap) std::map<BWAPI::TilePosition, double>;
+%template (TilePositionDoublePair) std::pair<BWAPI::TilePosition, double>;
+%template (TilePositionVector) std::vector<BWAPI::TilePosition>;
 
 %template (UnitTypePtrIntMap) std::map<const BWAPI::UnitType *, int>;
 
 %template (UnitPtrList) std::list<BWAPI::Unit *>;
 %template (UnitTypeList) std::list<BWAPI::UnitType>;
+
 
 /* BWTA */
 
@@ -321,4 +343,6 @@ using namespace BWAPI;
 %template (ChokepointPtrSet) std::set<BWTA::Chokepoint *>;
 %template (PolygonPtrSet) std::set<BWTA::Polygon *>;
 %template (RegionPtrSet) std::set<BWTA::Region *>;
+
+
 

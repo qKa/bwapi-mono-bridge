@@ -20,7 +20,7 @@ namespace StarcraftBot
 	public class MonoStarcraftBot: MonoStarcraftBotBase
 	{
 		public override void onStart() {
-			bridge.Broodwar.printf("Hello from a bot implemented in c#");
+			bridge.Broodwar.printf("Hello from a bot implemented in c# (v0.5");
 			bridge.Broodwar.enableFlag(1);
 			
 			//count units

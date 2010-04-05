@@ -80,8 +80,10 @@
     <Compile Include="swig-classes\Force.cs" />
     <Compile Include="swig-classes\ForcePtrSet.cs" />
     <Compile Include="swig-classes\Game.cs" />
+    <Compile Include="swig-classes\Key.cs" />
     <Compile Include="swig-classes\Latency.cs" />
     <Compile Include="swig-classes\monobridgeutil.cs" />
+    <Compile Include="swig-classes\MouseButton.cs" />
     <Compile Include="swig-classes\Order.cs" />
     <Compile Include="swig-classes\OrderSet.cs" />
     <Compile Include="swig-classes\Player.cs" />
@@ -95,15 +97,21 @@
     <Compile Include="swig-classes\PositionVector.cs" />
     <Compile Include="swig-classes\Race.cs" />
     <Compile Include="swig-classes\RaceSet.cs" />
+    <Compile Include="swig-classes\RectangleArrayDouble.cs" />
     <Compile Include="swig-classes\Region.cs" />
     <Compile Include="swig-classes\RegionPtrRegionPtrPair.cs" />
     <Compile Include="swig-classes\RegionPtrSet.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_double.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_FILE.cs" />
     <Compile Include="swig-classes\SWIGTYPE_p_int.cs" />
     <Compile Include="swig-classes\TechType.cs" />
     <Compile Include="swig-classes\TechTypePtrSet.cs" />
     <Compile Include="swig-classes\TechTypeSet.cs" />
     <Compile Include="swig-classes\TilePosition.cs" />
+    <Compile Include="swig-classes\TilePositionDoubleMap.cs" />
+    <Compile Include="swig-classes\TilePositionDoublePair.cs" />
     <Compile Include="swig-classes\TilePositionSet.cs" />
+    <Compile Include="swig-classes\TilePositionVector.cs" />
     <Compile Include="swig-classes\Unit.cs" />
     <Compile Include="swig-classes\UnitPtrList.cs" />
     <Compile Include="swig-classes\UnitSet.cs" />
@@ -122,9 +130,5 @@
     <Compile Include="swig-classes\WeaponTypeSet.cs" />
     <Compile Include="user-classes\unit-extended.cs" />
     <None Include="user-classes\Extend the swig classes in this folder.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="swig-classes" />
-    <Folder Include="user-classes" />
   </ItemGroup>
 </Project>

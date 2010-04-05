@@ -140,6 +140,12 @@ public static bool operator !=(Position obj1, Position obj2)
     return ret;
   }
 
+  public double getApproxDistance(Position position) {
+    double ret = bridgePINVOKE.Position_getApproxDistance(swigCPtr, Position.getCPtr(position));
+    if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public double getLength() {
     double ret = bridgePINVOKE.Position_getLength(swigCPtr);
     return ret;

@@ -686,6 +686,9 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_Position_getDistance")]
   public static extern double Position_getDistance(HandleRef jarg1, HandleRef jarg2);
 
+  [DllImport("__Internal", EntryPoint="CSharp_Position_getApproxDistance")]
+  public static extern double Position_getApproxDistance(HandleRef jarg1, HandleRef jarg2);
+
   [DllImport("__Internal", EntryPoint="CSharp_Position_getLength")]
   public static extern double Position_getLength(HandleRef jarg1);
 
@@ -1310,11 +1313,41 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_Game_getMouseY")]
   public static extern int Game_getMouseY(HandleRef jarg1);
 
+  [DllImport("__Internal", EntryPoint="CSharp_Game_getMousePosition")]
+  public static extern IntPtr Game_getMousePosition(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_getMouseState__SWIG_0")]
+  public static extern bool Game_getMouseState__SWIG_0(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_getMouseState__SWIG_1")]
+  public static extern bool Game_getMouseState__SWIG_1(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_getKeyState__SWIG_0")]
+  public static extern bool Game_getKeyState__SWIG_0(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_getKeyState__SWIG_1")]
+  public static extern bool Game_getKeyState__SWIG_1(HandleRef jarg1, int jarg2);
+
   [DllImport("__Internal", EntryPoint="CSharp_Game_getScreenX")]
   public static extern int Game_getScreenX(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_Game_getScreenY")]
   public static extern int Game_getScreenY(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_getScreenPosition")]
+  public static extern IntPtr Game_getScreenPosition(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_setScreenPosition__SWIG_0")]
+  public static extern void Game_setScreenPosition__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_setScreenPosition__SWIG_1")]
+  public static extern void Game_setScreenPosition__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_pingMinimap__SWIG_0")]
+  public static extern void Game_pingMinimap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_pingMinimap__SWIG_1")]
+  public static extern void Game_pingMinimap__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
   [DllImport("__Internal", EntryPoint="CSharp_Game_isFlagEnabled")]
   public static extern bool Game_isFlagEnabled(HandleRef jarg1, int jarg2);
@@ -2300,6 +2333,12 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_Player_getStartLocation")]
   public static extern IntPtr Player_getStartLocation(HandleRef jarg1);
 
+  [DllImport("__Internal", EntryPoint="CSharp_Player_isVictorious")]
+  public static extern bool Player_isVictorious(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Player_isDefeated")]
+  public static extern bool Player_isDefeated(HandleRef jarg1);
+
   [DllImport("__Internal", EntryPoint="CSharp_Player_leftGame")]
   public static extern bool Player_leftGame(HandleRef jarg1);
 
@@ -2420,6 +2459,9 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_TilePositionUnknown_get")]
   public static extern IntPtr TilePositionUnknown_get();
 
+  [DllImport("__Internal", EntryPoint="CSharp_Unit_getID")]
+  public static extern int Unit_getID(HandleRef jarg1);
+
   [DllImport("__Internal", EntryPoint="CSharp_Unit_getPlayer")]
   public static extern IntPtr Unit_getPlayer(HandleRef jarg1);
 
@@ -2537,6 +2579,9 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_Unit_getBuildUnit")]
   public static extern IntPtr Unit_getBuildUnit(HandleRef jarg1);
 
+  [DllImport("__Internal", EntryPoint="CSharp_Unit_getBuildType")]
+  public static extern IntPtr Unit_getBuildType(HandleRef jarg1);
+
   [DllImport("__Internal", EntryPoint="CSharp_Unit_getRemainingBuildTime")]
   public static extern int Unit_getRemainingBuildTime(HandleRef jarg1);
 
@@ -2584,6 +2629,12 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_Unit_getAddon")]
   public static extern IntPtr Unit_getAddon(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Unit_getHatchery")]
+  public static extern IntPtr Unit_getHatchery(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Unit_getLarva")]
+  public static extern IntPtr Unit_getLarva(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_Unit_getUpgradeLevel")]
   public static extern int Unit_getUpgradeLevel(HandleRef jarg1, HandleRef jarg2);
@@ -2761,6 +2812,9 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_Unit_repair")]
   public static extern bool Unit_repair(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Unit_returnCargo")]
+  public static extern bool Unit_returnCargo(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_Unit_morph")]
   public static extern bool Unit_morph(HandleRef jarg1, HandleRef jarg2);
@@ -3821,6 +3875,51 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_delete_monobridgeutil")]
   public static extern void delete_monobridgeutil(HandleRef jarg1);
 
+  [DllImport("__Internal", EntryPoint="CSharp_new_RectangleArrayDouble__SWIG_0")]
+  public static extern IntPtr new_RectangleArrayDouble__SWIG_0(uint jarg1, uint jarg2, HandleRef jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_RectangleArrayDouble__SWIG_1")]
+  public static extern IntPtr new_RectangleArrayDouble__SWIG_1(uint jarg1, uint jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_RectangleArrayDouble__SWIG_2")]
+  public static extern IntPtr new_RectangleArrayDouble__SWIG_2(uint jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_RectangleArrayDouble__SWIG_3")]
+  public static extern IntPtr new_RectangleArrayDouble__SWIG_3();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_RectangleArrayDouble__SWIG_4")]
+  public static extern IntPtr new_RectangleArrayDouble__SWIG_4(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_RectangleArrayDouble")]
+  public static extern void delete_RectangleArrayDouble(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RectangleArrayDouble_getWidth")]
+  public static extern uint RectangleArrayDouble_getWidth(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RectangleArrayDouble_getHeight")]
+  public static extern uint RectangleArrayDouble_getHeight(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RectangleArrayDouble_getItem")]
+  public static extern IntPtr RectangleArrayDouble_getItem(HandleRef jarg1, uint jarg2, uint jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RectangleArrayDouble_setItem")]
+  public static extern void RectangleArrayDouble_setItem(HandleRef jarg1, uint jarg2, uint jarg3, HandleRef jarg4);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RectangleArrayDouble_resize")]
+  public static extern void RectangleArrayDouble_resize(HandleRef jarg1, uint jarg2, uint jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RectangleArrayDouble_printToFile")]
+  public static extern void RectangleArrayDouble_printToFile(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RectangleArrayDouble_saveToFile")]
+  public static extern void RectangleArrayDouble_saveToFile(HandleRef jarg1, string jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RectangleArrayDouble_setTo")]
+  public static extern void RectangleArrayDouble_setTo(HandleRef jarg1, double jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_RectangleArrayDouble_setBorderTo")]
+  public static extern void RectangleArrayDouble_setBorderTo(HandleRef jarg1, double jarg2);
+
   [DllImport("__Internal", EntryPoint="CSharp_readMap")]
   public static extern void readMap();
 
@@ -3842,14 +3941,59 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_getUnwalkablePolygons")]
   public static extern IntPtr getUnwalkablePolygons();
 
-  [DllImport("__Internal", EntryPoint="CSharp_getNearestUnwalkablePosition")]
-  public static extern IntPtr getNearestUnwalkablePosition(HandleRef jarg1);
-
   [DllImport("__Internal", EntryPoint="CSharp_getStartLocation")]
   public static extern IntPtr getStartLocation(HandleRef jarg1);
 
-  [DllImport("__Internal", EntryPoint="CSharp_getNearestBaseLocation")]
-  public static extern IntPtr getNearestBaseLocation(HandleRef jarg1);
+  [DllImport("__Internal", EntryPoint="CSharp_getRegion__SWIG_0")]
+  public static extern IntPtr getRegion__SWIG_0(int jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getRegion__SWIG_1")]
+  public static extern IntPtr getRegion__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getNearestChokepoint__SWIG_0")]
+  public static extern IntPtr getNearestChokepoint__SWIG_0(int jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getNearestChokepoint__SWIG_1")]
+  public static extern IntPtr getNearestChokepoint__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getNearestBaseLocation__SWIG_0")]
+  public static extern IntPtr getNearestBaseLocation__SWIG_0(int jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getNearestBaseLocation__SWIG_1")]
+  public static extern IntPtr getNearestBaseLocation__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getNearestUnwalkablePolygon__SWIG_0")]
+  public static extern IntPtr getNearestUnwalkablePolygon__SWIG_0(int jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getNearestUnwalkablePolygon__SWIG_1")]
+  public static extern IntPtr getNearestUnwalkablePolygon__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getNearestUnwalkablePosition")]
+  public static extern IntPtr getNearestUnwalkablePosition(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_isConnected__SWIG_0")]
+  public static extern bool isConnected__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4);
+
+  [DllImport("__Internal", EntryPoint="CSharp_isConnected__SWIG_1")]
+  public static extern bool isConnected__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getGroundDistance")]
+  public static extern double getGroundDistance(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getNearestTilePosition")]
+  public static extern IntPtr getNearestTilePosition(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getGroundDistances")]
+  public static extern IntPtr getGroundDistances(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getGroundDistanceMap")]
+  public static extern void getGroundDistanceMap(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getShortestPath__SWIG_0")]
+  public static extern IntPtr getShortestPath__SWIG_0(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_getShortestPath__SWIG_1")]
+  public static extern IntPtr getShortestPath__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
   [DllImport("__Internal", EntryPoint="CSharp_BaseLocation_getPosition")]
   public static extern IntPtr BaseLocation_getPosition(HandleRef jarg1);
@@ -4006,6 +4150,12 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_Region_getBaseLocations")]
   public static extern IntPtr Region_getBaseLocations(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Region_isReachable")]
+  public static extern bool Region_isReachable(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Region_getReachableRegions")]
+  public static extern IntPtr Region_getReachableRegions(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_Region")]
   public static extern void delete_Region(HandleRef jarg1);
@@ -4741,6 +4891,135 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_TilePositionSet")]
   public static extern void delete_TilePositionSet(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionDoubleMap__SWIG_0")]
+  public static extern IntPtr new_TilePositionDoubleMap__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionDoubleMap__SWIG_1")]
+  public static extern IntPtr new_TilePositionDoubleMap__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoubleMap_size")]
+  public static extern uint TilePositionDoubleMap_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoubleMap_empty")]
+  public static extern bool TilePositionDoubleMap_empty(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoubleMap_Clear")]
+  public static extern void TilePositionDoubleMap_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoubleMap_getitem")]
+  public static extern double TilePositionDoubleMap_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoubleMap_setitem")]
+  public static extern void TilePositionDoubleMap_setitem(HandleRef jarg1, HandleRef jarg2, double jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoubleMap_ContainsKey")]
+  public static extern bool TilePositionDoubleMap_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoubleMap_Add")]
+  public static extern void TilePositionDoubleMap_Add(HandleRef jarg1, HandleRef jarg2, double jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoubleMap_Remove")]
+  public static extern bool TilePositionDoubleMap_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoubleMap_create_iterator_begin")]
+  public static extern IntPtr TilePositionDoubleMap_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoubleMap_get_next_key")]
+  public static extern IntPtr TilePositionDoubleMap_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_TilePositionDoubleMap")]
+  public static extern void delete_TilePositionDoubleMap(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionDoublePair__SWIG_0")]
+  public static extern IntPtr new_TilePositionDoublePair__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionDoublePair__SWIG_1")]
+  public static extern IntPtr new_TilePositionDoublePair__SWIG_1(HandleRef jarg1, double jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionDoublePair__SWIG_2")]
+  public static extern IntPtr new_TilePositionDoublePair__SWIG_2(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoublePair_first_set")]
+  public static extern void TilePositionDoublePair_first_set(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoublePair_first_get")]
+  public static extern IntPtr TilePositionDoublePair_first_get(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoublePair_second_set")]
+  public static extern void TilePositionDoublePair_second_set(HandleRef jarg1, double jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionDoublePair_second_get")]
+  public static extern double TilePositionDoublePair_second_get(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_TilePositionDoublePair")]
+  public static extern void delete_TilePositionDoublePair(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_Clear")]
+  public static extern void TilePositionVector_Clear(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_Add")]
+  public static extern void TilePositionVector_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_size")]
+  public static extern uint TilePositionVector_size(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_capacity")]
+  public static extern uint TilePositionVector_capacity(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_reserve")]
+  public static extern void TilePositionVector_reserve(HandleRef jarg1, uint jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionVector__SWIG_0")]
+  public static extern IntPtr new_TilePositionVector__SWIG_0();
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionVector__SWIG_1")]
+  public static extern IntPtr new_TilePositionVector__SWIG_1(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_new_TilePositionVector__SWIG_2")]
+  public static extern IntPtr new_TilePositionVector__SWIG_2(int jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_getitemcopy")]
+  public static extern IntPtr TilePositionVector_getitemcopy(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_getitem")]
+  public static extern IntPtr TilePositionVector_getitem(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_setitem")]
+  public static extern void TilePositionVector_setitem(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_AddRange")]
+  public static extern void TilePositionVector_AddRange(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_GetRange")]
+  public static extern IntPtr TilePositionVector_GetRange(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_Insert")]
+  public static extern void TilePositionVector_Insert(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_InsertRange")]
+  public static extern void TilePositionVector_InsertRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_RemoveAt")]
+  public static extern void TilePositionVector_RemoveAt(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_RemoveRange")]
+  public static extern void TilePositionVector_RemoveRange(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_Repeat")]
+  public static extern IntPtr TilePositionVector_Repeat(HandleRef jarg1, int jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_Reverse__SWIG_0")]
+  public static extern void TilePositionVector_Reverse__SWIG_0(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_Reverse__SWIG_1")]
+  public static extern void TilePositionVector_Reverse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_TilePositionVector_SetRange")]
+  public static extern void TilePositionVector_SetRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("__Internal", EntryPoint="CSharp_delete_TilePositionVector")]
+  public static extern void delete_TilePositionVector(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_new_UnitTypePtrIntMap__SWIG_0")]
   public static extern IntPtr new_UnitTypePtrIntMap__SWIG_0();

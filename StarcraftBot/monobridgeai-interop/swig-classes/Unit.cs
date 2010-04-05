@@ -82,6 +82,11 @@ public static bool operator !=(Unit obj1, Unit obj2)
 
 
 
+  public virtual int getID() {
+    int ret = bridgePINVOKE.Unit_getID(swigCPtr);
+    return ret;
+  }
+
   public virtual Player getPlayer() {
     IntPtr cPtr = bridgePINVOKE.Unit_getPlayer(swigCPtr);
     Player ret = (cPtr == IntPtr.Zero) ? null : new Player(cPtr, false);
@@ -282,6 +287,11 @@ public static bool operator !=(Unit obj1, Unit obj2)
     return ret;
   }
 
+  public virtual UnitType getBuildType() {
+    UnitType ret = new UnitType(bridgePINVOKE.Unit_getBuildType(swigCPtr), true);
+    return ret;
+  }
+
   public virtual int getRemainingBuildTime() {
     int ret = bridgePINVOKE.Unit_getRemainingBuildTime(swigCPtr);
     return ret;
@@ -363,6 +373,17 @@ public static bool operator !=(Unit obj1, Unit obj2)
   public virtual Unit getAddon() {
     IntPtr cPtr = bridgePINVOKE.Unit_getAddon(swigCPtr);
     Unit ret = (cPtr == IntPtr.Zero) ? null : new Unit(cPtr, false);
+    return ret;
+  }
+
+  public virtual Unit getHatchery() {
+    IntPtr cPtr = bridgePINVOKE.Unit_getHatchery(swigCPtr);
+    Unit ret = (cPtr == IntPtr.Zero) ? null : new Unit(cPtr, false);
+    return ret;
+  }
+
+  public virtual UnitSet getLarva() {
+    UnitSet ret = new UnitSet(bridgePINVOKE.Unit_getLarva(swigCPtr), true);
     return ret;
   }
 
@@ -668,6 +689,11 @@ public static bool operator !=(Unit obj1, Unit obj2)
 
   public virtual bool repair(Unit target) {
     bool ret = bridgePINVOKE.Unit_repair(swigCPtr, Unit.getCPtr(target));
+    return ret;
+  }
+
+  public virtual bool returnCargo() {
+    bool ret = bridgePINVOKE.Unit_returnCargo(swigCPtr);
     return ret;
   }
 
