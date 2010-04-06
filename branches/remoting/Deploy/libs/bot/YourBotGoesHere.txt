@@ -1,0 +1,17 @@
+It must be in a namespace called StarcraftBot and the class must be called MonoStarcraftBot and extend MonoStarcraftBotBase (found in monobridgeai-interop.dll)
+
+eg
+
+using System;
+using System.Collections.Generic;
+using BWAPI;
+
+namespace StarcraftBot
+{
+	public class MonoStarcraftBot: MonoStarcraftBotBase
+	{
+		public override void onStart() {
+			bridge.Broodwar.printf("Hello from actual bot implementation");
+		}
+	}
+}
