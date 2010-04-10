@@ -33,7 +33,7 @@ public partial class Race : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_Race(swigCPtr);
+          bridgePINVOKEProxy.delete_Race(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,76 +82,76 @@ public static bool operator !=(Race obj1, Race obj2)
 
 
 
-  public Race() : this(bridgePINVOKEProxy.remote.new_Race__SWIG_0(), true) {
+  public Race() : this(bridgePINVOKEProxy.new_Race__SWIG_0(), true) {
   }
 
-  public Race(int id) : this(bridgePINVOKEProxy.remote.new_Race__SWIG_1(id), true) {
+  public Race(int id) : this(bridgePINVOKEProxy.new_Race__SWIG_1(id), true) {
   }
 
-  public Race(Race other) : this(bridgePINVOKEProxy.remote.new_Race__SWIG_2(Race.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public Race(Race other) : this(bridgePINVOKEProxy.new_Race__SWIG_2(Race.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public Race opAssign(Race other) {
-    Race ret = new Race(bridgePINVOKEProxy.remote.Race_opAssign(swigCPtr, Race.getCPtr(other)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Race ret = new Race(bridgePINVOKEProxy.Race_opAssign(swigCPtr, Race.getCPtr(other)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opEquals(Race other) {
-    bool ret = bridgePINVOKEProxy.remote.Race_opEquals(swigCPtr, Race.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Race_opEquals(swigCPtr, Race.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opNotEquals(Race other) {
-    bool ret = bridgePINVOKEProxy.remote.Race_opNotEquals(swigCPtr, Race.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Race_opNotEquals(swigCPtr, Race.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opLessThan(Race other) {
-    bool ret = bridgePINVOKEProxy.remote.Race_opLessThan(swigCPtr, Race.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Race_opLessThan(swigCPtr, Race.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int getID() {
-    int ret = bridgePINVOKEProxy.remote.Race_getID(swigCPtr);
+    int ret = bridgePINVOKEProxy.Race_getID(swigCPtr);
     return ret;
   }
 
   public string getName() {
-    string ret = bridgePINVOKEProxy.remote.Race_getName(swigCPtr);
+    string ret = bridgePINVOKEProxy.Race_getName(swigCPtr);
     return ret;
   }
 
   public UnitType getWorker() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.Race_getWorker(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.Race_getWorker(swigCPtr);
     UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
     return ret;
   }
 
   public UnitType getCenter() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.Race_getCenter(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.Race_getCenter(swigCPtr);
     UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
     return ret;
   }
 
   public UnitType getRefinery() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.Race_getRefinery(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.Race_getRefinery(swigCPtr);
     UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
     return ret;
   }
 
   public UnitType getTransport() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.Race_getTransport(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.Race_getTransport(swigCPtr);
     UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
     return ret;
   }
 
   public UnitType getSupplyProvider() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.Race_getSupplyProvider(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.Race_getSupplyProvider(swigCPtr);
     UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
     return ret;
   }

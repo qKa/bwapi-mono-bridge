@@ -37,7 +37,7 @@ public partial class UnitPtrList : IDisposable, System.Collections.IEnumerable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_UnitPtrList(swigCPtr);
+          bridgePINVOKEProxy.delete_UnitPtrList(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -223,44 +223,44 @@ public partial class UnitPtrList : IDisposable, System.Collections.IEnumerable
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.UnitPtrList_Clear(swigCPtr);
+    bridgePINVOKEProxy.UnitPtrList_Clear(swigCPtr);
   }
 
   public void Add(Unit x) {
-    bridgePINVOKEProxy.remote.UnitPtrList_Add(swigCPtr, Unit.getCPtr(x));
+    bridgePINVOKEProxy.UnitPtrList_Add(swigCPtr, Unit.getCPtr(x));
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.UnitPtrList_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.UnitPtrList_size(swigCPtr);
     return ret;
   }
 
-  public UnitPtrList() : this(bridgePINVOKEProxy.remote.new_UnitPtrList__SWIG_0(), true) {
+  public UnitPtrList() : this(bridgePINVOKEProxy.new_UnitPtrList__SWIG_0(), true) {
   }
 
-  public UnitPtrList(UnitPtrList other) : this(bridgePINVOKEProxy.remote.new_UnitPtrList__SWIG_1(UnitPtrList.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public UnitPtrList(UnitPtrList other) : this(bridgePINVOKEProxy.new_UnitPtrList__SWIG_1(UnitPtrList.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.UnitPtrList_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.UnitPtrList_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public Unit get_next_key(IntPtr swigiterator) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.UnitPtrList_get_next_key(swigCPtr, swigiterator);
+    IntPtr cPtr = bridgePINVOKEProxy.UnitPtrList_get_next_key(swigCPtr, swigiterator);
     Unit ret = (cPtr == IntPtr.Zero) ? null : new Unit(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Contains(Unit value) {
-    bool ret = bridgePINVOKEProxy.remote.UnitPtrList_Contains(swigCPtr, Unit.getCPtr(value));
+    bool ret = bridgePINVOKEProxy.UnitPtrList_Contains(swigCPtr, Unit.getCPtr(value));
     return ret;
   }
 
   public bool Remove(Unit value) {
-    bool ret = bridgePINVOKEProxy.remote.UnitPtrList_Remove(swigCPtr, Unit.getCPtr(value));
+    bool ret = bridgePINVOKEProxy.UnitPtrList_Remove(swigCPtr, Unit.getCPtr(value));
     return ret;
   }
 

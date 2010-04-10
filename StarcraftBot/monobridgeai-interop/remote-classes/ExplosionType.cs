@@ -33,7 +33,7 @@ public partial class ExplosionType : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_ExplosionType(swigCPtr);
+          bridgePINVOKEProxy.delete_ExplosionType(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,47 +82,47 @@ public static bool operator !=(ExplosionType obj1, ExplosionType obj2)
 
 
 
-  public ExplosionType() : this(bridgePINVOKEProxy.remote.new_ExplosionType__SWIG_0(), true) {
+  public ExplosionType() : this(bridgePINVOKEProxy.new_ExplosionType__SWIG_0(), true) {
   }
 
-  public ExplosionType(int id) : this(bridgePINVOKEProxy.remote.new_ExplosionType__SWIG_1(id), true) {
+  public ExplosionType(int id) : this(bridgePINVOKEProxy.new_ExplosionType__SWIG_1(id), true) {
   }
 
-  public ExplosionType(ExplosionType other) : this(bridgePINVOKEProxy.remote.new_ExplosionType__SWIG_2(ExplosionType.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public ExplosionType(ExplosionType other) : this(bridgePINVOKEProxy.new_ExplosionType__SWIG_2(ExplosionType.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public ExplosionType opAssign(ExplosionType other) {
-    ExplosionType ret = new ExplosionType(bridgePINVOKEProxy.remote.ExplosionType_opAssign(swigCPtr, ExplosionType.getCPtr(other)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    ExplosionType ret = new ExplosionType(bridgePINVOKEProxy.ExplosionType_opAssign(swigCPtr, ExplosionType.getCPtr(other)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opEquals(ExplosionType other) {
-    bool ret = bridgePINVOKEProxy.remote.ExplosionType_opEquals(swigCPtr, ExplosionType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.ExplosionType_opEquals(swigCPtr, ExplosionType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opNotEquals(ExplosionType other) {
-    bool ret = bridgePINVOKEProxy.remote.ExplosionType_opNotEquals(swigCPtr, ExplosionType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.ExplosionType_opNotEquals(swigCPtr, ExplosionType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opLessThan(ExplosionType other) {
-    bool ret = bridgePINVOKEProxy.remote.ExplosionType_opLessThan(swigCPtr, ExplosionType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.ExplosionType_opLessThan(swigCPtr, ExplosionType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int getID() {
-    int ret = bridgePINVOKEProxy.remote.ExplosionType_getID(swigCPtr);
+    int ret = bridgePINVOKEProxy.ExplosionType_getID(swigCPtr);
     return ret;
   }
 
   public string getName() {
-    string ret = bridgePINVOKEProxy.remote.ExplosionType_getName(swigCPtr);
+    string ret = bridgePINVOKEProxy.ExplosionType_getName(swigCPtr);
     return ret;
   }
 

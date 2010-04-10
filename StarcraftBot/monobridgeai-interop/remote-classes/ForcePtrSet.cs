@@ -37,7 +37,7 @@ public partial class ForcePtrSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_ForcePtrSet(swigCPtr);
+          bridgePINVOKEProxy.delete_ForcePtrSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class ForcePtrSet : IDisposable
 #endif
   
 
-  public ForcePtrSet() : this(bridgePINVOKEProxy.remote.new_ForcePtrSet__SWIG_0(), true) {
+  public ForcePtrSet() : this(bridgePINVOKEProxy.new_ForcePtrSet__SWIG_0(), true) {
   }
 
-  public ForcePtrSet(ForcePtrSet other) : this(bridgePINVOKEProxy.remote.new_ForcePtrSet__SWIG_1(ForcePtrSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public ForcePtrSet(ForcePtrSet other) : this(bridgePINVOKEProxy.new_ForcePtrSet__SWIG_1(ForcePtrSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.ForcePtrSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.ForcePtrSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.ForcePtrSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.ForcePtrSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.ForcePtrSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.ForcePtrSet_Clear(swigCPtr);
   }
 
   public Force getitem(Force key) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.ForcePtrSet_getitem(swigCPtr, Force.getCPtr(key));
+    IntPtr cPtr = bridgePINVOKEProxy.ForcePtrSet_getitem(swigCPtr, Force.getCPtr(key));
     Force ret = (cPtr == IntPtr.Zero) ? null : new Force(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(Force key) {
-    bool ret = bridgePINVOKEProxy.remote.ForcePtrSet_ContainsKey(swigCPtr, Force.getCPtr(key));
+    bool ret = bridgePINVOKEProxy.ForcePtrSet_ContainsKey(swigCPtr, Force.getCPtr(key));
     return ret;
   }
 
   public void Add(Force key) {
-    bridgePINVOKEProxy.remote.ForcePtrSet_Add(swigCPtr, Force.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.ForcePtrSet_Add(swigCPtr, Force.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(Force key) {
-    bool ret = bridgePINVOKEProxy.remote.ForcePtrSet_Remove(swigCPtr, Force.getCPtr(key));
+    bool ret = bridgePINVOKEProxy.ForcePtrSet_Remove(swigCPtr, Force.getCPtr(key));
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.ForcePtrSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.ForcePtrSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public Force get_next_key(IntPtr swigiterator) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.ForcePtrSet_get_next_key(swigCPtr, swigiterator);
+    IntPtr cPtr = bridgePINVOKEProxy.ForcePtrSet_get_next_key(swigCPtr, swigiterator);
     Force ret = (cPtr == IntPtr.Zero) ? null : new Force(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

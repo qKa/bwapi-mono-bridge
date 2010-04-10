@@ -37,7 +37,7 @@ public partial class TechTypePtrSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_TechTypePtrSet(swigCPtr);
+          bridgePINVOKEProxy.delete_TechTypePtrSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class TechTypePtrSet : IDisposable
 #endif
   
 
-  public TechTypePtrSet() : this(bridgePINVOKEProxy.remote.new_TechTypePtrSet__SWIG_0(), true) {
+  public TechTypePtrSet() : this(bridgePINVOKEProxy.new_TechTypePtrSet__SWIG_0(), true) {
   }
 
-  public TechTypePtrSet(TechTypePtrSet other) : this(bridgePINVOKEProxy.remote.new_TechTypePtrSet__SWIG_1(TechTypePtrSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public TechTypePtrSet(TechTypePtrSet other) : this(bridgePINVOKEProxy.new_TechTypePtrSet__SWIG_1(TechTypePtrSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.TechTypePtrSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.TechTypePtrSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.TechTypePtrSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.TechTypePtrSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.TechTypePtrSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.TechTypePtrSet_Clear(swigCPtr);
   }
 
   public TechType getitem(TechType key) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypePtrSet_getitem(swigCPtr, TechType.getCPtr(key));
+    IntPtr cPtr = bridgePINVOKEProxy.TechTypePtrSet_getitem(swigCPtr, TechType.getCPtr(key));
     TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(TechType key) {
-    bool ret = bridgePINVOKEProxy.remote.TechTypePtrSet_ContainsKey(swigCPtr, TechType.getCPtr(key));
+    bool ret = bridgePINVOKEProxy.TechTypePtrSet_ContainsKey(swigCPtr, TechType.getCPtr(key));
     return ret;
   }
 
   public void Add(TechType key) {
-    bridgePINVOKEProxy.remote.TechTypePtrSet_Add(swigCPtr, TechType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.TechTypePtrSet_Add(swigCPtr, TechType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(TechType key) {
-    bool ret = bridgePINVOKEProxy.remote.TechTypePtrSet_Remove(swigCPtr, TechType.getCPtr(key));
+    bool ret = bridgePINVOKEProxy.TechTypePtrSet_Remove(swigCPtr, TechType.getCPtr(key));
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.TechTypePtrSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.TechTypePtrSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public TechType get_next_key(IntPtr swigiterator) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypePtrSet_get_next_key(swigCPtr, swigiterator);
+    IntPtr cPtr = bridgePINVOKEProxy.TechTypePtrSet_get_next_key(swigCPtr, swigiterator);
     TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

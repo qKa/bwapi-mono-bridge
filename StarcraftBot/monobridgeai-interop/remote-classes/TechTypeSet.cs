@@ -37,7 +37,7 @@ public partial class TechTypeSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_TechTypeSet(swigCPtr);
+          bridgePINVOKEProxy.delete_TechTypeSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class TechTypeSet : IDisposable
 #endif
   
 
-  public TechTypeSet() : this(bridgePINVOKEProxy.remote.new_TechTypeSet__SWIG_0(), true) {
+  public TechTypeSet() : this(bridgePINVOKEProxy.new_TechTypeSet__SWIG_0(), true) {
   }
 
-  public TechTypeSet(TechTypeSet other) : this(bridgePINVOKEProxy.remote.new_TechTypeSet__SWIG_1(TechTypeSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public TechTypeSet(TechTypeSet other) : this(bridgePINVOKEProxy.new_TechTypeSet__SWIG_1(TechTypeSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.TechTypeSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.TechTypeSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.TechTypeSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.TechTypeSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.TechTypeSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.TechTypeSet_Clear(swigCPtr);
   }
 
   public TechType getitem(TechType key) {
-    TechType ret = new TechType(bridgePINVOKEProxy.remote.TechTypeSet_getitem(swigCPtr, TechType.getCPtr(key)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    TechType ret = new TechType(bridgePINVOKEProxy.TechTypeSet_getitem(swigCPtr, TechType.getCPtr(key)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(TechType key) {
-    bool ret = bridgePINVOKEProxy.remote.TechTypeSet_ContainsKey(swigCPtr, TechType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.TechTypeSet_ContainsKey(swigCPtr, TechType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Add(TechType key) {
-    bridgePINVOKEProxy.remote.TechTypeSet_Add(swigCPtr, TechType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.TechTypeSet_Add(swigCPtr, TechType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(TechType key) {
-    bool ret = bridgePINVOKEProxy.remote.TechTypeSet_Remove(swigCPtr, TechType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.TechTypeSet_Remove(swigCPtr, TechType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.TechTypeSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.TechTypeSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public TechType get_next_key(IntPtr swigiterator) {
-    TechType ret = new TechType(bridgePINVOKEProxy.remote.TechTypeSet_get_next_key(swigCPtr, swigiterator), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    TechType ret = new TechType(bridgePINVOKEProxy.TechTypeSet_get_next_key(swigCPtr, swigiterator), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

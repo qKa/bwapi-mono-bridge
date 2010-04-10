@@ -33,7 +33,7 @@ public partial class Color : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_Color(swigCPtr);
+          bridgePINVOKEProxy.delete_Color(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,60 +82,60 @@ public static bool operator !=(Color obj1, Color obj2)
 
 
 
-  public Color() : this(bridgePINVOKEProxy.remote.new_Color__SWIG_0(), true) {
+  public Color() : this(bridgePINVOKEProxy.new_Color__SWIG_0(), true) {
   }
 
-  public Color(int id) : this(bridgePINVOKEProxy.remote.new_Color__SWIG_1(id), true) {
+  public Color(int id) : this(bridgePINVOKEProxy.new_Color__SWIG_1(id), true) {
   }
 
-  public Color(Color other) : this(bridgePINVOKEProxy.remote.new_Color__SWIG_2(Color.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public Color(Color other) : this(bridgePINVOKEProxy.new_Color__SWIG_2(Color.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
-  public Color(int red, int green, int blue) : this(bridgePINVOKEProxy.remote.new_Color__SWIG_3(red, green, blue), true) {
+  public Color(int red, int green, int blue) : this(bridgePINVOKEProxy.new_Color__SWIG_3(red, green, blue), true) {
   }
 
   public Color opAssign(Color other) {
-    Color ret = new Color(bridgePINVOKEProxy.remote.Color_opAssign(swigCPtr, Color.getCPtr(other)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Color ret = new Color(bridgePINVOKEProxy.Color_opAssign(swigCPtr, Color.getCPtr(other)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opEquals(Color other) {
-    bool ret = bridgePINVOKEProxy.remote.Color_opEquals(swigCPtr, Color.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Color_opEquals(swigCPtr, Color.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opNotEquals(Color other) {
-    bool ret = bridgePINVOKEProxy.remote.Color_opNotEquals(swigCPtr, Color.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Color_opNotEquals(swigCPtr, Color.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opLessThan(Color other) {
-    bool ret = bridgePINVOKEProxy.remote.Color_opLessThan(swigCPtr, Color.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Color_opLessThan(swigCPtr, Color.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int getID() {
-    int ret = bridgePINVOKEProxy.remote.Color_getID(swigCPtr);
+    int ret = bridgePINVOKEProxy.Color_getID(swigCPtr);
     return ret;
   }
 
   public int red() {
-    int ret = bridgePINVOKEProxy.remote.Color_red(swigCPtr);
+    int ret = bridgePINVOKEProxy.Color_red(swigCPtr);
     return ret;
   }
 
   public int green() {
-    int ret = bridgePINVOKEProxy.remote.Color_green(swigCPtr);
+    int ret = bridgePINVOKEProxy.Color_green(swigCPtr);
     return ret;
   }
 
   public int blue() {
-    int ret = bridgePINVOKEProxy.remote.Color_blue(swigCPtr);
+    int ret = bridgePINVOKEProxy.Color_blue(swigCPtr);
     return ret;
   }
 

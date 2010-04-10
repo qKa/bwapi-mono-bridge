@@ -33,7 +33,7 @@ public partial class TilePositionDoublePair : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_TilePositionDoublePair(swigCPtr);
+          bridgePINVOKEProxy.delete_TilePositionDoublePair(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,23 +82,23 @@ public static bool operator !=(TilePositionDoublePair obj1, TilePositionDoublePa
 
 
 
-  public TilePositionDoublePair() : this(bridgePINVOKEProxy.remote.new_TilePositionDoublePair__SWIG_0(), true) {
+  public TilePositionDoublePair() : this(bridgePINVOKEProxy.new_TilePositionDoublePair__SWIG_0(), true) {
   }
 
-  public TilePositionDoublePair(TilePosition t, double u) : this(bridgePINVOKEProxy.remote.new_TilePositionDoublePair__SWIG_1(TilePosition.getCPtr(t), u), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public TilePositionDoublePair(TilePosition t, double u) : this(bridgePINVOKEProxy.new_TilePositionDoublePair__SWIG_1(TilePosition.getCPtr(t), u), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
-  public TilePositionDoublePair(TilePositionDoublePair p) : this(bridgePINVOKEProxy.remote.new_TilePositionDoublePair__SWIG_2(TilePositionDoublePair.getCPtr(p)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public TilePositionDoublePair(TilePositionDoublePair p) : this(bridgePINVOKEProxy.new_TilePositionDoublePair__SWIG_2(TilePositionDoublePair.getCPtr(p)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public TilePosition first {
     set {
-      bridgePINVOKEProxy.remote.TilePositionDoublePair_first_set(swigCPtr, TilePosition.getCPtr(value));
+      bridgePINVOKEProxy.TilePositionDoublePair_first_set(swigCPtr, TilePosition.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TilePositionDoublePair_first_get(swigCPtr);
+      IntPtr cPtr = bridgePINVOKEProxy.TilePositionDoublePair_first_get(swigCPtr);
       TilePosition ret = (cPtr == IntPtr.Zero) ? null : new TilePosition(cPtr, false);
       return ret;
     } 
@@ -106,10 +106,10 @@ public static bool operator !=(TilePositionDoublePair obj1, TilePositionDoublePa
 
   public double second {
     set {
-      bridgePINVOKEProxy.remote.TilePositionDoublePair_second_set(swigCPtr, value);
+      bridgePINVOKEProxy.TilePositionDoublePair_second_set(swigCPtr, value);
     } 
     get {
-      double ret = bridgePINVOKEProxy.remote.TilePositionDoublePair_second_get(swigCPtr);
+      double ret = bridgePINVOKEProxy.TilePositionDoublePair_second_get(swigCPtr);
       return ret;
     } 
   }

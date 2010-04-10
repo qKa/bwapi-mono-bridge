@@ -33,7 +33,7 @@ public partial class Error : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_Error(swigCPtr);
+          bridgePINVOKEProxy.delete_Error(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,47 +82,47 @@ public static bool operator !=(Error obj1, Error obj2)
 
 
 
-  public Error() : this(bridgePINVOKEProxy.remote.new_Error__SWIG_0(), true) {
+  public Error() : this(bridgePINVOKEProxy.new_Error__SWIG_0(), true) {
   }
 
-  public Error(int id) : this(bridgePINVOKEProxy.remote.new_Error__SWIG_1(id), true) {
+  public Error(int id) : this(bridgePINVOKEProxy.new_Error__SWIG_1(id), true) {
   }
 
-  public Error(Error other) : this(bridgePINVOKEProxy.remote.new_Error__SWIG_2(Error.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public Error(Error other) : this(bridgePINVOKEProxy.new_Error__SWIG_2(Error.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public Error opAssign(Error other) {
-    Error ret = new Error(bridgePINVOKEProxy.remote.Error_opAssign(swigCPtr, Error.getCPtr(other)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Error ret = new Error(bridgePINVOKEProxy.Error_opAssign(swigCPtr, Error.getCPtr(other)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opEquals(Error other) {
-    bool ret = bridgePINVOKEProxy.remote.Error_opEquals(swigCPtr, Error.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Error_opEquals(swigCPtr, Error.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opNotEquals(Error other) {
-    bool ret = bridgePINVOKEProxy.remote.Error_opNotEquals(swigCPtr, Error.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Error_opNotEquals(swigCPtr, Error.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opLessThan(Error other) {
-    bool ret = bridgePINVOKEProxy.remote.Error_opLessThan(swigCPtr, Error.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Error_opLessThan(swigCPtr, Error.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int getID() {
-    int ret = bridgePINVOKEProxy.remote.Error_getID(swigCPtr);
+    int ret = bridgePINVOKEProxy.Error_getID(swigCPtr);
     return ret;
   }
 
   public string toErrorString() {
-    string ret = bridgePINVOKEProxy.remote.Error_toErrorString(swigCPtr);
+    string ret = bridgePINVOKEProxy.Error_toErrorString(swigCPtr);
     return ret;
   }
 

@@ -33,7 +33,7 @@ public partial class Region : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_Region(swigCPtr);
+          bridgePINVOKEProxy.delete_Region(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -83,32 +83,32 @@ public static bool operator !=(Region obj1, Region obj2)
 
 
   public virtual Polygon getPolygon() {
-    Polygon ret = new Polygon(bridgePINVOKEProxy.remote.Region_getPolygon(swigCPtr), false);
+    Polygon ret = new Polygon(bridgePINVOKEProxy.Region_getPolygon(swigCPtr), false);
     return ret;
   }
 
   public virtual Position getCenter() {
-    Position ret = new Position(bridgePINVOKEProxy.remote.Region_getCenter(swigCPtr), false);
+    Position ret = new Position(bridgePINVOKEProxy.Region_getCenter(swigCPtr), false);
     return ret;
   }
 
   public virtual ChokepointPtrSet getChokepoints() {
-    ChokepointPtrSet ret = new ChokepointPtrSet(bridgePINVOKEProxy.remote.Region_getChokepoints(swigCPtr), false);
+    ChokepointPtrSet ret = new ChokepointPtrSet(bridgePINVOKEProxy.Region_getChokepoints(swigCPtr), false);
     return ret;
   }
 
   public virtual BaseLocationPtrSet getBaseLocations() {
-    BaseLocationPtrSet ret = new BaseLocationPtrSet(bridgePINVOKEProxy.remote.Region_getBaseLocations(swigCPtr), false);
+    BaseLocationPtrSet ret = new BaseLocationPtrSet(bridgePINVOKEProxy.Region_getBaseLocations(swigCPtr), false);
     return ret;
   }
 
   public virtual bool isReachable(Region region) {
-    bool ret = bridgePINVOKEProxy.remote.Region_isReachable(swigCPtr, Region.getCPtr(region));
+    bool ret = bridgePINVOKEProxy.Region_isReachable(swigCPtr, Region.getCPtr(region));
     return ret;
   }
 
   public virtual RegionPtrSet getReachableRegions() {
-    RegionPtrSet ret = new RegionPtrSet(bridgePINVOKEProxy.remote.Region_getReachableRegions(swigCPtr), false);
+    RegionPtrSet ret = new RegionPtrSet(bridgePINVOKEProxy.Region_getReachableRegions(swigCPtr), false);
     return ret;
   }
 

@@ -33,7 +33,7 @@ public partial class BaseLocation : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_BaseLocation(swigCPtr);
+          bridgePINVOKEProxy.delete_BaseLocation(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -83,68 +83,68 @@ public static bool operator !=(BaseLocation obj1, BaseLocation obj2)
 
 
   public virtual Position getPosition() {
-    Position ret = new Position(bridgePINVOKEProxy.remote.BaseLocation_getPosition(swigCPtr), true);
+    Position ret = new Position(bridgePINVOKEProxy.BaseLocation_getPosition(swigCPtr), true);
     return ret;
   }
 
   public virtual TilePosition getTilePosition() {
-    TilePosition ret = new TilePosition(bridgePINVOKEProxy.remote.BaseLocation_getTilePosition(swigCPtr), true);
+    TilePosition ret = new TilePosition(bridgePINVOKEProxy.BaseLocation_getTilePosition(swigCPtr), true);
     return ret;
   }
 
   public virtual Region getRegion() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.BaseLocation_getRegion(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.BaseLocation_getRegion(swigCPtr);
     Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
     return ret;
   }
 
   public virtual int minerals() {
-    int ret = bridgePINVOKEProxy.remote.BaseLocation_minerals(swigCPtr);
+    int ret = bridgePINVOKEProxy.BaseLocation_minerals(swigCPtr);
     return ret;
   }
 
   public virtual int gas() {
-    int ret = bridgePINVOKEProxy.remote.BaseLocation_gas(swigCPtr);
+    int ret = bridgePINVOKEProxy.BaseLocation_gas(swigCPtr);
     return ret;
   }
 
   public virtual UnitSet getMinerals() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.BaseLocation_getMinerals(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.BaseLocation_getMinerals(swigCPtr), false);
     return ret;
   }
 
   public virtual UnitSet getStaticMinerals() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.BaseLocation_getStaticMinerals(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.BaseLocation_getStaticMinerals(swigCPtr), false);
     return ret;
   }
 
   public virtual UnitSet getGeysers() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.BaseLocation_getGeysers(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.BaseLocation_getGeysers(swigCPtr), false);
     return ret;
   }
 
   public virtual double getGroundDistance(BaseLocation other) {
-    double ret = bridgePINVOKEProxy.remote.BaseLocation_getGroundDistance(swigCPtr, BaseLocation.getCPtr(other));
+    double ret = bridgePINVOKEProxy.BaseLocation_getGroundDistance(swigCPtr, BaseLocation.getCPtr(other));
     return ret;
   }
 
   public virtual double getAirDistance(BaseLocation other) {
-    double ret = bridgePINVOKEProxy.remote.BaseLocation_getAirDistance(swigCPtr, BaseLocation.getCPtr(other));
+    double ret = bridgePINVOKEProxy.BaseLocation_getAirDistance(swigCPtr, BaseLocation.getCPtr(other));
     return ret;
   }
 
   public virtual bool isIsland() {
-    bool ret = bridgePINVOKEProxy.remote.BaseLocation_isIsland(swigCPtr);
+    bool ret = bridgePINVOKEProxy.BaseLocation_isIsland(swigCPtr);
     return ret;
   }
 
   public virtual bool isMineralOnly() {
-    bool ret = bridgePINVOKEProxy.remote.BaseLocation_isMineralOnly(swigCPtr);
+    bool ret = bridgePINVOKEProxy.BaseLocation_isMineralOnly(swigCPtr);
     return ret;
   }
 
   public virtual bool isStartLocation() {
-    bool ret = bridgePINVOKEProxy.remote.BaseLocation_isStartLocation(swigCPtr);
+    bool ret = bridgePINVOKEProxy.BaseLocation_isStartLocation(swigCPtr);
     return ret;
   }
 

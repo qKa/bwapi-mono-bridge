@@ -37,7 +37,7 @@ public partial class PositionVector : IDisposable, System.Collections.IEnumerabl
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_PositionVector(swigCPtr);
+          bridgePINVOKEProxy.delete_PositionVector(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -222,107 +222,107 @@ public partial class PositionVector : IDisposable, System.Collections.IEnumerabl
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.PositionVector_Clear(swigCPtr);
+    bridgePINVOKEProxy.PositionVector_Clear(swigCPtr);
   }
 
   public void Add(Position x) {
-    bridgePINVOKEProxy.remote.PositionVector_Add(swigCPtr, Position.getCPtr(x));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PositionVector_Add(swigCPtr, Position.getCPtr(x));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.PositionVector_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.PositionVector_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = bridgePINVOKEProxy.remote.PositionVector_capacity(swigCPtr);
+    uint ret = bridgePINVOKEProxy.PositionVector_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    bridgePINVOKEProxy.remote.PositionVector_reserve(swigCPtr, n);
+    bridgePINVOKEProxy.PositionVector_reserve(swigCPtr, n);
   }
 
-  public PositionVector() : this(bridgePINVOKEProxy.remote.new_PositionVector__SWIG_0(), true) {
+  public PositionVector() : this(bridgePINVOKEProxy.new_PositionVector__SWIG_0(), true) {
   }
 
-  public PositionVector(PositionVector other) : this(bridgePINVOKEProxy.remote.new_PositionVector__SWIG_1(PositionVector.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public PositionVector(PositionVector other) : this(bridgePINVOKEProxy.new_PositionVector__SWIG_1(PositionVector.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
-  public PositionVector(int capacity) : this(bridgePINVOKEProxy.remote.new_PositionVector__SWIG_2(capacity), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public PositionVector(int capacity) : this(bridgePINVOKEProxy.new_PositionVector__SWIG_2(capacity), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private Position getitemcopy(int index) {
-    Position ret = new Position(bridgePINVOKEProxy.remote.PositionVector_getitemcopy(swigCPtr, index), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Position ret = new Position(bridgePINVOKEProxy.PositionVector_getitemcopy(swigCPtr, index), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private Position getitem(int index) {
-    Position ret = new Position(bridgePINVOKEProxy.remote.PositionVector_getitem(swigCPtr, index), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Position ret = new Position(bridgePINVOKEProxy.PositionVector_getitem(swigCPtr, index), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, Position val) {
-    bridgePINVOKEProxy.remote.PositionVector_setitem(swigCPtr, index, Position.getCPtr(val));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PositionVector_setitem(swigCPtr, index, Position.getCPtr(val));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(PositionVector values) {
-    bridgePINVOKEProxy.remote.PositionVector_AddRange(swigCPtr, PositionVector.getCPtr(values));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PositionVector_AddRange(swigCPtr, PositionVector.getCPtr(values));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public PositionVector GetRange(int index, int count) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.PositionVector_GetRange(swigCPtr, index, count);
+    IntPtr cPtr = bridgePINVOKEProxy.PositionVector_GetRange(swigCPtr, index, count);
     PositionVector ret = (cPtr == IntPtr.Zero) ? null : new PositionVector(cPtr, true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, Position x) {
-    bridgePINVOKEProxy.remote.PositionVector_Insert(swigCPtr, index, Position.getCPtr(x));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PositionVector_Insert(swigCPtr, index, Position.getCPtr(x));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, PositionVector values) {
-    bridgePINVOKEProxy.remote.PositionVector_InsertRange(swigCPtr, index, PositionVector.getCPtr(values));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PositionVector_InsertRange(swigCPtr, index, PositionVector.getCPtr(values));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    bridgePINVOKEProxy.remote.PositionVector_RemoveAt(swigCPtr, index);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PositionVector_RemoveAt(swigCPtr, index);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    bridgePINVOKEProxy.remote.PositionVector_RemoveRange(swigCPtr, index, count);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PositionVector_RemoveRange(swigCPtr, index, count);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public static PositionVector Repeat(Position value, int count) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.PositionVector_Repeat(Position.getCPtr(value), count);
+    IntPtr cPtr = bridgePINVOKEProxy.PositionVector_Repeat(Position.getCPtr(value), count);
     PositionVector ret = (cPtr == IntPtr.Zero) ? null : new PositionVector(cPtr, true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    bridgePINVOKEProxy.remote.PositionVector_Reverse__SWIG_0(swigCPtr);
+    bridgePINVOKEProxy.PositionVector_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    bridgePINVOKEProxy.remote.PositionVector_Reverse__SWIG_1(swigCPtr, index, count);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PositionVector_Reverse__SWIG_1(swigCPtr, index, count);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, PositionVector values) {
-    bridgePINVOKEProxy.remote.PositionVector_SetRange(swigCPtr, index, PositionVector.getCPtr(values));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PositionVector_SetRange(swigCPtr, index, PositionVector.getCPtr(values));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
 }

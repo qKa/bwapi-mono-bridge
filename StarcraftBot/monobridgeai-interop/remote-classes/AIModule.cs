@@ -33,7 +33,7 @@ public partial class AIModule : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_AIModule(swigCPtr);
+          bridgePINVOKEProxy.delete_AIModule(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,58 +82,58 @@ public static bool operator !=(AIModule obj1, AIModule obj2)
 
 
 
-  public AIModule() : this(bridgePINVOKEProxy.remote.new_AIModule(), true) {
+  public AIModule() : this(bridgePINVOKEProxy.new_AIModule(), true) {
   }
 
   public virtual void onStart() {
-    bridgePINVOKEProxy.remote.AIModule_onStart(swigCPtr);
+    bridgePINVOKEProxy.AIModule_onStart(swigCPtr);
   }
 
   public virtual void onEnd(bool isWinner) {
-    bridgePINVOKEProxy.remote.AIModule_onEnd(swigCPtr, isWinner);
+    bridgePINVOKEProxy.AIModule_onEnd(swigCPtr, isWinner);
   }
 
   public virtual void onFrame() {
-    bridgePINVOKEProxy.remote.AIModule_onFrame(swigCPtr);
+    bridgePINVOKEProxy.AIModule_onFrame(swigCPtr);
   }
 
   public virtual bool onSendText(string text) {
-    bool ret = bridgePINVOKEProxy.remote.AIModule_onSendText(swigCPtr, text);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.AIModule_onSendText(swigCPtr, text);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void onPlayerLeft(Player player) {
-    bridgePINVOKEProxy.remote.AIModule_onPlayerLeft(swigCPtr, Player.getCPtr(player));
+    bridgePINVOKEProxy.AIModule_onPlayerLeft(swigCPtr, Player.getCPtr(player));
   }
 
   public virtual void onNukeDetect(Position target) {
-    bridgePINVOKEProxy.remote.AIModule_onNukeDetect(swigCPtr, Position.getCPtr(target));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.AIModule_onNukeDetect(swigCPtr, Position.getCPtr(target));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void onUnitCreate(Unit unit) {
-    bridgePINVOKEProxy.remote.AIModule_onUnitCreate(swigCPtr, Unit.getCPtr(unit));
+    bridgePINVOKEProxy.AIModule_onUnitCreate(swigCPtr, Unit.getCPtr(unit));
   }
 
   public virtual void onUnitDestroy(Unit unit) {
-    bridgePINVOKEProxy.remote.AIModule_onUnitDestroy(swigCPtr, Unit.getCPtr(unit));
+    bridgePINVOKEProxy.AIModule_onUnitDestroy(swigCPtr, Unit.getCPtr(unit));
   }
 
   public virtual void onUnitMorph(Unit unit) {
-    bridgePINVOKEProxy.remote.AIModule_onUnitMorph(swigCPtr, Unit.getCPtr(unit));
+    bridgePINVOKEProxy.AIModule_onUnitMorph(swigCPtr, Unit.getCPtr(unit));
   }
 
   public virtual void onUnitShow(Unit unit) {
-    bridgePINVOKEProxy.remote.AIModule_onUnitShow(swigCPtr, Unit.getCPtr(unit));
+    bridgePINVOKEProxy.AIModule_onUnitShow(swigCPtr, Unit.getCPtr(unit));
   }
 
   public virtual void onUnitHide(Unit unit) {
-    bridgePINVOKEProxy.remote.AIModule_onUnitHide(swigCPtr, Unit.getCPtr(unit));
+    bridgePINVOKEProxy.AIModule_onUnitHide(swigCPtr, Unit.getCPtr(unit));
   }
 
   public virtual void onUnitRenegade(Unit unit) {
-    bridgePINVOKEProxy.remote.AIModule_onUnitRenegade(swigCPtr, Unit.getCPtr(unit));
+    bridgePINVOKEProxy.AIModule_onUnitRenegade(swigCPtr, Unit.getCPtr(unit));
   }
 
 }

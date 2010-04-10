@@ -33,7 +33,7 @@ public partial class Position : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_Position(swigCPtr);
+          bridgePINVOKEProxy.delete_Position(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,92 +82,92 @@ public static bool operator !=(Position obj1, Position obj2)
 
 
 
-  public Position() : this(bridgePINVOKEProxy.remote.new_Position__SWIG_0(), true) {
+  public Position() : this(bridgePINVOKEProxy.new_Position__SWIG_0(), true) {
   }
 
-  public Position(TilePosition position) : this(bridgePINVOKEProxy.remote.new_Position__SWIG_1(TilePosition.getCPtr(position)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public Position(TilePosition position) : this(bridgePINVOKEProxy.new_Position__SWIG_1(TilePosition.getCPtr(position)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
-  public Position(int x, int y) : this(bridgePINVOKEProxy.remote.new_Position__SWIG_2(x, y), true) {
+  public Position(int x, int y) : this(bridgePINVOKEProxy.new_Position__SWIG_2(x, y), true) {
   }
 
   public bool opEquals(Position position) {
-    bool ret = bridgePINVOKEProxy.remote.Position_opEquals(swigCPtr, Position.getCPtr(position));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Position_opEquals(swigCPtr, Position.getCPtr(position));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opNotEquals(Position position) {
-    bool ret = bridgePINVOKEProxy.remote.Position_opNotEquals(swigCPtr, Position.getCPtr(position));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Position_opNotEquals(swigCPtr, Position.getCPtr(position));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opLessThan(Position position) {
-    bool ret = bridgePINVOKEProxy.remote.Position_opLessThan(swigCPtr, Position.getCPtr(position));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Position_opLessThan(swigCPtr, Position.getCPtr(position));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Position opPlus(Position position) {
-    Position ret = new Position(bridgePINVOKEProxy.remote.Position_opPlus(swigCPtr, Position.getCPtr(position)), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Position ret = new Position(bridgePINVOKEProxy.Position_opPlus(swigCPtr, Position.getCPtr(position)), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Position opMinus(Position position) {
-    Position ret = new Position(bridgePINVOKEProxy.remote.Position_opMinus(swigCPtr, Position.getCPtr(position)), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Position ret = new Position(bridgePINVOKEProxy.Position_opMinus(swigCPtr, Position.getCPtr(position)), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Position opAdd(Position position) {
-    Position ret = new Position(bridgePINVOKEProxy.remote.Position_opAdd(swigCPtr, Position.getCPtr(position)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Position ret = new Position(bridgePINVOKEProxy.Position_opAdd(swigCPtr, Position.getCPtr(position)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Position opSubtract(Position position) {
-    Position ret = new Position(bridgePINVOKEProxy.remote.Position_opSubtract(swigCPtr, Position.getCPtr(position)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Position ret = new Position(bridgePINVOKEProxy.Position_opSubtract(swigCPtr, Position.getCPtr(position)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double getDistance(Position position) {
-    double ret = bridgePINVOKEProxy.remote.Position_getDistance(swigCPtr, Position.getCPtr(position));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    double ret = bridgePINVOKEProxy.Position_getDistance(swigCPtr, Position.getCPtr(position));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double getApproxDistance(Position position) {
-    double ret = bridgePINVOKEProxy.remote.Position_getApproxDistance(swigCPtr, Position.getCPtr(position));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    double ret = bridgePINVOKEProxy.Position_getApproxDistance(swigCPtr, Position.getCPtr(position));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double getLength() {
-    double ret = bridgePINVOKEProxy.remote.Position_getLength(swigCPtr);
+    double ret = bridgePINVOKEProxy.Position_getLength(swigCPtr);
     return ret;
   }
 
   public SWIGTYPE_p_int x() {
-    SWIGTYPE_p_int ret = new SWIGTYPE_p_int(bridgePINVOKEProxy.remote.Position_x(swigCPtr), false);
+    SWIGTYPE_p_int ret = new SWIGTYPE_p_int(bridgePINVOKEProxy.Position_x(swigCPtr), false);
     return ret;
   }
 
   public SWIGTYPE_p_int y() {
-    SWIGTYPE_p_int ret = new SWIGTYPE_p_int(bridgePINVOKEProxy.remote.Position_y(swigCPtr), false);
+    SWIGTYPE_p_int ret = new SWIGTYPE_p_int(bridgePINVOKEProxy.Position_y(swigCPtr), false);
     return ret;
   }
 
   public int xConst() {
-    int ret = bridgePINVOKEProxy.remote.Position_xConst(swigCPtr);
+    int ret = bridgePINVOKEProxy.Position_xConst(swigCPtr);
     return ret;
   }
 
   public int yConst() {
-    int ret = bridgePINVOKEProxy.remote.Position_yConst(swigCPtr);
+    int ret = bridgePINVOKEProxy.Position_yConst(swigCPtr);
     return ret;
   }
 

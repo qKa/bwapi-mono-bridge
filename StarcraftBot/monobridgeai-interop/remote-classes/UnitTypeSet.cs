@@ -37,7 +37,7 @@ public partial class UnitTypeSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_UnitTypeSet(swigCPtr);
+          bridgePINVOKEProxy.delete_UnitTypeSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class UnitTypeSet : IDisposable
 #endif
   
 
-  public UnitTypeSet() : this(bridgePINVOKEProxy.remote.new_UnitTypeSet__SWIG_0(), true) {
+  public UnitTypeSet() : this(bridgePINVOKEProxy.new_UnitTypeSet__SWIG_0(), true) {
   }
 
-  public UnitTypeSet(UnitTypeSet other) : this(bridgePINVOKEProxy.remote.new_UnitTypeSet__SWIG_1(UnitTypeSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public UnitTypeSet(UnitTypeSet other) : this(bridgePINVOKEProxy.new_UnitTypeSet__SWIG_1(UnitTypeSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.UnitTypeSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.UnitTypeSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.UnitTypeSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitTypeSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.UnitTypeSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.UnitTypeSet_Clear(swigCPtr);
   }
 
   public UnitType getitem(UnitType key) {
-    UnitType ret = new UnitType(bridgePINVOKEProxy.remote.UnitTypeSet_getitem(swigCPtr, UnitType.getCPtr(key)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    UnitType ret = new UnitType(bridgePINVOKEProxy.UnitTypeSet_getitem(swigCPtr, UnitType.getCPtr(key)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(UnitType key) {
-    bool ret = bridgePINVOKEProxy.remote.UnitTypeSet_ContainsKey(swigCPtr, UnitType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.UnitTypeSet_ContainsKey(swigCPtr, UnitType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Add(UnitType key) {
-    bridgePINVOKEProxy.remote.UnitTypeSet_Add(swigCPtr, UnitType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.UnitTypeSet_Add(swigCPtr, UnitType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(UnitType key) {
-    bool ret = bridgePINVOKEProxy.remote.UnitTypeSet_Remove(swigCPtr, UnitType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.UnitTypeSet_Remove(swigCPtr, UnitType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.UnitTypeSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.UnitTypeSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public UnitType get_next_key(IntPtr swigiterator) {
-    UnitType ret = new UnitType(bridgePINVOKEProxy.remote.UnitTypeSet_get_next_key(swigCPtr, swigiterator), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    UnitType ret = new UnitType(bridgePINVOKEProxy.UnitTypeSet_get_next_key(swigCPtr, swigiterator), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

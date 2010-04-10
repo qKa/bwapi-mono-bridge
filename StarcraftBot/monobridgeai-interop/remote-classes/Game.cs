@@ -33,7 +33,7 @@ public partial class Game : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_Game(swigCPtr);
+          bridgePINVOKEProxy.delete_Game(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -83,553 +83,553 @@ public static bool operator !=(Game obj1, Game obj2)
 
 
   public virtual ForcePtrSet getForces() {
-    ForcePtrSet ret = new ForcePtrSet(bridgePINVOKEProxy.remote.Game_getForces(swigCPtr), false);
+    ForcePtrSet ret = new ForcePtrSet(bridgePINVOKEProxy.Game_getForces(swigCPtr), false);
     return ret;
   }
 
   public virtual PlayerPtrSet getPlayers() {
-    PlayerPtrSet ret = new PlayerPtrSet(bridgePINVOKEProxy.remote.Game_getPlayers(swigCPtr), false);
+    PlayerPtrSet ret = new PlayerPtrSet(bridgePINVOKEProxy.Game_getPlayers(swigCPtr), false);
     return ret;
   }
 
   public virtual UnitSet getAllUnits() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.Game_getAllUnits(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.Game_getAllUnits(swigCPtr), false);
     return ret;
   }
 
   public virtual UnitSet getMinerals() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.Game_getMinerals(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.Game_getMinerals(swigCPtr), false);
     return ret;
   }
 
   public virtual UnitSet getGeysers() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.Game_getGeysers(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.Game_getGeysers(swigCPtr), false);
     return ret;
   }
 
   public virtual UnitSet getNeutralUnits() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.Game_getNeutralUnits(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.Game_getNeutralUnits(swigCPtr), false);
     return ret;
   }
 
   public virtual UnitSet getStaticMinerals() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.Game_getStaticMinerals(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.Game_getStaticMinerals(swigCPtr), false);
     return ret;
   }
 
   public virtual UnitSet getStaticGeysers() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.Game_getStaticGeysers(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.Game_getStaticGeysers(swigCPtr), false);
     return ret;
   }
 
   public virtual UnitSet getStaticNeutralUnits() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.Game_getStaticNeutralUnits(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.Game_getStaticNeutralUnits(swigCPtr), false);
     return ret;
   }
 
   public virtual int getLatency() {
-    int ret = bridgePINVOKEProxy.remote.Game_getLatency(swigCPtr);
+    int ret = bridgePINVOKEProxy.Game_getLatency(swigCPtr);
     return ret;
   }
 
   public virtual int getFrameCount() {
-    int ret = bridgePINVOKEProxy.remote.Game_getFrameCount(swigCPtr);
+    int ret = bridgePINVOKEProxy.Game_getFrameCount(swigCPtr);
     return ret;
   }
 
   public virtual int getMouseX() {
-    int ret = bridgePINVOKEProxy.remote.Game_getMouseX(swigCPtr);
+    int ret = bridgePINVOKEProxy.Game_getMouseX(swigCPtr);
     return ret;
   }
 
   public virtual int getMouseY() {
-    int ret = bridgePINVOKEProxy.remote.Game_getMouseY(swigCPtr);
+    int ret = bridgePINVOKEProxy.Game_getMouseY(swigCPtr);
     return ret;
   }
 
   public virtual Position getMousePosition() {
-    Position ret = new Position(bridgePINVOKEProxy.remote.Game_getMousePosition(swigCPtr), true);
+    Position ret = new Position(bridgePINVOKEProxy.Game_getMousePosition(swigCPtr), true);
     return ret;
   }
 
   public virtual bool getMouseState(MouseButton button) {
-    bool ret = bridgePINVOKEProxy.remote.Game_getMouseState__SWIG_0(swigCPtr, (int)button);
+    bool ret = bridgePINVOKEProxy.Game_getMouseState__SWIG_0(swigCPtr, (int)button);
     return ret;
   }
 
   public virtual bool getMouseState(int button) {
-    bool ret = bridgePINVOKEProxy.remote.Game_getMouseState__SWIG_1(swigCPtr, button);
+    bool ret = bridgePINVOKEProxy.Game_getMouseState__SWIG_1(swigCPtr, button);
     return ret;
   }
 
   public virtual bool getKeyState(Key key) {
-    bool ret = bridgePINVOKEProxy.remote.Game_getKeyState__SWIG_0(swigCPtr, (int)key);
+    bool ret = bridgePINVOKEProxy.Game_getKeyState__SWIG_0(swigCPtr, (int)key);
     return ret;
   }
 
   public virtual bool getKeyState(int key) {
-    bool ret = bridgePINVOKEProxy.remote.Game_getKeyState__SWIG_1(swigCPtr, key);
+    bool ret = bridgePINVOKEProxy.Game_getKeyState__SWIG_1(swigCPtr, key);
     return ret;
   }
 
   public virtual int getScreenX() {
-    int ret = bridgePINVOKEProxy.remote.Game_getScreenX(swigCPtr);
+    int ret = bridgePINVOKEProxy.Game_getScreenX(swigCPtr);
     return ret;
   }
 
   public virtual int getScreenY() {
-    int ret = bridgePINVOKEProxy.remote.Game_getScreenY(swigCPtr);
+    int ret = bridgePINVOKEProxy.Game_getScreenY(swigCPtr);
     return ret;
   }
 
   public virtual Position getScreenPosition() {
-    Position ret = new Position(bridgePINVOKEProxy.remote.Game_getScreenPosition(swigCPtr), true);
+    Position ret = new Position(bridgePINVOKEProxy.Game_getScreenPosition(swigCPtr), true);
     return ret;
   }
 
   public virtual void setScreenPosition(int x, int y) {
-    bridgePINVOKEProxy.remote.Game_setScreenPosition__SWIG_0(swigCPtr, x, y);
+    bridgePINVOKEProxy.Game_setScreenPosition__SWIG_0(swigCPtr, x, y);
   }
 
   public virtual void setScreenPosition(Position p) {
-    bridgePINVOKEProxy.remote.Game_setScreenPosition__SWIG_1(swigCPtr, Position.getCPtr(p));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_setScreenPosition__SWIG_1(swigCPtr, Position.getCPtr(p));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void pingMinimap(int x, int y) {
-    bridgePINVOKEProxy.remote.Game_pingMinimap__SWIG_0(swigCPtr, x, y);
+    bridgePINVOKEProxy.Game_pingMinimap__SWIG_0(swigCPtr, x, y);
   }
 
   public virtual void pingMinimap(Position p) {
-    bridgePINVOKEProxy.remote.Game_pingMinimap__SWIG_1(swigCPtr, Position.getCPtr(p));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_pingMinimap__SWIG_1(swigCPtr, Position.getCPtr(p));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual bool isFlagEnabled(int flag) {
-    bool ret = bridgePINVOKEProxy.remote.Game_isFlagEnabled(swigCPtr, flag);
+    bool ret = bridgePINVOKEProxy.Game_isFlagEnabled(swigCPtr, flag);
     return ret;
   }
 
   public virtual void enableFlag(int flag) {
-    bridgePINVOKEProxy.remote.Game_enableFlag(swigCPtr, flag);
+    bridgePINVOKEProxy.Game_enableFlag(swigCPtr, flag);
   }
 
   public virtual UnitSet unitsOnTile(int x, int y) {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.Game_unitsOnTile(swigCPtr, x, y), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.Game_unitsOnTile(swigCPtr, x, y), false);
     return ret;
   }
 
   public virtual Error getLastError() {
-    Error ret = new Error(bridgePINVOKEProxy.remote.Game_getLastError(swigCPtr), true);
+    Error ret = new Error(bridgePINVOKEProxy.Game_getLastError(swigCPtr), true);
     return ret;
   }
 
   public virtual int mapWidth() {
-    int ret = bridgePINVOKEProxy.remote.Game_mapWidth(swigCPtr);
+    int ret = bridgePINVOKEProxy.Game_mapWidth(swigCPtr);
     return ret;
   }
 
   public virtual int mapHeight() {
-    int ret = bridgePINVOKEProxy.remote.Game_mapHeight(swigCPtr);
+    int ret = bridgePINVOKEProxy.Game_mapHeight(swigCPtr);
     return ret;
   }
 
   public virtual string mapFilename() {
-    string ret = bridgePINVOKEProxy.remote.Game_mapFilename(swigCPtr);
+    string ret = bridgePINVOKEProxy.Game_mapFilename(swigCPtr);
     return ret;
   }
 
   public virtual string mapName() {
-    string ret = bridgePINVOKEProxy.remote.Game_mapName(swigCPtr);
+    string ret = bridgePINVOKEProxy.Game_mapName(swigCPtr);
     return ret;
   }
 
   public virtual int getMapHash() {
-    int ret = bridgePINVOKEProxy.remote.Game_getMapHash(swigCPtr);
+    int ret = bridgePINVOKEProxy.Game_getMapHash(swigCPtr);
     return ret;
   }
 
   public virtual int getGroundHeight(int x, int y) {
-    int ret = bridgePINVOKEProxy.remote.Game_getGroundHeight(swigCPtr, x, y);
+    int ret = bridgePINVOKEProxy.Game_getGroundHeight(swigCPtr, x, y);
     return ret;
   }
 
   public virtual bool isWalkable(int x, int y) {
-    bool ret = bridgePINVOKEProxy.remote.Game_isWalkable(swigCPtr, x, y);
+    bool ret = bridgePINVOKEProxy.Game_isWalkable(swigCPtr, x, y);
     return ret;
   }
 
   public virtual bool isBuildable(int x, int y) {
-    bool ret = bridgePINVOKEProxy.remote.Game_isBuildable__SWIG_0(swigCPtr, x, y);
+    bool ret = bridgePINVOKEProxy.Game_isBuildable__SWIG_0(swigCPtr, x, y);
     return ret;
   }
 
   public virtual bool isVisible(int x, int y) {
-    bool ret = bridgePINVOKEProxy.remote.Game_isVisible__SWIG_0(swigCPtr, x, y);
+    bool ret = bridgePINVOKEProxy.Game_isVisible__SWIG_0(swigCPtr, x, y);
     return ret;
   }
 
   public virtual bool isExplored(int x, int y) {
-    bool ret = bridgePINVOKEProxy.remote.Game_isExplored__SWIG_0(swigCPtr, x, y);
+    bool ret = bridgePINVOKEProxy.Game_isExplored__SWIG_0(swigCPtr, x, y);
     return ret;
   }
 
   public virtual bool hasCreep(int x, int y) {
-    bool ret = bridgePINVOKEProxy.remote.Game_hasCreep__SWIG_0(swigCPtr, x, y);
+    bool ret = bridgePINVOKEProxy.Game_hasCreep__SWIG_0(swigCPtr, x, y);
     return ret;
   }
 
   public virtual bool hasPower(int x, int y, int tileWidth, int tileHeight) {
-    bool ret = bridgePINVOKEProxy.remote.Game_hasPower__SWIG_0(swigCPtr, x, y, tileWidth, tileHeight);
+    bool ret = bridgePINVOKEProxy.Game_hasPower__SWIG_0(swigCPtr, x, y, tileWidth, tileHeight);
     return ret;
   }
 
   public virtual bool isBuildable(TilePosition position) {
-    bool ret = bridgePINVOKEProxy.remote.Game_isBuildable__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Game_isBuildable__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool isVisible(TilePosition position) {
-    bool ret = bridgePINVOKEProxy.remote.Game_isVisible__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Game_isVisible__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool isExplored(TilePosition position) {
-    bool ret = bridgePINVOKEProxy.remote.Game_isExplored__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Game_isExplored__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool hasCreep(TilePosition position) {
-    bool ret = bridgePINVOKEProxy.remote.Game_hasCreep__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Game_hasCreep__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool hasPower(TilePosition position, int tileWidth, int tileHeight) {
-    bool ret = bridgePINVOKEProxy.remote.Game_hasPower__SWIG_1(swigCPtr, TilePosition.getCPtr(position), tileWidth, tileHeight);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Game_hasPower__SWIG_1(swigCPtr, TilePosition.getCPtr(position), tileWidth, tileHeight);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool canBuildHere(Unit builder, TilePosition position, UnitType type) {
-    bool ret = bridgePINVOKEProxy.remote.Game_canBuildHere(swigCPtr, Unit.getCPtr(builder), TilePosition.getCPtr(position), UnitType.getCPtr(type));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Game_canBuildHere(swigCPtr, Unit.getCPtr(builder), TilePosition.getCPtr(position), UnitType.getCPtr(type));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool canMake(Unit builder, UnitType type) {
-    bool ret = bridgePINVOKEProxy.remote.Game_canMake(swigCPtr, Unit.getCPtr(builder), UnitType.getCPtr(type));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Game_canMake(swigCPtr, Unit.getCPtr(builder), UnitType.getCPtr(type));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool canResearch(Unit unit, TechType type) {
-    bool ret = bridgePINVOKEProxy.remote.Game_canResearch(swigCPtr, Unit.getCPtr(unit), TechType.getCPtr(type));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Game_canResearch(swigCPtr, Unit.getCPtr(unit), TechType.getCPtr(type));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool canUpgrade(Unit unit, UpgradeType type) {
-    bool ret = bridgePINVOKEProxy.remote.Game_canUpgrade(swigCPtr, Unit.getCPtr(unit), UpgradeType.getCPtr(type));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Game_canUpgrade(swigCPtr, Unit.getCPtr(unit), UpgradeType.getCPtr(type));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual TilePositionSet getStartLocations() {
-    TilePositionSet ret = new TilePositionSet(bridgePINVOKEProxy.remote.Game_getStartLocations(swigCPtr), false);
+    TilePositionSet ret = new TilePositionSet(bridgePINVOKEProxy.Game_getStartLocations(swigCPtr), false);
     return ret;
   }
 
   public virtual void printf(string text) {
-    bridgePINVOKEProxy.remote.Game_printf(swigCPtr, text);
+    bridgePINVOKEProxy.Game_printf(swigCPtr, text);
   }
 
   public virtual void sendText(string text) {
-    bridgePINVOKEProxy.remote.Game_sendText(swigCPtr, text);
+    bridgePINVOKEProxy.Game_sendText(swigCPtr, text);
   }
 
   public virtual void changeRace(Race race) {
-    bridgePINVOKEProxy.remote.Game_changeRace(swigCPtr, Race.getCPtr(race));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_changeRace(swigCPtr, Race.getCPtr(race));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual bool isMultiplayer() {
-    bool ret = bridgePINVOKEProxy.remote.Game_isMultiplayer(swigCPtr);
+    bool ret = bridgePINVOKEProxy.Game_isMultiplayer(swigCPtr);
     return ret;
   }
 
   public virtual bool isPaused() {
-    bool ret = bridgePINVOKEProxy.remote.Game_isPaused(swigCPtr);
+    bool ret = bridgePINVOKEProxy.Game_isPaused(swigCPtr);
     return ret;
   }
 
   public virtual bool isReplay() {
-    bool ret = bridgePINVOKEProxy.remote.Game_isReplay(swigCPtr);
+    bool ret = bridgePINVOKEProxy.Game_isReplay(swigCPtr);
     return ret;
   }
 
   public virtual void startGame() {
-    bridgePINVOKEProxy.remote.Game_startGame(swigCPtr);
+    bridgePINVOKEProxy.Game_startGame(swigCPtr);
   }
 
   public virtual void pauseGame() {
-    bridgePINVOKEProxy.remote.Game_pauseGame(swigCPtr);
+    bridgePINVOKEProxy.Game_pauseGame(swigCPtr);
   }
 
   public virtual void resumeGame() {
-    bridgePINVOKEProxy.remote.Game_resumeGame(swigCPtr);
+    bridgePINVOKEProxy.Game_resumeGame(swigCPtr);
   }
 
   public virtual void leaveGame() {
-    bridgePINVOKEProxy.remote.Game_leaveGame(swigCPtr);
+    bridgePINVOKEProxy.Game_leaveGame(swigCPtr);
   }
 
   public virtual void restartGame() {
-    bridgePINVOKEProxy.remote.Game_restartGame(swigCPtr);
+    bridgePINVOKEProxy.Game_restartGame(swigCPtr);
   }
 
   public virtual void setLocalSpeed(int speed) {
-    bridgePINVOKEProxy.remote.Game_setLocalSpeed__SWIG_0(swigCPtr, speed);
+    bridgePINVOKEProxy.Game_setLocalSpeed__SWIG_0(swigCPtr, speed);
   }
 
   public virtual void setLocalSpeed() {
-    bridgePINVOKEProxy.remote.Game_setLocalSpeed__SWIG_1(swigCPtr);
+    bridgePINVOKEProxy.Game_setLocalSpeed__SWIG_1(swigCPtr);
   }
 
   public virtual UnitSet getSelectedUnits() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.Game_getSelectedUnits(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.Game_getSelectedUnits(swigCPtr), false);
     return ret;
   }
 
   public virtual Player self() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.Game_self(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.Game_self(swigCPtr);
     Player ret = (cPtr == IntPtr.Zero) ? null : new Player(cPtr, false);
     return ret;
   }
 
   public virtual Player enemy() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.Game_enemy(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.Game_enemy(swigCPtr);
     Player ret = (cPtr == IntPtr.Zero) ? null : new Player(cPtr, false);
     return ret;
   }
 
   public virtual void drawText(int ctype, int x, int y, string text) {
-    bridgePINVOKEProxy.remote.Game_drawText(swigCPtr, ctype, x, y, text);
+    bridgePINVOKEProxy.Game_drawText(swigCPtr, ctype, x, y, text);
   }
 
   public virtual void drawTextMap(int x, int y, string text) {
-    bridgePINVOKEProxy.remote.Game_drawTextMap(swigCPtr, x, y, text);
+    bridgePINVOKEProxy.Game_drawTextMap(swigCPtr, x, y, text);
   }
 
   public virtual void drawTextMouse(int x, int y, string text) {
-    bridgePINVOKEProxy.remote.Game_drawTextMouse(swigCPtr, x, y, text);
+    bridgePINVOKEProxy.Game_drawTextMouse(swigCPtr, x, y, text);
   }
 
   public virtual void drawTextScreen(int x, int y, string text) {
-    bridgePINVOKEProxy.remote.Game_drawTextScreen(swigCPtr, x, y, text);
+    bridgePINVOKEProxy.Game_drawTextScreen(swigCPtr, x, y, text);
   }
 
   public virtual void drawBox(int ctype, int left, int top, int right, int bottom, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawBox__SWIG_0(swigCPtr, ctype, left, top, right, bottom, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawBox__SWIG_0(swigCPtr, ctype, left, top, right, bottom, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawBox(int ctype, int left, int top, int right, int bottom, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawBox__SWIG_1(swigCPtr, ctype, left, top, right, bottom, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawBox__SWIG_1(swigCPtr, ctype, left, top, right, bottom, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawBoxMap(int left, int top, int right, int bottom, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawBoxMap__SWIG_0(swigCPtr, left, top, right, bottom, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawBoxMap__SWIG_0(swigCPtr, left, top, right, bottom, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawBoxMap(int left, int top, int right, int bottom, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawBoxMap__SWIG_1(swigCPtr, left, top, right, bottom, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawBoxMap__SWIG_1(swigCPtr, left, top, right, bottom, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawBoxMouse(int left, int top, int right, int bottom, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawBoxMouse__SWIG_0(swigCPtr, left, top, right, bottom, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawBoxMouse__SWIG_0(swigCPtr, left, top, right, bottom, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawBoxMouse(int left, int top, int right, int bottom, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawBoxMouse__SWIG_1(swigCPtr, left, top, right, bottom, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawBoxMouse__SWIG_1(swigCPtr, left, top, right, bottom, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawBoxScreen(int left, int top, int right, int bottom, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawBoxScreen__SWIG_0(swigCPtr, left, top, right, bottom, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawBoxScreen__SWIG_0(swigCPtr, left, top, right, bottom, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawBoxScreen(int left, int top, int right, int bottom, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawBoxScreen__SWIG_1(swigCPtr, left, top, right, bottom, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawBoxScreen__SWIG_1(swigCPtr, left, top, right, bottom, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawTriangle(int ctype, int ax, int ay, int bx, int by, int cx, int cy, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawTriangle__SWIG_0(swigCPtr, ctype, ax, ay, bx, by, cx, cy, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawTriangle__SWIG_0(swigCPtr, ctype, ax, ay, bx, by, cx, cy, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawTriangle(int ctype, int ax, int ay, int bx, int by, int cx, int cy, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawTriangle__SWIG_1(swigCPtr, ctype, ax, ay, bx, by, cx, cy, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawTriangle__SWIG_1(swigCPtr, ctype, ax, ay, bx, by, cx, cy, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawTriangleMap(int ax, int ay, int bx, int by, int cx, int cy, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawTriangleMap__SWIG_0(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawTriangleMap__SWIG_0(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawTriangleMap(int ax, int ay, int bx, int by, int cx, int cy, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawTriangleMap__SWIG_1(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawTriangleMap__SWIG_1(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawTriangleMouse(int ax, int ay, int bx, int by, int cx, int cy, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawTriangleMouse__SWIG_0(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawTriangleMouse__SWIG_0(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawTriangleMouse(int ax, int ay, int bx, int by, int cx, int cy, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawTriangleMouse__SWIG_1(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawTriangleMouse__SWIG_1(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawTriangleScreen(int ax, int ay, int bx, int by, int cx, int cy, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawTriangleScreen__SWIG_0(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawTriangleScreen__SWIG_0(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawTriangleScreen(int ax, int ay, int bx, int by, int cx, int cy, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawTriangleScreen__SWIG_1(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawTriangleScreen__SWIG_1(swigCPtr, ax, ay, bx, by, cx, cy, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawCircle(int ctype, int x, int y, int radius, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawCircle__SWIG_0(swigCPtr, ctype, x, y, radius, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawCircle__SWIG_0(swigCPtr, ctype, x, y, radius, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawCircle(int ctype, int x, int y, int radius, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawCircle__SWIG_1(swigCPtr, ctype, x, y, radius, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawCircle__SWIG_1(swigCPtr, ctype, x, y, radius, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawCircleMap(int x, int y, int radius, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawCircleMap__SWIG_0(swigCPtr, x, y, radius, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawCircleMap__SWIG_0(swigCPtr, x, y, radius, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawCircleMap(int x, int y, int radius, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawCircleMap__SWIG_1(swigCPtr, x, y, radius, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawCircleMap__SWIG_1(swigCPtr, x, y, radius, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawCircleMouse(int x, int y, int radius, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawCircleMouse__SWIG_0(swigCPtr, x, y, radius, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawCircleMouse__SWIG_0(swigCPtr, x, y, radius, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawCircleMouse(int x, int y, int radius, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawCircleMouse__SWIG_1(swigCPtr, x, y, radius, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawCircleMouse__SWIG_1(swigCPtr, x, y, radius, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawCircleScreen(int x, int y, int radius, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawCircleScreen__SWIG_0(swigCPtr, x, y, radius, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawCircleScreen__SWIG_0(swigCPtr, x, y, radius, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawCircleScreen(int x, int y, int radius, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawCircleScreen__SWIG_1(swigCPtr, x, y, radius, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawCircleScreen__SWIG_1(swigCPtr, x, y, radius, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawEllipse(int ctype, int x, int y, int xrad, int yrad, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawEllipse__SWIG_0(swigCPtr, ctype, x, y, xrad, yrad, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawEllipse__SWIG_0(swigCPtr, ctype, x, y, xrad, yrad, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawEllipse(int ctype, int x, int y, int xrad, int yrad, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawEllipse__SWIG_1(swigCPtr, ctype, x, y, xrad, yrad, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawEllipse__SWIG_1(swigCPtr, ctype, x, y, xrad, yrad, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawEllipseMap(int x, int y, int xrad, int yrad, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawEllipseMap__SWIG_0(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawEllipseMap__SWIG_0(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawEllipseMap(int x, int y, int xrad, int yrad, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawEllipseMap__SWIG_1(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawEllipseMap__SWIG_1(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawEllipseMouse(int x, int y, int xrad, int yrad, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawEllipseMouse__SWIG_0(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawEllipseMouse__SWIG_0(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawEllipseMouse(int x, int y, int xrad, int yrad, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawEllipseMouse__SWIG_1(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawEllipseMouse__SWIG_1(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawEllipseScreen(int x, int y, int xrad, int yrad, Color color, bool isSolid) {
-    bridgePINVOKEProxy.remote.Game_drawEllipseScreen__SWIG_0(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color), isSolid);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawEllipseScreen__SWIG_0(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color), isSolid);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawEllipseScreen(int x, int y, int xrad, int yrad, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawEllipseScreen__SWIG_1(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawEllipseScreen__SWIG_1(swigCPtr, x, y, xrad, yrad, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawDot(int ctype, int x, int y, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawDot(swigCPtr, ctype, x, y, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawDot(swigCPtr, ctype, x, y, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawDotMap(int x, int y, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawDotMap(swigCPtr, x, y, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawDotMap(swigCPtr, x, y, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawDotMouse(int x, int y, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawDotMouse(swigCPtr, x, y, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawDotMouse(swigCPtr, x, y, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawDotScreen(int x, int y, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawDotScreen(swigCPtr, x, y, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawDotScreen(swigCPtr, x, y, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawLine(int ctype, int x1, int y1, int x2, int y2, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawLine(swigCPtr, ctype, x1, y1, x2, y2, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawLine(swigCPtr, ctype, x1, y1, x2, y2, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawLineMap(int x1, int y1, int x2, int y2, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawLineMap(swigCPtr, x1, y1, x2, y2, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawLineMap(swigCPtr, x1, y1, x2, y2, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawLineMouse(int x1, int y1, int x2, int y2, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawLineMouse(swigCPtr, x1, y1, x2, y2, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawLineMouse(swigCPtr, x1, y1, x2, y2, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public virtual void drawLineScreen(int x1, int y1, int x2, int y2, Color color) {
-    bridgePINVOKEProxy.remote.Game_drawLineScreen(swigCPtr, x1, y1, x2, y2, Color.getCPtr(color));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.Game_drawLineScreen(swigCPtr, x1, y1, x2, y2, Color.getCPtr(color));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
 }

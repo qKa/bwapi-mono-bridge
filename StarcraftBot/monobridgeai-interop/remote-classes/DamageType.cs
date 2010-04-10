@@ -33,7 +33,7 @@ public partial class DamageType : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_DamageType(swigCPtr);
+          bridgePINVOKEProxy.delete_DamageType(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,47 +82,47 @@ public static bool operator !=(DamageType obj1, DamageType obj2)
 
 
 
-  public DamageType() : this(bridgePINVOKEProxy.remote.new_DamageType__SWIG_0(), true) {
+  public DamageType() : this(bridgePINVOKEProxy.new_DamageType__SWIG_0(), true) {
   }
 
-  public DamageType(int id) : this(bridgePINVOKEProxy.remote.new_DamageType__SWIG_1(id), true) {
+  public DamageType(int id) : this(bridgePINVOKEProxy.new_DamageType__SWIG_1(id), true) {
   }
 
-  public DamageType(DamageType other) : this(bridgePINVOKEProxy.remote.new_DamageType__SWIG_2(DamageType.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public DamageType(DamageType other) : this(bridgePINVOKEProxy.new_DamageType__SWIG_2(DamageType.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public DamageType opAssign(DamageType other) {
-    DamageType ret = new DamageType(bridgePINVOKEProxy.remote.DamageType_opAssign(swigCPtr, DamageType.getCPtr(other)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    DamageType ret = new DamageType(bridgePINVOKEProxy.DamageType_opAssign(swigCPtr, DamageType.getCPtr(other)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opEquals(DamageType other) {
-    bool ret = bridgePINVOKEProxy.remote.DamageType_opEquals(swigCPtr, DamageType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.DamageType_opEquals(swigCPtr, DamageType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opNotEquals(DamageType other) {
-    bool ret = bridgePINVOKEProxy.remote.DamageType_opNotEquals(swigCPtr, DamageType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.DamageType_opNotEquals(swigCPtr, DamageType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opLessThan(DamageType other) {
-    bool ret = bridgePINVOKEProxy.remote.DamageType_opLessThan(swigCPtr, DamageType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.DamageType_opLessThan(swigCPtr, DamageType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int getID() {
-    int ret = bridgePINVOKEProxy.remote.DamageType_getID(swigCPtr);
+    int ret = bridgePINVOKEProxy.DamageType_getID(swigCPtr);
     return ret;
   }
 
   public string getName() {
-    string ret = bridgePINVOKEProxy.remote.DamageType_getName(swigCPtr);
+    string ret = bridgePINVOKEProxy.DamageType_getName(swigCPtr);
     return ret;
   }
 

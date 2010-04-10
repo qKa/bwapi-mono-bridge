@@ -37,7 +37,7 @@ public partial class TilePositionSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_TilePositionSet(swigCPtr);
+          bridgePINVOKEProxy.delete_TilePositionSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class TilePositionSet : IDisposable
 #endif
   
 
-  public TilePositionSet() : this(bridgePINVOKEProxy.remote.new_TilePositionSet__SWIG_0(), true) {
+  public TilePositionSet() : this(bridgePINVOKEProxy.new_TilePositionSet__SWIG_0(), true) {
   }
 
-  public TilePositionSet(TilePositionSet other) : this(bridgePINVOKEProxy.remote.new_TilePositionSet__SWIG_1(TilePositionSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public TilePositionSet(TilePositionSet other) : this(bridgePINVOKEProxy.new_TilePositionSet__SWIG_1(TilePositionSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.TilePositionSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.TilePositionSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.TilePositionSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.TilePositionSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.TilePositionSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.TilePositionSet_Clear(swigCPtr);
   }
 
   public TilePosition getitem(TilePosition key) {
-    TilePosition ret = new TilePosition(bridgePINVOKEProxy.remote.TilePositionSet_getitem(swigCPtr, TilePosition.getCPtr(key)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    TilePosition ret = new TilePosition(bridgePINVOKEProxy.TilePositionSet_getitem(swigCPtr, TilePosition.getCPtr(key)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(TilePosition key) {
-    bool ret = bridgePINVOKEProxy.remote.TilePositionSet_ContainsKey(swigCPtr, TilePosition.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.TilePositionSet_ContainsKey(swigCPtr, TilePosition.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Add(TilePosition key) {
-    bridgePINVOKEProxy.remote.TilePositionSet_Add(swigCPtr, TilePosition.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.TilePositionSet_Add(swigCPtr, TilePosition.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(TilePosition key) {
-    bool ret = bridgePINVOKEProxy.remote.TilePositionSet_Remove(swigCPtr, TilePosition.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.TilePositionSet_Remove(swigCPtr, TilePosition.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.TilePositionSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.TilePositionSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public TilePosition get_next_key(IntPtr swigiterator) {
-    TilePosition ret = new TilePosition(bridgePINVOKEProxy.remote.TilePositionSet_get_next_key(swigCPtr, swigiterator), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    TilePosition ret = new TilePosition(bridgePINVOKEProxy.TilePositionSet_get_next_key(swigCPtr, swigiterator), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

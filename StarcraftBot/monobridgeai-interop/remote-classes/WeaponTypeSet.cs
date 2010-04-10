@@ -37,7 +37,7 @@ public partial class WeaponTypeSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_WeaponTypeSet(swigCPtr);
+          bridgePINVOKEProxy.delete_WeaponTypeSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class WeaponTypeSet : IDisposable
 #endif
   
 
-  public WeaponTypeSet() : this(bridgePINVOKEProxy.remote.new_WeaponTypeSet__SWIG_0(), true) {
+  public WeaponTypeSet() : this(bridgePINVOKEProxy.new_WeaponTypeSet__SWIG_0(), true) {
   }
 
-  public WeaponTypeSet(WeaponTypeSet other) : this(bridgePINVOKEProxy.remote.new_WeaponTypeSet__SWIG_1(WeaponTypeSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public WeaponTypeSet(WeaponTypeSet other) : this(bridgePINVOKEProxy.new_WeaponTypeSet__SWIG_1(WeaponTypeSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.WeaponTypeSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.WeaponTypeSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.WeaponTypeSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.WeaponTypeSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.WeaponTypeSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.WeaponTypeSet_Clear(swigCPtr);
   }
 
   public WeaponType getitem(WeaponType key) {
-    WeaponType ret = new WeaponType(bridgePINVOKEProxy.remote.WeaponTypeSet_getitem(swigCPtr, WeaponType.getCPtr(key)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    WeaponType ret = new WeaponType(bridgePINVOKEProxy.WeaponTypeSet_getitem(swigCPtr, WeaponType.getCPtr(key)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(WeaponType key) {
-    bool ret = bridgePINVOKEProxy.remote.WeaponTypeSet_ContainsKey(swigCPtr, WeaponType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.WeaponTypeSet_ContainsKey(swigCPtr, WeaponType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Add(WeaponType key) {
-    bridgePINVOKEProxy.remote.WeaponTypeSet_Add(swigCPtr, WeaponType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.WeaponTypeSet_Add(swigCPtr, WeaponType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(WeaponType key) {
-    bool ret = bridgePINVOKEProxy.remote.WeaponTypeSet_Remove(swigCPtr, WeaponType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.WeaponTypeSet_Remove(swigCPtr, WeaponType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.WeaponTypeSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.WeaponTypeSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public WeaponType get_next_key(IntPtr swigiterator) {
-    WeaponType ret = new WeaponType(bridgePINVOKEProxy.remote.WeaponTypeSet_get_next_key(swigCPtr, swigiterator), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    WeaponType ret = new WeaponType(bridgePINVOKEProxy.WeaponTypeSet_get_next_key(swigCPtr, swigiterator), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

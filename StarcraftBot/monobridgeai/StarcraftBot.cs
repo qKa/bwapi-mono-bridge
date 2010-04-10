@@ -6,14 +6,21 @@
 
 using System;
 using BWAPI;
+using log4net;
+using log4net.Config;
+using log4net.Layout;
+using log4net.Appender;
+using log4net.Repository;
 
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting;
 
 namespace MonoBridgeAI {
 	class StarcraftBotProxy {
-		private MonoStarcraftBotBase realbot;
-		
+		private AIProxy remotebot;
+        public static ILog botlog;
+
+
 		public delegate void Callback ();
 
 		private Callback onStartCallback;
@@ -39,19 +46,59 @@ namespace MonoBridgeAI {
 			Callback cbonUnitHide);
 		
 		public StarcraftBotProxy() {
+
             bridgePINVOKEProxy.connectProxy();
+            bridge.Broodwar.printf("Local Proxy Connected");
+         
             try
             {
-                RemotingConfiguration.Configure("monobridgeai.dll.config",false);
+                SetupLog();
+            }
+            catch (Exception e)
+            {
+                bridge.Broodwar.printf(e.Message);
+            }
+
+           
+            try
+            {
+                RemotingConfiguration.Configure("bwapi-data\\AI\\bot\\monobridgeai.dll.config",false);
             }
             catch (Exception e)
             {
                 bridge.Broodwar.printf("Error loading remote config." + e.Message);
             }
-            realbot = new StarcraftBot.MonoStarcraftBot();
-			
+            
+            remotebot = null;
+            bridge.Broodwar.printf("Connecting to Remote AI..");
+            
+            for (int i = 0; i < 1; i++)
+            {
+                try
+                {
+                    remotebot = new BWAPI.AIProxy();
+                    bridge.Broodwar.printf("Connect Success:"+RemotingServices.IsTransparentProxy(remotebot));
+                    break;
+                }
+                catch (Exception e)
+                {
+                   bridge.Broodwar.printf("Connect failed. Starting Attempt "+i+". Connecting..");
+                }
+            }
+         
+          //  remotebot = null;
 			RegisterNativeCallbacks();
 		}
+
+        private void SetupLog()
+        {
+            System.Reflection.Assembly asm = System.Reflection.Assembly.GetExecutingAssembly();
+            System.IO.Stream xmlStream = asm.GetManifestResourceStream("monobridgeai.logconfig.xml");
+
+            XmlConfigurator.Configure(xmlStream);
+            botlog = LogManager.GetLogger("monobotbase");
+            botlog.Debug("Bot Loaded");
+        }
 
 		void RegisterNativeCallbacks()
 		{
@@ -67,40 +114,121 @@ namespace MonoBridgeAI {
 			RegisterCallbacks(onStartCallback, onEndCallback, onFrameCallback, onInitCallback, onUnitCreateCallback, onUnitDestroyCallback, onUnitMorphCallback, onUnitShowCallback, onUnitHideCallback);
 		}
 		public void onStart() {
-			realbot.onStart();
+            if (remotebot == null) return;
+            try
+            {
+                remotebot.onStart();
+            }
+            catch (Exception e)
+            {
+                botlog.Debug("Error in onStart():", e);
+            }
 		}
 
 		public void onInit() {
 			bridge.Broodwar.printf("MonoBridgeAI Proxy Class Initialised");
+            if (remotebot == null) return;
+            try
+            {
+                remotebot.onInit();
+            }
+            catch (Exception e)
+            {
+                botlog.Debug("Error in onInit():", e);
+            }
 		}
 		
 		public void onEnd() {
-			realbot.onEnd();
+            if (remotebot == null) return;
+            try {
+                remotebot.onEnd();
+            }
+            catch (Exception e)
+            {
+                botlog.Debug("Error in onEnd():", e);
+            }
 		}
 		
 		public void onFrame() {
-			realbot.onFrame();
+            if (remotebot == null) return;
+            try
+            {
+                remotebot.onFrame();
+            }
+            catch (Exception e)
+            {
+                botlog.Debug("Error in onFrame():", e);
+            }
 		}
 		
 		public Boolean onSendText(string text) {
-			return realbot.onSendText(text);
+            if (remotebot == null) return true;
+            try
+            {
+                return remotebot.onSendText(text);
+            }
+            catch (Exception e)
+            {
+                botlog.Debug("Error in onSendText():", e);
+                return true;
+            }
+       
 		}
 		
-		public void onUnitCreate() {
-			realbot.onUnitCreate(monobridgeutil.getLastUnitParam());
+        public void onUnitCreate() {
+            if (remotebot == null) return;
+            try {
+                remotebot.onUnitCreate();
+            }
+            catch (Exception e)
+            {
+                botlog.Debug("Error in onUnitCreate():", e);
+            }
 		}
 		
-		public void onUnitDestroy() {
-			realbot.onUnitDestroy(monobridgeutil.getLastUnitParam());
+        public void onUnitDestroy() {
+            if (remotebot == null) return;
+            try {
+                remotebot.onUnitDestroy();
+            }
+            catch (Exception e)
+            {
+                botlog.Debug("Error in onUnitDestroy():", e);
+            }
 		}
 		public void onUnitMorph() {
-			realbot.onUnitMorph(monobridgeutil.getLastUnitParam());
+            if (remotebot == null) return;
+            try
+            {
+                remotebot.onUnitMorph();
+            } 
+            catch (Exception e)
+            {
+                botlog.Debug("Error in onUnitMorph():", e);
+            }
 		}
 		public void onUnitShow() {
-			realbot.onUnitShow(monobridgeutil.getLastUnitParam());
+            if (remotebot == null) return;
+            try
+            {
+                remotebot.onUnitShow();
+            }
+            catch (Exception e)
+            {
+                botlog.Debug("Error in onUnitShow():", e);
+            }
+
 		}
 		public void onUnitHide() {
-			realbot.onUnitHide(monobridgeutil.getLastUnitParam());
+            if (remotebot == null) return;
+            try
+            {
+                remotebot.onUnitHide();
+            }
+            catch (Exception e)
+            {
+                botlog.Debug("Error in onUnitHide():", e);
+            }
 		}
 		
 	}

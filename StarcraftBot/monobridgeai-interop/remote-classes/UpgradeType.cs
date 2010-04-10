@@ -33,7 +33,7 @@ public partial class UpgradeType : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_UpgradeType(swigCPtr);
+          bridgePINVOKEProxy.delete_UpgradeType(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,98 +82,98 @@ public static bool operator !=(UpgradeType obj1, UpgradeType obj2)
 
 
 
-  public UpgradeType() : this(bridgePINVOKEProxy.remote.new_UpgradeType__SWIG_0(), true) {
+  public UpgradeType() : this(bridgePINVOKEProxy.new_UpgradeType__SWIG_0(), true) {
   }
 
-  public UpgradeType(int id) : this(bridgePINVOKEProxy.remote.new_UpgradeType__SWIG_1(id), true) {
+  public UpgradeType(int id) : this(bridgePINVOKEProxy.new_UpgradeType__SWIG_1(id), true) {
   }
 
-  public UpgradeType(UpgradeType other) : this(bridgePINVOKEProxy.remote.new_UpgradeType__SWIG_2(UpgradeType.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public UpgradeType(UpgradeType other) : this(bridgePINVOKEProxy.new_UpgradeType__SWIG_2(UpgradeType.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public UpgradeType opAssign(UpgradeType other) {
-    UpgradeType ret = new UpgradeType(bridgePINVOKEProxy.remote.UpgradeType_opAssign(swigCPtr, UpgradeType.getCPtr(other)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    UpgradeType ret = new UpgradeType(bridgePINVOKEProxy.UpgradeType_opAssign(swigCPtr, UpgradeType.getCPtr(other)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opEquals(UpgradeType other) {
-    bool ret = bridgePINVOKEProxy.remote.UpgradeType_opEquals(swigCPtr, UpgradeType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.UpgradeType_opEquals(swigCPtr, UpgradeType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opNotEquals(UpgradeType other) {
-    bool ret = bridgePINVOKEProxy.remote.UpgradeType_opNotEquals(swigCPtr, UpgradeType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.UpgradeType_opNotEquals(swigCPtr, UpgradeType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opLessThan(UpgradeType other) {
-    bool ret = bridgePINVOKEProxy.remote.UpgradeType_opLessThan(swigCPtr, UpgradeType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.UpgradeType_opLessThan(swigCPtr, UpgradeType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int getID() {
-    int ret = bridgePINVOKEProxy.remote.UpgradeType_getID(swigCPtr);
+    int ret = bridgePINVOKEProxy.UpgradeType_getID(swigCPtr);
     return ret;
   }
 
   public string getName() {
-    string ret = bridgePINVOKEProxy.remote.UpgradeType_getName(swigCPtr);
+    string ret = bridgePINVOKEProxy.UpgradeType_getName(swigCPtr);
     return ret;
   }
 
   public Race getRace() {
-    Race ret = new Race(bridgePINVOKEProxy.remote.UpgradeType_getRace(swigCPtr), true);
+    Race ret = new Race(bridgePINVOKEProxy.UpgradeType_getRace(swigCPtr), true);
     return ret;
   }
 
   public int mineralPriceBase() {
-    int ret = bridgePINVOKEProxy.remote.UpgradeType_mineralPriceBase(swigCPtr);
+    int ret = bridgePINVOKEProxy.UpgradeType_mineralPriceBase(swigCPtr);
     return ret;
   }
 
   public int mineralPriceFactor() {
-    int ret = bridgePINVOKEProxy.remote.UpgradeType_mineralPriceFactor(swigCPtr);
+    int ret = bridgePINVOKEProxy.UpgradeType_mineralPriceFactor(swigCPtr);
     return ret;
   }
 
   public int gasPriceBase() {
-    int ret = bridgePINVOKEProxy.remote.UpgradeType_gasPriceBase(swigCPtr);
+    int ret = bridgePINVOKEProxy.UpgradeType_gasPriceBase(swigCPtr);
     return ret;
   }
 
   public int gasPriceFactor() {
-    int ret = bridgePINVOKEProxy.remote.UpgradeType_gasPriceFactor(swigCPtr);
+    int ret = bridgePINVOKEProxy.UpgradeType_gasPriceFactor(swigCPtr);
     return ret;
   }
 
   public int upgradeTimeBase() {
-    int ret = bridgePINVOKEProxy.remote.UpgradeType_upgradeTimeBase(swigCPtr);
+    int ret = bridgePINVOKEProxy.UpgradeType_upgradeTimeBase(swigCPtr);
     return ret;
   }
 
   public int upgradeTimeFactor() {
-    int ret = bridgePINVOKEProxy.remote.UpgradeType_upgradeTimeFactor(swigCPtr);
+    int ret = bridgePINVOKEProxy.UpgradeType_upgradeTimeFactor(swigCPtr);
     return ret;
   }
 
   public int maxRepeats() {
-    int ret = bridgePINVOKEProxy.remote.UpgradeType_maxRepeats(swigCPtr);
+    int ret = bridgePINVOKEProxy.UpgradeType_maxRepeats(swigCPtr);
     return ret;
   }
 
   public UnitType whatUpgrades() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.UpgradeType_whatUpgrades(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.UpgradeType_whatUpgrades(swigCPtr);
     UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
     return ret;
   }
 
   public UnitTypePtrSet whatUses() {
-    UnitTypePtrSet ret = new UnitTypePtrSet(bridgePINVOKEProxy.remote.UpgradeType_whatUses(swigCPtr), false);
+    UnitTypePtrSet ret = new UnitTypePtrSet(bridgePINVOKEProxy.UpgradeType_whatUses(swigCPtr), false);
     return ret;
   }
 

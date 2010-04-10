@@ -33,7 +33,7 @@ public partial class UnitType : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_UnitType(swigCPtr);
+          bridgePINVOKEProxy.delete_UnitType(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,366 +82,366 @@ public static bool operator !=(UnitType obj1, UnitType obj2)
 
 
 
-  public UnitType() : this(bridgePINVOKEProxy.remote.new_UnitType__SWIG_0(), true) {
+  public UnitType() : this(bridgePINVOKEProxy.new_UnitType__SWIG_0(), true) {
   }
 
-  public UnitType(int id) : this(bridgePINVOKEProxy.remote.new_UnitType__SWIG_1(id), true) {
+  public UnitType(int id) : this(bridgePINVOKEProxy.new_UnitType__SWIG_1(id), true) {
   }
 
-  public UnitType(UnitType other) : this(bridgePINVOKEProxy.remote.new_UnitType__SWIG_2(UnitType.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public UnitType(UnitType other) : this(bridgePINVOKEProxy.new_UnitType__SWIG_2(UnitType.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public UnitType opAssign(UnitType other) {
-    UnitType ret = new UnitType(bridgePINVOKEProxy.remote.UnitType_opAssign(swigCPtr, UnitType.getCPtr(other)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    UnitType ret = new UnitType(bridgePINVOKEProxy.UnitType_opAssign(swigCPtr, UnitType.getCPtr(other)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opEquals(UnitType other) {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_opEquals(swigCPtr, UnitType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.UnitType_opEquals(swigCPtr, UnitType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opNotEquals(UnitType other) {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_opNotEquals(swigCPtr, UnitType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.UnitType_opNotEquals(swigCPtr, UnitType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opLessThan(UnitType other) {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_opLessThan(swigCPtr, UnitType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.UnitType_opLessThan(swigCPtr, UnitType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int getID() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_getID(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_getID(swigCPtr);
     return ret;
   }
 
   public string getName() {
-    string ret = bridgePINVOKEProxy.remote.UnitType_getName(swigCPtr);
+    string ret = bridgePINVOKEProxy.UnitType_getName(swigCPtr);
     return ret;
   }
 
   public string getSubLabel() {
-    string ret = bridgePINVOKEProxy.remote.UnitType_getSubLabel(swigCPtr);
+    string ret = bridgePINVOKEProxy.UnitType_getSubLabel(swigCPtr);
     return ret;
   }
 
   public Race getRace() {
-    Race ret = new Race(bridgePINVOKEProxy.remote.UnitType_getRace(swigCPtr), true);
+    Race ret = new Race(bridgePINVOKEProxy.UnitType_getRace(swigCPtr), true);
     return ret;
   }
 
   public UnitTypePtrIntPair whatBuilds() {
-    UnitTypePtrIntPair ret = new UnitTypePtrIntPair(bridgePINVOKEProxy.remote.UnitType_whatBuilds(swigCPtr), true);
+    UnitTypePtrIntPair ret = new UnitTypePtrIntPair(bridgePINVOKEProxy.UnitType_whatBuilds(swigCPtr), true);
     return ret;
   }
 
   public UnitTypePtrIntMap requiredUnits() {
-    UnitTypePtrIntMap ret = new UnitTypePtrIntMap(bridgePINVOKEProxy.remote.UnitType_requiredUnits(swigCPtr), false);
+    UnitTypePtrIntMap ret = new UnitTypePtrIntMap(bridgePINVOKEProxy.UnitType_requiredUnits(swigCPtr), false);
     return ret;
   }
 
   public TechType requiredTech() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.UnitType_requiredTech(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.UnitType_requiredTech(swigCPtr);
     TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
     return ret;
   }
 
   public TechTypePtrSet abilities() {
-    TechTypePtrSet ret = new TechTypePtrSet(bridgePINVOKEProxy.remote.UnitType_abilities(swigCPtr), false);
+    TechTypePtrSet ret = new TechTypePtrSet(bridgePINVOKEProxy.UnitType_abilities(swigCPtr), false);
     return ret;
   }
 
   public UpgradeTypePtrSet upgrades() {
-    UpgradeTypePtrSet ret = new UpgradeTypePtrSet(bridgePINVOKEProxy.remote.UnitType_upgrades(swigCPtr), false);
+    UpgradeTypePtrSet ret = new UpgradeTypePtrSet(bridgePINVOKEProxy.UnitType_upgrades(swigCPtr), false);
     return ret;
   }
 
   public UpgradeType armorUpgrade() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.UnitType_armorUpgrade(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.UnitType_armorUpgrade(swigCPtr);
     UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
     return ret;
   }
 
   public int maxHitPoints() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_maxHitPoints(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_maxHitPoints(swigCPtr);
     return ret;
   }
 
   public int maxShields() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_maxShields(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_maxShields(swigCPtr);
     return ret;
   }
 
   public int maxEnergy() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_maxEnergy(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_maxEnergy(swigCPtr);
     return ret;
   }
 
   public int armor() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_armor(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_armor(swigCPtr);
     return ret;
   }
 
   public int mineralPrice() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_mineralPrice(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_mineralPrice(swigCPtr);
     return ret;
   }
 
   public int gasPrice() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_gasPrice(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_gasPrice(swigCPtr);
     return ret;
   }
 
   public int buildTime() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_buildTime(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_buildTime(swigCPtr);
     return ret;
   }
 
   public int supplyRequired() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_supplyRequired(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_supplyRequired(swigCPtr);
     return ret;
   }
 
   public int supplyProvided() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_supplyProvided(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_supplyProvided(swigCPtr);
     return ret;
   }
 
   public int spaceRequired() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_spaceRequired(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_spaceRequired(swigCPtr);
     return ret;
   }
 
   public int spaceProvided() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_spaceProvided(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_spaceProvided(swigCPtr);
     return ret;
   }
 
   public int buildScore() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_buildScore(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_buildScore(swigCPtr);
     return ret;
   }
 
   public int destroyScore() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_destroyScore(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_destroyScore(swigCPtr);
     return ret;
   }
 
   public UnitSizeType size() {
-    UnitSizeType ret = new UnitSizeType(bridgePINVOKEProxy.remote.UnitType_size(swigCPtr), true);
+    UnitSizeType ret = new UnitSizeType(bridgePINVOKEProxy.UnitType_size(swigCPtr), true);
     return ret;
   }
 
   public int tileWidth() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_tileWidth(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_tileWidth(swigCPtr);
     return ret;
   }
 
   public int tileHeight() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_tileHeight(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_tileHeight(swigCPtr);
     return ret;
   }
 
   public int dimensionLeft() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_dimensionLeft(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_dimensionLeft(swigCPtr);
     return ret;
   }
 
   public int dimensionUp() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_dimensionUp(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_dimensionUp(swigCPtr);
     return ret;
   }
 
   public int dimensionRight() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_dimensionRight(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_dimensionRight(swigCPtr);
     return ret;
   }
 
   public int dimensionDown() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_dimensionDown(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_dimensionDown(swigCPtr);
     return ret;
   }
 
   public int seekRange() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_seekRange(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_seekRange(swigCPtr);
     return ret;
   }
 
   public int sightRange() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_sightRange(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_sightRange(swigCPtr);
     return ret;
   }
 
   public WeaponType groundWeapon() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.UnitType_groundWeapon(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.UnitType_groundWeapon(swigCPtr);
     WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
     return ret;
   }
 
   public int maxGroundHits() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_maxGroundHits(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_maxGroundHits(swigCPtr);
     return ret;
   }
 
   public WeaponType airWeapon() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.UnitType_airWeapon(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.UnitType_airWeapon(swigCPtr);
     WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
     return ret;
   }
 
   public int maxAirHits() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_maxAirHits(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_maxAirHits(swigCPtr);
     return ret;
   }
 
   public double topSpeed() {
-    double ret = bridgePINVOKEProxy.remote.UnitType_topSpeed(swigCPtr);
+    double ret = bridgePINVOKEProxy.UnitType_topSpeed(swigCPtr);
     return ret;
   }
 
   public int acceleration() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_acceleration(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_acceleration(swigCPtr);
     return ret;
   }
 
   public int haltDistance() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_haltDistance(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_haltDistance(swigCPtr);
     return ret;
   }
 
   public int turnRadius() {
-    int ret = bridgePINVOKEProxy.remote.UnitType_turnRadius(swigCPtr);
+    int ret = bridgePINVOKEProxy.UnitType_turnRadius(swigCPtr);
     return ret;
   }
 
   public bool canProduce() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_canProduce(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_canProduce(swigCPtr);
     return ret;
   }
 
   public bool canAttack() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_canAttack(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_canAttack(swigCPtr);
     return ret;
   }
 
   public bool canMove() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_canMove(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_canMove(swigCPtr);
     return ret;
   }
 
   public bool isFlyer() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isFlyer(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isFlyer(swigCPtr);
     return ret;
   }
 
   public bool regeneratesHP() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_regeneratesHP(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_regeneratesHP(swigCPtr);
     return ret;
   }
 
   public bool isSpellcaster() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isSpellcaster(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isSpellcaster(swigCPtr);
     return ret;
   }
 
   public bool hasPermanentCloak() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_hasPermanentCloak(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_hasPermanentCloak(swigCPtr);
     return ret;
   }
 
   public bool isInvincible() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isInvincible(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isInvincible(swigCPtr);
     return ret;
   }
 
   public bool isOrganic() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isOrganic(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isOrganic(swigCPtr);
     return ret;
   }
 
   public bool isMechanical() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isMechanical(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isMechanical(swigCPtr);
     return ret;
   }
 
   public bool isRobotic() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isRobotic(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isRobotic(swigCPtr);
     return ret;
   }
 
   public bool isDetector() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isDetector(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isDetector(swigCPtr);
     return ret;
   }
 
   public bool isResourceContainer() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isResourceContainer(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isResourceContainer(swigCPtr);
     return ret;
   }
 
   public bool isResourceDepot() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isResourceDepot(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isResourceDepot(swigCPtr);
     return ret;
   }
 
   public bool isRefinery() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isRefinery(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isRefinery(swigCPtr);
     return ret;
   }
 
   public bool isWorker() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isWorker(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isWorker(swigCPtr);
     return ret;
   }
 
   public bool requiresPsi() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_requiresPsi(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_requiresPsi(swigCPtr);
     return ret;
   }
 
   public bool requiresCreep() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_requiresCreep(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_requiresCreep(swigCPtr);
     return ret;
   }
 
   public bool isTwoUnitsInOneEgg() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isTwoUnitsInOneEgg(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isTwoUnitsInOneEgg(swigCPtr);
     return ret;
   }
 
   public bool isBurrowable() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isBurrowable(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isBurrowable(swigCPtr);
     return ret;
   }
 
   public bool isCloakable() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isCloakable(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isCloakable(swigCPtr);
     return ret;
   }
 
   public bool isBuilding() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isBuilding(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isBuilding(swigCPtr);
     return ret;
   }
 
   public bool isAddon() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isAddon(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isAddon(swigCPtr);
     return ret;
   }
 
   public bool isFlyingBuilding() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isFlyingBuilding(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isFlyingBuilding(swigCPtr);
     return ret;
   }
 
   public bool isNeutral() {
-    bool ret = bridgePINVOKEProxy.remote.UnitType_isNeutral(swigCPtr);
+    bool ret = bridgePINVOKEProxy.UnitType_isNeutral(swigCPtr);
     return ret;
   }
 
