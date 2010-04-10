@@ -33,7 +33,7 @@ public partial class monobridgeutil : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_monobridgeutil(swigCPtr);
+          bridgePINVOKEProxy.delete_monobridgeutil(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -83,12 +83,12 @@ public static bool operator !=(monobridgeutil obj1, monobridgeutil obj2)
 
 
   public static Unit getLastUnitParam() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.monobridgeutil_getLastUnitParam();
+    IntPtr cPtr = bridgePINVOKEProxy.monobridgeutil_getLastUnitParam();
     Unit ret = (cPtr == IntPtr.Zero) ? null : new Unit(cPtr, false);
     return ret;
   }
 
-  public monobridgeutil() : this(bridgePINVOKEProxy.remote.new_monobridgeutil(), true) {
+  public monobridgeutil() : this(bridgePINVOKEProxy.new_monobridgeutil(), true) {
   }
 
 }

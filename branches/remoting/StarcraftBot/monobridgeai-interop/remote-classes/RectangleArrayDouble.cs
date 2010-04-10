@@ -33,7 +33,7 @@ public partial class RectangleArrayDouble : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_RectangleArrayDouble(swigCPtr);
+          bridgePINVOKEProxy.delete_RectangleArrayDouble(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,61 +82,61 @@ public static bool operator !=(RectangleArrayDouble obj1, RectangleArrayDouble o
 
 
 
-  public RectangleArrayDouble(uint width, uint height, SWIGTYPE_p_double data) : this(bridgePINVOKEProxy.remote.new_RectangleArrayDouble__SWIG_0(width, height, SWIGTYPE_p_double.getCPtr(data)), true) {
+  public RectangleArrayDouble(uint width, uint height, SWIGTYPE_p_double data) : this(bridgePINVOKEProxy.new_RectangleArrayDouble__SWIG_0(width, height, SWIGTYPE_p_double.getCPtr(data)), true) {
   }
 
-  public RectangleArrayDouble(uint width, uint height) : this(bridgePINVOKEProxy.remote.new_RectangleArrayDouble__SWIG_1(width, height), true) {
+  public RectangleArrayDouble(uint width, uint height) : this(bridgePINVOKEProxy.new_RectangleArrayDouble__SWIG_1(width, height), true) {
   }
 
-  public RectangleArrayDouble(uint width) : this(bridgePINVOKEProxy.remote.new_RectangleArrayDouble__SWIG_2(width), true) {
+  public RectangleArrayDouble(uint width) : this(bridgePINVOKEProxy.new_RectangleArrayDouble__SWIG_2(width), true) {
   }
 
-  public RectangleArrayDouble() : this(bridgePINVOKEProxy.remote.new_RectangleArrayDouble__SWIG_3(), true) {
+  public RectangleArrayDouble() : this(bridgePINVOKEProxy.new_RectangleArrayDouble__SWIG_3(), true) {
   }
 
-  public RectangleArrayDouble(RectangleArrayDouble rectangleArray) : this(bridgePINVOKEProxy.remote.new_RectangleArrayDouble__SWIG_4(RectangleArrayDouble.getCPtr(rectangleArray)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public RectangleArrayDouble(RectangleArrayDouble rectangleArray) : this(bridgePINVOKEProxy.new_RectangleArrayDouble__SWIG_4(RectangleArrayDouble.getCPtr(rectangleArray)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public uint getWidth() {
-    uint ret = bridgePINVOKEProxy.remote.RectangleArrayDouble_getWidth(swigCPtr);
+    uint ret = bridgePINVOKEProxy.RectangleArrayDouble_getWidth(swigCPtr);
     return ret;
   }
 
   public uint getHeight() {
-    uint ret = bridgePINVOKEProxy.remote.RectangleArrayDouble_getHeight(swigCPtr);
+    uint ret = bridgePINVOKEProxy.RectangleArrayDouble_getHeight(swigCPtr);
     return ret;
   }
 
   public SWIGTYPE_p_double getItem(uint x, uint y) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.RectangleArrayDouble_getItem(swigCPtr, x, y);
+    IntPtr cPtr = bridgePINVOKEProxy.RectangleArrayDouble_getItem(swigCPtr, x, y);
     SWIGTYPE_p_double ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
     return ret;
   }
 
   public void setItem(uint x, uint y, SWIGTYPE_p_double item) {
-    bridgePINVOKEProxy.remote.RectangleArrayDouble_setItem(swigCPtr, x, y, SWIGTYPE_p_double.getCPtr(item));
+    bridgePINVOKEProxy.RectangleArrayDouble_setItem(swigCPtr, x, y, SWIGTYPE_p_double.getCPtr(item));
   }
 
   public void resize(uint width, uint height) {
-    bridgePINVOKEProxy.remote.RectangleArrayDouble_resize(swigCPtr, width, height);
+    bridgePINVOKEProxy.RectangleArrayDouble_resize(swigCPtr, width, height);
   }
 
   public void printToFile(SWIGTYPE_p_FILE f) {
-    bridgePINVOKEProxy.remote.RectangleArrayDouble_printToFile(swigCPtr, SWIGTYPE_p_FILE.getCPtr(f));
+    bridgePINVOKEProxy.RectangleArrayDouble_printToFile(swigCPtr, SWIGTYPE_p_FILE.getCPtr(f));
   }
 
   public void saveToFile(string fileName) {
-    bridgePINVOKEProxy.remote.RectangleArrayDouble_saveToFile(swigCPtr, fileName);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.RectangleArrayDouble_saveToFile(swigCPtr, fileName);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public void setTo(double value) {
-    bridgePINVOKEProxy.remote.RectangleArrayDouble_setTo(swigCPtr, value);
+    bridgePINVOKEProxy.RectangleArrayDouble_setTo(swigCPtr, value);
   }
 
   public void setBorderTo(double value) {
-    bridgePINVOKEProxy.remote.RectangleArrayDouble_setBorderTo(swigCPtr, value);
+    bridgePINVOKEProxy.RectangleArrayDouble_setBorderTo(swigCPtr, value);
   }
 
 }

@@ -37,7 +37,7 @@ public partial class RegionPtrSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_RegionPtrSet(swigCPtr);
+          bridgePINVOKEProxy.delete_RegionPtrSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class RegionPtrSet : IDisposable
 #endif
   
 
-  public RegionPtrSet() : this(bridgePINVOKEProxy.remote.new_RegionPtrSet__SWIG_0(), true) {
+  public RegionPtrSet() : this(bridgePINVOKEProxy.new_RegionPtrSet__SWIG_0(), true) {
   }
 
-  public RegionPtrSet(RegionPtrSet other) : this(bridgePINVOKEProxy.remote.new_RegionPtrSet__SWIG_1(RegionPtrSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public RegionPtrSet(RegionPtrSet other) : this(bridgePINVOKEProxy.new_RegionPtrSet__SWIG_1(RegionPtrSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.RegionPtrSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.RegionPtrSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.RegionPtrSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.RegionPtrSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.RegionPtrSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.RegionPtrSet_Clear(swigCPtr);
   }
 
   public Region getitem(Region key) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.RegionPtrSet_getitem(swigCPtr, Region.getCPtr(key));
+    IntPtr cPtr = bridgePINVOKEProxy.RegionPtrSet_getitem(swigCPtr, Region.getCPtr(key));
     Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(Region key) {
-    bool ret = bridgePINVOKEProxy.remote.RegionPtrSet_ContainsKey(swigCPtr, Region.getCPtr(key));
+    bool ret = bridgePINVOKEProxy.RegionPtrSet_ContainsKey(swigCPtr, Region.getCPtr(key));
     return ret;
   }
 
   public void Add(Region key) {
-    bridgePINVOKEProxy.remote.RegionPtrSet_Add(swigCPtr, Region.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.RegionPtrSet_Add(swigCPtr, Region.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(Region key) {
-    bool ret = bridgePINVOKEProxy.remote.RegionPtrSet_Remove(swigCPtr, Region.getCPtr(key));
+    bool ret = bridgePINVOKEProxy.RegionPtrSet_Remove(swigCPtr, Region.getCPtr(key));
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.RegionPtrSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.RegionPtrSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public Region get_next_key(IntPtr swigiterator) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.RegionPtrSet_get_next_key(swigCPtr, swigiterator);
+    IntPtr cPtr = bridgePINVOKEProxy.RegionPtrSet_get_next_key(swigCPtr, swigiterator);
     Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

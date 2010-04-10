@@ -33,7 +33,7 @@ public partial class PlayerType : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_PlayerType(swigCPtr);
+          bridgePINVOKEProxy.delete_PlayerType(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,47 +82,47 @@ public static bool operator !=(PlayerType obj1, PlayerType obj2)
 
 
 
-  public PlayerType() : this(bridgePINVOKEProxy.remote.new_PlayerType__SWIG_0(), true) {
+  public PlayerType() : this(bridgePINVOKEProxy.new_PlayerType__SWIG_0(), true) {
   }
 
-  public PlayerType(int id) : this(bridgePINVOKEProxy.remote.new_PlayerType__SWIG_1(id), true) {
+  public PlayerType(int id) : this(bridgePINVOKEProxy.new_PlayerType__SWIG_1(id), true) {
   }
 
-  public PlayerType(PlayerType other) : this(bridgePINVOKEProxy.remote.new_PlayerType__SWIG_2(PlayerType.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public PlayerType(PlayerType other) : this(bridgePINVOKEProxy.new_PlayerType__SWIG_2(PlayerType.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public PlayerType opAssign(PlayerType other) {
-    PlayerType ret = new PlayerType(bridgePINVOKEProxy.remote.PlayerType_opAssign(swigCPtr, PlayerType.getCPtr(other)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    PlayerType ret = new PlayerType(bridgePINVOKEProxy.PlayerType_opAssign(swigCPtr, PlayerType.getCPtr(other)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opEquals(PlayerType other) {
-    bool ret = bridgePINVOKEProxy.remote.PlayerType_opEquals(swigCPtr, PlayerType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.PlayerType_opEquals(swigCPtr, PlayerType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opNotEquals(PlayerType other) {
-    bool ret = bridgePINVOKEProxy.remote.PlayerType_opNotEquals(swigCPtr, PlayerType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.PlayerType_opNotEquals(swigCPtr, PlayerType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opLessThan(PlayerType other) {
-    bool ret = bridgePINVOKEProxy.remote.PlayerType_opLessThan(swigCPtr, PlayerType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.PlayerType_opLessThan(swigCPtr, PlayerType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int getID() {
-    int ret = bridgePINVOKEProxy.remote.PlayerType_getID(swigCPtr);
+    int ret = bridgePINVOKEProxy.PlayerType_getID(swigCPtr);
     return ret;
   }
 
   public string getName() {
-    string ret = bridgePINVOKEProxy.remote.PlayerType_getName(swigCPtr);
+    string ret = bridgePINVOKEProxy.PlayerType_getName(swigCPtr);
     return ret;
   }
 

@@ -33,7 +33,7 @@ public partial class Force : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_Force(swigCPtr);
+          bridgePINVOKEProxy.delete_Force(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -83,12 +83,12 @@ public static bool operator !=(Force obj1, Force obj2)
 
 
   public virtual string getName() {
-    string ret = bridgePINVOKEProxy.remote.Force_getName(swigCPtr);
+    string ret = bridgePINVOKEProxy.Force_getName(swigCPtr);
     return ret;
   }
 
   public virtual PlayerPtrSet getPlayers() {
-    PlayerPtrSet ret = new PlayerPtrSet(bridgePINVOKEProxy.remote.Force_getPlayers(swigCPtr), true);
+    PlayerPtrSet ret = new PlayerPtrSet(bridgePINVOKEProxy.Force_getPlayers(swigCPtr), true);
     return ret;
   }
 

@@ -33,7 +33,7 @@ public partial class RegionPtrRegionPtrPair : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_RegionPtrRegionPtrPair(swigCPtr);
+          bridgePINVOKEProxy.delete_RegionPtrRegionPtrPair(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,22 +82,22 @@ public static bool operator !=(RegionPtrRegionPtrPair obj1, RegionPtrRegionPtrPa
 
 
 
-  public RegionPtrRegionPtrPair() : this(bridgePINVOKEProxy.remote.new_RegionPtrRegionPtrPair__SWIG_0(), true) {
+  public RegionPtrRegionPtrPair() : this(bridgePINVOKEProxy.new_RegionPtrRegionPtrPair__SWIG_0(), true) {
   }
 
-  public RegionPtrRegionPtrPair(Region t, Region u) : this(bridgePINVOKEProxy.remote.new_RegionPtrRegionPtrPair__SWIG_1(Region.getCPtr(t), Region.getCPtr(u)), true) {
+  public RegionPtrRegionPtrPair(Region t, Region u) : this(bridgePINVOKEProxy.new_RegionPtrRegionPtrPair__SWIG_1(Region.getCPtr(t), Region.getCPtr(u)), true) {
   }
 
-  public RegionPtrRegionPtrPair(RegionPtrRegionPtrPair p) : this(bridgePINVOKEProxy.remote.new_RegionPtrRegionPtrPair__SWIG_2(RegionPtrRegionPtrPair.getCPtr(p)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public RegionPtrRegionPtrPair(RegionPtrRegionPtrPair p) : this(bridgePINVOKEProxy.new_RegionPtrRegionPtrPair__SWIG_2(RegionPtrRegionPtrPair.getCPtr(p)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public Region first {
     set {
-      bridgePINVOKEProxy.remote.RegionPtrRegionPtrPair_first_set(swigCPtr, Region.getCPtr(value));
+      bridgePINVOKEProxy.RegionPtrRegionPtrPair_first_set(swigCPtr, Region.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.RegionPtrRegionPtrPair_first_get(swigCPtr);
+      IntPtr cPtr = bridgePINVOKEProxy.RegionPtrRegionPtrPair_first_get(swigCPtr);
       Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
       return ret;
     } 
@@ -105,10 +105,10 @@ public static bool operator !=(RegionPtrRegionPtrPair obj1, RegionPtrRegionPtrPa
 
   public Region second {
     set {
-      bridgePINVOKEProxy.remote.RegionPtrRegionPtrPair_second_set(swigCPtr, Region.getCPtr(value));
+      bridgePINVOKEProxy.RegionPtrRegionPtrPair_second_set(swigCPtr, Region.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.RegionPtrRegionPtrPair_second_get(swigCPtr);
+      IntPtr cPtr = bridgePINVOKEProxy.RegionPtrRegionPtrPair_second_get(swigCPtr);
       Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
       return ret;
     } 

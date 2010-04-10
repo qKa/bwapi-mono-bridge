@@ -37,7 +37,7 @@ public partial class PolygonPtrSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_PolygonPtrSet(swigCPtr);
+          bridgePINVOKEProxy.delete_PolygonPtrSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class PolygonPtrSet : IDisposable
 #endif
   
 
-  public PolygonPtrSet() : this(bridgePINVOKEProxy.remote.new_PolygonPtrSet__SWIG_0(), true) {
+  public PolygonPtrSet() : this(bridgePINVOKEProxy.new_PolygonPtrSet__SWIG_0(), true) {
   }
 
-  public PolygonPtrSet(PolygonPtrSet other) : this(bridgePINVOKEProxy.remote.new_PolygonPtrSet__SWIG_1(PolygonPtrSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public PolygonPtrSet(PolygonPtrSet other) : this(bridgePINVOKEProxy.new_PolygonPtrSet__SWIG_1(PolygonPtrSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.PolygonPtrSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.PolygonPtrSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.PolygonPtrSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.PolygonPtrSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.PolygonPtrSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.PolygonPtrSet_Clear(swigCPtr);
   }
 
   public Polygon getitem(Polygon key) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.PolygonPtrSet_getitem(swigCPtr, Polygon.getCPtr(key));
+    IntPtr cPtr = bridgePINVOKEProxy.PolygonPtrSet_getitem(swigCPtr, Polygon.getCPtr(key));
     Polygon ret = (cPtr == IntPtr.Zero) ? null : new Polygon(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(Polygon key) {
-    bool ret = bridgePINVOKEProxy.remote.PolygonPtrSet_ContainsKey(swigCPtr, Polygon.getCPtr(key));
+    bool ret = bridgePINVOKEProxy.PolygonPtrSet_ContainsKey(swigCPtr, Polygon.getCPtr(key));
     return ret;
   }
 
   public void Add(Polygon key) {
-    bridgePINVOKEProxy.remote.PolygonPtrSet_Add(swigCPtr, Polygon.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PolygonPtrSet_Add(swigCPtr, Polygon.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(Polygon key) {
-    bool ret = bridgePINVOKEProxy.remote.PolygonPtrSet_Remove(swigCPtr, Polygon.getCPtr(key));
+    bool ret = bridgePINVOKEProxy.PolygonPtrSet_Remove(swigCPtr, Polygon.getCPtr(key));
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.PolygonPtrSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.PolygonPtrSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public Polygon get_next_key(IntPtr swigiterator) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.PolygonPtrSet_get_next_key(swigCPtr, swigiterator);
+    IntPtr cPtr = bridgePINVOKEProxy.PolygonPtrSet_get_next_key(swigCPtr, swigiterator);
     Polygon ret = (cPtr == IntPtr.Zero) ? null : new Polygon(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

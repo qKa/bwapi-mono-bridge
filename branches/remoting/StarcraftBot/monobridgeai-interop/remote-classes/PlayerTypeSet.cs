@@ -37,7 +37,7 @@ public partial class PlayerTypeSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_PlayerTypeSet(swigCPtr);
+          bridgePINVOKEProxy.delete_PlayerTypeSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class PlayerTypeSet : IDisposable
 #endif
   
 
-  public PlayerTypeSet() : this(bridgePINVOKEProxy.remote.new_PlayerTypeSet__SWIG_0(), true) {
+  public PlayerTypeSet() : this(bridgePINVOKEProxy.new_PlayerTypeSet__SWIG_0(), true) {
   }
 
-  public PlayerTypeSet(PlayerTypeSet other) : this(bridgePINVOKEProxy.remote.new_PlayerTypeSet__SWIG_1(PlayerTypeSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public PlayerTypeSet(PlayerTypeSet other) : this(bridgePINVOKEProxy.new_PlayerTypeSet__SWIG_1(PlayerTypeSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.PlayerTypeSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.PlayerTypeSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.PlayerTypeSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.PlayerTypeSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.PlayerTypeSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.PlayerTypeSet_Clear(swigCPtr);
   }
 
   public PlayerType getitem(PlayerType key) {
-    PlayerType ret = new PlayerType(bridgePINVOKEProxy.remote.PlayerTypeSet_getitem(swigCPtr, PlayerType.getCPtr(key)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    PlayerType ret = new PlayerType(bridgePINVOKEProxy.PlayerTypeSet_getitem(swigCPtr, PlayerType.getCPtr(key)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(PlayerType key) {
-    bool ret = bridgePINVOKEProxy.remote.PlayerTypeSet_ContainsKey(swigCPtr, PlayerType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.PlayerTypeSet_ContainsKey(swigCPtr, PlayerType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Add(PlayerType key) {
-    bridgePINVOKEProxy.remote.PlayerTypeSet_Add(swigCPtr, PlayerType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PlayerTypeSet_Add(swigCPtr, PlayerType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(PlayerType key) {
-    bool ret = bridgePINVOKEProxy.remote.PlayerTypeSet_Remove(swigCPtr, PlayerType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.PlayerTypeSet_Remove(swigCPtr, PlayerType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.PlayerTypeSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.PlayerTypeSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public PlayerType get_next_key(IntPtr swigiterator) {
-    PlayerType ret = new PlayerType(bridgePINVOKEProxy.remote.PlayerTypeSet_get_next_key(swigCPtr, swigiterator), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    PlayerType ret = new PlayerType(bridgePINVOKEProxy.PlayerTypeSet_get_next_key(swigCPtr, swigiterator), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

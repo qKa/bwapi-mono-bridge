@@ -37,7 +37,7 @@ public partial class AttackTypeSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_AttackTypeSet(swigCPtr);
+          bridgePINVOKEProxy.delete_AttackTypeSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class AttackTypeSet : IDisposable
 #endif
   
 
-  public AttackTypeSet() : this(bridgePINVOKEProxy.remote.new_AttackTypeSet__SWIG_0(), true) {
+  public AttackTypeSet() : this(bridgePINVOKEProxy.new_AttackTypeSet__SWIG_0(), true) {
   }
 
-  public AttackTypeSet(AttackTypeSet other) : this(bridgePINVOKEProxy.remote.new_AttackTypeSet__SWIG_1(AttackTypeSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public AttackTypeSet(AttackTypeSet other) : this(bridgePINVOKEProxy.new_AttackTypeSet__SWIG_1(AttackTypeSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.AttackTypeSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.AttackTypeSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.AttackTypeSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.AttackTypeSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.AttackTypeSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.AttackTypeSet_Clear(swigCPtr);
   }
 
   public AttackType getitem(AttackType key) {
-    AttackType ret = new AttackType(bridgePINVOKEProxy.remote.AttackTypeSet_getitem(swigCPtr, AttackType.getCPtr(key)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    AttackType ret = new AttackType(bridgePINVOKEProxy.AttackTypeSet_getitem(swigCPtr, AttackType.getCPtr(key)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(AttackType key) {
-    bool ret = bridgePINVOKEProxy.remote.AttackTypeSet_ContainsKey(swigCPtr, AttackType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.AttackTypeSet_ContainsKey(swigCPtr, AttackType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Add(AttackType key) {
-    bridgePINVOKEProxy.remote.AttackTypeSet_Add(swigCPtr, AttackType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.AttackTypeSet_Add(swigCPtr, AttackType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(AttackType key) {
-    bool ret = bridgePINVOKEProxy.remote.AttackTypeSet_Remove(swigCPtr, AttackType.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.AttackTypeSet_Remove(swigCPtr, AttackType.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.AttackTypeSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.AttackTypeSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public AttackType get_next_key(IntPtr swigiterator) {
-    AttackType ret = new AttackType(bridgePINVOKEProxy.remote.AttackTypeSet_get_next_key(swigCPtr, swigiterator), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    AttackType ret = new AttackType(bridgePINVOKEProxy.AttackTypeSet_get_next_key(swigCPtr, swigiterator), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

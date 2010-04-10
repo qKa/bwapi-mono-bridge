@@ -37,7 +37,7 @@ public partial class PlayerPtrSet : IDisposable
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_PlayerPtrSet(swigCPtr);
+          bridgePINVOKEProxy.delete_PlayerPtrSet(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -186,58 +186,58 @@ public partial class PlayerPtrSet : IDisposable
 #endif
   
 
-  public PlayerPtrSet() : this(bridgePINVOKEProxy.remote.new_PlayerPtrSet__SWIG_0(), true) {
+  public PlayerPtrSet() : this(bridgePINVOKEProxy.new_PlayerPtrSet__SWIG_0(), true) {
   }
 
-  public PlayerPtrSet(PlayerPtrSet other) : this(bridgePINVOKEProxy.remote.new_PlayerPtrSet__SWIG_1(PlayerPtrSet.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public PlayerPtrSet(PlayerPtrSet other) : this(bridgePINVOKEProxy.new_PlayerPtrSet__SWIG_1(PlayerPtrSet.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = bridgePINVOKEProxy.remote.PlayerPtrSet_size(swigCPtr);
+    uint ret = bridgePINVOKEProxy.PlayerPtrSet_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = bridgePINVOKEProxy.remote.PlayerPtrSet_empty(swigCPtr);
+    bool ret = bridgePINVOKEProxy.PlayerPtrSet_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    bridgePINVOKEProxy.remote.PlayerPtrSet_Clear(swigCPtr);
+    bridgePINVOKEProxy.PlayerPtrSet_Clear(swigCPtr);
   }
 
   public Player getitem(Player key) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.PlayerPtrSet_getitem(swigCPtr, Player.getCPtr(key));
+    IntPtr cPtr = bridgePINVOKEProxy.PlayerPtrSet_getitem(swigCPtr, Player.getCPtr(key));
     Player ret = (cPtr == IntPtr.Zero) ? null : new Player(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ContainsKey(Player key) {
-    bool ret = bridgePINVOKEProxy.remote.PlayerPtrSet_ContainsKey(swigCPtr, Player.getCPtr(key));
+    bool ret = bridgePINVOKEProxy.PlayerPtrSet_ContainsKey(swigCPtr, Player.getCPtr(key));
     return ret;
   }
 
   public void Add(Player key) {
-    bridgePINVOKEProxy.remote.PlayerPtrSet_Add(swigCPtr, Player.getCPtr(key));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.PlayerPtrSet_Add(swigCPtr, Player.getCPtr(key));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(Player key) {
-    bool ret = bridgePINVOKEProxy.remote.PlayerPtrSet_Remove(swigCPtr, Player.getCPtr(key));
+    bool ret = bridgePINVOKEProxy.PlayerPtrSet_Remove(swigCPtr, Player.getCPtr(key));
     return ret;
   }
 
   public IntPtr create_iterator_begin() {
-    IntPtr ret = bridgePINVOKEProxy.remote.PlayerPtrSet_create_iterator_begin(swigCPtr);
+    IntPtr ret = bridgePINVOKEProxy.PlayerPtrSet_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   public Player get_next_key(IntPtr swigiterator) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.PlayerPtrSet_get_next_key(swigCPtr, swigiterator);
+    IntPtr cPtr = bridgePINVOKEProxy.PlayerPtrSet_get_next_key(swigCPtr, swigiterator);
     Player ret = (cPtr == IntPtr.Zero) ? null : new Player(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

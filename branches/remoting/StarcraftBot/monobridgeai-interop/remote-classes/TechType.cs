@@ -33,7 +33,7 @@ public partial class TechType : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_TechType(swigCPtr);
+          bridgePINVOKEProxy.delete_TechType(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,79 +82,79 @@ public static bool operator !=(TechType obj1, TechType obj2)
 
 
 
-  public TechType() : this(bridgePINVOKEProxy.remote.new_TechType__SWIG_0(), true) {
+  public TechType() : this(bridgePINVOKEProxy.new_TechType__SWIG_0(), true) {
   }
 
-  public TechType(int id) : this(bridgePINVOKEProxy.remote.new_TechType__SWIG_1(id), true) {
+  public TechType(int id) : this(bridgePINVOKEProxy.new_TechType__SWIG_1(id), true) {
   }
 
-  public TechType(TechType other) : this(bridgePINVOKEProxy.remote.new_TechType__SWIG_2(TechType.getCPtr(other)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public TechType(TechType other) : this(bridgePINVOKEProxy.new_TechType__SWIG_2(TechType.getCPtr(other)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public TechType opAssign(TechType other) {
-    TechType ret = new TechType(bridgePINVOKEProxy.remote.TechType_opAssign(swigCPtr, TechType.getCPtr(other)), false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    TechType ret = new TechType(bridgePINVOKEProxy.TechType_opAssign(swigCPtr, TechType.getCPtr(other)), false);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opEquals(TechType other) {
-    bool ret = bridgePINVOKEProxy.remote.TechType_opEquals(swigCPtr, TechType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.TechType_opEquals(swigCPtr, TechType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opNotEquals(TechType other) {
-    bool ret = bridgePINVOKEProxy.remote.TechType_opNotEquals(swigCPtr, TechType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.TechType_opNotEquals(swigCPtr, TechType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool opLessThan(TechType other) {
-    bool ret = bridgePINVOKEProxy.remote.TechType_opLessThan(swigCPtr, TechType.getCPtr(other));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.TechType_opLessThan(swigCPtr, TechType.getCPtr(other));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int getID() {
-    int ret = bridgePINVOKEProxy.remote.TechType_getID(swigCPtr);
+    int ret = bridgePINVOKEProxy.TechType_getID(swigCPtr);
     return ret;
   }
 
   public string getName() {
-    string ret = bridgePINVOKEProxy.remote.TechType_getName(swigCPtr);
+    string ret = bridgePINVOKEProxy.TechType_getName(swigCPtr);
     return ret;
   }
 
   public int mineralPrice() {
-    int ret = bridgePINVOKEProxy.remote.TechType_mineralPrice(swigCPtr);
+    int ret = bridgePINVOKEProxy.TechType_mineralPrice(swigCPtr);
     return ret;
   }
 
   public int gasPrice() {
-    int ret = bridgePINVOKEProxy.remote.TechType_gasPrice(swigCPtr);
+    int ret = bridgePINVOKEProxy.TechType_gasPrice(swigCPtr);
     return ret;
   }
 
   public int energyUsed() {
-    int ret = bridgePINVOKEProxy.remote.TechType_energyUsed(swigCPtr);
+    int ret = bridgePINVOKEProxy.TechType_energyUsed(swigCPtr);
     return ret;
   }
 
   public UnitType whatResearches() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.TechType_whatResearches(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.TechType_whatResearches(swigCPtr);
     UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
     return ret;
   }
 
   public WeaponType getWeapon() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.TechType_getWeapon(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.TechType_getWeapon(swigCPtr);
     WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
     return ret;
   }
 
   public UnitTypePtrSet whatUses() {
-    UnitTypePtrSet ret = new UnitTypePtrSet(bridgePINVOKEProxy.remote.TechType_whatUses(swigCPtr), false);
+    UnitTypePtrSet ret = new UnitTypePtrSet(bridgePINVOKEProxy.TechType_whatUses(swigCPtr), false);
     return ret;
   }
 

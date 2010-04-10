@@ -33,7 +33,7 @@ public partial class PositionPair : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_PositionPair(swigCPtr);
+          bridgePINVOKEProxy.delete_PositionPair(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,23 +82,23 @@ public static bool operator !=(PositionPair obj1, PositionPair obj2)
 
 
 
-  public PositionPair() : this(bridgePINVOKEProxy.remote.new_PositionPair__SWIG_0(), true) {
+  public PositionPair() : this(bridgePINVOKEProxy.new_PositionPair__SWIG_0(), true) {
   }
 
-  public PositionPair(Position t, Position u) : this(bridgePINVOKEProxy.remote.new_PositionPair__SWIG_1(Position.getCPtr(t), Position.getCPtr(u)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public PositionPair(Position t, Position u) : this(bridgePINVOKEProxy.new_PositionPair__SWIG_1(Position.getCPtr(t), Position.getCPtr(u)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
-  public PositionPair(PositionPair p) : this(bridgePINVOKEProxy.remote.new_PositionPair__SWIG_2(PositionPair.getCPtr(p)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public PositionPair(PositionPair p) : this(bridgePINVOKEProxy.new_PositionPair__SWIG_2(PositionPair.getCPtr(p)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public Position first {
     set {
-      bridgePINVOKEProxy.remote.PositionPair_first_set(swigCPtr, Position.getCPtr(value));
+      bridgePINVOKEProxy.PositionPair_first_set(swigCPtr, Position.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PositionPair_first_get(swigCPtr);
+      IntPtr cPtr = bridgePINVOKEProxy.PositionPair_first_get(swigCPtr);
       Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
       return ret;
     } 
@@ -106,10 +106,10 @@ public static bool operator !=(PositionPair obj1, PositionPair obj2)
 
   public Position second {
     set {
-      bridgePINVOKEProxy.remote.PositionPair_second_set(swigCPtr, Position.getCPtr(value));
+      bridgePINVOKEProxy.PositionPair_second_set(swigCPtr, Position.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PositionPair_second_get(swigCPtr);
+      IntPtr cPtr = bridgePINVOKEProxy.PositionPair_second_get(swigCPtr);
       Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
       return ret;
     } 

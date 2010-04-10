@@ -33,7 +33,7 @@ public partial class Player : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_Player(swigCPtr);
+          bridgePINVOKEProxy.delete_Player(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -83,164 +83,164 @@ public static bool operator !=(Player obj1, Player obj2)
 
 
   public virtual int getID() {
-    int ret = bridgePINVOKEProxy.remote.Player_getID(swigCPtr);
+    int ret = bridgePINVOKEProxy.Player_getID(swigCPtr);
     return ret;
   }
 
   public virtual string getName() {
-    string ret = bridgePINVOKEProxy.remote.Player_getName(swigCPtr);
+    string ret = bridgePINVOKEProxy.Player_getName(swigCPtr);
     return ret;
   }
 
   public virtual UnitSet getUnits() {
-    UnitSet ret = new UnitSet(bridgePINVOKEProxy.remote.Player_getUnits(swigCPtr), false);
+    UnitSet ret = new UnitSet(bridgePINVOKEProxy.Player_getUnits(swigCPtr), false);
     return ret;
   }
 
   public virtual Race getRace() {
-    Race ret = new Race(bridgePINVOKEProxy.remote.Player_getRace(swigCPtr), true);
+    Race ret = new Race(bridgePINVOKEProxy.Player_getRace(swigCPtr), true);
     return ret;
   }
 
   public virtual PlayerType playerType() {
-    PlayerType ret = new PlayerType(bridgePINVOKEProxy.remote.Player_playerType(swigCPtr), true);
+    PlayerType ret = new PlayerType(bridgePINVOKEProxy.Player_playerType(swigCPtr), true);
     return ret;
   }
 
   public virtual Force getForce() {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.Player_getForce(swigCPtr);
+    IntPtr cPtr = bridgePINVOKEProxy.Player_getForce(swigCPtr);
     Force ret = (cPtr == IntPtr.Zero) ? null : new Force(cPtr, false);
     return ret;
   }
 
   public virtual bool isAlly(Player player) {
-    bool ret = bridgePINVOKEProxy.remote.Player_isAlly(swigCPtr, Player.getCPtr(player));
+    bool ret = bridgePINVOKEProxy.Player_isAlly(swigCPtr, Player.getCPtr(player));
     return ret;
   }
 
   public virtual bool isEnemy(Player player) {
-    bool ret = bridgePINVOKEProxy.remote.Player_isEnemy(swigCPtr, Player.getCPtr(player));
+    bool ret = bridgePINVOKEProxy.Player_isEnemy(swigCPtr, Player.getCPtr(player));
     return ret;
   }
 
   public virtual bool isNeutral() {
-    bool ret = bridgePINVOKEProxy.remote.Player_isNeutral(swigCPtr);
+    bool ret = bridgePINVOKEProxy.Player_isNeutral(swigCPtr);
     return ret;
   }
 
   public virtual TilePosition getStartLocation() {
-    TilePosition ret = new TilePosition(bridgePINVOKEProxy.remote.Player_getStartLocation(swigCPtr), true);
+    TilePosition ret = new TilePosition(bridgePINVOKEProxy.Player_getStartLocation(swigCPtr), true);
     return ret;
   }
 
   public virtual bool isVictorious() {
-    bool ret = bridgePINVOKEProxy.remote.Player_isVictorious(swigCPtr);
+    bool ret = bridgePINVOKEProxy.Player_isVictorious(swigCPtr);
     return ret;
   }
 
   public virtual bool isDefeated() {
-    bool ret = bridgePINVOKEProxy.remote.Player_isDefeated(swigCPtr);
+    bool ret = bridgePINVOKEProxy.Player_isDefeated(swigCPtr);
     return ret;
   }
 
   public virtual bool leftGame() {
-    bool ret = bridgePINVOKEProxy.remote.Player_leftGame(swigCPtr);
+    bool ret = bridgePINVOKEProxy.Player_leftGame(swigCPtr);
     return ret;
   }
 
   public virtual int minerals() {
-    int ret = bridgePINVOKEProxy.remote.Player_minerals(swigCPtr);
+    int ret = bridgePINVOKEProxy.Player_minerals(swigCPtr);
     return ret;
   }
 
   public virtual int gas() {
-    int ret = bridgePINVOKEProxy.remote.Player_gas(swigCPtr);
+    int ret = bridgePINVOKEProxy.Player_gas(swigCPtr);
     return ret;
   }
 
   public virtual int cumulativeMinerals() {
-    int ret = bridgePINVOKEProxy.remote.Player_cumulativeMinerals(swigCPtr);
+    int ret = bridgePINVOKEProxy.Player_cumulativeMinerals(swigCPtr);
     return ret;
   }
 
   public virtual int cumulativeGas() {
-    int ret = bridgePINVOKEProxy.remote.Player_cumulativeGas(swigCPtr);
+    int ret = bridgePINVOKEProxy.Player_cumulativeGas(swigCPtr);
     return ret;
   }
 
   public virtual int supplyTotal() {
-    int ret = bridgePINVOKEProxy.remote.Player_supplyTotal__SWIG_0(swigCPtr);
+    int ret = bridgePINVOKEProxy.Player_supplyTotal__SWIG_0(swigCPtr);
     return ret;
   }
 
   public virtual int supplyUsed() {
-    int ret = bridgePINVOKEProxy.remote.Player_supplyUsed__SWIG_0(swigCPtr);
+    int ret = bridgePINVOKEProxy.Player_supplyUsed__SWIG_0(swigCPtr);
     return ret;
   }
 
   public virtual int supplyTotal(Race race) {
-    int ret = bridgePINVOKEProxy.remote.Player_supplyTotal__SWIG_1(swigCPtr, Race.getCPtr(race));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    int ret = bridgePINVOKEProxy.Player_supplyTotal__SWIG_1(swigCPtr, Race.getCPtr(race));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int supplyUsed(Race race) {
-    int ret = bridgePINVOKEProxy.remote.Player_supplyUsed__SWIG_1(swigCPtr, Race.getCPtr(race));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    int ret = bridgePINVOKEProxy.Player_supplyUsed__SWIG_1(swigCPtr, Race.getCPtr(race));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int allUnitCount(UnitType unit) {
-    int ret = bridgePINVOKEProxy.remote.Player_allUnitCount(swigCPtr, UnitType.getCPtr(unit));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    int ret = bridgePINVOKEProxy.Player_allUnitCount(swigCPtr, UnitType.getCPtr(unit));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int completedUnitCount(UnitType unit) {
-    int ret = bridgePINVOKEProxy.remote.Player_completedUnitCount(swigCPtr, UnitType.getCPtr(unit));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    int ret = bridgePINVOKEProxy.Player_completedUnitCount(swigCPtr, UnitType.getCPtr(unit));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int incompleteUnitCount(UnitType unit) {
-    int ret = bridgePINVOKEProxy.remote.Player_incompleteUnitCount(swigCPtr, UnitType.getCPtr(unit));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    int ret = bridgePINVOKEProxy.Player_incompleteUnitCount(swigCPtr, UnitType.getCPtr(unit));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int deadUnitCount(UnitType unit) {
-    int ret = bridgePINVOKEProxy.remote.Player_deadUnitCount(swigCPtr, UnitType.getCPtr(unit));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    int ret = bridgePINVOKEProxy.Player_deadUnitCount(swigCPtr, UnitType.getCPtr(unit));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int killedUnitCount(UnitType unit) {
-    int ret = bridgePINVOKEProxy.remote.Player_killedUnitCount(swigCPtr, UnitType.getCPtr(unit));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    int ret = bridgePINVOKEProxy.Player_killedUnitCount(swigCPtr, UnitType.getCPtr(unit));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int getUpgradeLevel(UpgradeType upgrade) {
-    int ret = bridgePINVOKEProxy.remote.Player_getUpgradeLevel(swigCPtr, UpgradeType.getCPtr(upgrade));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    int ret = bridgePINVOKEProxy.Player_getUpgradeLevel(swigCPtr, UpgradeType.getCPtr(upgrade));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool hasResearched(TechType tech) {
-    bool ret = bridgePINVOKEProxy.remote.Player_hasResearched(swigCPtr, TechType.getCPtr(tech));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Player_hasResearched(swigCPtr, TechType.getCPtr(tech));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool isResearching(TechType tech) {
-    bool ret = bridgePINVOKEProxy.remote.Player_isResearching(swigCPtr, TechType.getCPtr(tech));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Player_isResearching(swigCPtr, TechType.getCPtr(tech));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool isUpgrading(UpgradeType upgrade) {
-    bool ret = bridgePINVOKEProxy.remote.Player_isUpgrading(swigCPtr, UpgradeType.getCPtr(upgrade));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Player_isUpgrading(swigCPtr, UpgradeType.getCPtr(upgrade));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

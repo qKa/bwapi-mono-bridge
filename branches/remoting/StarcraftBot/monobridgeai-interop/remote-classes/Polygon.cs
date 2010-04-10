@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public partial class Polygon : PositionVector {
   private HandleRef swigCPtr;
 
-  internal Polygon(IntPtr cPtr, bool cMemoryOwn) : base(bridgePINVOKEProxy.remote.PolygonUpcast(cPtr), cMemoryOwn) {
+  internal Polygon(IntPtr cPtr, bool cMemoryOwn) : base(bridgePINVOKEProxy.PolygonUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public partial class Polygon : PositionVector {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_Polygon(swigCPtr);
+          bridgePINVOKEProxy.delete_Polygon(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -81,33 +81,33 @@ public static bool operator !=(Polygon obj1, Polygon obj2)
 
 
 
-  public Polygon() : this(bridgePINVOKEProxy.remote.new_Polygon(), true) {
+  public Polygon() : this(bridgePINVOKEProxy.new_Polygon(), true) {
   }
 
   public double getArea() {
-    double ret = bridgePINVOKEProxy.remote.Polygon_getArea(swigCPtr);
+    double ret = bridgePINVOKEProxy.Polygon_getArea(swigCPtr);
     return ret;
   }
 
   public double getPerimeter() {
-    double ret = bridgePINVOKEProxy.remote.Polygon_getPerimeter(swigCPtr);
+    double ret = bridgePINVOKEProxy.Polygon_getPerimeter(swigCPtr);
     return ret;
   }
 
   public Position getCenter() {
-    Position ret = new Position(bridgePINVOKEProxy.remote.Polygon_getCenter(swigCPtr), true);
+    Position ret = new Position(bridgePINVOKEProxy.Polygon_getCenter(swigCPtr), true);
     return ret;
   }
 
   public bool isInside(Position p) {
-    bool ret = bridgePINVOKEProxy.remote.Polygon_isInside(swigCPtr, Position.getCPtr(p));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.Polygon_isInside(swigCPtr, Position.getCPtr(p));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Position getNearestPoint(Position p) {
-    Position ret = new Position(bridgePINVOKEProxy.remote.Polygon_getNearestPoint(swigCPtr, Position.getCPtr(p)), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Position ret = new Position(bridgePINVOKEProxy.Polygon_getNearestPoint(swigCPtr, Position.getCPtr(p)), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 

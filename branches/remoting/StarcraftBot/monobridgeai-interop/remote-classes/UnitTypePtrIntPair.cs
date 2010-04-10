@@ -33,7 +33,7 @@ public partial class UnitTypePtrIntPair : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_UnitTypePtrIntPair(swigCPtr);
+          bridgePINVOKEProxy.delete_UnitTypePtrIntPair(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -82,22 +82,22 @@ public static bool operator !=(UnitTypePtrIntPair obj1, UnitTypePtrIntPair obj2)
 
 
 
-  public UnitTypePtrIntPair() : this(bridgePINVOKEProxy.remote.new_UnitTypePtrIntPair__SWIG_0(), true) {
+  public UnitTypePtrIntPair() : this(bridgePINVOKEProxy.new_UnitTypePtrIntPair__SWIG_0(), true) {
   }
 
-  public UnitTypePtrIntPair(UnitType t, int u) : this(bridgePINVOKEProxy.remote.new_UnitTypePtrIntPair__SWIG_1(UnitType.getCPtr(t), u), true) {
+  public UnitTypePtrIntPair(UnitType t, int u) : this(bridgePINVOKEProxy.new_UnitTypePtrIntPair__SWIG_1(UnitType.getCPtr(t), u), true) {
   }
 
-  public UnitTypePtrIntPair(UnitTypePtrIntPair p) : this(bridgePINVOKEProxy.remote.new_UnitTypePtrIntPair__SWIG_2(UnitTypePtrIntPair.getCPtr(p)), true) {
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+  public UnitTypePtrIntPair(UnitTypePtrIntPair p) : this(bridgePINVOKEProxy.new_UnitTypePtrIntPair__SWIG_2(UnitTypePtrIntPair.getCPtr(p)), true) {
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public UnitType first {
     set {
-      bridgePINVOKEProxy.remote.UnitTypePtrIntPair_first_set(swigCPtr, UnitType.getCPtr(value));
+      bridgePINVOKEProxy.UnitTypePtrIntPair_first_set(swigCPtr, UnitType.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.UnitTypePtrIntPair_first_get(swigCPtr);
+      IntPtr cPtr = bridgePINVOKEProxy.UnitTypePtrIntPair_first_get(swigCPtr);
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -105,10 +105,10 @@ public static bool operator !=(UnitTypePtrIntPair obj1, UnitTypePtrIntPair obj2)
 
   public int second {
     set {
-      bridgePINVOKEProxy.remote.UnitTypePtrIntPair_second_set(swigCPtr, value);
+      bridgePINVOKEProxy.UnitTypePtrIntPair_second_set(swigCPtr, value);
     } 
     get {
-      int ret = bridgePINVOKEProxy.remote.UnitTypePtrIntPair_second_get(swigCPtr);
+      int ret = bridgePINVOKEProxy.UnitTypePtrIntPair_second_get(swigCPtr);
       return ret;
     } 
   }

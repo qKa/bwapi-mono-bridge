@@ -33,7 +33,7 @@ public partial class Chokepoint : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          bridgePINVOKEProxy.remote.delete_Chokepoint(swigCPtr);
+          bridgePINVOKEProxy.delete_Chokepoint(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -83,22 +83,22 @@ public static bool operator !=(Chokepoint obj1, Chokepoint obj2)
 
 
   public virtual RegionPtrRegionPtrPair getRegions() {
-    RegionPtrRegionPtrPair ret = new RegionPtrRegionPtrPair(bridgePINVOKEProxy.remote.Chokepoint_getRegions(swigCPtr), false);
+    RegionPtrRegionPtrPair ret = new RegionPtrRegionPtrPair(bridgePINVOKEProxy.Chokepoint_getRegions(swigCPtr), false);
     return ret;
   }
 
   public virtual PositionPair getSides() {
-    PositionPair ret = new PositionPair(bridgePINVOKEProxy.remote.Chokepoint_getSides(swigCPtr), false);
+    PositionPair ret = new PositionPair(bridgePINVOKEProxy.Chokepoint_getSides(swigCPtr), false);
     return ret;
   }
 
   public virtual Position getCenter() {
-    Position ret = new Position(bridgePINVOKEProxy.remote.Chokepoint_getCenter(swigCPtr), true);
+    Position ret = new Position(bridgePINVOKEProxy.Chokepoint_getCenter(swigCPtr), true);
     return ret;
   }
 
   public virtual double getWidth() {
-    double ret = bridgePINVOKEProxy.remote.Chokepoint_getWidth(swigCPtr);
+    double ret = bridgePINVOKEProxy.Chokepoint_getWidth(swigCPtr);
     return ret;
   }
 

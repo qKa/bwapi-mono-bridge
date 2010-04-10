@@ -13,27 +13,27 @@ using System.Runtime.InteropServices;
 
 public class bridge {
   public static void BWAPI_init() {
-    bridgePINVOKEProxy.remote.BWAPI_init();
+    bridgePINVOKEProxy.BWAPI_init();
   }
 
   public static Race getRace(string name) {
-    Race ret = new Race(bridgePINVOKEProxy.remote.getRace(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Race ret = new Race(bridgePINVOKEProxy.getRace(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static RaceSet allRaces() {
-    RaceSet ret = new RaceSet(bridgePINVOKEProxy.remote.allRaces(), false);
+    RaceSet ret = new RaceSet(bridgePINVOKEProxy.allRaces(), false);
     return ret;
   }
 
   public static void initRaces() {
-    bridgePINVOKEProxy.remote.initRaces();
+    bridgePINVOKEProxy.initRaces();
   }
 
   public static Race Zerg {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_get();
       Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
       return ret;
     } 
@@ -41,7 +41,7 @@ public class bridge {
 
   public static Race Terran {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_get();
       Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
       return ret;
     } 
@@ -49,7 +49,7 @@ public class bridge {
 
   public static Race Protoss {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_get();
       Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
       return ret;
     } 
@@ -57,7 +57,7 @@ public class bridge {
 
   public static Race Random {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Random_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Random_get();
       Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
       return ret;
     } 
@@ -65,7 +65,7 @@ public class bridge {
 
   public static Race Other {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Other_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Other_get();
       Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
       return ret;
     } 
@@ -73,7 +73,7 @@ public class bridge {
 
   public static Race RaceNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.RaceNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.RaceNone_get();
       Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
       return ret;
     } 
@@ -81,30 +81,30 @@ public class bridge {
 
   public static Race RaceUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.RaceUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.RaceUnknown_get();
       Race ret = (cPtr == IntPtr.Zero) ? null : new Race(cPtr, false);
       return ret;
     } 
   }
 
   public static TechType getTechType(string name) {
-    TechType ret = new TechType(bridgePINVOKEProxy.remote.getTechType(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    TechType ret = new TechType(bridgePINVOKEProxy.getTechType(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static TechTypeSet allTechTypes() {
-    TechTypeSet ret = new TechTypeSet(bridgePINVOKEProxy.remote.allTechTypes(), false);
+    TechTypeSet ret = new TechTypeSet(bridgePINVOKEProxy.allTechTypes(), false);
     return ret;
   }
 
   public static void initTechTypes() {
-    bridgePINVOKEProxy.remote.initTechTypes();
+    bridgePINVOKEProxy.initTechTypes();
   }
 
   public static TechType Stim_Packs {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Stim_Packs_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Stim_Packs_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -112,7 +112,7 @@ public class bridge {
 
   public static TechType TechTypeLockdown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeLockdown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeLockdown_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -120,7 +120,7 @@ public class bridge {
 
   public static TechType TechTypeEMP_Shockwave {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeEMP_Shockwave_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeEMP_Shockwave_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -128,7 +128,7 @@ public class bridge {
 
   public static TechType Spider_Mines {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Spider_Mines_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Spider_Mines_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -136,7 +136,7 @@ public class bridge {
 
   public static TechType Scanner_Sweep {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Scanner_Sweep_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Scanner_Sweep_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -144,7 +144,7 @@ public class bridge {
 
   public static TechType Tank_Siege_Mode {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Tank_Siege_Mode_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Tank_Siege_Mode_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -152,7 +152,7 @@ public class bridge {
 
   public static TechType Defensive_Matrix {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Defensive_Matrix_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Defensive_Matrix_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -160,7 +160,7 @@ public class bridge {
 
   public static TechType TechTypeIrradiate {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeIrradiate_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeIrradiate_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -168,7 +168,7 @@ public class bridge {
 
   public static TechType TechTypeYamato_Gun {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeYamato_Gun_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeYamato_Gun_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -176,7 +176,7 @@ public class bridge {
 
   public static TechType Cloaking_Field {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Cloaking_Field_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Cloaking_Field_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -184,7 +184,7 @@ public class bridge {
 
   public static TechType Personnel_Cloaking {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Personnel_Cloaking_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Personnel_Cloaking_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -192,7 +192,7 @@ public class bridge {
 
   public static TechType Burrowing {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Burrowing_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Burrowing_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -200,7 +200,7 @@ public class bridge {
 
   public static TechType Infestation {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Infestation_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Infestation_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -208,7 +208,7 @@ public class bridge {
 
   public static TechType TechTypeSpawn_Broodlings {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeSpawn_Broodlings_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeSpawn_Broodlings_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -216,7 +216,7 @@ public class bridge {
 
   public static TechType TechTypeDark_Swarm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeDark_Swarm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeDark_Swarm_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -224,7 +224,7 @@ public class bridge {
 
   public static TechType TechTypePlague {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypePlague_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypePlague_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -232,7 +232,7 @@ public class bridge {
 
   public static TechType TechTypeConsume {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeConsume_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeConsume_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -240,7 +240,7 @@ public class bridge {
 
   public static TechType TechTypeEnsnare {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeEnsnare_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeEnsnare_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -248,7 +248,7 @@ public class bridge {
 
   public static TechType TechTypeParasite {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeParasite_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeParasite_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -256,7 +256,7 @@ public class bridge {
 
   public static TechType TechTypePsionic_Storm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypePsionic_Storm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypePsionic_Storm_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -264,7 +264,7 @@ public class bridge {
 
   public static TechType Hallucination {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Hallucination_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Hallucination_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -272,7 +272,7 @@ public class bridge {
 
   public static TechType Recall {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Recall_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Recall_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -280,7 +280,7 @@ public class bridge {
 
   public static TechType TechTypeStasis_Field {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeStasis_Field_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeStasis_Field_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -288,7 +288,7 @@ public class bridge {
 
   public static TechType Archon_Warp {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Archon_Warp_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Archon_Warp_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -296,7 +296,7 @@ public class bridge {
 
   public static TechType TechTypeRestoration {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeRestoration_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeRestoration_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -304,7 +304,7 @@ public class bridge {
 
   public static TechType TechTypeDisruption_Web {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeDisruption_Web_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeDisruption_Web_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -312,7 +312,7 @@ public class bridge {
 
   public static TechType TechTypeMind_Control {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeMind_Control_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeMind_Control_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -320,7 +320,7 @@ public class bridge {
 
   public static TechType Dark_Archon_Meld {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Dark_Archon_Meld_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Dark_Archon_Meld_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -328,7 +328,7 @@ public class bridge {
 
   public static TechType TechTypeFeedback {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeFeedback_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeFeedback_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -336,7 +336,7 @@ public class bridge {
 
   public static TechType TechTypeOptical_Flare {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeOptical_Flare_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeOptical_Flare_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -344,7 +344,7 @@ public class bridge {
 
   public static TechType TechTypeMaelstrom {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeMaelstrom_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeMaelstrom_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -352,7 +352,7 @@ public class bridge {
 
   public static TechType Lurker_Aspect {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Lurker_Aspect_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Lurker_Aspect_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -360,7 +360,7 @@ public class bridge {
 
   public static TechType Healing {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Healing_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Healing_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -368,7 +368,7 @@ public class bridge {
 
   public static TechType TechTypeNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeNone_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -376,7 +376,7 @@ public class bridge {
 
   public static TechType TechTypeUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeUnknown_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
@@ -384,30 +384,30 @@ public class bridge {
 
   public static TechType TechTypeNuclear_Strike {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TechTypeNuclear_Strike_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TechTypeNuclear_Strike_get();
       TechType ret = (cPtr == IntPtr.Zero) ? null : new TechType(cPtr, false);
       return ret;
     } 
   }
 
   public static UpgradeType getUpgradeType(string name) {
-    UpgradeType ret = new UpgradeType(bridgePINVOKEProxy.remote.getUpgradeType(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    UpgradeType ret = new UpgradeType(bridgePINVOKEProxy.getUpgradeType(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static UpgradeTypeSet allUpgradeTypes() {
-    UpgradeTypeSet ret = new UpgradeTypeSet(bridgePINVOKEProxy.remote.allUpgradeTypes(), false);
+    UpgradeTypeSet ret = new UpgradeTypeSet(bridgePINVOKEProxy.allUpgradeTypes(), false);
     return ret;
   }
 
   public static void initUpgradeTypes() {
-    bridgePINVOKEProxy.remote.initUpgradeTypes();
+    bridgePINVOKEProxy.initUpgradeTypes();
   }
 
   public static UpgradeType Terran_Infantry_Armor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Infantry_Armor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Infantry_Armor_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -415,7 +415,7 @@ public class bridge {
 
   public static UpgradeType Terran_Vehicle_Plating {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Vehicle_Plating_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Vehicle_Plating_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -423,7 +423,7 @@ public class bridge {
 
   public static UpgradeType Terran_Ship_Plating {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Ship_Plating_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Ship_Plating_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -431,7 +431,7 @@ public class bridge {
 
   public static UpgradeType Zerg_Carapace {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Carapace_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Carapace_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -439,7 +439,7 @@ public class bridge {
 
   public static UpgradeType Zerg_Flyer_Carapace {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Flyer_Carapace_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Flyer_Carapace_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -447,7 +447,7 @@ public class bridge {
 
   public static UpgradeType Protoss_Armor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Armor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Armor_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -455,7 +455,7 @@ public class bridge {
 
   public static UpgradeType Protoss_Plating {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Plating_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Plating_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -463,7 +463,7 @@ public class bridge {
 
   public static UpgradeType Terran_Infantry_Weapons {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Infantry_Weapons_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Infantry_Weapons_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -471,7 +471,7 @@ public class bridge {
 
   public static UpgradeType Terran_Vehicle_Weapons {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Vehicle_Weapons_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Vehicle_Weapons_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -479,7 +479,7 @@ public class bridge {
 
   public static UpgradeType Terran_Ship_Weapons {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Ship_Weapons_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Ship_Weapons_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -487,7 +487,7 @@ public class bridge {
 
   public static UpgradeType Zerg_Melee_Attacks {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Melee_Attacks_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Melee_Attacks_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -495,7 +495,7 @@ public class bridge {
 
   public static UpgradeType Zerg_Missile_Attacks {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Missile_Attacks_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Missile_Attacks_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -503,7 +503,7 @@ public class bridge {
 
   public static UpgradeType Zerg_Flyer_Attacks {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Flyer_Attacks_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Flyer_Attacks_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -511,7 +511,7 @@ public class bridge {
 
   public static UpgradeType Protoss_Ground_Weapons {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Ground_Weapons_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Ground_Weapons_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -519,7 +519,7 @@ public class bridge {
 
   public static UpgradeType Protoss_Air_Weapons {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Air_Weapons_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Air_Weapons_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -527,7 +527,7 @@ public class bridge {
 
   public static UpgradeType Protoss_Plasma_Shields {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Plasma_Shields_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Plasma_Shields_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -535,7 +535,7 @@ public class bridge {
 
   public static UpgradeType U_238_Shells {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.U_238_Shells_get();
+      IntPtr cPtr = bridgePINVOKEProxy.U_238_Shells_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -543,7 +543,7 @@ public class bridge {
 
   public static UpgradeType Ion_Thrusters {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Ion_Thrusters_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Ion_Thrusters_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -551,7 +551,7 @@ public class bridge {
 
   public static UpgradeType Titan_Reactor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Titan_Reactor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Titan_Reactor_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -559,7 +559,7 @@ public class bridge {
 
   public static UpgradeType Ocular_Implants {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Ocular_Implants_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Ocular_Implants_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -567,7 +567,7 @@ public class bridge {
 
   public static UpgradeType Moebius_Reactor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Moebius_Reactor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Moebius_Reactor_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -575,7 +575,7 @@ public class bridge {
 
   public static UpgradeType Apollo_Reactor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Apollo_Reactor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Apollo_Reactor_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -583,7 +583,7 @@ public class bridge {
 
   public static UpgradeType Colossus_Reactor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Colossus_Reactor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Colossus_Reactor_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -591,7 +591,7 @@ public class bridge {
 
   public static UpgradeType Ventral_Sacs {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Ventral_Sacs_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Ventral_Sacs_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -599,7 +599,7 @@ public class bridge {
 
   public static UpgradeType Antennae {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Antennae_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Antennae_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -607,7 +607,7 @@ public class bridge {
 
   public static UpgradeType Pneumatized_Carapace {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Pneumatized_Carapace_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Pneumatized_Carapace_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -615,7 +615,7 @@ public class bridge {
 
   public static UpgradeType Metabolic_Boost {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Metabolic_Boost_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Metabolic_Boost_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -623,7 +623,7 @@ public class bridge {
 
   public static UpgradeType Adrenal_Glands {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Adrenal_Glands_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Adrenal_Glands_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -631,7 +631,7 @@ public class bridge {
 
   public static UpgradeType Muscular_Augments {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Muscular_Augments_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Muscular_Augments_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -639,7 +639,7 @@ public class bridge {
 
   public static UpgradeType Grooved_Spines {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Grooved_Spines_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Grooved_Spines_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -647,7 +647,7 @@ public class bridge {
 
   public static UpgradeType Gamete_Meiosis {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Gamete_Meiosis_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Gamete_Meiosis_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -655,7 +655,7 @@ public class bridge {
 
   public static UpgradeType Metasynaptic_Node {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Metasynaptic_Node_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Metasynaptic_Node_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -663,7 +663,7 @@ public class bridge {
 
   public static UpgradeType Singularity_Charge {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Singularity_Charge_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Singularity_Charge_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -671,7 +671,7 @@ public class bridge {
 
   public static UpgradeType Leg_Enhancements {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Leg_Enhancements_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Leg_Enhancements_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -679,7 +679,7 @@ public class bridge {
 
   public static UpgradeType Scarab_Damage {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Scarab_Damage_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Scarab_Damage_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -687,7 +687,7 @@ public class bridge {
 
   public static UpgradeType Reaver_Capacity {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Reaver_Capacity_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Reaver_Capacity_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -695,7 +695,7 @@ public class bridge {
 
   public static UpgradeType Gravitic_Drive {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Gravitic_Drive_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Gravitic_Drive_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -703,7 +703,7 @@ public class bridge {
 
   public static UpgradeType Sensor_Array {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Sensor_Array_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Sensor_Array_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -711,7 +711,7 @@ public class bridge {
 
   public static UpgradeType Gravitic_Boosters {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Gravitic_Boosters_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Gravitic_Boosters_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -719,7 +719,7 @@ public class bridge {
 
   public static UpgradeType Khaydarin_Amulet {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Khaydarin_Amulet_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Khaydarin_Amulet_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -727,7 +727,7 @@ public class bridge {
 
   public static UpgradeType Apial_Sensors {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Apial_Sensors_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Apial_Sensors_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -735,7 +735,7 @@ public class bridge {
 
   public static UpgradeType Gravitic_Thrusters {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Gravitic_Thrusters_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Gravitic_Thrusters_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -743,7 +743,7 @@ public class bridge {
 
   public static UpgradeType Carrier_Capacity {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Carrier_Capacity_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Carrier_Capacity_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -751,7 +751,7 @@ public class bridge {
 
   public static UpgradeType Khaydarin_Core {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Khaydarin_Core_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Khaydarin_Core_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -759,7 +759,7 @@ public class bridge {
 
   public static UpgradeType Argus_Jewel {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Argus_Jewel_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Argus_Jewel_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -767,7 +767,7 @@ public class bridge {
 
   public static UpgradeType Argus_Talisman {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Argus_Talisman_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Argus_Talisman_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -775,7 +775,7 @@ public class bridge {
 
   public static UpgradeType Caduceus_Reactor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Caduceus_Reactor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Caduceus_Reactor_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -783,7 +783,7 @@ public class bridge {
 
   public static UpgradeType Chitinous_Plating {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Chitinous_Plating_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Chitinous_Plating_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -791,7 +791,7 @@ public class bridge {
 
   public static UpgradeType Anabolic_Synthesis {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Anabolic_Synthesis_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Anabolic_Synthesis_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -799,7 +799,7 @@ public class bridge {
 
   public static UpgradeType Charon_Booster {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Charon_Booster_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Charon_Booster_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -807,7 +807,7 @@ public class bridge {
 
   public static UpgradeType UpgradeTypeNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.UpgradeTypeNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.UpgradeTypeNone_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -815,7 +815,7 @@ public class bridge {
 
   public static UpgradeType UpgradeTypeUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.UpgradeTypeUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.UpgradeTypeUnknown_get();
       UpgradeType ret = (cPtr == IntPtr.Zero) ? null : new UpgradeType(cPtr, false);
       return ret;
     } 
@@ -823,7 +823,7 @@ public class bridge {
 
   public static Position PositionInvalid {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PositionInvalid_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PositionInvalid_get();
       Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
       return ret;
     } 
@@ -831,7 +831,7 @@ public class bridge {
 
   public static Position PositionNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PositionNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PositionNone_get();
       Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
       return ret;
     } 
@@ -839,30 +839,30 @@ public class bridge {
 
   public static Position PositionUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PositionUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PositionUnknown_get();
       Position ret = (cPtr == IntPtr.Zero) ? null : new Position(cPtr, false);
       return ret;
     } 
   }
 
   public static AttackType getAttackType(string name) {
-    AttackType ret = new AttackType(bridgePINVOKEProxy.remote.getAttackType(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    AttackType ret = new AttackType(bridgePINVOKEProxy.getAttackType(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static AttackTypeSet allAttackTypes() {
-    AttackTypeSet ret = new AttackTypeSet(bridgePINVOKEProxy.remote.allAttackTypes(), false);
+    AttackTypeSet ret = new AttackTypeSet(bridgePINVOKEProxy.allAttackTypes(), false);
     return ret;
   }
 
   public static void initAttackTypes() {
-    bridgePINVOKEProxy.remote.initAttackTypes();
+    bridgePINVOKEProxy.initAttackTypes();
   }
 
   public static AttackType Melee {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Melee_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Melee_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -870,7 +870,7 @@ public class bridge {
 
   public static AttackType Fusion_Cutter_Hit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Fusion_Cutter_Hit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Fusion_Cutter_Hit_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -878,7 +878,7 @@ public class bridge {
 
   public static AttackType Gauss_Rifle_Hit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Gauss_Rifle_Hit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Gauss_Rifle_Hit_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -886,7 +886,7 @@ public class bridge {
 
   public static AttackType C_10_Canister_Rifle_Hit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.C_10_Canister_Rifle_Hit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.C_10_Canister_Rifle_Hit_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -894,7 +894,7 @@ public class bridge {
 
   public static AttackType AttackTypeGemeni_Missiles {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeGemeni_Missiles_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeGemeni_Missiles_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -902,7 +902,7 @@ public class bridge {
 
   public static AttackType AttackTypeFragmentation_Grenade {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeFragmentation_Grenade_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeFragmentation_Grenade_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -910,7 +910,7 @@ public class bridge {
 
   public static AttackType AttackTypeLongbolt_Missile {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeLongbolt_Missile_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeLongbolt_Missile_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -918,7 +918,7 @@ public class bridge {
 
   public static AttackType ATS_ATA_Laser_Battery {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ATS_ATA_Laser_Battery_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ATS_ATA_Laser_Battery_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -926,7 +926,7 @@ public class bridge {
 
   public static AttackType AttackTypeBurst_Lasers {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeBurst_Lasers_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeBurst_Lasers_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -934,7 +934,7 @@ public class bridge {
 
   public static AttackType Arclite_Shock_Cannon_Hit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Arclite_Shock_Cannon_Hit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Arclite_Shock_Cannon_Hit_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -942,7 +942,7 @@ public class bridge {
 
   public static AttackType EMP_Missile {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.EMP_Missile_get();
+      IntPtr cPtr = bridgePINVOKEProxy.EMP_Missile_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -950,7 +950,7 @@ public class bridge {
 
   public static AttackType Dual_Photon_Blasters_Hit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Dual_Photon_Blasters_Hit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Dual_Photon_Blasters_Hit_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -958,7 +958,7 @@ public class bridge {
 
   public static AttackType Particle_Beam_Hit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Particle_Beam_Hit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Particle_Beam_Hit_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -966,7 +966,7 @@ public class bridge {
 
   public static AttackType Anti_Matter_Missile {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Anti_Matter_Missile_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Anti_Matter_Missile_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -974,7 +974,7 @@ public class bridge {
 
   public static AttackType AttackTypePulse_Cannon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypePulse_Cannon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypePulse_Cannon_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -982,7 +982,7 @@ public class bridge {
 
   public static AttackType Psionic_Shockwave_Hit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Psionic_Shockwave_Hit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Psionic_Shockwave_Hit_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -990,7 +990,7 @@ public class bridge {
 
   public static AttackType Psionic_Storm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Psionic_Storm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Psionic_Storm_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -998,7 +998,7 @@ public class bridge {
 
   public static AttackType AttackTypeYamato_Gun {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeYamato_Gun_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeYamato_Gun_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1006,7 +1006,7 @@ public class bridge {
 
   public static AttackType AttackTypePhase_Disruptor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypePhase_Disruptor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypePhase_Disruptor_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1014,7 +1014,7 @@ public class bridge {
 
   public static AttackType STA_STS_Cannon_Overlay {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.STA_STS_Cannon_Overlay_get();
+      IntPtr cPtr = bridgePINVOKEProxy.STA_STS_Cannon_Overlay_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1022,7 +1022,7 @@ public class bridge {
 
   public static AttackType Sunken_Colony_Tentacle {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Sunken_Colony_Tentacle_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Sunken_Colony_Tentacle_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1030,7 +1030,7 @@ public class bridge {
 
   public static AttackType AttackTypeAcid_Spore {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeAcid_Spore_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeAcid_Spore_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1038,7 +1038,7 @@ public class bridge {
 
   public static AttackType AttackTypeGlave_Wurm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeGlave_Wurm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeGlave_Wurm_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1046,7 +1046,7 @@ public class bridge {
 
   public static AttackType AttackTypeSeeker_Spores {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeSeeker_Spores_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeSeeker_Spores_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1054,7 +1054,7 @@ public class bridge {
 
   public static AttackType Queen_Spell_Carrier {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Queen_Spell_Carrier_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Queen_Spell_Carrier_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1062,7 +1062,7 @@ public class bridge {
 
   public static AttackType Plague_Cloud {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Plague_Cloud_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Plague_Cloud_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1070,7 +1070,7 @@ public class bridge {
 
   public static AttackType Consume {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Consume_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Consume_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1078,7 +1078,7 @@ public class bridge {
 
   public static AttackType Needle_Spine_Hit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Needle_Spine_Hit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Needle_Spine_Hit_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1086,7 +1086,7 @@ public class bridge {
 
   public static AttackType Invisible {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Invisible_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Invisible_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1094,7 +1094,7 @@ public class bridge {
 
   public static AttackType Optical_Flare_Grenade {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Optical_Flare_Grenade_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Optical_Flare_Grenade_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1102,7 +1102,7 @@ public class bridge {
 
   public static AttackType AttackTypeHalo_Rockets {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeHalo_Rockets_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeHalo_Rockets_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1110,7 +1110,7 @@ public class bridge {
 
   public static AttackType AttackTypeSubterranean_Spines {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeSubterranean_Spines_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeSubterranean_Spines_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1118,7 +1118,7 @@ public class bridge {
 
   public static AttackType Corrosive_Acid_Shot {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Corrosive_Acid_Shot_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Corrosive_Acid_Shot_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1126,7 +1126,7 @@ public class bridge {
 
   public static AttackType Neutron_Flare {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Neutron_Flare_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Neutron_Flare_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1134,7 +1134,7 @@ public class bridge {
 
   public static AttackType AttackTypeNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeNone_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
@@ -1142,19 +1142,19 @@ public class bridge {
 
   public static AttackType AttackTypeUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTypeUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTypeUnknown_get();
       AttackType ret = (cPtr == IntPtr.Zero) ? null : new AttackType(cPtr, false);
       return ret;
     } 
   }
 
   public static void initColors() {
-    bridgePINVOKEProxy.remote.initColors();
+    bridgePINVOKEProxy.initColors();
   }
 
   public static Color Red {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Red_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Red_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1162,7 +1162,7 @@ public class bridge {
 
   public static Color Green {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Green_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Green_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1170,7 +1170,7 @@ public class bridge {
 
   public static Color Blue {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Blue_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Blue_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1178,7 +1178,7 @@ public class bridge {
 
   public static Color Yellow {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Yellow_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Yellow_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1186,7 +1186,7 @@ public class bridge {
 
   public static Color Cyan {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Cyan_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Cyan_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1194,7 +1194,7 @@ public class bridge {
 
   public static Color Purple {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Purple_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Purple_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1202,7 +1202,7 @@ public class bridge {
 
   public static Color Orange {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Orange_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Orange_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1210,7 +1210,7 @@ public class bridge {
 
   public static Color Black {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Black_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Black_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1218,7 +1218,7 @@ public class bridge {
 
   public static Color White {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.White_get();
+      IntPtr cPtr = bridgePINVOKEProxy.White_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1226,7 +1226,7 @@ public class bridge {
 
   public static Color Grey {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Grey_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Grey_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1234,43 +1234,43 @@ public class bridge {
 
   public static int TILE_SIZE {
     get {
-      int ret = bridgePINVOKEProxy.remote.TILE_SIZE_get();
+      int ret = bridgePINVOKEProxy.TILE_SIZE_get();
       return ret;
     } 
   }
 
   public static int PYLON_X_RADIUS {
     get {
-      int ret = bridgePINVOKEProxy.remote.PYLON_X_RADIUS_get();
+      int ret = bridgePINVOKEProxy.PYLON_X_RADIUS_get();
       return ret;
     } 
   }
 
   public static int PYLON_Y_RADIUS {
     get {
-      int ret = bridgePINVOKEProxy.remote.PYLON_Y_RADIUS_get();
+      int ret = bridgePINVOKEProxy.PYLON_Y_RADIUS_get();
       return ret;
     } 
   }
 
   public static DamageType getDamageType(string name) {
-    DamageType ret = new DamageType(bridgePINVOKEProxy.remote.getDamageType(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    DamageType ret = new DamageType(bridgePINVOKEProxy.getDamageType(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static DamageTypeSet allDamageTypes() {
-    DamageTypeSet ret = new DamageTypeSet(bridgePINVOKEProxy.remote.allDamageTypes(), false);
+    DamageTypeSet ret = new DamageTypeSet(bridgePINVOKEProxy.allDamageTypes(), false);
     return ret;
   }
 
   public static void initDamageTypes() {
-    bridgePINVOKEProxy.remote.initDamageTypes();
+    bridgePINVOKEProxy.initDamageTypes();
   }
 
   public static DamageType DamageTypeIndependent {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.DamageTypeIndependent_get();
+      IntPtr cPtr = bridgePINVOKEProxy.DamageTypeIndependent_get();
       DamageType ret = (cPtr == IntPtr.Zero) ? null : new DamageType(cPtr, false);
       return ret;
     } 
@@ -1278,7 +1278,7 @@ public class bridge {
 
   public static DamageType Explosive {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Explosive_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Explosive_get();
       DamageType ret = (cPtr == IntPtr.Zero) ? null : new DamageType(cPtr, false);
       return ret;
     } 
@@ -1286,7 +1286,7 @@ public class bridge {
 
   public static DamageType Concussive {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Concussive_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Concussive_get();
       DamageType ret = (cPtr == IntPtr.Zero) ? null : new DamageType(cPtr, false);
       return ret;
     } 
@@ -1294,7 +1294,7 @@ public class bridge {
 
   public static DamageType DamageTypeNormal {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.DamageTypeNormal_get();
+      IntPtr cPtr = bridgePINVOKEProxy.DamageTypeNormal_get();
       DamageType ret = (cPtr == IntPtr.Zero) ? null : new DamageType(cPtr, false);
       return ret;
     } 
@@ -1302,7 +1302,7 @@ public class bridge {
 
   public static DamageType Ignore_Armor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Ignore_Armor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Ignore_Armor_get();
       DamageType ret = (cPtr == IntPtr.Zero) ? null : new DamageType(cPtr, false);
       return ret;
     } 
@@ -1310,7 +1310,7 @@ public class bridge {
 
   public static DamageType DamageTypeNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.DamageTypeNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.DamageTypeNone_get();
       DamageType ret = (cPtr == IntPtr.Zero) ? null : new DamageType(cPtr, false);
       return ret;
     } 
@@ -1318,30 +1318,30 @@ public class bridge {
 
   public static DamageType DamageTypeUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.DamageTypeUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.DamageTypeUnknown_get();
       DamageType ret = (cPtr == IntPtr.Zero) ? null : new DamageType(cPtr, false);
       return ret;
     } 
   }
 
   public static Error getError(string name) {
-    Error ret = new Error(bridgePINVOKEProxy.remote.getError(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Error ret = new Error(bridgePINVOKEProxy.getError(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static ErrorSet allErrors() {
-    ErrorSet ret = new ErrorSet(bridgePINVOKEProxy.remote.allErrors(), false);
+    ErrorSet ret = new ErrorSet(bridgePINVOKEProxy.allErrors(), false);
     return ret;
   }
 
   public static void initErrors() {
-    bridgePINVOKEProxy.remote.initErrors();
+    bridgePINVOKEProxy.initErrors();
   }
 
   public static Error Unit_Does_Not_Exist {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Unit_Does_Not_Exist_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Unit_Does_Not_Exist_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1349,7 +1349,7 @@ public class bridge {
 
   public static Error Unit_Not_Visible {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Unit_Not_Visible_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Unit_Not_Visible_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1357,7 +1357,7 @@ public class bridge {
 
   public static Error Unit_Not_Owned {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Unit_Not_Owned_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Unit_Not_Owned_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1365,7 +1365,7 @@ public class bridge {
 
   public static Error Unit_Busy {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Unit_Busy_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Unit_Busy_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1373,7 +1373,7 @@ public class bridge {
 
   public static Error Incompatible_UnitType {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Incompatible_UnitType_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Incompatible_UnitType_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1381,7 +1381,7 @@ public class bridge {
 
   public static Error Incompatible_TechType {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Incompatible_TechType_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Incompatible_TechType_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1389,7 +1389,7 @@ public class bridge {
 
   public static Error Already_Researched {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Already_Researched_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Already_Researched_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1397,7 +1397,7 @@ public class bridge {
 
   public static Error Fully_Upgraded {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Fully_Upgraded_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Fully_Upgraded_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1405,7 +1405,7 @@ public class bridge {
 
   public static Error Insufficient_Minerals {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Insufficient_Minerals_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Insufficient_Minerals_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1413,7 +1413,7 @@ public class bridge {
 
   public static Error Insufficient_Gas {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Insufficient_Gas_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Insufficient_Gas_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1421,7 +1421,7 @@ public class bridge {
 
   public static Error Insufficient_Supply {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Insufficient_Supply_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Insufficient_Supply_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1429,7 +1429,7 @@ public class bridge {
 
   public static Error Insufficient_Energy {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Insufficient_Energy_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Insufficient_Energy_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1437,7 +1437,7 @@ public class bridge {
 
   public static Error Insufficient_Tech {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Insufficient_Tech_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Insufficient_Tech_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1445,7 +1445,7 @@ public class bridge {
 
   public static Error Insufficient_Ammo {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Insufficient_Ammo_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Insufficient_Ammo_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1453,7 +1453,7 @@ public class bridge {
 
   public static Error Insufficient_Space {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Insufficient_Space_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Insufficient_Space_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1461,7 +1461,7 @@ public class bridge {
 
   public static Error Unbuildable_Location {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Unbuildable_Location_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Unbuildable_Location_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1469,7 +1469,7 @@ public class bridge {
 
   public static Error Out_Of_Range {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Out_Of_Range_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Out_Of_Range_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1477,7 +1477,7 @@ public class bridge {
 
   public static Error Unable_To_Hit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Unable_To_Hit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Unable_To_Hit_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1485,7 +1485,7 @@ public class bridge {
 
   public static Error Access_Denied {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Access_Denied_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Access_Denied_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1493,7 +1493,7 @@ public class bridge {
 
   public static Error ErrorNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ErrorNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ErrorNone_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1501,30 +1501,30 @@ public class bridge {
 
   public static Error ErrorUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ErrorUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ErrorUnknown_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
   }
 
   public static ExplosionType getExplosionType(string name) {
-    ExplosionType ret = new ExplosionType(bridgePINVOKEProxy.remote.getExplosionType(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    ExplosionType ret = new ExplosionType(bridgePINVOKEProxy.getExplosionType(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static ExplosionTypeSet allExplosionTypes() {
-    ExplosionTypeSet ret = new ExplosionTypeSet(bridgePINVOKEProxy.remote.allExplosionTypes(), false);
+    ExplosionTypeSet ret = new ExplosionTypeSet(bridgePINVOKEProxy.allExplosionTypes(), false);
     return ret;
   }
 
   public static void initExplosionTypes() {
-    bridgePINVOKEProxy.remote.initExplosionTypes();
+    bridgePINVOKEProxy.initExplosionTypes();
   }
 
   public static ExplosionType ExplosionTypeNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeNone_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1532,7 +1532,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeNormal {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeNormal_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeNormal_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1540,7 +1540,7 @@ public class bridge {
 
   public static ExplosionType Radial_Splash {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Radial_Splash_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Radial_Splash_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1548,7 +1548,7 @@ public class bridge {
 
   public static ExplosionType Enemy_Splash {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Enemy_Splash_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Enemy_Splash_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1556,7 +1556,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeLockdown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeLockdown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeLockdown_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1564,7 +1564,7 @@ public class bridge {
 
   public static ExplosionType Nuclear_Missile {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Nuclear_Missile_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Nuclear_Missile_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1572,7 +1572,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeParasite {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeParasite_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeParasite_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1580,7 +1580,7 @@ public class bridge {
 
   public static ExplosionType Broodlings {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Broodlings_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Broodlings_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1588,7 +1588,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeEMP_Shockwave {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeEMP_Shockwave_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeEMP_Shockwave_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1596,7 +1596,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeIrradiate {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeIrradiate_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeIrradiate_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1604,7 +1604,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeEnsnare {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeEnsnare_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeEnsnare_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1612,7 +1612,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypePlague {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypePlague_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypePlague_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1620,7 +1620,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeStasis_Field {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeStasis_Field_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeStasis_Field_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1628,7 +1628,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeDark_Swarm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeDark_Swarm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeDark_Swarm_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1636,7 +1636,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeConsume {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeConsume_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeConsume_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1644,7 +1644,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeYamato_Gun {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeYamato_Gun_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeYamato_Gun_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1652,7 +1652,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeRestoration {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeRestoration_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeRestoration_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1660,7 +1660,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeDisruption_Web {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeDisruption_Web_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeDisruption_Web_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1668,7 +1668,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeCorrosive_Acid {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeCorrosive_Acid_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeCorrosive_Acid_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1676,7 +1676,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeMind_Control {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeMind_Control_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeMind_Control_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1684,7 +1684,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeFeedback {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeFeedback_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeFeedback_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1692,7 +1692,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeOptical_Flare {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeOptical_Flare_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeOptical_Flare_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1700,7 +1700,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeMaelstrom {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeMaelstrom_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeMaelstrom_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1708,7 +1708,7 @@ public class bridge {
 
   public static ExplosionType Air_Splash {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Air_Splash_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Air_Splash_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1716,7 +1716,7 @@ public class bridge {
 
   public static ExplosionType ExplosionTypeUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ExplosionTypeUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ExplosionTypeUnknown_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
       return ret;
     } 
@@ -1724,40 +1724,40 @@ public class bridge {
 
   public static int FLAG_COUNT {
     get {
-      int ret = bridgePINVOKEProxy.remote.FLAG_COUNT_get();
+      int ret = bridgePINVOKEProxy.FLAG_COUNT_get();
       return ret;
     } 
   }
 
   public static Game Broodwar {
     set {
-      bridgePINVOKEProxy.remote.Broodwar_set(Game.getCPtr(value));
+      bridgePINVOKEProxy.Broodwar_set(Game.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Broodwar_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Broodwar_get();
       Game ret = (cPtr == IntPtr.Zero) ? null : new Game(cPtr, false);
       return ret;
     } 
   }
 
   public static Order getOrder(string name) {
-    Order ret = new Order(bridgePINVOKEProxy.remote.getOrder(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Order ret = new Order(bridgePINVOKEProxy.getOrder(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static OrderSet allOrders() {
-    OrderSet ret = new OrderSet(bridgePINVOKEProxy.remote.allOrders(), false);
+    OrderSet ret = new OrderSet(bridgePINVOKEProxy.allOrders(), false);
     return ret;
   }
 
   public static void initOrders() {
-    bridgePINVOKEProxy.remote.initOrders();
+    bridgePINVOKEProxy.initOrders();
   }
 
   public static Order Die {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Die_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Die_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1765,7 +1765,7 @@ public class bridge {
 
   public static Order Stop {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Stop_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Stop_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1773,7 +1773,7 @@ public class bridge {
 
   public static Order Guard {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Guard_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Guard_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1781,7 +1781,7 @@ public class bridge {
 
   public static Order PlayerGuard {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PlayerGuard_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PlayerGuard_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1789,7 +1789,7 @@ public class bridge {
 
   public static Order TurretGuard {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TurretGuard_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TurretGuard_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1797,7 +1797,7 @@ public class bridge {
 
   public static Order BunkerGuard {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.BunkerGuard_get();
+      IntPtr cPtr = bridgePINVOKEProxy.BunkerGuard_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1805,7 +1805,7 @@ public class bridge {
 
   public static Order Move {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Move_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Move_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1813,7 +1813,7 @@ public class bridge {
 
   public static Order ReaverStop {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ReaverStop_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ReaverStop_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1821,7 +1821,7 @@ public class bridge {
 
   public static Order Attack1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Attack1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Attack1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1829,7 +1829,7 @@ public class bridge {
 
   public static Order Attack2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Attack2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Attack2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1837,7 +1837,7 @@ public class bridge {
 
   public static Order AttackUnit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackUnit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackUnit_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1845,7 +1845,7 @@ public class bridge {
 
   public static Order AttackFixedRange {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackFixedRange_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackFixedRange_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1853,7 +1853,7 @@ public class bridge {
 
   public static Order AttackTile {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackTile_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackTile_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1861,7 +1861,7 @@ public class bridge {
 
   public static Order Hover {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Hover_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Hover_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1869,7 +1869,7 @@ public class bridge {
 
   public static Order AttackMove {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AttackMove_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AttackMove_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1877,7 +1877,7 @@ public class bridge {
 
   public static Order InfestMine1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.InfestMine1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.InfestMine1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1885,7 +1885,7 @@ public class bridge {
 
   public static Order Nothing1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Nothing1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Nothing1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1893,7 +1893,7 @@ public class bridge {
 
   public static Order Powerup1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Powerup1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Powerup1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1901,7 +1901,7 @@ public class bridge {
 
   public static Order TowerGuard {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TowerGuard_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TowerGuard_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1909,7 +1909,7 @@ public class bridge {
 
   public static Order TowerAttack {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TowerAttack_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TowerAttack_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1917,7 +1917,7 @@ public class bridge {
 
   public static Order VultureMine {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.VultureMine_get();
+      IntPtr cPtr = bridgePINVOKEProxy.VultureMine_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1925,7 +1925,7 @@ public class bridge {
 
   public static Order StayinRange {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.StayinRange_get();
+      IntPtr cPtr = bridgePINVOKEProxy.StayinRange_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1933,7 +1933,7 @@ public class bridge {
 
   public static Order TurretAttack {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TurretAttack_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TurretAttack_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1941,7 +1941,7 @@ public class bridge {
 
   public static Order Nothing2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Nothing2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Nothing2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1949,7 +1949,7 @@ public class bridge {
 
   public static Order Nothing3 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Nothing3_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Nothing3_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1957,7 +1957,7 @@ public class bridge {
 
   public static Order DroneStartBuild {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.DroneStartBuild_get();
+      IntPtr cPtr = bridgePINVOKEProxy.DroneStartBuild_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1965,7 +1965,7 @@ public class bridge {
 
   public static Order DroneBuild {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.DroneBuild_get();
+      IntPtr cPtr = bridgePINVOKEProxy.DroneBuild_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1973,7 +1973,7 @@ public class bridge {
 
   public static Order InfestMine2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.InfestMine2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.InfestMine2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1981,7 +1981,7 @@ public class bridge {
 
   public static Order InfestMine3 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.InfestMine3_get();
+      IntPtr cPtr = bridgePINVOKEProxy.InfestMine3_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1989,7 +1989,7 @@ public class bridge {
 
   public static Order InfestMine4 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.InfestMine4_get();
+      IntPtr cPtr = bridgePINVOKEProxy.InfestMine4_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -1997,7 +1997,7 @@ public class bridge {
 
   public static Order BuildTerran {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.BuildTerran_get();
+      IntPtr cPtr = bridgePINVOKEProxy.BuildTerran_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2005,7 +2005,7 @@ public class bridge {
 
   public static Order BuildProtoss1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.BuildProtoss1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.BuildProtoss1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2013,7 +2013,7 @@ public class bridge {
 
   public static Order BuildProtoss2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.BuildProtoss2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.BuildProtoss2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2021,7 +2021,7 @@ public class bridge {
 
   public static Order ConstructingBuilding {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ConstructingBuilding_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ConstructingBuilding_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2029,7 +2029,7 @@ public class bridge {
 
   public static Order Repair1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Repair1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Repair1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2037,7 +2037,7 @@ public class bridge {
 
   public static Order Repair2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Repair2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Repair2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2045,7 +2045,7 @@ public class bridge {
 
   public static Order PlaceAddon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PlaceAddon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PlaceAddon_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2053,7 +2053,7 @@ public class bridge {
 
   public static Order BuildAddon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.BuildAddon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.BuildAddon_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2061,7 +2061,7 @@ public class bridge {
 
   public static Order Train {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Train_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Train_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2069,7 +2069,7 @@ public class bridge {
 
   public static Order RallyPoint1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.RallyPoint1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.RallyPoint1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2077,7 +2077,7 @@ public class bridge {
 
   public static Order RallyPoint2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.RallyPoint2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.RallyPoint2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2085,7 +2085,7 @@ public class bridge {
 
   public static Order ZergBirth {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ZergBirth_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ZergBirth_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2093,7 +2093,7 @@ public class bridge {
 
   public static Order Morph1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Morph1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Morph1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2101,7 +2101,7 @@ public class bridge {
 
   public static Order Morph2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Morph2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Morph2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2109,7 +2109,7 @@ public class bridge {
 
   public static Order BuildSelf1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.BuildSelf1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.BuildSelf1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2117,7 +2117,7 @@ public class bridge {
 
   public static Order ZergBuildSelf {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ZergBuildSelf_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ZergBuildSelf_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2125,7 +2125,7 @@ public class bridge {
 
   public static Order Build5 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Build5_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Build5_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2133,7 +2133,7 @@ public class bridge {
 
   public static Order Enternyduscanal {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Enternyduscanal_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Enternyduscanal_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2141,7 +2141,7 @@ public class bridge {
 
   public static Order BuildSelf2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.BuildSelf2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.BuildSelf2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2149,7 +2149,7 @@ public class bridge {
 
   public static Order Follow {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Follow_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Follow_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2157,7 +2157,7 @@ public class bridge {
 
   public static Order Carrier {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Carrier_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Carrier_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2165,7 +2165,7 @@ public class bridge {
 
   public static Order CarrierIgnore1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CarrierIgnore1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CarrierIgnore1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2173,7 +2173,7 @@ public class bridge {
 
   public static Order CarrierStop {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CarrierStop_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CarrierStop_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2181,7 +2181,7 @@ public class bridge {
 
   public static Order CarrierAttack1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CarrierAttack1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CarrierAttack1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2189,7 +2189,7 @@ public class bridge {
 
   public static Order CarrierAttack2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CarrierAttack2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CarrierAttack2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2197,7 +2197,7 @@ public class bridge {
 
   public static Order CarrierIgnore2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CarrierIgnore2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CarrierIgnore2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2205,7 +2205,7 @@ public class bridge {
 
   public static Order CarrierFight {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CarrierFight_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CarrierFight_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2213,7 +2213,7 @@ public class bridge {
 
   public static Order HoldPosition1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.HoldPosition1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.HoldPosition1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2221,7 +2221,7 @@ public class bridge {
 
   public static Order Reaver {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Reaver_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Reaver_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2229,7 +2229,7 @@ public class bridge {
 
   public static Order ReaverAttack1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ReaverAttack1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ReaverAttack1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2237,7 +2237,7 @@ public class bridge {
 
   public static Order ReaverAttack2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ReaverAttack2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ReaverAttack2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2245,7 +2245,7 @@ public class bridge {
 
   public static Order ReaverFight {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ReaverFight_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ReaverFight_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2253,7 +2253,7 @@ public class bridge {
 
   public static Order ReaverHold {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ReaverHold_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ReaverHold_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2261,7 +2261,7 @@ public class bridge {
 
   public static Order TrainFighter {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TrainFighter_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TrainFighter_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2269,7 +2269,7 @@ public class bridge {
 
   public static Order StrafeUnit1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.StrafeUnit1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.StrafeUnit1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2277,7 +2277,7 @@ public class bridge {
 
   public static Order StrafeUnit2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.StrafeUnit2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.StrafeUnit2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2285,7 +2285,7 @@ public class bridge {
 
   public static Order RechargeShields1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.RechargeShields1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.RechargeShields1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2293,7 +2293,7 @@ public class bridge {
 
   public static Order Rechargeshields2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Rechargeshields2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Rechargeshields2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2301,7 +2301,7 @@ public class bridge {
 
   public static Order ShieldBattery {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ShieldBattery_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ShieldBattery_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2309,7 +2309,7 @@ public class bridge {
 
   public static Order Return {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Return_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Return_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2317,7 +2317,7 @@ public class bridge {
 
   public static Order DroneLand {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.DroneLand_get();
+      IntPtr cPtr = bridgePINVOKEProxy.DroneLand_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2325,7 +2325,7 @@ public class bridge {
 
   public static Order BuildingLand {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.BuildingLand_get();
+      IntPtr cPtr = bridgePINVOKEProxy.BuildingLand_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2333,7 +2333,7 @@ public class bridge {
 
   public static Order BuildingLiftoff {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.BuildingLiftoff_get();
+      IntPtr cPtr = bridgePINVOKEProxy.BuildingLiftoff_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2341,7 +2341,7 @@ public class bridge {
 
   public static Order DroneLiftoff {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.DroneLiftoff_get();
+      IntPtr cPtr = bridgePINVOKEProxy.DroneLiftoff_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2349,7 +2349,7 @@ public class bridge {
 
   public static Order Liftoff {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Liftoff_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Liftoff_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2357,7 +2357,7 @@ public class bridge {
 
   public static Order ResearchTech {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ResearchTech_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ResearchTech_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2365,7 +2365,7 @@ public class bridge {
 
   public static Order Upgrade {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Upgrade_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Upgrade_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2373,7 +2373,7 @@ public class bridge {
 
   public static Order Larva {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Larva_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Larva_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2381,7 +2381,7 @@ public class bridge {
 
   public static Order SpawningLarva {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.SpawningLarva_get();
+      IntPtr cPtr = bridgePINVOKEProxy.SpawningLarva_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2389,7 +2389,7 @@ public class bridge {
 
   public static Order Harvest1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Harvest1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Harvest1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2397,7 +2397,7 @@ public class bridge {
 
   public static Order Harvest2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Harvest2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Harvest2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2405,7 +2405,7 @@ public class bridge {
 
   public static Order MoveToGas {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.MoveToGas_get();
+      IntPtr cPtr = bridgePINVOKEProxy.MoveToGas_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2413,7 +2413,7 @@ public class bridge {
 
   public static Order WaitForGas {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WaitForGas_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WaitForGas_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2421,7 +2421,7 @@ public class bridge {
 
   public static Order HarvestGas {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.HarvestGas_get();
+      IntPtr cPtr = bridgePINVOKEProxy.HarvestGas_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2429,7 +2429,7 @@ public class bridge {
 
   public static Order ReturnGas {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ReturnGas_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ReturnGas_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2437,7 +2437,7 @@ public class bridge {
 
   public static Order MoveToMinerals {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.MoveToMinerals_get();
+      IntPtr cPtr = bridgePINVOKEProxy.MoveToMinerals_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2445,7 +2445,7 @@ public class bridge {
 
   public static Order WaitForMinerals {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WaitForMinerals_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WaitForMinerals_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2453,7 +2453,7 @@ public class bridge {
 
   public static Order MiningMinerals {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.MiningMinerals_get();
+      IntPtr cPtr = bridgePINVOKEProxy.MiningMinerals_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2461,7 +2461,7 @@ public class bridge {
 
   public static Order Harvest3 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Harvest3_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Harvest3_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2469,7 +2469,7 @@ public class bridge {
 
   public static Order Harvest4 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Harvest4_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Harvest4_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2477,7 +2477,7 @@ public class bridge {
 
   public static Order ReturnMinerals {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ReturnMinerals_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ReturnMinerals_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2485,7 +2485,7 @@ public class bridge {
 
   public static Order Harvest5 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Harvest5_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Harvest5_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2493,7 +2493,7 @@ public class bridge {
 
   public static Order EnterTransport {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.EnterTransport_get();
+      IntPtr cPtr = bridgePINVOKEProxy.EnterTransport_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2501,7 +2501,7 @@ public class bridge {
 
   public static Order Pickup1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Pickup1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Pickup1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2509,7 +2509,7 @@ public class bridge {
 
   public static Order Pickup2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Pickup2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Pickup2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2517,7 +2517,7 @@ public class bridge {
 
   public static Order Pickup3 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Pickup3_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Pickup3_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2525,7 +2525,7 @@ public class bridge {
 
   public static Order Pickup4 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Pickup4_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Pickup4_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2533,7 +2533,7 @@ public class bridge {
 
   public static Order Powerup2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Powerup2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Powerup2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2541,7 +2541,7 @@ public class bridge {
 
   public static Order SiegeMode {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.SiegeMode_get();
+      IntPtr cPtr = bridgePINVOKEProxy.SiegeMode_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2549,7 +2549,7 @@ public class bridge {
 
   public static Order TankMode {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TankMode_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TankMode_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2557,7 +2557,7 @@ public class bridge {
 
   public static Order WatchTarget {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WatchTarget_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WatchTarget_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2565,7 +2565,7 @@ public class bridge {
 
   public static Order InitCreepGrowth {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.InitCreepGrowth_get();
+      IntPtr cPtr = bridgePINVOKEProxy.InitCreepGrowth_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2573,7 +2573,7 @@ public class bridge {
 
   public static Order SpreadCreep {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.SpreadCreep_get();
+      IntPtr cPtr = bridgePINVOKEProxy.SpreadCreep_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2581,7 +2581,7 @@ public class bridge {
 
   public static Order StoppingCreepGrowth {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.StoppingCreepGrowth_get();
+      IntPtr cPtr = bridgePINVOKEProxy.StoppingCreepGrowth_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2589,7 +2589,7 @@ public class bridge {
 
   public static Order GuardianAspect {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.GuardianAspect_get();
+      IntPtr cPtr = bridgePINVOKEProxy.GuardianAspect_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2597,7 +2597,7 @@ public class bridge {
 
   public static Order WarpingArchon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WarpingArchon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WarpingArchon_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2605,7 +2605,7 @@ public class bridge {
 
   public static Order CompletingArchonsummon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CompletingArchonsummon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CompletingArchonsummon_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2613,7 +2613,7 @@ public class bridge {
 
   public static Order HoldPosition2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.HoldPosition2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.HoldPosition2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2621,7 +2621,7 @@ public class bridge {
 
   public static Order HoldPosition3 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.HoldPosition3_get();
+      IntPtr cPtr = bridgePINVOKEProxy.HoldPosition3_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2629,7 +2629,7 @@ public class bridge {
 
   public static Order Cloak {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Cloak_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Cloak_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2637,7 +2637,7 @@ public class bridge {
 
   public static Order Decloak {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Decloak_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Decloak_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2645,7 +2645,7 @@ public class bridge {
 
   public static Order Unload {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Unload_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Unload_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2653,7 +2653,7 @@ public class bridge {
 
   public static Order MoveUnload {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.MoveUnload_get();
+      IntPtr cPtr = bridgePINVOKEProxy.MoveUnload_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2661,7 +2661,7 @@ public class bridge {
 
   public static Order FireYamatoGun1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.FireYamatoGun1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.FireYamatoGun1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2669,7 +2669,7 @@ public class bridge {
 
   public static Order FireYamatoGun2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.FireYamatoGun2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.FireYamatoGun2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2677,7 +2677,7 @@ public class bridge {
 
   public static Order MagnaPulse {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.MagnaPulse_get();
+      IntPtr cPtr = bridgePINVOKEProxy.MagnaPulse_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2685,7 +2685,7 @@ public class bridge {
 
   public static Order Burrow {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Burrow_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Burrow_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2693,7 +2693,7 @@ public class bridge {
 
   public static Order Burrowed {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Burrowed_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Burrowed_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2701,7 +2701,7 @@ public class bridge {
 
   public static Order Unburrow {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Unburrow_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Unburrow_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2709,7 +2709,7 @@ public class bridge {
 
   public static Order DarkSwarm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.DarkSwarm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.DarkSwarm_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2717,7 +2717,7 @@ public class bridge {
 
   public static Order CastParasite {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CastParasite_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CastParasite_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2725,7 +2725,7 @@ public class bridge {
 
   public static Order SummonBroodlings {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.SummonBroodlings_get();
+      IntPtr cPtr = bridgePINVOKEProxy.SummonBroodlings_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2733,7 +2733,7 @@ public class bridge {
 
   public static Order EmpShockwave {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.EmpShockwave_get();
+      IntPtr cPtr = bridgePINVOKEProxy.EmpShockwave_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2741,7 +2741,7 @@ public class bridge {
 
   public static Order NukeWait {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.NukeWait_get();
+      IntPtr cPtr = bridgePINVOKEProxy.NukeWait_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2749,7 +2749,7 @@ public class bridge {
 
   public static Order NukeTrain {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.NukeTrain_get();
+      IntPtr cPtr = bridgePINVOKEProxy.NukeTrain_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2757,7 +2757,7 @@ public class bridge {
 
   public static Order NukeLaunch {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.NukeLaunch_get();
+      IntPtr cPtr = bridgePINVOKEProxy.NukeLaunch_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2765,7 +2765,7 @@ public class bridge {
 
   public static Order NukePaint {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.NukePaint_get();
+      IntPtr cPtr = bridgePINVOKEProxy.NukePaint_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2773,7 +2773,7 @@ public class bridge {
 
   public static Order NukeUnit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.NukeUnit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.NukeUnit_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2781,7 +2781,7 @@ public class bridge {
 
   public static Order NukeGround {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.NukeGround_get();
+      IntPtr cPtr = bridgePINVOKEProxy.NukeGround_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2789,7 +2789,7 @@ public class bridge {
 
   public static Order NukeTrack {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.NukeTrack_get();
+      IntPtr cPtr = bridgePINVOKEProxy.NukeTrack_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2797,7 +2797,7 @@ public class bridge {
 
   public static Order InitArbiter {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.InitArbiter_get();
+      IntPtr cPtr = bridgePINVOKEProxy.InitArbiter_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2805,7 +2805,7 @@ public class bridge {
 
   public static Order CloakNearbyUnits {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CloakNearbyUnits_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CloakNearbyUnits_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2813,7 +2813,7 @@ public class bridge {
 
   public static Order PlaceMine {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PlaceMine_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PlaceMine_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2821,7 +2821,7 @@ public class bridge {
 
   public static Order Rightclickaction {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Rightclickaction_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Rightclickaction_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2829,7 +2829,7 @@ public class bridge {
 
   public static Order SapUnit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.SapUnit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.SapUnit_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2837,7 +2837,7 @@ public class bridge {
 
   public static Order SapLocation {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.SapLocation_get();
+      IntPtr cPtr = bridgePINVOKEProxy.SapLocation_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2845,7 +2845,7 @@ public class bridge {
 
   public static Order HoldPosition4 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.HoldPosition4_get();
+      IntPtr cPtr = bridgePINVOKEProxy.HoldPosition4_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2853,7 +2853,7 @@ public class bridge {
 
   public static Order Teleport {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Teleport_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Teleport_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2861,7 +2861,7 @@ public class bridge {
 
   public static Order TeleporttoLocation {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TeleporttoLocation_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TeleporttoLocation_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2869,7 +2869,7 @@ public class bridge {
 
   public static Order PlaceScanner {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PlaceScanner_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PlaceScanner_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2877,7 +2877,7 @@ public class bridge {
 
   public static Order Scanner {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Scanner_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Scanner_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2885,7 +2885,7 @@ public class bridge {
 
   public static Order DefensiveMatrix {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.DefensiveMatrix_get();
+      IntPtr cPtr = bridgePINVOKEProxy.DefensiveMatrix_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2893,7 +2893,7 @@ public class bridge {
 
   public static Order PsiStorm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PsiStorm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PsiStorm_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2901,7 +2901,7 @@ public class bridge {
 
   public static Order OrderIrradiate {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.OrderIrradiate_get();
+      IntPtr cPtr = bridgePINVOKEProxy.OrderIrradiate_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2909,7 +2909,7 @@ public class bridge {
 
   public static Order OrderPlague {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.OrderPlague_get();
+      IntPtr cPtr = bridgePINVOKEProxy.OrderPlague_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2917,7 +2917,7 @@ public class bridge {
 
   public static Order OrderConsume {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.OrderConsume_get();
+      IntPtr cPtr = bridgePINVOKEProxy.OrderConsume_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2925,7 +2925,7 @@ public class bridge {
 
   public static Order OrderEnsnare {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.OrderEnsnare_get();
+      IntPtr cPtr = bridgePINVOKEProxy.OrderEnsnare_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2933,7 +2933,7 @@ public class bridge {
 
   public static Order StasisField {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.StasisField_get();
+      IntPtr cPtr = bridgePINVOKEProxy.StasisField_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2941,7 +2941,7 @@ public class bridge {
 
   public static Order Hallucination1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Hallucination1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Hallucination1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2949,7 +2949,7 @@ public class bridge {
 
   public static Order Hallucination2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Hallucination2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Hallucination2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2957,7 +2957,7 @@ public class bridge {
 
   public static Order ResetCollision1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ResetCollision1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ResetCollision1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2965,7 +2965,7 @@ public class bridge {
 
   public static Order ResetCollision2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ResetCollision2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ResetCollision2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2973,7 +2973,7 @@ public class bridge {
 
   public static Order Patrol {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Patrol_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Patrol_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2981,7 +2981,7 @@ public class bridge {
 
   public static Order CTFCOPInit {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CTFCOPInit_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CTFCOPInit_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2989,7 +2989,7 @@ public class bridge {
 
   public static Order CTFCOP1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CTFCOP1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CTFCOP1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -2997,7 +2997,7 @@ public class bridge {
 
   public static Order CTFCOP2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CTFCOP2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CTFCOP2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3005,7 +3005,7 @@ public class bridge {
 
   public static Order ComputerAI {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ComputerAI_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ComputerAI_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3013,7 +3013,7 @@ public class bridge {
 
   public static Order AtkMoveEP {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AtkMoveEP_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AtkMoveEP_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3021,7 +3021,7 @@ public class bridge {
 
   public static Order HarassMove {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.HarassMove_get();
+      IntPtr cPtr = bridgePINVOKEProxy.HarassMove_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3029,7 +3029,7 @@ public class bridge {
 
   public static Order AIPatrol {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.AIPatrol_get();
+      IntPtr cPtr = bridgePINVOKEProxy.AIPatrol_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3037,7 +3037,7 @@ public class bridge {
 
   public static Order GuardPost {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.GuardPost_get();
+      IntPtr cPtr = bridgePINVOKEProxy.GuardPost_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3045,7 +3045,7 @@ public class bridge {
 
   public static Order RescuePassive {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.RescuePassive_get();
+      IntPtr cPtr = bridgePINVOKEProxy.RescuePassive_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3053,7 +3053,7 @@ public class bridge {
 
   public static Order OrderNeutral {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.OrderNeutral_get();
+      IntPtr cPtr = bridgePINVOKEProxy.OrderNeutral_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3061,7 +3061,7 @@ public class bridge {
 
   public static Order ComputerReturn {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ComputerReturn_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ComputerReturn_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3069,7 +3069,7 @@ public class bridge {
 
   public static Order InitPsiProvider {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.InitPsiProvider_get();
+      IntPtr cPtr = bridgePINVOKEProxy.InitPsiProvider_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3077,7 +3077,7 @@ public class bridge {
 
   public static Order SelfDestrucing {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.SelfDestrucing_get();
+      IntPtr cPtr = bridgePINVOKEProxy.SelfDestrucing_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3085,7 +3085,7 @@ public class bridge {
 
   public static Order Critter {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Critter_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Critter_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3093,7 +3093,7 @@ public class bridge {
 
   public static Order HiddenGun {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.HiddenGun_get();
+      IntPtr cPtr = bridgePINVOKEProxy.HiddenGun_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3101,7 +3101,7 @@ public class bridge {
 
   public static Order OpenDoor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.OpenDoor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.OpenDoor_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3109,7 +3109,7 @@ public class bridge {
 
   public static Order CloseDoor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CloseDoor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CloseDoor_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3117,7 +3117,7 @@ public class bridge {
 
   public static Order HideTrap {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.HideTrap_get();
+      IntPtr cPtr = bridgePINVOKEProxy.HideTrap_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3125,7 +3125,7 @@ public class bridge {
 
   public static Order RevealTrap {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.RevealTrap_get();
+      IntPtr cPtr = bridgePINVOKEProxy.RevealTrap_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3133,7 +3133,7 @@ public class bridge {
 
   public static Order Enabledoodad {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Enabledoodad_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Enabledoodad_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3141,7 +3141,7 @@ public class bridge {
 
   public static Order Disabledoodad {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Disabledoodad_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Disabledoodad_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3149,7 +3149,7 @@ public class bridge {
 
   public static Order Warpin {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Warpin_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Warpin_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3157,7 +3157,7 @@ public class bridge {
 
   public static Order Medic {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Medic_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Medic_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3165,7 +3165,7 @@ public class bridge {
 
   public static Order MedicHeal1 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.MedicHeal1_get();
+      IntPtr cPtr = bridgePINVOKEProxy.MedicHeal1_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3173,7 +3173,7 @@ public class bridge {
 
   public static Order HealMove {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.HealMove_get();
+      IntPtr cPtr = bridgePINVOKEProxy.HealMove_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3181,7 +3181,7 @@ public class bridge {
 
   public static Order MedicHoldPosition {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.MedicHoldPosition_get();
+      IntPtr cPtr = bridgePINVOKEProxy.MedicHoldPosition_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3189,7 +3189,7 @@ public class bridge {
 
   public static Order MedicHeal2 {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.MedicHeal2_get();
+      IntPtr cPtr = bridgePINVOKEProxy.MedicHeal2_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3197,7 +3197,7 @@ public class bridge {
 
   public static Order OrderRestoration {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.OrderRestoration_get();
+      IntPtr cPtr = bridgePINVOKEProxy.OrderRestoration_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3205,7 +3205,7 @@ public class bridge {
 
   public static Order CastDisruptionWeb {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CastDisruptionWeb_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CastDisruptionWeb_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3213,7 +3213,7 @@ public class bridge {
 
   public static Order CastMindControl {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CastMindControl_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CastMindControl_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3221,7 +3221,7 @@ public class bridge {
 
   public static Order WarpingDarkArchon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WarpingDarkArchon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WarpingDarkArchon_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3229,7 +3229,7 @@ public class bridge {
 
   public static Order CastFeedback {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CastFeedback_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CastFeedback_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3237,7 +3237,7 @@ public class bridge {
 
   public static Order CastOpticalFlare {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CastOpticalFlare_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CastOpticalFlare_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3245,7 +3245,7 @@ public class bridge {
 
   public static Order CastMaelstrom {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.CastMaelstrom_get();
+      IntPtr cPtr = bridgePINVOKEProxy.CastMaelstrom_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3253,7 +3253,7 @@ public class bridge {
 
   public static Order JunkYardDog {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.JunkYardDog_get();
+      IntPtr cPtr = bridgePINVOKEProxy.JunkYardDog_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3261,7 +3261,7 @@ public class bridge {
 
   public static Order Fatal {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Fatal_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Fatal_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3269,7 +3269,7 @@ public class bridge {
 
   public static Order OrderNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.OrderNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.OrderNone_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3277,30 +3277,30 @@ public class bridge {
 
   public static Order OrderUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.OrderUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.OrderUnknown_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
   }
 
   public static PlayerType getPlayerType(string name) {
-    PlayerType ret = new PlayerType(bridgePINVOKEProxy.remote.getPlayerType(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    PlayerType ret = new PlayerType(bridgePINVOKEProxy.getPlayerType(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static PlayerTypeSet allPlayerTypes() {
-    PlayerTypeSet ret = new PlayerTypeSet(bridgePINVOKEProxy.remote.allPlayerTypes(), false);
+    PlayerTypeSet ret = new PlayerTypeSet(bridgePINVOKEProxy.allPlayerTypes(), false);
     return ret;
   }
 
   public static void initPlayerTypes() {
-    bridgePINVOKEProxy.remote.initPlayerTypes();
+    bridgePINVOKEProxy.initPlayerTypes();
   }
 
   public static PlayerType NotUsed {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.NotUsed_get();
+      IntPtr cPtr = bridgePINVOKEProxy.NotUsed_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3308,7 +3308,7 @@ public class bridge {
 
   public static PlayerType Computer {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Computer_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Computer_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3316,7 +3316,7 @@ public class bridge {
 
   public static PlayerType Human {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Human_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Human_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3324,7 +3324,7 @@ public class bridge {
 
   public static PlayerType Rescuable {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Rescuable_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Rescuable_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3332,7 +3332,7 @@ public class bridge {
 
   public static PlayerType ComputerSlot {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ComputerSlot_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ComputerSlot_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3340,7 +3340,7 @@ public class bridge {
 
   public static PlayerType OpenSlot {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.OpenSlot_get();
+      IntPtr cPtr = bridgePINVOKEProxy.OpenSlot_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3348,7 +3348,7 @@ public class bridge {
 
   public static PlayerType PlayerTypeNeutral {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PlayerTypeNeutral_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PlayerTypeNeutral_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3356,7 +3356,7 @@ public class bridge {
 
   public static PlayerType ClosedSlot {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ClosedSlot_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ClosedSlot_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3364,7 +3364,7 @@ public class bridge {
 
   public static PlayerType HumanDefeated {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.HumanDefeated_get();
+      IntPtr cPtr = bridgePINVOKEProxy.HumanDefeated_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3372,7 +3372,7 @@ public class bridge {
 
   public static PlayerType ComputerDefeated {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ComputerDefeated_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ComputerDefeated_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3380,7 +3380,7 @@ public class bridge {
 
   public static PlayerType PlayerTypeNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PlayerTypeNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PlayerTypeNone_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3388,7 +3388,7 @@ public class bridge {
 
   public static PlayerType PlayerTypeUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.PlayerTypeUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.PlayerTypeUnknown_get();
       PlayerType ret = (cPtr == IntPtr.Zero) ? null : new PlayerType(cPtr, false);
       return ret;
     } 
@@ -3396,7 +3396,7 @@ public class bridge {
 
   public static TilePosition TilePositionInvalid {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TilePositionInvalid_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TilePositionInvalid_get();
       TilePosition ret = (cPtr == IntPtr.Zero) ? null : new TilePosition(cPtr, false);
       return ret;
     } 
@@ -3404,7 +3404,7 @@ public class bridge {
 
   public static TilePosition TilePositionNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TilePositionNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TilePositionNone_get();
       TilePosition ret = (cPtr == IntPtr.Zero) ? null : new TilePosition(cPtr, false);
       return ret;
     } 
@@ -3412,30 +3412,30 @@ public class bridge {
 
   public static TilePosition TilePositionUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.TilePositionUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.TilePositionUnknown_get();
       TilePosition ret = (cPtr == IntPtr.Zero) ? null : new TilePosition(cPtr, false);
       return ret;
     } 
   }
 
   public static UnitSizeType getUnitSizeType(string name) {
-    UnitSizeType ret = new UnitSizeType(bridgePINVOKEProxy.remote.getUnitSizeType(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    UnitSizeType ret = new UnitSizeType(bridgePINVOKEProxy.getUnitSizeType(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static UnitSizeTypeSet allUnitSizeTypes() {
-    UnitSizeTypeSet ret = new UnitSizeTypeSet(bridgePINVOKEProxy.remote.allUnitSizeTypes(), false);
+    UnitSizeTypeSet ret = new UnitSizeTypeSet(bridgePINVOKEProxy.allUnitSizeTypes(), false);
     return ret;
   }
 
   public static void initUnitSizeTypes() {
-    bridgePINVOKEProxy.remote.initUnitSizeTypes();
+    bridgePINVOKEProxy.initUnitSizeTypes();
   }
 
   public static UnitSizeType UnitSizeTypeIndependent {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.UnitSizeTypeIndependent_get();
+      IntPtr cPtr = bridgePINVOKEProxy.UnitSizeTypeIndependent_get();
       UnitSizeType ret = (cPtr == IntPtr.Zero) ? null : new UnitSizeType(cPtr, false);
       return ret;
     } 
@@ -3443,7 +3443,7 @@ public class bridge {
 
   public static UnitSizeType Small {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Small_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Small_get();
       UnitSizeType ret = (cPtr == IntPtr.Zero) ? null : new UnitSizeType(cPtr, false);
       return ret;
     } 
@@ -3451,7 +3451,7 @@ public class bridge {
 
   public static UnitSizeType Medium {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Medium_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Medium_get();
       UnitSizeType ret = (cPtr == IntPtr.Zero) ? null : new UnitSizeType(cPtr, false);
       return ret;
     } 
@@ -3459,7 +3459,7 @@ public class bridge {
 
   public static UnitSizeType Large {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Large_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Large_get();
       UnitSizeType ret = (cPtr == IntPtr.Zero) ? null : new UnitSizeType(cPtr, false);
       return ret;
     } 
@@ -3467,7 +3467,7 @@ public class bridge {
 
   public static UnitSizeType UnitSizeTypeNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.UnitSizeTypeNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.UnitSizeTypeNone_get();
       UnitSizeType ret = (cPtr == IntPtr.Zero) ? null : new UnitSizeType(cPtr, false);
       return ret;
     } 
@@ -3475,30 +3475,30 @@ public class bridge {
 
   public static UnitSizeType UnitSizeTypeUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.UnitSizeTypeUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.UnitSizeTypeUnknown_get();
       UnitSizeType ret = (cPtr == IntPtr.Zero) ? null : new UnitSizeType(cPtr, false);
       return ret;
     } 
   }
 
   public static UnitType getUnitType(string name) {
-    UnitType ret = new UnitType(bridgePINVOKEProxy.remote.getUnitType(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    UnitType ret = new UnitType(bridgePINVOKEProxy.getUnitType(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static UnitTypeSet allUnitTypes() {
-    UnitTypeSet ret = new UnitTypeSet(bridgePINVOKEProxy.remote.allUnitTypes(), false);
+    UnitTypeSet ret = new UnitTypeSet(bridgePINVOKEProxy.allUnitTypes(), false);
     return ret;
   }
 
   public static void initUnitTypes() {
-    bridgePINVOKEProxy.remote.initUnitTypes();
+    bridgePINVOKEProxy.initUnitTypes();
   }
 
   public static UnitType Terran_Marine {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Marine_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Marine_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3506,7 +3506,7 @@ public class bridge {
 
   public static UnitType Terran_Ghost {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Ghost_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Ghost_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3514,7 +3514,7 @@ public class bridge {
 
   public static UnitType Terran_Vulture {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Vulture_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Vulture_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3522,7 +3522,7 @@ public class bridge {
 
   public static UnitType Terran_Goliath {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Goliath_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Goliath_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3530,7 +3530,7 @@ public class bridge {
 
   public static UnitType Terran_Siege_Tank_Tank_Mode {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Siege_Tank_Tank_Mode_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Siege_Tank_Tank_Mode_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3538,7 +3538,7 @@ public class bridge {
 
   public static UnitType Terran_SCV {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_SCV_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_SCV_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3546,7 +3546,7 @@ public class bridge {
 
   public static UnitType Terran_Wraith {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Wraith_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Wraith_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3554,7 +3554,7 @@ public class bridge {
 
   public static UnitType Terran_Science_Vessel {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Science_Vessel_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Science_Vessel_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3562,7 +3562,7 @@ public class bridge {
 
   public static UnitType Terran_Dropship {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Dropship_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Dropship_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3570,7 +3570,7 @@ public class bridge {
 
   public static UnitType Terran_Battlecruiser {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Battlecruiser_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Battlecruiser_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3578,7 +3578,7 @@ public class bridge {
 
   public static UnitType Terran_Vulture_Spider_Mine {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Vulture_Spider_Mine_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Vulture_Spider_Mine_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3586,7 +3586,7 @@ public class bridge {
 
   public static UnitType Terran_Nuclear_Missile {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Nuclear_Missile_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Nuclear_Missile_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3594,7 +3594,7 @@ public class bridge {
 
   public static UnitType Terran_Siege_Tank_Siege_Mode {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Siege_Tank_Siege_Mode_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Siege_Tank_Siege_Mode_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3602,7 +3602,7 @@ public class bridge {
 
   public static UnitType Terran_Firebat {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Firebat_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Firebat_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3610,7 +3610,7 @@ public class bridge {
 
   public static UnitType Spell_Scanner_Sweep {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Spell_Scanner_Sweep_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Spell_Scanner_Sweep_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3618,7 +3618,7 @@ public class bridge {
 
   public static UnitType Terran_Medic {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Medic_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Medic_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3626,7 +3626,7 @@ public class bridge {
 
   public static UnitType Zerg_Larva {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Larva_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Larva_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3634,7 +3634,7 @@ public class bridge {
 
   public static UnitType Zerg_Egg {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Egg_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Egg_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3642,7 +3642,7 @@ public class bridge {
 
   public static UnitType Zerg_Zergling {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Zergling_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Zergling_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3650,7 +3650,7 @@ public class bridge {
 
   public static UnitType Zerg_Hydralisk {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Hydralisk_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Hydralisk_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3658,7 +3658,7 @@ public class bridge {
 
   public static UnitType Zerg_Ultralisk {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Ultralisk_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Ultralisk_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3666,7 +3666,7 @@ public class bridge {
 
   public static UnitType Zerg_Broodling {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Broodling_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Broodling_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3674,7 +3674,7 @@ public class bridge {
 
   public static UnitType Zerg_Drone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Drone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Drone_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3682,7 +3682,7 @@ public class bridge {
 
   public static UnitType Zerg_Overlord {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Overlord_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Overlord_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3690,7 +3690,7 @@ public class bridge {
 
   public static UnitType Zerg_Mutalisk {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Mutalisk_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Mutalisk_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3698,7 +3698,7 @@ public class bridge {
 
   public static UnitType Zerg_Guardian {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Guardian_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Guardian_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3706,7 +3706,7 @@ public class bridge {
 
   public static UnitType Zerg_Queen {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Queen_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Queen_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3714,7 +3714,7 @@ public class bridge {
 
   public static UnitType Zerg_Defiler {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Defiler_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Defiler_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3722,7 +3722,7 @@ public class bridge {
 
   public static UnitType Zerg_Scourge {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Scourge_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Scourge_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3730,7 +3730,7 @@ public class bridge {
 
   public static UnitType Zerg_Infested_Terran {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Infested_Terran_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Infested_Terran_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3738,7 +3738,7 @@ public class bridge {
 
   public static UnitType Terran_Valkyrie {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Valkyrie_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Valkyrie_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3746,7 +3746,7 @@ public class bridge {
 
   public static UnitType Zerg_Cocoon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Cocoon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Cocoon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3754,7 +3754,7 @@ public class bridge {
 
   public static UnitType Protoss_Corsair {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Corsair_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Corsair_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3762,7 +3762,7 @@ public class bridge {
 
   public static UnitType Protoss_Dark_Templar {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Dark_Templar_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Dark_Templar_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3770,7 +3770,7 @@ public class bridge {
 
   public static UnitType Zerg_Devourer {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Devourer_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Devourer_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3778,7 +3778,7 @@ public class bridge {
 
   public static UnitType Protoss_Dark_Archon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Dark_Archon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Dark_Archon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3786,7 +3786,7 @@ public class bridge {
 
   public static UnitType Protoss_Probe {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Probe_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Probe_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3794,7 +3794,7 @@ public class bridge {
 
   public static UnitType Protoss_Zealot {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Zealot_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Zealot_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3802,7 +3802,7 @@ public class bridge {
 
   public static UnitType Protoss_Dragoon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Dragoon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Dragoon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3810,7 +3810,7 @@ public class bridge {
 
   public static UnitType Protoss_High_Templar {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_High_Templar_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_High_Templar_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3818,7 +3818,7 @@ public class bridge {
 
   public static UnitType Protoss_Archon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Archon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Archon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3826,7 +3826,7 @@ public class bridge {
 
   public static UnitType Protoss_Shuttle {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Shuttle_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Shuttle_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3834,7 +3834,7 @@ public class bridge {
 
   public static UnitType Protoss_Scout {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Scout_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Scout_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3842,7 +3842,7 @@ public class bridge {
 
   public static UnitType Protoss_Arbiter {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Arbiter_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Arbiter_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3850,7 +3850,7 @@ public class bridge {
 
   public static UnitType Protoss_Carrier {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Carrier_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Carrier_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3858,7 +3858,7 @@ public class bridge {
 
   public static UnitType Protoss_Interceptor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Interceptor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Interceptor_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3866,7 +3866,7 @@ public class bridge {
 
   public static UnitType Protoss_Reaver {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Reaver_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Reaver_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3874,7 +3874,7 @@ public class bridge {
 
   public static UnitType Protoss_Observer {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Observer_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Observer_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3882,7 +3882,7 @@ public class bridge {
 
   public static UnitType Protoss_Scarab {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Scarab_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Scarab_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3890,7 +3890,7 @@ public class bridge {
 
   public static UnitType Critter_Rhynadon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Critter_Rhynadon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Critter_Rhynadon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3898,7 +3898,7 @@ public class bridge {
 
   public static UnitType Critter_Bengalaas {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Critter_Bengalaas_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Critter_Bengalaas_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3906,7 +3906,7 @@ public class bridge {
 
   public static UnitType Critter_Scantid {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Critter_Scantid_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Critter_Scantid_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3914,7 +3914,7 @@ public class bridge {
 
   public static UnitType Critter_Kakaru {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Critter_Kakaru_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Critter_Kakaru_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3922,7 +3922,7 @@ public class bridge {
 
   public static UnitType Critter_Ragnasaur {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Critter_Ragnasaur_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Critter_Ragnasaur_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3930,7 +3930,7 @@ public class bridge {
 
   public static UnitType Critter_Ursadon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Critter_Ursadon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Critter_Ursadon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3938,7 +3938,7 @@ public class bridge {
 
   public static UnitType Zerg_Lurker_Egg {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Lurker_Egg_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Lurker_Egg_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3946,7 +3946,7 @@ public class bridge {
 
   public static UnitType Zerg_Lurker {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Lurker_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Lurker_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3954,7 +3954,7 @@ public class bridge {
 
   public static UnitType Spell_Disruption_Web {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Spell_Disruption_Web_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Spell_Disruption_Web_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3962,7 +3962,7 @@ public class bridge {
 
   public static UnitType Terran_Command_Center {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Command_Center_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Command_Center_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3970,7 +3970,7 @@ public class bridge {
 
   public static UnitType Terran_Comsat_Station {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Comsat_Station_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Comsat_Station_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3978,7 +3978,7 @@ public class bridge {
 
   public static UnitType Terran_Nuclear_Silo {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Nuclear_Silo_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Nuclear_Silo_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3986,7 +3986,7 @@ public class bridge {
 
   public static UnitType Terran_Supply_Depot {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Supply_Depot_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Supply_Depot_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3994,7 +3994,7 @@ public class bridge {
 
   public static UnitType Terran_Refinery {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Refinery_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Refinery_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4002,7 +4002,7 @@ public class bridge {
 
   public static UnitType Terran_Barracks {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Barracks_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Barracks_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4010,7 +4010,7 @@ public class bridge {
 
   public static UnitType Terran_Academy {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Academy_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Academy_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4018,7 +4018,7 @@ public class bridge {
 
   public static UnitType Terran_Factory {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Factory_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Factory_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4026,7 +4026,7 @@ public class bridge {
 
   public static UnitType Terran_Starport {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Starport_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Starport_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4034,7 +4034,7 @@ public class bridge {
 
   public static UnitType Terran_Control_Tower {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Control_Tower_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Control_Tower_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4042,7 +4042,7 @@ public class bridge {
 
   public static UnitType Terran_Science_Facility {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Science_Facility_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Science_Facility_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4050,7 +4050,7 @@ public class bridge {
 
   public static UnitType Terran_Covert_Ops {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Covert_Ops_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Covert_Ops_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4058,7 +4058,7 @@ public class bridge {
 
   public static UnitType Terran_Physics_Lab {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Physics_Lab_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Physics_Lab_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4066,7 +4066,7 @@ public class bridge {
 
   public static UnitType Terran_Machine_Shop {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Machine_Shop_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Machine_Shop_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4074,7 +4074,7 @@ public class bridge {
 
   public static UnitType Terran_Engineering_Bay {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Engineering_Bay_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Engineering_Bay_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4082,7 +4082,7 @@ public class bridge {
 
   public static UnitType Terran_Armory {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Armory_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Armory_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4090,7 +4090,7 @@ public class bridge {
 
   public static UnitType Terran_Missile_Turret {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Missile_Turret_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Missile_Turret_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4098,7 +4098,7 @@ public class bridge {
 
   public static UnitType Terran_Bunker {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Terran_Bunker_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Terran_Bunker_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4106,7 +4106,7 @@ public class bridge {
 
   public static UnitType Special_Crashed_Norad_II {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Crashed_Norad_II_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Crashed_Norad_II_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4114,7 +4114,7 @@ public class bridge {
 
   public static UnitType Special_Ion_Cannon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Ion_Cannon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Ion_Cannon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4122,7 +4122,7 @@ public class bridge {
 
   public static UnitType Zerg_Infested_Command_Center {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Infested_Command_Center_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Infested_Command_Center_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4130,7 +4130,7 @@ public class bridge {
 
   public static UnitType Zerg_Hatchery {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Hatchery_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Hatchery_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4138,7 +4138,7 @@ public class bridge {
 
   public static UnitType Zerg_Lair {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Lair_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Lair_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4146,7 +4146,7 @@ public class bridge {
 
   public static UnitType Zerg_Hive {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Hive_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Hive_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4154,7 +4154,7 @@ public class bridge {
 
   public static UnitType Zerg_Nydus_Canal {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Nydus_Canal_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Nydus_Canal_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4162,7 +4162,7 @@ public class bridge {
 
   public static UnitType Zerg_Hydralisk_Den {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Hydralisk_Den_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Hydralisk_Den_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4170,7 +4170,7 @@ public class bridge {
 
   public static UnitType Zerg_Defiler_Mound {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Defiler_Mound_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Defiler_Mound_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4178,7 +4178,7 @@ public class bridge {
 
   public static UnitType Zerg_Greater_Spire {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Greater_Spire_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Greater_Spire_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4186,7 +4186,7 @@ public class bridge {
 
   public static UnitType Zerg_Queens_Nest {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Queens_Nest_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Queens_Nest_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4194,7 +4194,7 @@ public class bridge {
 
   public static UnitType Zerg_Evolution_Chamber {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Evolution_Chamber_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Evolution_Chamber_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4202,7 +4202,7 @@ public class bridge {
 
   public static UnitType Zerg_Ultralisk_Cavern {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Ultralisk_Cavern_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Ultralisk_Cavern_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4210,7 +4210,7 @@ public class bridge {
 
   public static UnitType Zerg_Spire {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Spire_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Spire_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4218,7 +4218,7 @@ public class bridge {
 
   public static UnitType Zerg_Spawning_Pool {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Spawning_Pool_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Spawning_Pool_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4226,7 +4226,7 @@ public class bridge {
 
   public static UnitType Zerg_Creep_Colony {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Creep_Colony_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Creep_Colony_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4234,7 +4234,7 @@ public class bridge {
 
   public static UnitType Zerg_Spore_Colony {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Spore_Colony_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Spore_Colony_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4242,7 +4242,7 @@ public class bridge {
 
   public static UnitType Zerg_Sunken_Colony {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Sunken_Colony_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Sunken_Colony_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4250,7 +4250,7 @@ public class bridge {
 
   public static UnitType Special_Overmind_With_Shell {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Overmind_With_Shell_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Overmind_With_Shell_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4258,7 +4258,7 @@ public class bridge {
 
   public static UnitType Special_Overmind {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Overmind_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Overmind_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4266,7 +4266,7 @@ public class bridge {
 
   public static UnitType Zerg_Extractor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Zerg_Extractor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Zerg_Extractor_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4274,7 +4274,7 @@ public class bridge {
 
   public static UnitType Special_Mature_Chrysalis {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Mature_Chrysalis_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Mature_Chrysalis_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4282,7 +4282,7 @@ public class bridge {
 
   public static UnitType Special_Cerebrate {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Cerebrate_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Cerebrate_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4290,7 +4290,7 @@ public class bridge {
 
   public static UnitType Special_Cerebrate_Daggoth {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Cerebrate_Daggoth_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Cerebrate_Daggoth_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4298,7 +4298,7 @@ public class bridge {
 
   public static UnitType Protoss_Nexus {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Nexus_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Nexus_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4306,7 +4306,7 @@ public class bridge {
 
   public static UnitType Protoss_Robotics_Facility {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Robotics_Facility_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Robotics_Facility_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4314,7 +4314,7 @@ public class bridge {
 
   public static UnitType Protoss_Pylon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Pylon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Pylon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4322,7 +4322,7 @@ public class bridge {
 
   public static UnitType Protoss_Assimilator {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Assimilator_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Assimilator_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4330,7 +4330,7 @@ public class bridge {
 
   public static UnitType Protoss_Observatory {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Observatory_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Observatory_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4338,7 +4338,7 @@ public class bridge {
 
   public static UnitType Protoss_Gateway {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Gateway_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Gateway_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4346,7 +4346,7 @@ public class bridge {
 
   public static UnitType Protoss_Photon_Cannon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Photon_Cannon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Photon_Cannon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4354,7 +4354,7 @@ public class bridge {
 
   public static UnitType Protoss_Citadel_of_Adun {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Citadel_of_Adun_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Citadel_of_Adun_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4362,7 +4362,7 @@ public class bridge {
 
   public static UnitType Protoss_Cybernetics_Core {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Cybernetics_Core_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Cybernetics_Core_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4370,7 +4370,7 @@ public class bridge {
 
   public static UnitType Protoss_Templar_Archives {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Templar_Archives_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Templar_Archives_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4378,7 +4378,7 @@ public class bridge {
 
   public static UnitType Protoss_Forge {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Forge_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Forge_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4386,7 +4386,7 @@ public class bridge {
 
   public static UnitType Protoss_Stargate {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Stargate_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Stargate_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4394,7 +4394,7 @@ public class bridge {
 
   public static UnitType Special_Stasis_Cell_Prison {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Stasis_Cell_Prison_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Stasis_Cell_Prison_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4402,7 +4402,7 @@ public class bridge {
 
   public static UnitType Protoss_Fleet_Beacon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Fleet_Beacon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Fleet_Beacon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4410,7 +4410,7 @@ public class bridge {
 
   public static UnitType Protoss_Arbiter_Tribunal {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Arbiter_Tribunal_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Arbiter_Tribunal_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4418,7 +4418,7 @@ public class bridge {
 
   public static UnitType Protoss_Robotics_Support_Bay {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Robotics_Support_Bay_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Robotics_Support_Bay_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4426,7 +4426,7 @@ public class bridge {
 
   public static UnitType Protoss_Shield_Battery {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Protoss_Shield_Battery_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Protoss_Shield_Battery_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4434,7 +4434,7 @@ public class bridge {
 
   public static UnitType Special_Khaydarin_Crystal_Form {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Khaydarin_Crystal_Form_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Khaydarin_Crystal_Form_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4442,7 +4442,7 @@ public class bridge {
 
   public static UnitType Special_Protoss_Temple {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Protoss_Temple_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Protoss_Temple_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4450,7 +4450,7 @@ public class bridge {
 
   public static UnitType Special_XelNaga_Temple {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_XelNaga_Temple_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_XelNaga_Temple_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4458,7 +4458,7 @@ public class bridge {
 
   public static UnitType Resource_Mineral_Field {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Resource_Mineral_Field_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Resource_Mineral_Field_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4466,7 +4466,7 @@ public class bridge {
 
   public static UnitType Resource_Vespene_Geyser {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Resource_Vespene_Geyser_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Resource_Vespene_Geyser_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4474,7 +4474,7 @@ public class bridge {
 
   public static UnitType Special_Warp_Gate {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Warp_Gate_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Warp_Gate_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4482,7 +4482,7 @@ public class bridge {
 
   public static UnitType Special_Psi_Disrupter {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Psi_Disrupter_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Psi_Disrupter_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4490,7 +4490,7 @@ public class bridge {
 
   public static UnitType Special_Power_Generator {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Power_Generator_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Power_Generator_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4498,7 +4498,7 @@ public class bridge {
 
   public static UnitType Special_Overmind_Cocoon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Special_Overmind_Cocoon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Special_Overmind_Cocoon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4506,7 +4506,7 @@ public class bridge {
 
   public static UnitType Spell_Dark_Swarm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Spell_Dark_Swarm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Spell_Dark_Swarm_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4514,7 +4514,7 @@ public class bridge {
 
   public static UnitType UnitTypeNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.UnitTypeNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.UnitTypeNone_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4522,40 +4522,40 @@ public class bridge {
 
   public static UnitType UnitTypeUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.UnitTypeUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.UnitTypeUnknown_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
   }
 
   public static WeaponType getWeaponType(string name) {
-    WeaponType ret = new WeaponType(bridgePINVOKEProxy.remote.getWeaponType(name), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    WeaponType ret = new WeaponType(bridgePINVOKEProxy.getWeaponType(name), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static WeaponTypeSet allWeaponTypes() {
-    WeaponTypeSet ret = new WeaponTypeSet(bridgePINVOKEProxy.remote.allWeaponTypes(), false);
+    WeaponTypeSet ret = new WeaponTypeSet(bridgePINVOKEProxy.allWeaponTypes(), false);
     return ret;
   }
 
   public static WeaponTypeSet normalWeaponTypes() {
-    WeaponTypeSet ret = new WeaponTypeSet(bridgePINVOKEProxy.remote.normalWeaponTypes(), false);
+    WeaponTypeSet ret = new WeaponTypeSet(bridgePINVOKEProxy.normalWeaponTypes(), false);
     return ret;
   }
 
   public static WeaponTypeSet specialWeaponTypes() {
-    WeaponTypeSet ret = new WeaponTypeSet(bridgePINVOKEProxy.remote.specialWeaponTypes(), false);
+    WeaponTypeSet ret = new WeaponTypeSet(bridgePINVOKEProxy.specialWeaponTypes(), false);
     return ret;
   }
 
   public static void initWeaponTypes() {
-    bridgePINVOKEProxy.remote.initWeaponTypes();
+    bridgePINVOKEProxy.initWeaponTypes();
   }
 
   public static WeaponType Gauss_Rifle {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Gauss_Rifle_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Gauss_Rifle_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4563,7 +4563,7 @@ public class bridge {
 
   public static WeaponType C_10_Canister_Rifle {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.C_10_Canister_Rifle_get();
+      IntPtr cPtr = bridgePINVOKEProxy.C_10_Canister_Rifle_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4571,7 +4571,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeFragmentation_Grenade {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeFragmentation_Grenade_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeFragmentation_Grenade_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4579,7 +4579,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeSpider_Mines {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeSpider_Mines_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeSpider_Mines_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4587,7 +4587,7 @@ public class bridge {
 
   public static WeaponType Twin_Autocannons {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Twin_Autocannons_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Twin_Autocannons_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4595,7 +4595,7 @@ public class bridge {
 
   public static WeaponType Hellfire_Missile_Pack {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Hellfire_Missile_Pack_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Hellfire_Missile_Pack_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4603,7 +4603,7 @@ public class bridge {
 
   public static WeaponType Arclite_Cannon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Arclite_Cannon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Arclite_Cannon_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4611,7 +4611,7 @@ public class bridge {
 
   public static WeaponType Fusion_Cutter {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Fusion_Cutter_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Fusion_Cutter_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4619,7 +4619,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeGemini_Missiles {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeGemini_Missiles_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeGemini_Missiles_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4627,7 +4627,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeBurst_Lasers {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeBurst_Lasers_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeBurst_Lasers_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4635,7 +4635,7 @@ public class bridge {
 
   public static WeaponType ATS_Laser_Battery {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ATS_Laser_Battery_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ATS_Laser_Battery_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4643,7 +4643,7 @@ public class bridge {
 
   public static WeaponType ATA_Laser_Battery {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.ATA_Laser_Battery_get();
+      IntPtr cPtr = bridgePINVOKEProxy.ATA_Laser_Battery_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4651,7 +4651,7 @@ public class bridge {
 
   public static WeaponType Flame_Thrower {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Flame_Thrower_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Flame_Thrower_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4659,7 +4659,7 @@ public class bridge {
 
   public static WeaponType Arclite_Shock_Cannon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Arclite_Shock_Cannon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Arclite_Shock_Cannon_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4667,7 +4667,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeLongbolt_Missile {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeLongbolt_Missile_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeLongbolt_Missile_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4675,7 +4675,7 @@ public class bridge {
 
   public static WeaponType Claws {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Claws_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Claws_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4683,7 +4683,7 @@ public class bridge {
 
   public static WeaponType Needle_Spines {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Needle_Spines_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Needle_Spines_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4691,7 +4691,7 @@ public class bridge {
 
   public static WeaponType Kaiser_Blades {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Kaiser_Blades_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Kaiser_Blades_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4699,7 +4699,7 @@ public class bridge {
 
   public static WeaponType Toxic_Spores {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Toxic_Spores_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Toxic_Spores_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4707,7 +4707,7 @@ public class bridge {
 
   public static WeaponType Spines {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Spines_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Spines_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4715,7 +4715,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeAcid_Spore {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeAcid_Spore_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeAcid_Spore_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4723,7 +4723,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeGlave_Wurm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeGlave_Wurm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeGlave_Wurm_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4731,7 +4731,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeSeeker_Spores {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeSeeker_Spores_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeSeeker_Spores_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4739,7 +4739,7 @@ public class bridge {
 
   public static WeaponType Subterranean_Tentacle {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Subterranean_Tentacle_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Subterranean_Tentacle_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4747,7 +4747,7 @@ public class bridge {
 
   public static WeaponType Suicide_Infested_Terran {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Suicide_Infested_Terran_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Suicide_Infested_Terran_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4755,7 +4755,7 @@ public class bridge {
 
   public static WeaponType Suicide_Scourge {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Suicide_Scourge_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Suicide_Scourge_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4763,7 +4763,7 @@ public class bridge {
 
   public static WeaponType Particle_Beam {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Particle_Beam_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Particle_Beam_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4771,7 +4771,7 @@ public class bridge {
 
   public static WeaponType Psi_Blades {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Psi_Blades_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Psi_Blades_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4779,7 +4779,7 @@ public class bridge {
 
   public static WeaponType WeaponTypePhase_Disruptor {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypePhase_Disruptor_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypePhase_Disruptor_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4787,7 +4787,7 @@ public class bridge {
 
   public static WeaponType Psionic_Shockwave {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Psionic_Shockwave_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Psionic_Shockwave_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4795,7 +4795,7 @@ public class bridge {
 
   public static WeaponType Dual_Photon_Blasters {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Dual_Photon_Blasters_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Dual_Photon_Blasters_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4803,7 +4803,7 @@ public class bridge {
 
   public static WeaponType Anti_Matter_Missiles {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Anti_Matter_Missiles_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Anti_Matter_Missiles_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4811,7 +4811,7 @@ public class bridge {
 
   public static WeaponType Phase_Disruptor_Cannon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Phase_Disruptor_Cannon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Phase_Disruptor_Cannon_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4819,7 +4819,7 @@ public class bridge {
 
   public static WeaponType WeaponTypePulse_Cannon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypePulse_Cannon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypePulse_Cannon_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4827,7 +4827,7 @@ public class bridge {
 
   public static WeaponType STS_Photon_Cannon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.STS_Photon_Cannon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.STS_Photon_Cannon_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4835,7 +4835,7 @@ public class bridge {
 
   public static WeaponType STA_Photon_Cannon {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.STA_Photon_Cannon_get();
+      IntPtr cPtr = bridgePINVOKEProxy.STA_Photon_Cannon_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4843,7 +4843,7 @@ public class bridge {
 
   public static WeaponType Scarab {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Scarab_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Scarab_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4851,7 +4851,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeNeutron_Flare {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeNeutron_Flare_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeNeutron_Flare_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4859,7 +4859,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeHalo_Rockets {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeHalo_Rockets_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeHalo_Rockets_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4867,7 +4867,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeCorrosive_Acid {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeCorrosive_Acid_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeCorrosive_Acid_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4875,7 +4875,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeSubterranean_Spines {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeSubterranean_Spines_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeSubterranean_Spines_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4883,7 +4883,7 @@ public class bridge {
 
   public static WeaponType Warp_Blades {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Warp_Blades_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Warp_Blades_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4891,7 +4891,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeYamato_Gun {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeYamato_Gun_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeYamato_Gun_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4899,7 +4899,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeNuclear_Strike {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeNuclear_Strike_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeNuclear_Strike_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4907,7 +4907,7 @@ public class bridge {
 
   public static WeaponType Lockdown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Lockdown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Lockdown_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4915,7 +4915,7 @@ public class bridge {
 
   public static WeaponType EMP_Shockwave {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.EMP_Shockwave_get();
+      IntPtr cPtr = bridgePINVOKEProxy.EMP_Shockwave_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4923,7 +4923,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeIrradiate {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeIrradiate_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeIrradiate_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4931,7 +4931,7 @@ public class bridge {
 
   public static WeaponType Parasite {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Parasite_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Parasite_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4939,7 +4939,7 @@ public class bridge {
 
   public static WeaponType Spawn_Broodlings {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Spawn_Broodlings_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Spawn_Broodlings_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4947,7 +4947,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeEnsnare {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeEnsnare_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeEnsnare_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4955,7 +4955,7 @@ public class bridge {
 
   public static WeaponType Dark_Swarm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Dark_Swarm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Dark_Swarm_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4963,7 +4963,7 @@ public class bridge {
 
   public static WeaponType WeaponTypePlague {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypePlague_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypePlague_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4971,7 +4971,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeConsume {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeConsume_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeConsume_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4979,7 +4979,7 @@ public class bridge {
 
   public static WeaponType Stasis_Field {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Stasis_Field_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Stasis_Field_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4987,7 +4987,7 @@ public class bridge {
 
   public static WeaponType WeaponTypePsionic_Storm {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypePsionic_Storm_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypePsionic_Storm_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4995,7 +4995,7 @@ public class bridge {
 
   public static WeaponType Disruption_Web {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Disruption_Web_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Disruption_Web_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5003,7 +5003,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeRestoration {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeRestoration_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeRestoration_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5011,7 +5011,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeMind_Control {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeMind_Control_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeMind_Control_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5019,7 +5019,7 @@ public class bridge {
 
   public static WeaponType Feedback {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Feedback_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Feedback_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5027,7 +5027,7 @@ public class bridge {
 
   public static WeaponType Optical_Flare {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Optical_Flare_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Optical_Flare_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5035,7 +5035,7 @@ public class bridge {
 
   public static WeaponType Maelstrom {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.Maelstrom_get();
+      IntPtr cPtr = bridgePINVOKEProxy.Maelstrom_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5043,7 +5043,7 @@ public class bridge {
 
   public static WeaponType WeaponTypeNone {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeNone_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeNone_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5051,152 +5051,152 @@ public class bridge {
 
   public static WeaponType WeaponTypeUnknown {
     get {
-      IntPtr cPtr = bridgePINVOKEProxy.remote.WeaponTypeUnknown_get();
+      IntPtr cPtr = bridgePINVOKEProxy.WeaponTypeUnknown_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
   }
 
   public static void readMap() {
-    bridgePINVOKEProxy.remote.readMap();
+    bridgePINVOKEProxy.readMap();
   }
 
   public static void analyze() {
-    bridgePINVOKEProxy.remote.analyze();
+    bridgePINVOKEProxy.analyze();
   }
 
   public static RegionPtrSet getRegions() {
-    RegionPtrSet ret = new RegionPtrSet(bridgePINVOKEProxy.remote.getRegions(), false);
+    RegionPtrSet ret = new RegionPtrSet(bridgePINVOKEProxy.getRegions(), false);
     return ret;
   }
 
   public static ChokepointPtrSet getChokepoints() {
-    ChokepointPtrSet ret = new ChokepointPtrSet(bridgePINVOKEProxy.remote.getChokepoints(), false);
+    ChokepointPtrSet ret = new ChokepointPtrSet(bridgePINVOKEProxy.getChokepoints(), false);
     return ret;
   }
 
   public static BaseLocationPtrSet getBaseLocations() {
-    BaseLocationPtrSet ret = new BaseLocationPtrSet(bridgePINVOKEProxy.remote.getBaseLocations(), false);
+    BaseLocationPtrSet ret = new BaseLocationPtrSet(bridgePINVOKEProxy.getBaseLocations(), false);
     return ret;
   }
 
   public static BaseLocationPtrSet getStartLocations() {
-    BaseLocationPtrSet ret = new BaseLocationPtrSet(bridgePINVOKEProxy.remote.getStartLocations(), false);
+    BaseLocationPtrSet ret = new BaseLocationPtrSet(bridgePINVOKEProxy.getStartLocations(), false);
     return ret;
   }
 
   public static PolygonPtrSet getUnwalkablePolygons() {
-    PolygonPtrSet ret = new PolygonPtrSet(bridgePINVOKEProxy.remote.getUnwalkablePolygons(), false);
+    PolygonPtrSet ret = new PolygonPtrSet(bridgePINVOKEProxy.getUnwalkablePolygons(), false);
     return ret;
   }
 
   public static BaseLocation getStartLocation(Player player) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.getStartLocation(Player.getCPtr(player));
+    IntPtr cPtr = bridgePINVOKEProxy.getStartLocation(Player.getCPtr(player));
     BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
     return ret;
   }
 
   public static Region getRegion(int x, int y) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.getRegion__SWIG_0(x, y);
+    IntPtr cPtr = bridgePINVOKEProxy.getRegion__SWIG_0(x, y);
     Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
     return ret;
   }
 
   public static Region getRegion(TilePosition tileposition) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.getRegion__SWIG_1(TilePosition.getCPtr(tileposition));
+    IntPtr cPtr = bridgePINVOKEProxy.getRegion__SWIG_1(TilePosition.getCPtr(tileposition));
     Region ret = (cPtr == IntPtr.Zero) ? null : new Region(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static Chokepoint getNearestChokepoint(int x, int y) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.getNearestChokepoint__SWIG_0(x, y);
+    IntPtr cPtr = bridgePINVOKEProxy.getNearestChokepoint__SWIG_0(x, y);
     Chokepoint ret = (cPtr == IntPtr.Zero) ? null : new Chokepoint(cPtr, false);
     return ret;
   }
 
   public static Chokepoint getNearestChokepoint(TilePosition tileposition) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.getNearestChokepoint__SWIG_1(TilePosition.getCPtr(tileposition));
+    IntPtr cPtr = bridgePINVOKEProxy.getNearestChokepoint__SWIG_1(TilePosition.getCPtr(tileposition));
     Chokepoint ret = (cPtr == IntPtr.Zero) ? null : new Chokepoint(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static BaseLocation getNearestBaseLocation(int x, int y) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.getNearestBaseLocation__SWIG_0(x, y);
+    IntPtr cPtr = bridgePINVOKEProxy.getNearestBaseLocation__SWIG_0(x, y);
     BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
     return ret;
   }
 
   public static BaseLocation getNearestBaseLocation(TilePosition tileposition) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.getNearestBaseLocation__SWIG_1(TilePosition.getCPtr(tileposition));
+    IntPtr cPtr = bridgePINVOKEProxy.getNearestBaseLocation__SWIG_1(TilePosition.getCPtr(tileposition));
     BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static Polygon getNearestUnwalkablePolygon(int x, int y) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.getNearestUnwalkablePolygon__SWIG_0(x, y);
+    IntPtr cPtr = bridgePINVOKEProxy.getNearestUnwalkablePolygon__SWIG_0(x, y);
     Polygon ret = (cPtr == IntPtr.Zero) ? null : new Polygon(cPtr, false);
     return ret;
   }
 
   public static Polygon getNearestUnwalkablePolygon(TilePosition tileposition) {
-    IntPtr cPtr = bridgePINVOKEProxy.remote.getNearestUnwalkablePolygon__SWIG_1(TilePosition.getCPtr(tileposition));
+    IntPtr cPtr = bridgePINVOKEProxy.getNearestUnwalkablePolygon__SWIG_1(TilePosition.getCPtr(tileposition));
     Polygon ret = (cPtr == IntPtr.Zero) ? null : new Polygon(cPtr, false);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static Position getNearestUnwalkablePosition(Position position) {
-    Position ret = new Position(bridgePINVOKEProxy.remote.getNearestUnwalkablePosition(Position.getCPtr(position)), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    Position ret = new Position(bridgePINVOKEProxy.getNearestUnwalkablePosition(Position.getCPtr(position)), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static bool isConnected(int x1, int y1, int x2, int y2) {
-    bool ret = bridgePINVOKEProxy.remote.isConnected__SWIG_0(x1, y1, x2, y2);
+    bool ret = bridgePINVOKEProxy.isConnected__SWIG_0(x1, y1, x2, y2);
     return ret;
   }
 
   public static bool isConnected(TilePosition a, TilePosition b) {
-    bool ret = bridgePINVOKEProxy.remote.isConnected__SWIG_1(TilePosition.getCPtr(a), TilePosition.getCPtr(b));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bool ret = bridgePINVOKEProxy.isConnected__SWIG_1(TilePosition.getCPtr(a), TilePosition.getCPtr(b));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static double getGroundDistance(TilePosition start, TilePosition end) {
-    double ret = bridgePINVOKEProxy.remote.getGroundDistance(TilePosition.getCPtr(start), TilePosition.getCPtr(end));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    double ret = bridgePINVOKEProxy.getGroundDistance(TilePosition.getCPtr(start), TilePosition.getCPtr(end));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static TilePositionDoublePair getNearestTilePosition(TilePosition start, TilePositionSet targets) {
-    TilePositionDoublePair ret = new TilePositionDoublePair(bridgePINVOKEProxy.remote.getNearestTilePosition(TilePosition.getCPtr(start), TilePositionSet.getCPtr(targets)), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    TilePositionDoublePair ret = new TilePositionDoublePair(bridgePINVOKEProxy.getNearestTilePosition(TilePosition.getCPtr(start), TilePositionSet.getCPtr(targets)), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static TilePositionDoubleMap getGroundDistances(TilePosition start, TilePositionSet targets) {
-    TilePositionDoubleMap ret = new TilePositionDoubleMap(bridgePINVOKEProxy.remote.getGroundDistances(TilePosition.getCPtr(start), TilePositionSet.getCPtr(targets)), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    TilePositionDoubleMap ret = new TilePositionDoubleMap(bridgePINVOKEProxy.getGroundDistances(TilePosition.getCPtr(start), TilePositionSet.getCPtr(targets)), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static void getGroundDistanceMap(TilePosition start, RectangleArrayDouble distanceMap) {
-    bridgePINVOKEProxy.remote.getGroundDistanceMap(TilePosition.getCPtr(start), RectangleArrayDouble.getCPtr(distanceMap));
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    bridgePINVOKEProxy.getGroundDistanceMap(TilePosition.getCPtr(start), RectangleArrayDouble.getCPtr(distanceMap));
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
   }
 
   public static TilePositionVector getShortestPath(TilePosition start, TilePosition end) {
-    TilePositionVector ret = new TilePositionVector(bridgePINVOKEProxy.remote.getShortestPath__SWIG_0(TilePosition.getCPtr(start), TilePosition.getCPtr(end)), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    TilePositionVector ret = new TilePositionVector(bridgePINVOKEProxy.getShortestPath__SWIG_0(TilePosition.getCPtr(start), TilePosition.getCPtr(end)), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static TilePositionVector getShortestPath(TilePosition start, TilePositionSet targets) {
-    TilePositionVector ret = new TilePositionVector(bridgePINVOKEProxy.remote.getShortestPath__SWIG_1(TilePosition.getCPtr(start), TilePositionSet.getCPtr(targets)), true);
-    if (bridgePINVOKEProxy.remote.SWIGPendingException.Pending) throw bridgePINVOKEProxy.remote.SWIGPendingException.Retrieve();
+    TilePositionVector ret = new TilePositionVector(bridgePINVOKEProxy.getShortestPath__SWIG_1(TilePosition.getCPtr(start), TilePositionSet.getCPtr(targets)), true);
+    if (bridgePINVOKEProxy.SWIGPendingException.Pending) throw bridgePINVOKEProxy.SWIGPendingException.Retrieve();
     return ret;
   }
 
