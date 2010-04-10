@@ -1,0 +1,1 @@
+k:\xampplite\php\php.exe createbridgedynamic.php ..\swig-classes ..\remote-classes

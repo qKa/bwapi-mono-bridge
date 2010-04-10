@@ -6,7 +6,9 @@
 
 using System;
 using BWAPI;
+
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting;
 
 namespace MonoBridgeAI {
 	class StarcraftBotProxy {
@@ -37,7 +39,16 @@ namespace MonoBridgeAI {
 			Callback cbonUnitHide);
 		
 		public StarcraftBotProxy() {
-			realbot = new StarcraftBot.MonoStarcraftBot();
+            bridgePINVOKEProxy.connectProxy();
+            try
+            {
+                RemotingConfiguration.Configure("monobridgeai.dll.config",false);
+            }
+            catch (Exception e)
+            {
+                bridge.Broodwar.printf("Error loading remote config." + e.Message);
+            }
+            realbot = new StarcraftBot.MonoStarcraftBot();
 			
 			RegisterNativeCallbacks();
 		}
