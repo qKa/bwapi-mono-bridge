@@ -33,10 +33,10 @@ namespace StarcraftBotHost
             //tell .net remoting about our class.
             AddStatus("Setting Up AI Remoting..");
 
-            if (System.IO.File.Exists("bwapi-data\\AI\bot\\StarcraftBotHost.exe.config"))
+            if (System.IO.File.Exists("StarcraftBotHost.exe.config"))
             {
-                AddStatus("Found Config file using \"bwapi-data\\AI\bot\\StarcraftBotHost.exe.config\"");
-                RemotingConfiguration.Configure("bwapi-data\\AI\bot\\StarcraftBotHost.exe.config");
+                AddStatus("Found Config file using \"StarcraftBotHost.exe.config\"");
+                RemotingConfiguration.Configure("StarcraftBotHost.exe.config");
             }
             else
             {
