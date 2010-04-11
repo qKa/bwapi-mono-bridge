@@ -51,6 +51,10 @@ namespace StarcraftBot
 		/*	if (text == "drawcircle") {
 				bridge.Broodwar.drawCircle((int) CoordinateType.Screen,100,100,100,bridge.Blue,true);
 			}*/
+            if (text == "hello")
+            {
+                bridge.Broodwar.printf("well, hello from the other side :)");
+            }
 			return true;
 		}
 	}

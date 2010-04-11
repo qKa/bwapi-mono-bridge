@@ -47,7 +47,7 @@
 			$argcount++;
 		}
 		
-		$newm .= ") {\r\n  ";
+		$newm .= ") {\r\n lock(typeof(bridgePINVOKE)) { \r\n  ";
 
 
 		if ($matches[1] <> 'void') {
@@ -68,7 +68,7 @@
 			}
 			$argcount++;
 		}
-		$newm .= ");\r\n}\r\n";
+		$newm .= ");\r\n}\r\n}\r\n";
 		return $newm;
 	}
 	
@@ -159,6 +159,14 @@ namespace BWAPI {
 	public static void connectProxy() {
 		remote = new bridgePINVOKEDynamic();
 	}
+	
+	public static bridgePINVOKEDynamic.SWIGPendingExceptionDynamic SWIGPendingException
+    {
+        get
+        {
+            return remote.SWIGPendingException;
+        }
+    }
 ";
 
 
