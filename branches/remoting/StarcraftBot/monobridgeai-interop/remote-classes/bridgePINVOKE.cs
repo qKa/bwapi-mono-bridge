@@ -126,7 +126,7 @@ class bridgePINVOKE {
   protected static SWIGExceptionHelper swigExceptionHelper = new SWIGExceptionHelper();
 
   public class SWIGPendingException {
-    [ThreadStatic]
+    // [ThreadStatic] - this breaks things.
     private static Exception pendingException = null;
     private static int numExceptionsPending = 0;
 

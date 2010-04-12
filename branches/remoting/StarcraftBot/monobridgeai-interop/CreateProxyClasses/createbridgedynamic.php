@@ -47,8 +47,9 @@
 			$argcount++;
 		}
 		
-		$newm .= ") {\r\n lock(typeof(bridgePINVOKE)) { \r\n  ";
+		$newm .= ") {\r\n lock(typeof(bridgePINVOKE)) { \r\n try {\r\n  ";
 
+		$newm .= "   if (errorlog != null) { errorlog.Debug(\"Calling - {$matches[2]}\"); } \r\n";
 
 		if ($matches[1] <> 'void') {
 			$newm .= "return ";
@@ -68,7 +69,7 @@
 			}
 			$argcount++;
 		}
-		$newm .= ");\r\n}\r\n}\r\n";
+		$newm .= ");\r\n} catch (Exception e) {\r\n if(errorlog != null) { errorlog.Debug(\"Error in {$matches[2]}: \",e);}\r\nthrow e;\r\n   }     \r\n}\r\n}\r\n";
 		return $newm;
 	}
 	
@@ -116,6 +117,7 @@ namespace BWAPI {
 
 using System;
 using System.Runtime.InteropServices;
+using log4net;
 
 
 public class bridgePINVOKEDynamic: MarshalByRefObject {
@@ -138,6 +140,8 @@ public class SWIGPendingExceptionDynamic: MarshalByRefObject {
 }
 
 public SWIGPendingExceptionDynamic SWIGPendingException;
+                                                        
+public static ILog errorlog = null;
 
 public bridgePINVOKEDynamic() {
 	SWIGPendingException = new SWIGPendingExceptionDynamic();
@@ -183,6 +187,11 @@ namespace BWAPI {
 	$newfile .= "}\r\n}";
 	
 	
+	//get rid of threadstatic
+	$f= preg_replace('|\[ThreadStatic\]|','// [ThreadStatic] - this breaks things.',$f);
+	file_put_contents($outputdir.DIRECTORY_SEPARATOR.'bridgePINVOKE.cs',$f);
+	
+	
 	 
 	
 	$outfile = $outputdir.'\bridgePINVOKEDynamic.cs';
@@ -207,7 +216,13 @@ namespace BWAPI {
 	
 	$csfiles = file_list($inputdir,'.cs');
 	foreach($csfiles as $csfile) {
-		patchfile($csfile);
+		if (!($csfile == 'bridgePINVOKE.cs')) {
+			patchfile($csfile);
+		}
 	}
+	//get rid of threadstatic
+	
+	
+	
 	print " Done";
 ?>
