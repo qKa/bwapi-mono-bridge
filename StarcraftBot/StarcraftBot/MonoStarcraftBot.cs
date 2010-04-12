@@ -29,20 +29,20 @@ namespace StarcraftBot
 			int immobilised = 0;
 			
             foreach (Unit u in us)  {
-				//if (u.getPlayer() == bridge.Broodwar.self()) {
+				if (u.getPlayer() == bridge.Broodwar.self()) {
 					count++;
                     System.Threading.Thread.Sleep(100);
-				//}
-                /*
+				}
+                
 				//call our example extension to the unit class. see monobridgeai-interop user-classes\unit-extended.cs 
 				if (u.isImmobilised()) {
 					immobilised++;  
-				}*/
+				}
 			}
-            /*
+            
 			bridge.Broodwar.printf("Player unit count =  "+ count.ToString()+". "+immobilised.ToString() +" are immobilised");
-            */
-           // bridge.Broodwar.printf("hi from the final bot"); 
+            
+            bridge.Broodwar.printf("hi from the final bot"); 
 		}
 		
 		public override Boolean onSendText(string text)
