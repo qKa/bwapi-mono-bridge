@@ -98,7 +98,7 @@ namespace MonoBridgeAI {
             XmlConfigurator.Configure(xmlStream);
             botlog = LogManager.GetLogger("monobotbase");
             botlog.Debug("Bot Loaded");
-            bridgePINVOKEDynamic.errorlog = botlog;
+         //   bridgePINVOKEDynamic.errorlog = botlog;
         }
 
 		void RegisterNativeCallbacks()
