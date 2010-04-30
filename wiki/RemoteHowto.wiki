@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#Setup and modification of the remote .net Starcraft AI
 
 = Introduction =
 
