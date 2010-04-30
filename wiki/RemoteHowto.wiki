@@ -1,0 +1,35 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Debugging the mono runtime embedded in the starcraft process is tedious. This new version allows for easy debugging whilst remaining compatible with existing bwapi-mono-bridge bots. 
+
+The AI is now hosted in a process called starcraftbothost.exe which can be run under mono or .net (2.0 or higher) which communicates all BWAPI calls to the starcraft process via .net remoting. This allows your bot to be debugged using Visual Studio or Sharp Develop just like any other .Net application.
+
+= Getting the hello World bot up and racing =
+
+To make sure your environment is ready to roll it is best to get a precompiled hello world bot working. 
+
+ # Ensure you have installed BWAPI and Chaoslauncher according to their directions and that they are working. (This program is currently only tested with BWAPI 2.6.1). 
+ # Download and extract the latest remote bridge zip file (MonoBWAPIBridge_Remote_x.x.zip) from [http://bwapi-mono-bridge.googlecode.com/files here]
+ # Copy the contents of the bwapi-data directory from the zip file and put it in the bwapi-data directory in your starcraft installation.
+ # From the bwapi-data\AI\bot folder run StarcraftBotHost.exe (this program will load the AI in StarcraftBot.dll and wait for a connection from broodwar) -  ensure you can run programs written for .net (either with mono installed or .net 3.5)
+ # Launch broodwar via chaoslauncher and start a custom single player game.
+ # after the game loads you should see a hello message from the AI process running in starcraftbothost.exe
+ # Congratulations your system seems to be setup fine.
+
+= Making Changes to the bot =
+
+In the Source directory (from the downloaded zip) there is a solution called monobridgeai.sln. This solution contains all 4 subprojects needed to run the bot.
+   * MonoBridgeAI - Called from C++ to load and run the bot. 
+   * MonoBridgeAI-Interop - Contains the automatic and user generated class files for talking to BWAPI.dll. 
+   * StarcraftBot - This is where the magic happens. Extend this to code your bot.
+   * StarcraftBotHost - This loads up the StarcraftBot.dll for remote access via the starcraft process
+ # Open the solution file (I have tested Sharpdevelop 3+, Visual Studio 2008, Monodevelop 2.2)
+ # Make your changes. (You will mainly be editing the StarcraftBot project within the solution. You can also extend any of the BWAPI generated classes in the monobridgeai-interop project by adding a partial class to the user-classes folder (see the example in the project)
+ # To build the bot just build the solution.
+ # copy the dll and exe files from the starcraftbothost\bin\debug folder to the bwapi-data\ai\bot folder and overwrite the existing files
+ # ensure any other files your project needs are in this folder too.
+ # you can now run your bot the usual way from chaoslauncher. 
+ # To give your bot to someone else, just zip up the bwapi-data folder. People running your bot will need whichever runtime you used to compile your bot (mono or .net)
+ # If you manage to keep your bot compatible with mono, then for the competition you can use the old direct method for your bot and have no dependencies on installed frameworks (it will use the embedded mono) thus meeting the criteria of the competition.
