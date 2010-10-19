@@ -1,0 +1,5 @@
+D:\Projects\Personal\StarCraft\MonoBridgeAI\monobridgeai-interop\bin\Debug\monobridgeai-interop.dll
+D:\Projects\Personal\StarCraft\MonoBridgeAI\monobridgeai-interop\bin\Debug\monobridgeai-interop.pdb
+D:\Projects\Personal\StarCraft\MonoBridgeAI\monobridgeai-interop\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Personal\StarCraft\MonoBridgeAI\monobridgeai-interop\obj\Debug\monobridgeai-interop.dll
+D:\Projects\Personal\StarCraft\MonoBridgeAI\monobridgeai-interop\obj\Debug\monobridgeai-interop.pdb
