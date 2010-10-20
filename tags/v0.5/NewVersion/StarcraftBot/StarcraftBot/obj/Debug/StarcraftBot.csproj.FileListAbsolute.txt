@@ -1,0 +1,10 @@
+D:\Projects\Personal\StarCraft\MonoBridgeAI\StarcraftBot\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Personal\StarCraft\MonoBridgeAI\StarcraftBot\bin\Debug\StarcraftBot.dll
+D:\Projects\Personal\StarCraft\MonoBridgeAI\StarcraftBot\bin\Debug\StarcraftBot.pdb
+D:\Projects\Personal\StarCraft\MonoBridgeAI\StarcraftBot\obj\Debug\StarcraftBot.dll
+D:\Projects\Personal\StarCraft\MonoBridgeAI\StarcraftBot\obj\Debug\StarcraftBot.pdb
+D:\Projects\Personal\StarCraft\StarcraftBot\StarcraftBot\bin\Debug\StarcraftBot.dll
+D:\Projects\Personal\StarCraft\StarcraftBot\StarcraftBot\bin\Debug\StarcraftBot.pdb
+D:\Projects\Personal\StarCraft\StarcraftBot\StarcraftBot\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Personal\StarCraft\StarcraftBot\StarcraftBot\obj\Debug\StarcraftBot.dll
+D:\Projects\Personal\StarCraft\StarcraftBot\StarcraftBot\obj\Debug\StarcraftBot.pdb

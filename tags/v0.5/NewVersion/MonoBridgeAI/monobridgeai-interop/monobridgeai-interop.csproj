@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5CCAD223-24DC-475F-AD0F-8822D13C42FA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>monobridgeai_interop</RootNamespace>
+    <AssemblyName>monobridgeai-interop</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\David\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper.cs" />
+    <Compile Include="IStarcraftBot.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="swig-classes\AIModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\BaseLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\BaseLocationPtrSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\bridge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\bridgePINVOKE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Bullet.cs" />
+    <Compile Include="swig-classes\BulletType.cs" />
+    <Compile Include="swig-classes\Chokepoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\ChokepointPtrSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\CoordinateType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\DamageType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\DamageTypeSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Enum.cs" />
+    <Compile Include="swig-classes\Error.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\ErrorSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Event.cs" />
+    <Compile Include="swig-classes\ExplosionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\ExplosionTypeSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Flag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Force.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\ForcePtrSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Game.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\GameType.cs" />
+    <Compile Include="swig-classes\Key.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Latency.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\MouseButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Order.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\OrderSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Player.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\PlayerPtrSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\PlayerType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\PlayerTypeSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Polygon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\PolygonPtrSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Position.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\PositionPair.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\PositionVector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Race.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\RaceSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\RectangleArrayDouble.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Region.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\RegionPtrRegionPtrPair.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\RegionPtrSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\SWIGTYPE_p_BaseLocation.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_BulletType.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_Chokepoint.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_Color.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_double.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\SWIGTYPE_p_EventType__Enum.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_FILE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\SWIGTYPE_p_GameType.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_int.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\SWIGTYPE_p_Key.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_MouseButton.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_PlayerType.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_Polygon.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_Position.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_Race.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_Region.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__listT_BWAPI__Event_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__mapT_BWAPI__UnitType_int_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__pairT_BWAPI__UnitType_int_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__setT_BaseLocation_p_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__setT_BWAPI__BulletType_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__setT_BWAPI__Bullet_p_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__setT_BWAPI__GameType_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__setT_BWAPI__UnitCommandType_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__setT_Chokepoint_p_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__setT_Polygon_p_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__setT_Region_p_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__setT_TilePosition_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_std__vectorT_BWTA__Polygon_t.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_TechType.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_TilePosition.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_UnitCommand.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_UnitCommandType.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_UpgradeType.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_void.cs" />
+    <Compile Include="swig-classes\TechType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\TechTypePtrSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\TechTypeSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\TilePosition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\TilePositionDoubleMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\TilePositionDoublePair.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\TilePositionSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\TilePositionVector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\Unit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UnitCommand.cs" />
+    <Compile Include="swig-classes\UnitCommandType.cs" />
+    <Compile Include="swig-classes\UnitPtrList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UnitSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UnitSizeType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UnitSizeTypeSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UnitType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UnitTypeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UnitTypePtrIntMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UnitTypePtrIntPair.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UnitTypePtrSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UnitTypeSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UpgradeType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UpgradeTypePtrSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\UpgradeTypeSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\WeaponType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="swig-classes\WeaponTypeSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="user-classes\unit-extended.cs" />
+  </ItemGroup>
+</Project>
