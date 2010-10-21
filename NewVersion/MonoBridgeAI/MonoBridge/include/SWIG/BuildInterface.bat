@@ -1,4 +1,4 @@
-SET SWIGPATH=..\..\..\..\swigwin-2.0.0
+SET SWIGPATH=..\..\..\..\..\swigwin-2.0.1
 
 erase /s /q ..\..\..\..\MonoBridgeAI\monobridgeai-interop\swig-classes\*.*
 

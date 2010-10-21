@@ -43,7 +43,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="include\;&quot;D:\SDKs\Mono-2.6.7\include\mono-1.0&quot;;&quot;D:\SDKs\Mono-2.6.7\lib\glib-2.0\include&quot;;&quot;D:\SDKs\Mono-2.6.7\include\glib-2.0&quot;"
+				AdditionalIncludeDirectories="include\;&quot;C:\Program Files (x86)\Mono-2.8\include\mono-2.0&quot;;&quot;D:\SDKs\Mono-2.6.7\include\mono-1.0&quot;;&quot;D:\SDKs\Mono-2.6.7\lib\glib-2.0\include&quot;;&quot;D:\SDKs\Mono-2.6.7\include\glib-2.0&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;MONOBRIDGE_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
