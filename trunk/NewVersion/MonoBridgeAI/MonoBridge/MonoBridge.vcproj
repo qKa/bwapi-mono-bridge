@@ -43,7 +43,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="include\;&quot;C:\Program Files (x86)\Mono-2.8\include\mono-2.0&quot;;&quot;D:\SDKs\Mono-2.6.7\include\mono-1.0&quot;;&quot;D:\SDKs\Mono-2.6.7\lib\glib-2.0\include&quot;;&quot;D:\SDKs\Mono-2.6.7\include\glib-2.0&quot;"
+				AdditionalIncludeDirectories="..\..\BWAPI\include;&quot;C:\Program Files (x86)\Mono-2.8\include\mono-2.0&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;MONOBRIDGE_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -62,9 +62,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="lib/Release/BWAPI.lib lib/Release/BWTA.lib lib/Release/tinyxml.lib lib/Release/CGAL-vc90-mt.lib lib/Release/libboost_thread-vc90-mt-1_40.lib lib/Release/gmp-vc90-mt.lib lib/Release/mpfr-vc90-mt.lib lib/mono.lib"
+				AdditionalDependencies="BWAPI.lib BWTA.lib tinyxml.lib lib/mono.lib"
 				LinkIncremental="1"
-				DelayLoadDLLs="mono.dll"
+				AdditionalLibraryDirectories="..\..\BWAPI\lib"
+				DelayLoadDLLs="mono-2.0.dll"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -91,7 +92,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy /Y &quot;$(OutDir)\$(ProjectName).dll&quot; &quot;D:\Games\Starcraft\bwapi-data\AI\&quot;"
+				CommandLine=""
 			/>
 		</Configuration>
 	</Configurations>
@@ -150,7 +151,7 @@
 			Name="SWIG"
 			>
 			<File
-				RelativePath=".\include\SWIG\bwapi-bridge_wrap.cxx"
+				RelativePath=".\bwapi-bridge_wrap.cxx"
 				>
 			</File>
 		</Filter>
