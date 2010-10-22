@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>0.0.0</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2BF14DC5-7FF8-465E-BF24-89F8FFBDF3AA}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -75,8 +75,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(TargetPath)" "D:\Games\Starcraft\bwapi-data\AI\bot\"
-copy /Y "$(TargetDir)MonoBridgeAI.dll.config" "D:\Games\Starcraft\bwapi-data\AI\bot\"
-copy /Y "$(TargetDir)monobridgeai-interop.dll" "D:\Games\Starcraft\bwapi-data\AI\bot\"</PostBuildEvent>
+    <PostBuildEvent>copy /y $(TargetPath) $(SolutionDir)\release</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -19,16 +19,21 @@ void Mono::Manager::Init(std::wstring dlldir)
 	fl->logDetailed("Mono Init Started");
 
 	std::string monoPath = getenv("MonoPath");
+	fl->logDetailed(("Setting DLL Dir for Mono to ["+monoPath+"]").c_str());
 	std::wstring strMonoPath = str_to_wstr(monoPath.c_str());
 	SetDllDirectory(strMonoPath.c_str());
 
 	fl->logDetailed(("Setting DLL Dir for Mono to ["+monoPath+"]").c_str());
 
+	//mono_set_dirs(("C:\\Program Files\\Mono-2.8\\lib").c_str(), ("C:\\Program Files\\Mono-2.8\\etc").c_str());
+
 	fl->logDetailed("Initializing JIT");
 	std::string file = wstr_to_str((dlldir+str_to_wstr("bot\\MonoBridgeAI.dll")));
-	this->domain = mono_jit_init(file.c_str());
+	fl->logDetailed(file.c_str());
+	
+		this->domain = mono_jit_init(file.c_str());
 
-	fl->logDetailed(("Loading AI DLL: ["+file+"]").c_str());
+    fl->logDetailed(("Loading AI DLL: ["+file+"]").c_str());
 	this->botassembly = mono_domain_assembly_open (this->domain,file.c_str());
 	if( !this->botassembly )
 		fl->logCritical("Failed to load AI DLL.");

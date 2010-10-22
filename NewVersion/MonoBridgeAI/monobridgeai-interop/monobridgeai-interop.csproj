@@ -142,4 +142,7 @@
     <Compile Include="swig-classes\WeaponTypeSet.cs" />
     <Compile Include="user-classes\unit-extended.cs" />
   </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy /y $(TargetPath) $(SolutionDir)\release</PostBuildEvent>
+  </PropertyGroup>
 </Project>
