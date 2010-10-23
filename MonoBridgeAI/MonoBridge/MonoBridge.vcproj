@@ -154,6 +154,10 @@
 				RelativePath=".\bwapi-bridge_wrap.cxx"
 				>
 			</File>
+			<File
+				RelativePath=".\bwta-bridge_wrap.cxx"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Bridge"

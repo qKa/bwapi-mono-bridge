@@ -32,10 +32,10 @@ namespace MonoBridgeAI
 
 		public void onStart()
 		{
-			BWAPI.bridge.Broodwar.sendText("Loaded C# Module!");
+			BWAPI.bwapi.Broodwar.sendText("Loaded C# Module!");
 
 			if (realBot == null)
-				BWAPI.bridge.Broodwar.sendText("dotNet: " + this.err);
+				BWAPI.bwapi.Broodwar.sendText("dotNet: " + this.err);
 			else
 				realBot.onStart();
 		}

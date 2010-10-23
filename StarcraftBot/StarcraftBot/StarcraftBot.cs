@@ -16,7 +16,7 @@ namespace StarcraftBot
 		{
 			Util.Logger.Instance.Log("Bot Started");
 			Util.Logger.Instance.Log("Enabling User Input");
-			bridge.Broodwar.enableFlag(1);
+			bwapi.Broodwar.enableFlag(1);
 			
 			a = new Terrain.Analyzer();
 			a.Done += new EventHandler(a_Done);
@@ -28,7 +28,7 @@ namespace StarcraftBot
 
 		void a_Done(object sender, EventArgs e)
 		{
-			bridge.Broodwar.printf("Terrain Analysis Complete");
+			bwapi.Broodwar.printf("Terrain Analysis Complete");
 			analysisDone = true;
 		}
 
@@ -84,28 +84,28 @@ namespace StarcraftBot
 
 		public void onUnitShow(BWAPI.Unit unit)
 		{
-			if (unit.getPlayer() == bridge.Broodwar.self())
+			if (unit.getPlayer() == bwapi.Broodwar.self())
 			{
 				enemies.Add(unit);
-				bridge.Broodwar.printf("Unit Shown: [" + unit.getType().getName() + "] at [" + unit.getPosition().xConst() + "," + unit.getPosition().yConst() + "]");
+				bwapi.Broodwar.printf("Unit Shown: [" + unit.getType().getName() + "] at [" + unit.getPosition().xConst() + "," + unit.getPosition().yConst() + "]");
 			}
 		}
 
 		public void onUnitHide(BWAPI.Unit unit)
 		{
-			if (unit.getPlayer() == bridge.Broodwar.self())
+			if (unit.getPlayer() == bwapi.Broodwar.self())
 			{
 				enemies.Remove(unit);
-				bridge.Broodwar.printf("Unit Hidden: [" + unit.getType().getName() + "] at [" + unit.getPosition().xConst() + "," + unit.getPosition().yConst() + "]");
+				bwapi.Broodwar.printf("Unit Hidden: [" + unit.getType().getName() + "] at [" + unit.getPosition().xConst() + "," + unit.getPosition().yConst() + "]");
 			}
 		}
 
 		public void onUnitCreate(BWAPI.Unit unit)
 		{
-			if (unit.getPlayer() != bridge.Broodwar.self())
+			if (unit.getPlayer() != bwapi.Broodwar.self())
 			{
 				myUnits.Add(new BW.Unit(unit));
-				bridge.Broodwar.printf("Unit Created: [" + unit.getType().getName() + "] at [" + unit.getPosition().xConst() + "," + unit.getPosition().yConst() + "]");
+				bwapi.Broodwar.printf("Unit Created: [" + unit.getType().getName() + "] at [" + unit.getPosition().xConst() + "," + unit.getPosition().yConst() + "]");
 			}
 		}
 
