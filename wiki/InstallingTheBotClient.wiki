@@ -3,7 +3,7 @@
 = Introduction =
 
 {{{
-With BWAPI 2.8, it is now possible to run a bot as a separate process which can still use BWAPI. This is done with shared memory and must me run on the same computer as starcraft. bwapi-mono-bridge now includes the .net libraries to make this possible from .net or mono.
+With BWAPI 2.8 and up, it is now possible to run a bot as a separate process which can still use BWAPI. This is done with shared memory and must me run on the same computer as starcraft. bwapi-mono-bridge now includes the .net libraries to make this possible from .net or mono.
 }}}
 
 This is a quick guide to setting up the BWAPIClient based testbot.
