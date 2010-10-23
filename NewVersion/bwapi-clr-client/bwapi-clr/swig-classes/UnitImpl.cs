@@ -198,8 +198,13 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
   }
 
   public override bool hasPath(Position target) {
-    bool ret = bridgePINVOKE.UnitImpl_hasPath(swigCPtr, Position.getCPtr(target));
+    bool ret = bridgePINVOKE.UnitImpl_hasPath__SWIG_0(swigCPtr, Position.getCPtr(target));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override bool hasPath(Unit target) {
+    bool ret = bridgePINVOKE.UnitImpl_hasPath__SWIG_1(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
@@ -937,6 +942,11 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
   public override SWIGTYPE_p_void getClientInfo() {
     IntPtr cPtr = bridgePINVOKE.UnitImpl_getClientInfo(swigCPtr);
     SWIGTYPE_p_void ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
+    return ret;
+  }
+
+  public override int getResourceGroup() {
+    int ret = bridgePINVOKE.UnitImpl_getResourceGroup(swigCPtr);
     return ret;
   }
 

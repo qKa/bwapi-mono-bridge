@@ -82,7 +82,10 @@ public static bool operator !=(Shape obj1, Shape obj2)
 
 
 
-  public Shape(ShapeType_Enum _shapeType, int _ctype, int _x1, int _y1, int _x2, int _y2, int _extra1, int _extra2, int _color, bool _isSolid) : this(bridgePINVOKE.new_Shape((int)_shapeType, _ctype, _x1, _y1, _x2, _y2, _extra1, _extra2, _color, _isSolid), true) {
+  public Shape(ShapeType_Enum _shapeType, int _ctype, int _x1, int _y1, int _x2, int _y2, int _extra1, int _extra2, int _color, bool _isSolid) : this(bridgePINVOKE.new_Shape__SWIG_0((int)_shapeType, _ctype, _x1, _y1, _x2, _y2, _extra1, _extra2, _color, _isSolid), true) {
+  }
+
+  public Shape() : this(bridgePINVOKE.new_Shape__SWIG_1(), true) {
   }
 
   public ShapeType_Enum type {

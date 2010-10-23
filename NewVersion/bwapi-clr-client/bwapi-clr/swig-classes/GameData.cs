@@ -260,6 +260,16 @@ public static bool operator !=(GameData obj1, GameData obj2)
     } 
   }
 
+  public int replayFrameCount {
+    set {
+      bridgePINVOKE.GameData_replayFrameCount_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bridgePINVOKE.GameData_replayFrameCount_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public int frameCount {
     set {
       bridgePINVOKE.GameData_frameCount_set(swigCPtr, value);

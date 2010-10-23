@@ -168,7 +168,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy /Y $(TargetPath)  $(SolutionDir)release-binaries\$(TargetFileName)"
+				CommandLine=""
 			/>
 		</Configuration>
 	</Configurations>

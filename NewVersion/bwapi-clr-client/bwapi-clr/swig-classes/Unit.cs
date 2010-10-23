@@ -877,8 +877,13 @@ public static bool operator !=(Unit obj1, Unit obj2)
   }
 
   public virtual bool hasPath(Position target) {
-    bool ret = bridgePINVOKE.Unit_hasPath(swigCPtr, Position.getCPtr(target));
+    bool ret = bridgePINVOKE.Unit_hasPath__SWIG_0(swigCPtr, Position.getCPtr(target));
     if (bridgePINVOKE.SWIGPendingException.Pending) throw bridgePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual bool hasPath(Unit target) {
+    bool ret = bridgePINVOKE.Unit_hasPath__SWIG_1(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
@@ -894,6 +899,11 @@ public static bool operator !=(Unit obj1, Unit obj2)
   public virtual SWIGTYPE_p_void getClientInfo() {
     IntPtr cPtr = bridgePINVOKE.Unit_getClientInfo(swigCPtr);
     SWIGTYPE_p_void ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
+    return ret;
+  }
+
+  public virtual int getResourceGroup() {
+    int ret = bridgePINVOKE.Unit_getResourceGroup(swigCPtr);
     return ret;
   }
 
