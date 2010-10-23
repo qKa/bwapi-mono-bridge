@@ -1,0 +1,20 @@
+#summary Install Instructions for the Embedded mono bridge bot
+
+= Introduction =
+
+This is a quick walkthrough of installing the bwapi-mono-bridge skeleton AI in embedded mode (running in the same process as starcraft). 
+
+
+= Details =
+
+  # Follow all directions for obtaining and setting up the BWAPI 3.2 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
+  # Download the zip file from the downloads tab
+  # Extract the zip to a new folder
+  # copy the contents of the StarcraftBot\bwapi-data\AI folder into the bwapi-data\AI folder in your starcraft directory (created during BWAPI setup)
+  # Edit the bwapi.ini file and change the ai_dll line to read:
+{{{
+[ai]
+ai_dll = bwapi-data\AI\MonoBridge.dll
+}}}
+  # You are ready to run the bot. Just run chaoslauncher as per usual and the bot should see a message from the bot when it starts up. (if it isn't working then broodwar will crash, try checking log file to see the problem)
+ 
