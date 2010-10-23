@@ -1,0 +1,24 @@
+#summary Install Instructions for the BWAPIClient based bot
+
+= Introduction =
+
+{{{
+With BWAPI 2.8, it is now possible to run a bot as a separate process which can still use BWAPI. This is done with shared memory and must me run on the same computer as starcraft. bwapi-mono-bridge now includes the .net libraries to make this possible from .net or mono.
+}}}
+
+This is a quick guide to setting up the BWAPIClient based testbot.
+
+= Details =
+
+  # Follow all directions for obtaining and setting up the BWAPI 3.2 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
+  # Download the zip file from the downloads tab
+  # Extract the zip to a new folder
+  # Copy everything from the examplebots\testbot folder and place them into bwapi-data\ai in your starcraft folder. (this is not essential, the bot can be run from anywhere on your system, as long as the required files are in the same place)
+  # Done
+
+=Running the Bot=
+To run the testbot:
+  # launch the testbot by running testbot.exe (it should say connecting...)
+  # launch starcraft on the same computer (the bot should now say "waiting for match")
+  # start a custom match against the computer.
+  # the bot should say hello world.
