@@ -189,6 +189,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\bwta-bridge_wrap.cxx"
+				>
+			</File>
+			<File
 				RelativePath=".\dllmain.cpp"
 				>
 				<FileConfiguration
