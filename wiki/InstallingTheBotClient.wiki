@@ -13,7 +13,7 @@ This is a quick guide to setting up the BWAPIClient based testbot.
   # Follow all directions for obtaining and setting up the BWAPI 3.2 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
   # Download the zip file from the downloads tab
   # Extract the zip to a new folder
-  # Copy everything from the examplebots\testbot folder and place them into bwapi-data\ai in your starcraft folder. (this is not essential, the bot can be run from anywhere on your system, as long as the required files are in the same place)
+  # Copy everything from the examplebots\clientbot folder and place them into bwapi-data\ai in your starcraft folder. (this is not essential, the bot can be run from anywhere on your system, as long as the required files are in the same place)
   # Done
 
 =Running the Bot=
