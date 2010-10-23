@@ -38,6 +38,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IStarcraftBot.cs" />
     <Compile Include="swig-classes\BWAPI\AIModule.cs" />
     <Compile Include="swig-classes\BWAPI\Bullet.cs" />
     <Compile Include="swig-classes\BWAPI\BulletData.cs" />
