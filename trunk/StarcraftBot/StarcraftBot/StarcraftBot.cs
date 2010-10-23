@@ -16,6 +16,7 @@ namespace StarcraftBot
 		{
 			Util.Logger.Instance.Log("Bot Started");
 			Util.Logger.Instance.Log("Enabling User Input");
+            bwapi.Broodwar.sendText("Mono StarcraftBot initialised");
 			bwapi.Broodwar.enableFlag(1);
 			
 			a = new Terrain.Analyzer();
