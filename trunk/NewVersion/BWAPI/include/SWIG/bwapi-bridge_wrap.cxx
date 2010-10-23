@@ -4407,16 +4407,6 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Red_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Green_get() {
-  void * jresult ;
-  BWAPI::Color *result = 0 ;
-  
-  result = (BWAPI::Color *)&BWAPI::Colors::Green;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
 SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Blue_get() {
   void * jresult ;
   BWAPI::Color *result = 0 ;
@@ -4427,21 +4417,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Blue_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Yellow_get() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Teal_get() {
   void * jresult ;
   BWAPI::Color *result = 0 ;
   
-  result = (BWAPI::Color *)&BWAPI::Colors::Yellow;
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Cyan_get() {
-  void * jresult ;
-  BWAPI::Color *result = 0 ;
-  
-  result = (BWAPI::Color *)&BWAPI::Colors::Cyan;
+  result = (BWAPI::Color *)&BWAPI::Colors::Teal;
   jresult = (void *)result; 
   return jresult;
 }
@@ -4467,11 +4447,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Orange_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Black_get() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Brown_get() {
   void * jresult ;
   BWAPI::Color *result = 0 ;
   
-  result = (BWAPI::Color *)&BWAPI::Colors::Black;
+  result = (BWAPI::Color *)&BWAPI::Colors::Brown;
   jresult = (void *)result; 
   return jresult;
 }
@@ -4482,6 +4462,46 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_White_get() {
   BWAPI::Color *result = 0 ;
   
   result = (BWAPI::Color *)&BWAPI::Colors::White;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Yellow_get() {
+  void * jresult ;
+  BWAPI::Color *result = 0 ;
+  
+  result = (BWAPI::Color *)&BWAPI::Colors::Yellow;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Green_get() {
+  void * jresult ;
+  BWAPI::Color *result = 0 ;
+  
+  result = (BWAPI::Color *)&BWAPI::Colors::Green;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Cyan_get() {
+  void * jresult ;
+  BWAPI::Color *result = 0 ;
+  
+  result = (BWAPI::Color *)&BWAPI::Colors::Cyan;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Colors_Black_get() {
+  void * jresult ;
+  BWAPI::Color *result = 0 ;
+  
+  result = (BWAPI::Color *)&BWAPI::Colors::Black;
   jresult = (void *)result; 
   return jresult;
 }
@@ -5592,16 +5612,6 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ExplosionTypes_Unknown_get() {
   
   result = (BWAPI::ExplosionType *)&BWAPI::ExplosionTypes::Unknown;
   jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_FLAG_COUNT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(int)BWAPI::FLAG_COUNT;
-  jresult = result; 
   return jresult;
 }
 
@@ -8348,6 +8358,36 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Game_setLatCom(void * jarg1, unsigned int jar
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_Game_getReplayFrameCount(void * jarg1) {
+  int jresult ;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  result = (int)(arg1)->getReplayFrameCount();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Game_setGUI__SWIG_0(void * jarg1, unsigned int jarg2) {
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  bool arg2 ;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  (arg1)->setGUI(arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Game_setGUI__SWIG_1(void * jarg1) {
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  (arg1)->setGUI();
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_Game(void * jarg1) {
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
   
@@ -10857,6 +10897,30 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Player_maxEnergy(void * jarg1, void * jarg2) {
   }
   arg2 = *argp2; 
   result = (int)((BWAPI::Player const *)arg1)->maxEnergy(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Player_getColor(void * jarg1) {
+  void * jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::Color result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = ((BWAPI::Player const *)arg1)->getColor();
+  jresult = new BWAPI::Color((const BWAPI::Color &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_getTextColor(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->getTextColor();
   jresult = result; 
   return jresult;
 }
@@ -15396,7 +15460,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_useTech__SWIG_2(void * jarg1, vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_hasPath(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_hasPath__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   BWAPI::Position arg2 ;
@@ -15410,6 +15474,20 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_hasPath(void * jarg1, void * jar
     return 0;
   }
   arg2 = *argp2; 
+  result = (bool)(arg1)->hasPath(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_hasPath__SWIG_1(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  arg2 = (BWAPI::Unit *)jarg2; 
   result = (bool)(arg1)->hasPath(arg2);
   jresult = result; 
   return jresult;
@@ -15446,6 +15524,18 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getClientInfo(void * jarg1) {
   arg1 = (BWAPI::Unit *)jarg1; 
   result = (void *)((BWAPI::Unit const *)arg1)->getClientInfo();
   jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Unit_getResourceGroup(void * jarg1) {
+  int jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  result = (int)(arg1)->getResourceGroup();
+  jresult = result; 
   return jresult;
 }
 
@@ -16576,6 +16666,18 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitType_isNeutral(void * jarg1) {
   
   arg1 = (BWAPI::UnitType *)jarg1; 
   result = (bool)((BWAPI::UnitType const *)arg1)->isNeutral();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitType_producesLarva(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitType *)jarg1; 
+  result = (bool)((BWAPI::UnitType const *)arg1)->producesLarva();
   jresult = result; 
   return jresult;
 }
@@ -19403,6 +19505,16 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_2(int jarg1) {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_3() {
+  void * jresult ;
+  BWAPIC::Command *result = 0 ;
+  
+  result = (BWAPIC::Command *)new BWAPIC::Command();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_Command_type_set(void * jarg1, int jarg2) {
   BWAPIC::Command *arg1 = (BWAPIC::Command *) 0 ;
   BWAPIC::CommandType::Enum arg2 ;
@@ -21744,7 +21856,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_UnitImpl_getDistance__SWIG_1(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_hasPath(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_hasPath__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
   BWAPI::Position arg2 ;
@@ -21758,6 +21870,20 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_hasPath(void * jarg1, void *
     return 0;
   }
   arg2 = *argp2; 
+  result = (bool)(arg1)->hasPath(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_hasPath__SWIG_1(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
+  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitImpl *)jarg1; 
+  arg2 = (BWAPI::Unit *)jarg2; 
   result = (bool)(arg1)->hasPath(arg2);
   jresult = result; 
   return jresult;
@@ -23648,6 +23774,18 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitImpl_getClientInfo(void * jarg1) {
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_UnitImpl_getResourceGroup(void * jarg1) {
+  int jresult ;
+  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UnitImpl *)jarg1; 
+  result = (int)(arg1)->getResourceGroup();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnitImpl(void * jarg1) {
   BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
   
@@ -24283,6 +24421,50 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerData_isUpgrading_get(void * jarg1) {
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_PlayerData_colorByte_set(void * jarg1, int jarg2) {
+  BWAPI::PlayerData *arg1 = (BWAPI::PlayerData *) 0 ;
+  int arg2 ;
+  
+  arg1 = (BWAPI::PlayerData *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->colorByte = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_PlayerData_colorByte_get(void * jarg1) {
+  int jresult ;
+  BWAPI::PlayerData *arg1 = (BWAPI::PlayerData *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::PlayerData *)jarg1; 
+  result = (int) ((arg1)->colorByte);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_PlayerData_color_set(void * jarg1, int jarg2) {
+  BWAPI::PlayerData *arg1 = (BWAPI::PlayerData *) 0 ;
+  int arg2 ;
+  
+  arg1 = (BWAPI::PlayerData *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->color = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_PlayerData_color_get(void * jarg1) {
+  int jresult ;
+  BWAPI::PlayerData *arg1 = (BWAPI::PlayerData *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::PlayerData *)jarg1; 
+  result = (int) ((arg1)->color);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_PlayerData() {
   void * jresult ;
   BWAPI::PlayerData *result = 0 ;
@@ -24837,6 +25019,30 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PlayerImpl_maxEnergy(void * jarg1, void * jarg
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerImpl_getColor(void * jarg1) {
+  void * jresult ;
+  BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
+  BWAPI::Color result;
+  
+  arg1 = (BWAPI::PlayerImpl *)jarg1; 
+  result = ((BWAPI::PlayerImpl const *)arg1)->getColor();
+  jresult = new BWAPI::Color((const BWAPI::Color &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_PlayerImpl_getTextColor(void * jarg1) {
+  int jresult ;
+  BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::PlayerImpl *)jarg1; 
+  result = (int)((BWAPI::PlayerImpl const *)arg1)->getTextColor();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_PlayerImpl(void * jarg1) {
   BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
   
@@ -25244,6 +25450,28 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameData_hasLatCom_get(void * jarg1) 
   
   arg1 = (BWAPI::GameData *)jarg1; 
   result = (bool) ((arg1)->hasLatCom);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_GameData_replayFrameCount_set(void * jarg1, int jarg2) {
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  int arg2 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->replayFrameCount = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_GameData_replayFrameCount_get(void * jarg1) {
+  int jresult ;
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  result = (int) ((arg1)->replayFrameCount);
   jresult = result; 
   return jresult;
 }
@@ -28758,6 +28986,36 @@ SWIGEXPORT void SWIGSTDCALL CSharp_GameImpl_setLatCom(void * jarg1, unsigned int
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_GameImpl_getReplayFrameCount(void * jarg1) {
+  int jresult ;
+  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::GameImpl *)jarg1; 
+  result = (int)(arg1)->getReplayFrameCount();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_GameImpl_setGUI__SWIG_0(void * jarg1, unsigned int jarg2) {
+  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
+  bool arg2 ;
+  
+  arg1 = (BWAPI::GameImpl *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  (arg1)->setGUI(arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_GameImpl_setGUI__SWIG_1(void * jarg1) {
+  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
+  
+  arg1 = (BWAPI::GameImpl *)jarg1; 
+  (arg1)->setGUI();
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_GameImpl(void * jarg1) {
   BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
   
@@ -28766,7 +29024,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_GameImpl(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Shape(int jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, int jarg8, int jarg9, unsigned int jarg10) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Shape__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, int jarg8, int jarg9, unsigned int jarg10) {
   void * jresult ;
   BWAPIC::ShapeType::Enum arg1 ;
   int arg2 ;
@@ -28791,6 +29049,16 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Shape(int jarg1, int jarg2, int jarg3, 
   arg9 = (int)jarg9; 
   arg10 = jarg10 ? true : false; 
   result = (BWAPIC::Shape *)new BWAPIC::Shape(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Shape__SWIG_1() {
+  void * jresult ;
+  BWAPIC::Shape *result = 0 ;
+  
+  result = (BWAPIC::Shape *)new BWAPIC::Shape();
   jresult = (void *)result; 
   return jresult;
 }

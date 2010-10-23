@@ -354,6 +354,26 @@ public static bool operator !=(PlayerData obj1, PlayerData obj2)
     } 
   }
 
+  public int colorByte {
+    set {
+      bridgePINVOKE.PlayerData_colorByte_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bridgePINVOKE.PlayerData_colorByte_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int color {
+    set {
+      bridgePINVOKE.PlayerData_color_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bridgePINVOKE.PlayerData_color_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public PlayerData() : this(bridgePINVOKE.new_PlayerData(), true) {
   }
 

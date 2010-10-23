@@ -10,7 +10,8 @@ namespace BWAPI {
 
 public enum Flag_Enum {
   CompleteMapInformation = 0,
-  UserInput = 1
+  UserInput = 1,
+  Max
 }
 
 }

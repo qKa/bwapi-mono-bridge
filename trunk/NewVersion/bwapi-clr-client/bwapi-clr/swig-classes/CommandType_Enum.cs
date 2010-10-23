@@ -23,7 +23,8 @@ public enum CommandType_Enum {
   RestartGame,
   SetLocalSpeed,
   SetTextSize,
-  SetLatCom
+  SetLatCom,
+  SetGui
 }
 
 }

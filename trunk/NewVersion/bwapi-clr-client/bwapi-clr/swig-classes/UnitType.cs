@@ -441,6 +441,11 @@ public static bool operator !=(UnitType obj1, UnitType obj2)
     return ret;
   }
 
+  public bool producesLarva() {
+    bool ret = bridgePINVOKE.UnitType_producesLarva(swigCPtr);
+    return ret;
+  }
+
 }
 
 }

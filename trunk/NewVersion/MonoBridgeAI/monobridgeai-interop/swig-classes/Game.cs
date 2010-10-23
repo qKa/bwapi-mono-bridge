@@ -759,6 +759,19 @@ public static bool operator !=(Game obj1, Game obj2)
     bridgePINVOKE.Game_setLatCom(swigCPtr, isEnabled);
   }
 
+  public virtual int getReplayFrameCount() {
+    int ret = bridgePINVOKE.Game_getReplayFrameCount(swigCPtr);
+    return ret;
+  }
+
+  public virtual void setGUI(bool enabled) {
+    bridgePINVOKE.Game_setGUI__SWIG_0(swigCPtr, enabled);
+  }
+
+  public virtual void setGUI() {
+    bridgePINVOKE.Game_setGUI__SWIG_1(swigCPtr);
+  }
+
 }
 
 }

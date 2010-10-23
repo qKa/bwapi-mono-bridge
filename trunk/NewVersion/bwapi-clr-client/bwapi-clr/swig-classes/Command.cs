@@ -91,6 +91,9 @@ public static bool operator !=(Command obj1, Command obj2)
   public Command(CommandType_Enum _commandType) : this(bridgePINVOKE.new_Command__SWIG_2((int)_commandType), true) {
   }
 
+  public Command() : this(bridgePINVOKE.new_Command__SWIG_3(), true) {
+  }
+
   public CommandType_Enum type {
     set {
       bridgePINVOKE.Command_type_set(swigCPtr, (int)value);

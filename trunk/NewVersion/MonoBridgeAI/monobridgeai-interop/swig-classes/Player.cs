@@ -250,6 +250,16 @@ public static bool operator !=(Player obj1, Player obj2)
     return ret;
   }
 
+  public virtual Color getColor() {
+    Color ret = new Color(bridgePINVOKE.Player_getColor(swigCPtr), true);
+    return ret;
+  }
+
+  public virtual int getTextColor() {
+    int ret = bridgePINVOKE.Player_getTextColor(swigCPtr);
+    return ret;
+  }
+
 }
 
 }

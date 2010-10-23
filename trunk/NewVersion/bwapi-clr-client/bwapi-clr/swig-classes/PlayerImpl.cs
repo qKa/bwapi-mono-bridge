@@ -278,6 +278,16 @@ public static bool operator !=(PlayerImpl obj1, PlayerImpl obj2)
     return ret;
   }
 
+  public override Color getColor() {
+    Color ret = new Color(bridgePINVOKE.PlayerImpl_getColor(swigCPtr), true);
+    return ret;
+  }
+
+  public override int getTextColor() {
+    int ret = bridgePINVOKE.PlayerImpl_getTextColor(swigCPtr);
+    return ret;
+  }
+
 }
 
 }

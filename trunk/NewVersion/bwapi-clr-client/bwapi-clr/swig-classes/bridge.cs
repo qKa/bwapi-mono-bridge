@@ -1000,14 +1000,6 @@ public class bridge {
     } 
   }
 
-  public static Color Colors_Green {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Colors_Green_get();
-      Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
-      return ret;
-    } 
-  }
-
   public static Color Colors_Blue {
     get {
       IntPtr cPtr = bridgePINVOKE.Colors_Blue_get();
@@ -1016,17 +1008,9 @@ public class bridge {
     } 
   }
 
-  public static Color Colors_Yellow {
+  public static Color Colors_Teal {
     get {
-      IntPtr cPtr = bridgePINVOKE.Colors_Yellow_get();
-      Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Color Colors_Cyan {
-    get {
-      IntPtr cPtr = bridgePINVOKE.Colors_Cyan_get();
+      IntPtr cPtr = bridgePINVOKE.Colors_Teal_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1048,9 +1032,9 @@ public class bridge {
     } 
   }
 
-  public static Color Colors_Black {
+  public static Color Colors_Brown {
     get {
-      IntPtr cPtr = bridgePINVOKE.Colors_Black_get();
+      IntPtr cPtr = bridgePINVOKE.Colors_Brown_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1059,6 +1043,38 @@ public class bridge {
   public static Color Colors_White {
     get {
       IntPtr cPtr = bridgePINVOKE.Colors_White_get();
+      Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Color Colors_Yellow {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Colors_Yellow_get();
+      Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Color Colors_Green {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Colors_Green_get();
+      Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Color Colors_Cyan {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Colors_Cyan_get();
+      Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Color Colors_Black {
+    get {
+      IntPtr cPtr = bridgePINVOKE.Colors_Black_get();
       Color ret = (cPtr == IntPtr.Zero) ? null : new Color(cPtr, false);
       return ret;
     } 
@@ -1553,13 +1569,6 @@ public class bridge {
     get {
       IntPtr cPtr = bridgePINVOKE.ExplosionTypes_Unknown_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static int FLAG_COUNT {
-    get {
-      int ret = bridgePINVOKE.FLAG_COUNT_get();
       return ret;
     } 
   }

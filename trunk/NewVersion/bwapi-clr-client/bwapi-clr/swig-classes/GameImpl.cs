@@ -118,7 +118,7 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
     bridgePINVOKE.GameImpl_onMatchFrame(swigCPtr);
   }
 
-  public UnitPtrSet getPlayerUnits(Player player) {
+  public virtual UnitPtrSet getPlayerUnits(Player player) {
     UnitPtrSet ret = new UnitPtrSet(bridgePINVOKE.GameImpl_getPlayerUnits(swigCPtr, Player.getCPtr(player)), false);
     return ret;
   }
@@ -798,6 +798,19 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
 
   public override void setLatCom(bool isEnabled) {
     bridgePINVOKE.GameImpl_setLatCom(swigCPtr, isEnabled);
+  }
+
+  public override int getReplayFrameCount() {
+    int ret = bridgePINVOKE.GameImpl_getReplayFrameCount(swigCPtr);
+    return ret;
+  }
+
+  public override void setGUI(bool enabled) {
+    bridgePINVOKE.GameImpl_setGUI__SWIG_0(swigCPtr, enabled);
+  }
+
+  public override void setGUI() {
+    bridgePINVOKE.GameImpl_setGUI__SWIG_1(swigCPtr);
   }
 
 }

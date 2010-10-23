@@ -918,17 +918,11 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_Colors_Red_get")]
   public static extern IntPtr Colors_Red_get();
 
-  [DllImport("__Internal", EntryPoint="CSharp_Colors_Green_get")]
-  public static extern IntPtr Colors_Green_get();
-
   [DllImport("__Internal", EntryPoint="CSharp_Colors_Blue_get")]
   public static extern IntPtr Colors_Blue_get();
 
-  [DllImport("__Internal", EntryPoint="CSharp_Colors_Yellow_get")]
-  public static extern IntPtr Colors_Yellow_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_Colors_Cyan_get")]
-  public static extern IntPtr Colors_Cyan_get();
+  [DllImport("__Internal", EntryPoint="CSharp_Colors_Teal_get")]
+  public static extern IntPtr Colors_Teal_get();
 
   [DllImport("__Internal", EntryPoint="CSharp_Colors_Purple_get")]
   public static extern IntPtr Colors_Purple_get();
@@ -936,11 +930,23 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_Colors_Orange_get")]
   public static extern IntPtr Colors_Orange_get();
 
-  [DllImport("__Internal", EntryPoint="CSharp_Colors_Black_get")]
-  public static extern IntPtr Colors_Black_get();
+  [DllImport("__Internal", EntryPoint="CSharp_Colors_Brown_get")]
+  public static extern IntPtr Colors_Brown_get();
 
   [DllImport("__Internal", EntryPoint="CSharp_Colors_White_get")]
   public static extern IntPtr Colors_White_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Colors_Yellow_get")]
+  public static extern IntPtr Colors_Yellow_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Colors_Green_get")]
+  public static extern IntPtr Colors_Green_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Colors_Cyan_get")]
+  public static extern IntPtr Colors_Cyan_get();
+
+  [DllImport("__Internal", EntryPoint="CSharp_Colors_Black_get")]
+  public static extern IntPtr Colors_Black_get();
 
   [DllImport("__Internal", EntryPoint="CSharp_Colors_Grey_get")]
   public static extern IntPtr Colors_Grey_get();
@@ -1235,9 +1241,6 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_ExplosionTypes_Unknown_get")]
   public static extern IntPtr ExplosionTypes_Unknown_get();
-
-  [DllImport("__Internal", EntryPoint="CSharp_FLAG_COUNT_get")]
-  public static extern int FLAG_COUNT_get();
 
   [DllImport("__Internal", EntryPoint="CSharp_Force_getID")]
   public static extern int Force_getID(HandleRef jarg1);
@@ -1754,6 +1757,15 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_Game_setLatCom")]
   public static extern void Game_setLatCom(HandleRef jarg1, bool jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_getReplayFrameCount")]
+  public static extern int Game_getReplayFrameCount(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_setGUI__SWIG_0")]
+  public static extern void Game_setGUI__SWIG_0(HandleRef jarg1, bool jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Game_setGUI__SWIG_1")]
+  public static extern void Game_setGUI__SWIG_1(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_Game")]
   public static extern void delete_Game(HandleRef jarg1);
@@ -2435,6 +2447,12 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_Player_maxEnergy")]
   public static extern int Player_maxEnergy(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Player_getColor")]
+  public static extern IntPtr Player_getColor(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Player_getTextColor")]
+  public static extern int Player_getTextColor(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_Player")]
   public static extern void delete_Player(HandleRef jarg1);
@@ -3504,8 +3522,11 @@ class bridgePINVOKE {
   [DllImport("__Internal", EntryPoint="CSharp_Unit_useTech__SWIG_2")]
   public static extern bool Unit_useTech__SWIG_2(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("__Internal", EntryPoint="CSharp_Unit_hasPath")]
-  public static extern bool Unit_hasPath(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("__Internal", EntryPoint="CSharp_Unit_hasPath__SWIG_0")]
+  public static extern bool Unit_hasPath__SWIG_0(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Unit_hasPath__SWIG_1")]
+  public static extern bool Unit_hasPath__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
   [DllImport("__Internal", EntryPoint="CSharp_Unit_getLastOrderFrame")]
   public static extern int Unit_getLastOrderFrame(HandleRef jarg1);
@@ -3515,6 +3536,9 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_Unit_getClientInfo")]
   public static extern IntPtr Unit_getClientInfo(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_Unit_getResourceGroup")]
+  public static extern int Unit_getResourceGroup(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_Unit")]
   public static extern void delete_Unit(HandleRef jarg1);
@@ -3791,6 +3815,9 @@ class bridgePINVOKE {
 
   [DllImport("__Internal", EntryPoint="CSharp_UnitType_isNeutral")]
   public static extern bool UnitType_isNeutral(HandleRef jarg1);
+
+  [DllImport("__Internal", EntryPoint="CSharp_UnitType_producesLarva")]
+  public static extern bool UnitType_producesLarva(HandleRef jarg1);
 
   [DllImport("__Internal", EntryPoint="CSharp_delete_UnitType")]
   public static extern void delete_UnitType(HandleRef jarg1);

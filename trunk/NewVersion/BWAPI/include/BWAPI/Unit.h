@@ -639,6 +639,7 @@ namespace BWAPI
 
       /** Checks to verify that the unit is capable of moving to the target location */
       virtual bool hasPath(Position target) = 0;
+      virtual bool hasPath(Unit *target) = 0;
 
       /** Retrieves the frame of the last successful order. Frame is comparable to Game::getFrameCount(). */
       virtual int  getLastOrderFrame() = 0;
@@ -648,5 +649,8 @@ namespace BWAPI
 
       /** Returns the unit's custom client info. The client is responsible for deallocation. */
       virtual void* getClientInfo() const = 0;
+
+      /** Retrieves the group ID of a resource. Can be used to identify which resources belong to an expansion. */
+      virtual int getResourceGroup() = 0;
   };
 }
