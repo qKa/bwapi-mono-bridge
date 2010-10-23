@@ -1,8 +1,0 @@
-On windows you need to generate an import library for mono.dll by getting the following file:
-
- http://anonsvn.mono-project.com/viewcvs/*checkout*/trunk/mono/msvc/mono.def
-
-and creating mono.lib with the command:
-(make sure the dll file specified in the .def file is the one in the mono\bin directory. If not, then change it (ie from libmono.dll to mono-2.0.dll)
-
-lib /nologo /def:mono.def /out:mono.lib /machine:x86
