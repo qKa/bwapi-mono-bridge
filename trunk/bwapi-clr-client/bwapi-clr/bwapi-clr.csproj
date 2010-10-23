@@ -1,0 +1,152 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6657C37C-4F1B-4972-AAB0-B395EE5F53DF}</ProjectGuid>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>bwapi-clr</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>bwapi_clr</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\debug-binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\release-binaries\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="swig-classes\AIModule.cs" />
+    <Compile Include="swig-classes\BaseLocation.cs" />
+    <Compile Include="swig-classes\BaseLocationPtrSet.cs" />
+    <Compile Include="swig-classes\bridge.cs" />
+    <Compile Include="swig-classes\bridgePINVOKE.cs" />
+    <Compile Include="swig-classes\Bullet.cs" />
+    <Compile Include="swig-classes\BulletData.cs" />
+    <Compile Include="swig-classes\BulletPtrSet.cs" />
+    <Compile Include="swig-classes\BulletType.cs" />
+    <Compile Include="swig-classes\BulletTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPIC_Event.cs" />
+    <Compile Include="swig-classes\BWAPIC_UnitCommand.cs" />
+    <Compile Include="swig-classes\Chokepoint.cs" />
+    <Compile Include="swig-classes\ChokepointPtrSet.cs" />
+    <Compile Include="swig-classes\Client.cs" />
+    <Compile Include="swig-classes\Color.cs" />
+    <Compile Include="swig-classes\Command.cs" />
+    <Compile Include="swig-classes\CommandType_Enum.cs" />
+    <Compile Include="swig-classes\DamageType.cs" />
+    <Compile Include="swig-classes\DamageTypeSet.cs" />
+    <Compile Include="swig-classes\Enum.cs" />
+    <Compile Include="swig-classes\Error.cs" />
+    <Compile Include="swig-classes\ErrorSet.cs" />
+    <Compile Include="swig-classes\Event.cs" />
+    <Compile Include="swig-classes\EventList.cs" />
+    <Compile Include="swig-classes\EventType_Enum.cs" />
+    <Compile Include="swig-classes\ExplosionType.cs" />
+    <Compile Include="swig-classes\ExplosionTypeSet.cs" />
+    <Compile Include="swig-classes\Flag_Enum.cs" />
+    <Compile Include="swig-classes\Force.cs" />
+    <Compile Include="swig-classes\ForceData.cs" />
+    <Compile Include="swig-classes\ForceImpl.cs" />
+    <Compile Include="swig-classes\ForcePtrSet.cs" />
+    <Compile Include="swig-classes\Game.cs" />
+    <Compile Include="swig-classes\GameData.cs" />
+    <Compile Include="swig-classes\GameImpl.cs" />
+    <Compile Include="swig-classes\GameType.cs" />
+    <Compile Include="swig-classes\GameTypeSet.cs" />
+    <Compile Include="swig-classes\Key.cs" />
+    <Compile Include="swig-classes\Latency_Enum.cs" />
+    <Compile Include="swig-classes\MouseButton.cs" />
+    <Compile Include="swig-classes\Order.cs" />
+    <Compile Include="swig-classes\OrderSet.cs" />
+    <Compile Include="swig-classes\Player.cs" />
+    <Compile Include="swig-classes\PlayerData.cs" />
+    <Compile Include="swig-classes\PlayerImpl.cs" />
+    <Compile Include="swig-classes\PlayerPtrSet.cs" />
+    <Compile Include="swig-classes\PlayerType.cs" />
+    <Compile Include="swig-classes\PlayerTypeSet.cs" />
+    <Compile Include="swig-classes\Polygon.cs" />
+    <Compile Include="swig-classes\PolygonPtrSet.cs" />
+    <Compile Include="swig-classes\PolygonVector.cs" />
+    <Compile Include="swig-classes\Position.cs" />
+    <Compile Include="swig-classes\PositionPair.cs" />
+    <Compile Include="swig-classes\PositionVector.cs" />
+    <Compile Include="swig-classes\Race.cs" />
+    <Compile Include="swig-classes\RaceSet.cs" />
+    <Compile Include="swig-classes\RectangleArrayDouble.cs" />
+    <Compile Include="swig-classes\Region.cs" />
+    <Compile Include="swig-classes\RegionPtrRegionPtrPair.cs" />
+    <Compile Include="swig-classes\RegionPtrSet.cs" />
+    <Compile Include="swig-classes\Shape.cs" />
+    <Compile Include="swig-classes\ShapeType_Enum.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_a_1024__bool.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_a_256__bool.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_a_256__char.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_a_256__int.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_bool.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_double.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_FILE.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_int.cs" />
+    <Compile Include="swig-classes\SWIGTYPE_p_void.cs" />
+    <Compile Include="swig-classes\TechType.cs" />
+    <Compile Include="swig-classes\TechTypeSet.cs" />
+    <Compile Include="swig-classes\TilePosition.cs" />
+    <Compile Include="swig-classes\TilePositionDoubleMap.cs" />
+    <Compile Include="swig-classes\TilePositionDoublePair.cs" />
+    <Compile Include="swig-classes\TilePositionSet.cs" />
+    <Compile Include="swig-classes\TilePositionVector.cs" />
+    <Compile Include="swig-classes\Unit.cs" />
+    <Compile Include="swig-classes\UnitCommand.cs" />
+    <Compile Include="swig-classes\UnitCommandType.cs" />
+    <Compile Include="swig-classes\UnitCommandTypeSet.cs" />
+    <Compile Include="swig-classes\UnitData.cs" />
+    <Compile Include="swig-classes\UnitImpl.cs" />
+    <Compile Include="swig-classes\UnitPtrSet.cs" />
+    <Compile Include="swig-classes\UnitSizeType.cs" />
+    <Compile Include="swig-classes\UnitSizeTypeSet.cs" />
+    <Compile Include="swig-classes\UnitType.cs" />
+    <Compile Include="swig-classes\UnitTypeIntMap.cs" />
+    <Compile Include="swig-classes\UnitTypeIntPair.cs" />
+    <Compile Include="swig-classes\UnitTypeList.cs" />
+    <Compile Include="swig-classes\UnitTypeSet.cs" />
+    <Compile Include="swig-classes\UpgradeType.cs" />
+    <Compile Include="swig-classes\UpgradeTypeSet.cs" />
+    <Compile Include="swig-classes\WeaponType.cs" />
+    <Compile Include="swig-classes\WeaponTypeSet.cs" />
+    <Compile Include="user-classes\Game.cs" />
+    <Compile Include="user-classes\unit-extended.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="user-classes\Extend the swig classes in this folder.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
