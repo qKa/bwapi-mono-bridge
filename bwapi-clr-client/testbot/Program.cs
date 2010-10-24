@@ -23,6 +23,13 @@ namespace testbot
         {
             try {
                 System.Console.WriteLine("Testbot 1.0");
+                if (IntPtr.Size == 8)
+                {
+                    System.Console.WriteLine("64bit");
+                } else {
+                    System.Console.WriteLine("32bit");
+                }
+                
                 bwapi.BWAPI_init();
                 System.Console.WriteLine("Connecting...");
                 reconnect();
