@@ -19,6 +19,11 @@ using namespace BWAPI;
 //resolve ambiguities
 %include "ambiguities.i"
 
+//unimplemented functions in headers (or ones that should not be called)
+//uncomment these each new version of BWAPI to ensure they are not later implemented.
+%ignore getPlayerUnits;
+%ignore BWAPI::GameData::GameData;
+
 //fix up operator overrides.
 %rename (opAssign) *::operator =;
 %rename (opEquals) *::operator ==;
