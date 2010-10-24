@@ -1,5 +1,5 @@
 #summary Changelog.
 
 == Changes in 3.2b =
-* Changed bwapi-clr and testbot project to be x86 only, so that they work on x64 systems.
-* Re-added monobridgeai.dll.config to the example embedded bot.
+  * Changed bwapi-clr and testbot project to be x86 only, so that they work on x64 systems.
+  * Re-added monobridgeai.dll.config to the example embedded bot.
