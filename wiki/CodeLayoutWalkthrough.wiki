@@ -4,6 +4,8 @@
 
 This is a quick layout of the source structure for the project
 
+*NOTE* if you are compiling on x64, ensure all projects are set to x86
+
 = Details =
 BWAPI 
   * Contains the header and lib files needed from the BWAPI and BWTA projects (see code.google.com)
