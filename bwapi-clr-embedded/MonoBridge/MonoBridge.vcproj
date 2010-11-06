@@ -43,7 +43,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="..\..\BWAPI\include;&quot;C:\Program Files (x86)\Mono-2.8\include\mono-2.0&quot;"
+				AdditionalIncludeDirectories="..\..\Common\BWAPI\include;&quot;C:\Program Files (x86)\Mono-2.8\include\mono-2.0&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;MONOBRIDGE_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -64,7 +64,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="BWAPI.lib BWTA.lib tinyxml.lib lib/mono.lib"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="..\..\BWAPI\lib"
+				AdditionalLibraryDirectories="..\..\Common\BWAPI\lib"
 				DelayLoadDLLs="mono-2.0.dll"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -151,11 +151,11 @@
 			Name="SWIG"
 			>
 			<File
-				RelativePath=".\bwapi-bridge_wrap.cxx"
+				RelativePath="..\..\Common\SWIG\Wrapper\bwapi-bridge.cxx"
 				>
 			</File>
 			<File
-				RelativePath=".\bwta-bridge_wrap.cxx"
+				RelativePath="..\..\Common\SWIG\Wrapper\bwta-bridge.cxx"
 				>
 			</File>
 		</Filter>
@@ -167,11 +167,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\ExampleAIModule.cpp"
+				RelativePath=".\proxyAIModule.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\ExampleAIModule.h"
+				RelativePath=".\proxyAIModule.h"
 				>
 			</File>
 		</Filter>

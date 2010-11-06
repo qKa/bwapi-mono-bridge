@@ -5,7 +5,7 @@
 #include <tchar.h>
 #include <BWAPI.h>
 #include <string>
-#include "ExampleAIModule.h"
+#include "proxyAIModule.h"
 
 #include "Mono\Manager.h"
 
@@ -44,5 +44,5 @@ BOOL APIENTRY DllMain( HANDLE hModule,
 {
   BWAPI::Broodwar=game;
   Mono::Manager::GetInstance()->Init(_dllDirectory);
-  return new ExampleAIModule();
+  return new proxyAIModule();
 }

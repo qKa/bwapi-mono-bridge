@@ -54,17 +54,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\monobridgeai-interop\monobridgeai-interop.csproj">
-      <Project>{5CCAD223-24DC-475F-AD0F-8822D13C42FA}</Project>
-      <Name>monobridgeai-interop</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Bot\StarcraftBotLib\StarcraftBotLib.csproj">
+      <Project>{70550A19-51BF-46AE-B748-07191E2CF155}</Project>
+      <Name>StarcraftBotLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bwapi-clr\bwapi-clr.csproj">
+      <Project>{8550F817-891A-41A1-B38B-227FA8B1D041}</Project>
+      <Name>bwapi-clr</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
