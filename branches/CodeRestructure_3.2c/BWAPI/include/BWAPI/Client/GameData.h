@@ -110,7 +110,4 @@ namespace BWAPI
     BWAPIC::UnitCommand unitCommands[20000];
 
   };
-
-  GameData::GameData(void) {
-  }
 }

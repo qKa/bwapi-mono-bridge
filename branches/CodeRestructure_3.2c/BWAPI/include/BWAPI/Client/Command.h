@@ -11,7 +11,6 @@ namespace BWAPIC
       value1=_value1;
       value2=_value2;
     }
-	Command() {};
     CommandType::Enum type;
     int value1;
     int value2;
