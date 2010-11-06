@@ -1,6 +1,6 @@
 %include <stl.i>
-%include "std_set.i"
-%include "std_list.i"
+%include "Enhance/std_set.i"
+%include "Enhance/std_list.i"
 %include "typemaps.i"
 %include "cpointer.i"
 
@@ -15,7 +15,7 @@ using namespace BWAPI;
 //special include for our dllimport attribute
 %include "dllimport.i"
 
-%include "class-enhancement.i"
+%include "Enhance/class-enhancement.i"
 
 //import BWAPI
 %import "bwapi-bridge.i"

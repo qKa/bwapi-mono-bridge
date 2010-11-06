@@ -7,23 +7,15 @@ REM
 :start
 SET SWIGPATH=..\..\..\swigwin-2.0.1
 
-erase /s /q ..\..\bwapi-clr-client\bwapi-clr\swig-classes\*.*
+erase /s /q Classes\*.*
+erase /s /q Wrapper\*.*
 
-%SWIGPATH%\swig.exe -csharp -c++ -I..\BWAPI\Include -outdir ..\..\bwapi-clr-client\bwapi-clr\swig-classes\BWAPI -namespace SWIG.BWAPI -dllimport \"+importdll+\" bwapi-bridge.i
+%SWIGPATH%\swig.exe -csharp -c++ -I..\BWAPI\Include -outdir Classes\BWAPI -namespace SWIG.BWAPI -dllimport \"+importdll+\" -o Wrapper\bwapi-bridge.cxx Interfaces\bwapi-bridge.i
 
-%SWIGPATH%\swig.exe -csharp -c++ -I..\BWAPI\Include -outdir ..\..\bwapi-clr-client\bwapi-clr\swig-classes\BWTA -namespace SWIG.BWTA -dllimport \"+importdll+\" bwta-bridge.i
+%SWIGPATH%\swig.exe -csharp -c++ -I..\BWAPI\Include -outdir Classes\BWTA -namespace SWIG.BWTA -dllimport \"+importdll+\" -o Wrapper\bwta-bridge.cxx Interfaces\bwta-bridge.i
 
-%SWIGPATH%\swig.exe -csharp -c++ -I..\BWAPI\Include -outdir ..\..\bwapi-clr-client\bwapi-clr\swig-classes\BWAPIClient -namespace SWIG.BWAPIC -dllimport \"+importdll+\" bwapiclient-bridge.i
+%SWIGPATH%\swig.exe -csharp -c++ -I..\BWAPI\Include -outdir Classes\BWAPIC -namespace SWIG.BWAPIC -dllimport \"+importdll+\" -o Wrapper\bwapiclient-bridge.cxx Interfaces\bwapiclient-bridge.i
 
-
-erase /q ..\..\bwapi-clr-client\bwapi-native\bwapi-bridge_wrap.cxx
-erase /q ..\..\bwapi-clr-client\bwapi-native\bwta-bridge_wrap.cxx
-erase /q ..\..\bwapi-clr-client\bwapi-native\bwapiclient-bridge_wrap.cxx
-
-
-copy bwapi-bridge_wrap.cxx ..\..\bwapi-clr-client\bwapi-native\bwapi-bridge_wrap.cxx
-copy bwta-bridge_wrap.cxx ..\..\bwapi-clr-client\bwapi-native\bwta-bridge_wrap.cxx
-copy bwapiclient-bridge_wrap.cxx ..\..\bwapi-clr-client\bwapi-native\bwapiclient-bridge_wrap.cxx
 
 pause
 goto start
