@@ -118,7 +118,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="../../BWAPI/include"
+				AdditionalIncludeDirectories="../../Common/BWAPI/include"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;BWAPINATIVE_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -140,7 +140,7 @@
 				AdditionalDependencies="BWAPI.lib BWAPIClient.lib BWTA.lib tinyxml.lib"
 				OutputFile="$(SolutionDir)release-binaries\$(ProjectName).dll"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="../../BWAPI/lib"
+				AdditionalLibraryDirectories="../../Common/BWAPI/lib"
 				IgnoreAllDefaultLibraries="false"
 				GenerateDebugInformation="false"
 				SubSystem="2"
@@ -181,7 +181,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\bwapi-bridge_wrap.cxx"
+				RelativePath="..\..\Common\SWIG\Wrapper\bwapi-bridge.cxx"
 				>
 			</File>
 			<File
@@ -189,7 +189,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\bwta-bridge_wrap.cxx"
+				RelativePath="..\..\Common\SWIG\Wrapper\bwapiclient-bridge.cxx"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Common\SWIG\Wrapper\bwta-bridge.cxx"
 				>
 			</File>
 			<File
@@ -225,11 +229,11 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\BWAPI\Include\BWAPI.h"
+				RelativePath="..\..\Common\BWAPI\Include\BWAPI.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\BWAPI\Include\BWTA.h"
+				RelativePath="..\..\Common\BWAPI\Include\BWTA.h"
 				>
 			</File>
 		</Filter>

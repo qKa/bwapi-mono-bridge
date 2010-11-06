@@ -26,7 +26,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\release-binaries\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;CLIENT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
@@ -58,9 +58,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IStarcraftBot.cs" />
-    <Compile Include="swig-classes\BWAPI\*" />
-    <Compile Include="swig-classes\BWTA\*" />
+    <Compile Include="..\..\Common\SWIG\Classes\BWAPI\*.cs" />
+    <Compile Include="..\..\Common\SWIG\Classes\BWTA\*.cs" />
+	<Compile Include="..\..\Common\SWIG\Classes\BWAPIC\*.cs" />    
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

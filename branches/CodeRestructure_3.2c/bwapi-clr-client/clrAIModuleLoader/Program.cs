@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using BWAPI;
+using SWIG.BWAPI;
+using SWIG.BWAPIC;
 using System.IO;
 
 namespace ClrAIModuleLoader
@@ -46,7 +47,7 @@ namespace ClrAIModuleLoader
         static void reconnect()
         {
 
-            while (!bwapi.BWAPIClient.connect())
+            while (!bwapiclient.BWAPIClient.connect())
             {
                 System.Threading.Thread.Sleep(1000);
             }
@@ -90,8 +91,8 @@ namespace ClrAIModuleLoader
                System.Console.WriteLine("waiting to enter match\n");
                while (!bwapi.Broodwar.isInGame())
                {
-                   bwapi.BWAPIClient.update();
-                   if (!bwapi.BWAPIClient.isConnected())
+                   bwapiclient.BWAPIClient.update();
+                   if (!bwapiclient.BWAPIClient.isConnected())
                    {
                        System.Console.WriteLine("Reconnecting...\n");
                        reconnect();
@@ -162,8 +163,8 @@ namespace ClrAIModuleLoader
                       break;
                     }
                   }
-                  bwapi.BWAPIClient.update();
-                  if (!bwapi.BWAPIClient.isConnected())
+                  bwapiclient.BWAPIClient.update();
+                  if (!bwapiclient.BWAPIClient.isConnected())
                   {
                     System.Console.WriteLine("Reconnecting...\n");
                     reconnect();

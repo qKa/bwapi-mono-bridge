@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BWAPI;
+using SWIG.BWAPI;
+using SWIG.BWAPIC;
 
 namespace testbot
 {
@@ -11,7 +12,7 @@ namespace testbot
         static void reconnect()
         {
 
-            while (!bwapi.BWAPIClient.connect())
+            while (!bwapiclient.BWAPIClient.connect())
             {
                 System.Threading.Thread.Sleep(1000);
             }
@@ -38,8 +39,8 @@ namespace testbot
                     System.Console.WriteLine("waiting to enter match\n");
                     while (!bwapi.Broodwar.isInGame())
                     {
-                        bwapi.BWAPIClient.update();
-                        if (!bwapi.BWAPIClient.isConnected())
+                        bwapiclient.BWAPIClient.update();
+                        if (!bwapiclient.BWAPIClient.isConnected())
                         {
                             System.Console.WriteLine("Reconnecting...\n");
                             reconnect();
@@ -55,7 +56,7 @@ namespace testbot
         Broodwar->enableFlag(Flag::UserInput);
                      */
 
-                    bwapi.Broodwar.printf("The map is {0}, a {1} player map", bwapi.Broodwar.mapName(), bwapi.Broodwar.getStartLocations().Count);
+                  //  bwapi.Broodwar.printf("The map is {0}, a {1} player map", bwapi.Broodwar.mapName(), bwapi.Broodwar.getStartLocations().Count);
 
                     bwapi.Broodwar.enableFlag((int)Flag_Enum.UserInput);
 
@@ -72,9 +73,9 @@ namespace testbot
 
                     //  bwapi.readMap();
                     
-                    bwapi.Broodwar.printf("The match up is {0} v {1}",
-                        bwapi.Broodwar.self().getRace().getName(),
-                        bwapi.Broodwar.enemy().getRace().getName());
+//                    bwapi.Broodwar.printf("The match up is {0} v {1}",
+//                        bwapi.Broodwar.self().getRace().getName(),
+//                        bwapi.Broodwar.enemy().getRace().getName());
                     System.Threading.Thread.Sleep(5000); //test
 
                     //send each worker to the mineral field that is closest to it

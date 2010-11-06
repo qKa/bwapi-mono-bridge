@@ -16,6 +16,8 @@ erase /s /q Wrapper\*.*
 
 %SWIGPATH%\swig.exe -csharp -c++ -I..\BWAPI\Include -outdir Classes\BWAPIC -namespace SWIG.BWAPIC -dllimport \"+importdll+\" -o Wrapper\bwapiclient-bridge.cxx Interfaces\bwapiclient-bridge.i
 
+erase /q Classes\BWAPIC\swigtype_p_void.cs
+erase /q Classes\BWAPIC\swigtype_p_int.cs
 
 pause
 goto start
