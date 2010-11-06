@@ -18,7 +18,6 @@ namespace BWAPIC
       color=_color;
       isSolid=_isSolid;
     }
-	Shape() {};
     ShapeType::Enum type;
     int ctype;
     int x1;

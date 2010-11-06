@@ -64,7 +64,7 @@ namespace BWAPI
       void onMatchStart();
       void onMatchEnd();
       void onMatchFrame();
-      virtual std::set<Unit*>& getPlayerUnits(const Player* player);
+      std::set<Unit*>& getPlayerUnits(const Player* player);
 
       virtual std::set< Force* >& getForces();
       virtual std::set< Player* >& getPlayers();
