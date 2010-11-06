@@ -5,15 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2ADEC1F6-C45A-4BA1-A4D9-68BFF3E5F6CA}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{70550A19-51BF-46AE-B748-07191E2CF155}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MonoAIModuleLoader</RootNamespace>
-    <AssemblyName>MonoAIModuleLoader</AssemblyName>
+    <RootNamespace>StarcraftBotLib</RootNamespace>
+    <AssemblyName>StarcraftBotLib</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <StartupObject>
-    </StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,34 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="IStarcraftBot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="app.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Bot\StarcraftBotLib\StarcraftBotLib.csproj">
-      <Project>{70550A19-51BF-46AE-B748-07191E2CF155}</Project>
-      <Name>StarcraftBotLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\bwapi-clr\bwapi-clr.csproj">
+    <ProjectReference Include="..\..\..\bwapi-clr-client\bwapi-clr\bwapi-clr.csproj">
       <Project>{6657C37C-4F1B-4972-AAB0-B395EE5F53DF}</Project>
       <Name>bwapi-clr</Name>
     </ProjectReference>
