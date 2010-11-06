@@ -1,5 +1,6 @@
 
 using System;
+using SWIG.BWAPI;
 
 namespace BWAPI
 {
@@ -12,17 +13,17 @@ namespace BWAPI
 		void onEnd(bool isWinner);
 		void onFrame();
 		void onSendText(string text);
-		void onReceiveText(BWAPI.Player player, string text);
-		void onPlayerLeft(BWAPI.Player player);
-		void onNukeDetect(BWAPI.Position target);
-		void onUnitDiscover(BWAPI.Unit unit);
-		void onUnitEvade(BWAPI.Unit unit);
-		void onUnitShow(BWAPI.Unit unit);
-		void onUnitHide(BWAPI.Unit unit);
-		void onUnitCreate(BWAPI.Unit unit);
-		void onUnitDestroy(BWAPI.Unit unit);
-		void onUnitMorph(BWAPI.Unit unit);
-		void onUnitRenegade(BWAPI.Unit unit);
+		void onReceiveText(Player player, string text);
+		void onPlayerLeft(Player player);
+		void onNukeDetect(Position target);
+		void onUnitDiscover(Unit unit);
+		void onUnitEvade(Unit unit);
+		void onUnitShow(Unit unit);
+		void onUnitHide(Unit unit);
+		void onUnitCreate(Unit unit);
+		void onUnitDestroy(Unit unit);
+		void onUnitMorph(Unit unit);
+		void onUnitRenegade(Unit unit);
 		void onSaveGame(string gameName);
 	}
 }
