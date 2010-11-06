@@ -6,7 +6,7 @@
 
 #include "Mono\Manager.h"
 
-class ExampleAIModule : public BWAPI::AIModule
+class proxyAIModule : public BWAPI::AIModule
 {
 public:
   virtual void onStart();

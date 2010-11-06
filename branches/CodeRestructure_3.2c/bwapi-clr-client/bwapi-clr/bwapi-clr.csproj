@@ -60,7 +60,8 @@
   <ItemGroup>
     <Compile Include="..\..\Common\SWIG\Classes\BWAPI\*.cs" />
     <Compile Include="..\..\Common\SWIG\Classes\BWTA\*.cs" />
-	<Compile Include="..\..\Common\SWIG\Classes\BWAPIC\*.cs" />    
+    <Compile Include="..\..\Common\SWIG\Classes\BWAPIC\*.cs" />    
+    <Compile Include="..\..\Common\SWIG\Helper\*.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>
