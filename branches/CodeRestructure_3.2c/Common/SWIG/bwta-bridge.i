@@ -14,6 +14,9 @@ using namespace BWTA;
 %}                  
 
 %include "class-enhancement.i"
+//special include for our dllimport attribute
+%include "dllimport.i"
+
 
 //use getcolumn instead
 %ignore operator[];
@@ -37,12 +40,12 @@ using BWAPI;
 %}
 
 //BWTA order of includes is important to stop SWIGTYPE_p etc class generation with and without namespace
-%include "../BWTA/RectangleArray.h"
-%include "../BWTA/BaseLocation.h"
-%include "../BWTA/Chokepoint.h"
-%include "../BWTA/Polygon.h"
-%include "../BWTA/Region.h"
-%include "../BWTA.h"
+%include "BWTA/RectangleArray.h"
+%include "BWTA/BaseLocation.h"
+%include "BWTA/Chokepoint.h"
+%include "BWTA/Polygon.h"
+%include "BWTA/Region.h"
+%include "BWTA.h"
       
 
 //Instantiate our templates
