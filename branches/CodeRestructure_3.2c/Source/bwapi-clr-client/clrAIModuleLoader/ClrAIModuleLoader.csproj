@@ -8,8 +8,8 @@
     <ProjectGuid>{2ADEC1F6-C45A-4BA1-A4D9-68BFF3E5F6CA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MonoAIModuleLoader</RootNamespace>
-    <AssemblyName>MonoAIModuleLoader</AssemblyName>
+    <RootNamespace>ClrAIModuleLoader</RootNamespace>
+    <AssemblyName>ClrAIModuleLoader</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StartupObject>
@@ -57,6 +57,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
@@ -70,13 +71,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Bot\StarcraftBotLib\StarcraftBotLib.csproj">
-      <Project>{70550A19-51BF-46AE-B748-07191E2CF155}</Project>
-      <Name>StarcraftBotLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\bwapi-clr\bwapi-clr.csproj">
       <Project>{6657C37C-4F1B-4972-AAB0-B395EE5F53DF}</Project>
       <Name>bwapi-clr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StarcraftBotLib\StarcraftBotLib.csproj">
+      <Project>{70550A19-51BF-46AE-B748-07191E2CF155}</Project>
+      <Name>StarcraftBotLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -87,4 +88,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <PostBuildEvent>copy /y  $(ProjectDir)$(OutDir)ClrAIModuleLoader.exe $(SolutionDir)..\..\Release\Libs\client</PostBuildEvent>
+  </PropertyGroup>
 </Project>
