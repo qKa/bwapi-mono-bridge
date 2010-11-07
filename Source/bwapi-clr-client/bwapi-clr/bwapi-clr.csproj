@@ -25,7 +25,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\release-binaries\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE;CLIENT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -60,7 +60,7 @@
   <ItemGroup>
     <Compile Include="..\..\Common\SWIG\Classes\BWAPI\*.cs" />
     <Compile Include="..\..\Common\SWIG\Classes\BWTA\*.cs" />
-    <Compile Include="..\..\Common\SWIG\Classes\BWAPIC\*.cs" />    
+    <Compile Include="..\..\Common\SWIG\Classes\BWAPIC\*.cs" />
     <Compile Include="..\..\Common\SWIG\Helper\*.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
@@ -68,7 +68,6 @@
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>copy /y  $(ProjectDir)$(OutDir)bwapi-clr.dll $(SolutionDir)..\..\Release\Libs\client</PostBuildEvent>
   </PropertyGroup>
 </Project>

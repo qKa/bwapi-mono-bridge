@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClrAIModuleLoader", "clrAIM
 		{B64E26AE-1B34-4C89-9DEB-AC76CAB17914} = {B64E26AE-1B34-4C89-9DEB-AC76CAB17914}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarcraftBotLib", "..\Common\Bot\StarcraftBotLib\StarcraftBotLib.csproj", "{70550A19-51BF-46AE-B748-07191E2CF155}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarcraftBotLib", "StarcraftBotLib\StarcraftBotLib.csproj", "{70550A19-51BF-46AE-B748-07191E2CF155}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

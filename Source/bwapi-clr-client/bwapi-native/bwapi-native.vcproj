@@ -138,7 +138,6 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="BWAPI.lib BWAPIClient.lib BWTA.lib tinyxml.lib"
-				OutputFile="$(SolutionDir)release-binaries\$(ProjectName).dll"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="../../Common/BWAPI/lib"
 				IgnoreAllDefaultLibraries="false"
@@ -168,7 +167,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine=""
+				CommandLine="copy /y $(OutDir)\bwapi-native.dll ..\..\..\Release\Libs\client"
 			/>
 		</Configuration>
 	</Configurations>

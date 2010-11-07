@@ -56,7 +56,7 @@ namespace ClrAIModuleLoader
 
         static void loadBot()
         {
-            string dll = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), MonoAIModuleLoader.Properties.Settings.Default.BotDLL);
+            string dll = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), ClrAIModuleLoader.Properties.Settings.Default.BotDLL);
             System.Console.WriteLine("Loading Bot [{0}]",dll);
             if (!File.Exists(dll)) { throw new BotLoaderException("DLL [" + dll + "] not Found"); }
 
