@@ -92,7 +92,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine=""
+				CommandLine="copy /y $(OutDir)\MonoBridge.dll ..\..\..\Release\Libs\embedded"
 			/>
 		</Configuration>
 	</Configurations>
