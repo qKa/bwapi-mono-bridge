@@ -61,13 +61,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Bot\StarcraftBotLib\StarcraftBotLib.csproj">
-      <Project>{70550A19-51BF-46AE-B748-07191E2CF155}</Project>
-      <Name>StarcraftBotLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\bwapi-clr\bwapi-clr.csproj">
       <Project>{8550F817-891A-41A1-B38B-227FA8B1D041}</Project>
       <Name>bwapi-clr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StarcraftBotLib\StarcraftBotLib.csproj">
+      <Project>{70550A19-51BF-46AE-B748-07191E2CF155}</Project>
+      <Name>StarcraftBotLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -79,6 +79,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>copy /y $(TargetPath) $(SolutionDir)\release</PostBuildEvent>
+    <PostBuildEvent>copy /y  $(ProjectDir)$(OutDir)MonoBridgeAI.dll $(SolutionDir)..\..\Release\Libs\embedded\bot</PostBuildEvent>
   </PropertyGroup>
 </Project>
