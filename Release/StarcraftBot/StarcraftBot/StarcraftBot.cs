@@ -1,5 +1,5 @@
 ﻿using System;
-using BWAPI;
+using SWIG.BWAPI;
 using System.ComponentModel;
 using System.Collections.Generic;
 
@@ -8,7 +8,7 @@ namespace StarcraftBot
 	public class StarcraftBot : BWAPI.IStarcraftBot
 	{
 		List<BW.Unit> myUnits;
-		List<Unit> enemies;
+        List<Unit> enemies;
 
 		Terrain.Analyzer a;
 		bool analysisDone = false;
@@ -58,32 +58,32 @@ namespace StarcraftBot
 			
 		}
 
-		public void onReceiveText(BWAPI.Player player, string text)
+		public void onReceiveText(Player player, string text)
 		{
 			
 		}
 
-		public void onPlayerLeft(BWAPI.Player player)
+		public void onPlayerLeft(Player player)
 		{
 			
 		}
 
-		public void onNukeDetect(BWAPI.Position target)
+		public void onNukeDetect(Position target)
 		{
 			
 		}
 
-		public void onUnitDiscover(BWAPI.Unit unit)
+		public void onUnitDiscover(Unit unit)
 		{
 			
 		}
 
-		public void onUnitEvade(BWAPI.Unit unit)
+		public void onUnitEvade(Unit unit)
 		{
 			
 		}
 
-		public void onUnitShow(BWAPI.Unit unit)
+		public void onUnitShow(Unit unit)
 		{
 			if (unit.getPlayer() == bwapi.Broodwar.self())
 			{
@@ -92,7 +92,7 @@ namespace StarcraftBot
 			}
 		}
 
-		public void onUnitHide(BWAPI.Unit unit)
+		public void onUnitHide(Unit unit)
 		{
 			if (unit.getPlayer() == bwapi.Broodwar.self())
 			{
@@ -101,7 +101,7 @@ namespace StarcraftBot
 			}
 		}
 
-		public void onUnitCreate(BWAPI.Unit unit)
+		public void onUnitCreate(Unit unit)
 		{
 			if (unit.getPlayer() != bwapi.Broodwar.self())
 			{
@@ -110,17 +110,17 @@ namespace StarcraftBot
 			}
 		}
 
-		public void onUnitDestroy(BWAPI.Unit unit)
+		public void onUnitDestroy(Unit unit)
 		{
 			
 		}
 
-		public void onUnitMorph(BWAPI.Unit unit)
+		public void onUnitMorph(Unit unit)
 		{
 			
 		}
 
-		public void onUnitRenegade(BWAPI.Unit unit)
+		public void onUnitRenegade(Unit unit)
 		{
 			
 		}
