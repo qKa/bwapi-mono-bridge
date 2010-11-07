@@ -7,10 +7,10 @@ namespace StarcraftBot.BW
 {
 	class Unit
 	{
-		public BWAPI.Unit theUnit;
-		public BWAPI.Unit theTarget;
+		public SWIG.BWAPI.Unit theUnit;
+        public SWIG.BWAPI.Unit theTarget;
 
-		public Unit(BWAPI.Unit u)
+        public Unit(SWIG.BWAPI.Unit u)
 		{
 			theUnit = u;
 			theTarget = null;
@@ -21,7 +21,7 @@ namespace StarcraftBot.BW
 			return (theTarget != null);
 		}
 
-		public void Attack(BWAPI.Unit t)
+        public void Attack(SWIG.BWAPI.Unit t)
 		{
 			if (t == null && theTarget != null)
 			{

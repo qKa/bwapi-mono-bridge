@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
-using BWAPI;
-using BWTA;
+using SWIG.BWAPI;
+using SWIG.BWTA;
 
 namespace StarcraftBot.Terrain
 {
