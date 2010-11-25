@@ -7,10 +7,15 @@ This is a quick walkthrough of installing the bwapi-mono-bridge skeleton AI in e
 
 = Details =
 
-  # Follow all directions for obtaining and setting up the BWAPI 3.2 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
+  # Follow all directions for obtaining and setting up the BWAPI 3.3 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
   # Download the zip file from the downloads tab
   # Extract the zip to a new folder
-  # copy the contents of the examplebots\embeddedbot folder into the bwapi-data\AI folder in your starcraft directory (created during BWAPI setup)
+  # open the StarcraftBot solution from the starcraftbot folder with vs 2008 sp1
+  # edit the references of the starcraftbot project and remove bwapi-clr.dll and starcraftbotlib.dll
+  # add references to starcraftbotlib.dll and bwapi-clr.dll from the libs\embedded\bot folder
+  # compile the project
+  # copy the contents of the libs\embeddedbot folder into the bwapi-data\AI folder in your starcraft directory (created during BWAPI setup)
+  # copy starcraftbot.dll from your project bin folder to bwapi-data\AI\bot folder
   # Edit the bwapi.ini file and change the ai_dll line to read:
 {{{
 [ai]
