@@ -85,6 +85,19 @@ public static bool operator !=(GameData obj1, GameData obj2)
 
 
 
+  public GameData() : this(bwapiclientPINVOKE.new_GameData(), true) {
+  }
+
+  public int instanceID {
+    set {
+      bwapiclientPINVOKE.GameData_instanceID_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.GameData_instanceID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public int forceCount {
     set {
       bwapiclientPINVOKE.GameData_forceCount_set(swigCPtr, value);
@@ -166,6 +179,27 @@ public static bool operator !=(GameData obj1, GameData obj2)
     get {
       IntPtr cPtr = bwapiclientPINVOKE.GameData_bullets_get(swigCPtr);
       BulletData ret = (cPtr == IntPtr.Zero) ? null : new BulletData(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public int nukeDotCount {
+    set {
+      bwapiclientPINVOKE.GameData_nukeDotCount_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.GameData_nukeDotCount_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public BWAPIC_Position nukeDots {
+    set {
+      bwapiclientPINVOKE.GameData_nukeDots_set(swigCPtr, BWAPIC_Position.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiclientPINVOKE.GameData_nukeDots_get(swigCPtr);
+      BWAPIC_Position ret = (cPtr == IntPtr.Zero) ? null : new BWAPIC_Position(cPtr, false);
       return ret;
     } 
   }
@@ -499,6 +533,61 @@ public static bool operator !=(GameData obj1, GameData obj2)
     } 
   }
 
+  public SWIGTYPE_p_a_256__unsigned_short mapTileRegionId {
+    set {
+      bwapiclientPINVOKE.GameData_mapTileRegionId_set(swigCPtr, SWIGTYPE_p_a_256__unsigned_short.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiclientPINVOKE.GameData_mapTileRegionId_get(swigCPtr);
+      SWIGTYPE_p_a_256__unsigned_short ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_a_256__unsigned_short(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_unsigned_short mapSplitTilesMiniTileMask {
+    set {
+      bwapiclientPINVOKE.GameData_mapSplitTilesMiniTileMask_set(swigCPtr, SWIGTYPE_p_unsigned_short.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiclientPINVOKE.GameData_mapSplitTilesMiniTileMask_get(swigCPtr);
+      SWIGTYPE_p_unsigned_short ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_short(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_unsigned_short mapSplitTilesRegion1 {
+    set {
+      bwapiclientPINVOKE.GameData_mapSplitTilesRegion1_set(swigCPtr, SWIGTYPE_p_unsigned_short.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiclientPINVOKE.GameData_mapSplitTilesRegion1_get(swigCPtr);
+      SWIGTYPE_p_unsigned_short ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_short(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_unsigned_short mapSplitTilesRegion2 {
+    set {
+      bwapiclientPINVOKE.GameData_mapSplitTilesRegion2_set(swigCPtr, SWIGTYPE_p_unsigned_short.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiclientPINVOKE.GameData_mapSplitTilesRegion2_get(swigCPtr);
+      SWIGTYPE_p_unsigned_short ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_short(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_unsigned_short regionGroupIndex {
+    set {
+      bwapiclientPINVOKE.GameData_regionGroupIndex_set(swigCPtr, SWIGTYPE_p_unsigned_short.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiclientPINVOKE.GameData_regionGroupIndex_get(swigCPtr);
+      SWIGTYPE_p_unsigned_short ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_short(cPtr, false);
+      return ret;
+    } 
+  }
+
   public int startLocationCount {
     set {
       bwapiclientPINVOKE.GameData_startLocationCount_set(swigCPtr, value);
@@ -509,24 +598,13 @@ public static bool operator !=(GameData obj1, GameData obj2)
     } 
   }
 
-  public SWIGTYPE_p_int startLocationsX {
+  public BWAPIC_Position startLocations {
     set {
-      bwapiclientPINVOKE.GameData_startLocationsX_set(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
+      bwapiclientPINVOKE.GameData_startLocations_set(swigCPtr, BWAPIC_Position.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = bwapiclientPINVOKE.GameData_startLocationsX_get(swigCPtr);
-      SWIGTYPE_p_int ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_int(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_int startLocationsY {
-    set {
-      bwapiclientPINVOKE.GameData_startLocationsY_set(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
-    } 
-    get {
-      IntPtr cPtr = bwapiclientPINVOKE.GameData_startLocationsY_get(swigCPtr);
-      SWIGTYPE_p_int ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_int(cPtr, false);
+      IntPtr cPtr = bwapiclientPINVOKE.GameData_startLocations_get(swigCPtr);
+      BWAPIC_Position ret = (cPtr == IntPtr.Zero) ? null : new BWAPIC_Position(cPtr, false);
       return ret;
     } 
   }

@@ -141,6 +141,7 @@
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="../../Common/BWAPI/lib"
 				IgnoreAllDefaultLibraries="false"
+				IgnoreDefaultLibraryNames="LIBCMT"
 				GenerateDebugInformation="false"
 				SubSystem="2"
 				OptimizeReferences="2"

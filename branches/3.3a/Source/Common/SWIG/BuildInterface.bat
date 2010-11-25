@@ -5,7 +5,7 @@ REM
 
 
 :start
-SET SWIGPATH=..\..\..\swigwin-2.0.1
+SET SWIGPATH=..\..\..\..\swigwin-2.0.1
 
 erase /s /q Classes\*.*
 erase /s /q Wrapper\*.*

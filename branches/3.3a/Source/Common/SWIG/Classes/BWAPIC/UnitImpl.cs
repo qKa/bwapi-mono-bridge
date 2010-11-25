@@ -189,6 +189,11 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
     return ret;
   }
 
+  public override int getResourceGroup() {
+    int ret = bwapiclientPINVOKE.UnitImpl_getResourceGroup(swigCPtr);
+    return ret;
+  }
+
   public override double getDistance(Unit target) {
     double ret = bwapiclientPINVOKE.UnitImpl_getDistance__SWIG_0(swigCPtr, Unit.getCPtr(target));
     return ret;
@@ -200,14 +205,14 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
     return ret;
   }
 
-  public override bool hasPath(Position target) {
-    bool ret = bwapiclientPINVOKE.UnitImpl_hasPath__SWIG_0(swigCPtr, Position.getCPtr(target));
-    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+  public override bool hasPath(Unit target) {
+    bool ret = bwapiclientPINVOKE.UnitImpl_hasPath__SWIG_0(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
-  public override bool hasPath(Unit target) {
-    bool ret = bwapiclientPINVOKE.UnitImpl_hasPath__SWIG_1(swigCPtr, Unit.getCPtr(target));
+  public override bool hasPath(Position target) {
+    bool ret = bwapiclientPINVOKE.UnitImpl_hasPath__SWIG_1(swigCPtr, Position.getCPtr(target));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
@@ -433,6 +438,12 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
     return ret;
   }
 
+  public override Unit getPowerUp() {
+    IntPtr cPtr = bwapiclientPINVOKE.UnitImpl_getPowerUp(swigCPtr);
+    Unit ret = (cPtr == IntPtr.Zero) ? null : new Unit(cPtr, false);
+    return ret;
+  }
+
   public override Unit getTransport() {
     IntPtr cPtr = bwapiclientPINVOKE.UnitImpl_getTransport(swigCPtr);
     Unit ret = (cPtr == IntPtr.Zero) ? null : new Unit(cPtr, false);
@@ -586,6 +597,11 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
     return ret;
   }
 
+  public override bool isInterruptible() {
+    bool ret = bwapiclientPINVOKE.UnitImpl_isInterruptible(swigCPtr);
+    return ret;
+  }
+
   public override bool isIrradiated() {
     bool ret = bwapiclientPINVOKE.UnitImpl_isIrradiated(swigCPtr);
     return ret;
@@ -671,6 +687,11 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
     return ret;
   }
 
+  public override bool isStuck() {
+    bool ret = bwapiclientPINVOKE.UnitImpl_isStuck(swigCPtr);
+    return ret;
+  }
+
   public override bool isTraining() {
     bool ret = bwapiclientPINVOKE.UnitImpl_isTraining(swigCPtr);
     return ret;
@@ -698,6 +719,12 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
 
   public override bool isVisible(Player player) {
     bool ret = bwapiclientPINVOKE.UnitImpl_isVisible__SWIG_1(swigCPtr, Player.getCPtr(player));
+    return ret;
+  }
+
+  public override bool canIssueCommand(UnitCommand command) {
+    bool ret = bwapiclientPINVOKE.UnitImpl_canIssueCommand(swigCPtr, UnitCommand.getCPtr(command));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
@@ -754,14 +781,14 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
     return ret;
   }
 
-  public override bool setRallyPosition(Position target) {
-    bool ret = bwapiclientPINVOKE.UnitImpl_setRallyPosition(swigCPtr, Position.getCPtr(target));
+  public override bool setRallyPoint(Position target) {
+    bool ret = bwapiclientPINVOKE.UnitImpl_setRallyPoint__SWIG_0(swigCPtr, Position.getCPtr(target));
     if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override bool setRallyUnit(Unit target) {
-    bool ret = bwapiclientPINVOKE.UnitImpl_setRallyUnit(swigCPtr, Unit.getCPtr(target));
+  public override bool setRallyPoint(Unit target) {
+    bool ret = bwapiclientPINVOKE.UnitImpl_setRallyPoint__SWIG_1(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
@@ -895,13 +922,13 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
     return ret;
   }
 
-  public override bool cancelTrain() {
-    bool ret = bwapiclientPINVOKE.UnitImpl_cancelTrain__SWIG_0(swigCPtr);
+  public override bool cancelTrain(int slot) {
+    bool ret = bwapiclientPINVOKE.UnitImpl_cancelTrain__SWIG_0(swigCPtr, slot);
     return ret;
   }
 
-  public override bool cancelTrain(int slot) {
-    bool ret = bwapiclientPINVOKE.UnitImpl_cancelTrain__SWIG_1(swigCPtr, slot);
+  public override bool cancelTrain() {
+    bool ret = bwapiclientPINVOKE.UnitImpl_cancelTrain__SWIG_1(swigCPtr);
     return ret;
   }
 
@@ -945,11 +972,6 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
   public override SWIGTYPE_p_void getClientInfo() {
     IntPtr cPtr = bwapiclientPINVOKE.UnitImpl_getClientInfo(swigCPtr);
     SWIGTYPE_p_void ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
-    return ret;
-  }
-
-  public override int getResourceGroup() {
-    int ret = bwapiclientPINVOKE.UnitImpl_getResourceGroup(swigCPtr);
     return ret;
   }
 

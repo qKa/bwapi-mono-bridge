@@ -244,12 +244,6 @@ public static bool operator !=(Player obj1, Player obj2)
     return ret;
   }
 
-  public virtual int maxEnergy(UnitType unit) {
-    int ret = bwapiPINVOKE.Player_maxEnergy(swigCPtr, UnitType.getCPtr(unit));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public virtual Color getColor() {
     Color ret = new Color(bwapiPINVOKE.Player_getColor(swigCPtr), true);
     return ret;
@@ -257,6 +251,48 @@ public static bool operator !=(Player obj1, Player obj2)
 
   public virtual int getTextColor() {
     int ret = bwapiPINVOKE.Player_getTextColor(swigCPtr);
+    return ret;
+  }
+
+  public virtual int maxEnergy(UnitType unit) {
+    int ret = bwapiPINVOKE.Player_maxEnergy(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual double topSpeed(UnitType unit) {
+    double ret = bwapiPINVOKE.Player_topSpeed(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual int groundWeaponMaxRange(UnitType unit) {
+    int ret = bwapiPINVOKE.Player_groundWeaponMaxRange(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual int airWeaponMaxRange(UnitType unit) {
+    int ret = bwapiPINVOKE.Player_airWeaponMaxRange(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual int sightRange(UnitType unit) {
+    int ret = bwapiPINVOKE.Player_sightRange(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual int groundWeaponDamageCooldown(UnitType unit) {
+    int ret = bwapiPINVOKE.Player_groundWeaponDamageCooldown(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual int armor(UnitType unit) {
+    int ret = bwapiPINVOKE.Player_armor(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

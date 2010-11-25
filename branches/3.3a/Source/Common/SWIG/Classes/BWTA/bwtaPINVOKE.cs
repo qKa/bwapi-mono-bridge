@@ -344,11 +344,17 @@ class bwtaPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_getNearestChokepoint__SWIG_1")]
   public static extern IntPtr getNearestChokepoint__SWIG_1(HandleRef jarg1);
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_getNearestChokepoint__SWIG_2")]
+  public static extern IntPtr getNearestChokepoint__SWIG_2(HandleRef jarg1);
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_getNearestBaseLocation__SWIG_0")]
   public static extern IntPtr getNearestBaseLocation__SWIG_0(int jarg1, int jarg2);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_getNearestBaseLocation__SWIG_1")]
   public static extern IntPtr getNearestBaseLocation__SWIG_1(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_getNearestBaseLocation__SWIG_2")]
+  public static extern IntPtr getNearestBaseLocation__SWIG_2(HandleRef jarg1);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_getNearestUnwalkablePolygon__SWIG_0")]
   public static extern IntPtr getNearestUnwalkablePolygon__SWIG_0(int jarg1, int jarg2);
@@ -376,6 +382,9 @@ class bwtaPINVOKE {
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_getGroundDistanceMap")]
   public static extern void getGroundDistanceMap(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_getGroundWalkDistanceMap")]
+  public static extern void getGroundWalkDistanceMap(int jarg1, int jarg2, HandleRef jarg3);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_getShortestPath__SWIG_0")]
   public static extern IntPtr getShortestPath__SWIG_0(HandleRef jarg1, HandleRef jarg2);

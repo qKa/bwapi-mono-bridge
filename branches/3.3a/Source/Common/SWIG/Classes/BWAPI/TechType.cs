@@ -161,6 +161,16 @@ public static bool operator !=(TechType obj1, TechType obj2)
     return ret;
   }
 
+  public bool targetsUnit() {
+    bool ret = bwapiPINVOKE.TechType_targetsUnit(swigCPtr);
+    return ret;
+  }
+
+  public bool targetsPosition() {
+    bool ret = bwapiPINVOKE.TechType_targetsPosition(swigCPtr);
+    return ret;
+  }
+
   public UnitTypeSet whatUses() {
     UnitTypeSet ret = new UnitTypeSet(bwapiPINVOKE.TechType_whatUses(swigCPtr), false);
     return ret;

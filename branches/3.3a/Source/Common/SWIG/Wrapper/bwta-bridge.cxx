@@ -1200,6 +1200,24 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestChokepoint__SWIG_1(void * jarg1) 
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestChokepoint__SWIG_2(void * jarg1) {
+  void * jresult ;
+  BWAPI::Position arg1 ;
+  BWAPI::Position *argp1 ;
+  BWTA::Chokepoint *result = 0 ;
+  
+  argp1 = (BWAPI::Position *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Position", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = (BWTA::Chokepoint *)BWTA::getNearestChokepoint(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestBaseLocation__SWIG_0(int jarg1, int jarg2) {
   void * jresult ;
   int arg1 ;
@@ -1223,6 +1241,24 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestBaseLocation__SWIG_1(void * jarg1
   argp1 = (BWAPI::TilePosition *)jarg1; 
   if (!argp1) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = (BWTA::BaseLocation *)BWTA::getNearestBaseLocation(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestBaseLocation__SWIG_2(void * jarg1) {
+  void * jresult ;
+  BWAPI::Position arg1 ;
+  BWAPI::Position *argp1 ;
+  BWTA::BaseLocation *result = 0 ;
+  
+  argp1 = (BWAPI::Position *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Position", 0);
     return 0;
   }
   arg1 = *argp1; 
@@ -1367,10 +1403,10 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getNearestTilePosition(void * jarg1, void *
   arg1 = *argp1; 
   arg2 = (std::set< BWAPI::TilePosition > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition > & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition > const & type is null", 0);
     return 0;
   } 
-  result = BWTA::getNearestTilePosition(arg1,*arg2);
+  result = BWTA::getNearestTilePosition(arg1,(std::set< BWAPI::TilePosition > const &)*arg2);
   jresult = new std::pair< BWAPI::TilePosition,double >((const std::pair< BWAPI::TilePosition,double > &)result); 
   return jresult;
 }
@@ -1391,10 +1427,10 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getGroundDistances(void * jarg1, void * jar
   arg1 = *argp1; 
   arg2 = (std::set< BWAPI::TilePosition > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition > & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition > const & type is null", 0);
     return 0;
   } 
-  result = BWTA::getGroundDistances(arg1,*arg2);
+  result = BWTA::getGroundDistances(arg1,(std::set< BWAPI::TilePosition > const &)*arg2);
   jresult = new std::map< BWAPI::TilePosition,double >((const std::map< BWAPI::TilePosition,double > &)result); 
   return jresult;
 }
@@ -1417,6 +1453,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_getGroundDistanceMap(void * jarg1, void * jar
     return ;
   } 
   BWTA::getGroundDistanceMap(arg1,*arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_getGroundWalkDistanceMap(int jarg1, int jarg2, void * jarg3) {
+  int arg1 ;
+  int arg2 ;
+  BWTA::RectangleArray< double > *arg3 = 0 ;
+  
+  arg1 = (int)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (BWTA::RectangleArray< double > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWTA::RectangleArray< double > & type is null", 0);
+    return ;
+  } 
+  BWTA::getGroundWalkDistanceMap(arg1,arg2,*arg3);
 }
 
 
@@ -1461,10 +1513,10 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_getShortestPath__SWIG_1(void * jarg1, void 
   arg1 = *argp1; 
   arg2 = (std::set< BWAPI::TilePosition > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition > & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::TilePosition > const & type is null", 0);
     return 0;
   } 
-  result = BWTA::getShortestPath(arg1,*arg2);
+  result = BWTA::getShortestPath(arg1,(std::set< BWAPI::TilePosition > const &)*arg2);
   jresult = new std::vector< BWAPI::TilePosition >((const std::vector< BWAPI::TilePosition > &)result); 
   return jresult;
 }

@@ -277,13 +277,13 @@ public static bool operator !=(UnitCommand obj1, UnitCommand obj2)
     return ret;
   }
 
-  public static UnitCommand cancelTrain(Unit unit) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_cancelTrain__SWIG_0(Unit.getCPtr(unit)), true);
+  public static UnitCommand cancelTrain(Unit unit, int slot) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_cancelTrain__SWIG_0(Unit.getCPtr(unit), slot), true);
     return ret;
   }
 
-  public static UnitCommand cancelTrain(Unit unit, int slot) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_cancelTrain__SWIG_1(Unit.getCPtr(unit), slot), true);
+  public static UnitCommand cancelTrain(Unit unit) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_cancelTrain__SWIG_1(Unit.getCPtr(unit)), true);
     return ret;
   }
 

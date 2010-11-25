@@ -121,6 +121,12 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
     bwapiclientPINVOKE.GameImpl_onMatchFrame(swigCPtr);
   }
 
+  public GameData getGameData() {
+    IntPtr cPtr = bwapiclientPINVOKE.GameImpl_getGameData(swigCPtr);
+    GameData ret = (cPtr == IntPtr.Zero) ? null : new GameData(cPtr, false);
+    return ret;
+  }
+
   public override ForcePtrSet getForces() {
     ForcePtrSet ret = new ForcePtrSet(bwapiclientPINVOKE.GameImpl_getForces(swigCPtr), false);
     return ret;
@@ -168,6 +174,11 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
 
   public override BulletPtrSet getBullets() {
     BulletPtrSet ret = new BulletPtrSet(bwapiclientPINVOKE.GameImpl_getBullets(swigCPtr), false);
+    return ret;
+  }
+
+  public override PositionSet getNukeDots() {
+    PositionSet ret = new PositionSet(bwapiclientPINVOKE.GameImpl_getNukeDots(swigCPtr), false);
     return ret;
   }
 
@@ -225,16 +236,6 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
     return ret;
   }
 
-  public override int getMouseX() {
-    int ret = bwapiclientPINVOKE.GameImpl_getMouseX(swigCPtr);
-    return ret;
-  }
-
-  public override int getMouseY() {
-    int ret = bwapiclientPINVOKE.GameImpl_getMouseY(swigCPtr);
-    return ret;
-  }
-
   public override Position getMousePosition() {
     Position ret = new Position(bwapiclientPINVOKE.GameImpl_getMousePosition(swigCPtr), true);
     return ret;
@@ -257,16 +258,6 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
 
   public override bool getKeyState(int key) {
     bool ret = bwapiclientPINVOKE.GameImpl_getKeyState__SWIG_1(swigCPtr, key);
-    return ret;
-  }
-
-  public override int getScreenX() {
-    int ret = bwapiclientPINVOKE.GameImpl_getScreenX(swigCPtr);
-    return ret;
-  }
-
-  public override int getScreenY() {
-    int ret = bwapiclientPINVOKE.GameImpl_getScreenY(swigCPtr);
     return ret;
   }
 
@@ -309,6 +300,12 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
 
   public override Error getLastError() {
     Error ret = new Error(bwapiclientPINVOKE.GameImpl_getLastError(swigCPtr), true);
+    return ret;
+  }
+
+  public override bool setLastError(Error e) {
+    bool ret = bwapiclientPINVOKE.GameImpl_setLastError(swigCPtr, Error.getCPtr(e));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
@@ -413,8 +410,14 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
     return ret;
   }
 
+  public override bool canBuildHere(Unit builder, TilePosition position, UnitType type, bool checkExplored) {
+    bool ret = bwapiclientPINVOKE.GameImpl_canBuildHere__SWIG_0(swigCPtr, Unit.getCPtr(builder), TilePosition.getCPtr(position), UnitType.getCPtr(type), checkExplored);
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override bool canBuildHere(Unit builder, TilePosition position, UnitType type) {
-    bool ret = bwapiclientPINVOKE.GameImpl_canBuildHere(swigCPtr, Unit.getCPtr(builder), TilePosition.getCPtr(position), UnitType.getCPtr(type));
+    bool ret = bwapiclientPINVOKE.GameImpl_canBuildHere__SWIG_1(swigCPtr, Unit.getCPtr(builder), TilePosition.getCPtr(position), UnitType.getCPtr(type));
     if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -510,6 +513,12 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
 
   public override void setLocalSpeed() {
     bwapiclientPINVOKE.GameImpl_setLocalSpeed__SWIG_1(swigCPtr);
+  }
+
+  public override bool issueCommand(UnitPtrSet units, UnitCommand command) {
+    bool ret = bwapiclientPINVOKE.GameImpl_issueCommand(swigCPtr, UnitPtrSet.getCPtr(units), UnitCommand.getCPtr(command));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public override UnitPtrSet getSelectedUnits() {
@@ -809,6 +818,11 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
 
   public override void setGUI() {
     bwapiclientPINVOKE.GameImpl_setGUI__SWIG_1(swigCPtr);
+  }
+
+  public override int getInstanceNumber() {
+    int ret = bwapiclientPINVOKE.GameImpl_getInstanceNumber(swigCPtr);
+    return ret;
   }
 
 }

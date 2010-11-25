@@ -85,13 +85,16 @@ public static bool operator !=(Command obj1, Command obj2)
 
 
 
-  public Command(CommandType_Enum _commandType, int _value1, int _value2) : this(bwapiclientPINVOKE.new_Command__SWIG_0((int)_commandType, _value1, _value2), true) {
+  public Command() : this(bwapiclientPINVOKE.new_Command__SWIG_0(), true) {
   }
 
-  public Command(CommandType_Enum _commandType, int _value1) : this(bwapiclientPINVOKE.new_Command__SWIG_1((int)_commandType, _value1), true) {
+  public Command(CommandType_Enum _commandType, int _value1, int _value2) : this(bwapiclientPINVOKE.new_Command__SWIG_1((int)_commandType, _value1, _value2), true) {
   }
 
-  public Command(CommandType_Enum _commandType) : this(bwapiclientPINVOKE.new_Command__SWIG_2((int)_commandType), true) {
+  public Command(CommandType_Enum _commandType, int _value1) : this(bwapiclientPINVOKE.new_Command__SWIG_2((int)_commandType, _value1), true) {
+  }
+
+  public Command(CommandType_Enum _commandType) : this(bwapiclientPINVOKE.new_Command__SWIG_3((int)_commandType), true) {
   }
 
   public CommandType_Enum type {

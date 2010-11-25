@@ -78,6 +78,13 @@ public class bwta {
     return ret;
   }
 
+  public static Chokepoint getNearestChokepoint(Position position) {
+    IntPtr cPtr = bwtaPINVOKE.getNearestChokepoint__SWIG_2(Position.getCPtr(position));
+    Chokepoint ret = (cPtr == IntPtr.Zero) ? null : new Chokepoint(cPtr, false);
+    if (bwtaPINVOKE.SWIGPendingException.Pending) throw bwtaPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public static BaseLocation getNearestBaseLocation(int x, int y) {
     IntPtr cPtr = bwtaPINVOKE.getNearestBaseLocation__SWIG_0(x, y);
     BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
@@ -86,6 +93,13 @@ public class bwta {
 
   public static BaseLocation getNearestBaseLocation(TilePosition tileposition) {
     IntPtr cPtr = bwtaPINVOKE.getNearestBaseLocation__SWIG_1(TilePosition.getCPtr(tileposition));
+    BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
+    if (bwtaPINVOKE.SWIGPendingException.Pending) throw bwtaPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static BaseLocation getNearestBaseLocation(Position position) {
+    IntPtr cPtr = bwtaPINVOKE.getNearestBaseLocation__SWIG_2(Position.getCPtr(position));
     BaseLocation ret = (cPtr == IntPtr.Zero) ? null : new BaseLocation(cPtr, false);
     if (bwtaPINVOKE.SWIGPendingException.Pending) throw bwtaPINVOKE.SWIGPendingException.Retrieve();
     return ret;
@@ -141,6 +155,11 @@ public class bwta {
 
   public static void getGroundDistanceMap(TilePosition start, RectangleArrayDouble distanceMap) {
     bwtaPINVOKE.getGroundDistanceMap(TilePosition.getCPtr(start), RectangleArrayDouble.getCPtr(distanceMap));
+    if (bwtaPINVOKE.SWIGPendingException.Pending) throw bwtaPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void getGroundWalkDistanceMap(int walkx, int walky, RectangleArrayDouble distanceMap) {
+    bwtaPINVOKE.getGroundWalkDistanceMap(walkx, walky, RectangleArrayDouble.getCPtr(distanceMap));
     if (bwtaPINVOKE.SWIGPendingException.Pending) throw bwtaPINVOKE.SWIGPendingException.Retrieve();
   }
 

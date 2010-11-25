@@ -727,7 +727,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_BulletData(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_0(int jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_0() {
+  void * jresult ;
+  BWAPIC::Command *result = 0 ;
+  
+  result = (BWAPIC::Command *)new BWAPIC::Command();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_1(int jarg1, int jarg2, int jarg3) {
   void * jresult ;
   BWAPIC::CommandType::Enum arg1 ;
   int arg2 ;
@@ -743,7 +753,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_0(int jarg1, int jarg2, i
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_1(int jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_2(int jarg1, int jarg2) {
   void * jresult ;
   BWAPIC::CommandType::Enum arg1 ;
   int arg2 ;
@@ -757,7 +767,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_1(int jarg1, int jarg2) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Command__SWIG_3(int jarg1) {
   void * jresult ;
   BWAPIC::CommandType::Enum arg1 ;
   BWAPIC::Command *result = 0 ;
@@ -1333,6 +1343,28 @@ SWIGEXPORT int SWIGSTDCALL CSharp_UnitData_resources_get(void * jarg1) {
   
   arg1 = (BWAPI::UnitData *)jarg1; 
   result = (int) ((arg1)->resources);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitData_resourceGroup_set(void * jarg1, int jarg2) {
+  BWAPI::UnitData *arg1 = (BWAPI::UnitData *) 0 ;
+  int arg2 ;
+  
+  arg1 = (BWAPI::UnitData *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->resourceGroup = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UnitData_resourceGroup_get(void * jarg1) {
+  int jresult ;
+  BWAPI::UnitData *arg1 = (BWAPI::UnitData *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UnitData *)jarg1; 
+  result = (int) ((arg1)->resourceGroup);
   jresult = result; 
   return jresult;
 }
@@ -2178,6 +2210,28 @@ SWIGEXPORT int SWIGSTDCALL CSharp_UnitData_nydusExit_get(void * jarg1) {
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitData_powerUp_set(void * jarg1, int jarg2) {
+  BWAPI::UnitData *arg1 = (BWAPI::UnitData *) 0 ;
+  int arg2 ;
+  
+  arg1 = (BWAPI::UnitData *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->powerUp = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UnitData_powerUp_get(void * jarg1) {
+  int jresult ;
+  BWAPI::UnitData *arg1 = (BWAPI::UnitData *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UnitData *)jarg1; 
+  result = (int) ((arg1)->powerUp);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_UnitData_transport_set(void * jarg1, int jarg2) {
   BWAPI::UnitData *arg1 = (BWAPI::UnitData *) 0 ;
   int arg2 ;
@@ -2596,6 +2650,28 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitData_isIdle_get(void * jarg1) {
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitData_isInterruptible_set(void * jarg1, unsigned int jarg2) {
+  BWAPI::UnitData *arg1 = (BWAPI::UnitData *) 0 ;
+  bool arg2 ;
+  
+  arg1 = (BWAPI::UnitData *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  if (arg1) (arg1)->isInterruptible = arg2;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitData_isInterruptible_get(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::UnitData *arg1 = (BWAPI::UnitData *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitData *)jarg1; 
+  result = (bool) ((arg1)->isInterruptible);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_UnitData_isLifted_set(void * jarg1, unsigned int jarg2) {
   BWAPI::UnitData *arg1 = (BWAPI::UnitData *) 0 ;
   bool arg2 ;
@@ -2723,6 +2799,28 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitData_isStartingAttack_get(void * 
   
   arg1 = (BWAPI::UnitData *)jarg1; 
   result = (bool) ((arg1)->isStartingAttack);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_UnitData_isStuck_set(void * jarg1, unsigned int jarg2) {
+  BWAPI::UnitData *arg1 = (BWAPI::UnitData *) 0 ;
+  bool arg2 ;
+  
+  arg1 = (BWAPI::UnitData *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  if (arg1) (arg1)->isStuck = arg2;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitData_isStuck_get(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::UnitData *arg1 = (BWAPI::UnitData *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitData *)jarg1; 
+  result = (bool) ((arg1)->isStuck);
   jresult = result; 
   return jresult;
 }
@@ -3076,6 +3174,18 @@ SWIGEXPORT int SWIGSTDCALL CSharp_UnitImpl_getResources(void * jarg1) {
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_UnitImpl_getResourceGroup(void * jarg1) {
+  int jresult ;
+  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UnitImpl *)jarg1; 
+  result = (int)((BWAPI::UnitImpl const *)arg1)->getResourceGroup();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT double SWIGSTDCALL CSharp_UnitImpl_getDistance__SWIG_0(void * jarg1, void * jarg2) {
   double jresult ;
   BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
@@ -3113,6 +3223,20 @@ SWIGEXPORT double SWIGSTDCALL CSharp_UnitImpl_getDistance__SWIG_1(void * jarg1, 
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_hasPath__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
+  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitImpl *)jarg1; 
+  arg2 = (BWAPI::Unit *)jarg2; 
+  result = (bool)((BWAPI::UnitImpl const *)arg1)->hasPath(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_hasPath__SWIG_1(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
   BWAPI::Position arg2 ;
   BWAPI::Position *argp2 ;
   bool result;
@@ -3124,21 +3248,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_hasPath__SWIG_0(void * jarg1
     return 0;
   }
   arg2 = *argp2; 
-  result = (bool)(arg1)->hasPath(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_hasPath__SWIG_1(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
-  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::UnitImpl *)jarg1; 
-  arg2 = (BWAPI::Unit *)jarg2; 
-  result = (bool)(arg1)->hasPath(arg2);
+  result = (bool)((BWAPI::UnitImpl const *)arg1)->hasPath(arg2);
   jresult = result; 
   return jresult;
 }
@@ -3150,7 +3260,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_UnitImpl_getLastOrderFrame(void * jarg1) {
   int result;
   
   arg1 = (BWAPI::UnitImpl *)jarg1; 
-  result = (int)(arg1)->getLastOrderFrame();
+  result = (int)((BWAPI::UnitImpl const *)arg1)->getLastOrderFrame();
   jresult = result; 
   return jresult;
 }
@@ -3668,6 +3778,18 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitImpl_getNydusExit(void * jarg1) {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitImpl_getPowerUp(void * jarg1) {
+  void * jresult ;
+  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
+  BWAPI::Unit *result = 0 ;
+  
+  arg1 = (BWAPI::UnitImpl *)jarg1; 
+  result = (BWAPI::Unit *)((BWAPI::UnitImpl const *)arg1)->getPowerUp();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_UnitImpl_getTransport(void * jarg1) {
   void * jresult ;
   BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
@@ -4028,6 +4150,18 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_isIdle(void * jarg1) {
 }
 
 
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_isInterruptible(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitImpl *)jarg1; 
+  result = (bool)((BWAPI::UnitImpl const *)arg1)->isInterruptible();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_isIrradiated(void * jarg1) {
   unsigned int jresult ;
   BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
@@ -4232,6 +4366,18 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_isStimmed(void * jarg1) {
 }
 
 
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_isStuck(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitImpl *)jarg1; 
+  result = (bool)((BWAPI::UnitImpl const *)arg1)->isStuck();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_isTraining(void * jarg1) {
   unsigned int jresult ;
   BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
@@ -4301,6 +4447,26 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_isVisible__SWIG_1(void * jar
   arg1 = (BWAPI::UnitImpl *)jarg1; 
   arg2 = (BWAPI::Player *)jarg2; 
   result = (bool)((BWAPI::UnitImpl const *)arg1)->isVisible(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_canIssueCommand(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
+  BWAPI::UnitCommand arg2 ;
+  BWAPI::UnitCommand *argp2 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitImpl *)jarg1; 
+  argp2 = (BWAPI::UnitCommand *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitCommand", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (bool)((BWAPI::UnitImpl const *)arg1)->canIssueCommand(arg2);
   jresult = result; 
   return jresult;
 }
@@ -4488,7 +4654,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_upgrade(void * jarg1, void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_setRallyPosition(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_setRallyPoint__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
   BWAPI::Position arg2 ;
@@ -4502,13 +4668,13 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_setRallyPosition(void * jarg
     return 0;
   }
   arg2 = *argp2; 
-  result = (bool)(arg1)->setRallyPosition(arg2);
+  result = (bool)(arg1)->setRallyPoint(arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_setRallyUnit(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_setRallyPoint__SWIG_1(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
   BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
@@ -4516,7 +4682,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_setRallyUnit(void * jarg1, v
   
   arg1 = (BWAPI::UnitImpl *)jarg1; 
   arg2 = (BWAPI::Unit *)jarg2; 
-  result = (bool)(arg1)->setRallyUnit(arg2);
+  result = (bool)(arg1)->setRallyPoint(arg2);
   jresult = result; 
   return jresult;
 }
@@ -4874,19 +5040,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_cancelAddon(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_cancelTrain__SWIG_0(void * jarg1) {
-  unsigned int jresult ;
-  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
-  bool result;
-  
-  arg1 = (BWAPI::UnitImpl *)jarg1; 
-  result = (bool)(arg1)->cancelTrain();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_cancelTrain__SWIG_1(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_cancelTrain__SWIG_0(void * jarg1, int jarg2) {
   unsigned int jresult ;
   BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
   int arg2 ;
@@ -4895,6 +5049,18 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_cancelTrain__SWIG_1(void * j
   arg1 = (BWAPI::UnitImpl *)jarg1; 
   arg2 = (int)jarg2; 
   result = (bool)(arg1)->cancelTrain(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitImpl_cancelTrain__SWIG_1(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitImpl *)jarg1; 
+  result = (bool)(arg1)->cancelTrain();
   jresult = result; 
   return jresult;
 }
@@ -5024,18 +5190,6 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitImpl_getClientInfo(void * jarg1) {
   arg1 = (BWAPI::UnitImpl *)jarg1; 
   result = (void *)((BWAPI::UnitImpl const *)arg1)->getClientInfo();
   jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_UnitImpl_getResourceGroup(void * jarg1) {
-  int jresult ;
-  BWAPI::UnitImpl *arg1 = (BWAPI::UnitImpl *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::UnitImpl *)jarg1; 
-  result = (int)(arg1)->getResourceGroup();
-  jresult = result; 
   return jresult;
 }
 
@@ -6253,26 +6407,6 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PlayerImpl_isUpgrading(void * jarg1, 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PlayerImpl_maxEnergy(void * jarg1, void * jarg2) {
-  int jresult ;
-  BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
-  BWAPI::UnitType arg2 ;
-  BWAPI::UnitType *argp2 ;
-  int result;
-  
-  arg1 = (BWAPI::PlayerImpl *)jarg1; 
-  argp2 = (BWAPI::UnitType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (int)((BWAPI::PlayerImpl const *)arg1)->maxEnergy(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
 SWIGEXPORT void * SWIGSTDCALL CSharp_PlayerImpl_getColor(void * jarg1) {
   void * jresult ;
   BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
@@ -6297,11 +6431,245 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PlayerImpl_getTextColor(void * jarg1) {
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_PlayerImpl_maxEnergy(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
+  int result;
+  
+  arg1 = (BWAPI::PlayerImpl *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::PlayerImpl const *)arg1)->maxEnergy(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_PlayerImpl_topSpeed(void * jarg1, void * jarg2) {
+  double jresult ;
+  BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
+  double result;
+  
+  arg1 = (BWAPI::PlayerImpl *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (double)((BWAPI::PlayerImpl const *)arg1)->topSpeed(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_PlayerImpl_groundWeaponMaxRange(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
+  int result;
+  
+  arg1 = (BWAPI::PlayerImpl *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::PlayerImpl const *)arg1)->groundWeaponMaxRange(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_PlayerImpl_airWeaponMaxRange(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
+  int result;
+  
+  arg1 = (BWAPI::PlayerImpl *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::PlayerImpl const *)arg1)->airWeaponMaxRange(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_PlayerImpl_sightRange(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
+  int result;
+  
+  arg1 = (BWAPI::PlayerImpl *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::PlayerImpl const *)arg1)->sightRange(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_PlayerImpl_groundWeaponDamageCooldown(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
+  int result;
+  
+  arg1 = (BWAPI::PlayerImpl *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::PlayerImpl const *)arg1)->groundWeaponDamageCooldown(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_PlayerImpl_armor(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
+  int result;
+  
+  arg1 = (BWAPI::PlayerImpl *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::PlayerImpl const *)arg1)->armor(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_PlayerImpl(void * jarg1) {
   BWAPI::PlayerImpl *arg1 = (BWAPI::PlayerImpl *) 0 ;
   
   arg1 = (BWAPI::PlayerImpl *)jarg1; 
   delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_BWAPIC_Position() {
+  void * jresult ;
+  BWAPIC::Position *result = 0 ;
+  
+  result = (BWAPIC::Position *)new BWAPIC::Position();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BWAPIC_Position_x_set(void * jarg1, int jarg2) {
+  BWAPIC::Position *arg1 = (BWAPIC::Position *) 0 ;
+  int arg2 ;
+  
+  arg1 = (BWAPIC::Position *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->x = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_BWAPIC_Position_x_get(void * jarg1) {
+  int jresult ;
+  BWAPIC::Position *arg1 = (BWAPIC::Position *) 0 ;
+  int result;
+  
+  arg1 = (BWAPIC::Position *)jarg1; 
+  result = (int) ((arg1)->x);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BWAPIC_Position_y_set(void * jarg1, int jarg2) {
+  BWAPIC::Position *arg1 = (BWAPIC::Position *) 0 ;
+  int arg2 ;
+  
+  arg1 = (BWAPIC::Position *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->y = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_BWAPIC_Position_y_get(void * jarg1) {
+  int jresult ;
+  BWAPIC::Position *arg1 = (BWAPIC::Position *) 0 ;
+  int result;
+  
+  arg1 = (BWAPIC::Position *)jarg1; 
+  result = (int) ((arg1)->y);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_BWAPIC_Position(void * jarg1) {
+  BWAPIC::Position *arg1 = (BWAPIC::Position *) 0 ;
+  
+  arg1 = (BWAPIC::Position *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_GameData() {
+  void * jresult ;
+  BWAPI::GameData *result = 0 ;
+  
+  result = (BWAPI::GameData *)new BWAPI::GameData();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_GameData_instanceID_set(void * jarg1, int jarg2) {
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  int arg2 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->instanceID = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_GameData_instanceID_get(void * jarg1) {
+  int jresult ;
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  result = (int) ((arg1)->instanceID);
+  jresult = result; 
+  return jresult;
 }
 
 
@@ -6496,6 +6864,54 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_bullets_get(void * jarg1) {
   
   arg1 = (BWAPI::GameData *)jarg1; 
   result = (BWAPI::BulletData *)(BWAPI::BulletData *) ((arg1)->bullets);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_GameData_nukeDotCount_set(void * jarg1, int jarg2) {
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  int arg2 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->nukeDotCount = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_GameData_nukeDotCount_get(void * jarg1) {
+  int jresult ;
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  result = (int) ((arg1)->nukeDotCount);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_GameData_nukeDots_set(void * jarg1, void * jarg2) {
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  BWAPIC::Position *arg2 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  arg2 = (BWAPIC::Position *)jarg2; 
+  {
+    size_t ii;
+    BWAPIC::Position *b = (BWAPIC::Position *) arg1->nukeDots;
+    for (ii = 0; ii < (size_t)200; ii++) b[ii] = *((BWAPIC::Position *) arg2 + ii);
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_nukeDots_get(void * jarg1) {
+  void * jresult ;
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  BWAPIC::Position *result = 0 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  result = (BWAPIC::Position *)(BWAPIC::Position *) ((arg1)->nukeDots);
   jresult = result; 
   return jresult;
 }
@@ -7305,6 +7721,142 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_hasCreep_get(void * jarg1) {
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_GameData_mapTileRegionId_set(void * jarg1, void * jarg2) {
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  unsigned short (*arg2)[256] ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  arg2 = (unsigned short (*)[256])jarg2; 
+  {
+    unsigned short (*inp)[256] = (unsigned short (*)[256])(arg2);
+    unsigned short (*dest)[256] = (unsigned short (*)[256])(arg1->mapTileRegionId);
+    size_t ii = 0;
+    for (; ii < 256; ++ii) {
+      unsigned short *ip = inp[ii];
+      unsigned short *dp = dest[ii];
+      size_t jj = 0;
+      for (; jj < 256; ++jj) dp[jj] = ip[jj];
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_mapTileRegionId_get(void * jarg1) {
+  void * jresult ;
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  unsigned short (*result)[256] = 0 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  result = (unsigned short (*)[256])(unsigned short (*)[256]) ((arg1)->mapTileRegionId);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_GameData_mapSplitTilesMiniTileMask_set(void * jarg1, void * jarg2) {
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  unsigned short *arg2 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  arg2 = (unsigned short *)jarg2; 
+  {
+    size_t ii;
+    unsigned short *b = (unsigned short *) arg1->mapSplitTilesMiniTileMask;
+    for (ii = 0; ii < (size_t)5000; ii++) b[ii] = *((unsigned short *) arg2 + ii);
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_mapSplitTilesMiniTileMask_get(void * jarg1) {
+  void * jresult ;
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  unsigned short *result = 0 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  result = (unsigned short *)(unsigned short *) ((arg1)->mapSplitTilesMiniTileMask);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_GameData_mapSplitTilesRegion1_set(void * jarg1, void * jarg2) {
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  unsigned short *arg2 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  arg2 = (unsigned short *)jarg2; 
+  {
+    size_t ii;
+    unsigned short *b = (unsigned short *) arg1->mapSplitTilesRegion1;
+    for (ii = 0; ii < (size_t)5000; ii++) b[ii] = *((unsigned short *) arg2 + ii);
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_mapSplitTilesRegion1_get(void * jarg1) {
+  void * jresult ;
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  unsigned short *result = 0 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  result = (unsigned short *)(unsigned short *) ((arg1)->mapSplitTilesRegion1);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_GameData_mapSplitTilesRegion2_set(void * jarg1, void * jarg2) {
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  unsigned short *arg2 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  arg2 = (unsigned short *)jarg2; 
+  {
+    size_t ii;
+    unsigned short *b = (unsigned short *) arg1->mapSplitTilesRegion2;
+    for (ii = 0; ii < (size_t)5000; ii++) b[ii] = *((unsigned short *) arg2 + ii);
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_mapSplitTilesRegion2_get(void * jarg1) {
+  void * jresult ;
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  unsigned short *result = 0 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  result = (unsigned short *)(unsigned short *) ((arg1)->mapSplitTilesRegion2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_GameData_regionGroupIndex_set(void * jarg1, void * jarg2) {
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  unsigned short *arg2 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  arg2 = (unsigned short *)jarg2; 
+  {
+    size_t ii;
+    unsigned short *b = (unsigned short *) arg1->regionGroupIndex;
+    for (ii = 0; ii < (size_t)5000; ii++) b[ii] = *((unsigned short *) arg2 + ii);
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_regionGroupIndex_get(void * jarg1) {
+  void * jresult ;
+  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
+  unsigned short *result = 0 ;
+  
+  arg1 = (BWAPI::GameData *)jarg1; 
+  result = (unsigned short *)(unsigned short *) ((arg1)->regionGroupIndex);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_GameData_startLocationCount_set(void * jarg1, int jarg2) {
   BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
   int arg2 ;
@@ -7327,53 +7879,27 @@ SWIGEXPORT int SWIGSTDCALL CSharp_GameData_startLocationCount_get(void * jarg1) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_GameData_startLocationsX_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_GameData_startLocations_set(void * jarg1, void * jarg2) {
   BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
-  int *arg2 ;
+  BWAPIC::Position *arg2 ;
   
   arg1 = (BWAPI::GameData *)jarg1; 
-  arg2 = (int *)jarg2; 
+  arg2 = (BWAPIC::Position *)jarg2; 
   {
     size_t ii;
-    int *b = (int *) arg1->startLocationsX;
-    for (ii = 0; ii < (size_t)8; ii++) b[ii] = *((int *) arg2 + ii);
+    BWAPIC::Position *b = (BWAPIC::Position *) arg1->startLocations;
+    for (ii = 0; ii < (size_t)8; ii++) b[ii] = *((BWAPIC::Position *) arg2 + ii);
   }
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_startLocationsX_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_startLocations_get(void * jarg1) {
   void * jresult ;
   BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
-  int *result = 0 ;
+  BWAPIC::Position *result = 0 ;
   
   arg1 = (BWAPI::GameData *)jarg1; 
-  result = (int *)(int *) ((arg1)->startLocationsX);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_GameData_startLocationsY_set(void * jarg1, void * jarg2) {
-  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
-  int *arg2 ;
-  
-  arg1 = (BWAPI::GameData *)jarg1; 
-  arg2 = (int *)jarg2; 
-  {
-    size_t ii;
-    int *b = (int *) arg1->startLocationsY;
-    for (ii = 0; ii < (size_t)8; ii++) b[ii] = *((int *) arg2 + ii);
-  }
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_GameData_startLocationsY_get(void * jarg1) {
-  void * jresult ;
-  BWAPI::GameData *arg1 = (BWAPI::GameData *) 0 ;
-  int *result = 0 ;
-  
-  arg1 = (BWAPI::GameData *)jarg1; 
-  result = (int *)(int *) ((arg1)->startLocationsY);
+  result = (BWAPIC::Position *)(BWAPIC::Position *) ((arg1)->startLocations);
   jresult = result; 
   return jresult;
 }
@@ -7909,6 +8435,18 @@ SWIGEXPORT void SWIGSTDCALL CSharp_GameImpl_onMatchFrame(void * jarg1) {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameImpl_getGameData(void * jarg1) {
+  void * jresult ;
+  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
+  BWAPI::GameData *result = 0 ;
+  
+  arg1 = (BWAPI::GameImpl *)jarg1; 
+  result = (BWAPI::GameData *)((BWAPI::GameImpl const *)arg1)->getGameData();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_GameImpl_getForces(void * jarg1) {
   void * jresult ;
   BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
@@ -8024,6 +8562,18 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_GameImpl_getBullets(void * jarg1) {
   
   arg1 = (BWAPI::GameImpl *)jarg1; 
   result = (std::set< BWAPI::Bullet * > *) &(arg1)->getBullets();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameImpl_getNukeDots(void * jarg1) {
+  void * jresult ;
+  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
+  std::set< BWAPI::Position > *result = 0 ;
+  
+  arg1 = (BWAPI::GameImpl *)jarg1; 
+  result = (std::set< BWAPI::Position > *) &(arg1)->getNukeDots();
   jresult = (void *)result; 
   return jresult;
 }
@@ -8157,30 +8707,6 @@ SWIGEXPORT double SWIGSTDCALL CSharp_GameImpl_getAverageFPS(void * jarg1) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_GameImpl_getMouseX(void * jarg1) {
-  int jresult ;
-  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::GameImpl *)jarg1; 
-  result = (int)(arg1)->getMouseX();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_GameImpl_getMouseY(void * jarg1) {
-  int jresult ;
-  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::GameImpl *)jarg1; 
-  result = (int)(arg1)->getMouseY();
-  jresult = result; 
-  return jresult;
-}
-
-
 SWIGEXPORT void * SWIGSTDCALL CSharp_GameImpl_getMousePosition(void * jarg1) {
   void * jresult ;
   BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
@@ -8244,30 +8770,6 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_getKeyState__SWIG_1(void * j
   arg1 = (BWAPI::GameImpl *)jarg1; 
   arg2 = (int)jarg2; 
   result = (bool)(arg1)->getKeyState(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_GameImpl_getScreenX(void * jarg1) {
-  int jresult ;
-  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::GameImpl *)jarg1; 
-  result = (int)(arg1)->getScreenX();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_GameImpl_getScreenY(void * jarg1) {
-  int jresult ;
-  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
-  int result;
-  
-  arg1 = (BWAPI::GameImpl *)jarg1; 
-  result = (int)(arg1)->getScreenY();
   jresult = result; 
   return jresult;
 }
@@ -8389,6 +8891,26 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_GameImpl_getLastError(void * jarg1) {
   arg1 = (BWAPI::GameImpl *)jarg1; 
   result = ((BWAPI::GameImpl const *)arg1)->getLastError();
   jresult = new BWAPI::Error((const BWAPI::Error &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_setLastError(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
+  BWAPI::Error arg2 ;
+  BWAPI::Error *argp2 ;
+  bool result;
+  
+  arg1 = (BWAPI::GameImpl *)jarg1; 
+  argp2 = (BWAPI::Error *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::Error", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (bool)(arg1)->setLastError(arg2);
+  jresult = result; 
   return jresult;
 }
 
@@ -8705,7 +9227,39 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_hasPower__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_canBuildHere(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_canBuildHere__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int jarg5) {
+  unsigned int jresult ;
+  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
+  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
+  BWAPI::TilePosition arg3 ;
+  BWAPI::UnitType arg4 ;
+  bool arg5 ;
+  BWAPI::TilePosition *argp3 ;
+  BWAPI::UnitType *argp4 ;
+  bool result;
+  
+  arg1 = (BWAPI::GameImpl *)jarg1; 
+  arg2 = (BWAPI::Unit *)jarg2; 
+  argp3 = (BWAPI::TilePosition *)jarg3; 
+  if (!argp3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg3 = *argp3; 
+  argp4 = (BWAPI::UnitType *)jarg4; 
+  if (!argp4) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg4 = *argp4; 
+  arg5 = jarg5 ? true : false; 
+  result = (bool)(arg1)->canBuildHere((BWAPI::Unit const *)arg2,arg3,arg4,arg5);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_canBuildHere__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
   unsigned int jresult ;
   BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
   BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
@@ -8729,7 +9283,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_canBuildHere(void * jarg1, v
     return 0;
   }
   arg4 = *argp4; 
-  result = (bool)(arg1)->canBuildHere(arg2,arg3,arg4);
+  result = (bool)(arg1)->canBuildHere((BWAPI::Unit const *)arg2,arg3,arg4);
   jresult = result; 
   return jresult;
 }
@@ -8751,7 +9305,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_canMake(void * jarg1, void *
     return 0;
   }
   arg3 = *argp3; 
-  result = (bool)(arg1)->canMake(arg2,arg3);
+  result = (bool)(arg1)->canMake((BWAPI::Unit const *)arg2,arg3);
   jresult = result; 
   return jresult;
 }
@@ -8773,7 +9327,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_canResearch(void * jarg1, vo
     return 0;
   }
   arg3 = *argp3; 
-  result = (bool)(arg1)->canResearch(arg2,arg3);
+  result = (bool)(arg1)->canResearch((BWAPI::Unit const *)arg2,arg3);
   jresult = result; 
   return jresult;
 }
@@ -8795,7 +9349,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_canUpgrade(void * jarg1, voi
     return 0;
   }
   arg3 = *argp3; 
-  result = (bool)(arg1)->canUpgrade(arg2,arg3);
+  result = (bool)(arg1)->canUpgrade((BWAPI::Unit const *)arg2,arg3);
   jresult = result; 
   return jresult;
 }
@@ -8979,6 +9533,32 @@ SWIGEXPORT void SWIGSTDCALL CSharp_GameImpl_setLocalSpeed__SWIG_1(void * jarg1) 
   
   arg1 = (BWAPI::GameImpl *)jarg1; 
   (arg1)->setLocalSpeed();
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameImpl_issueCommand(void * jarg1, void * jarg2, void * jarg3) {
+  unsigned int jresult ;
+  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
+  std::set< BWAPI::Unit * > *arg2 = 0 ;
+  BWAPI::UnitCommand arg3 ;
+  BWAPI::UnitCommand *argp3 ;
+  bool result;
+  
+  arg1 = (BWAPI::GameImpl *)jarg1; 
+  arg2 = (std::set< BWAPI::Unit * > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::set< BWAPI::Unit * > const & type is null", 0);
+    return 0;
+  } 
+  argp3 = (BWAPI::UnitCommand *)jarg3; 
+  if (!argp3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitCommand", 0);
+    return 0;
+  }
+  arg3 = *argp3; 
+  result = (bool)(arg1)->issueCommand((std::set< BWAPI::Unit * > const &)*arg2,arg3);
+  jresult = result; 
+  return jresult;
 }
 
 
@@ -10246,6 +10826,18 @@ SWIGEXPORT void SWIGSTDCALL CSharp_GameImpl_setGUI__SWIG_1(void * jarg1) {
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_GameImpl_getInstanceNumber(void * jarg1) {
+  int jresult ;
+  BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::GameImpl *)jarg1; 
+  result = (int)(arg1)->getInstanceNumber();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_GameImpl(void * jarg1) {
   BWAPI::GameImpl *arg1 = (BWAPI::GameImpl *) 0 ;
   
@@ -10254,7 +10846,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_GameImpl(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Shape(int jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, int jarg8, int jarg9, unsigned int jarg10) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Shape__SWIG_0() {
+  void * jresult ;
+  BWAPIC::Shape *result = 0 ;
+  
+  result = (BWAPIC::Shape *)new BWAPIC::Shape();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Shape__SWIG_1(int jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, int jarg8, int jarg9, unsigned int jarg10) {
   void * jresult ;
   BWAPIC::ShapeType::Enum arg1 ;
   int arg2 ;
