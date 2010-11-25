@@ -22,8 +22,8 @@ using namespace BWAPI;
 
 //unimplemented functions in headers (or ones that should not be called)
 //uncomment these each new version of BWAPI to ensure they are not later implemented.
-%ignore getPlayerUnits;
-%ignore BWAPI::GameData::GameData;
+#%ignore getPlayerUnits;
+#%ignore BWAPI::GameData::GameData;
 
 //fix up operator overrides.
 %rename (opAssign) *::operator =;
@@ -57,7 +57,6 @@ using namespace BWAPI;
 %include "BWAPI/Force.h"
 %include "BWAPI/Input.h"
 %include "BWAPI/Event.h"
-%include "BWAPI/Game.h"
 %include "BWAPI/Latency.h"
 %include "BWAPI/Order.h"
 %include "BWAPI/PlayerType.h"
@@ -67,6 +66,7 @@ using namespace BWAPI;
 %include "BWAPI/TilePosition.h"
 %include "BWAPI/UnitCommandType.h"
 %include "BWAPI/UnitCommand.h"
+%include "BWAPI/Game.h"
 %include "BWAPI/Unit.h"
 %include "BWAPI/UnitSizeType.h"
 %include "BWAPI/UnitType.h"
@@ -104,3 +104,4 @@ using namespace BWAPI;
 %template (TilePositionDoublePair) std::pair<BWAPI::TilePosition, double>;
 %template (UnitTypeIntPair) std::pair<BWAPI::UnitType,int>;
 %template (TilePositionVector) std::vector<BWAPI::TilePosition>;
+%template (PositionSet) std::set<BWAPI::Position>;

@@ -132,6 +132,11 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
+  public virtual PositionSet getNukeDots() {
+    PositionSet ret = new PositionSet(bwapiPINVOKE.Game_getNukeDots(swigCPtr), false);
+    return ret;
+  }
+
   public virtual EventList getEvents() {
     EventList ret = new EventList(bwapiPINVOKE.Game_getEvents(swigCPtr), false);
     return ret;
@@ -186,16 +191,6 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
-  public virtual int getMouseX() {
-    int ret = bwapiPINVOKE.Game_getMouseX(swigCPtr);
-    return ret;
-  }
-
-  public virtual int getMouseY() {
-    int ret = bwapiPINVOKE.Game_getMouseY(swigCPtr);
-    return ret;
-  }
-
   public virtual Position getMousePosition() {
     Position ret = new Position(bwapiPINVOKE.Game_getMousePosition(swigCPtr), true);
     return ret;
@@ -218,16 +213,6 @@ public static bool operator !=(Game obj1, Game obj2)
 
   public virtual bool getKeyState(int key) {
     bool ret = bwapiPINVOKE.Game_getKeyState__SWIG_1(swigCPtr, key);
-    return ret;
-  }
-
-  public virtual int getScreenX() {
-    int ret = bwapiPINVOKE.Game_getScreenX(swigCPtr);
-    return ret;
-  }
-
-  public virtual int getScreenY() {
-    int ret = bwapiPINVOKE.Game_getScreenY(swigCPtr);
     return ret;
   }
 
@@ -263,13 +248,19 @@ public static bool operator !=(Game obj1, Game obj2)
     bwapiPINVOKE.Game_enableFlag(swigCPtr, flag);
   }
 
-  public virtual UnitPtrSet unitsOnTile(int x, int y) {
-    UnitPtrSet ret = new UnitPtrSet(bwapiPINVOKE.Game_unitsOnTile(swigCPtr, x, y), false);
+  public virtual UnitPtrSet unitsOnTile(int tileX, int tileY) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiPINVOKE.Game_unitsOnTile(swigCPtr, tileX, tileY), false);
     return ret;
   }
 
   public virtual Error getLastError() {
     Error ret = new Error(bwapiPINVOKE.Game_getLastError(swigCPtr), true);
+    return ret;
+  }
+
+  public virtual bool setLastError(Error e) {
+    bool ret = bwapiPINVOKE.Game_setLastError(swigCPtr, Error.getCPtr(e));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
@@ -303,13 +294,13 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
-  public virtual bool isWalkable(int x, int y) {
-    bool ret = bwapiPINVOKE.Game_isWalkable(swigCPtr, x, y);
+  public virtual bool isWalkable(int walkX, int walkY) {
+    bool ret = bwapiPINVOKE.Game_isWalkable(swigCPtr, walkX, walkY);
     return ret;
   }
 
-  public virtual int getGroundHeight(int x, int y) {
-    int ret = bwapiPINVOKE.Game_getGroundHeight__SWIG_0(swigCPtr, x, y);
+  public virtual int getGroundHeight(int tileX, int tileY) {
+    int ret = bwapiPINVOKE.Game_getGroundHeight__SWIG_0(swigCPtr, tileX, tileY);
     return ret;
   }
 
@@ -319,8 +310,8 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
-  public virtual bool isBuildable(int x, int y) {
-    bool ret = bwapiPINVOKE.Game_isBuildable__SWIG_0(swigCPtr, x, y);
+  public virtual bool isBuildable(int tileX, int tileY) {
+    bool ret = bwapiPINVOKE.Game_isBuildable__SWIG_0(swigCPtr, tileX, tileY);
     return ret;
   }
 
@@ -330,8 +321,8 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
-  public virtual bool isVisible(int x, int y) {
-    bool ret = bwapiPINVOKE.Game_isVisible__SWIG_0(swigCPtr, x, y);
+  public virtual bool isVisible(int tileX, int tileY) {
+    bool ret = bwapiPINVOKE.Game_isVisible__SWIG_0(swigCPtr, tileX, tileY);
     return ret;
   }
 
@@ -341,8 +332,8 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
-  public virtual bool isExplored(int x, int y) {
-    bool ret = bwapiPINVOKE.Game_isExplored__SWIG_0(swigCPtr, x, y);
+  public virtual bool isExplored(int tileX, int tileY) {
+    bool ret = bwapiPINVOKE.Game_isExplored__SWIG_0(swigCPtr, tileX, tileY);
     return ret;
   }
 
@@ -352,8 +343,8 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
-  public virtual bool hasCreep(int x, int y) {
-    bool ret = bwapiPINVOKE.Game_hasCreep__SWIG_0(swigCPtr, x, y);
+  public virtual bool hasCreep(int tileX, int tileY) {
+    bool ret = bwapiPINVOKE.Game_hasCreep__SWIG_0(swigCPtr, tileX, tileY);
     return ret;
   }
 
@@ -363,8 +354,8 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
-  public virtual bool hasPower(int x, int y, int tileWidth, int tileHeight) {
-    bool ret = bwapiPINVOKE.Game_hasPower__SWIG_0(swigCPtr, x, y, tileWidth, tileHeight);
+  public virtual bool hasPower(int tileX, int tileY, int tileWidth, int tileHeight) {
+    bool ret = bwapiPINVOKE.Game_hasPower__SWIG_0(swigCPtr, tileX, tileY, tileWidth, tileHeight);
     return ret;
   }
 
@@ -374,8 +365,14 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
+  public virtual bool canBuildHere(Unit builder, TilePosition position, UnitType type, bool checkExplored) {
+    bool ret = bwapiPINVOKE.Game_canBuildHere__SWIG_0(swigCPtr, Unit.getCPtr(builder), TilePosition.getCPtr(position), UnitType.getCPtr(type), checkExplored);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public virtual bool canBuildHere(Unit builder, TilePosition position, UnitType type) {
-    bool ret = bwapiPINVOKE.Game_canBuildHere(swigCPtr, Unit.getCPtr(builder), TilePosition.getCPtr(position), UnitType.getCPtr(type));
+    bool ret = bwapiPINVOKE.Game_canBuildHere__SWIG_1(swigCPtr, Unit.getCPtr(builder), TilePosition.getCPtr(position), UnitType.getCPtr(type));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -471,6 +468,12 @@ public static bool operator !=(Game obj1, Game obj2)
 
   public virtual void setLocalSpeed() {
     bwapiPINVOKE.Game_setLocalSpeed__SWIG_1(swigCPtr);
+  }
+
+  public virtual bool issueCommand(UnitPtrSet units, UnitCommand command) {
+    bool ret = bwapiPINVOKE.Game_issueCommand(swigCPtr, UnitPtrSet.getCPtr(units), UnitCommand.getCPtr(command));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public virtual UnitPtrSet getSelectedUnits() {
@@ -770,6 +773,11 @@ public static bool operator !=(Game obj1, Game obj2)
 
   public virtual void setGUI() {
     bwapiPINVOKE.Game_setGUI__SWIG_1(swigCPtr);
+  }
+
+  public virtual int getInstanceNumber() {
+    int ret = bwapiPINVOKE.Game_getInstanceNumber(swigCPtr);
+    return ret;
   }
 
 }

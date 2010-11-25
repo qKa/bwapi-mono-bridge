@@ -275,12 +275,6 @@ public static bool operator !=(PlayerImpl obj1, PlayerImpl obj2)
     return ret;
   }
 
-  public override int maxEnergy(UnitType unit) {
-    int ret = bwapiclientPINVOKE.PlayerImpl_maxEnergy(swigCPtr, UnitType.getCPtr(unit));
-    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public override Color getColor() {
     Color ret = new Color(bwapiclientPINVOKE.PlayerImpl_getColor(swigCPtr), true);
     return ret;
@@ -288,6 +282,48 @@ public static bool operator !=(PlayerImpl obj1, PlayerImpl obj2)
 
   public override int getTextColor() {
     int ret = bwapiclientPINVOKE.PlayerImpl_getTextColor(swigCPtr);
+    return ret;
+  }
+
+  public override int maxEnergy(UnitType unit) {
+    int ret = bwapiclientPINVOKE.PlayerImpl_maxEnergy(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override double topSpeed(UnitType unit) {
+    double ret = bwapiclientPINVOKE.PlayerImpl_topSpeed(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override int groundWeaponMaxRange(UnitType unit) {
+    int ret = bwapiclientPINVOKE.PlayerImpl_groundWeaponMaxRange(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override int airWeaponMaxRange(UnitType unit) {
+    int ret = bwapiclientPINVOKE.PlayerImpl_airWeaponMaxRange(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override int sightRange(UnitType unit) {
+    int ret = bwapiclientPINVOKE.PlayerImpl_sightRange(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override int groundWeaponDamageCooldown(UnitType unit) {
+    int ret = bwapiclientPINVOKE.PlayerImpl_groundWeaponDamageCooldown(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override int armor(UnitType unit) {
+    int ret = bwapiclientPINVOKE.PlayerImpl_armor(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

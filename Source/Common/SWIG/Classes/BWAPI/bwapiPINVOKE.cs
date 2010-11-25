@@ -410,6 +410,12 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_TechType_getWeapon")]
   public static extern IntPtr TechType_getWeapon(HandleRef jarg1);
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_TechType_targetsUnit")]
+  public static extern bool TechType_targetsUnit(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_TechType_targetsPosition")]
+  public static extern bool TechType_targetsPosition(HandleRef jarg1);
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_TechType_whatUses")]
   public static extern IntPtr TechType_whatUses(HandleRef jarg1);
 
@@ -1085,6 +1091,9 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_Errors_Incompatible_TechType_get")]
   public static extern IntPtr Errors_Incompatible_TechType_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Incompatible_State_get")]
+  public static extern IntPtr Incompatible_State_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_Errors_Already_Researched_get")]
   public static extern IntPtr Errors_Already_Researched_get();
 
@@ -1118,8 +1127,14 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_Errors_Insufficient_Space_get")]
   public static extern IntPtr Errors_Insufficient_Space_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Invalid_Tile_Position_get")]
+  public static extern IntPtr Invalid_Tile_Position_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_Errors_Unbuildable_Location_get")]
   public static extern IntPtr Errors_Unbuildable_Location_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unreachable_Location_get")]
+  public static extern IntPtr Unreachable_Location_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Errors_Out_Of_Range_get")]
   public static extern IntPtr Errors_Out_Of_Range_get();
@@ -1357,432 +1372,6 @@ class bwapiPINVOKE {
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_delete_Event")]
   public static extern void delete_Event(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getForces")]
-  public static extern IntPtr Game_getForces(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getPlayers")]
-  public static extern IntPtr Game_getPlayers(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getAllUnits")]
-  public static extern IntPtr Game_getAllUnits(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getMinerals")]
-  public static extern IntPtr Game_getMinerals(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getGeysers")]
-  public static extern IntPtr Game_getGeysers(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getNeutralUnits")]
-  public static extern IntPtr Game_getNeutralUnits(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getStaticMinerals")]
-  public static extern IntPtr Game_getStaticMinerals(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getStaticGeysers")]
-  public static extern IntPtr Game_getStaticGeysers(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getStaticNeutralUnits")]
-  public static extern IntPtr Game_getStaticNeutralUnits(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getBullets")]
-  public static extern IntPtr Game_getBullets(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getEvents")]
-  public static extern IntPtr Game_getEvents(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getForce")]
-  public static extern IntPtr Game_getForce(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getPlayer")]
-  public static extern IntPtr Game_getPlayer(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getUnit")]
-  public static extern IntPtr Game_getUnit(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_indexToUnit")]
-  public static extern IntPtr Game_indexToUnit(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getGameType")]
-  public static extern IntPtr Game_getGameType(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getLatency")]
-  public static extern int Game_getLatency(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getFrameCount")]
-  public static extern int Game_getFrameCount(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getFPS")]
-  public static extern int Game_getFPS(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getAverageFPS")]
-  public static extern double Game_getAverageFPS(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getMouseX")]
-  public static extern int Game_getMouseX(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getMouseY")]
-  public static extern int Game_getMouseY(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getMousePosition")]
-  public static extern IntPtr Game_getMousePosition(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getMouseState__SWIG_0")]
-  public static extern bool Game_getMouseState__SWIG_0(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getMouseState__SWIG_1")]
-  public static extern bool Game_getMouseState__SWIG_1(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getKeyState__SWIG_0")]
-  public static extern bool Game_getKeyState__SWIG_0(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getKeyState__SWIG_1")]
-  public static extern bool Game_getKeyState__SWIG_1(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getScreenX")]
-  public static extern int Game_getScreenX(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getScreenY")]
-  public static extern int Game_getScreenY(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getScreenPosition")]
-  public static extern IntPtr Game_getScreenPosition(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setScreenPosition__SWIG_0")]
-  public static extern void Game_setScreenPosition__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setScreenPosition__SWIG_1")]
-  public static extern void Game_setScreenPosition__SWIG_1(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_pingMinimap__SWIG_0")]
-  public static extern void Game_pingMinimap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_pingMinimap__SWIG_1")]
-  public static extern void Game_pingMinimap__SWIG_1(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isFlagEnabled")]
-  public static extern bool Game_isFlagEnabled(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_enableFlag")]
-  public static extern void Game_enableFlag(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_unitsOnTile")]
-  public static extern IntPtr Game_unitsOnTile(HandleRef jarg1, int jarg2, int jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getLastError")]
-  public static extern IntPtr Game_getLastError(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapWidth")]
-  public static extern int Game_mapWidth(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapHeight")]
-  public static extern int Game_mapHeight(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapFileName")]
-  public static extern string Game_mapFileName(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapPathName")]
-  public static extern string Game_mapPathName(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapName")]
-  public static extern string Game_mapName(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapHash")]
-  public static extern string Game_mapHash(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isWalkable")]
-  public static extern bool Game_isWalkable(HandleRef jarg1, int jarg2, int jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getGroundHeight__SWIG_0")]
-  public static extern int Game_getGroundHeight__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getGroundHeight__SWIG_1")]
-  public static extern int Game_getGroundHeight__SWIG_1(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isBuildable__SWIG_0")]
-  public static extern bool Game_isBuildable__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isBuildable__SWIG_1")]
-  public static extern bool Game_isBuildable__SWIG_1(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isVisible__SWIG_0")]
-  public static extern bool Game_isVisible__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isVisible__SWIG_1")]
-  public static extern bool Game_isVisible__SWIG_1(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isExplored__SWIG_0")]
-  public static extern bool Game_isExplored__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isExplored__SWIG_1")]
-  public static extern bool Game_isExplored__SWIG_1(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_hasCreep__SWIG_0")]
-  public static extern bool Game_hasCreep__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_hasCreep__SWIG_1")]
-  public static extern bool Game_hasCreep__SWIG_1(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_hasPower__SWIG_0")]
-  public static extern bool Game_hasPower__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_hasPower__SWIG_1")]
-  public static extern bool Game_hasPower__SWIG_1(HandleRef jarg1, HandleRef jarg2, int jarg3, int jarg4);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_canBuildHere")]
-  public static extern bool Game_canBuildHere(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_canMake")]
-  public static extern bool Game_canMake(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_canResearch")]
-  public static extern bool Game_canResearch(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_canUpgrade")]
-  public static extern bool Game_canUpgrade(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getStartLocations")]
-  public static extern IntPtr Game_getStartLocations(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_printf")]
-  public static extern void Game_printf(HandleRef jarg1, string jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_sendText")]
-  public static extern void Game_sendText(HandleRef jarg1, string jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_sendTextEx")]
-  public static extern void Game_sendTextEx(HandleRef jarg1, bool jarg2, string jarg3);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_changeRace")]
-  public static extern void Game_changeRace(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isInGame")]
-  public static extern bool Game_isInGame(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isMultiplayer")]
-  public static extern bool Game_isMultiplayer(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isBattleNet")]
-  public static extern bool Game_isBattleNet(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isPaused")]
-  public static extern bool Game_isPaused(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isReplay")]
-  public static extern bool Game_isReplay(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_startGame")]
-  public static extern void Game_startGame(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_pauseGame")]
-  public static extern void Game_pauseGame(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_resumeGame")]
-  public static extern void Game_resumeGame(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_leaveGame")]
-  public static extern void Game_leaveGame(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_restartGame")]
-  public static extern void Game_restartGame(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setLocalSpeed__SWIG_0")]
-  public static extern void Game_setLocalSpeed__SWIG_0(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setLocalSpeed__SWIG_1")]
-  public static extern void Game_setLocalSpeed__SWIG_1(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getSelectedUnits")]
-  public static extern IntPtr Game_getSelectedUnits(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_self")]
-  public static extern IntPtr Game_self(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_enemy")]
-  public static extern IntPtr Game_enemy(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setTextSize__SWIG_0")]
-  public static extern void Game_setTextSize__SWIG_0(HandleRef jarg1, int jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setTextSize__SWIG_1")]
-  public static extern void Game_setTextSize__SWIG_1(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawText")]
-  public static extern void Game_drawText(HandleRef jarg1, int jarg2, int jarg3, int jarg4, string jarg5);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTextMap")]
-  public static extern void Game_drawTextMap(HandleRef jarg1, int jarg2, int jarg3, string jarg4);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTextMouse")]
-  public static extern void Game_drawTextMouse(HandleRef jarg1, int jarg2, int jarg3, string jarg4);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTextScreen")]
-  public static extern void Game_drawTextScreen(HandleRef jarg1, int jarg2, int jarg3, string jarg4);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBox__SWIG_0")]
-  public static extern void Game_drawBox__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, HandleRef jarg7, bool jarg8);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBox__SWIG_1")]
-  public static extern void Game_drawBox__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, HandleRef jarg7);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxMap__SWIG_0")]
-  public static extern void Game_drawBoxMap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxMap__SWIG_1")]
-  public static extern void Game_drawBoxMap__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxMouse__SWIG_0")]
-  public static extern void Game_drawBoxMouse__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxMouse__SWIG_1")]
-  public static extern void Game_drawBoxMouse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxScreen__SWIG_0")]
-  public static extern void Game_drawBoxScreen__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxScreen__SWIG_1")]
-  public static extern void Game_drawBoxScreen__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangle__SWIG_0")]
-  public static extern void Game_drawTriangle__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, int jarg8, HandleRef jarg9, bool jarg10);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangle__SWIG_1")]
-  public static extern void Game_drawTriangle__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, int jarg8, HandleRef jarg9);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleMap__SWIG_0")]
-  public static extern void Game_drawTriangleMap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8, bool jarg9);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleMap__SWIG_1")]
-  public static extern void Game_drawTriangleMap__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleMouse__SWIG_0")]
-  public static extern void Game_drawTriangleMouse__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8, bool jarg9);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleMouse__SWIG_1")]
-  public static extern void Game_drawTriangleMouse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleScreen__SWIG_0")]
-  public static extern void Game_drawTriangleScreen__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8, bool jarg9);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleScreen__SWIG_1")]
-  public static extern void Game_drawTriangleScreen__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircle__SWIG_0")]
-  public static extern void Game_drawCircle__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircle__SWIG_1")]
-  public static extern void Game_drawCircle__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleMap__SWIG_0")]
-  public static extern void Game_drawCircleMap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5, bool jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleMap__SWIG_1")]
-  public static extern void Game_drawCircleMap__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleMouse__SWIG_0")]
-  public static extern void Game_drawCircleMouse__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5, bool jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleMouse__SWIG_1")]
-  public static extern void Game_drawCircleMouse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleScreen__SWIG_0")]
-  public static extern void Game_drawCircleScreen__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5, bool jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleScreen__SWIG_1")]
-  public static extern void Game_drawCircleScreen__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipse__SWIG_0")]
-  public static extern void Game_drawEllipse__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, HandleRef jarg7, bool jarg8);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipse__SWIG_1")]
-  public static extern void Game_drawEllipse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, HandleRef jarg7);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseMap__SWIG_0")]
-  public static extern void Game_drawEllipseMap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseMap__SWIG_1")]
-  public static extern void Game_drawEllipseMap__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseMouse__SWIG_0")]
-  public static extern void Game_drawEllipseMouse__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseMouse__SWIG_1")]
-  public static extern void Game_drawEllipseMouse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseScreen__SWIG_0")]
-  public static extern void Game_drawEllipseScreen__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseScreen__SWIG_1")]
-  public static extern void Game_drawEllipseScreen__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawDot")]
-  public static extern void Game_drawDot(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawDotMap")]
-  public static extern void Game_drawDotMap(HandleRef jarg1, int jarg2, int jarg3, HandleRef jarg4);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawDotMouse")]
-  public static extern void Game_drawDotMouse(HandleRef jarg1, int jarg2, int jarg3, HandleRef jarg4);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawDotScreen")]
-  public static extern void Game_drawDotScreen(HandleRef jarg1, int jarg2, int jarg3, HandleRef jarg4);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawLine")]
-  public static extern void Game_drawLine(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, HandleRef jarg7);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawLineMap")]
-  public static extern void Game_drawLineMap(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawLineMouse")]
-  public static extern void Game_drawLineMouse(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawLineScreen")]
-  public static extern void Game_drawLineScreen(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getScreenBuffer")]
-  public static extern IntPtr Game_getScreenBuffer(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getLatencyFrames")]
-  public static extern int Game_getLatencyFrames(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getLatencyTime")]
-  public static extern int Game_getLatencyTime(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getRemainingLatencyFrames")]
-  public static extern int Game_getRemainingLatencyFrames(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getRemainingLatencyTime")]
-  public static extern int Game_getRemainingLatencyTime(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getRevision")]
-  public static extern int Game_getRevision(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isDebug")]
-  public static extern bool Game_isDebug(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isLatComEnabled")]
-  public static extern bool Game_isLatComEnabled(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setLatCom")]
-  public static extern void Game_setLatCom(HandleRef jarg1, bool jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getReplayFrameCount")]
-  public static extern int Game_getReplayFrameCount(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setGUI__SWIG_0")]
-  public static extern void Game_setGUI__SWIG_0(HandleRef jarg1, bool jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setGUI__SWIG_1")]
-  public static extern void Game_setGUI__SWIG_1(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_delete_Game")]
-  public static extern void delete_Game(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Broodwar_set")]
-  public static extern void Broodwar_set(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Broodwar_get")]
-  public static extern IntPtr Broodwar_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_new_Order__SWIG_0")]
   public static extern IntPtr new_Order__SWIG_0();
@@ -2453,14 +2042,32 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_Player_isUpgrading")]
   public static extern bool Player_isUpgrading(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Player_maxEnergy")]
-  public static extern int Player_maxEnergy(HandleRef jarg1, HandleRef jarg2);
-
   [DllImport(""+importdll+"", EntryPoint="CSharp_Player_getColor")]
   public static extern IntPtr Player_getColor(HandleRef jarg1);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Player_getTextColor")]
   public static extern int Player_getTextColor(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Player_maxEnergy")]
+  public static extern int Player_maxEnergy(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Player_topSpeed")]
+  public static extern double Player_topSpeed(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Player_groundWeaponMaxRange")]
+  public static extern int Player_groundWeaponMaxRange(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Player_airWeaponMaxRange")]
+  public static extern int Player_airWeaponMaxRange(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Player_sightRange")]
+  public static extern int Player_sightRange(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Player_groundWeaponDamageCooldown")]
+  public static extern int Player_groundWeaponDamageCooldown(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Player_armor")]
+  public static extern int Player_armor(HandleRef jarg1, HandleRef jarg2);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_delete_Player")]
   public static extern void delete_Player(HandleRef jarg1);
@@ -3009,10 +2616,10 @@ class bwapiPINVOKE {
   public static extern IntPtr UnitCommand_cancelAddon(HandleRef jarg1);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitCommand_cancelTrain__SWIG_0")]
-  public static extern IntPtr UnitCommand_cancelTrain__SWIG_0(HandleRef jarg1);
+  public static extern IntPtr UnitCommand_cancelTrain__SWIG_0(HandleRef jarg1, int jarg2);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitCommand_cancelTrain__SWIG_1")]
-  public static extern IntPtr UnitCommand_cancelTrain__SWIG_1(HandleRef jarg1, int jarg2);
+  public static extern IntPtr UnitCommand_cancelTrain__SWIG_1(HandleRef jarg1);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitCommand_cancelMorph")]
   public static extern IntPtr UnitCommand_cancelMorph(HandleRef jarg1);
@@ -3071,6 +2678,435 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_delete_UnitCommand")]
   public static extern void delete_UnitCommand(HandleRef jarg1);
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getForces")]
+  public static extern IntPtr Game_getForces(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getPlayers")]
+  public static extern IntPtr Game_getPlayers(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getAllUnits")]
+  public static extern IntPtr Game_getAllUnits(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getMinerals")]
+  public static extern IntPtr Game_getMinerals(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getGeysers")]
+  public static extern IntPtr Game_getGeysers(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getNeutralUnits")]
+  public static extern IntPtr Game_getNeutralUnits(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getStaticMinerals")]
+  public static extern IntPtr Game_getStaticMinerals(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getStaticGeysers")]
+  public static extern IntPtr Game_getStaticGeysers(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getStaticNeutralUnits")]
+  public static extern IntPtr Game_getStaticNeutralUnits(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getBullets")]
+  public static extern IntPtr Game_getBullets(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getNukeDots")]
+  public static extern IntPtr Game_getNukeDots(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getEvents")]
+  public static extern IntPtr Game_getEvents(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getForce")]
+  public static extern IntPtr Game_getForce(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getPlayer")]
+  public static extern IntPtr Game_getPlayer(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getUnit")]
+  public static extern IntPtr Game_getUnit(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_indexToUnit")]
+  public static extern IntPtr Game_indexToUnit(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getGameType")]
+  public static extern IntPtr Game_getGameType(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getLatency")]
+  public static extern int Game_getLatency(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getFrameCount")]
+  public static extern int Game_getFrameCount(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getFPS")]
+  public static extern int Game_getFPS(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getAverageFPS")]
+  public static extern double Game_getAverageFPS(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getMousePosition")]
+  public static extern IntPtr Game_getMousePosition(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getMouseState__SWIG_0")]
+  public static extern bool Game_getMouseState__SWIG_0(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getMouseState__SWIG_1")]
+  public static extern bool Game_getMouseState__SWIG_1(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getKeyState__SWIG_0")]
+  public static extern bool Game_getKeyState__SWIG_0(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getKeyState__SWIG_1")]
+  public static extern bool Game_getKeyState__SWIG_1(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getScreenPosition")]
+  public static extern IntPtr Game_getScreenPosition(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setScreenPosition__SWIG_0")]
+  public static extern void Game_setScreenPosition__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setScreenPosition__SWIG_1")]
+  public static extern void Game_setScreenPosition__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_pingMinimap__SWIG_0")]
+  public static extern void Game_pingMinimap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_pingMinimap__SWIG_1")]
+  public static extern void Game_pingMinimap__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isFlagEnabled")]
+  public static extern bool Game_isFlagEnabled(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_enableFlag")]
+  public static extern void Game_enableFlag(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_unitsOnTile")]
+  public static extern IntPtr Game_unitsOnTile(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getLastError")]
+  public static extern IntPtr Game_getLastError(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setLastError")]
+  public static extern bool Game_setLastError(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapWidth")]
+  public static extern int Game_mapWidth(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapHeight")]
+  public static extern int Game_mapHeight(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapFileName")]
+  public static extern string Game_mapFileName(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapPathName")]
+  public static extern string Game_mapPathName(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapName")]
+  public static extern string Game_mapName(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_mapHash")]
+  public static extern string Game_mapHash(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isWalkable")]
+  public static extern bool Game_isWalkable(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getGroundHeight__SWIG_0")]
+  public static extern int Game_getGroundHeight__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getGroundHeight__SWIG_1")]
+  public static extern int Game_getGroundHeight__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isBuildable__SWIG_0")]
+  public static extern bool Game_isBuildable__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isBuildable__SWIG_1")]
+  public static extern bool Game_isBuildable__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isVisible__SWIG_0")]
+  public static extern bool Game_isVisible__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isVisible__SWIG_1")]
+  public static extern bool Game_isVisible__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isExplored__SWIG_0")]
+  public static extern bool Game_isExplored__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isExplored__SWIG_1")]
+  public static extern bool Game_isExplored__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_hasCreep__SWIG_0")]
+  public static extern bool Game_hasCreep__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_hasCreep__SWIG_1")]
+  public static extern bool Game_hasCreep__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_hasPower__SWIG_0")]
+  public static extern bool Game_hasPower__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_hasPower__SWIG_1")]
+  public static extern bool Game_hasPower__SWIG_1(HandleRef jarg1, HandleRef jarg2, int jarg3, int jarg4);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_canBuildHere__SWIG_0")]
+  public static extern bool Game_canBuildHere__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4, bool jarg5);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_canBuildHere__SWIG_1")]
+  public static extern bool Game_canBuildHere__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_canMake")]
+  public static extern bool Game_canMake(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_canResearch")]
+  public static extern bool Game_canResearch(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_canUpgrade")]
+  public static extern bool Game_canUpgrade(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getStartLocations")]
+  public static extern IntPtr Game_getStartLocations(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_printf")]
+  public static extern void Game_printf(HandleRef jarg1, string jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_sendText")]
+  public static extern void Game_sendText(HandleRef jarg1, string jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_sendTextEx")]
+  public static extern void Game_sendTextEx(HandleRef jarg1, bool jarg2, string jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_changeRace")]
+  public static extern void Game_changeRace(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isInGame")]
+  public static extern bool Game_isInGame(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isMultiplayer")]
+  public static extern bool Game_isMultiplayer(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isBattleNet")]
+  public static extern bool Game_isBattleNet(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isPaused")]
+  public static extern bool Game_isPaused(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isReplay")]
+  public static extern bool Game_isReplay(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_startGame")]
+  public static extern void Game_startGame(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_pauseGame")]
+  public static extern void Game_pauseGame(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_resumeGame")]
+  public static extern void Game_resumeGame(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_leaveGame")]
+  public static extern void Game_leaveGame(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_restartGame")]
+  public static extern void Game_restartGame(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setLocalSpeed__SWIG_0")]
+  public static extern void Game_setLocalSpeed__SWIG_0(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setLocalSpeed__SWIG_1")]
+  public static extern void Game_setLocalSpeed__SWIG_1(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_issueCommand")]
+  public static extern bool Game_issueCommand(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getSelectedUnits")]
+  public static extern IntPtr Game_getSelectedUnits(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_self")]
+  public static extern IntPtr Game_self(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_enemy")]
+  public static extern IntPtr Game_enemy(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setTextSize__SWIG_0")]
+  public static extern void Game_setTextSize__SWIG_0(HandleRef jarg1, int jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setTextSize__SWIG_1")]
+  public static extern void Game_setTextSize__SWIG_1(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawText")]
+  public static extern void Game_drawText(HandleRef jarg1, int jarg2, int jarg3, int jarg4, string jarg5);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTextMap")]
+  public static extern void Game_drawTextMap(HandleRef jarg1, int jarg2, int jarg3, string jarg4);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTextMouse")]
+  public static extern void Game_drawTextMouse(HandleRef jarg1, int jarg2, int jarg3, string jarg4);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTextScreen")]
+  public static extern void Game_drawTextScreen(HandleRef jarg1, int jarg2, int jarg3, string jarg4);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBox__SWIG_0")]
+  public static extern void Game_drawBox__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, HandleRef jarg7, bool jarg8);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBox__SWIG_1")]
+  public static extern void Game_drawBox__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, HandleRef jarg7);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxMap__SWIG_0")]
+  public static extern void Game_drawBoxMap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxMap__SWIG_1")]
+  public static extern void Game_drawBoxMap__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxMouse__SWIG_0")]
+  public static extern void Game_drawBoxMouse__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxMouse__SWIG_1")]
+  public static extern void Game_drawBoxMouse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxScreen__SWIG_0")]
+  public static extern void Game_drawBoxScreen__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawBoxScreen__SWIG_1")]
+  public static extern void Game_drawBoxScreen__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangle__SWIG_0")]
+  public static extern void Game_drawTriangle__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, int jarg8, HandleRef jarg9, bool jarg10);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangle__SWIG_1")]
+  public static extern void Game_drawTriangle__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, int jarg8, HandleRef jarg9);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleMap__SWIG_0")]
+  public static extern void Game_drawTriangleMap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8, bool jarg9);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleMap__SWIG_1")]
+  public static extern void Game_drawTriangleMap__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleMouse__SWIG_0")]
+  public static extern void Game_drawTriangleMouse__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8, bool jarg9);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleMouse__SWIG_1")]
+  public static extern void Game_drawTriangleMouse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleScreen__SWIG_0")]
+  public static extern void Game_drawTriangleScreen__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8, bool jarg9);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawTriangleScreen__SWIG_1")]
+  public static extern void Game_drawTriangleScreen__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, HandleRef jarg8);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircle__SWIG_0")]
+  public static extern void Game_drawCircle__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircle__SWIG_1")]
+  public static extern void Game_drawCircle__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleMap__SWIG_0")]
+  public static extern void Game_drawCircleMap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5, bool jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleMap__SWIG_1")]
+  public static extern void Game_drawCircleMap__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleMouse__SWIG_0")]
+  public static extern void Game_drawCircleMouse__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5, bool jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleMouse__SWIG_1")]
+  public static extern void Game_drawCircleMouse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleScreen__SWIG_0")]
+  public static extern void Game_drawCircleScreen__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5, bool jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawCircleScreen__SWIG_1")]
+  public static extern void Game_drawCircleScreen__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipse__SWIG_0")]
+  public static extern void Game_drawEllipse__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, HandleRef jarg7, bool jarg8);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipse__SWIG_1")]
+  public static extern void Game_drawEllipse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, HandleRef jarg7);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseMap__SWIG_0")]
+  public static extern void Game_drawEllipseMap__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseMap__SWIG_1")]
+  public static extern void Game_drawEllipseMap__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseMouse__SWIG_0")]
+  public static extern void Game_drawEllipseMouse__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseMouse__SWIG_1")]
+  public static extern void Game_drawEllipseMouse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseScreen__SWIG_0")]
+  public static extern void Game_drawEllipseScreen__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6, bool jarg7);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawEllipseScreen__SWIG_1")]
+  public static extern void Game_drawEllipseScreen__SWIG_1(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawDot")]
+  public static extern void Game_drawDot(HandleRef jarg1, int jarg2, int jarg3, int jarg4, HandleRef jarg5);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawDotMap")]
+  public static extern void Game_drawDotMap(HandleRef jarg1, int jarg2, int jarg3, HandleRef jarg4);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawDotMouse")]
+  public static extern void Game_drawDotMouse(HandleRef jarg1, int jarg2, int jarg3, HandleRef jarg4);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawDotScreen")]
+  public static extern void Game_drawDotScreen(HandleRef jarg1, int jarg2, int jarg3, HandleRef jarg4);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawLine")]
+  public static extern void Game_drawLine(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, HandleRef jarg7);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawLineMap")]
+  public static extern void Game_drawLineMap(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawLineMouse")]
+  public static extern void Game_drawLineMouse(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_drawLineScreen")]
+  public static extern void Game_drawLineScreen(HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, HandleRef jarg6);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getScreenBuffer")]
+  public static extern IntPtr Game_getScreenBuffer(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getLatencyFrames")]
+  public static extern int Game_getLatencyFrames(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getLatencyTime")]
+  public static extern int Game_getLatencyTime(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getRemainingLatencyFrames")]
+  public static extern int Game_getRemainingLatencyFrames(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getRemainingLatencyTime")]
+  public static extern int Game_getRemainingLatencyTime(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getRevision")]
+  public static extern int Game_getRevision(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isDebug")]
+  public static extern bool Game_isDebug(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_isLatComEnabled")]
+  public static extern bool Game_isLatComEnabled(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setLatCom")]
+  public static extern void Game_setLatCom(HandleRef jarg1, bool jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getReplayFrameCount")]
+  public static extern int Game_getReplayFrameCount(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setGUI__SWIG_0")]
+  public static extern void Game_setGUI__SWIG_0(HandleRef jarg1, bool jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_setGUI__SWIG_1")]
+  public static extern void Game_setGUI__SWIG_1(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Game_getInstanceNumber")]
+  public static extern int Game_getInstanceNumber(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_delete_Game")]
+  public static extern void delete_Game(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Broodwar_set")]
+  public static extern void Broodwar_set(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Broodwar_get")]
+  public static extern IntPtr Broodwar_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getID")]
   public static extern int Unit_getID(HandleRef jarg1);
 
@@ -3107,11 +3143,23 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getResources")]
   public static extern int Unit_getResources(HandleRef jarg1);
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getResourceGroup")]
+  public static extern int Unit_getResourceGroup(HandleRef jarg1);
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getDistance__SWIG_0")]
   public static extern double Unit_getDistance__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getDistance__SWIG_1")]
   public static extern double Unit_getDistance__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_hasPath__SWIG_0")]
+  public static extern bool Unit_hasPath__SWIG_0(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_hasPath__SWIG_1")]
+  public static extern bool Unit_hasPath__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getLastOrderFrame")]
+  public static extern int Unit_getLastOrderFrame(HandleRef jarg1);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getUpgradeLevel")]
   public static extern int Unit_getUpgradeLevel(HandleRef jarg1, HandleRef jarg2);
@@ -3239,6 +3287,9 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getNydusExit")]
   public static extern IntPtr Unit_getNydusExit(HandleRef jarg1);
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getPowerUp")]
+  public static extern IntPtr Unit_getPowerUp(HandleRef jarg1);
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getTransport")]
   public static extern IntPtr Unit_getTransport(HandleRef jarg1);
 
@@ -3329,6 +3380,9 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_isIdle")]
   public static extern bool Unit_isIdle(HandleRef jarg1);
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_isInterruptible")]
+  public static extern bool Unit_isInterruptible(HandleRef jarg1);
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_isIrradiated")]
   public static extern bool Unit_isIrradiated(HandleRef jarg1);
 
@@ -3380,6 +3434,9 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_isStimmed")]
   public static extern bool Unit_isStimmed(HandleRef jarg1);
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_isStuck")]
+  public static extern bool Unit_isStuck(HandleRef jarg1);
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_isTraining")]
   public static extern bool Unit_isTraining(HandleRef jarg1);
 
@@ -3397,6 +3454,9 @@ class bwapiPINVOKE {
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_isVisible__SWIG_1")]
   public static extern bool Unit_isVisible__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_canIssueCommand")]
+  public static extern bool Unit_canIssueCommand(HandleRef jarg1, HandleRef jarg2);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_issueCommand")]
   public static extern bool Unit_issueCommand(HandleRef jarg1, HandleRef jarg2);
@@ -3425,11 +3485,11 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_upgrade")]
   public static extern bool Unit_upgrade(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_setRallyPosition")]
-  public static extern bool Unit_setRallyPosition(HandleRef jarg1, HandleRef jarg2);
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_setRallyPoint__SWIG_0")]
+  public static extern bool Unit_setRallyPoint__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_setRallyUnit")]
-  public static extern bool Unit_setRallyUnit(HandleRef jarg1, HandleRef jarg2);
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_setRallyPoint__SWIG_1")]
+  public static extern bool Unit_setRallyPoint__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_move")]
   public static extern bool Unit_move(HandleRef jarg1, HandleRef jarg2);
@@ -3507,10 +3567,10 @@ class bwapiPINVOKE {
   public static extern bool Unit_cancelAddon(HandleRef jarg1);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_cancelTrain__SWIG_0")]
-  public static extern bool Unit_cancelTrain__SWIG_0(HandleRef jarg1);
+  public static extern bool Unit_cancelTrain__SWIG_0(HandleRef jarg1, int jarg2);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_cancelTrain__SWIG_1")]
-  public static extern bool Unit_cancelTrain__SWIG_1(HandleRef jarg1, int jarg2);
+  public static extern bool Unit_cancelTrain__SWIG_1(HandleRef jarg1);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_cancelMorph")]
   public static extern bool Unit_cancelMorph(HandleRef jarg1);
@@ -3530,23 +3590,11 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_useTech__SWIG_2")]
   public static extern bool Unit_useTech__SWIG_2(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_hasPath__SWIG_0")]
-  public static extern bool Unit_hasPath__SWIG_0(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_hasPath__SWIG_1")]
-  public static extern bool Unit_hasPath__SWIG_1(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getLastOrderFrame")]
-  public static extern int Unit_getLastOrderFrame(HandleRef jarg1);
-
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_setClientInfo")]
   public static extern void Unit_setClientInfo(HandleRef jarg1, HandleRef jarg2);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getClientInfo")]
   public static extern IntPtr Unit_getClientInfo(HandleRef jarg1);
-
-  [DllImport(""+importdll+"", EntryPoint="CSharp_Unit_getResourceGroup")]
-  public static extern int Unit_getResourceGroup(HandleRef jarg1);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_delete_Unit")]
   public static extern void delete_Unit(HandleRef jarg1);
@@ -3635,9 +3683,6 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_getName")]
   public static extern string UnitType_getName(HandleRef jarg1);
 
-  [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_getSubLabel")]
-  public static extern string UnitType_getSubLabel(HandleRef jarg1);
-
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_getRace")]
   public static extern IntPtr UnitType_getRace(HandleRef jarg1);
 
@@ -3649,6 +3694,9 @@ class bwapiPINVOKE {
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_requiredTech")]
   public static extern IntPtr UnitType_requiredTech(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_cloakingTech")]
+  public static extern IntPtr UnitType_cloakingTech(HandleRef jarg1);
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_abilities")]
   public static extern IntPtr UnitType_abilities(HandleRef jarg1);
@@ -3824,6 +3872,24 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_isNeutral")]
   public static extern bool UnitType_isNeutral(HandleRef jarg1);
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_isHero")]
+  public static extern bool UnitType_isHero(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_isPowerup")]
+  public static extern bool UnitType_isPowerup(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_isBeacon")]
+  public static extern bool UnitType_isBeacon(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_isFlagBeacon")]
+  public static extern bool UnitType_isFlagBeacon(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_isSpecialBuilding")]
+  public static extern bool UnitType_isSpecialBuilding(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_isSpell")]
+  public static extern bool UnitType_isSpell(HandleRef jarg1);
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitType_producesLarva")]
   public static extern bool UnitType_producesLarva(HandleRef jarg1);
 
@@ -3842,17 +3908,41 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Marine_get")]
   public static extern IntPtr UnitTypes_Terran_Marine_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Jim_Raynor_Marine_get")]
+  public static extern IntPtr Hero_Jim_Raynor_Marine_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Ghost_get")]
   public static extern IntPtr UnitTypes_Terran_Ghost_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Sarah_Kerrigan_get")]
+  public static extern IntPtr Hero_Sarah_Kerrigan_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Samir_Duran_get")]
+  public static extern IntPtr Hero_Samir_Duran_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Infested_Duran_get")]
+  public static extern IntPtr Hero_Infested_Duran_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Alexei_Stukov_get")]
+  public static extern IntPtr Hero_Alexei_Stukov_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Vulture_get")]
   public static extern IntPtr UnitTypes_Terran_Vulture_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Jim_Raynor_Vulture_get")]
+  public static extern IntPtr Hero_Jim_Raynor_Vulture_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Goliath_get")]
   public static extern IntPtr UnitTypes_Terran_Goliath_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Alan_Schezar_get")]
+  public static extern IntPtr Hero_Alan_Schezar_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Siege_Tank_Tank_Mode_get")]
   public static extern IntPtr UnitTypes_Terran_Siege_Tank_Tank_Mode_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Edmund_Duke_Tank_Mode_get")]
+  public static extern IntPtr Hero_Edmund_Duke_Tank_Mode_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_SCV_get")]
   public static extern IntPtr UnitTypes_Terran_SCV_get();
@@ -3860,14 +3950,32 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Wraith_get")]
   public static extern IntPtr UnitTypes_Terran_Wraith_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Tom_Kazansky_get")]
+  public static extern IntPtr Hero_Tom_Kazansky_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Science_Vessel_get")]
   public static extern IntPtr UnitTypes_Terran_Science_Vessel_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Magellan_get")]
+  public static extern IntPtr Hero_Magellan_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Dropship_get")]
   public static extern IntPtr UnitTypes_Terran_Dropship_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Battlecruiser_get")]
   public static extern IntPtr UnitTypes_Terran_Battlecruiser_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Arcturus_Mengsk_get")]
+  public static extern IntPtr Hero_Arcturus_Mengsk_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Hyperion_get")]
+  public static extern IntPtr Hero_Hyperion_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Norad_II_get")]
+  public static extern IntPtr Hero_Norad_II_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Gerard_DuGalle_get")]
+  public static extern IntPtr Hero_Gerard_DuGalle_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Vulture_Spider_Mine_get")]
   public static extern IntPtr UnitTypes_Terran_Vulture_Spider_Mine_get();
@@ -3878,14 +3986,23 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Siege_Tank_Siege_Mode_get")]
   public static extern IntPtr UnitTypes_Terran_Siege_Tank_Siege_Mode_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Edmund_Duke_Siege_Mode_get")]
+  public static extern IntPtr Hero_Edmund_Duke_Siege_Mode_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Firebat_get")]
   public static extern IntPtr UnitTypes_Terran_Firebat_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Gui_Montag_get")]
+  public static extern IntPtr Hero_Gui_Montag_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Spell_Scanner_Sweep_get")]
   public static extern IntPtr UnitTypes_Spell_Scanner_Sweep_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Terran_Medic_get")]
   public static extern IntPtr UnitTypes_Terran_Medic_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Terran_Civilian_get")]
+  public static extern IntPtr Terran_Civilian_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Larva_get")]
   public static extern IntPtr UnitTypes_Zerg_Larva_get();
@@ -3896,11 +4013,23 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Zergling_get")]
   public static extern IntPtr UnitTypes_Zerg_Zergling_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Devouring_One_get")]
+  public static extern IntPtr Hero_Devouring_One_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Infested_Kerrigan_get")]
+  public static extern IntPtr Hero_Infested_Kerrigan_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Hydralisk_get")]
   public static extern IntPtr UnitTypes_Zerg_Hydralisk_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Hunter_Killer_get")]
+  public static extern IntPtr Hero_Hunter_Killer_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Ultralisk_get")]
   public static extern IntPtr UnitTypes_Zerg_Ultralisk_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Torrasque_get")]
+  public static extern IntPtr Hero_Torrasque_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Broodling_get")]
   public static extern IntPtr UnitTypes_Zerg_Broodling_get();
@@ -3911,17 +4040,32 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Overlord_get")]
   public static extern IntPtr UnitTypes_Zerg_Overlord_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Yggdrasill_get")]
+  public static extern IntPtr Hero_Yggdrasill_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Mutalisk_get")]
   public static extern IntPtr UnitTypes_Zerg_Mutalisk_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Kukulza_Mutalisk_get")]
+  public static extern IntPtr Hero_Kukulza_Mutalisk_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Guardian_get")]
   public static extern IntPtr UnitTypes_Zerg_Guardian_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Kukulza_Guardian_get")]
+  public static extern IntPtr Hero_Kukulza_Guardian_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Queen_get")]
   public static extern IntPtr UnitTypes_Zerg_Queen_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Matriarch_get")]
+  public static extern IntPtr Hero_Matriarch_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Defiler_get")]
   public static extern IntPtr UnitTypes_Zerg_Defiler_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Unclean_One_get")]
+  public static extern IntPtr Hero_Unclean_One_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Scourge_get")]
   public static extern IntPtr UnitTypes_Zerg_Scourge_get();
@@ -3938,8 +4082,17 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Corsair_get")]
   public static extern IntPtr UnitTypes_Protoss_Corsair_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Raszagal_get")]
+  public static extern IntPtr Hero_Raszagal_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Dark_Templar_get")]
   public static extern IntPtr UnitTypes_Protoss_Dark_Templar_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Dark_Templar_get")]
+  public static extern IntPtr Hero_Dark_Templar_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Zeratul_get")]
+  public static extern IntPtr Hero_Zeratul_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Zerg_Devourer_get")]
   public static extern IntPtr UnitTypes_Zerg_Devourer_get();
@@ -3953,14 +4106,29 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Zealot_get")]
   public static extern IntPtr UnitTypes_Protoss_Zealot_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Fenix_Zealot_get")]
+  public static extern IntPtr Hero_Fenix_Zealot_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Dragoon_get")]
   public static extern IntPtr UnitTypes_Protoss_Dragoon_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Fenix_Dragoon_get")]
+  public static extern IntPtr Hero_Fenix_Dragoon_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_High_Templar_get")]
   public static extern IntPtr UnitTypes_Protoss_High_Templar_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Tassadar_get")]
+  public static extern IntPtr Hero_Tassadar_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Aldaris_get")]
+  public static extern IntPtr Hero_Aldaris_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Archon_get")]
   public static extern IntPtr UnitTypes_Protoss_Archon_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Tassadar_Zeratul_Archon_get")]
+  public static extern IntPtr Hero_Tassadar_Zeratul_Archon_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Shuttle_get")]
   public static extern IntPtr UnitTypes_Protoss_Shuttle_get();
@@ -3968,17 +4136,32 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Scout_get")]
   public static extern IntPtr UnitTypes_Protoss_Scout_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Mojo_get")]
+  public static extern IntPtr Hero_Mojo_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Artanis_get")]
+  public static extern IntPtr Hero_Artanis_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Arbiter_get")]
   public static extern IntPtr UnitTypes_Protoss_Arbiter_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Danimoth_get")]
+  public static extern IntPtr Hero_Danimoth_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Carrier_get")]
   public static extern IntPtr UnitTypes_Protoss_Carrier_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Gantrithor_get")]
+  public static extern IntPtr Hero_Gantrithor_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Interceptor_get")]
   public static extern IntPtr UnitTypes_Protoss_Interceptor_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Reaver_get")]
   public static extern IntPtr UnitTypes_Protoss_Reaver_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hero_Warbringer_get")]
+  public static extern IntPtr Hero_Warbringer_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Protoss_Observer_get")]
   public static extern IntPtr UnitTypes_Protoss_Observer_get();
@@ -4217,8 +4400,47 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Special_Overmind_Cocoon_get")]
   public static extern IntPtr UnitTypes_Special_Overmind_Cocoon_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Special_Zerg_Beacon_get")]
+  public static extern IntPtr Special_Zerg_Beacon_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Special_Terran_Beacon_get")]
+  public static extern IntPtr Special_Terran_Beacon_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Special_Protoss_Beacon_get")]
+  public static extern IntPtr Special_Protoss_Beacon_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Special_Zerg_Flag_Beacon_get")]
+  public static extern IntPtr Special_Zerg_Flag_Beacon_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Special_Terran_Flag_Beacon_get")]
+  public static extern IntPtr Special_Terran_Flag_Beacon_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Special_Protoss_Flag_Beacon_get")]
+  public static extern IntPtr Special_Protoss_Flag_Beacon_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_Spell_Dark_Swarm_get")]
   public static extern IntPtr UnitTypes_Spell_Dark_Swarm_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Powerup_Uraj_Crystal_get")]
+  public static extern IntPtr Powerup_Uraj_Crystal_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Powerup_Khalis_Crystal_get")]
+  public static extern IntPtr Powerup_Khalis_Crystal_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Powerup_Flag_get")]
+  public static extern IntPtr Powerup_Flag_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Powerup_Young_Chrysalis_get")]
+  public static extern IntPtr Powerup_Young_Chrysalis_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Powerup_Psi_Emitter_get")]
+  public static extern IntPtr Powerup_Psi_Emitter_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Powerup_Data_Disk_get")]
+  public static extern IntPtr Powerup_Data_Disk_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Powerup_Khaydarin_Crystal_get")]
+  public static extern IntPtr Powerup_Khaydarin_Crystal_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_UnitTypes_None_get")]
   public static extern IntPtr UnitTypes_None_get();
@@ -4343,11 +4565,29 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Gauss_Rifle_get")]
   public static extern IntPtr WeaponTypes_Gauss_Rifle_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Gauss_Rifle_Jim_Raynor_get")]
+  public static extern IntPtr Gauss_Rifle_Jim_Raynor_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_C_10_Canister_Rifle_get")]
   public static extern IntPtr WeaponTypes_C_10_Canister_Rifle_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_C_10_Canister_Rifle_Sarah_Kerrigan_get")]
+  public static extern IntPtr C_10_Canister_Rifle_Sarah_Kerrigan_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_C_10_Canister_Rifle_Samir_Duran_get")]
+  public static extern IntPtr C_10_Canister_Rifle_Samir_Duran_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_C_10_Canister_Rifle_Infested_Duran_get")]
+  public static extern IntPtr C_10_Canister_Rifle_Infested_Duran_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_C_10_Canister_Rifle_Alexei_Stukov_get")]
+  public static extern IntPtr C_10_Canister_Rifle_Alexei_Stukov_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Fragmentation_Grenade_get")]
   public static extern IntPtr WeaponTypes_Fragmentation_Grenade_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Fragmentation_Grenade_Jim_Raynor_get")]
+  public static extern IntPtr Fragmentation_Grenade_Jim_Raynor_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Spider_Mines_get")]
   public static extern IntPtr WeaponTypes_Spider_Mines_get();
@@ -4355,11 +4595,20 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Twin_Autocannons_get")]
   public static extern IntPtr WeaponTypes_Twin_Autocannons_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Twin_Autocannons_Alan_Schezar_get")]
+  public static extern IntPtr Twin_Autocannons_Alan_Schezar_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Hellfire_Missile_Pack_get")]
   public static extern IntPtr WeaponTypes_Hellfire_Missile_Pack_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Hellfire_Missile_Pack_Alan_Schezar_get")]
+  public static extern IntPtr Hellfire_Missile_Pack_Alan_Schezar_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Arclite_Cannon_get")]
   public static extern IntPtr WeaponTypes_Arclite_Cannon_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Arclite_Cannon_Edmund_Duke_get")]
+  public static extern IntPtr Arclite_Cannon_Edmund_Duke_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Fusion_Cutter_get")]
   public static extern IntPtr WeaponTypes_Fusion_Cutter_get();
@@ -4367,20 +4616,44 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Gemini_Missiles_get")]
   public static extern IntPtr WeaponTypes_Gemini_Missiles_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Gemini_Missiles_Tom_Kazansky_get")]
+  public static extern IntPtr Gemini_Missiles_Tom_Kazansky_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Burst_Lasers_get")]
   public static extern IntPtr WeaponTypes_Burst_Lasers_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Burst_Lasers_Tom_Kazansky_get")]
+  public static extern IntPtr Burst_Lasers_Tom_Kazansky_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_ATS_Laser_Battery_get")]
   public static extern IntPtr WeaponTypes_ATS_Laser_Battery_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_ATS_Laser_Battery_Hero_get")]
+  public static extern IntPtr ATS_Laser_Battery_Hero_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_ATS_Laser_Battery_Hyperion_get")]
+  public static extern IntPtr ATS_Laser_Battery_Hyperion_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_ATA_Laser_Battery_get")]
   public static extern IntPtr WeaponTypes_ATA_Laser_Battery_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_ATA_Laser_Battery_Hero_get")]
+  public static extern IntPtr ATA_Laser_Battery_Hero_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_ATA_Laser_Battery_Hyperion_get")]
+  public static extern IntPtr ATA_Laser_Battery_Hyperion_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Flame_Thrower_get")]
   public static extern IntPtr WeaponTypes_Flame_Thrower_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Flame_Thrower_Gui_Montag_get")]
+  public static extern IntPtr Flame_Thrower_Gui_Montag_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Arclite_Shock_Cannon_get")]
   public static extern IntPtr WeaponTypes_Arclite_Shock_Cannon_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Arclite_Shock_Cannon_Edmund_Duke_get")]
+  public static extern IntPtr Arclite_Shock_Cannon_Edmund_Duke_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Longbolt_Missile_get")]
   public static extern IntPtr WeaponTypes_Longbolt_Missile_get();
@@ -4388,11 +4661,23 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Claws_get")]
   public static extern IntPtr WeaponTypes_Claws_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Claws_Devouring_One_get")]
+  public static extern IntPtr Claws_Devouring_One_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Claws_Infested_Kerrigan_get")]
+  public static extern IntPtr Claws_Infested_Kerrigan_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Needle_Spines_get")]
   public static extern IntPtr WeaponTypes_Needle_Spines_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Needle_Spines_Hunter_Killer_get")]
+  public static extern IntPtr Needle_Spines_Hunter_Killer_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Kaiser_Blades_get")]
   public static extern IntPtr WeaponTypes_Kaiser_Blades_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Kaiser_Blades_Torrasque_get")]
+  public static extern IntPtr Kaiser_Blades_Torrasque_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Toxic_Spores_get")]
   public static extern IntPtr WeaponTypes_Toxic_Spores_get();
@@ -4403,8 +4688,14 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Acid_Spore_get")]
   public static extern IntPtr WeaponTypes_Acid_Spore_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Acid_Spore_Kukulza_get")]
+  public static extern IntPtr Acid_Spore_Kukulza_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Glave_Wurm_get")]
   public static extern IntPtr WeaponTypes_Glave_Wurm_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Glave_Wurm_Kukulza_get")]
+  public static extern IntPtr Glave_Wurm_Kukulza_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Seeker_Spores_get")]
   public static extern IntPtr WeaponTypes_Seeker_Spores_get();
@@ -4424,20 +4715,47 @@ class bwapiPINVOKE {
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Psi_Blades_get")]
   public static extern IntPtr WeaponTypes_Psi_Blades_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Psi_Blades_Fenix_get")]
+  public static extern IntPtr Psi_Blades_Fenix_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Phase_Disruptor_get")]
   public static extern IntPtr WeaponTypes_Phase_Disruptor_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Phase_Disruptor_Fenix_get")]
+  public static extern IntPtr Phase_Disruptor_Fenix_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Psi_Assault_get")]
+  public static extern IntPtr Psi_Assault_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Psionic_Shockwave_get")]
   public static extern IntPtr WeaponTypes_Psionic_Shockwave_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Psionic_Shockwave_TZ_Archon_get")]
+  public static extern IntPtr Psionic_Shockwave_TZ_Archon_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Dual_Photon_Blasters_get")]
   public static extern IntPtr WeaponTypes_Dual_Photon_Blasters_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Dual_Photon_Blasters_Mojo_get")]
+  public static extern IntPtr Dual_Photon_Blasters_Mojo_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Dual_Photon_Blasters_Artanis_get")]
+  public static extern IntPtr Dual_Photon_Blasters_Artanis_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Anti_Matter_Missiles_get")]
   public static extern IntPtr WeaponTypes_Anti_Matter_Missiles_get();
 
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Anti_Matter_Missiles_Mojo_get")]
+  public static extern IntPtr Anti_Matter_Missiles_Mojo_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Anti_Matter_Missiles_Artanis_get")]
+  public static extern IntPtr Anti_Matter_Missiles_Artanis_get();
+
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Phase_Disruptor_Cannon_get")]
   public static extern IntPtr WeaponTypes_Phase_Disruptor_Cannon_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Phase_Disruptor_Cannon_Danimoth_get")]
+  public static extern IntPtr Phase_Disruptor_Cannon_Danimoth_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Pulse_Cannon_get")]
   public static extern IntPtr WeaponTypes_Pulse_Cannon_get();
@@ -4465,6 +4783,12 @@ class bwapiPINVOKE {
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Warp_Blades_get")]
   public static extern IntPtr WeaponTypes_Warp_Blades_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Warp_Blades_Hero_get")]
+  public static extern IntPtr Warp_Blades_Hero_get();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_Warp_Blades_Zeratul_get")]
+  public static extern IntPtr Warp_Blades_Zeratul_get();
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_WeaponTypes_Yamato_Gun_get")]
   public static extern IntPtr WeaponTypes_Yamato_Gun_get();
@@ -5548,6 +5872,42 @@ class bwapiPINVOKE {
 
   [DllImport(""+importdll+"", EntryPoint="CSharp_delete_TilePositionVector")]
   public static extern void delete_TilePositionVector(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_new_PositionSet__SWIG_0")]
+  public static extern IntPtr new_PositionSet__SWIG_0();
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_new_PositionSet__SWIG_1")]
+  public static extern IntPtr new_PositionSet__SWIG_1(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_PositionSet_size")]
+  public static extern uint PositionSet_size(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_PositionSet_empty")]
+  public static extern bool PositionSet_empty(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_PositionSet_Clear")]
+  public static extern void PositionSet_Clear(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_PositionSet_getitem")]
+  public static extern IntPtr PositionSet_getitem(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_PositionSet_ContainsKey")]
+  public static extern bool PositionSet_ContainsKey(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_PositionSet_Add")]
+  public static extern void PositionSet_Add(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_PositionSet_Remove")]
+  public static extern bool PositionSet_Remove(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_PositionSet_create_iterator_begin")]
+  public static extern IntPtr PositionSet_create_iterator_begin(HandleRef jarg1);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_PositionSet_get_next_key")]
+  public static extern IntPtr PositionSet_get_next_key(HandleRef jarg1, IntPtr jarg2);
+
+  [DllImport(""+importdll+"", EntryPoint="CSharp_delete_PositionSet")]
+  public static extern void delete_PositionSet(HandleRef jarg1);
 }
 
 }

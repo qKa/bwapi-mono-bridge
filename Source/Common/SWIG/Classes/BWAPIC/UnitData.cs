@@ -225,6 +225,16 @@ public static bool operator !=(UnitData obj1, UnitData obj2)
     } 
   }
 
+  public int resourceGroup {
+    set {
+      bwapiclientPINVOKE.UnitData_resourceGroup_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.UnitData_resourceGroup_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public int killCount {
     set {
       bwapiclientPINVOKE.UnitData_killCount_set(swigCPtr, value);
@@ -606,6 +616,16 @@ public static bool operator !=(UnitData obj1, UnitData obj2)
     } 
   }
 
+  public int powerUp {
+    set {
+      bwapiclientPINVOKE.UnitData_powerUp_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.UnitData_powerUp_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public int transport {
     set {
       bwapiclientPINVOKE.UnitData_transport_set(swigCPtr, value);
@@ -796,6 +816,16 @@ public static bool operator !=(UnitData obj1, UnitData obj2)
     } 
   }
 
+  public bool isInterruptible {
+    set {
+      bwapiclientPINVOKE.UnitData_isInterruptible_set(swigCPtr, value);
+    } 
+    get {
+      bool ret = bwapiclientPINVOKE.UnitData_isInterruptible_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public bool isLifted {
     set {
       bwapiclientPINVOKE.UnitData_isLifted_set(swigCPtr, value);
@@ -852,6 +882,16 @@ public static bool operator !=(UnitData obj1, UnitData obj2)
     } 
     get {
       bool ret = bwapiclientPINVOKE.UnitData_isStartingAttack_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public bool isStuck {
+    set {
+      bwapiclientPINVOKE.UnitData_isStuck_set(swigCPtr, value);
+    } 
+    get {
+      bool ret = bwapiclientPINVOKE.UnitData_isStuck_get(swigCPtr);
       return ret;
     } 
   }

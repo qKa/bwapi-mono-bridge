@@ -126,11 +126,6 @@ public static bool operator !=(UnitType obj1, UnitType obj2)
     return ret;
   }
 
-  public string getSubLabel() {
-    string ret = bwapiPINVOKE.UnitType_getSubLabel(swigCPtr);
-    return ret;
-  }
-
   public Race getRace() {
     Race ret = new Race(bwapiPINVOKE.UnitType_getRace(swigCPtr), true);
     return ret;
@@ -148,6 +143,11 @@ public static bool operator !=(UnitType obj1, UnitType obj2)
 
   public TechType requiredTech() {
     TechType ret = new TechType(bwapiPINVOKE.UnitType_requiredTech(swigCPtr), true);
+    return ret;
+  }
+
+  public TechType cloakingTech() {
+    TechType ret = new TechType(bwapiPINVOKE.UnitType_cloakingTech(swigCPtr), true);
     return ret;
   }
 
@@ -438,6 +438,36 @@ public static bool operator !=(UnitType obj1, UnitType obj2)
 
   public bool isNeutral() {
     bool ret = bwapiPINVOKE.UnitType_isNeutral(swigCPtr);
+    return ret;
+  }
+
+  public bool isHero() {
+    bool ret = bwapiPINVOKE.UnitType_isHero(swigCPtr);
+    return ret;
+  }
+
+  public bool isPowerup() {
+    bool ret = bwapiPINVOKE.UnitType_isPowerup(swigCPtr);
+    return ret;
+  }
+
+  public bool isBeacon() {
+    bool ret = bwapiPINVOKE.UnitType_isBeacon(swigCPtr);
+    return ret;
+  }
+
+  public bool isFlagBeacon() {
+    bool ret = bwapiPINVOKE.UnitType_isFlagBeacon(swigCPtr);
+    return ret;
+  }
+
+  public bool isSpecialBuilding() {
+    bool ret = bwapiPINVOKE.UnitType_isSpecialBuilding(swigCPtr);
+    return ret;
+  }
+
+  public bool isSpell() {
+    bool ret = bwapiPINVOKE.UnitType_isSpell(swigCPtr);
     return ret;
   }
 

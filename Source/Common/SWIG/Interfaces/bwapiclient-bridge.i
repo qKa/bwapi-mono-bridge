@@ -35,6 +35,8 @@ using System.Runtime.InteropServices;
 using BWAPI;
 %}
 
+//BWAPIC as of 3.3 introduces a position struct, this will break our compile, so.. rename
+%rename (BWAPIC_Position) BWAPIC::Position;
 
 
 %include "BWAPI/Client/BulletData.h"

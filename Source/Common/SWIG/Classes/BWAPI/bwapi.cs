@@ -1222,6 +1222,14 @@ public class bwapi {
     } 
   }
 
+  public static Error Incompatible_State {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Incompatible_State_get();
+      Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static Error Errors_Already_Researched {
     get {
       IntPtr cPtr = bwapiPINVOKE.Errors_Already_Researched_get();
@@ -1310,9 +1318,25 @@ public class bwapi {
     } 
   }
 
+  public static Error Invalid_Tile_Position {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Invalid_Tile_Position_get();
+      Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static Error Errors_Unbuildable_Location {
     get {
       IntPtr cPtr = bwapiPINVOKE.Errors_Unbuildable_Location_get();
+      Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Error Unreachable_Location {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Unreachable_Location_get();
       Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
       return ret;
     } 
@@ -1569,17 +1593,6 @@ public class bwapi {
     get {
       IntPtr cPtr = bwapiPINVOKE.ExplosionTypes_Unknown_get();
       ExplosionType ret = (cPtr == IntPtr.Zero) ? null : new ExplosionType(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public static Game Broodwar {
-    set {
-      bwapiPINVOKE.Broodwar_set(Game.getCPtr(value));
-    } 
-    get {
-      IntPtr cPtr = bwapiPINVOKE.Broodwar_get();
-      Game ret = (cPtr == IntPtr.Zero) ? null : new Game(cPtr, false);
       return ret;
     } 
   }
@@ -3652,6 +3665,17 @@ public class bwapi {
     } 
   }
 
+  public static Game Broodwar {
+    set {
+      bwapiPINVOKE.Broodwar_set(Game.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Broodwar_get();
+      Game ret = (cPtr == IntPtr.Zero) ? null : new Game(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitSizeType getUnitSizeType(string name) {
     UnitSizeType ret = new UnitSizeType(bwapiPINVOKE.getUnitSizeType(name), true);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
@@ -3738,9 +3762,49 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Jim_Raynor_Marine {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Jim_Raynor_Marine_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Terran_Ghost {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Terran_Ghost_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Sarah_Kerrigan {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Sarah_Kerrigan_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Samir_Duran {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Samir_Duran_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Infested_Duran {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Infested_Duran_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Alexei_Stukov {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Alexei_Stukov_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3754,6 +3818,14 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Jim_Raynor_Vulture {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Jim_Raynor_Vulture_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Terran_Goliath {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Terran_Goliath_get();
@@ -3762,9 +3834,25 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Alan_Schezar {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Alan_Schezar_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Terran_Siege_Tank_Tank_Mode {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Terran_Siege_Tank_Tank_Mode_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Edmund_Duke_Tank_Mode {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Edmund_Duke_Tank_Mode_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3786,9 +3874,25 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Tom_Kazansky {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Tom_Kazansky_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Terran_Science_Vessel {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Terran_Science_Vessel_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Magellan {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Magellan_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3805,6 +3909,38 @@ public class bwapi {
   public static UnitType UnitTypes_Terran_Battlecruiser {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Terran_Battlecruiser_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Arcturus_Mengsk {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Arcturus_Mengsk_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Hyperion {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Hyperion_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Norad_II {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Norad_II_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Gerard_DuGalle {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Gerard_DuGalle_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3834,9 +3970,25 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Edmund_Duke_Siege_Mode {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Edmund_Duke_Siege_Mode_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Terran_Firebat {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Terran_Firebat_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Gui_Montag {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Gui_Montag_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3853,6 +4005,14 @@ public class bwapi {
   public static UnitType UnitTypes_Terran_Medic {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Terran_Medic_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Terran_Civilian {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Terran_Civilian_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3882,6 +4042,22 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Devouring_One {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Devouring_One_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Infested_Kerrigan {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Infested_Kerrigan_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Zerg_Hydralisk {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Zerg_Hydralisk_get();
@@ -3890,9 +4066,25 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Hunter_Killer {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Hunter_Killer_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Zerg_Ultralisk {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Zerg_Ultralisk_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Torrasque {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Torrasque_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3922,9 +4114,25 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Yggdrasill {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Yggdrasill_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Zerg_Mutalisk {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Zerg_Mutalisk_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Kukulza_Mutalisk {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Kukulza_Mutalisk_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3938,6 +4146,14 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Kukulza_Guardian {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Kukulza_Guardian_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Zerg_Queen {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Zerg_Queen_get();
@@ -3946,9 +4162,25 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Matriarch {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Matriarch_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Zerg_Defiler {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Zerg_Defiler_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Unclean_One {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Unclean_One_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -3994,9 +4226,33 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Raszagal {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Raszagal_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Protoss_Dark_Templar {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Protoss_Dark_Templar_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Dark_Templar {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Dark_Templar_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Zeratul {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Zeratul_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4034,9 +4290,25 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Fenix_Zealot {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Fenix_Zealot_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Protoss_Dragoon {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Protoss_Dragoon_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Fenix_Dragoon {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Fenix_Dragoon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4050,9 +4322,33 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Tassadar {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Tassadar_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Aldaris {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Aldaris_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Protoss_Archon {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Protoss_Archon_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Tassadar_Zeratul_Archon {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Tassadar_Zeratul_Archon_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4074,6 +4370,22 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Mojo {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Mojo_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Artanis {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Artanis_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Protoss_Arbiter {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Protoss_Arbiter_get();
@@ -4082,9 +4394,25 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Hero_Danimoth {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Danimoth_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Protoss_Carrier {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Protoss_Carrier_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Gantrithor {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Gantrithor_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4101,6 +4429,14 @@ public class bwapi {
   public static UnitType UnitTypes_Protoss_Reaver {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Protoss_Reaver_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Hero_Warbringer {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hero_Warbringer_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4738,9 +5074,113 @@ public class bwapi {
     } 
   }
 
+  public static UnitType Special_Zerg_Beacon {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Special_Zerg_Beacon_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Special_Terran_Beacon {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Special_Terran_Beacon_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Special_Protoss_Beacon {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Special_Protoss_Beacon_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Special_Zerg_Flag_Beacon {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Special_Zerg_Flag_Beacon_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Special_Terran_Flag_Beacon {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Special_Terran_Flag_Beacon_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Special_Protoss_Flag_Beacon {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Special_Protoss_Flag_Beacon_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Spell_Dark_Swarm {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Spell_Dark_Swarm_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Powerup_Uraj_Crystal {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Powerup_Uraj_Crystal_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Powerup_Khalis_Crystal {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Powerup_Khalis_Crystal_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Powerup_Flag {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Powerup_Flag_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Powerup_Young_Chrysalis {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Powerup_Young_Chrysalis_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Powerup_Psi_Emitter {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Powerup_Psi_Emitter_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Powerup_Data_Disk {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Powerup_Data_Disk_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Powerup_Khaydarin_Crystal {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Powerup_Khaydarin_Crystal_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -4795,6 +5235,14 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Gauss_Rifle_Jim_Raynor {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Gauss_Rifle_Jim_Raynor_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_C_10_Canister_Rifle {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_C_10_Canister_Rifle_get();
@@ -4803,9 +5251,49 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType C_10_Canister_Rifle_Sarah_Kerrigan {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.C_10_Canister_Rifle_Sarah_Kerrigan_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType C_10_Canister_Rifle_Samir_Duran {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.C_10_Canister_Rifle_Samir_Duran_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType C_10_Canister_Rifle_Infested_Duran {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.C_10_Canister_Rifle_Infested_Duran_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType C_10_Canister_Rifle_Alexei_Stukov {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.C_10_Canister_Rifle_Alexei_Stukov_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Fragmentation_Grenade {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Fragmentation_Grenade_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Fragmentation_Grenade_Jim_Raynor {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Fragmentation_Grenade_Jim_Raynor_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4827,6 +5315,14 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Twin_Autocannons_Alan_Schezar {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Twin_Autocannons_Alan_Schezar_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Hellfire_Missile_Pack {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Hellfire_Missile_Pack_get();
@@ -4835,9 +5331,25 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Hellfire_Missile_Pack_Alan_Schezar {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Hellfire_Missile_Pack_Alan_Schezar_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Arclite_Cannon {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Arclite_Cannon_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Arclite_Cannon_Edmund_Duke {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Arclite_Cannon_Edmund_Duke_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4859,9 +5371,25 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Gemini_Missiles_Tom_Kazansky {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Gemini_Missiles_Tom_Kazansky_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Burst_Lasers {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Burst_Lasers_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Burst_Lasers_Tom_Kazansky {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Burst_Lasers_Tom_Kazansky_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4875,9 +5403,41 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType ATS_Laser_Battery_Hero {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.ATS_Laser_Battery_Hero_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType ATS_Laser_Battery_Hyperion {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.ATS_Laser_Battery_Hyperion_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_ATA_Laser_Battery {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_ATA_Laser_Battery_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType ATA_Laser_Battery_Hero {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.ATA_Laser_Battery_Hero_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType ATA_Laser_Battery_Hyperion {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.ATA_Laser_Battery_Hyperion_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4891,9 +5451,25 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Flame_Thrower_Gui_Montag {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Flame_Thrower_Gui_Montag_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Arclite_Shock_Cannon {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Arclite_Shock_Cannon_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Arclite_Shock_Cannon_Edmund_Duke {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Arclite_Shock_Cannon_Edmund_Duke_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4915,6 +5491,22 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Claws_Devouring_One {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Claws_Devouring_One_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Claws_Infested_Kerrigan {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Claws_Infested_Kerrigan_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Needle_Spines {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Needle_Spines_get();
@@ -4923,9 +5515,25 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Needle_Spines_Hunter_Killer {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Needle_Spines_Hunter_Killer_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Kaiser_Blades {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Kaiser_Blades_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Kaiser_Blades_Torrasque {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Kaiser_Blades_Torrasque_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -4955,9 +5563,25 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Acid_Spore_Kukulza {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Acid_Spore_Kukulza_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Glave_Wurm {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Glave_Wurm_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Glave_Wurm_Kukulza {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Glave_Wurm_Kukulza_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5011,9 +5635,33 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Psi_Blades_Fenix {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Psi_Blades_Fenix_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Phase_Disruptor {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Phase_Disruptor_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Phase_Disruptor_Fenix {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Phase_Disruptor_Fenix_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Psi_Assault {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Psi_Assault_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5027,9 +5675,33 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Psionic_Shockwave_TZ_Archon {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Psionic_Shockwave_TZ_Archon_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Dual_Photon_Blasters {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Dual_Photon_Blasters_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Dual_Photon_Blasters_Mojo {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Dual_Photon_Blasters_Mojo_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Dual_Photon_Blasters_Artanis {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Dual_Photon_Blasters_Artanis_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5043,9 +5715,33 @@ public class bwapi {
     } 
   }
 
+  public static WeaponType Anti_Matter_Missiles_Mojo {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Anti_Matter_Missiles_Mojo_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Anti_Matter_Missiles_Artanis {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Anti_Matter_Missiles_Artanis_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static WeaponType WeaponTypes_Phase_Disruptor_Cannon {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Phase_Disruptor_Cannon_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Phase_Disruptor_Cannon_Danimoth {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Phase_Disruptor_Cannon_Danimoth_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
@@ -5118,6 +5814,22 @@ public class bwapi {
   public static WeaponType WeaponTypes_Warp_Blades {
     get {
       IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Warp_Blades_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Warp_Blades_Hero {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Warp_Blades_Hero_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType Warp_Blades_Zeratul {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Warp_Blades_Zeratul_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 
