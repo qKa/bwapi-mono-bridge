@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5CCAD223-24DC-475F-AD0F-8822D13C42FA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>monobridgeai_interop</RootNamespace>
+    <AssemblyName>monobridgeai-interop</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\David\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper.cs" />
+    <Compile Include="IStarcraftBot.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="swig-classes\BWAPI\AIModule.cs" />
+    <Compile Include="swig-classes\BWAPI\Bullet.cs" />
+    <Compile Include="swig-classes\BWAPI\BulletPtrSet.cs" />
+    <Compile Include="swig-classes\BWAPI\BulletType.cs" />
+    <Compile Include="swig-classes\BWAPI\BulletTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPI\bwapi.cs" />
+    <Compile Include="swig-classes\BWAPI\bwapiPINVOKE.cs" />
+    <Compile Include="swig-classes\BWAPI\Color.cs" />
+    <Compile Include="swig-classes\BWAPI\DamageType.cs" />
+    <Compile Include="swig-classes\BWAPI\DamageTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPI\Enum.cs" />
+    <Compile Include="swig-classes\BWAPI\Error.cs" />
+    <Compile Include="swig-classes\BWAPI\ErrorSet.cs" />
+    <Compile Include="swig-classes\BWAPI\Event.cs" />
+    <Compile Include="swig-classes\BWAPI\EventList.cs" />
+    <Compile Include="swig-classes\BWAPI\EventType_Enum.cs" />
+    <Compile Include="swig-classes\BWAPI\ExplosionType.cs" />
+    <Compile Include="swig-classes\BWAPI\ExplosionTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPI\Flag_Enum.cs" />
+    <Compile Include="swig-classes\BWAPI\Force.cs" />
+    <Compile Include="swig-classes\BWAPI\ForcePtrSet.cs" />
+    <Compile Include="swig-classes\BWAPI\Game.cs" />
+    <Compile Include="swig-classes\BWAPI\GameType.cs" />
+    <Compile Include="swig-classes\BWAPI\GameTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPI\Key.cs" />
+    <Compile Include="swig-classes\BWAPI\Latency_Enum.cs" />
+    <Compile Include="swig-classes\BWAPI\MouseButton.cs" />
+    <Compile Include="swig-classes\BWAPI\Order.cs" />
+    <Compile Include="swig-classes\BWAPI\OrderSet.cs" />
+    <Compile Include="swig-classes\BWAPI\Player.cs" />
+    <Compile Include="swig-classes\BWAPI\PlayerPtrSet.cs" />
+    <Compile Include="swig-classes\BWAPI\PlayerType.cs" />
+    <Compile Include="swig-classes\BWAPI\PlayerTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPI\Position.cs" />
+    <Compile Include="swig-classes\BWAPI\PositionPair.cs" />
+    <Compile Include="swig-classes\BWAPI\PositionVector.cs" />
+    <Compile Include="swig-classes\BWAPI\Race.cs" />
+    <Compile Include="swig-classes\BWAPI\RaceSet.cs" />
+    <Compile Include="swig-classes\BWAPI\SWIGTYPE_p_int.cs" />
+    <Compile Include="swig-classes\BWAPI\SWIGTYPE_p_void.cs" />
+    <Compile Include="swig-classes\BWAPI\TechType.cs" />
+    <Compile Include="swig-classes\BWAPI\TechTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPI\TilePosition.cs" />
+    <Compile Include="swig-classes\BWAPI\TilePositionDoubleMap.cs" />
+    <Compile Include="swig-classes\BWAPI\TilePositionDoublePair.cs" />
+    <Compile Include="swig-classes\BWAPI\TilePositionSet.cs" />
+    <Compile Include="swig-classes\BWAPI\TilePositionVector.cs" />
+    <Compile Include="swig-classes\BWAPI\Unit.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitCommand.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitCommandType.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitCommandTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitPtrSet.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitSizeType.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitSizeTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitType.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitTypeIntMap.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitTypeIntPair.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitTypeList.cs" />
+    <Compile Include="swig-classes\BWAPI\UnitTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPI\UpgradeType.cs" />
+    <Compile Include="swig-classes\BWAPI\UpgradeTypeSet.cs" />
+    <Compile Include="swig-classes\BWAPI\WeaponType.cs" />
+    <Compile Include="swig-classes\BWAPI\WeaponTypeSet.cs" />
+    <Compile Include="swig-classes\BWTA\BaseLocation.cs" />
+    <Compile Include="swig-classes\BWTA\BaseLocationPtrSet.cs" />
+    <Compile Include="swig-classes\BWTA\bwta.cs" />
+    <Compile Include="swig-classes\BWTA\bwtaPINVOKE.cs" />
+    <Compile Include="swig-classes\BWTA\Chokepoint.cs" />
+    <Compile Include="swig-classes\BWTA\ChokepointPtrSet.cs" />
+    <Compile Include="swig-classes\BWTA\Polygon.cs" />
+    <Compile Include="swig-classes\BWTA\PolygonPtrSet.cs" />
+    <Compile Include="swig-classes\BWTA\PolygonVector.cs" />
+    <Compile Include="swig-classes\BWTA\RectangleArrayDouble.cs" />
+    <Compile Include="swig-classes\BWTA\Region.cs" />
+    <Compile Include="swig-classes\BWTA\RegionPtrRegionPtrPair.cs" />
+    <Compile Include="swig-classes\BWTA\RegionPtrSet.cs" />
+    <Compile Include="swig-classes\BWTA\SWIGTYPE_p_double.cs" />
+    <Compile Include="swig-classes\BWTA\SWIGTYPE_p_FILE.cs" />
+    <Compile Include="user-classes\unit-extended.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy /y $(TargetPath) $(SolutionDir)\release</PostBuildEvent>
+  </PropertyGroup>
+</Project>
