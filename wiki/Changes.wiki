@@ -1,4 +1,9 @@
 #summary Changelog.
+== Changes in 3.3a ==
+  * Compatible with version 3.3 beta of BWAPI
+  * BWAPI, BWTA and BWAPIC namespaces are now in the SWIG namespace
+  * Project Source restructure for quicker updates and more shared code between client and embedded.
+
 
 == Changes in 3.2b ==
   * Changed bwapi-clr and testbot project to be x86 only, so that they work on x64 systems.
