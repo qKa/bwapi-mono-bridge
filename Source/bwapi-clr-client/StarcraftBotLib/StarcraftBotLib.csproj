@@ -65,6 +65,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>copy /y  $(ProjectDir)$(OutDir)StarcraftBotLib.dll $(SolutionDir)..\..\Release\Libs\client</PostBuildEvent>
+    <PostBuildEvent>copy /y  "$(ProjectDir)$(OutDir)StarcraftBotLib.dll" "$(SolutionDir)..\..\Release\Libs\client"</PostBuildEvent>
   </PropertyGroup>
 </Project>
