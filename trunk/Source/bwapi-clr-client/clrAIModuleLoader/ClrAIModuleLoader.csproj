@@ -31,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -89,6 +90,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>copy /y  $(ProjectDir)$(OutDir)ClrAIModuleLoader.exe $(SolutionDir)..\..\Release\Libs\client</PostBuildEvent>
+    <PostBuildEvent>copy /y  "$(ProjectDir)$(OutDir)ClrAIModuleLoader.exe" "$(SolutionDir)..\..\Release\Libs\client"</PostBuildEvent>
   </PropertyGroup>
 </Project>
