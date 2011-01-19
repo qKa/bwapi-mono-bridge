@@ -206,7 +206,7 @@ namespace BWTA
     {
       for (unsigned int x = 0; x < this->getWidth(); x++)
       {
-        char ch = (char)this->getColumn(x)[y];
+        char ch = (char) this->getColumn(x)[y];
         fprintf_s(f, "%c", ch);
       }
       fprintf_s(f, "\n");

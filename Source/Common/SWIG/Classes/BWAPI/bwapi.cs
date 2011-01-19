@@ -16,6 +16,16 @@ public class bwapi {
     bwapiPINVOKE.BWAPI_init();
   }
 
+  public static int BWAPI_getRevision() {
+    int ret = bwapiPINVOKE.BWAPI_getRevision();
+    return ret;
+  }
+
+  public static bool BWAPI_isDebug() {
+    bool ret = bwapiPINVOKE.BWAPI_isDebug();
+    return ret;
+  }
+
   public static GameType getGameType(string name) {
     GameType ret = new GameType(bwapiPINVOKE.getGameType(name), true);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
@@ -2580,9 +2590,9 @@ public class bwapi {
     } 
   }
 
-  public static Order Orders_CTFCOP1 {
+  public static Order CTFCOPStarted {
     get {
-      IntPtr cPtr = bwapiPINVOKE.Orders_CTFCOP1_get();
+      IntPtr cPtr = bwapiPINVOKE.CTFCOPStarted_get();
       Order ret = (cPtr == IntPtr.Zero) ? null : new Order(cPtr, false);
       return ret;
     } 
@@ -3649,6 +3659,14 @@ public class bwapi {
     } 
   }
 
+  public static UnitCommandType Place_COP {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Place_COP_get();
+      UnitCommandType ret = (cPtr == IntPtr.Zero) ? null : new UnitCommandType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitCommandType UnitCommandTypes_None {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitCommandTypes_None_get();
@@ -3747,6 +3765,11 @@ public class bwapi {
 
   public static UnitTypeSet allUnitTypes() {
     UnitTypeSet ret = new UnitTypeSet(bwapiPINVOKE.allUnitTypes(), false);
+    return ret;
+  }
+
+  public static UnitTypeSet allMacroTypes() {
+    UnitTypeSet ret = new UnitTypeSet(bwapiPINVOKE.allMacroTypes(), false);
     return ret;
   }
 
@@ -5194,6 +5217,38 @@ public class bwapi {
     } 
   }
 
+  public static UnitType AllUnits {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.AllUnits_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Men {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Men_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Buildings {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Buildings_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType Factories {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Factories_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Unknown {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Unknown_get();
@@ -6006,6 +6061,8 @@ public class bwapi {
   public static readonly int TILE_SIZE = bwapiPINVOKE.TILE_SIZE_get();
   public static readonly int PYLON_X_RADIUS = bwapiPINVOKE.PYLON_X_RADIUS_get();
   public static readonly int PYLON_Y_RADIUS = bwapiPINVOKE.PYLON_Y_RADIUS_get();
+  public static readonly int BWAPI_UNIT_COMMAND_TYPE_COUNT = bwapiPINVOKE.BWAPI_UNIT_COMMAND_TYPE_COUNT_get();
+  public static readonly int BWAPI_UNIT_TYPE_MAX_COUNT = bwapiPINVOKE.BWAPI_UNIT_TYPE_MAX_COUNT_get();
 }
 
 }

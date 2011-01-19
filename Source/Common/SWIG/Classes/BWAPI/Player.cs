@@ -196,6 +196,12 @@ public static bool operator !=(Player obj1, Player obj2)
     return ret;
   }
 
+  public virtual int visibleUnitCount(UnitType unit) {
+    int ret = bwapiPINVOKE.Player_visibleUnitCount(swigCPtr, UnitType.getCPtr(unit));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public virtual int completedUnitCount(UnitType unit) {
     int ret = bwapiPINVOKE.Player_completedUnitCount(swigCPtr, UnitType.getCPtr(unit));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
@@ -293,6 +299,31 @@ public static bool operator !=(Player obj1, Player obj2)
   public virtual int armor(UnitType unit) {
     int ret = bwapiPINVOKE.Player_armor(swigCPtr, UnitType.getCPtr(unit));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual int getUnitScore() {
+    int ret = bwapiPINVOKE.Player_getUnitScore(swigCPtr);
+    return ret;
+  }
+
+  public virtual int getKillScore() {
+    int ret = bwapiPINVOKE.Player_getKillScore(swigCPtr);
+    return ret;
+  }
+
+  public virtual int getBuildingScore() {
+    int ret = bwapiPINVOKE.Player_getBuildingScore(swigCPtr);
+    return ret;
+  }
+
+  public virtual int getRazingScore() {
+    int ret = bwapiPINVOKE.Player_getRazingScore(swigCPtr);
+    return ret;
+  }
+
+  public virtual int getCustomScore() {
+    int ret = bwapiPINVOKE.Player_getCustomScore(swigCPtr);
     return ret;
   }
 

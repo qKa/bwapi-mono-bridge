@@ -493,6 +493,22 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
+  public virtual Player neutral() {
+    IntPtr cPtr = bwapiPINVOKE.Game_neutral(swigCPtr);
+    Player ret = (cPtr == IntPtr.Zero) ? null : new Player(cPtr, false);
+    return ret;
+  }
+
+  public virtual PlayerPtrSet allies() {
+    PlayerPtrSet ret = new PlayerPtrSet(bwapiPINVOKE.Game_allies(swigCPtr), false);
+    return ret;
+  }
+
+  public virtual PlayerPtrSet enemies() {
+    PlayerPtrSet ret = new PlayerPtrSet(bwapiPINVOKE.Game_enemies(swigCPtr), false);
+    return ret;
+  }
+
   public virtual void setTextSize(int size) {
     bwapiPINVOKE.Game_setTextSize__SWIG_0(swigCPtr, size);
   }
@@ -501,20 +517,20 @@ public static bool operator !=(Game obj1, Game obj2)
     bwapiPINVOKE.Game_setTextSize__SWIG_1(swigCPtr);
   }
 
-  public virtual void drawText(int ctype, int x, int y, string text) {
-    bwapiPINVOKE.Game_drawText(swigCPtr, ctype, x, y, text);
+  public virtual void drawText(int ctype, int x, int y, string format) {
+    bwapiPINVOKE.Game_drawText(swigCPtr, ctype, x, y, format);
   }
 
-  public virtual void drawTextMap(int x, int y, string text) {
-    bwapiPINVOKE.Game_drawTextMap(swigCPtr, x, y, text);
+  public virtual void drawTextMap(int x, int y, string format) {
+    bwapiPINVOKE.Game_drawTextMap(swigCPtr, x, y, format);
   }
 
-  public virtual void drawTextMouse(int x, int y, string text) {
-    bwapiPINVOKE.Game_drawTextMouse(swigCPtr, x, y, text);
+  public virtual void drawTextMouse(int x, int y, string format) {
+    bwapiPINVOKE.Game_drawTextMouse(swigCPtr, x, y, format);
   }
 
-  public virtual void drawTextScreen(int x, int y, string text) {
-    bwapiPINVOKE.Game_drawTextScreen(swigCPtr, x, y, text);
+  public virtual void drawTextScreen(int x, int y, string format) {
+    bwapiPINVOKE.Game_drawTextScreen(swigCPtr, x, y, format);
   }
 
   public virtual void drawBox(int ctype, int left, int top, int right, int bottom, Color color, bool isSolid) {

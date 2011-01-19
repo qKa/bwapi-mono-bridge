@@ -116,6 +116,12 @@ public static bool operator !=(UnitCommandType obj1, UnitCommandType obj2)
     return ret;
   }
 
+  public bool opGreaterThan(UnitCommandType other) {
+    bool ret = bwapiPINVOKE.UnitCommandType_opGreaterThan(swigCPtr, UnitCommandType.getCPtr(other));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public int getID() {
     int ret = bwapiPINVOKE.UnitCommandType_getID(swigCPtr);
     return ret;

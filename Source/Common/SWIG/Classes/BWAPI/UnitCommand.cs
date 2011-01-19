@@ -85,7 +85,7 @@ public static bool operator !=(UnitCommand obj1, UnitCommand obj2)
   public UnitCommand() : this(bwapiPINVOKE.new_UnitCommand__SWIG_0(), true) {
   }
 
-  public UnitCommand(Unit source, UnitCommandType _type, Unit _target, int _x, int _y, int _extra) : this(bwapiPINVOKE.new_UnitCommand__SWIG_1(Unit.getCPtr(source), UnitCommandType.getCPtr(_type), Unit.getCPtr(_target), _x, _y, _extra), true) {
+  public UnitCommand(Unit _unit, UnitCommandType _type, Unit _target, int _x, int _y, int _extra) : this(bwapiPINVOKE.new_UnitCommand__SWIG_1(Unit.getCPtr(_unit), UnitCommandType.getCPtr(_type), Unit.getCPtr(_target), _x, _y, _extra), true) {
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -136,14 +136,14 @@ public static bool operator !=(UnitCommand obj1, UnitCommand obj2)
     return ret;
   }
 
-  public static UnitCommand setRallyPosition(Unit unit, Position target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_setRallyPosition(Unit.getCPtr(unit), Position.getCPtr(target)), true);
+  public static UnitCommand setRallyPoint(Unit unit, Position target) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_setRallyPoint__SWIG_0(Unit.getCPtr(unit), Position.getCPtr(target)), true);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static UnitCommand setRallyUnit(Unit unit, Unit target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_setRallyUnit(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
+  public static UnitCommand setRallyPoint(Unit unit, Unit target) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_setRallyPoint__SWIG_1(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
     return ret;
   }
 
@@ -316,6 +316,83 @@ public static bool operator !=(UnitCommand obj1, UnitCommand obj2)
 
   public static UnitCommand useTech(Unit unit, TechType tech, Unit target) {
     UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_useTech__SWIG_2(Unit.getCPtr(unit), TechType.getCPtr(tech), Unit.getCPtr(target)), true);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static UnitCommand placeCOP(Unit unit, TilePosition target) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_placeCOP(Unit.getCPtr(unit), TilePosition.getCPtr(target)), true);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public UnitCommandType getType() {
+    UnitCommandType ret = new UnitCommandType(bwapiPINVOKE.UnitCommand_getType(swigCPtr), true);
+    return ret;
+  }
+
+  public Unit getUnit() {
+    IntPtr cPtr = bwapiPINVOKE.UnitCommand_getUnit(swigCPtr);
+    Unit ret = (cPtr == IntPtr.Zero) ? null : new Unit(cPtr, false);
+    return ret;
+  }
+
+  public Unit getTarget() {
+    IntPtr cPtr = bwapiPINVOKE.UnitCommand_getTarget(swigCPtr);
+    Unit ret = (cPtr == IntPtr.Zero) ? null : new Unit(cPtr, false);
+    return ret;
+  }
+
+  public Position getTargetPosition() {
+    Position ret = new Position(bwapiPINVOKE.UnitCommand_getTargetPosition(swigCPtr), true);
+    return ret;
+  }
+
+  public TilePosition getTargetTilePosition() {
+    TilePosition ret = new TilePosition(bwapiPINVOKE.UnitCommand_getTargetTilePosition(swigCPtr), true);
+    return ret;
+  }
+
+  public UnitType getUnitType() {
+    UnitType ret = new UnitType(bwapiPINVOKE.UnitCommand_getUnitType(swigCPtr), true);
+    return ret;
+  }
+
+  public TechType getTechType() {
+    TechType ret = new TechType(bwapiPINVOKE.UnitCommand_getTechType(swigCPtr), true);
+    return ret;
+  }
+
+  public UpgradeType getUpgradeType() {
+    UpgradeType ret = new UpgradeType(bwapiPINVOKE.UnitCommand_getUpgradeType(swigCPtr), true);
+    return ret;
+  }
+
+  public int getSlot() {
+    int ret = bwapiPINVOKE.UnitCommand_getSlot(swigCPtr);
+    return ret;
+  }
+
+  public bool opEquals(UnitCommand other) {
+    bool ret = bwapiPINVOKE.UnitCommand_opEquals(swigCPtr, UnitCommand.getCPtr(other));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public bool opNotEquals(UnitCommand other) {
+    bool ret = bwapiPINVOKE.UnitCommand_opNotEquals(swigCPtr, UnitCommand.getCPtr(other));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public bool opLessThan(UnitCommand other) {
+    bool ret = bwapiPINVOKE.UnitCommand_opLessThan(swigCPtr, UnitCommand.getCPtr(other));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public bool opGreaterThan(UnitCommand other) {
+    bool ret = bwapiPINVOKE.UnitCommand_opGreaterThan(swigCPtr, UnitCommand.getCPtr(other));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

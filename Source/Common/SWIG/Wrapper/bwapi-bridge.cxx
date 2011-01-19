@@ -1403,6 +1403,26 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BWAPI_init() {
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_BWAPI_getRevision() {
+  int jresult ;
+  int result;
+  
+  result = (int)BWAPI::BWAPI_getRevision();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BWAPI_isDebug() {
+  unsigned int jresult ;
+  bool result;
+  
+  result = (bool)BWAPI::BWAPI_isDebug();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_GameType__SWIG_0() {
   void * jresult ;
   BWAPI::GameType *result = 0 ;
@@ -3713,11 +3733,11 @@ SWIGEXPORT double SWIGSTDCALL CSharp_Position_getDistance(void * jarg1, void * j
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_Position_getApproxDistance(void * jarg1, void * jarg2) {
-  double jresult ;
+SWIGEXPORT int SWIGSTDCALL CSharp_Position_getApproxDistance(void * jarg1, void * jarg2) {
+  int jresult ;
   BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
   BWAPI::Position *arg2 = 0 ;
-  double result;
+  int result;
   
   arg1 = (BWAPI::Position *)jarg1; 
   arg2 = (BWAPI::Position *)jarg2;
@@ -3725,7 +3745,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_Position_getApproxDistance(void * jarg1, vo
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::Position const & type is null", 0);
     return 0;
   } 
-  result = (double)((BWAPI::Position const *)arg1)->getApproxDistance((BWAPI::Position const &)*arg2);
+  result = (int)((BWAPI::Position const *)arg1)->getApproxDistance((BWAPI::Position const &)*arg2);
   jresult = result; 
   return jresult;
 }
@@ -7277,11 +7297,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Orders_CTFCOPInit_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Orders_CTFCOP1_get() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CTFCOPStarted_get() {
   void * jresult ;
   BWAPI::Order *result = 0 ;
   
-  result = (BWAPI::Order *)&BWAPI::Orders::CTFCOP1;
+  result = (BWAPI::Order *)&BWAPI::Orders::CTFCOPStarted;
   jresult = (void *)result; 
   return jresult;
 }
@@ -8202,6 +8222,26 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Player_allUnitCount(void * jarg1, void * jarg2
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_visibleUnitCount(void * jarg1, void * jarg2) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  BWAPI::UnitType *argp2 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  argp2 = (BWAPI::UnitType *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::UnitType", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)((BWAPI::Player const *)arg1)->visibleUnitCount(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT int SWIGSTDCALL CSharp_Player_completedUnitCount(void * jarg1, void * jarg2) {
   int jresult ;
   BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
@@ -8521,6 +8561,66 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Player_armor(void * jarg1, void * jarg2) {
   }
   arg2 = *argp2; 
   result = (int)((BWAPI::Player const *)arg1)->armor(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_getUnitScore(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->getUnitScore();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_getKillScore(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->getKillScore();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_getBuildingScore(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->getBuildingScore();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_getRazingScore(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->getRazingScore();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Player_getCustomScore(void * jarg1) {
+  int jresult ;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Player *)jarg1; 
+  result = (int)((BWAPI::Player const *)arg1)->getCustomScore();
   jresult = result; 
   return jresult;
 }
@@ -9551,6 +9651,16 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TilePositions_Unknown_get() {
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_BWAPI_UNIT_COMMAND_TYPE_COUNT_get() {
+  int jresult ;
+  int result;
+  
+  result = (int)(46);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnitCommandType__SWIG_0() {
   void * jresult ;
   BWAPI::UnitCommandType *result = 0 ;
@@ -9656,6 +9766,24 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitCommandType_opLessThan(void * jar
     return 0;
   } 
   result = (bool)((BWAPI::UnitCommandType const *)arg1)->operator <((BWAPI::UnitCommandType const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitCommandType_opGreaterThan(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UnitCommandType *arg1 = (BWAPI::UnitCommandType *) 0 ;
+  BWAPI::UnitCommandType *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitCommandType *)jarg1; 
+  arg2 = (BWAPI::UnitCommandType *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UnitCommandType const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::UnitCommandType const *)arg1)->operator >((BWAPI::UnitCommandType const &)*arg2);
   jresult = result; 
   return jresult;
 }
@@ -10154,6 +10282,16 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommandTypes_Use_Tech_Unit_get() {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_Place_COP_get() {
+  void * jresult ;
+  BWAPI::UnitCommandType *result = 0 ;
+  
+  result = (BWAPI::UnitCommandType *)&BWAPI::UnitCommandTypes::Place_COP;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommandTypes_None_get() {
   void * jresult ;
   BWAPI::UnitCommandType *result = 0 ;
@@ -10374,7 +10512,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_upgrade(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_setRallyPosition(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_setRallyPoint__SWIG_0(void * jarg1, void * jarg2) {
   void * jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   BWAPI::Position arg2 ;
@@ -10388,13 +10526,13 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_setRallyPosition(void * jarg1, 
     return 0;
   }
   arg2 = *argp2; 
-  result = BWAPI::UnitCommand::setRallyPosition(arg1,arg2);
+  result = BWAPI::UnitCommand::setRallyPoint(arg1,arg2);
   jresult = new BWAPI::UnitCommand((const BWAPI::UnitCommand &)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_setRallyUnit(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_setRallyPoint__SWIG_1(void * jarg1, void * jarg2) {
   void * jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
@@ -10402,7 +10540,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_setRallyUnit(void * jarg1, void
   
   arg1 = (BWAPI::Unit *)jarg1; 
   arg2 = (BWAPI::Unit *)jarg2; 
-  result = BWAPI::UnitCommand::setRallyUnit(arg1,arg2);
+  result = BWAPI::UnitCommand::setRallyPoint(arg1,arg2);
   jresult = new BWAPI::UnitCommand((const BWAPI::UnitCommand &)result); 
   return jresult;
 }
@@ -10888,6 +11026,206 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_useTech__SWIG_2(void * jarg1, v
   arg3 = (BWAPI::Unit *)jarg3; 
   result = BWAPI::UnitCommand::useTech(arg1,arg2,arg3);
   jresult = new BWAPI::UnitCommand((const BWAPI::UnitCommand &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_placeCOP(void * jarg1, void * jarg2) {
+  void * jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::TilePosition arg2 ;
+  BWAPI::TilePosition *argp2 ;
+  BWAPI::UnitCommand result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  argp2 = (BWAPI::TilePosition *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = BWAPI::UnitCommand::placeCOP(arg1,arg2);
+  jresult = new BWAPI::UnitCommand((const BWAPI::UnitCommand &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_getType(void * jarg1) {
+  void * jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UnitCommandType result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  result = ((BWAPI::UnitCommand const *)arg1)->getType();
+  jresult = new BWAPI::UnitCommandType((const BWAPI::UnitCommandType &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_getUnit(void * jarg1) {
+  void * jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::Unit *result = 0 ;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  result = (BWAPI::Unit *)((BWAPI::UnitCommand const *)arg1)->getUnit();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_getTarget(void * jarg1) {
+  void * jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::Unit *result = 0 ;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  result = (BWAPI::Unit *)((BWAPI::UnitCommand const *)arg1)->getTarget();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_getTargetPosition(void * jarg1) {
+  void * jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::Position result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  result = ((BWAPI::UnitCommand const *)arg1)->getTargetPosition();
+  jresult = new BWAPI::Position((const BWAPI::Position &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_getTargetTilePosition(void * jarg1) {
+  void * jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::TilePosition result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  result = ((BWAPI::UnitCommand const *)arg1)->getTargetTilePosition();
+  jresult = new BWAPI::TilePosition((const BWAPI::TilePosition &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_getUnitType(void * jarg1) {
+  void * jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UnitType result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  result = ((BWAPI::UnitCommand const *)arg1)->getUnitType();
+  jresult = new BWAPI::UnitType((const BWAPI::UnitType &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_getTechType(void * jarg1) {
+  void * jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::TechType result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  result = ((BWAPI::UnitCommand const *)arg1)->getTechType();
+  jresult = new BWAPI::TechType((const BWAPI::TechType &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UnitCommand_getUpgradeType(void * jarg1) {
+  void * jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UpgradeType result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  result = ((BWAPI::UnitCommand const *)arg1)->getUpgradeType();
+  jresult = new BWAPI::UpgradeType((const BWAPI::UpgradeType &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UnitCommand_getSlot(void * jarg1) {
+  int jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  result = (int)((BWAPI::UnitCommand const *)arg1)->getSlot();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitCommand_opEquals(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UnitCommand *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  arg2 = (BWAPI::UnitCommand *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UnitCommand const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::UnitCommand const *)arg1)->operator ==((BWAPI::UnitCommand const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitCommand_opNotEquals(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UnitCommand *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  arg2 = (BWAPI::UnitCommand *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UnitCommand const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::UnitCommand const *)arg1)->operator !=((BWAPI::UnitCommand const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitCommand_opLessThan(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UnitCommand *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  arg2 = (BWAPI::UnitCommand *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UnitCommand const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::UnitCommand const *)arg1)->operator <((BWAPI::UnitCommand const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnitCommand_opGreaterThan(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UnitCommand *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::UnitCommand *)jarg1; 
+  arg2 = (BWAPI::UnitCommand *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "BWAPI::UnitCommand const & type is null", 0);
+    return 0;
+  } 
+  result = (bool)((BWAPI::UnitCommand const *)arg1)->operator >((BWAPI::UnitCommand const &)*arg2);
+  jresult = result; 
   return jresult;
 }
 
@@ -12178,6 +12516,42 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Game_enemy(void * jarg1) {
   
   arg1 = (BWAPI::Game *)jarg1; 
   result = (BWAPI::Player *)(arg1)->enemy();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Game_neutral(void * jarg1) {
+  void * jresult ;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  BWAPI::Player *result = 0 ;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  result = (BWAPI::Player *)(arg1)->neutral();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Game_allies(void * jarg1) {
+  void * jresult ;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  std::set< BWAPI::Player * > *result = 0 ;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  result = (std::set< BWAPI::Player * > *) &(arg1)->allies();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Game_enemies(void * jarg1) {
+  void * jresult ;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  std::set< BWAPI::Player * > *result = 0 ;
+  
+  arg1 = (BWAPI::Game *)jarg1; 
+  result = (std::set< BWAPI::Player * > *) &(arg1)->enemies();
   jresult = (void *)result; 
   return jresult;
 }
@@ -13673,14 +14047,26 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_hasPath__SWIG_1(void * jarg1, vo
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Unit_getLastOrderFrame(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Unit_getLastCommandFrame(void * jarg1) {
   int jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   int result;
   
   arg1 = (BWAPI::Unit *)jarg1; 
-  result = (int)((BWAPI::Unit const *)arg1)->getLastOrderFrame();
+  result = (int)((BWAPI::Unit const *)arg1)->getLastCommandFrame();
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getLastCommand(void * jarg1) {
+  void * jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::UnitCommand result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  result = ((BWAPI::Unit const *)arg1)->getLastCommand();
+  jresult = new BWAPI::UnitCommand((const BWAPI::UnitCommand &)result); 
   return jresult;
 }
 
@@ -13772,6 +14158,18 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Unit_getKillCount(void * jarg1) {
   
   arg1 = (BWAPI::Unit *)jarg1; 
   result = (int)((BWAPI::Unit const *)arg1)->getKillCount();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Unit_getAcidSporeCount(void * jarg1) {
+  int jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  int result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  result = (int)((BWAPI::Unit const *)arg1)->getAcidSporeCount();
   jresult = result; 
   return jresult;
 }
@@ -14329,6 +14727,18 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_isAttacking(void * jarg1) {
 }
 
 
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_isAttackFrame(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  result = (bool)((BWAPI::Unit const *)arg1)->isAttackFrame();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_isBeingConstructed(void * jarg1) {
   unsigned int jresult ;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -14576,6 +14986,32 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_isInterruptible(void * jarg1) {
   
   arg1 = (BWAPI::Unit *)jarg1; 
   result = (bool)((BWAPI::Unit const *)arg1)->isInterruptible();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_isInvincible(void * jarg1) {
+  unsigned int jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  result = (bool)((BWAPI::Unit const *)arg1)->isInvincible();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_isInWeaponRange(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
+  bool result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  arg2 = (BWAPI::Unit *)jarg2; 
+  result = (bool)((BWAPI::Unit const *)arg1)->isInWeaponRange(arg2);
   jresult = result; 
   return jresult;
 }
@@ -15613,6 +16049,26 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Unit_getClientInfo(void * jarg1) {
 }
 
 
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Unit_placeCOP(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::TilePosition arg2 ;
+  BWAPI::TilePosition *argp2 ;
+  bool result;
+  
+  arg1 = (BWAPI::Unit *)jarg1; 
+  argp2 = (BWAPI::TilePosition *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BWAPI::TilePosition", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (bool)(arg1)->placeCOP(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_Unit(void * jarg1) {
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   
@@ -15850,6 +16306,16 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitSizeTypes_Unknown_get() {
   
   result = (BWAPI::UnitSizeType *)&BWAPI::UnitSizeTypes::Unknown;
   jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_BWAPI_UNIT_TYPE_MAX_COUNT_get() {
+  int jresult ;
+  int result;
+  
+  result = (int)(234);
+  jresult = result; 
   return jresult;
 }
 
@@ -16857,6 +17323,16 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_allUnitTypes() {
   std::set< BWAPI::UnitType > *result = 0 ;
   
   result = (std::set< BWAPI::UnitType > *) &BWAPI::UnitTypes::allUnitTypes();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_allMacroTypes() {
+  void * jresult ;
+  std::set< BWAPI::UnitType > *result = 0 ;
+  
+  result = (std::set< BWAPI::UnitType > *) &BWAPI::UnitTypes::allMacroTypes();
   jresult = (void *)result; 
   return jresult;
 }
@@ -18662,6 +19138,46 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnitTypes_None_get() {
   BWAPI::UnitType *result = 0 ;
   
   result = (BWAPI::UnitType *)&BWAPI::UnitTypes::None;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_AllUnits_get() {
+  void * jresult ;
+  BWAPI::UnitType *result = 0 ;
+  
+  result = (BWAPI::UnitType *)&BWAPI::UnitTypes::AllUnits;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Men_get() {
+  void * jresult ;
+  BWAPI::UnitType *result = 0 ;
+  
+  result = (BWAPI::UnitType *)&BWAPI::UnitTypes::Men;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Buildings_get() {
+  void * jresult ;
+  BWAPI::UnitType *result = 0 ;
+  
+  result = (BWAPI::UnitType *)&BWAPI::UnitTypes::Buildings;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Factories_get() {
+  void * jresult ;
+  BWAPI::UnitType *result = 0 ;
+  
+  result = (BWAPI::UnitType *)&BWAPI::UnitTypes::Factories;
   jresult = (void *)result; 
   return jresult;
 }

@@ -280,6 +280,17 @@ public static bool operator !=(PlayerData obj1, PlayerData obj2)
     } 
   }
 
+  public SWIGTYPE_p_int visibleUnitCount {
+    set {
+      bwapiclientPINVOKE.PlayerData_visibleUnitCount_set(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiclientPINVOKE.PlayerData_visibleUnitCount_get(swigCPtr);
+      SWIGTYPE_p_int ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_int(cPtr, false);
+      return ret;
+    } 
+  }
+
   public SWIGTYPE_p_int completedUnitCount {
     set {
       bwapiclientPINVOKE.PlayerData_completedUnitCount_set(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
@@ -373,6 +384,56 @@ public static bool operator !=(PlayerData obj1, PlayerData obj2)
     } 
     get {
       int ret = bwapiclientPINVOKE.PlayerData_color_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int totalUnitScore {
+    set {
+      bwapiclientPINVOKE.PlayerData_totalUnitScore_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.PlayerData_totalUnitScore_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int totalKillScore {
+    set {
+      bwapiclientPINVOKE.PlayerData_totalKillScore_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.PlayerData_totalKillScore_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int totalBuildingScore {
+    set {
+      bwapiclientPINVOKE.PlayerData_totalBuildingScore_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.PlayerData_totalBuildingScore_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int totalRazingScore {
+    set {
+      bwapiclientPINVOKE.PlayerData_totalRazingScore_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.PlayerData_totalRazingScore_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int customScore {
+    set {
+      bwapiclientPINVOKE.PlayerData_customScore_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.PlayerData_customScore_get(swigCPtr);
       return ret;
     } 
   }

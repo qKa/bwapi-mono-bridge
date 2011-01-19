@@ -245,6 +245,16 @@ public static bool operator !=(UnitData obj1, UnitData obj2)
     } 
   }
 
+  public int acidSporeCount {
+    set {
+      bwapiclientPINVOKE.UnitData_acidSporeCount_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.UnitData_acidSporeCount_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public int scarabCount {
     set {
       bwapiclientPINVOKE.UnitData_scarabCount_set(swigCPtr, value);
@@ -696,6 +706,16 @@ public static bool operator !=(UnitData obj1, UnitData obj2)
     } 
   }
 
+  public bool isAttackFrame {
+    set {
+      bwapiclientPINVOKE.UnitData_isAttackFrame_set(swigCPtr, value);
+    } 
+    get {
+      bool ret = bwapiclientPINVOKE.UnitData_isAttackFrame_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public bool isBeingGathered {
     set {
       bwapiclientPINVOKE.UnitData_isBeingGathered_set(swigCPtr, value);
@@ -826,6 +846,16 @@ public static bool operator !=(UnitData obj1, UnitData obj2)
     } 
   }
 
+  public bool isInvincible {
+    set {
+      bwapiclientPINVOKE.UnitData_isInvincible_set(swigCPtr, value);
+    } 
+    get {
+      bool ret = bwapiclientPINVOKE.UnitData_isInvincible_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public bool isLifted {
     set {
       bwapiclientPINVOKE.UnitData_isLifted_set(swigCPtr, value);
@@ -933,6 +963,16 @@ public static bool operator !=(UnitData obj1, UnitData obj2)
     get {
       IntPtr cPtr = bwapiclientPINVOKE.UnitData_isVisible_get(swigCPtr);
       SWIGTYPE_p_bool ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_bool(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public int buttonset {
+    set {
+      bwapiclientPINVOKE.UnitData_buttonset_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.UnitData_buttonset_get(swigCPtr);
       return ret;
     } 
   }
