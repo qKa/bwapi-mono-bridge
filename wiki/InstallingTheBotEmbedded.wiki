@@ -7,7 +7,7 @@ This is a quick walkthrough of installing the bwapi-mono-bridge skeleton AI in e
 
 = Details =
 
-  # Follow all directions for obtaining and setting up the BWAPI 3.3 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
+  # Follow all directions for obtaining and setting up the BWAPI 3.4 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
   # Download the zip file from the downloads tab
   # Extract the zip to a new folder
   # open the StarcraftBot solution from the starcraftbot folder with vs 2008 sp1
