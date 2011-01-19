@@ -445,12 +445,12 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
     return ret;
   }
 
-  public override void printf(string text) {
-    bwapiclientPINVOKE.GameImpl_printf(swigCPtr, text);
+  public override void printf(string format) {
+    bwapiclientPINVOKE.GameImpl_printf(swigCPtr, format);
   }
 
-  public override void sendText(string text) {
-    bwapiclientPINVOKE.GameImpl_sendText(swigCPtr, text);
+  public override void sendText(string format) {
+    bwapiclientPINVOKE.GameImpl_sendText(swigCPtr, format);
   }
 
   public override void sendTextEx(bool toAllies, string format) {
@@ -538,6 +538,22 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
     return ret;
   }
 
+  public override Player neutral() {
+    IntPtr cPtr = bwapiclientPINVOKE.GameImpl_neutral(swigCPtr);
+    Player ret = (cPtr == IntPtr.Zero) ? null : new Player(cPtr, false);
+    return ret;
+  }
+
+  public override PlayerPtrSet allies() {
+    PlayerPtrSet ret = new PlayerPtrSet(bwapiclientPINVOKE.GameImpl_allies(swigCPtr), false);
+    return ret;
+  }
+
+  public override PlayerPtrSet enemies() {
+    PlayerPtrSet ret = new PlayerPtrSet(bwapiclientPINVOKE.GameImpl_enemies(swigCPtr), false);
+    return ret;
+  }
+
   public override void setTextSize(int size) {
     bwapiclientPINVOKE.GameImpl_setTextSize__SWIG_0(swigCPtr, size);
   }
@@ -546,20 +562,20 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
     bwapiclientPINVOKE.GameImpl_setTextSize__SWIG_1(swigCPtr);
   }
 
-  public override void drawText(int ctype, int x, int y, string text) {
-    bwapiclientPINVOKE.GameImpl_drawText(swigCPtr, ctype, x, y, text);
+  public override void drawText(int ctype, int x, int y, string format) {
+    bwapiclientPINVOKE.GameImpl_drawText(swigCPtr, ctype, x, y, format);
   }
 
-  public override void drawTextMap(int x, int y, string text) {
-    bwapiclientPINVOKE.GameImpl_drawTextMap(swigCPtr, x, y, text);
+  public override void drawTextMap(int x, int y, string format) {
+    bwapiclientPINVOKE.GameImpl_drawTextMap(swigCPtr, x, y, format);
   }
 
-  public override void drawTextMouse(int x, int y, string text) {
-    bwapiclientPINVOKE.GameImpl_drawTextMouse(swigCPtr, x, y, text);
+  public override void drawTextMouse(int x, int y, string format) {
+    bwapiclientPINVOKE.GameImpl_drawTextMouse(swigCPtr, x, y, format);
   }
 
-  public override void drawTextScreen(int x, int y, string text) {
-    bwapiclientPINVOKE.GameImpl_drawTextScreen(swigCPtr, x, y, text);
+  public override void drawTextScreen(int x, int y, string format) {
+    bwapiclientPINVOKE.GameImpl_drawTextScreen(swigCPtr, x, y, format);
   }
 
   public override void drawBox(int ctype, int left, int top, int right, int bottom, Color color, bool isSolid) {

@@ -29,6 +29,7 @@ using namespace BWAPI;
 %rename (opAssign) *::operator =;
 %rename (opEquals) *::operator ==;
 %rename (opLessThan) *::operator <;
+%rename (opGreaterThan) *::operator >;
 %rename (opMinus) *::operator -;
 %rename (opNotEquals) *::operator !=;                         
 %rename (opPlus) *::operator +;

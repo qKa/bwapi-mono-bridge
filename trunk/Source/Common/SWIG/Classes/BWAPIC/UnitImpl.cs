@@ -216,8 +216,13 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
     return ret;
   }
 
-  public override int getLastOrderFrame() {
-    int ret = bwapiclientPINVOKE.UnitImpl_getLastOrderFrame(swigCPtr);
+  public override int getLastCommandFrame() {
+    int ret = bwapiclientPINVOKE.UnitImpl_getLastCommandFrame(swigCPtr);
+    return ret;
+  }
+
+  public override UnitCommand getLastCommand() {
+    UnitCommand ret = new UnitCommand(bwapiclientPINVOKE.UnitImpl_getLastCommand(swigCPtr), true);
     return ret;
   }
 
@@ -254,6 +259,11 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
 
   public override int getKillCount() {
     int ret = bwapiclientPINVOKE.UnitImpl_getKillCount(swigCPtr);
+    return ret;
+  }
+
+  public override int getAcidSporeCount() {
+    int ret = bwapiclientPINVOKE.UnitImpl_getAcidSporeCount(swigCPtr);
     return ret;
   }
 
@@ -497,6 +507,11 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
     return ret;
   }
 
+  public override bool isAttackFrame() {
+    bool ret = bwapiclientPINVOKE.UnitImpl_isAttackFrame(swigCPtr);
+    return ret;
+  }
+
   public override bool isBeingConstructed() {
     bool ret = bwapiclientPINVOKE.UnitImpl_isBeingConstructed(swigCPtr);
     return ret;
@@ -599,6 +614,16 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
 
   public override bool isInterruptible() {
     bool ret = bwapiclientPINVOKE.UnitImpl_isInterruptible(swigCPtr);
+    return ret;
+  }
+
+  public override bool isInvincible() {
+    bool ret = bwapiclientPINVOKE.UnitImpl_isInvincible(swigCPtr);
+    return ret;
+  }
+
+  public override bool isInWeaponRange(Unit target) {
+    bool ret = bwapiclientPINVOKE.UnitImpl_isInWeaponRange(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
@@ -972,6 +997,12 @@ public static bool operator !=(UnitImpl obj1, UnitImpl obj2)
   public override SWIGTYPE_p_void getClientInfo() {
     IntPtr cPtr = bwapiclientPINVOKE.UnitImpl_getClientInfo(swigCPtr);
     SWIGTYPE_p_void ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
+    return ret;
+  }
+
+  public override bool placeCOP(TilePosition target) {
+    bool ret = bwapiclientPINVOKE.UnitImpl_placeCOP(swigCPtr, TilePosition.getCPtr(target));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

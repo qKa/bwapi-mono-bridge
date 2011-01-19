@@ -88,6 +88,26 @@ public static bool operator !=(GameData obj1, GameData obj2)
   public GameData() : this(bwapiclientPINVOKE.new_GameData(), true) {
   }
 
+  public int revision {
+    set {
+      bwapiclientPINVOKE.GameData_revision_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.GameData_revision_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public bool isDebug {
+    set {
+      bwapiclientPINVOKE.GameData_isDebug_set(swigCPtr, value);
+    } 
+    get {
+      bool ret = bwapiclientPINVOKE.GameData_isDebug_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public int instanceID {
     set {
       bwapiclientPINVOKE.GameData_instanceID_set(swigCPtr, value);
@@ -260,26 +280,6 @@ public static bool operator !=(GameData obj1, GameData obj2)
     } 
     get {
       int ret = bwapiclientPINVOKE.GameData_remainingLatencyTime_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public int revision {
-    set {
-      bwapiclientPINVOKE.GameData_revision_set(swigCPtr, value);
-    } 
-    get {
-      int ret = bwapiclientPINVOKE.GameData_revision_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public bool isDebug {
-    set {
-      bwapiclientPINVOKE.GameData_isDebug_set(swigCPtr, value);
-    } 
-    get {
-      bool ret = bwapiclientPINVOKE.GameData_isDebug_get(swigCPtr);
       return ret;
     } 
   }
@@ -686,6 +686,26 @@ public static bool operator !=(GameData obj1, GameData obj2)
     } 
     get {
       int ret = bwapiclientPINVOKE.GameData_self_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int enemy {
+    set {
+      bwapiclientPINVOKE.GameData_enemy_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.GameData_enemy_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int neutral {
+    set {
+      bwapiclientPINVOKE.GameData_neutral_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.GameData_neutral_get(swigCPtr);
       return ret;
     } 
   }

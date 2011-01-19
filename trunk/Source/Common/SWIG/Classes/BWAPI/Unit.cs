@@ -170,8 +170,13 @@ public static bool operator !=(Unit obj1, Unit obj2)
     return ret;
   }
 
-  public virtual int getLastOrderFrame() {
-    int ret = bwapiPINVOKE.Unit_getLastOrderFrame(swigCPtr);
+  public virtual int getLastCommandFrame() {
+    int ret = bwapiPINVOKE.Unit_getLastCommandFrame(swigCPtr);
+    return ret;
+  }
+
+  public virtual UnitCommand getLastCommand() {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.Unit_getLastCommand(swigCPtr), true);
     return ret;
   }
 
@@ -208,6 +213,11 @@ public static bool operator !=(Unit obj1, Unit obj2)
 
   public virtual int getKillCount() {
     int ret = bwapiPINVOKE.Unit_getKillCount(swigCPtr);
+    return ret;
+  }
+
+  public virtual int getAcidSporeCount() {
+    int ret = bwapiPINVOKE.Unit_getAcidSporeCount(swigCPtr);
     return ret;
   }
 
@@ -451,6 +461,11 @@ public static bool operator !=(Unit obj1, Unit obj2)
     return ret;
   }
 
+  public virtual bool isAttackFrame() {
+    bool ret = bwapiPINVOKE.Unit_isAttackFrame(swigCPtr);
+    return ret;
+  }
+
   public virtual bool isBeingConstructed() {
     bool ret = bwapiPINVOKE.Unit_isBeingConstructed(swigCPtr);
     return ret;
@@ -553,6 +568,16 @@ public static bool operator !=(Unit obj1, Unit obj2)
 
   public virtual bool isInterruptible() {
     bool ret = bwapiPINVOKE.Unit_isInterruptible(swigCPtr);
+    return ret;
+  }
+
+  public virtual bool isInvincible() {
+    bool ret = bwapiPINVOKE.Unit_isInvincible(swigCPtr);
+    return ret;
+  }
+
+  public virtual bool isInWeaponRange(Unit target) {
+    bool ret = bwapiPINVOKE.Unit_isInWeaponRange(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
@@ -926,6 +951,12 @@ public static bool operator !=(Unit obj1, Unit obj2)
   public virtual SWIGTYPE_p_void getClientInfo() {
     IntPtr cPtr = bwapiPINVOKE.Unit_getClientInfo(swigCPtr);
     SWIGTYPE_p_void ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
+    return ret;
+  }
+
+  public virtual bool placeCOP(TilePosition target) {
+    bool ret = bwapiPINVOKE.Unit_placeCOP(swigCPtr, TilePosition.getCPtr(target));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

@@ -150,8 +150,8 @@ public static bool operator !=(Position obj1, Position obj2)
     return ret;
   }
 
-  public double getApproxDistance(Position position) {
-    double ret = bwapiPINVOKE.Position_getApproxDistance(swigCPtr, Position.getCPtr(position));
+  public int getApproxDistance(Position position) {
+    int ret = bwapiPINVOKE.Position_getApproxDistance(swigCPtr, Position.getCPtr(position));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
