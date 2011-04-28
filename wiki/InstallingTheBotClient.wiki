@@ -3,14 +3,16 @@
 = Introduction =
 
 {{{
-With BWAPI 2.8 and up, it is now possible to run a bot as a separate process which can still use BWAPI. This is done with shared memory and must be run on the same computer as starcraft. bwapi-mono-bridge is also compatible with this method.
+With BWAPI 2.8 and up, it is now possible to run a bot as a separate process which can still use BWAPI.
+This is done with shared memory and must be run on the same computer as starcraft.
+bwapi-mono-bridge is also compatible with this method.
 }}}
 
 This is a quick guide to setting up the BWAPIClient based bot.
 
 = Details =
 
-  # Follow all directions for obtaining and setting up the BWAPI 3.3 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
+  # Follow all directions for obtaining and setting up the BWAPI 3.5.4 [http://code.google.com/p/bwapi/wiki/UsingBWAPI]
   # Download the zip file from the downloads tab
   # Extract the zip to a new folder
   # open the StarcraftBot solution from the starcraftbot folder with vs 2008 sp1
