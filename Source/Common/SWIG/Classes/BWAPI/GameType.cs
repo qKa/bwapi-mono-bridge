@@ -98,21 +98,8 @@ public static bool operator !=(GameType obj1, GameType obj2)
     return ret;
   }
 
-  public bool opEquals(GameType other) {
-    bool ret = bwapiPINVOKE.GameType_opEquals(swigCPtr, GameType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(GameType other) {
-    bool ret = bwapiPINVOKE.GameType_opNotEquals(swigCPtr, GameType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(GameType other) {
-    bool ret = bwapiPINVOKE.GameType_opLessThan(swigCPtr, GameType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.GameType_opInt(swigCPtr);
     return ret;
   }
 

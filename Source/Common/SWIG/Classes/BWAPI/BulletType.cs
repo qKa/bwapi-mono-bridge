@@ -98,21 +98,8 @@ public static bool operator !=(BulletType obj1, BulletType obj2)
     return ret;
   }
 
-  public bool opEquals(BulletType other) {
-    bool ret = bwapiPINVOKE.BulletType_opEquals(swigCPtr, BulletType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(BulletType other) {
-    bool ret = bwapiPINVOKE.BulletType_opNotEquals(swigCPtr, BulletType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(BulletType other) {
-    bool ret = bwapiPINVOKE.BulletType_opLessThan(swigCPtr, BulletType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.BulletType_opInt(swigCPtr);
     return ret;
   }
 

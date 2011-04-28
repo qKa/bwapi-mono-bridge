@@ -121,21 +121,8 @@ public static bool operator !=(Color obj1, Color obj2)
     return ret;
   }
 
-  public bool opEquals(Color other) {
-    bool ret = bwapiPINVOKE.Color_opEquals(swigCPtr, Color.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(Color other) {
-    bool ret = bwapiPINVOKE.Color_opNotEquals(swigCPtr, Color.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(Color other) {
-    bool ret = bwapiPINVOKE.Color_opLessThan(swigCPtr, Color.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.Color_opInt(swigCPtr);
     return ret;
   }
 

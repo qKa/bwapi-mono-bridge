@@ -98,21 +98,8 @@ public static bool operator !=(TechType obj1, TechType obj2)
     return ret;
   }
 
-  public bool opEquals(TechType other) {
-    bool ret = bwapiPINVOKE.TechType_opEquals(swigCPtr, TechType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(TechType other) {
-    bool ret = bwapiPINVOKE.TechType_opNotEquals(swigCPtr, TechType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(TechType other) {
-    bool ret = bwapiPINVOKE.TechType_opLessThan(swigCPtr, TechType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.TechType_opInt(swigCPtr);
     return ret;
   }
 

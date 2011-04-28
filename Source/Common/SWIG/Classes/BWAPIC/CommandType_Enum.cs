@@ -24,7 +24,9 @@ public enum CommandType_Enum {
   SetLocalSpeed,
   SetTextSize,
   SetLatCom,
-  SetGui
+  SetGui,
+  SetFrameSkip,
+  SetMap
 }
 
 }

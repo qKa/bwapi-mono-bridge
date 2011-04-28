@@ -22,3 +22,5 @@
 %rename (Errors_Access_Denied)  BWAPI::Errors::Access_Denied;
 %rename (Errors_None)  BWAPI::Errors::None;
 %rename (Errors_Unknown)  BWAPI::Errors::Unknown;
+%rename (Errors_File_Not_Found) BWAPI::Errors::File_Not_Found;
+%rename (Errors_Invalid_Parameter) BWAPI::Errors::Invalid_Parameter;

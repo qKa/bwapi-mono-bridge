@@ -89,14 +89,25 @@ public static bool operator !=(UnitCommand obj1, UnitCommand obj2)
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static UnitCommand attackMove(Unit unit, Position target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_attackMove(Unit.getCPtr(unit), Position.getCPtr(target)), true);
+  public static UnitCommand attack(Unit unit, Position target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_attack__SWIG_0(Unit.getCPtr(unit), Position.getCPtr(target), shiftQueueCommand), true);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static UnitCommand attackUnit(Unit unit, Unit target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_attackUnit(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
+  public static UnitCommand attack(Unit unit, Position target) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_attack__SWIG_1(Unit.getCPtr(unit), Position.getCPtr(target)), true);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static UnitCommand attack(Unit unit, Unit target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_attack__SWIG_2(Unit.getCPtr(unit), Unit.getCPtr(target), shiftQueueCommand), true);
+    return ret;
+  }
+
+  public static UnitCommand attack(Unit unit, Unit target) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_attack__SWIG_3(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
     return ret;
   }
 
@@ -147,45 +158,87 @@ public static bool operator !=(UnitCommand obj1, UnitCommand obj2)
     return ret;
   }
 
+  public static UnitCommand move(Unit unit, Position target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_move__SWIG_0(Unit.getCPtr(unit), Position.getCPtr(target), shiftQueueCommand), true);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public static UnitCommand move(Unit unit, Position target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_move(Unit.getCPtr(unit), Position.getCPtr(target)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_move__SWIG_1(Unit.getCPtr(unit), Position.getCPtr(target)), true);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static UnitCommand patrol(Unit unit, Position target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_patrol__SWIG_0(Unit.getCPtr(unit), Position.getCPtr(target), shiftQueueCommand), true);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static UnitCommand patrol(Unit unit, Position target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_patrol(Unit.getCPtr(unit), Position.getCPtr(target)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_patrol__SWIG_1(Unit.getCPtr(unit), Position.getCPtr(target)), true);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
+  public static UnitCommand holdPosition(Unit unit, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_holdPosition__SWIG_0(Unit.getCPtr(unit), shiftQueueCommand), true);
+    return ret;
+  }
+
   public static UnitCommand holdPosition(Unit unit) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_holdPosition(Unit.getCPtr(unit)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_holdPosition__SWIG_1(Unit.getCPtr(unit)), true);
+    return ret;
+  }
+
+  public static UnitCommand stop(Unit unit, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_stop__SWIG_0(Unit.getCPtr(unit), shiftQueueCommand), true);
     return ret;
   }
 
   public static UnitCommand stop(Unit unit) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_stop(Unit.getCPtr(unit)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_stop__SWIG_1(Unit.getCPtr(unit)), true);
+    return ret;
+  }
+
+  public static UnitCommand follow(Unit unit, Unit target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_follow__SWIG_0(Unit.getCPtr(unit), Unit.getCPtr(target), shiftQueueCommand), true);
     return ret;
   }
 
   public static UnitCommand follow(Unit unit, Unit target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_follow(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_follow__SWIG_1(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
+    return ret;
+  }
+
+  public static UnitCommand gather(Unit unit, Unit target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_gather__SWIG_0(Unit.getCPtr(unit), Unit.getCPtr(target), shiftQueueCommand), true);
     return ret;
   }
 
   public static UnitCommand gather(Unit unit, Unit target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_gather(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_gather__SWIG_1(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
+    return ret;
+  }
+
+  public static UnitCommand returnCargo(Unit unit, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_returnCargo__SWIG_0(Unit.getCPtr(unit), shiftQueueCommand), true);
     return ret;
   }
 
   public static UnitCommand returnCargo(Unit unit) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_returnCargo(Unit.getCPtr(unit)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_returnCargo__SWIG_1(Unit.getCPtr(unit)), true);
+    return ret;
+  }
+
+  public static UnitCommand repair(Unit unit, Unit target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_repair__SWIG_0(Unit.getCPtr(unit), Unit.getCPtr(target), shiftQueueCommand), true);
     return ret;
   }
 
   public static UnitCommand repair(Unit unit, Unit target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_repair(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_repair__SWIG_1(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
     return ret;
   }
 
@@ -230,8 +283,13 @@ public static bool operator !=(UnitCommand obj1, UnitCommand obj2)
     return ret;
   }
 
+  public static UnitCommand load(Unit unit, Unit target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_load__SWIG_0(Unit.getCPtr(unit), Unit.getCPtr(target), shiftQueueCommand), true);
+    return ret;
+  }
+
   public static UnitCommand load(Unit unit, Unit target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_load(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_load__SWIG_1(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
     return ret;
   }
 
@@ -240,25 +298,47 @@ public static bool operator !=(UnitCommand obj1, UnitCommand obj2)
     return ret;
   }
 
+  public static UnitCommand unloadAll(Unit unit, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_unloadAll__SWIG_0(Unit.getCPtr(unit), shiftQueueCommand), true);
+    return ret;
+  }
+
   public static UnitCommand unloadAll(Unit unit) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_unloadAll__SWIG_0(Unit.getCPtr(unit)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_unloadAll__SWIG_1(Unit.getCPtr(unit)), true);
+    return ret;
+  }
+
+  public static UnitCommand unloadAll(Unit unit, Position target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_unloadAll__SWIG_2(Unit.getCPtr(unit), Position.getCPtr(target), shiftQueueCommand), true);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static UnitCommand unloadAll(Unit unit, Position target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_unloadAll__SWIG_1(Unit.getCPtr(unit), Position.getCPtr(target)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_unloadAll__SWIG_3(Unit.getCPtr(unit), Position.getCPtr(target)), true);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static UnitCommand rightClick(Unit unit, Position target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_rightClick__SWIG_0(Unit.getCPtr(unit), Position.getCPtr(target), shiftQueueCommand), true);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static UnitCommand rightClick(Unit unit, Position target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_rightClick__SWIG_0(Unit.getCPtr(unit), Position.getCPtr(target)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_rightClick__SWIG_1(Unit.getCPtr(unit), Position.getCPtr(target)), true);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
+  public static UnitCommand rightClick(Unit unit, Unit target, bool shiftQueueCommand) {
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_rightClick__SWIG_2(Unit.getCPtr(unit), Unit.getCPtr(target), shiftQueueCommand), true);
+    return ret;
+  }
+
   public static UnitCommand rightClick(Unit unit, Unit target) {
-    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_rightClick__SWIG_1(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
+    UnitCommand ret = new UnitCommand(bwapiPINVOKE.UnitCommand_rightClick__SWIG_3(Unit.getCPtr(unit), Unit.getCPtr(target)), true);
     return ret;
   }
 
@@ -370,6 +450,11 @@ public static bool operator !=(UnitCommand obj1, UnitCommand obj2)
 
   public int getSlot() {
     int ret = bwapiPINVOKE.UnitCommand_getSlot(swigCPtr);
+    return ret;
+  }
+
+  public bool isQueued() {
+    bool ret = bwapiPINVOKE.UnitCommand_isQueued(swigCPtr);
     return ret;
   }
 
