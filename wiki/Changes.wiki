@@ -1,8 +1,11 @@
 #summary Changelog.
+== Changes in 3.5a ==
+  * compatible with BWAPI 3.5.4 beta
+  * Embedded bot still crashes on game restart. Use client mode.
+
 == Changes in 3.4a ==
   * compatible with BWAPI 3.4 beta
   * Embedded bot still crashes on game restart. Use client mode.
-
 
 == Changes in 3.3b ==
   * Added starcraftclient project to release, this is a bot that deals with the bwapi-clr directly and doesn't implement IStarcraftBot. This was missing from the last release
