@@ -19,7 +19,7 @@ This is a quick walkthrough of installing the bwapi-mono-bridge skeleton AI in e
   # Edit the bwapi.ini file and change the ai_dll line to read:
 {{{
 [ai]
-ai_dll = bwapi-data\AI\MonoBridge.dll
+ai = bwapi-data\AI\MonoBridge.dll
 }}}
   # Make sure mono 2.8 or above is installed on your computer www.go-mono.com
   # set an environment variable called "MonoPath" with its value being the path to the Mono's bin folder eg "C:\program files\Mono-2.8\bin" (Hint right click my computer->properties->advanced->environment variables->add)
