@@ -118,6 +118,26 @@ public static bool operator !=(GameData obj1, GameData obj2)
     } 
   }
 
+  public int botAPM_noselects {
+    set {
+      bwapiclientPINVOKE.GameData_botAPM_noselects_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.GameData_botAPM_noselects_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int botAPM_selects {
+    set {
+      bwapiclientPINVOKE.GameData_botAPM_selects_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.GameData_botAPM_selects_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public int forceCount {
     set {
       bwapiclientPINVOKE.GameData_forceCount_set(swigCPtr, value);
@@ -533,6 +553,17 @@ public static bool operator !=(GameData obj1, GameData obj2)
     } 
   }
 
+  public SWIGTYPE_p_a_256__bool isOccupied {
+    set {
+      bwapiclientPINVOKE.GameData_isOccupied_set(swigCPtr, SWIGTYPE_p_a_256__bool.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiclientPINVOKE.GameData_isOccupied_get(swigCPtr);
+      SWIGTYPE_p_a_256__bool ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_a_256__bool(cPtr, false);
+      return ret;
+    } 
+  }
+
   public SWIGTYPE_p_a_256__unsigned_short mapTileRegionId {
     set {
       bwapiclientPINVOKE.GameData_mapTileRegionId_set(swigCPtr, SWIGTYPE_p_a_256__unsigned_short.getCPtr(value));
@@ -815,6 +846,33 @@ public static bool operator !=(GameData obj1, GameData obj2)
     } 
   }
 
+  public unitFinder xUnitSearch {
+    set {
+      bwapiclientPINVOKE.GameData_xUnitSearch_set(swigCPtr, unitFinder.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiclientPINVOKE.GameData_xUnitSearch_get(swigCPtr);
+      unitFinder ret = (cPtr == IntPtr.Zero) ? null : new unitFinder(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public unitFinder yUnitSearch {
+    set {
+      bwapiclientPINVOKE.GameData_yUnitSearch_set(swigCPtr, unitFinder.getCPtr(value));
+    } 
+    get {
+      IntPtr cPtr = bwapiclientPINVOKE.GameData_yUnitSearch_get(swigCPtr);
+      unitFinder ret = (cPtr == IntPtr.Zero) ? null : new unitFinder(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static readonly int MAX_EVENTS = bwapiclientPINVOKE.GameData_MAX_EVENTS_get();
+  public static readonly int MAX_STRINGS = bwapiclientPINVOKE.GameData_MAX_STRINGS_get();
+  public static readonly int MAX_SHAPES = bwapiclientPINVOKE.GameData_MAX_SHAPES_get();
+  public static readonly int MAX_COMMANDS = bwapiclientPINVOKE.GameData_MAX_COMMANDS_get();
+  public static readonly int MAX_UNIT_COMMANDS = bwapiclientPINVOKE.GameData_MAX_UNIT_COMMANDS_get();
 }
 
 }

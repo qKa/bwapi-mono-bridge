@@ -98,21 +98,8 @@ public static bool operator !=(PlayerType obj1, PlayerType obj2)
     return ret;
   }
 
-  public bool opEquals(PlayerType other) {
-    bool ret = bwapiPINVOKE.PlayerType_opEquals(swigCPtr, PlayerType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(PlayerType other) {
-    bool ret = bwapiPINVOKE.PlayerType_opNotEquals(swigCPtr, PlayerType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(PlayerType other) {
-    bool ret = bwapiPINVOKE.PlayerType_opLessThan(swigCPtr, PlayerType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.PlayerType_opInt(swigCPtr);
     return ret;
   }
 

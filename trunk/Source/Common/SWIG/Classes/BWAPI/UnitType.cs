@@ -98,21 +98,8 @@ public static bool operator !=(UnitType obj1, UnitType obj2)
     return ret;
   }
 
-  public bool opEquals(UnitType other) {
-    bool ret = bwapiPINVOKE.UnitType_opEquals(swigCPtr, UnitType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(UnitType other) {
-    bool ret = bwapiPINVOKE.UnitType_opNotEquals(swigCPtr, UnitType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(UnitType other) {
-    bool ret = bwapiPINVOKE.UnitType_opLessThan(swigCPtr, UnitType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.UnitType_opInt(swigCPtr);
     return ret;
   }
 
@@ -473,6 +460,11 @@ public static bool operator !=(UnitType obj1, UnitType obj2)
 
   public bool producesLarva() {
     bool ret = bwapiPINVOKE.UnitType_producesLarva(swigCPtr);
+    return ret;
+  }
+
+  public bool isMineralField() {
+    bool ret = bwapiPINVOKE.UnitType_isMineralField(swigCPtr);
     return ret;
   }
 

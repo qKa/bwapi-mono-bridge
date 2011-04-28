@@ -248,8 +248,25 @@ public static bool operator !=(Game obj1, Game obj2)
     bwapiPINVOKE.Game_enableFlag(swigCPtr, flag);
   }
 
-  public virtual UnitPtrSet unitsOnTile(int tileX, int tileY) {
-    UnitPtrSet ret = new UnitPtrSet(bwapiPINVOKE.Game_unitsOnTile(swigCPtr, tileX, tileY), false);
+  public virtual UnitPtrSet getUnitsOnTile(int tileX, int tileY) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiPINVOKE.Game_getUnitsOnTile(swigCPtr, tileX, tileY), false);
+    return ret;
+  }
+
+  public virtual UnitPtrSet getUnitsInRectangle(int left, int top, int right, int bottom) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiPINVOKE.Game_getUnitsInRectangle__SWIG_0(swigCPtr, left, top, right, bottom), false);
+    return ret;
+  }
+
+  public virtual UnitPtrSet getUnitsInRectangle(Position topLeft, Position bottomRight) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiPINVOKE.Game_getUnitsInRectangle__SWIG_1(swigCPtr, Position.getCPtr(topLeft), Position.getCPtr(bottomRight)), false);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual UnitPtrSet getUnitsInRadius(Position center, int radius) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiPINVOKE.Game_getUnitsInRadius(swigCPtr, Position.getCPtr(center), radius), false);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
@@ -310,13 +327,24 @@ public static bool operator !=(Game obj1, Game obj2)
     return ret;
   }
 
+  public virtual bool isBuildable(int tileX, int tileY, bool includeBuildings) {
+    bool ret = bwapiPINVOKE.Game_isBuildable__SWIG_0(swigCPtr, tileX, tileY, includeBuildings);
+    return ret;
+  }
+
   public virtual bool isBuildable(int tileX, int tileY) {
-    bool ret = bwapiPINVOKE.Game_isBuildable__SWIG_0(swigCPtr, tileX, tileY);
+    bool ret = bwapiPINVOKE.Game_isBuildable__SWIG_1(swigCPtr, tileX, tileY);
+    return ret;
+  }
+
+  public virtual bool isBuildable(TilePosition position, bool includeBuildings) {
+    bool ret = bwapiPINVOKE.Game_isBuildable__SWIG_2(swigCPtr, TilePosition.getCPtr(position), includeBuildings);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool isBuildable(TilePosition position) {
-    bool ret = bwapiPINVOKE.Game_isBuildable__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
+    bool ret = bwapiPINVOKE.Game_isBuildable__SWIG_3(swigCPtr, TilePosition.getCPtr(position));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -794,6 +822,29 @@ public static bool operator !=(Game obj1, Game obj2)
   public virtual int getInstanceNumber() {
     int ret = bwapiPINVOKE.Game_getInstanceNumber(swigCPtr);
     return ret;
+  }
+
+  public virtual int getAPM(bool includeSelects) {
+    int ret = bwapiPINVOKE.Game_getAPM__SWIG_0(swigCPtr, includeSelects);
+    return ret;
+  }
+
+  public virtual int getAPM() {
+    int ret = bwapiPINVOKE.Game_getAPM__SWIG_1(swigCPtr);
+    return ret;
+  }
+
+  public virtual bool setMap(string mapFileName) {
+    bool ret = bwapiPINVOKE.Game_setMap(swigCPtr, mapFileName);
+    return ret;
+  }
+
+  public virtual void setFrameSkip(int frameSkip) {
+    bwapiPINVOKE.Game_setFrameSkip__SWIG_0(swigCPtr, frameSkip);
+  }
+
+  public virtual void setFrameSkip() {
+    bwapiPINVOKE.Game_setFrameSkip__SWIG_1(swigCPtr);
   }
 
 }

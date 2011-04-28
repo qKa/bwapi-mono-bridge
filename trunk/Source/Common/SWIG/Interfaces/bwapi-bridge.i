@@ -35,7 +35,7 @@ using namespace BWAPI;
 %rename (opPlus) *::operator +;
 %rename (opAdd) *::operator +=;
 %rename (opSubtract) *::operator -=;
-
+%rename (opInt) *::operator int;
 //fix up const strings.
 %apply const std::string & {std::string &};
 

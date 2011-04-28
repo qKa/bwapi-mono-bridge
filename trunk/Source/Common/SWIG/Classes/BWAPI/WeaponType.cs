@@ -98,21 +98,8 @@ public static bool operator !=(WeaponType obj1, WeaponType obj2)
     return ret;
   }
 
-  public bool opEquals(WeaponType other) {
-    bool ret = bwapiPINVOKE.WeaponType_opEquals(swigCPtr, WeaponType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(WeaponType other) {
-    bool ret = bwapiPINVOKE.WeaponType_opNotEquals(swigCPtr, WeaponType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(WeaponType other) {
-    bool ret = bwapiPINVOKE.WeaponType_opLessThan(swigCPtr, WeaponType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.WeaponType_opInt(swigCPtr);
     return ret;
   }
 

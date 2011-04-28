@@ -98,21 +98,8 @@ public static bool operator !=(Error obj1, Error obj2)
     return ret;
   }
 
-  public bool opEquals(Error other) {
-    bool ret = bwapiPINVOKE.Error_opEquals(swigCPtr, Error.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(Error other) {
-    bool ret = bwapiPINVOKE.Error_opNotEquals(swigCPtr, Error.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(Error other) {
-    bool ret = bwapiPINVOKE.Error_opLessThan(swigCPtr, Error.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.Error_opInt(swigCPtr);
     return ret;
   }
 

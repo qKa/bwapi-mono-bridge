@@ -315,6 +315,12 @@ public static bool operator !=(PlayerImpl obj1, PlayerImpl obj2)
     return ret;
   }
 
+  public override int weaponMaxRange(WeaponType weapon) {
+    int ret = bwapiclientPINVOKE.PlayerImpl_weaponMaxRange(swigCPtr, WeaponType.getCPtr(weapon));
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override int sightRange(UnitType unit) {
     int ret = bwapiclientPINVOKE.PlayerImpl_sightRange(swigCPtr, UnitType.getCPtr(unit));
     if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();

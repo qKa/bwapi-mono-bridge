@@ -63,3 +63,4 @@
 %rename (WeaponTypes_Maelstrom)  BWAPI::WeaponTypes::Maelstrom;
 %rename (WeaponTypes_None)  BWAPI::WeaponTypes::None;
 %rename (WeaponTypes_Unknown) BWAPI::WeaponTypes::Unknown;
+%rename (WeaponTypes_Independant_Laser_Battery) BWAPI::WeaponTypes::Independant_Laser_Battery;

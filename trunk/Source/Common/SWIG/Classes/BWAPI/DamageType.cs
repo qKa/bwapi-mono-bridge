@@ -98,21 +98,8 @@ public static bool operator !=(DamageType obj1, DamageType obj2)
     return ret;
   }
 
-  public bool opEquals(DamageType other) {
-    bool ret = bwapiPINVOKE.DamageType_opEquals(swigCPtr, DamageType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(DamageType other) {
-    bool ret = bwapiPINVOKE.DamageType_opNotEquals(swigCPtr, DamageType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(DamageType other) {
-    bool ret = bwapiPINVOKE.DamageType_opLessThan(swigCPtr, DamageType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.DamageType_opInt(swigCPtr);
     return ret;
   }
 

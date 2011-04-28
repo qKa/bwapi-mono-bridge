@@ -148,13 +148,13 @@ public static bool operator !=(Unit obj1, Unit obj2)
     return ret;
   }
 
-  public virtual double getDistance(Unit target) {
-    double ret = bwapiPINVOKE.Unit_getDistance__SWIG_0(swigCPtr, Unit.getCPtr(target));
+  public virtual int getDistance(Unit target) {
+    int ret = bwapiPINVOKE.Unit_getDistance__SWIG_0(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
-  public virtual double getDistance(Position target) {
-    double ret = bwapiPINVOKE.Unit_getDistance__SWIG_1(swigCPtr, Position.getCPtr(target));
+  public virtual int getDistance(Position target) {
+    int ret = bwapiPINVOKE.Unit_getDistance__SWIG_1(swigCPtr, Position.getCPtr(target));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -441,6 +441,17 @@ public static bool operator !=(Unit obj1, Unit obj2)
     return ret;
   }
 
+  public virtual UnitPtrSet getUnitsInRadius(int radius) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiPINVOKE.Unit_getUnitsInRadius(swigCPtr, radius), false);
+    return ret;
+  }
+
+  public virtual UnitPtrSet getUnitsInWeaponRange(WeaponType weapon) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiPINVOKE.Unit_getUnitsInWeaponRange(swigCPtr, WeaponType.getCPtr(weapon)), false);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public virtual bool exists() {
     bool ret = bwapiPINVOKE.Unit_exists(swigCPtr);
     return ret;
@@ -681,6 +692,16 @@ public static bool operator !=(Unit obj1, Unit obj2)
     return ret;
   }
 
+  public virtual bool isUnderDarkSwarm() {
+    bool ret = bwapiPINVOKE.Unit_isUnderDarkSwarm(swigCPtr);
+    return ret;
+  }
+
+  public virtual bool isUnderDisruptionWeb() {
+    bool ret = bwapiPINVOKE.Unit_isUnderDisruptionWeb(swigCPtr);
+    return ret;
+  }
+
   public virtual bool isUnpowered() {
     bool ret = bwapiPINVOKE.Unit_isUnpowered(swigCPtr);
     return ret;
@@ -713,14 +734,25 @@ public static bool operator !=(Unit obj1, Unit obj2)
     return ret;
   }
 
-  public virtual bool attackMove(Position target) {
-    bool ret = bwapiPINVOKE.Unit_attackMove(swigCPtr, Position.getCPtr(target));
+  public virtual bool attack(Position target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_attack__SWIG_0(swigCPtr, Position.getCPtr(target), shiftQueueCommand);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool attackUnit(Unit target) {
-    bool ret = bwapiPINVOKE.Unit_attackUnit(swigCPtr, Unit.getCPtr(target));
+  public virtual bool attack(Position target) {
+    bool ret = bwapiPINVOKE.Unit_attack__SWIG_1(swigCPtr, Position.getCPtr(target));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual bool attack(Unit target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_attack__SWIG_2(swigCPtr, Unit.getCPtr(target), shiftQueueCommand);
+    return ret;
+  }
+
+  public virtual bool attack(Unit target) {
+    bool ret = bwapiPINVOKE.Unit_attack__SWIG_3(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
@@ -771,45 +803,87 @@ public static bool operator !=(Unit obj1, Unit obj2)
     return ret;
   }
 
+  public virtual bool move(Position target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_move__SWIG_0(swigCPtr, Position.getCPtr(target), shiftQueueCommand);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public virtual bool move(Position target) {
-    bool ret = bwapiPINVOKE.Unit_move(swigCPtr, Position.getCPtr(target));
+    bool ret = bwapiPINVOKE.Unit_move__SWIG_1(swigCPtr, Position.getCPtr(target));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual bool patrol(Position target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_patrol__SWIG_0(swigCPtr, Position.getCPtr(target), shiftQueueCommand);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool patrol(Position target) {
-    bool ret = bwapiPINVOKE.Unit_patrol(swigCPtr, Position.getCPtr(target));
+    bool ret = bwapiPINVOKE.Unit_patrol__SWIG_1(swigCPtr, Position.getCPtr(target));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
+  public virtual bool holdPosition(bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_holdPosition__SWIG_0(swigCPtr, shiftQueueCommand);
+    return ret;
+  }
+
   public virtual bool holdPosition() {
-    bool ret = bwapiPINVOKE.Unit_holdPosition(swigCPtr);
+    bool ret = bwapiPINVOKE.Unit_holdPosition__SWIG_1(swigCPtr);
+    return ret;
+  }
+
+  public virtual bool stop(bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_stop__SWIG_0(swigCPtr, shiftQueueCommand);
     return ret;
   }
 
   public virtual bool stop() {
-    bool ret = bwapiPINVOKE.Unit_stop(swigCPtr);
+    bool ret = bwapiPINVOKE.Unit_stop__SWIG_1(swigCPtr);
+    return ret;
+  }
+
+  public virtual bool follow(Unit target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_follow__SWIG_0(swigCPtr, Unit.getCPtr(target), shiftQueueCommand);
     return ret;
   }
 
   public virtual bool follow(Unit target) {
-    bool ret = bwapiPINVOKE.Unit_follow(swigCPtr, Unit.getCPtr(target));
+    bool ret = bwapiPINVOKE.Unit_follow__SWIG_1(swigCPtr, Unit.getCPtr(target));
+    return ret;
+  }
+
+  public virtual bool gather(Unit target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_gather__SWIG_0(swigCPtr, Unit.getCPtr(target), shiftQueueCommand);
     return ret;
   }
 
   public virtual bool gather(Unit target) {
-    bool ret = bwapiPINVOKE.Unit_gather(swigCPtr, Unit.getCPtr(target));
+    bool ret = bwapiPINVOKE.Unit_gather__SWIG_1(swigCPtr, Unit.getCPtr(target));
+    return ret;
+  }
+
+  public virtual bool returnCargo(bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_returnCargo__SWIG_0(swigCPtr, shiftQueueCommand);
     return ret;
   }
 
   public virtual bool returnCargo() {
-    bool ret = bwapiPINVOKE.Unit_returnCargo(swigCPtr);
+    bool ret = bwapiPINVOKE.Unit_returnCargo__SWIG_1(swigCPtr);
+    return ret;
+  }
+
+  public virtual bool repair(Unit target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_repair__SWIG_0(swigCPtr, Unit.getCPtr(target), shiftQueueCommand);
     return ret;
   }
 
   public virtual bool repair(Unit target) {
-    bool ret = bwapiPINVOKE.Unit_repair(swigCPtr, Unit.getCPtr(target));
+    bool ret = bwapiPINVOKE.Unit_repair__SWIG_1(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
@@ -854,8 +928,13 @@ public static bool operator !=(Unit obj1, Unit obj2)
     return ret;
   }
 
+  public virtual bool load(Unit target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_load__SWIG_0(swigCPtr, Unit.getCPtr(target), shiftQueueCommand);
+    return ret;
+  }
+
   public virtual bool load(Unit target) {
-    bool ret = bwapiPINVOKE.Unit_load(swigCPtr, Unit.getCPtr(target));
+    bool ret = bwapiPINVOKE.Unit_load__SWIG_1(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
@@ -864,25 +943,47 @@ public static bool operator !=(Unit obj1, Unit obj2)
     return ret;
   }
 
+  public virtual bool unloadAll(bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_unloadAll__SWIG_0(swigCPtr, shiftQueueCommand);
+    return ret;
+  }
+
   public virtual bool unloadAll() {
-    bool ret = bwapiPINVOKE.Unit_unloadAll__SWIG_0(swigCPtr);
+    bool ret = bwapiPINVOKE.Unit_unloadAll__SWIG_1(swigCPtr);
+    return ret;
+  }
+
+  public virtual bool unloadAll(Position target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_unloadAll__SWIG_2(swigCPtr, Position.getCPtr(target), shiftQueueCommand);
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool unloadAll(Position target) {
-    bool ret = bwapiPINVOKE.Unit_unloadAll__SWIG_1(swigCPtr, Position.getCPtr(target));
+    bool ret = bwapiPINVOKE.Unit_unloadAll__SWIG_3(swigCPtr, Position.getCPtr(target));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual bool rightClick(Position target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_rightClick__SWIG_0(swigCPtr, Position.getCPtr(target), shiftQueueCommand);
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool rightClick(Position target) {
-    bool ret = bwapiPINVOKE.Unit_rightClick__SWIG_0(swigCPtr, Position.getCPtr(target));
+    bool ret = bwapiPINVOKE.Unit_rightClick__SWIG_1(swigCPtr, Position.getCPtr(target));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
+  public virtual bool rightClick(Unit target, bool shiftQueueCommand) {
+    bool ret = bwapiPINVOKE.Unit_rightClick__SWIG_2(swigCPtr, Unit.getCPtr(target), shiftQueueCommand);
+    return ret;
+  }
+
   public virtual bool rightClick(Unit target) {
-    bool ret = bwapiPINVOKE.Unit_rightClick__SWIG_1(swigCPtr, Unit.getCPtr(target));
+    bool ret = bwapiPINVOKE.Unit_rightClick__SWIG_3(swigCPtr, Unit.getCPtr(target));
     return ret;
   }
 
@@ -957,6 +1058,17 @@ public static bool operator !=(Unit obj1, Unit obj2)
   public virtual bool placeCOP(TilePosition target) {
     bool ret = bwapiPINVOKE.Unit_placeCOP(swigCPtr, TilePosition.getCPtr(target));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual bool isUnderAttack() {
+    bool ret = bwapiPINVOKE.Unit_isUnderAttack(swigCPtr);
+    return ret;
+  }
+
+  public virtual Player getLastAttackingPlayer() {
+    IntPtr cPtr = bwapiPINVOKE.Unit_getLastAttackingPlayer(swigCPtr);
+    Player ret = (cPtr == IntPtr.Zero) ? null : new Player(cPtr, false);
     return ret;
   }
 

@@ -98,21 +98,8 @@ public static bool operator !=(ExplosionType obj1, ExplosionType obj2)
     return ret;
   }
 
-  public bool opEquals(ExplosionType other) {
-    bool ret = bwapiPINVOKE.ExplosionType_opEquals(swigCPtr, ExplosionType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(ExplosionType other) {
-    bool ret = bwapiPINVOKE.ExplosionType_opNotEquals(swigCPtr, ExplosionType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(ExplosionType other) {
-    bool ret = bwapiPINVOKE.ExplosionType_opLessThan(swigCPtr, ExplosionType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.ExplosionType_opInt(swigCPtr);
     return ret;
   }
 

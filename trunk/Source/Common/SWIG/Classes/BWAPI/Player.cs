@@ -284,6 +284,12 @@ public static bool operator !=(Player obj1, Player obj2)
     return ret;
   }
 
+  public virtual int weaponMaxRange(WeaponType weapon) {
+    int ret = bwapiPINVOKE.Player_weaponMaxRange(swigCPtr, WeaponType.getCPtr(weapon));
+    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public virtual int sightRange(UnitType unit) {
     int ret = bwapiPINVOKE.Player_sightRange(swigCPtr, UnitType.getCPtr(unit));
     if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();

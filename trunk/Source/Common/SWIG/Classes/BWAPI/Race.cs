@@ -98,21 +98,8 @@ public static bool operator !=(Race obj1, Race obj2)
     return ret;
   }
 
-  public bool opEquals(Race other) {
-    bool ret = bwapiPINVOKE.Race_opEquals(swigCPtr, Race.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(Race other) {
-    bool ret = bwapiPINVOKE.Race_opNotEquals(swigCPtr, Race.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(Race other) {
-    bool ret = bwapiPINVOKE.Race_opLessThan(swigCPtr, Race.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.Race_opInt(swigCPtr);
     return ret;
   }
 

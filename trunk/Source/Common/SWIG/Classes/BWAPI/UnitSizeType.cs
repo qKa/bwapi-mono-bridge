@@ -98,21 +98,8 @@ public static bool operator !=(UnitSizeType obj1, UnitSizeType obj2)
     return ret;
   }
 
-  public bool opEquals(UnitSizeType other) {
-    bool ret = bwapiPINVOKE.UnitSizeType_opEquals(swigCPtr, UnitSizeType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(UnitSizeType other) {
-    bool ret = bwapiPINVOKE.UnitSizeType_opNotEquals(swigCPtr, UnitSizeType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(UnitSizeType other) {
-    bool ret = bwapiPINVOKE.UnitSizeType_opLessThan(swigCPtr, UnitSizeType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.UnitSizeType_opInt(swigCPtr);
     return ret;
   }
 

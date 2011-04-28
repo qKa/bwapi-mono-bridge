@@ -98,21 +98,8 @@ public static bool operator !=(UpgradeType obj1, UpgradeType obj2)
     return ret;
   }
 
-  public bool opEquals(UpgradeType other) {
-    bool ret = bwapiPINVOKE.UpgradeType_opEquals(swigCPtr, UpgradeType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opNotEquals(UpgradeType other) {
-    bool ret = bwapiPINVOKE.UpgradeType_opNotEquals(swigCPtr, UpgradeType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool opLessThan(UpgradeType other) {
-    bool ret = bwapiPINVOKE.UpgradeType_opLessThan(swigCPtr, UpgradeType.getCPtr(other));
-    if (bwapiPINVOKE.SWIGPendingException.Pending) throw bwapiPINVOKE.SWIGPendingException.Retrieve();
+  public int opInt() {
+    int ret = bwapiPINVOKE.UpgradeType_opInt(swigCPtr);
     return ret;
   }
 
@@ -131,8 +118,13 @@ public static bool operator !=(UpgradeType obj1, UpgradeType obj2)
     return ret;
   }
 
-  public int mineralPriceBase() {
-    int ret = bwapiPINVOKE.UpgradeType_mineralPriceBase(swigCPtr);
+  public int mineralPrice(int level) {
+    int ret = bwapiPINVOKE.UpgradeType_mineralPrice__SWIG_0(swigCPtr, level);
+    return ret;
+  }
+
+  public int mineralPrice() {
+    int ret = bwapiPINVOKE.UpgradeType_mineralPrice__SWIG_1(swigCPtr);
     return ret;
   }
 
@@ -141,8 +133,13 @@ public static bool operator !=(UpgradeType obj1, UpgradeType obj2)
     return ret;
   }
 
-  public int gasPriceBase() {
-    int ret = bwapiPINVOKE.UpgradeType_gasPriceBase(swigCPtr);
+  public int gasPrice(int level) {
+    int ret = bwapiPINVOKE.UpgradeType_gasPrice__SWIG_0(swigCPtr, level);
+    return ret;
+  }
+
+  public int gasPrice() {
+    int ret = bwapiPINVOKE.UpgradeType_gasPrice__SWIG_1(swigCPtr);
     return ret;
   }
 
@@ -151,8 +148,13 @@ public static bool operator !=(UpgradeType obj1, UpgradeType obj2)
     return ret;
   }
 
-  public int upgradeTimeBase() {
-    int ret = bwapiPINVOKE.UpgradeType_upgradeTimeBase(swigCPtr);
+  public int upgradeTime(int level) {
+    int ret = bwapiPINVOKE.UpgradeType_upgradeTime__SWIG_0(swigCPtr, level);
+    return ret;
+  }
+
+  public int upgradeTime() {
+    int ret = bwapiPINVOKE.UpgradeType_upgradeTime__SWIG_1(swigCPtr);
     return ret;
   }
 
@@ -168,6 +170,16 @@ public static bool operator !=(UpgradeType obj1, UpgradeType obj2)
 
   public UnitType whatUpgrades() {
     UnitType ret = new UnitType(bwapiPINVOKE.UpgradeType_whatUpgrades(swigCPtr), true);
+    return ret;
+  }
+
+  public UnitType whatsRequired(int level) {
+    UnitType ret = new UnitType(bwapiPINVOKE.UpgradeType_whatsRequired__SWIG_0(swigCPtr, level), true);
+    return ret;
+  }
+
+  public UnitType whatsRequired() {
+    UnitType ret = new UnitType(bwapiPINVOKE.UpgradeType_whatsRequired__SWIG_1(swigCPtr), true);
     return ret;
   }
 

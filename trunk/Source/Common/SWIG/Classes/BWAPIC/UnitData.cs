@@ -946,6 +946,26 @@ public static bool operator !=(UnitData obj1, UnitData obj2)
     } 
   }
 
+  public bool isUnderDarkSwarm {
+    set {
+      bwapiclientPINVOKE.UnitData_isUnderDarkSwarm_set(swigCPtr, value);
+    } 
+    get {
+      bool ret = bwapiclientPINVOKE.UnitData_isUnderDarkSwarm_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public bool isUnderDWeb {
+    set {
+      bwapiclientPINVOKE.UnitData_isUnderDWeb_set(swigCPtr, value);
+    } 
+    get {
+      bool ret = bwapiclientPINVOKE.UnitData_isUnderDWeb_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public bool isUnpowered {
     set {
       bwapiclientPINVOKE.UnitData_isUnpowered_set(swigCPtr, value);
@@ -973,6 +993,26 @@ public static bool operator !=(UnitData obj1, UnitData obj2)
     } 
     get {
       int ret = bwapiclientPINVOKE.UnitData_buttonset_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int lastAttackerPlayer {
+    set {
+      bwapiclientPINVOKE.UnitData_lastAttackerPlayer_set(swigCPtr, value);
+    } 
+    get {
+      int ret = bwapiclientPINVOKE.UnitData_lastAttackerPlayer_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public bool recentlyAttacked {
+    set {
+      bwapiclientPINVOKE.UnitData_recentlyAttacked_set(swigCPtr, value);
+    } 
+    get {
+      bool ret = bwapiclientPINVOKE.UnitData_recentlyAttacked_get(swigCPtr);
       return ret;
     } 
   }

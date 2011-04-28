@@ -1376,6 +1376,22 @@ public class bwapi {
     } 
   }
 
+  public static Error Errors_File_Not_Found {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Errors_File_Not_Found_get();
+      Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static Error Errors_Invalid_Parameter {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.Errors_Invalid_Parameter_get();
+      Error ret = (cPtr == IntPtr.Zero) ? null : new Error(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static Error Errors_None {
     get {
       IntPtr cPtr = bwapiPINVOKE.Errors_None_get();
@@ -4497,6 +4513,22 @@ public class bwapi {
     } 
   }
 
+  public static UnitType UnitTypes_Special_Cargo_Ship {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Special_Cargo_Ship_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Special_Mercenary_Gunship {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Special_Mercenary_Gunship_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Critter_Scantid {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Critter_Scantid_get();
@@ -5057,6 +5089,30 @@ public class bwapi {
     } 
   }
 
+  public static UnitType UnitTypes_Resource_Mineral_Field_Type_2 {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Resource_Mineral_Field_Type_2_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Resource_Mineral_Field_Type_3 {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Resource_Mineral_Field_Type_3_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Special_Independant_Starport {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Special_Independant_Starport_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
   public static UnitType UnitTypes_Resource_Vespene_Geyser {
     get {
       IntPtr cPtr = bwapiPINVOKE.UnitTypes_Resource_Vespene_Geyser_get();
@@ -5204,6 +5260,70 @@ public class bwapi {
   public static UnitType Powerup_Khaydarin_Crystal {
     get {
       IntPtr cPtr = bwapiPINVOKE.Powerup_Khaydarin_Crystal_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Powerup_Mineral_Cluster_Type_1 {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Powerup_Mineral_Cluster_Type_1_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Powerup_Mineral_Cluster_Type_2 {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Powerup_Mineral_Cluster_Type_2_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Powerup_Protoss_Gas_Orb_Type_1 {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Powerup_Protoss_Gas_Orb_Type_1_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Powerup_Protoss_Gas_Orb_Type_2 {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Powerup_Protoss_Gas_Orb_Type_2_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Powerup_Zerg_Gas_Sac_Type_1 {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Powerup_Zerg_Gas_Sac_Type_1_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Powerup_Zerg_Gas_Sac_Type_2 {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Powerup_Zerg_Gas_Sac_Type_2_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Powerup_Terran_Gas_Tank_Type_1 {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Powerup_Terran_Gas_Tank_Type_1_get();
+      UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static UnitType UnitTypes_Powerup_Terran_Gas_Tank_Type_2 {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.UnitTypes_Powerup_Terran_Gas_Tank_Type_2_get();
       UnitType ret = (cPtr == IntPtr.Zero) ? null : new UnitType(cPtr, false);
       return ret;
     } 
@@ -5885,6 +6005,14 @@ public class bwapi {
   public static WeaponType Warp_Blades_Zeratul {
     get {
       IntPtr cPtr = bwapiPINVOKE.Warp_Blades_Zeratul_get();
+      WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public static WeaponType WeaponTypes_Independant_Laser_Battery {
+    get {
+      IntPtr cPtr = bwapiPINVOKE.WeaponTypes_Independant_Laser_Battery_get();
       WeaponType ret = (cPtr == IntPtr.Zero) ? null : new WeaponType(cPtr, false);
       return ret;
     } 

@@ -128,3 +128,19 @@
 %rename (UnitTypes_Spell_Dark_Swarm)  BWAPI::UnitTypes::Spell_Dark_Swarm;
 %rename (UnitTypes_None)  BWAPI::UnitTypes::None;
 %rename (UnitTypes_Unknown)  BWAPI::UnitTypes::Unknown;
+%rename (UnitTypes_Special_Cargo_Ship) BWAPI::UnitTypes::Special_Cargo_Ship;
+%rename (UnitTypes_Special_Mercenary_Gunship) BWAPI::UnitTypes::Special_Mercenary_Gunship;
+%rename (UnitTypes_Resource_Mineral_Field_Type_2) BWAPI::UnitTypes::Resource_Mineral_Field_Type_2;
+%rename (UnitTypes_Resource_Mineral_Field_Type_3) BWAPI::UnitTypes::Resource_Mineral_Field_Type_3;
+%rename (UnitTypes_Special_Independant_Starport) BWAPI::UnitTypes::Special_Independant_Starport;
+
+%rename (UnitTypes_Powerup_Mineral_Cluster_Type_1) BWAPI::UnitTypes::Powerup_Mineral_Cluster_Type_1;
+%rename (UnitTypes_Powerup_Mineral_Cluster_Type_2) BWAPI::UnitTypes::Powerup_Mineral_Cluster_Type_2;
+%rename (UnitTypes_Powerup_Protoss_Gas_Orb_Type_1) BWAPI::UnitTypes::Powerup_Protoss_Gas_Orb_Type_1;
+%rename (UnitTypes_Powerup_Protoss_Gas_Orb_Type_2) BWAPI::UnitTypes::Powerup_Protoss_Gas_Orb_Type_2;
+%rename (UnitTypes_Powerup_Zerg_Gas_Sac_Type_1) BWAPI::UnitTypes::Powerup_Zerg_Gas_Sac_Type_1;
+%rename (UnitTypes_Powerup_Zerg_Gas_Sac_Type_2) BWAPI::UnitTypes::Powerup_Zerg_Gas_Sac_Type_2;
+%rename (UnitTypes_Powerup_Terran_Gas_Tank_Type_1) BWAPI::UnitTypes::Powerup_Terran_Gas_Tank_Type_1;
+%rename (UnitTypes_Powerup_Terran_Gas_Tank_Type_2) BWAPI::UnitTypes::Powerup_Terran_Gas_Tank_Type_2;
+
+

@@ -293,8 +293,25 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
     bwapiclientPINVOKE.GameImpl_enableFlag(swigCPtr, flag);
   }
 
-  public override UnitPtrSet unitsOnTile(int x, int y) {
-    UnitPtrSet ret = new UnitPtrSet(bwapiclientPINVOKE.GameImpl_unitsOnTile(swigCPtr, x, y), false);
+  public override UnitPtrSet getUnitsOnTile(int x, int y) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiclientPINVOKE.GameImpl_getUnitsOnTile(swigCPtr, x, y), false);
+    return ret;
+  }
+
+  public override UnitPtrSet getUnitsInRectangle(int left, int top, int right, int bottom) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiclientPINVOKE.GameImpl_getUnitsInRectangle__SWIG_0(swigCPtr, left, top, right, bottom), false);
+    return ret;
+  }
+
+  public override UnitPtrSet getUnitsInRectangle(Position topLeft, Position bottomRight) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiclientPINVOKE.GameImpl_getUnitsInRectangle__SWIG_1(swigCPtr, Position.getCPtr(topLeft), Position.getCPtr(bottomRight)), false);
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override UnitPtrSet getUnitsInRadius(Position center, int radius) {
+    UnitPtrSet ret = new UnitPtrSet(bwapiclientPINVOKE.GameImpl_getUnitsInRadius(swigCPtr, Position.getCPtr(center), radius), false);
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
@@ -355,13 +372,24 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
     return ret;
   }
 
+  public override bool isBuildable(int x, int y, bool includeBuildings) {
+    bool ret = bwapiclientPINVOKE.GameImpl_isBuildable__SWIG_0(swigCPtr, x, y, includeBuildings);
+    return ret;
+  }
+
   public override bool isBuildable(int x, int y) {
-    bool ret = bwapiclientPINVOKE.GameImpl_isBuildable__SWIG_0(swigCPtr, x, y);
+    bool ret = bwapiclientPINVOKE.GameImpl_isBuildable__SWIG_1(swigCPtr, x, y);
+    return ret;
+  }
+
+  public override bool isBuildable(TilePosition position, bool includeBuildings) {
+    bool ret = bwapiclientPINVOKE.GameImpl_isBuildable__SWIG_2(swigCPtr, TilePosition.getCPtr(position), includeBuildings);
+    if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool isBuildable(TilePosition position) {
-    bool ret = bwapiclientPINVOKE.GameImpl_isBuildable__SWIG_1(swigCPtr, TilePosition.getCPtr(position));
+    bool ret = bwapiclientPINVOKE.GameImpl_isBuildable__SWIG_3(swigCPtr, TilePosition.getCPtr(position));
     if (bwapiclientPINVOKE.SWIGPendingException.Pending) throw bwapiclientPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -839,6 +867,29 @@ public static bool operator !=(GameImpl obj1, GameImpl obj2)
   public override int getInstanceNumber() {
     int ret = bwapiclientPINVOKE.GameImpl_getInstanceNumber(swigCPtr);
     return ret;
+  }
+
+  public override int getAPM(bool includeSelects) {
+    int ret = bwapiclientPINVOKE.GameImpl_getAPM__SWIG_0(swigCPtr, includeSelects);
+    return ret;
+  }
+
+  public override int getAPM() {
+    int ret = bwapiclientPINVOKE.GameImpl_getAPM__SWIG_1(swigCPtr);
+    return ret;
+  }
+
+  public override bool setMap(string mapFileName) {
+    bool ret = bwapiclientPINVOKE.GameImpl_setMap(swigCPtr, mapFileName);
+    return ret;
+  }
+
+  public override void setFrameSkip(int frameSkip) {
+    bwapiclientPINVOKE.GameImpl_setFrameSkip__SWIG_0(swigCPtr, frameSkip);
+  }
+
+  public override void setFrameSkip() {
+    bwapiclientPINVOKE.GameImpl_setFrameSkip__SWIG_1(swigCPtr);
   }
 
 }
