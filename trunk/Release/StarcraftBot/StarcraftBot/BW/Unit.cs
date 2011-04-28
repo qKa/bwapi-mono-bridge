@@ -31,7 +31,7 @@ namespace StarcraftBot.BW
 			else if (t != null && t != theTarget)
 			{
 				theTarget = t;
-				theUnit.attackUnit(theTarget);
+				theUnit.attack(theTarget);
 			}
 		}
 	}
