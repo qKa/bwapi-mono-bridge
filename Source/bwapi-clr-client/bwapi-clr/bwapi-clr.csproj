@@ -124,6 +124,9 @@
     <Compile Include="..\..\Common\SWIG\Classes\BWAPIC\UnitData.cs">
       <Link>BWAPIC\UnitData.cs</Link>
     </Compile>
+    <Compile Include="..\..\Common\SWIG\Classes\BWAPIC\unitFinder.cs">
+      <Link>BWAPIC\unitFinder.cs</Link>
+    </Compile>
     <Compile Include="..\..\Common\SWIG\Classes\BWAPIC\UnitImpl.cs">
       <Link>BWAPIC\UnitImpl.cs</Link>
     </Compile>
